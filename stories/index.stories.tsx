@@ -11,7 +11,7 @@ export default {
 // export const Primary = () => <Button type="primary">Primary</Button>;
 
 export const Button = () => {
-    const type = select( 'type', ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'], 'success');
+    const type = select( 'type', ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'], 'primary');
     const content = text('Button text','Texto');
   
     return <ButtonComponent type={type}>{content}</ButtonComponent>;
