@@ -7,8 +7,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: |
-        npm install && npm build
+        npm install && npm run build
     - uses: chromaui/action@v1
       with: 
         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        token: ${{ secrets.GITHUB_TOKEN }}
+        # token: ${{ secrets.GITHUB_TOKEN }}
