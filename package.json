@@ -1,0 +1,38 @@
+{
+  "name": "bastrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass src/:dist/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/preset-create-react-app": "^3.0.0",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
+    "bootstrap": "^4.5.0",
+    "css-loader": "^3.5.3",
+    "fork-ts-checker-webpack-plugin": "^4.1.4",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-storybook-addon-props-combinations": "^1.1.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.3"
+  }
+}
