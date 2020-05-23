@@ -7,7 +7,8 @@
     "compile": "sass src/:dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "chromatic --project-token=6pak8nbnktp"
   },
   "author": "",
   "license": "MIT",
@@ -25,6 +26,7 @@
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
     "bootstrap": "^4.5.0",
+    "chromatic": "^4.0.3",
     "css-loader": "^3.5.3",
     "fork-ts-checker-webpack-plugin": "^4.1.4",
     "react-docgen-typescript-loader": "^3.7.2",
