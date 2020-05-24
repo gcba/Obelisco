@@ -12,8 +12,7 @@
     "node": true
   },
   "plugins": [
-    "@typescript-eslint",
-    "stylelint-scss"
+    "@typescript-eslint"
   ],
   "extends": [
     "eslint:recommended",
@@ -24,8 +23,6 @@
     "plugin:prettier/recommended"
   ],
   "rules": { 
-    "no-console": 1,
-    "scss/dollar-variable-pattern": "^foo",
-    "scss/selector-no-redundant-nesting-selector": true
+    "no-console": 1
   }
 }

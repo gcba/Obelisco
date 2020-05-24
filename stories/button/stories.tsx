@@ -16,8 +16,8 @@ export default {
   title: "Componentes|Botón",
   component: Button,
   decorators: [withA11y],
-  parameters: { 
-    notes 
+  parameters: {
+    notes
   }
 };
 
@@ -49,9 +49,9 @@ export const Deshabilitado = (): JSX.Element => {
 export const Expandible = (): JSX.Element => {
   return (
     <div className="btn-block-wrapper">
-    <Button type="secondary" block={true}>
-      Expandible
-    </Button>
+      <Button type="secondary" block={true}>
+        Expandible
+      </Button>
     </div>
   );
 };
