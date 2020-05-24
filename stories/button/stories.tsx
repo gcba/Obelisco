@@ -1,6 +1,7 @@
 // Base
 import React from "react";
 import "../../scss/bastrap.scss";
+import "./stories.scss";
 
 // Addons
 import { withA11y } from "@storybook/addon-a11y";
@@ -15,7 +16,9 @@ export default {
   title: "Componentes|Botón",
   component: Button,
   decorators: [withA11y],
-  parameters: { notes }
+  parameters: { 
+    notes 
+  }
 };
 
 export const Colores = (): JSX.Element[] => {
@@ -45,8 +48,10 @@ export const Deshabilitado = (): JSX.Element => {
 
 export const Expandible = (): JSX.Element => {
   return (
+    <div className="btn-block-wrapper">
     <Button type="secondary" block={true}>
       Expandible
     </Button>
+    </div>
   );
 };
