@@ -34,7 +34,6 @@ jobs:
         with: 
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
-
    publish:
     name: Build and publish
     needs: test
