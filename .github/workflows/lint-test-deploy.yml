@@ -41,7 +41,7 @@ jobs:
 
   publish:
     name: Build and publish
-    needs: [lint, test]
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -50,7 +50,10 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies and build
-        - run: npm install && npm run build-storybook
+        - run: |
+          npm install
+          npm build
+          npm run build-storybook
 
       - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
