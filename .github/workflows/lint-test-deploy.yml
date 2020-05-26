@@ -1,4 +1,4 @@
-name: "Lint, test and publish"
+name: Lint, test and publish
 on:
   push:
     branches:
@@ -49,7 +49,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install dependencies and build
+      - name: Install dependencies
         - run: |
           npm install
           npm build
