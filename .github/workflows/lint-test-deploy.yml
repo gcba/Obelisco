@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: 🛎️ Checkout
         uses: actions/checkout@v2
-        width:
+        with:
           fetch-depth: 0
       - name: 🔧 Install dependencies
         run: npm install
@@ -25,7 +25,7 @@ jobs:
   #   steps:
   #     - name: 🛎️ Checkout
   #       uses: actions/checkout@v2
-  #       width:
+  #       with:
   #         fetch-depth: 0
   #     - name: 🔧 Install dependencies
   #       run: npm install
@@ -41,7 +41,7 @@ jobs:
   #   steps:
   #     - name: 🛎️ Checkout
   #       uses: actions/checkout@v2
-  #       width:
+  #       with:
   #         fetch-depth: 0
   #     - name: 🔧 Install dependencies and build
   #       - run: |
