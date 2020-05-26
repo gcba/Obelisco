@@ -3,10 +3,13 @@ on:
   pull_request:
     branches:
       - master
+  push:
+    branches:
+      - dev
 
 jobs:
   lint:
-    name: PR | Lint
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,7 +24,7 @@ jobs:
         run: npm run lint
 
   test:
-    name: PR | Test
+    name: Test
     needs: lint
     runs-on: ubuntu-latest
     steps:
