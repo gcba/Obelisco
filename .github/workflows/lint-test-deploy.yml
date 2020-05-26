@@ -13,43 +13,50 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+
       - name: 🔧 Install dependencies
         run: npm install
+
       - name: Lint
         run: npm run lint
 
-  # test:
-  #   name: Test
-  #   needs: lint
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: 🛎️ Checkout
-  #       uses: actions/checkout@v2
-  #       with:
-  #         fetch-depth: 0
-  #     - name: 🔧 Install dependencies
-  #       run: npm install
-  #     - name: Deploy
-  #       uses: chromaui/action@v1
-  #       with: 
-  #         projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-  #  publish:
-  #   name: Build and publish
-  #   needs: test
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: 🛎️ Checkout
-  #       uses: actions/checkout@v2
-  #       with:
-  #         fetch-depth: 0
-  #     - name: 🔧 Install dependencies and build
-  #       - run: |
-  #         npm install
-  #         npm run build-storybook
-  #     - name: 🚀 Deploy
-  #       uses: JamesIves/github-pages-deploy-action@releases/v3
-  #       with:
-  #         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #         BRANCH: gh-pages
-  #         FOLDER: .storybook-out
+  test:
+    name: Test
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: 🔧 Install dependencies
+        run: npm install
+
+      - name: Deploy
+        uses: chromaui/action@v1
+        with: 
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+   publish:
+    name: Build and publish
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: 🔧 Install dependencies and build
+        - run: |
+          npm install
+          npm run build-storybook
+          
+      - name: 🚀 Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: .storybook-out
