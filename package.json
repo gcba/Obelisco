@@ -7,7 +7,7 @@
     "compile": "sass scss/:dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -c .storybook -o .storybook-out",
     "chromatic:manual": "chromatic --project-token=6pak8nbnktp",
     "lint": "eslint --debug --ext .ts,.tsx ."
   },
