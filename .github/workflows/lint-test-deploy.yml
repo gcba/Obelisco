@@ -39,11 +39,11 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-   deploy:
+  publish:
     name: Build and publish
     needs: [lint, test]
     runs-on: ubuntu-latest
-    steps:s
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
