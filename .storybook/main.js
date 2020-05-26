@@ -5,7 +5,8 @@ module.exports = {
     '@storybook/addon-notes/register',
     '@storybook/addon-knobs/register',
     '@storybook/addon-a11y/register',
-    '@whitespace/storybook-addon-html/register'
+    '@whitespace/storybook-addon-html/register',
+    'storybook-addon-xd-designs/register'
   ],
   webpackFinal: async config => {
     config.module.rules.push({

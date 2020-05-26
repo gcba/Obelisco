@@ -5,6 +5,7 @@ import "./stories.scss";
 
 // Addons
 import { withA11y } from "@storybook/addon-a11y";
+import { withXD } from "storybook-addon-xd-designs";
 
 // Components
 import { types, sizes } from "../../components/utils";
@@ -15,7 +16,7 @@ import * as notes from "./button.md";
 export default {
   title: "Componentes|Botón",
   component: Button,
-  decorators: [withA11y],
+  decorators: [withA11y, withXD],
   parameters: {
     notes
   }
@@ -28,6 +29,14 @@ export const Colores = (): JSX.Element[] => {
     </Button>
   ));
 };
+Colores.story = {
+  parameters: {
+    design: {
+      artboardUrl:
+        "https://xd.adobe.com/view/fccdcd08-c6ec-4a4c-5bd4-97fe07baaf7b-8afc/screen/a7f688b8-475d-4fa0-83bf-01002ef05018/Colores"
+    }
+  }
+};
 
 export const Sizes = (): JSX.Element[] => {
   return sizes.map(size => (
@@ -36,7 +45,15 @@ export const Sizes = (): JSX.Element[] => {
     </Button>
   ));
 };
-Sizes.story = { name: "Tamaños" };
+Sizes.story = {
+  name: "Tamaños",
+  parameters: {
+    design: {
+      artboardUrl:
+        "https://xd.adobe.com/view/fccdcd08-c6ec-4a4c-5bd4-97fe07baaf7b-8afc/screen/1345bc77-fc2b-4242-a246-8a371090fa1b/Tama-os"
+    }
+  }
+};
 
 export const Deshabilitado = (): JSX.Element => {
   return (
@@ -44,6 +61,14 @@ export const Deshabilitado = (): JSX.Element => {
       Deshabilitado
     </Button>
   );
+};
+Deshabilitado.story = {
+  parameters: {
+    design: {
+      artboardUrl:
+        "https://xd.adobe.com/view/fccdcd08-c6ec-4a4c-5bd4-97fe07baaf7b-8afc/screen/bb9c94a8-fe83-4fa6-aafd-4ee74ee35c9f/Deshabilitado"
+    }
+  }
 };
 
 export const Expandible = (): JSX.Element => {
@@ -54,4 +79,12 @@ export const Expandible = (): JSX.Element => {
       </Button>
     </div>
   );
+};
+Expandible.story = {
+  parameters: {
+    design: {
+      artboardUrl:
+        "https://xd.adobe.com/view/fccdcd08-c6ec-4a4c-5bd4-97fe07baaf7b-8afc/screen/20f346ea-c2f4-423a-b908-8577f046fd10/Expandible"
+    }
+  }
 };

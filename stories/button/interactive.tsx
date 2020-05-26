@@ -15,7 +15,10 @@ export default {
   title: "Interactivo|Componentes",
   component: Button,
   decorators: [withKnobs],
-  parameters: { chromatic: { disable: true } }
+  parameters: {
+    chromatic: { disable: true },
+    design: null
+  }
 };
 
 export const Interactivo = (): JSX.Element => {
