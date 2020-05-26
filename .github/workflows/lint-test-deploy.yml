@@ -9,12 +9,12 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - name: 🛎️ Checkout
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: 🔧 Install dependencies
+      - name: Install dependencies
         run: npm install
 
       - name: Lint
@@ -25,38 +25,36 @@ jobs:
     needs: lint
     runs-on: ubuntu-latest
     steps:
-      - name: 🛎️ Checkout
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
-      - name: 🔧 Install dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: Deploy
+      - name: Upload to Chromatic
         uses: chromaui/action@v1
         with: 
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-  #  publish:
-  #   name: Build and publish
-  #   needs: test
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: 🛎️ Checkout
-  #       uses: actions/checkout@v2
-  #       with:
-  #         fetch-depth: 0
+   deploy:
+    name: Build and publish
+    needs: [lint, test]
+    runs-on: ubuntu-latest
+    steps:s
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-  #     - name: 🔧 Install dependencies and build
-  #       - run: |
-  #         npm install
-  #         npm run build-storybook
+      - name: Install dependencies and build
+        - run: npm install && npm run build-storybook
 
-  #     - name: 🚀 Deploy
-  #       uses: JamesIves/github-pages-deploy-action@releases/v3
-  #       with:
-  #         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #         BRANCH: gh-pages
-  #         FOLDER: .storybook-out
+      - name: 🚀 Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: .storybook-out
