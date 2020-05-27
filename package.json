@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "sass scss/:dist/",
+    "start": "start-storybook -s ./static -p 6006",
+    "lint": "eslint --debug --ext .ts,.tsx .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -c .storybook -o .storybook-out",
-    "chromatic:manual": "chromatic --project-token=6pak8nbnktp",
-    "lint": "eslint --debug --ext .ts,.tsx ."
+    "build:sass": "sass scss/:dist/",
+    "build:storybook": "build-storybook -c .storybook -o .storybook-out"
   },
   "author": "",
   "license": "MIT",
@@ -24,9 +23,11 @@
     "@storybook/addon-info": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-viewport": "^5.3.18",
+    "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/preset-typescript": "^3.0.0",
     "@storybook/react": "^5.3.18",
+    "@storybook/theming": "^5.3.19",
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",
     "@whitespace/storybook-addon-html": "^1.2.1",

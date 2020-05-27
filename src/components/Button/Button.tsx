@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Type, Size, sizeToClass } from "./utils";
+import { Type, Size, sizeToClass } from "../utils";
 
 export interface ButtonProps {
   type: Type;

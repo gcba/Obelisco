@@ -1,16 +1,16 @@
 // Base
 import React from "react";
 import "../../scss/bastrap.scss";
-import "./stories.scss";
+import "./Button.stories.scss";
 
 // Addons
 import { withA11y } from "@storybook/addon-a11y";
 import { withXD } from "storybook-addon-xd-designs";
 
 // Components
-import { types, sizes } from "../../components/utils";
-import { Button } from "../../components/Button";
-import * as notes from "./button.md";
+import { types, sizes } from "../utils";
+import { Button } from "./Button";
+import * as notes from "./Button.md";
 
 // Config
 export default {

@@ -1,12 +1,12 @@
 module.exports = {
-  stories: ['../stories/**/*.tsx'],
+  stories: ['../src/**/*.stories.tsx'],
   addons: [
     // '@storybook/addon-docs',notes
-    '@storybook/addon-notes/register',
-    '@storybook/addon-knobs/register',
-    '@storybook/addon-a11y/register',
-    '@whitespace/storybook-addon-html/register',
-    'storybook-addon-xd-designs/register'
+    '@storybook/addon-notes',
+    '@storybook/addon-knobs',
+    '@storybook/addon-a11y',
+    '@whitespace/storybook-addon-html',
+    'storybook-addon-xd-designs',
   ],
   webpackFinal: async config => {
     config.module.rules.push({

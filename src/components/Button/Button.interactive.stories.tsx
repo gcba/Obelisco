@@ -6,9 +6,8 @@ import "../../scss/bastrap.scss";
 import { withKnobs, text, select, boolean } from "@storybook/addon-knobs";
 
 // Components
-import { types, sizes, Size } from "../../components/utils";
-import { Button } from "../../components/Button";
-// import notes from './button.md';
+import { types, sizes, Size } from "../utils";
+import { Button } from "./Button";
 
 // Config
 export default {

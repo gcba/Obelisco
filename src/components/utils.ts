@@ -7,6 +7,7 @@ export type Type =
   | "danger"
   | "light"
   | "dark";
+
 export const types: Type[] = [
   "primary",
   "secondary",
