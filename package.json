@@ -8,7 +8,7 @@
     "lint": "eslint --debug --ext .ts,.tsx .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:sass": "sass scss/:dist/",
-    "build:storybook": "build-storybook -c .storybook -o .storybook-out"
+    "build:storybook": "build-storybook -s ./static -c .storybook -o .storybook-out"
   },
   "author": "",
   "license": "MIT",
