@@ -34,7 +34,7 @@ const theme = create({
 
   brandTitle: 'Me van a cambiar, no te preocupes!',
   brandUrl: 'https://gcba.github.io/BAstrap',
-  brandImage: '/bastrap-logo.png',
+  brandImage: 'bastrap-logo.png',
 });
 
 addons.setConfig({
