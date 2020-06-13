@@ -1,6 +1,6 @@
 // Base
 import React from "react";
-import "../../scss/bastrap.scss";
+import "../../scss/obelisco.scss";
 
 // Addons
 import { withKnobs, text, select, boolean } from "@storybook/addon-knobs";
