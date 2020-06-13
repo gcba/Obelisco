@@ -33,7 +33,7 @@ const theme = create({
   // inputBorderRadius: 4,
 
   brandTitle: 'Me van a cambiar, no te preocupes!',
-  brandUrl: 'https://gcba.github.io/BAstrap',
+  brandUrl: 'https://gcba.github.io/obelisco',
   brandImage: 'bastrap-logo.png',
 });
 

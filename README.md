@@ -1,16 +1,19 @@
-# BAstrap 2020
-Versión 2020 del tan aclamado sistema de diseño de la ciudad de Buenos Aires.
-[Lista de componentes](https://jinik.github.io/bastrap2020/).
+# Obelisco
+Obelisco es el nuevo sistema de diseño basado en componentes para los productos digitales de la ciudad de Buenos Aires.
+Fue creado para reemplazar [BAstrap](https://github.com/gcba/bastrap).
+
+[Lista de componentes](https://gcba.github.io/Obelisco/).
 
 ## Uso
-**Esto es mentira porque todavía no está publicado**.
-BAstrap 2020 está publicado en npm, por lo que se puede instalar de la siguiente forma:
+**:exclamation: Esto es mentira porque todavía no está publicado**.
+
+Obelisco está publicado en npm, por lo que se puede instalar de la siguiente forma:
 ```
-npm install --save bastrap
+npm install --save obelisco
 ```
 
 ## Desarrollo
-BAstrap 2020 está desarrollado principalmente en [Sass](https://sass-lang.com/) y [TypeScript](http://typescriptlang.org/) y utiliza las siguientes herramientas:
+Obelisco está desarrollado principalmente en [Sass](https://sass-lang.com/) y [TypeScript](http://typescriptlang.org/) y utiliza las siguientes herramientas:
 
 - [Bootstrap 4](https://getbootstrap.com/) como base de diseño. Algunos componentes se toma de esta librería modificando los estilos.
 - [Storybook](https://storybook.js.org) como base para definir y documentar cada componente.
@@ -20,7 +23,7 @@ BAstrap 2020 está desarrollado principalmente en [Sass](https://sass-lang.com/)
 
 ---
 
-Para desarrollar en BAstrap hay que clonar el proyecto e instalar dependencias.
+Para desarrollar en Obelisco hay que clonar el proyecto e instalar dependencias.
 ```
 npm install
 ```
@@ -32,9 +35,9 @@ npm start
 
 ## Colaboración
 
-Cualquier nuevo cambio en BAstrap se debe hacer mediante un pull request (PR).
+Cualquier nuevo cambio en Obelisco se debe hacer mediante un pull request (PR).
 
-**Antes de subir cambios se recomienda crear un [issue](https://github.com/Jinik/bastrap2020/issues) explicando la necesidad**.
+**Antes de subir cambios se recomienda crear un [issue](issues) explicando la necesidad**.
 
 El proceso de aprobación de un PR es:
 
@@ -44,9 +47,8 @@ El proceso de aprobación de un PR es:
 3. Si los cambios implican una modificación visual en algún componente, se debe aprobar desde chromatic.
 
 ## Integración contínua
-![Chromatic](https://github.com/Jinik/bastrap2020/workflows/Chromatic/badge.svg)
 
-BAstrap 2020 tiene tests automáticos e integración continua.
+Obelisco tiene tests automáticos e integración continua.
 Cada vez que se genera un nuevo PR, se corren los siguientes procesos:
 
 - **linter** para corroborar que los cambios sigan los lineamientos de estilos de código.

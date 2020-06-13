@@ -1,7 +1,7 @@
 {
-  "name": "bastrap",
+  "name": "obelisco",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sistema de componentes para web del GCBA.",
   "main": "index.js",
   "scripts": {
     "start": "start-storybook -s ./static -p 6006",
