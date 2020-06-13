@@ -1,6 +1,6 @@
 // Base
 import React from "react";
-import "../../scss/obelico.scss";
+import "../../scss/obelisco.scss";
 import "./Button.stories.scss";
 
 // Addons
