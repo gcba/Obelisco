@@ -4,13 +4,14 @@ Fue creado para reemplazar [BAstrap](https://github.com/gcba/bastrap).
 
 [Lista de componentes](https://gcba.github.io/Obelisco/).
 
-## Uso
-**:exclamation: Esto es mentira porque todavía no está publicado**.
+<!--
+## Uso (Esto es mentira porque todavía no está publicado)
 
 Obelisco está publicado en npm, por lo que se puede instalar de la siguiente forma:
 ```
 npm install --save obelisco
 ```
+-->
 
 ## Desarrollo
 Obelisco está desarrollado principalmente en [Sass](https://sass-lang.com/) y [TypeScript](http://typescriptlang.org/) y utiliza las siguientes herramientas:
@@ -37,7 +38,7 @@ npm start
 
 Cualquier nuevo cambio en Obelisco se debe hacer mediante un pull request (PR).
 
-**Antes de subir cambios se recomienda crear un [issue](issues) explicando la necesidad**.
+**Antes de subir cambios se recomienda crear un [issue](https://github.com/gcba/obelisco/issues) explicando la necesidad**.
 
 El proceso de aprobación de un PR es:
 
@@ -47,6 +48,8 @@ El proceso de aprobación de un PR es:
 3. Si los cambios implican una modificación visual en algún componente, se debe aprobar desde chromatic.
 
 ## Integración contínua
+
+![Deploy storybook](https://github.com/gcba/Obelisco/workflows/Deploy%20storybook/badge.svg?branch=master)
 
 Obelisco tiene tests automáticos e integración continua.
 Cada vez que se genera un nuevo PR, se corren los siguientes procesos:
