@@ -14,7 +14,7 @@ import * as notes from "./Button.md";
 
 // Config
 export default {
-  title: "Componentes|Botón",
+  title: "Componentes/Botón",
   component: Button,
   decorators: [withA11y, withXD],
   parameters: {

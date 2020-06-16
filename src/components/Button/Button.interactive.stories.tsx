@@ -11,7 +11,7 @@ import { Button } from "./Button";
 
 // Config
 export default {
-  title: "Interactivo|Componentes",
+  title: "Interactivo/Componentes",
   component: Button,
   decorators: [withKnobs],
   parameters: {
