@@ -12,7 +12,7 @@ export const types: Type[] = [
   "info",
   "success",
   "danger",
-  "link",
+  "link"
 ];
 
 export type Size = "default" | "small" | "large";
