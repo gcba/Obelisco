@@ -47,6 +47,10 @@ El proceso de aprobación de un PR es:
 2. Se debe hacer revisión del código por un miembro del equipo.
 3. Si los cambios implican una modificación visual en algún componente, se debe aprobar desde chromatic.
 
+### Recomendaciones
+
+Es recomandable utilizar [VScode](https://code.visualstudio.com/) como editor de código con las extensiones de [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) y [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) para asegurarse que los estilos del código sigan las convenciones.
+
 ## Integración contínua
 
 ![Deploy storybook](https://github.com/gcba/Obelisco/workflows/Deploy%20storybook/badge.svg?branch=master)
