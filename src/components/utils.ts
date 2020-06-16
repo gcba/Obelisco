@@ -3,20 +3,16 @@ export type Type =
   | "secondary"
   | "success"
   | "info"
-  | "warning"
   | "danger"
-  | "light"
-  | "dark";
+  | "link";
 
 export const types: Type[] = [
   "primary",
   "secondary",
-  "success",
   "info",
-  "warning",
+  "success",
   "danger",
-  "light",
-  "dark"
+  "link",
 ];
 
 export type Size = "default" | "small" | "large";

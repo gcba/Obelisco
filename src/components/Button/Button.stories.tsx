@@ -18,7 +18,11 @@ export default {
   component: Button,
   decorators: [withA11y, withXD],
   parameters: {
-    notes
+    notes,
+    design: {
+      artboardUrl:
+        "https://xd.adobe.com/view/0623a13b-8fc0-407c-6a4d-c1c24dc2c5fa-7012/screen/d1dd8e3f-6a3b-4a7b-a59e-ba883ca7c684/-TOMOS-BOTONES"
+    }
   }
 };
 
@@ -29,30 +33,16 @@ export const Colores = (): JSX.Element[] => {
     </Button>
   ));
 };
-Colores.story = {
-  parameters: {
-    design: {
-      artboardUrl:
-        "https://xd.adobe.com/view/fccdcd08-c6ec-4a4c-5bd4-97fe07baaf7b-8afc/screen/a7f688b8-475d-4fa0-83bf-01002ef05018/Colores"
-    }
-  }
-};
 
-export const Sizes = (): JSX.Element[] => {
+export const Tamanos = (): JSX.Element[] => {
   return sizes.map(size => (
     <Button key={size} type="secondary" size={size}>
       {size}
     </Button>
   ));
 };
-Sizes.story = {
-  name: "Tamaños",
-  parameters: {
-    design: {
-      artboardUrl:
-        "https://xd.adobe.com/view/fccdcd08-c6ec-4a4c-5bd4-97fe07baaf7b-8afc/screen/1345bc77-fc2b-4242-a246-8a371090fa1b/Tama-os"
-    }
-  }
+Tamanos.story = {
+  name: "Tamaños"
 };
 
 export const Deshabilitado = (): JSX.Element => {
@@ -61,14 +51,6 @@ export const Deshabilitado = (): JSX.Element => {
       Deshabilitado
     </Button>
   );
-};
-Deshabilitado.story = {
-  parameters: {
-    design: {
-      artboardUrl:
-        "https://xd.adobe.com/view/fccdcd08-c6ec-4a4c-5bd4-97fe07baaf7b-8afc/screen/bb9c94a8-fe83-4fa6-aafd-4ee74ee35c9f/Deshabilitado"
-    }
-  }
 };
 
 export const Expandible = (): JSX.Element => {
@@ -79,12 +61,4 @@ export const Expandible = (): JSX.Element => {
       </Button>
     </div>
   );
-};
-Expandible.story = {
-  parameters: {
-    design: {
-      artboardUrl:
-        "https://xd.adobe.com/view/fccdcd08-c6ec-4a4c-5bd4-97fe07baaf7b-8afc/screen/20f346ea-c2f4-423a-b908-8577f046fd10/Expandible"
-    }
-  }
 };

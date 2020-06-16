@@ -1,0 +1,28 @@
+.btn-link {
+  font-weight: $btn-font-weight;
+
+  &:hover,
+  &.hover {
+    background-color: $grisulado-50;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    &:hover,
+    &.hover {
+      box-shadow: none;
+    }
+
+    &:not(:disabled):not(.disabled) {
+      &:focus,
+      &.focus,
+      &:active,
+      &.active,
+      &:active:focus,
+      &.active.focus {
+        box-shadow: 0 0 0 $btn-focus-width $blue;
+      }
+    }
+  }
+}

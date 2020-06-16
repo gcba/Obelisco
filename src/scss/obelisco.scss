@@ -1,3 +1,32 @@
 // @import "../../node_modules/bootstrap/scss/variables";
+
+// =======================//
+// Overrides
+// =======================//
+
 @import "variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// =======================//
+// Bootstrap
+// =======================//
+
+// @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// General
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+$theme-colors: map-remove($theme-colors, "light", "dark", "warning");
+
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/print";
+@import "../../node_modules/bootstrap/scss/grid";
+
+// Components
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "buttons";
+
+@import "../../node_modules/bootstrap/scss/transitions";
