@@ -4,7 +4,7 @@
 // Overrides
 // =======================//
 
-@import "variables";
+@import "./variables";
 
 // =======================//
 // Bootstrap
@@ -27,6 +27,6 @@ $theme-colors: map-remove($theme-colors, "light", "dark", "warning");
 
 // Components
 @import "../../node_modules/bootstrap/scss/buttons";
-@import "buttons";
+@import "./buttons";
 
 @import "../../node_modules/bootstrap/scss/transitions";

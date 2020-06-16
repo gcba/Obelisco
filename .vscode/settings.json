@@ -1,7 +1,8 @@
 {
-  "editor.formatOnSave": false,
+  "prettier.stylelintIntegration": true,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
+    "source.fixAll.eslint": false,
     "source.fixAll.tslint": false
   },
   "editor.tabSize": 2

@@ -4,14 +4,14 @@
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .75rem;
-$input-btn-padding-x:         1.5rem;
+$input-btn-padding-y: 0.75rem;
+$input-btn-padding-x: 1.5rem;
 // $input-btn-font-family:       null !default;
-$input-btn-font-size:         1.125rem;
+$input-btn-font-size: 1.125rem;
 // $input-btn-line-height:       $line-height-base !default;
 
-$input-btn-focus-width:       .125rem;
-$input-btn-focus-color:       $blue;
+$input-btn-focus-width: 0.125rem;
+$input-btn-focus-color: $blue;
 // $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
 // $input-btn-padding-y-sm:      .25rem !default;
@@ -25,7 +25,6 @@ $input-btn-focus-color:       $blue;
 // $input-btn-line-height-lg:    $line-height-lg !default;
 
 // $input-btn-border-width:      $border-width !default;
-
 
 // Buttons
 //
@@ -50,7 +49,7 @@ $input-btn-focus-color:       $blue;
 
 // $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             600;
+$btn-font-weight: 600;
 // $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 // $btn-focus-width:             $input-btn-focus-width !default;
 // $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;

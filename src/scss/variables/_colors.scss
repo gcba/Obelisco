@@ -1,6 +1,6 @@
 // Color system
 
-$white:    #fff;
+$white: #fff;
 $gray-50: #f2f2f2;
 $gray-100: #e5e5e5;
 $gray-200: #cccccc;
@@ -11,50 +11,49 @@ $gray-600: #666666;
 $gray-700: #4c4c4c;
 $gray-800: #333333;
 $gray-900: #191919;
-$black:    #000;
+$black: #000;
 
-$grisulado-10: #F3F6F9;
-$grisulado-50: #DFE7F0;
-$grisulado-100: #D3D9E0;
-$grisulado-200: #B8C1CC;
-$grisulado-300: #9EAAB8;
-$grisulado-400: #8A98A8;
-$grisulado-500: #69788A;
-$grisulado-600: #5C6A7A;
-$grisulado-700: #505E70;
+$grisulado-10: #f3f6f9;
+$grisulado-50: #dfe7f0;
+$grisulado-100: #d3d9e0;
+$grisulado-200: #b8c1cc;
+$grisulado-300: #9eaab8;
+$grisulado-400: #8a98a8;
+$grisulado-500: #69788a;
+$grisulado-600: #5c6a7a;
+$grisulado-700: #505e70;
 $grisulado-800: #425266;
-$grisulado-900: #38485C;
+$grisulado-900: #38485c;
 
-$blue:    #037dbf;
+$blue: #037dbf;
 // $indigo:  #9b59b6; // Bootstrap's default
 // $purple:  #9b59b6; // Bootstrap's default
 // $pink:    #f54789; // Bootstrap's default
-$red:     #c93b3b;
-$orange:  #ffa82e;
-$yellow:  #fdd306;
-$green:   #26874a;
+$red: #c93b3b;
+$orange: #ffa82e;
+$yellow: #fdd306;
+$green: #26874a;
 // $teal:    #18b596; // Bootstrap's default
-$cyan:    #007bc7;
+$cyan: #007bc7;
 
-$primary:       $yellow;
-$secondary:     $grisulado-50;
-$success:       $green;
-$info:          $cyan;
-$warning:       $yellow;
-$danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-800;
+$primary: $yellow;
+$secondary: $grisulado-50;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;
 
 // Set a specific jump point for requesting color jumps
-$theme-color-interval:      10%;
+$theme-color-interval: 10%;
 
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-$yiq-contrasted-threshold:  150 !default;
+$yiq-contrasted-threshold: 150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             $grisulado-900;
-$yiq-text-light:            $white !default;
-
+$yiq-text-dark: $grisulado-900;
+$yiq-text-light: $white !default;
 
 // Links
 $link-color: $blue;
