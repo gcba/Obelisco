@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Lint
-        run: npm run lint
+        run: npm run lint:typescript && npm run lint:sass
 
   test:
     name: Test
@@ -38,7 +38,7 @@ jobs:
 
       - name: Upload to Chromatic
         uses: chromaui/action@v1
-        with: 
+        with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
           buildScriptName: build:storybook

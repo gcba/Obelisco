@@ -1,5 +1,6 @@
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 #root {
@@ -8,8 +9,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-}   
+}
 
-// svg.sidebar-svg-icon path { 
+// svg.sidebar-svg-icon path {
 //   fill: #fdd306 !important;
 // }

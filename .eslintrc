@@ -11,9 +11,7 @@
     "es6": true,
     "node": true
   },
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -22,7 +20,7 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
-  "rules": { 
+  "rules": {
     "no-console": 1
   }
 }

@@ -1,8 +1,8 @@
-import { addons } from '@storybook/addons';
-import { create } from '@storybook/theming';
+import { addons } from "@storybook/addons";
+import { create } from "@storybook/theming";
 
 const theme = create({
-  base: 'light',
+  base: "light",
 
   // colorPrimary: '#fdd306',
   // colorSecondary: '#0389d1',
@@ -32,9 +32,9 @@ const theme = create({
   // inputTextColor: 'black',
   // inputBorderRadius: 4,
 
-  brandTitle: 'Me van a cambiar, no te preocupes!',
-  brandUrl: 'https://gcba.github.io/obelisco',
-  brandImage: 'bastrap-logo.png',
+  brandTitle: "Me van a cambiar, no te preocupes!",
+  brandUrl: "https://gcba.github.io/obelisco",
+  brandImage: "bastrap-logo.png",
 });
 
 addons.setConfig({
