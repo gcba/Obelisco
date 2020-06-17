@@ -21,7 +21,7 @@ Si encontrás un error en alguno de los componentes o alguna mejora que impacte 
 
 **Primero**: [Buscá en las tareas de errores](https://github.com/gcba/estandares/issues?q=is%3Aopen+is%3Aissue+label%3Acomponente+label%3Aerror3) para entender si ya fue reportado.
 
-- **Si no lo encontrás**, [creá un nuevo issue](https://github.com/gcba/estandares/issues) explicando la necesidad. (Usá el temlpate para pedir nuevos componentes).
+- **Si no lo encontrás**, [creá un nuevo issue](https://github.com/gcba/estandares/issues) el error o mejora. (Usá el temlpate para reportar errores de componentes).
 
 - **Si ya existe**, comentá tu caso o dejanos tu feedback reaccionando con un :thumbsup: .
 
