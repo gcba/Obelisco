@@ -21,7 +21,7 @@ Obelisco está desarrollado principalmente en [Sass](https://sass-lang.com/) y [
 - [Storybook](https://storybook.js.org) como base para definir y documentar cada componente.
 - [React](https://reactjs.org/) para generar los componentes de la documentación.
 - [Chromatic](https://www.chromatic.com/) para gestionar los cambios visuales en los componentes.
-- [ESlint](https://eslint.org/) y [Prettier](https://prettier.io/) para estandarizar los estilos del código.
+- [ESLint](https://eslint.org/), [Stylelint](https://stylelint.io/) y [Prettier](https://prettier.io/) para estandarizar los estilos del código.
 
 ---
 
@@ -37,10 +37,9 @@ npm start
 
 ### Recomendaciones
 
-Es recomandable utilizar [VScode](https://code.visualstudio.com/) como editor de código con las extensiones de [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) y [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) para asegurarse que los estilos del código sigan las convenciones.
+Es recomandable utilizar [VScode](https://code.visualstudio.com/) como editor de código con las extensiones de [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint), [Stylelint](https://marketplace.visualstudio.com/items?itemName=Daosro.stylelint) y [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) para asegurarse que los estilos del código sigan las convenciones.
 
-
-## Integración contínua
+## Integración continua
 
 ![Deploy storybook](https://github.com/gcba/Obelisco/workflows/Deploy%20storybook/badge.svg?branch=master)
 
@@ -55,7 +54,7 @@ Al hacer el merge en la branch `master` se corre el siguiente proceso:
 1. Corrobora el formato del código.
 2. Corre las pruebas automáticas para chequear que pasen.
 3. Genera el build de la nueva versión.
-4. Publicación en github pages.
+4. Publica los cambios en github pages.
 
 
 ## Colaboración
