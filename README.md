@@ -13,6 +13,7 @@ npm install --save obelisco
 ```
 -->
 
+
 ## Desarrollo
 Obelisco está desarrollado principalmente en [Sass](https://sass-lang.com/) y [TypeScript](http://typescriptlang.org/) y utiliza las siguientes herramientas:
 
@@ -34,22 +35,10 @@ Una vez instalado, se puede correr con el siguiente comando.
 npm start
 ```
 
-## Colaboración
-
-Cualquier nuevo cambio en Obelisco se debe hacer mediante un pull request (PR).
-
-**Antes de subir cambios se recomienda crear un [issue](https://github.com/gcba/obelisco/issues) explicando la necesidad**.
-
-El proceso de aprobación de un PR es:
-
-0. Los cambios deben estar aprobados dentro del roadmap o con un issue previamente en caso de ser un bug o colaboración.
-1. Deben pasar todos los chequeos automáticos.
-2. Se debe hacer revisión del código por un miembro del equipo.
-3. Si los cambios implican una modificación visual en algún componente, se debe aprobar desde chromatic.
-
 ### Recomendaciones
 
 Es recomandable utilizar [VScode](https://code.visualstudio.com/) como editor de código con las extensiones de [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) y [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) para asegurarse que los estilos del código sigan las convenciones.
+
 
 ## Integración contínua
 
@@ -59,7 +48,7 @@ Obelisco tiene tests automáticos e integración continua.
 Cada vez que se genera un nuevo PR, se corren los siguientes procesos:
 
 - **linter** para corroborar que los cambios sigan los lineamientos de estilos de código.
-- **Tests de chromatic** para verificar si hay cambios visuales. 
+- **Tests de chromatic** para verificar si hay cambios visuales.
 
 Al hacer el merge en la branch `master` se corre el siguiente proceso:
 
@@ -67,3 +56,12 @@ Al hacer el merge en la branch `master` se corre el siguiente proceso:
 2. Corre las pruebas automáticas para chequear que pasen.
 3. Genera el build de la nueva versión.
 4. Publicación en github pages.
+
+
+## Colaboración
+
+El mantenimiento y desarrollo de Obelisco lo hace el equipo de la Dirección General de Experiencia Digital, pero lo utilizan tanto equipos de gobierno como proveedores externos.
+
+Para agilizar y hacer más transparente el proceso, cualquier persona puede contribuir con aguna de estas acciones.
+
+[Conocé cómo hacerlo en la sección contribuir](CONTRIBUTING.md).
