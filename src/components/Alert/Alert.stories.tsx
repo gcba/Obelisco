@@ -16,7 +16,10 @@ export default {
 export const Texto = (): JSX.Element => {
   return (
     <div className="alert alert-danger" role="alert">
-      <p>Un texto simple para una alerta simple, incluso <a href="#">con hipervínculos</a>.</p>
+      <p>
+        Un texto simple para una alerta simple, incluso&nbsp;
+        <a href="#">con hipervínculos</a>.
+      </p>
     </div>
   );
 };
@@ -25,7 +28,10 @@ export const Titulo = (): JSX.Element => {
   return (
     <div className="alert alert-danger" role="alert">
       <h4>Título de la alerta</h4>
-      <p>Un texto simple para una alerta simple, incluso <a href="#">con hipervínculos</a>.</p>
+      <p>
+        Un texto simple para una alerta simple, incluso&nbsp;
+        <a href="#">con hipervínculos</a>.
+      </p>
     </div>
   );
 };
@@ -45,14 +51,22 @@ export const Colores = (): JSX.Element[] => {
 
 export const Toggle = (): JSX.Element => {
   return (
-    <div className="alert alert-danger alert-dismissible fade show" role="alert">
+    <div
+      className="alert alert-danger alert-dismissible fade show"
+      role="alert"
+    >
       <h4>Título de la alerta</h4>
       <p>
-        Un texto simple para una alerta simple, incluso{" "}
+        Un texto simple para una alerta simple, incluso&nbsp;
         <a href="#">con hipervínculos</a>.
       </p>
 
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <button
+        type="button"
+        className="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
@@ -61,7 +75,10 @@ export const Toggle = (): JSX.Element => {
 
 export const Lista = (): JSX.Element => {
   return (
-    <div className="alert alert-danger alert-dismissible fade show" role="alert">
+    <div
+      className="alert alert-danger alert-dismissible fade show"
+      role="alert"
+    >
       <h4>Título de la alerta</h4>
       <ol>
         <li>
@@ -77,7 +94,12 @@ export const Lista = (): JSX.Element => {
         </li>
       </ol>
 
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <button
+        type="button"
+        className="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
