@@ -1,5 +1,7 @@
 // Color system
 
+/* === Gray scale === */
+
 $white: #fff;
 $gray-50: #f2f2f2;
 $gray-100: #e5e5e5;
@@ -13,6 +15,8 @@ $gray-800: #333333;
 $gray-900: #191919;
 $black: #000;
 
+/* === Grisulado === */
+
 $grisulado-10: #f3f6f9;
 $grisulado-50: #dfe7f0;
 $grisulado-100: #d3d9e0;
@@ -25,6 +29,8 @@ $grisulado-700: #505e70;
 $grisulado-800: #425266;
 $grisulado-900: #38485c;
 
+/* === Color palette === */
+
 $blue: #037dbf;
 // $indigo:  #9b59b6; // Bootstrap's default
 // $purple:  #9b59b6; // Bootstrap's default
@@ -36,6 +42,8 @@ $green: #26874a;
 // $teal:    #18b596; // Bootstrap's default
 $cyan: #007bc7;
 
+/* === Color types === */
+
 $primary: $yellow;
 $secondary: $grisulado-50;
 $success: $green;
@@ -44,6 +52,8 @@ $warning: $yellow;
 $danger: $red;
 $light: $gray-100;
 $dark: $gray-800;
+
+/* === Color theme === */
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 10%;
@@ -54,6 +64,8 @@ $yiq-contrasted-threshold: 150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $grisulado-900;
 $yiq-text-light: $white !default;
+
+/* === Components colors === */
 
 // Links
 $link-color: $blue;

@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Type, Size, sizeToClass } from "../utils";
+import { ButtonType, Size, sizeToClass } from "../utils";
 
 export interface ButtonProps {
-  type: Type;
+  type: ButtonType;
   size?: Size;
   block?: boolean;
   disabled?: boolean;

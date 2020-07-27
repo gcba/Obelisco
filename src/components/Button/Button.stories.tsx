@@ -7,17 +7,15 @@ import { withA11y } from "@storybook/addon-a11y";
 import { withXD } from "storybook-addon-xd-designs";
 
 // Components
-import { types, sizes } from "../utils";
+import { buttonTypes, sizes } from "../utils";
 import { Button } from "./Button";
-import * as notes from "./Button.md";
 
 // Config
 export default {
-  title: "Componentes/Botón",
+  title: "Componentes|Botón",
   component: Button,
   decorators: [withA11y, withXD],
   parameters: {
-    notes,
     design: {
       artboardUrl:
         "https://xd.adobe.com/view/0623a13b-8fc0-407c-6a4d-c1c24dc2c5fa-7012/screen/d1dd8e3f-6a3b-4a7b-a59e-ba883ca7c684/-TOMOS-BOTONES"
@@ -26,7 +24,7 @@ export default {
 };
 
 export const Colores = (): JSX.Element[] => {
-  return types.map(type => (
+  return buttonTypes.map(type => (
     <Button key={type} type={type}>
       {type}
     </Button>

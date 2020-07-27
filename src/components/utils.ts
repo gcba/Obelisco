@@ -1,19 +1,14 @@
-export type Type =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "info"
-  | "danger"
-  | "link";
-
+export type Type = "primary" | "secondary" | "success" | "info" | "danger";
 export const types: Type[] = [
   "primary",
   "secondary",
   "info",
   "success",
-  "danger",
-  "link"
+  "danger"
 ];
+
+export type ButtonType = Type | "link";
+export const buttonTypes: ButtonType[] = [...types, "link"];
 
 export type Size = "default" | "small" | "large";
 export const sizes: Size[] = ["small", "default", "large"];

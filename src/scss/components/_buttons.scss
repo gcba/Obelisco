@@ -1,0 +1,35 @@
+/* === Variable and mixins overides === */
+
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-font-size: 1.125rem;
+$btn-focus-width: 0.125rem;
+$btn-focus-color: $blue;
+$btn-font-weight: 600;
+
+$btn-box-shadow: none;
+$btn-focus-width: 4px;
+$input-btn-focus-color: rgba($component-active-bg, 0.25);
+$input-btn-focus-box-shadow: none;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+@import "../../../node_modules/bootstrap/scss/buttons";
+
+/* === Custom styles === */
+
+.btn-link {
+  font-weight: $btn-font-weight;
+
+  &:hover,
+  &.hover {
+    background-color: $grisulado-50;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $input-btn-focus-width rgba($blue, 0.25);
+  }
+}

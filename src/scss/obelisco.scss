@@ -1,32 +1,28 @@
-// @import "../../node_modules/bootstrap/scss/variables";
-
-// =======================//
-// Overrides
-// =======================//
-
-@import "./variables";
-
-// =======================//
-// Bootstrap
-// =======================//
+/*!
+ * Obelisco
+ * Copyright 2020 Gobierno de la ciudad de Buenos Aires
+ * Licensed under MIT (https://github.com/gcba/obelisco/blob/master/LICENSE)
+ */
 
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// General
+// Custom base
+@import "colors";
+@import "miscellaneous";
+@import "typography";
+
+// Bootstrap base
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
-
 $theme-colors: map-remove($theme-colors, "light", "dark", "warning");
-
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/print";
 @import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/type";
 
 // Components
-@import "../../node_modules/bootstrap/scss/buttons";
-@import "./buttons";
-
-@import "../../node_modules/bootstrap/scss/transitions";
+@import "components/buttons";
