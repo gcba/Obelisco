@@ -1,0 +1,35 @@
+/* === Variable and mixins overides === */
+
+$alert-padding-y: 0.75rem;
+$alert-padding-x: 1rem;
+
+// $alert-margin-bottom: 1rem !default;
+$alert-border-width: 2px;
+
+$alert-bg-level: -9;
+$alert-border-level: 0;
+
+/* === Custom variables and mixins === */
+
+@mixin alert-variant($background, $border, $color) {
+  @include gradient-bg($background);
+  border-color: $border;
+
+  a {
+    color: inherit;
+  }
+}
+
+/* === Bootstrap Import === */
+
+// Eliminamos el color secundario para las alertas.
+$tmp: $theme-colors;
+$theme-colors: map-remove($theme-colors, "secondary");
+@import "../../../node_modules/bootstrap/scss/alert";
+$theme-colors: $tmp;
+
+/* === Custom styles === */
+
+.alert {
+  border-left-width: 6px;
+}

@@ -10,6 +10,9 @@ export const types: Type[] = [
 export type ButtonType = Type | "link";
 export const buttonTypes: ButtonType[] = [...types, "link"];
 
+export type AlertType = "primary" | "success" | "info" | "danger";
+export const alertTypes: AlertType[] = ["primary", "info", "success", "danger"];
+
 export type Size = "default" | "small" | "large";
 export const sizes: Size[] = ["small", "default", "large"];
 

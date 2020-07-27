@@ -25,4 +25,5 @@ $theme-colors: map-remove($theme-colors, "light", "dark", "warning");
 @import "../../node_modules/bootstrap/scss/type";
 
 // Components
+@import "components/alert";
 @import "components/buttons";
