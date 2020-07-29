@@ -1,0 +1,24 @@
+/* === Variable and mixins overides === */
+
+$example-color: $blue;
+$example-border: $base-border-width solid $example-color;
+
+/* === Custom variables and mixins === */
+
+@mixin example-mixin($color, $border) {
+  color: $color;
+
+  &.bordered {
+    border: $border;
+  }
+}
+
+/* === Bootstrap Import === */
+
+@import "../../../node_modules/bootstrap/scss/example";
+
+/* === Custom styles === */
+
+.example {
+  @include example-mixin($example-color, $example-border);
+}
