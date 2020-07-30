@@ -16,6 +16,4 @@ Fue creado para reemplazar [BAstrap](https://github.com/gcba/bastrap).
 
 El mantenimiento y desarrollo de Obelisco lo hace el equipo de la Dirección General de Experiencia Digital, pero lo utilizan tanto equipos de gobierno como proveedores externos.
 
-Para agilizar y hacer más transparente el proceso, cualquier persona puede contribuir con aguna de estas acciones.
-
-[Conocé cómo hacerlo en la sección contribuir](CONTRIBUTING.md).
+Para agilizar y hacer más transparente el proceso, cualquier persona puede [contribuir de varias formas](CONTRIBUTING.md).
