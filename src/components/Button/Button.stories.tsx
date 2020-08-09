@@ -8,7 +8,7 @@ import { withXD } from "storybook-addon-xd-designs";
 
 // Components
 import { buttonTypes, sizes } from "../utils";
-import { Button } from "./Button";
+import { Button } from ".";
 
 // Config
 export default {

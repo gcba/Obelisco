@@ -1,29 +1,30 @@
 {
-  "name": "obelisco",
+  "name": "@gcba/obelisco",
   "version": "1.0.0",
   "description": "Sistema de componentes para web del GCBA.",
-  "main": "index.js",
+  "author": "Dirección General de Experiencia Digital",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "start-storybook -s ./static -p 6006",
+    "lint": "npm run lint:typescript && npm run lint:sass",
     "lint:typescript": "eslint --ext .ts,.tsx . --fix",
     "lint:sass": "stylelint '**/*.{css,scss,sass}' --fix",
-    "lint": "npm run lint:typescript && npm run lint:sass",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:sass": "sass src/scss/:dist/",
-    "build:storybook": "build-storybook -s ./static -c .storybook -o .storybook-out"
+    "build:typescript": "tsc --outDir dist",
+    "build:storybook": "build-storybook -s ./static -c .storybook -o .storybook-out",
+    "release": "semantic-release"
   },
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "@storybook/addon-notes": "^5.3.18",
-    "react-dom": "^16.13.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@storybook/addon-a11y": "^5.3.18",
-    "@storybook/addon-docs": "^5.3.18",
     "@storybook/addon-info": "^5.3.18",
-    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-notes": "^5.3.18",
     "@storybook/addon-viewport": "^5.3.18",
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.0.0",
@@ -46,10 +47,12 @@
     "prettier-stylelint": "^0.4.2",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "react-storybook-addon-props-combinations": "^1.1.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "semantic-release": "^17.1.1",
     "storybook-addon-xd-designs": "^5.5.0",
     "style-loader": "^1.2.1",
     "stylelint": "^13.5.0",

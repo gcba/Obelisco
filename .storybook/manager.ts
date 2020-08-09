@@ -34,7 +34,7 @@ const theme = create({
 
   brandTitle: "Me van a cambiar, no te preocupes!",
   brandUrl: "https://gcba.github.io/obelisco",
-  brandImage: "bastrap-logo.png",
+  brandImage: "logo.svg",
 });
 
 addons.setConfig({
