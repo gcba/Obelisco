@@ -4,6 +4,9 @@
   "description": "Sistema de componentes para web del GCBA.",
   "author": "Dirección General de Experiencia Digital",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "files": [
     "dist"
