@@ -1,16 +1,26 @@
 /* === Variable and mixins overides === */
 
-$btn-padding-y: 0.75rem;
-$btn-padding-x: 1.5rem;
-$btn-font-size: 1.125rem;
-$btn-focus-width: 0.125rem;
-$btn-focus-color: $blue;
+$btn-padding-y: 0.75rem; // 12px
+$btn-padding-x: 1.5rem; // 24px
+$btn-font-size: 1.125rem; // 18px
+$btn-focus-width: 0.125rem; // 2px
 $btn-font-weight: 600;
+
+$btn-border-width: 0;
 
 $btn-box-shadow: none;
 $btn-focus-width: 4px;
-$input-btn-focus-color: rgba($component-active-bg, 0.25);
-$input-btn-focus-box-shadow: none;
+$input-btn-focus-color: darken($component-active-bg, 60%);
+
+$btn-padding-y-sm: 0.375rem;
+$btn-padding-x-sm: 1rem;
+$btn-font-size-sm: 1rem;
+
+$btn-padding-y-lg: $btn-padding-y;
+$btn-padding-x-lg: $btn-padding-x;
+$btn-font-size-lg: $btn-font-size;
+
+$btn-link-disabled-color: $gray-600;
 
 /* === Custom variables and mixins === */
 
@@ -20,16 +30,43 @@ $input-btn-focus-box-shadow: none;
 
 /* === Custom styles === */
 
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include hover() {
+      background-color: theme-color-level($color, 1);
+      border-color: theme-color-level($color, 1);
+    }
+
+    &:focus,
+    &.focus {
+      box-shadow: 0 0 0 $input-btn-focus-width theme-color-level($color, 3);
+
+      &:not(:hover) {
+        background-color: theme-color-level($color, 0);
+      }
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      background-color: theme-color-level($color, 1);
+
+      &:focus {
+        box-shadow: 0 0 0 $input-btn-focus-width theme-color-level($color, 3);
+      }
+    }
+  }
+}
+
 .btn-link {
   font-weight: $btn-font-weight;
 
-  &:hover,
-  &.hover {
+  @include hover() {
     background-color: $grisulado-50;
   }
 
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 $input-btn-focus-width rgba($blue, 0.25);
+    box-shadow: 0 0 0 $input-btn-focus-width theme-color-level("info", 3);
   }
 }

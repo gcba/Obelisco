@@ -45,7 +45,7 @@ $cyan: #007bc7;
 /* === Color types === */
 
 $primary: $yellow;
-$secondary: $grisulado-50;
+$secondary: $grisulado-500;
 $success: $green;
 $info: $cyan;
 $warning: $yellow;
@@ -64,9 +64,3 @@ $yiq-contrasted-threshold: 150 !default;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $grisulado-900;
 $yiq-text-light: $white !default;
-
-/* === Components colors === */
-
-// Links
-$link-color: $blue;
-$link-decoration: underline;

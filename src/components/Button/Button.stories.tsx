@@ -31,8 +31,24 @@ export const Colores = (): JSX.Element[] => {
   ));
 };
 
+export const ConFoco = (): JSX.Element[] => {
+  return buttonTypes.map(type => (
+    <Button key={type} type={type} className="focus">
+      {type}
+    </Button>
+  ));
+};
+
+export const Activos = (): JSX.Element[] => {
+  return buttonTypes.map(type => (
+    <Button key={type} type={type} className="active">
+      {type}
+    </Button>
+  ));
+};
+
 export const Tamanos = (): JSX.Element[] => {
-  return sizes.map(size => (
+  return sizes.slice(0, 2).map(size => (
     <Button key={size} type="secondary" size={size}>
       {size}
     </Button>

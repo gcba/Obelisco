@@ -6,6 +6,7 @@ export interface ButtonProps {
   size?: Size;
   block?: boolean;
   disabled?: boolean;
+  className?: string;
 }
 
 export const Button: React.FC<ButtonProps> = (
@@ -16,6 +17,7 @@ export const Button: React.FC<ButtonProps> = (
   let className = `btn btn-${type}`;
   if (!!size && size !== "default") className += ` btn-${sizeToClass(size)}`;
   if (block) className += ` btn-block`;
+  if (props.className) className += ` ${props.className}`;
 
   return (
     <button type="button" className={className} disabled={disabled}>

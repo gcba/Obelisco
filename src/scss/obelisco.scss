@@ -6,7 +6,7 @@
 
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Custom base
+// Custom variables
 @import "colors";
 @import "miscellaneous";
 @import "typography";
@@ -23,6 +23,9 @@ $theme-colors: map-remove($theme-colors, "light", "dark", "warning");
 @import "../../node_modules/bootstrap/scss/grid";
 @import "../../node_modules/bootstrap/scss/transitions";
 @import "../../node_modules/bootstrap/scss/type";
+
+// Custom styles
+@import "components/typography";
 
 // Components
 @import "components/buttons";
