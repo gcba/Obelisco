@@ -1,5 +1,12 @@
 /* === Custom styles === */
 
+h1,
+.h1,
+h2,
+.h2 {
+  font-weight: $large-headings-font-weight;
+}
+
 // Links
 $link-color: theme-color-level("info", 0);
 $link-hover-color: theme-color-level("info", 2);

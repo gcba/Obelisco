@@ -54,9 +54,7 @@ export const Tamanos = (): JSX.Element[] => {
     </Button>
   ));
 };
-Tamanos.story = {
-  name: "Tamaños"
-};
+Tamanos.story = { name: "Tamaños" };
 
 export const Deshabilitado = (): JSX.Element => {
   return (
