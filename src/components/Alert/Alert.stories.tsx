@@ -16,8 +16,7 @@ export default {
 export const Texto = (): JSX.Element => {
   return (
     <div className="alert alert-danger" role="alert">
-      Un texto simple para una alerta simple, incluso{" "}
-      <a href="#">con hipervínculos</a>.
+      <p>Un texto simple para una alerta simple, incluso <a href="#">con hipervínculos</a>.</p>
     </div>
   );
 };
@@ -25,11 +24,8 @@ export const Texto = (): JSX.Element => {
 export const Titulo = (): JSX.Element => {
   return (
     <div className="alert alert-danger" role="alert">
-      <h5>Título de la alerta</h5>
-      <p>
-        Un texto simple para una alerta simple, incluso{" "}
-        <a href="#">con hipervínculos</a>.
-      </p>
+      <h4>Título de la alerta</h4>
+      <p>Un texto simple para una alerta simple, incluso <a href="#">con hipervínculos</a>.</p>
     </div>
   );
 };
@@ -40,7 +36,50 @@ Titulo.story = {
 export const Colores = (): JSX.Element[] => {
   return alertTypes.map(type => (
     <div key={type} className={`alert alert-${type}`} role="alert">
-      Un texto simple para una alerta simple.
+      <p>Un texto simple para una alerta simple.</p>
     </div>
   ));
+};
+
+// *********************************************************************
+
+export const Toggle = (): JSX.Element => {
+  return (
+    <div className="alert alert-danger alert-dismissible fade show" role="alert">
+      <h4>Título de la alerta</h4>
+      <p>
+        Un texto simple para una alerta simple, incluso{" "}
+        <a href="#">con hipervínculos</a>.
+      </p>
+
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  );
+};
+
+export const Lista = (): JSX.Element => {
+  return (
+    <div className="alert alert-danger alert-dismissible fade show" role="alert">
+      <h4>Título de la alerta</h4>
+      <ol>
+        <li>
+          <a href="#">Enlace de ejemplo</a>
+        </li>
+
+        <li>
+          <a href="#">Enlace de ejemplo</a>
+        </li>
+
+        <li>
+          <a href="#">Enlace de ejemplo</a>
+        </li>
+      </ol>
+
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  );
 };

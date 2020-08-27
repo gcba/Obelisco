@@ -1,6 +1,11 @@
 /* === Variable and mixins overides === */
 
+/*
 $alert-padding-y: 0.75rem;
+$alert-padding-x: 1rem;
+*/
+
+$alert-padding-y: 1rem;
 $alert-padding-x: 1rem;
 
 // $alert-margin-bottom: 1rem !default;
@@ -32,4 +37,17 @@ $theme-colors: $tmp;
 
 .alert {
   border-left-width: 6px;
+
+}
+
+.alert h4, .alert p, .alert ol{
+  margin-left: 3.75rem;
+}
+
+.alert p, .alert ol{
+  margin-bottom: 0;
+}
+
+.alert ol{
+  padding-left: 1.5rem;
 }
