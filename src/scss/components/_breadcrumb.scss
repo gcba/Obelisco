@@ -1,0 +1,17 @@
+/* === Variable and mixins overides === */
+
+$breadcrumb-divider: quote('>');
+$breadcrumb-bg: none;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+@import '../../../node_modules/bootstrap/scss/breadcrumb';
+
+/* === Custom styles === */
+
+//pendiente revisar como agregarle el icono de la casa
+.bread-first:before {
+  content: icon;
+}
