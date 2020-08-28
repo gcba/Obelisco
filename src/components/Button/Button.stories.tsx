@@ -23,36 +23,52 @@ export default {
   }
 };
 
-export const Colores = (): JSX.Element[] => {
-  return buttonTypes.map(type => (
-    <Button key={type} type={type}>
-      {type}
-    </Button>
-  ));
+export const Colores = (): JSX.Element => {
+  return (
+    <div className="btn-wrapper">
+      {buttonTypes.map(type => (
+        <Button key={type} type={type}>
+          {type}
+        </Button>
+      ))}
+    </div>
+  );
 };
 
-export const ConFoco = (): JSX.Element[] => {
-  return buttonTypes.map(type => (
-    <Button key={type} type={type} className="focus">
-      {type}
-    </Button>
-  ));
+export const ConFoco = (): JSX.Element => {
+  return (
+    <div className="btn-wrapper">
+      {buttonTypes.map(type => (
+        <Button key={type} type={type} className="focus">
+          {type}
+        </Button>
+      ))}
+    </div>
+  );
 };
 
-export const Activos = (): JSX.Element[] => {
-  return buttonTypes.map(type => (
-    <Button key={type} type={type} className="active">
-      {type}
-    </Button>
-  ));
+export const Activos = (): JSX.Element => {
+  return (
+    <div className="btn-wrapper">
+      {buttonTypes.map(type => (
+        <Button key={type} type={type} className="active">
+          {type}
+        </Button>
+      ))}
+    </div>
+  );
 };
 
-export const Tamanos = (): JSX.Element[] => {
-  return sizes.slice(0, 2).map(size => (
-    <Button key={size} type="secondary" size={size}>
-      {size}
-    </Button>
-  ));
+export const Tamanos = (): JSX.Element => {
+  return (
+    <div className="btn-wrapper">
+      {sizes.slice(0, 2).map(size => (
+        <Button key={size} type="secondary" size={size}>
+          {size}
+        </Button>
+      ))}
+    </div>
+  );
 };
 Tamanos.story = { name: 'Tamaños' };
 
