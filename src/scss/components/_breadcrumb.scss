@@ -11,7 +11,7 @@ $breadcrumb-bg: none;
 
 /* === Custom styles === */
 
-//pendiente revisar como agregarle el icono de la casa
-.bread-first:before {
-  content: icon;
+.breadcrumb a {
+  color: $grisulado-900;
 }
+//pendiente revisar como agregarle el icono de la casa

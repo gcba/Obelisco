@@ -27,7 +27,7 @@ export const Breadcrumb = (): JSX.Element => (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         <li className="breadcrumb-item active bread-first" aria-current="page">
-          Home
+          Buenos Aires
         </li>
       </ol>
     </nav>
@@ -35,10 +35,10 @@ export const Breadcrumb = (): JSX.Element => (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         <li className="breadcrumb-item bread-first">
-          <a href="#">Home</a>
+          <a href="#">Buenos Aires</a>
         </li>
         <li className="breadcrumb-item active" aria-current="page">
-          Library
+          Pagina anterior
         </li>
       </ol>
     </nav>
@@ -46,13 +46,30 @@ export const Breadcrumb = (): JSX.Element => (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         <li className="breadcrumb-item bread-first">
-          <a href="#">Home</a>
+          <a href="#">Buenos Aires</a>
         </li>
         <li className="breadcrumb-item">
-          <a href="#">Library</a>
+          <a href="#">Intermedia</a>
         </li>
         <li className="breadcrumb-item active" aria-current="page">
-          Data
+          Pagina anterior
+        </li>
+      </ol>
+    </nav>
+
+    <nav aria-label="breadcrumb">
+      <ol className="breadcrumb">
+        <li className="breadcrumb-item bread-first">
+          <a href="#">Buenos Aires</a>
+        </li>
+        <li className="breadcrumb-item">
+          <a href="#">Intermedia</a>
+        </li>
+        <li className="breadcrumb-item" aria-current="page">
+          <a href="#">Intermedia</a>
+        </li>
+        <li className="breadcrumb-item active" aria-current="page">
+          Pagina anterior
         </li>
       </ol>
     </nav>
