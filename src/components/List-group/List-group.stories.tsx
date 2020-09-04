@@ -105,3 +105,22 @@ export const DefaultImage = (): JSX.Element => (
   </div>
 );
 
+export const TittleList = (): JSX.Element => (
+  <div className="list-group tittle-list">
+    <h5 className="mb-1 list-group-item">
+      Nuevo protocolo de apertura para pymes y comercios
+    </h5>
+    <a href="#" className="list-group-item list-group-item-action">
+      Locales y comercios
+    </a>
+    <a href="#" className="list-group-item list-group-item-action">
+      Actividades juridicas
+    </a>
+    <a href="#" className="list-group-item list-group-item-action">
+      Otras Actividades
+    </a>
+    <a href="#" className="list-group-item list-group-item-action">
+      Automotores, motocicletas y bicicletas
+    </a>
+  </div>
+);
