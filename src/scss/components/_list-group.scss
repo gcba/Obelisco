@@ -1,0 +1,21 @@
+/* === Variable and mixins overides === */
+$list-group-active-border-color: $cyan;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+@import "../../../node_modules/bootstrap/scss/list-group";
+
+/* === Custom styles === */
+
+.list-group-item.active {
+  z-index: 2; // Place active items above their siblings for proper border styling
+  border-color: $list-group-active-border-color;
+  border-width: 3px;
+  border-radius: 10px;
+  color: inherit;
+  background-color: inherit;
+}
+
+

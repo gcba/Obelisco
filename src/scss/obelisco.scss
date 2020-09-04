@@ -31,3 +31,4 @@ $theme-colors: map-remove($theme-colors, "light", "dark", "warning");
 
 // Components
 @import "components/buttons";
+@import "components/list-group";
