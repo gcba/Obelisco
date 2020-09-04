@@ -1,5 +1,6 @@
 // Base
 import React from "react";
+import "./Alert.stories.scss";
 
 // Addons
 import { withA11y } from "@storybook/addon-a11y";
@@ -16,7 +17,10 @@ export default {
 export const Texto = (): JSX.Element => {
   return (
     <div className="alert alert-danger" role="alert">
-      <p>Un texto simple para una alerta simple, incluso <a href="#">con hipervínculos</a>.</p>
+      <p>
+        Un texto simple para una alerta simple, incluso{" "}
+        <a href="#">con hipervínculos</a>.
+      </p>
     </div>
   );
 };
@@ -25,7 +29,10 @@ export const Titulo = (): JSX.Element => {
   return (
     <div className="alert alert-danger" role="alert">
       <h4>Título de la alerta</h4>
-      <p>Un texto simple para una alerta simple, incluso <a href="#">con hipervínculos</a>.</p>
+      <p>
+        Un texto simple para una alerta simple, incluso{" "}
+        <a href="#">con hipervínculos</a>.
+      </p>
     </div>
   );
 };
@@ -45,14 +52,22 @@ export const Colores = (): JSX.Element[] => {
 
 export const Toggle = (): JSX.Element => {
   return (
-    <div className="alert alert-danger alert-dismissible fade show" role="alert">
+    <div
+      className="alert alert-danger alert-dismissible fade show"
+      role="alert"
+    >
       <h4>Título de la alerta</h4>
       <p>
         Un texto simple para una alerta simple, incluso{" "}
         <a href="#">con hipervínculos</a>.
       </p>
 
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <button
+        type="button"
+        className="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
@@ -61,25 +76,41 @@ export const Toggle = (): JSX.Element => {
 
 export const Lista = (): JSX.Element => {
   return (
-    <div className="alert alert-danger alert-dismissible fade show" role="alert">
-      <h4>Título de la alerta</h4>
-      <ol>
-        <li>
-          <a href="#">Enlace de ejemplo</a>
-        </li>
+    <div className="alert-wrapper">
+      <div
+        className="alert alert-danger alert-dismissible fade show"
+        role="alert"
+      >
+        <h4>Título de la alerta</h4>
+        <ol>
+          <li>
+            <a href="#">
+              Un texto simple para un enlace en una lista de alerta
+            </a>
+          </li>
 
-        <li>
-          <a href="#">Enlace de ejemplo</a>
-        </li>
+          <li>
+            <a href="#">
+              Un texto simple para un enlace en una lista de alerta
+            </a>
+          </li>
 
-        <li>
-          <a href="#">Enlace de ejemplo</a>
-        </li>
-      </ol>
+          <li>
+            <a href="#">
+              Un texto simple para un enlace en una lista de alerta
+            </a>
+          </li>
+        </ol>
 
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+        <button
+          type="button"
+          className="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
     </div>
   );
 };
