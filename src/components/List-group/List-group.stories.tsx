@@ -124,3 +124,27 @@ export const TittleList = (): JSX.Element => (
     </a>
   </div>
 );
+
+export const SubList = (): JSX.Element => (
+  <div className="list-group sub-list">
+    <h5 className="mb-1 list-group-item">
+      Nuevo protocolo de apertura para pymes y comercios
+    </h5>
+    <h6 className="mb-1 list-group-item">Locales y comercios</h6>
+    <a href="#" className="list-group-item list-group-item-action">
+      Local indumentaria y calzado. (Actividades comerciales de venta)
+    </a>
+    <a href="#" className="list-group-item list-group-item-action">
+      Locales gastronómicos: "para llevar/takeaway"
+    </a>
+    <a href="#" className="list-group-item list-group-item-action">
+      Locales de óptica
+    </a>
+    <a href="#" className="list-group-item list-group-item-action">
+      Comercial minorista (excluyendo indumentaria y calzado)
+    </a>
+    <a href="#" className="list-group-item list-group-item-action">
+      Comercial minorista (excluyendo indumentaria y calzado)
+    </a>
+  </div>
+);
