@@ -9,13 +9,54 @@ $list-group-active-border-color: $cyan;
 
 /* === Custom styles === */
 
-.list-group-item.active {
-  z-index: 2; // Place active items above their siblings for proper border styling
-  border-color: $list-group-active-border-color;
-  border-width: 3px;
+.list-group-item {
   border-radius: 10px;
+  border: none;
+}
+
+.list-group-item:focus {
+  z-index: 2; // Place active items above their siblings for proper border styling
+  border: 3px solid $list-group-active-border-color !important;
   color: inherit;
+
   background-color: inherit;
 }
 
+.list-group {
+  width: 700px;
+  border-radius: 10px;
+  border-top: 1px solid $grisulado-100;
+}
 
+.tittle-list {
+  width: 300px;
+}
+
+.tittle-list h5 {
+  margin-bottom: 100px;
+}
+.tittle-list a {
+  font-weight: 550;
+}
+
+.list-group a:hover {
+  background-color: $grisulado-10;
+}
+
+.img-list {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.sub-list {
+  width: 300px;
+}
+.sub-list h6 {
+  color: $cyan;
+  font-weight: bold;
+}
+
+.sub-list a {
+  margin-left: 10px;
+}
