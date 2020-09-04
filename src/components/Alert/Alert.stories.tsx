@@ -1,5 +1,6 @@
 // Base
 import React from "react";
+import "./Alert.stories.scss";
 
 // Addons
 import { withA11y } from "@storybook/addon-a11y";
@@ -75,33 +76,41 @@ export const Toggle = (): JSX.Element => {
 
 export const Lista = (): JSX.Element => {
   return (
-    <div
-      className="alert alert-danger alert-dismissible fade show"
-      role="alert"
-    >
-      <h4>Título de la alerta</h4>
-      <ol>
-        <li>
-          <a href="#">Enlace de ejemplo</a>
-        </li>
-
-        <li>
-          <a href="#">Enlace de ejemplo</a>
-        </li>
-
-        <li>
-          <a href="#">Enlace de ejemplo</a>
-        </li>
-      </ol>
-
-      <button
-        type="button"
-        className="close"
-        data-dismiss="alert"
-        aria-label="Close"
+    <div className="alert-wrapper">
+      <div
+        className="alert alert-danger alert-dismissible fade show"
+        role="alert"
       >
-        <span aria-hidden="true">&times;</span>
-      </button>
+        <h4>Título de la alerta</h4>
+        <ol>
+          <li>
+            <a href="#">
+              Un texto simple para un enlace en una lista de alerta
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Un texto simple para un enlace en una lista de alerta
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Un texto simple para un enlace en una lista de alerta
+            </a>
+          </li>
+        </ol>
+
+        <button
+          type="button"
+          className="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
     </div>
   );
 };
