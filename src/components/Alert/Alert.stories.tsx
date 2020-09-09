@@ -48,8 +48,6 @@ export const Colores = (): JSX.Element[] => {
   ));
 };
 
-// *********************************************************************
-
 export const Toggle = (): JSX.Element => {
   return (
     <div
