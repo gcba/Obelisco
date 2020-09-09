@@ -1,11 +1,10 @@
 /* === Variable and mixins overides === */
 
-$font-family-polyfill: system-ui, -apple-system, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-polyfill: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
-$font-family-sans-serif: "Open Sans", $font-family-polyfill;
-$font-family-headings: "Nunito", $font-family-sans-serif;
+$font-family-sans-serif: 'Open Sans', $font-family-polyfill;
+$font-family-headings: 'Nunito', $font-family-sans-serif;
 
 /*
  * Font weight names
