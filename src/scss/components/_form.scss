@@ -1,0 +1,12 @@
+/* === Variable and mixins overides === */
+
+$custom-control-indicator-checked-color: black;
+$custom-control-indicator-active-color: $info;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+@import '../../../node_modules/bootstrap/scss/forms';
+@import '../../../node_modules/bootstrap/scss/custom-forms';
+
+/* === Custom styles === */

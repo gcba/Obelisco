@@ -33,4 +33,5 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 // Components
 @import 'components/alert';
 @import 'components/buttons';
+@import 'components/form';
 @import 'components/table';
