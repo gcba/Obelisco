@@ -8,7 +8,6 @@
 
 // Custom variables
 @import 'colors';
-@import 'miscellaneous';
 @import 'typography';
 
 // Bootstrap base
@@ -29,7 +28,9 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 
 // Custom styles
 @import 'components/typography';
+@import 'miscellaneous';
 
 // Components
 @import 'components/alert';
 @import 'components/buttons';
+@import 'components/table';
