@@ -31,18 +31,25 @@ export const Breadcrumb = (): JSX.Element => (
         </li>
       </ol>
     </nav>
+  </div>
+);
 
+export const BreadcrumbAnterior = (): JSX.Element => (
+  <div>
     <nav aria-label="breadcrumb">
-      <ol className="breadcrumb">
-        <li className="breadcrumb-item bread-first">
-          <a href="#">Buenos Aires</a>
-        </li>
-        <li className="breadcrumb-item active" aria-current="page">
-          Pagina anterior
-        </li>
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item bread-first">
+            <a href="#">Buenos Aires</a>
+          </li>
+          <li className="breadcrumb-item active" aria-current="page">
+            Pagina anterior
+          </li>
       </ol>
     </nav>
-
+  </div>
+);
+export const BreadcrumbInterm = (): JSX.Element => (
+  <div>
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         <li className="breadcrumb-item bread-first">
@@ -56,7 +63,11 @@ export const Breadcrumb = (): JSX.Element => (
         </li>
       </ol>
     </nav>
+  </div>
+);
 
+export const BreadcrumbInterme2 = (): JSX.Element => (
+  <div>
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         <li className="breadcrumb-item bread-first">
