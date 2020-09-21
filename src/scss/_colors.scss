@@ -55,12 +55,19 @@ $dark: $gray-800;
 
 /* === Color theme === */
 
+$border-color: $grisulado-100;
+
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 10%;
 
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+// The yiq lightness value that determines when the lightn  ess of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold: 150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $grisulado-900;
 $yiq-text-light: $white !default;
+
+/* === Body === */
+
+$body-bg: $white;
+$body-color: $grisulado-900;
