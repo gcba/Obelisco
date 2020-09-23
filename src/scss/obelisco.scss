@@ -7,28 +7,32 @@
 // @import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Custom variables
-@import "colors";
-@import "miscellaneous";
-@import "typography";
+@import 'colors';
+@import 'typography';
 
 // Bootstrap base
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-$theme-colors: map-remove($theme-colors, "light", "dark", "warning");
-@import "../../node_modules/bootstrap/scss/root";
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/utilities";
-@import "../../node_modules/bootstrap/scss/print";
-@import "../../node_modules/bootstrap/scss/grid";
-@import "../../node_modules/bootstrap/scss/transitions";
-@import "../../node_modules/bootstrap/scss/type";
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+$theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
+@import '../../node_modules/bootstrap/scss/root';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/utilities';
+@import '../../node_modules/bootstrap/scss/print';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/transitions';
+@import '../../node_modules/bootstrap/scss/type';
 
-@import "../../node_modules/bootstrap/scss/code";
+@import '../../node_modules/bootstrap/scss/code';
+@import '../../node_modules/bootstrap/scss/close';
 
 // Custom styles
-@import "components/typography";
+@import 'components/typography';
+@import 'miscellaneous';
 
 // Components
 @import "components/buttons";
 @import "components/list-group";
+@import 'components/alert';
+@import 'components/table';
+

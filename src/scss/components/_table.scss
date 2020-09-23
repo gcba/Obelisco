@@ -1,0 +1,111 @@
+/* === Variable and mixins overides === */
+
+$table-padding-y: spaceUnits(3);
+$table-padding-x: spaceUnits(5);
+
+$table-cell-padding: $table-padding-y $table-padding-x;
+
+$table-color: $body-color;
+$table-accent-bg: rgba($grisulado-50, 0.3);
+$table-hover-bg: rgba($grisulado-50, 0.5);
+
+$table-border-width: $border-width;
+
+$table-head-bg: $grisulado-50;
+$table-head-color: color-yiq($table-head-bg);
+
+$table-striped-order: even;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+@import "../../../node_modules/bootstrap/scss/tables";
+
+/* === Custom styles === */
+
+.table {
+  border: 1px solid $border-color;
+  border-radius: $border-radius-container;
+  border-collapse: initial;
+  border-spacing: initial;
+
+  td,
+  th {
+    @extend .align-middle;
+  }
+
+  thead {
+    background: $table-head-bg;
+    color: $table-head-color;
+
+    th {
+      border: none;
+
+      &:first-of-type {
+        border-top-left-radius: calc(#{$border-radius-container} - 1px);
+      }
+      &:last-of-type {
+        border-top-right-radius: calc(#{$border-radius-container} - 1px);
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        border-color: $grisulado-50;
+        // vertical-align: middle;
+      }
+
+      &:first-of-type td {
+        border-top: none;
+      }
+
+      &:last-of-type {
+        td:first-of-type {
+          border-bottom-left-radius: calc(#{$border-radius-container} - 1px);
+        }
+        td:last-of-type {
+          border-bottom-right-radius: calc(#{$border-radius-container} - 1px);
+        }
+      }
+    }
+  }
+
+  &.table-bordered {
+    thead th {
+      border: none;
+    }
+    tr {
+      td {
+        border-left: none;
+        border-bottom: none;
+
+        &:last-of-type {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  &.table-selectable {
+    @extend .table-hover;
+
+    tbody tr td {
+      cursor: pointer;
+    }
+  }
+
+  $table-alignments: "baseline", "top", "middle", "bottom", "text-bottom",
+    "text-top";
+
+  @each $alignment in $table-alignments {
+    &.table-align-#{$alignment} {
+      td,
+      th {
+        @extend .align-#{$alignment};
+      }
+    }
+  }
+}
