@@ -1,14 +1,14 @@
 // Base
-import React from "react";
+import React from 'react';
 
 // Addons
-import { withA11y } from "@storybook/addon-a11y";
+import { withA11y } from '@storybook/addon-a11y';
 
 // Components
 
 // Config
 export default {
-  title: "Componentes|Formulario/Radio",
+  title: 'Componentes|Formulario/Radio',
   decorators: [withA11y]
 };
 
@@ -44,5 +44,25 @@ export const CasillaUnica = (): JSX.Element => {
   );
 };
 CasillaUnica.story = {
-  name: "Casilla única"
+  name: 'Casilla única'
+};
+
+export const Deshabilitado = (): JSX.Element => {
+  return (
+    <>
+      <div className="custom-control custom-radio">
+        <input
+          className="custom-control-input"
+          type="radio"
+          name="profession"
+          id="profession-designer"
+          value="designer"
+          disabled
+        />
+        <label className="custom-control-label" htmlFor="profession-designer">
+          Deshabilitado
+        </label>
+      </div>
+    </>
+  );
 };
