@@ -1,3 +1,42 @@
-/* === Border radius === */
+/* === Spacers === */
 
-$border-radius-container: 0.5rem;
+$spacer: 0.25rem;
+
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 1
+    ),
+    2: (
+      $spacer * 2
+    ),
+    3: (
+      $spacer * 3
+    ),
+    4: (
+      $spacer * 4
+    ),
+    5: (
+      $spacer * 5
+    ),
+    6: (
+      $spacer * 6
+    ),
+    7: (
+      $spacer * 7
+    ),
+    8: (
+      $spacer * 8
+    )
+  ),
+  $spacers
+);
+
+@function spaceUnits($number) {
+  @return $spacer * $number;
+}
+
+/* === Border === */
+
+$border-radius-container: spaceUnits(2);

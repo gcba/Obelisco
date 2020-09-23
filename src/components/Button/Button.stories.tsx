@@ -1,24 +1,24 @@
 // Base
-import React from "react";
-import "./Button.stories.scss";
+import React from 'react';
+import './Button.stories.scss';
 
 // Addons
-import { withA11y } from "@storybook/addon-a11y";
-import { withXD } from "storybook-addon-xd-designs";
+import { withA11y } from '@storybook/addon-a11y';
+import { withXD } from 'storybook-addon-xd-designs';
 
 // Components
-import { buttonTypes, sizes } from "../utils";
-import { Button } from ".";
+import { buttonTypes, sizes } from '../utils';
+import { Button } from '.';
 
 // Config
 export default {
-  title: "Componentes|Botón",
+  title: 'Componentes|Botón',
   component: Button,
   decorators: [withA11y, withXD],
   parameters: {
     design: {
       artboardUrl:
-        "https://xd.adobe.com/view/0623a13b-8fc0-407c-6a4d-c1c24dc2c5fa-7012/screen/d1dd8e3f-6a3b-4a7b-a59e-ba883ca7c684/-TOMOS-BOTONES"
+        'https://xd.adobe.com/view/0623a13b-8fc0-407c-6a4d-c1c24dc2c5fa-7012/screen/d1dd8e3f-6a3b-4a7b-a59e-ba883ca7c684/-TOMOS-BOTONES'
     }
   }
 };
@@ -54,7 +54,7 @@ export const Tamanos = (): JSX.Element[] => {
     </Button>
   ));
 };
-Tamanos.story = { name: "Tamaños" };
+Tamanos.story = { name: 'Tamaños' };
 
 export const Deshabilitado = (): JSX.Element => {
   return (
@@ -77,9 +77,8 @@ export const Expandible = (): JSX.Element => {
 export const MuchoTexto = (): JSX.Element => {
   return (
     <div className="btn btn-success" role="button" tabIndex={0}>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime
-      non deserunt suscipit quasi adipisci laborum vel ullam, quibusdam id
-      dolorem? Dicta possimus nemo cumque porro dolorem quam nam eligendi.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime non deserunt suscipit quasi adipisci
+      laborum vel ullam, quibusdam id dolorem? Dicta possimus nemo cumque porro dolorem quam nam eligendi.
     </div>
   );
 };

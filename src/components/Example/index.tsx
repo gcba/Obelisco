@@ -1,17 +1,17 @@
 // Importamos react y todas las librerías que usemos en el componente.
 
-import * as React from "react";
+import * as React from 'react';
 
 // Definimos los tipos que usemos.
 // También podemos definirlos en ../utils.ts e importarlos.
 
-type Language = "es" | "en";
+type Language = 'es' | 'en';
 
 // Definimos la interfaz de las props del componente,
 // esto nos ayuda a tener ordenados los parámetros.
 
 export interface ExampleProps {
-  type: "real" | "example";
+  type: 'real' | 'example';
   onClick: () => void;
   language?: Language;
 }
@@ -29,12 +29,12 @@ export const Example: React.FC<ExampleProps> = (props: ExampleProps) => {
 
   const getText = (language?: Language) => {
     switch (language) {
-      case "es":
-        return "Componente de ejemplo";
-      case "en":
-        return "Example component";
+      case 'es':
+        return 'Componente de ejemplo';
+      case 'en':
+        return 'Example component';
       default:
-        return "No se definió el lenguaje / Missing language";
+        return 'No se definió el lenguaje / Missing language';
     }
   };
 

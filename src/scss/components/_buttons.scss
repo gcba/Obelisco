@@ -26,7 +26,7 @@ $btn-link-disabled-color: $gray-600;
 
 /* === Bootstrap Import === */
 
-@import "../../../node_modules/bootstrap/scss/buttons";
+@import '../../../node_modules/bootstrap/scss/buttons';
 
 /* === Custom styles === */
 
@@ -67,6 +67,6 @@ $btn-link-disabled-color: $gray-600;
 
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 $input-btn-focus-width theme-color-level("info", 3);
+    box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
   }
 }
