@@ -101,7 +101,7 @@ export const TittleList = (): JSX.Element => (
         Local indumentaria y calzado. (Actividades comerciales de venta)
       </a>
       <a href="#" className="list-group-item list-group-item-action">
-        Locales gastronómicos: "para llevar/takeaway"
+        Locales gastronómicos: para llevar/takeaway
       </a>
       <a href="#" className="list-group-item list-group-item-action">
         Locales de óptica
@@ -134,7 +134,7 @@ export const SubList = (): JSX.Element => (
       Local indumentaria y calzado. (Actividades comerciales de venta)
     </a>
     <a href="#" className="list-group-item list-group-item-action">
-      Locales gastronómicos: "para llevar/takeaway"
+      Locales gastronómicos: para llevar/takeaway
     </a>
     <a href="#" className="list-group-item list-group-item-action">
       Locales de óptica
