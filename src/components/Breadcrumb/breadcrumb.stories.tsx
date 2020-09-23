@@ -27,7 +27,7 @@ export const Breadcrumb = (): JSX.Element => (
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         <li className="breadcrumb-item active bread-first" aria-current="page">
-          Buenos Aires
+          <a href="#">Buenos Aires</a>
         </li>
       </ol>
     </nav>
@@ -37,13 +37,13 @@ export const Breadcrumb = (): JSX.Element => (
 export const BreadcrumbAnterior = (): JSX.Element => (
   <div>
     <nav aria-label="breadcrumb">
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item bread-first">
-            <a href="#">Buenos Aires</a>
-          </li>
-          <li className="breadcrumb-item active" aria-current="page">
-            Pagina anterior
-          </li>
+      <ol className="breadcrumb">
+        <li className="breadcrumb-item bread-first">
+          <a href="#">Buenos Aires</a>
+        </li>
+        <li className="breadcrumb-item active" aria-current="page">
+          <a href="#">Pagina anterior</a>
+        </li>
       </ol>
     </nav>
   </div>
@@ -59,7 +59,7 @@ export const BreadcrumbInterm = (): JSX.Element => (
           <a href="#">Intermedia</a>
         </li>
         <li className="breadcrumb-item active" aria-current="page">
-          Pagina anterior
+          <a href="#">Pagina anterior</a>
         </li>
       </ol>
     </nav>
@@ -80,7 +80,7 @@ export const BreadcrumbInterme2 = (): JSX.Element => (
           <a href="#">Intermedia</a>
         </li>
         <li className="breadcrumb-item active" aria-current="page">
-          Pagina anterior
+          <a href="#">Pagina anterior</a>
         </li>
       </ol>
     </nav>
