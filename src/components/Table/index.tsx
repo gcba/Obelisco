@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export type TableCellContet = string | number | JSX.Element;
 
@@ -32,18 +32,8 @@ export interface TableProps {
   onSelectionChange?: (index: number) => void;
 }
 
-export const Table: React.FC<TableProps> = (
-  props: React.PropsWithChildren<TableProps>
-) => {
-  const {
-    head,
-    body,
-    caption,
-    striped,
-    bordered,
-    hoverable,
-    selectable
-  } = props;
+export const Table: React.FC<TableProps> = (props: React.PropsWithChildren<TableProps>) => {
+  const { head, body, caption, striped, bordered, hoverable, selectable } = props;
 
   let className = `table`;
   if (striped) className += ` table-striped`;
@@ -57,9 +47,7 @@ export const Table: React.FC<TableProps> = (
       {caption && <caption>{caption}</caption>}
       <thead>
         <tr>
-          {selectable && (
-            <TableCellRenderer type="head" cell={<Selectable />} />
-          )}
+          {selectable && <TableCellRenderer type="head" cell={<Selectable />} />}
           {head.map((cell: TableCell, index: number) => (
             <TableCellRenderer type="head" cell={cell} key={index} />
           ))}
@@ -84,31 +72,29 @@ export const Table: React.FC<TableProps> = (
 };
 
 interface TableCellRendererProps {
-  type: "head" | "body";
+  type: 'head' | 'body';
   cell: TableCell;
 }
 
-const TableCellRenderer: React.FC<TableCellRendererProps> = (
-  props: TableCellRendererProps
-) => {
+const TableCellRenderer: React.FC<TableCellRendererProps> = (props: TableCellRendererProps) => {
   const { type, cell } = props;
   let content: TableCellContet;
   let childProps: { [key: string]: unknown } = {};
 
-  if (typeof cell === "object" && !React.isValidElement(cell)) {
-    content = (cell as TableCellOptions).content || "-";
+  if (typeof cell === 'object' && !React.isValidElement(cell)) {
+    content = (cell as TableCellOptions).content || '-';
     childProps = (cell as TableCellOptions).props || {};
   } else {
     content = cell as TableCellContet;
   }
 
-  if (type === "head") {
+  if (type === 'head') {
     return (
       <th scope="col" {...childProps}>
         {content}
       </th>
     );
-  } else if (type === "body") {
+  } else if (type === 'body') {
     return <td {...childProps}>{content}</td>;
   }
   return <></>;
