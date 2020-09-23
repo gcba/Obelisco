@@ -1,0 +1,57 @@
+/* === Variable and mixins overides === */
+$list-group-active-border-color: $cyan;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+//@import '../../../node_modules/bootstrap/scss/collapse';
+
+/* === Custom styles === */
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  width: 720px;
+}
+
+.card-header,
+.card-link:focus,
+.card-header:focus {
+  padding: 12px 16px 12px 24px;
+  margin-top: 10px;
+  background-color: #e6ebf0;
+  border-radius: 5px;
+  border: none;
+}
+
+.title-header {
+  float: left;
+  font-size: 18px;
+  color: #38485c;
+  text-decoration: none;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  margin-top: -5px;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 16px 24px 24px 24px;
+  border: 2px solid #e6ebf0;
+  border-radius: 0.25rem;
+  border-top: none;
+  font-size: 16px;
+}
+.btn-plus,
+.btn-dash {
+  float: right;
+  top: 5px;
+}
