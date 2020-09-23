@@ -110,9 +110,32 @@ export const TittleList = (): JSX.Element => (
     <h5 className="mb-1 list-group-item">
       Nuevo protocolo de apertura para pymes y comercios
     </h5>
-    <a href="#" className="list-group-item list-group-item-action">
+    <a
+      href="#"
+      className="list-group-item list-group-item-action"
+      data-toggle="collapse"
+      data-target="#collapseOne"
+    >
       Locales y comercios
     </a>
+    <div id="collapseOne" className="collapse" data-parent="#accordion">
+      <a href="#" className="list-group-item list-group-item-action">
+        Local indumentaria y calzado. (Actividades comerciales de venta)
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Locales gastronómicos: "para llevar/takeaway"
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Locales de óptica
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Comercial minorista (excluyendo indumentaria y calzado)
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Comercial minorista (excluyendo indumentaria y calzado)
+      </a>
+    </div>
+
     <a href="#" className="list-group-item list-group-item-action">
       Actividades juridicas
     </a>
