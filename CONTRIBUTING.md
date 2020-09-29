@@ -3,7 +3,7 @@
 El mantenimiento y desarrollo de Obelisco lo hace el equipo de la Dirección General de Experiencia Digital, pero lo utilizan tanto equipos de gobierno como proveedores externos.
 El seguimiento y planificación del proyecto se puede seguir en [este tablero del repositorio de estándares](https://github.com/gcba/estandares/projects/3).
 
-Para agilizar y hacer más transparente el proceso, cualquier persona puede contribuir con aguna de estas acciones.
+Para agilizar y hacer más transparente el proceso, cualquier persona puede contribuir con alguna de estas acciones.
 
 ## 1. Pedir un caso de uso nuevo
 
@@ -11,7 +11,7 @@ Si estás trabajando con Obelisco y tenés un caso de uso que no está contempla
 
 **Primero**: [Buscá en las tareas de pedidos](https://github.com/gcba/estandares/issues?q=is%3Aopen+is%3Aissue+label%3Acomponente3) para entender si ya está identificado ese caso en la planificación.
 
-- **Si no lo encontrás**, [creá un nuevo issue](https://github.com/gcba/estandares/issues) explicando la necesidad. (Usá el temlpate para pedir nuevos componentes).
+- **Si no lo encontrás**, [creá un nuevo issue](https://github.com/gcba/estandares/issues) explicando la necesidad. (Usá el template para pedir nuevos componentes).
 
 - **Si ya existe**, comentá tu caso o dejanos tu feedback reaccionando con un :thumbsup: .
 
@@ -21,7 +21,7 @@ Si encontrás un error en alguno de los componentes o alguna mejora que impacte 
 
 **Primero**: [Buscá en las tareas de errores](https://github.com/gcba/estandares/issues?q=is%3Aopen+is%3Aissue+label%3Acomponente+label%3Aerror3) para entender si ya fue reportado.
 
-- **Si no lo encontrás**, [creá un nuevo issue](https://github.com/gcba/estandares/issues) el error o mejora. (Usá el temlpate para reportar errores de componentes).
+- **Si no lo encontrás**, [creá un nuevo issue](https://github.com/gcba/estandares/issues) el error o mejora. (Usá el template para reportar errores de componentes).
 
 - **Si ya existe**, comentá tu caso o dejanos tu feedback reaccionando con un :thumbsup: .
 
@@ -40,7 +40,7 @@ Si pediste un caso nuevo o reportaste un error y querés colaborar con el códig
 2. Se debe hacer revisión del código por un miembro del equipo.
 3. Si los cambios implican una modificación visual en algún componente, se debe aprobar desde chromatic.
 
-Una vez realizados estos pasos, y considerando que no haya conflictos, se va a aceptar el pull requesto aplicando los cambios en la rama `master`.
+Una vez realizados estos pasos, y considerando que no haya conflictos, se va a aceptar el pull request aplicando los cambios en la rama `master`.
 
 
 ### Cómo realizar los cambios
