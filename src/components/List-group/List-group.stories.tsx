@@ -91,8 +91,8 @@ export const DefaultImage = (): JSX.Element => (
 );
 
 export const TittleList = (): JSX.Element => (
-  <div className="list-group tittle-list">
-    <h5 className="mb-1 list-group-item">Nuevo protocolo de apertura para pymes y comercios</h5>
+  <nav className="list-group tittle-list">
+    <h4 className="mb-1 list-group-item">Nuevo protocolo de apertura para pymes y comercios</h4>
     <a href="#" className="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapseOne">
       Locales y comercios
     </a>
@@ -123,7 +123,7 @@ export const TittleList = (): JSX.Element => (
     <a href="#" className="list-group-item list-group-item-action">
       Automotores, motocicletas y bicicletas
     </a>
-  </div>
+  </nav>
 );
 
 export const SubList = (): JSX.Element => (
