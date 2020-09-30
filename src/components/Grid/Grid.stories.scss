@@ -1,11 +1,11 @@
 .container {
-  width: 800px;
+  min-width: 800px;
   font-size: 14px;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-.row{
+.row {
   margin-left: -8px;
   margin-right: -8px;
 }
@@ -15,10 +15,10 @@
   padding-left: 8px;
 }
 
-.row>[class^=col-]>div {  
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  background-color: rgba(86,61,124,.15);
-  border: 1px solid rgba(86,61,124,.2);
+.row > [class^='col-'] > div {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
   text-align: center;
 }
