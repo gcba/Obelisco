@@ -13,6 +13,7 @@ export default {
 };
 
 export const CasillaMultiple = (): JSX.Element => {
+  const [value, setValue] = React.useState<boolean>(true);
   return (
     <>
       <div className="custom-control custom-checkbox">
@@ -22,7 +23,8 @@ export const CasillaMultiple = (): JSX.Element => {
           id="skills-copywrite-input"
           name="skills"
           value="copywrite"
-          checked
+          checked={value}
+          onChange={event => setValue(event.target.checked)}
         />
         <label className="custom-control-label" htmlFor="skills-copywrite-input">
           Redacción
