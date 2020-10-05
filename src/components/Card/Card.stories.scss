@@ -1,0 +1,28 @@
+.card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.70rem;
+  width: 18rem;
+  -webkit-box-shadow: 5px 5px 5px -2px rgba(245,242,245,0.73);
+  -moz-box-shadow: 5px 5px 5px -2px rgba(245,242,245,0.73);
+  box-shadow: 5px 5px 5px -2px rgba(245,242,245,0.73)
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.card-overline{
+  margin-bottom: 0.5rem;
+  //font-family: "Nunito", "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 10px;
+}
