@@ -21,8 +21,25 @@
 
 .card-overline{
   margin-bottom: 0.5rem;
-  //font-family: "Nunito", "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 600;
   line-height: 1.2;
   font-size: 10px;
+}
+
+.card-link-btn{
+  color: #38485c;
+  text-decoration: underline;
+  display: block;
+}
+
+.line{
+  border: 1px solid #dfdfdf;
+}
+
+.background{
+  background-color: red ;
+}
+
+.subcontent{
+  display: flex;
 }
