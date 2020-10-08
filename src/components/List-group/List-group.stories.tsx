@@ -125,12 +125,6 @@ export const Navegador = (): JSX.Element => (
         Locales gastronómicos: para llevar/takeaway
       </a>
       <a href="#" className="list-group-item list-group-item-action">
-        Locales de óptica
-      </a>
-      <a href="#" className="list-group-item list-group-item-action">
-        Comercial minorista (excluyendo indumentaria y calzado)
-      </a>
-      <a href="#" className="list-group-item list-group-item-action">
         Comercial minorista (excluyendo indumentaria y calzado)
       </a>
     </div>
@@ -147,31 +141,19 @@ export const Navegador = (): JSX.Element => (
       <a href="#" className="list-group-item list-group-item-action">
         Locales de óptica
       </a>
-      <a href="#" className="list-group-item list-group-item-action">
-        Comercial minorista (excluyendo indumentaria y calzado)
-      </a>
-      <a href="#" className="list-group-item list-group-item-action">
-        Comercial minorista (excluyendo indumentaria y calzado)
-      </a>
     </div>
     <a href="#" className="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapseFour">
       Automotores, motocicletas y bicicletas
     </a>
     <div id="collapseFour" className="collapse" data-parent="#accordion">
       <a href="#" className="list-group-item list-group-item-action">
-        Local indumentaria y calzado. (Actividades comerciales de venta)
+        Talleres mecanicos
       </a>
       <a href="#" className="list-group-item list-group-item-action">
-        Locales gastronómicos: para llevar/takeaway
+        Comercial minorista (excluyendo indumentaria y calzado)
       </a>
       <a href="#" className="list-group-item list-group-item-action">
         Locales de óptica
-      </a>
-      <a href="#" className="list-group-item list-group-item-action">
-        Comercial minorista (excluyendo indumentaria y calzado)
-      </a>
-      <a href="#" className="list-group-item list-group-item-action">
-        Comercial minorista (excluyendo indumentaria y calzado)
       </a>
     </div>
   </nav>
