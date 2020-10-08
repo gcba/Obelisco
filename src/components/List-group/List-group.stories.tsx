@@ -90,7 +90,7 @@ export const DefaultImage = (): JSX.Element => (
   </div>
 );
 
-export const TittleList = (): JSX.Element => (
+export const Navegador = (): JSX.Element => (
   <nav className="list-group tittle-list">
     <h4 className="mb-1 list-group-item">Nuevo protocolo de apertura para pymes y comercios</h4>
     <a href="#" className="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapseOne">
@@ -114,36 +114,65 @@ export const TittleList = (): JSX.Element => (
       </a>
     </div>
 
-    <a href="#" className="list-group-item list-group-item-action">
+    <a href="#" className="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapseTwo">
       Actividades juridicas
     </a>
-    <a href="#" className="list-group-item list-group-item-action">
+    <div id="collapseTwo" className="collapse" data-parent="#accordion">
+      <a href="#" className="list-group-item list-group-item-action">
+        Local indumentaria y calzado. (Actividades comerciales de venta)
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Locales gastronómicos: para llevar/takeaway
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Locales de óptica
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Comercial minorista (excluyendo indumentaria y calzado)
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Comercial minorista (excluyendo indumentaria y calzado)
+      </a>
+    </div>
+    <a href="#" className="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapseThree">
       Otras Actividades
     </a>
-    <a href="#" className="list-group-item list-group-item-action">
+    <div id="collapseThree" className="collapse" data-parent="#accordion">
+      <a href="#" className="list-group-item list-group-item-action">
+        Local indumentaria y calzado. (Actividades comerciales de venta)
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Locales gastronómicos: para llevar/takeaway
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Locales de óptica
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Comercial minorista (excluyendo indumentaria y calzado)
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Comercial minorista (excluyendo indumentaria y calzado)
+      </a>
+    </div>
+    <a href="#" className="list-group-item list-group-item-action" data-toggle="collapse" data-target="#collapseFour">
       Automotores, motocicletas y bicicletas
     </a>
+    <div id="collapseFour" className="collapse" data-parent="#accordion">
+      <a href="#" className="list-group-item list-group-item-action">
+        Local indumentaria y calzado. (Actividades comerciales de venta)
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Locales gastronómicos: para llevar/takeaway
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Locales de óptica
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Comercial minorista (excluyendo indumentaria y calzado)
+      </a>
+      <a href="#" className="list-group-item list-group-item-action">
+        Comercial minorista (excluyendo indumentaria y calzado)
+      </a>
+    </div>
   </nav>
-);
-
-export const SubList = (): JSX.Element => (
-  <div className="list-group sub-list">
-    <h5 className="mb-1 list-group-item">Nuevo protocolo de apertura para pymes y comercios</h5>
-    <h6 className="mb-1 list-group-item">Locales y comercios</h6>
-    <a href="#" className="list-group-item list-group-item-action">
-      Local indumentaria y calzado. (Actividades comerciales de venta)
-    </a>
-    <a href="#" className="list-group-item list-group-item-action">
-      Locales gastronómicos: para llevar/takeaway
-    </a>
-    <a href="#" className="list-group-item list-group-item-action">
-      Locales de óptica
-    </a>
-    <a href="#" className="list-group-item list-group-item-action">
-      Comercial minorista (excluyendo indumentaria y calzado)
-    </a>
-    <a href="#" className="list-group-item list-group-item-action">
-      Comercial minorista (excluyendo indumentaria y calzado)
-    </a>
-  </div>
 );
