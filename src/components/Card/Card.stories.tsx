@@ -2,8 +2,6 @@
 import React from 'react';
 import './Card.stories.scss';
 
-//import paseobajo from './../../../static/cards/paseobajo.jpg';
-
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
@@ -11,93 +9,113 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Tarjeta/Accionables',
+  title: 'Componentes|Tarjetas',
   decorators: [withA11y]
 };
 
+//var paseobajo = require('./../../../static/cards/paseobajo.jpg');
 
-export const TitleAndSubtitle = (): JSX.Element => {
+
+export const TitleSubtitleText = (): JSX.Element => {
   return (
-    <div className="">
+    <div className="container">
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title">Título Card </h5>
-          <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>         
-        </div>
-      </div>
-    </div>
-  );
-};
-
-TitleAndSubtitle.story = { name: 'Título + Subtítulo'};
-
-
-export const TitleSubtitleImg = (): JSX.Element => {
-  return (
-    <div className="">
-      <div className="card">
-      
-      <div className="card-body">
-        <h5 className="card-title">Título Card</h5>
-        <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
-      </div>
-      </div>
-    </div>
-  );
-};
-//<img src={paseobajo} className="card-img-top"></img>
-TitleSubtitleImg.story = { name: 'Título + Subtítulo + Imagen'};
-
-export const TitleText = (): JSX.Element => {
-  return (
-    <div className="">
-      <div className="card">       
-        <div className="card-body">
-          <h5 className="card-title">Título Card </h5>   
+          <h5 className="card-title">Título Tarjeta </h5>
+          <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>   
           <p className="card-text">
             Lorem ipsum dolor sit amet, consetetur
             sadipscing elitr, sed diam nonumy
             eirmod tempor
-          </p>
+          </p>    
+          <hr className="line"></hr> 
+          <div className="subcontent"> 
+            <small className="text-muted">Lorem ipsum dolor</small>
+          </div>    
         </div>
       </div>
-    </div>
-  );
-};
-TitleText.story = { name: 'Título + Texto'};
-
-
-export const OverlineTitleText = (): JSX.Element => {
-  return (
-    <div className="">
-      <div className="card">        
+      <div className="card">
         <div className="card-body">
-          <div className="card-overline">OVERLINE</div>
-          <h5 className="card-title">Título Card </h5>
+          <h5 className="card-title">Título Tarjeta </h5>
+          <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>   
           <p className="card-text">
             Lorem ipsum dolor sit amet, consetetur
             sadipscing elitr, sed diam nonumy
             eirmod tempor
-          </p>        
+          </p>    
+          <hr className="line"></hr> 
+          <div className="subcontent"> 
+            <small className="text-muted">Lorem ipsum dolor</small>
+          </div>    
+        </div>
+      </div>
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">Título Tarjeta </h5>
+          <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>   
+          <p className="card-text">
+            Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy
+            eirmod tempor
+          </p>    
+          <hr className="line"></hr> 
+          <div className="subcontent"> 
+            <small className="text-muted">Lorem ipsum dolor</small>
+          </div>    
         </div>
       </div>
     </div>
   );
 };
-OverlineTitleText.story = { name: 'Overline + Título + Texto'};
+
+TitleSubtitleText.story = { name: 'Título + Subtítulo + Texto'};
+
 
 export const TitleTextLink = (): JSX.Element => {
   return (
-    <div className="">
-      <div className="card">       
+    <div className="container">
+      <div className="card-max">       
         <div className="card-body">
-          <h5 className="card-title">Título Card </h5>   
+          <h5 className="card-title">Título Tarjeta </h5>   
           <p className="card-text">
             Lorem ipsum dolor sit amet, consetetur
             sadipscing elitr, sed diam nonumy
             eirmod tempor
           </p>
-          <a href="#" className="btn-link">Link</a>
+          <a href="#" className="btn-link">Ver título card</a>
+        </div>
+      </div>
+      <div className="card-max">       
+        <div className="card-body">
+          <h5 className="card-title">Título Tarjeta </h5>   
+          <p className="card-text">
+            Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy
+            eirmod tempor
+          </p>
+          <a href="#" className="btn-link">Ver título card</a>
+        </div>
+      </div>
+      <div className="card-max">       
+        <div className="card-body">
+          <h5 className="card-title">Título Tarjeta </h5>   
+          <p className="card-text">
+            Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy
+            eirmod tempor
+          </p>
+          <a href="#" className="btn-link">Ver título card</a>
+        </div>
+      </div>
+      <div className="card-max">       
+        <div className="card-body">
+          <h5 className="card-title">Título Tarjeta </h5>   
+          <p className="card-text">
+            Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy
+            eirmod tempor
+          </p>
+          <a href="#" className="btn-link">Ver título card</a>
         </div>
       </div>
     </div>
@@ -106,47 +124,46 @@ export const TitleTextLink = (): JSX.Element => {
 TitleTextLink.story = { name: 'Título + Texto + Link'};
 
 
-export const TitleTextButton = (): JSX.Element => {
+export const TitleSubtitleLink = (): JSX.Element => {
   return (
-    <div className="">
-      <div className="card">       
-        <div className="card-body">
-          <h5 className="card-title">Título Card </h5>   
-          <p className="card-text">
-            Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy
-            eirmod tempor
-          </p>
-          <button type="button" className="btn btn-primary btn-sm ml-0">Botón</button>
+    <div className="container">
+      <div className="card">
+        
+        <div className="card-body">          
+          <h5 className="card-title">Título Tarjeta </h5>
+          <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
+        </div>
+      </div>
+      <div className="card">
+        
+        <div className="card-body">          
+          <h5 className="card-title">Título Tarjeta </h5>
+          <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
+        </div>
+      </div>
+      <div className="card">
+        
+        <div className="card-body">          
+          <h5 className="card-title">Título Tarjeta </h5>
+          <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
+        </div>
+      </div>
+      <div className="card">
+
+        <div className="card-body">          
+          <h5 className="card-title">Título Tarjeta </h5>
+          <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
         </div>
       </div>
     </div>
   );
 };
-TitleTextButton.story = { name: 'Título + Texto + Botón'};
+//        <img src={paseobajo} className="card-img-top" />
+TitleSubtitleLink.story = { name: 'Imagen + Título + Subtítulo'};
 
 
-export const OverlineTitleTextButton = (): JSX.Element => {
-  return (
-    <div className="">
-      <div className="card">        
-        <div className="card-body">
-          <div className="card-overline">OVERLINE</div>
-          <h5 className="card-title">Título Card </h5>
-          <p className="card-text">
-            Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy
-            eirmod tempor
-          </p>       
-          <button type="button" className="btn btn-primary btn-sm ml-0">Botón</button>
-        </div>
-      </div>
-    </div>
-  );
-};
-OverlineTitleTextButton.story = { name: 'Overline + Título + Texto + Botón'};
 
-export const OverlineTitleTextButtonCaption = (): JSX.Element => {
+/*export const OverlineTitleTextButtonCaption = (): JSX.Element => {
   return (
     <div className="">
       <div className="card">        
@@ -168,4 +185,24 @@ export const OverlineTitleTextButtonCaption = (): JSX.Element => {
     </div>
   );
 };
-OverlineTitleTextButtonCaption.story = { name: 'Overline + Título + Texto + Botón + Caption'};
+OverlineTitleTextButtonCaption.story = { name: 'Overline + Título + Texto + Botón + Caption'};*/
+
+/*
+export const EstaticAction = (): JSX.Element => {
+  return (
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">Jefatura de Gobierno</h5>
+          <h6 className="card-subtitle mb-2">Ejes principales</h6>
+          <a href="#" className="card-link-btn">Jefe de Gobierno</a>
+          <a href="#" className="card-link-btn">Vicejefatura</a>
+          <a href="#" className="card-link-btn">Compromisos</a>
+          <a href="#" className="card-link-btn">BA Elige</a>
+          <hr className="line"></hr>
+          <h6 className="card-subtitle mb-2">Horacio Rodriguez Larreta</h6>
+          <span className="text-muted">Jefe de Gobierno</span>
+        </div>
+      </div>
+  );
+};
+EstaticAction.story = { name: 'Estáticas + contenido accionable'};*/
