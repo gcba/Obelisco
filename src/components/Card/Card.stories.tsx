@@ -13,7 +13,8 @@ export default {
   decorators: [withA11y]
 };
 
-//var paseobajo = require('./../../../static/cards/paseobajo.jpg');
+//Images
+var paseobajo = require('./../../../static/cards/paseobajo.jpg');
 
 
 export const TitleSubtitleText = (): JSX.Element => {
@@ -122,6 +123,7 @@ export const TitleTextLink = (): JSX.Element => {
     </div>
   );
 };
+
 TitleTextLink.story = { name: 'Título + Texto + Link'};
 
 
@@ -129,28 +131,28 @@ export const TitleSubtitleLink = (): JSX.Element => {
   return (
     <div className="container">
       <div className="card">
-        
+        <img src={paseobajo} className="card-img-top class-img" />
         <div className="card-body">          
           <h5 className="card-title">Título Tarjeta </h5>
           <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
         </div>
       </div>
       <div className="card">
-        
+        <img src={paseobajo} className="card-img-top class-img" />
         <div className="card-body">          
           <h5 className="card-title">Título Tarjeta </h5>
           <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
         </div>
       </div>
       <div className="card">
-        
+        <img src={paseobajo} className="card-img-top class-img" />
         <div className="card-body">          
           <h5 className="card-title">Título Tarjeta </h5>
           <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
         </div>
       </div>
       <a href="#" className="btn-link card">
-
+        <img src={paseobajo} className="card-img-top class-img" />
         <div className="card-body">          
           <h5 className="card-title">Título Tarjeta </h5>
           <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
@@ -159,11 +161,11 @@ export const TitleSubtitleLink = (): JSX.Element => {
     </div>
   );
 };
-//        <img src={paseobajo} className="card-img-top" />
+
 TitleSubtitleLink.story = { name: 'Imagen + Título + Subtítulo'};
 
 
-
+//Proximas Cards
 /*export const OverlineTitleTextButtonCaption = (): JSX.Element => {
   return (
     <div className="">
