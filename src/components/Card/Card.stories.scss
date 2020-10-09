@@ -9,13 +9,13 @@
 .card {
   margin: 5px;
   position: relative;
-  display: flex;
+  display: block;
   min-width: 0;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: 0.5rem;
-  width: auto; //19rem;
+  width: auto; 
   -webkit-box-shadow: 5px 5px 5px -2px rgba(245,242,245,0.73);
   -moz-box-shadow: 5px 5px 5px -2px rgba(245,242,245,0.73);
   box-shadow: 5px 5px 5px -2px rgba(245,242,245,0.73)
@@ -54,24 +54,35 @@
   padding: 1.25rem;
 }
 
-.card-overline{
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  font-size: 10px;
+.subcontent{
+  display: flex;
+  float: right;
 }
 
+.class-img{
+  height: 190px;
+  width: 100%;
+  display: block;
+}
+
+.card-img-top{
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+}
+
+
+//scss cards futuras
+/*
 .card-link-btn{
   color: #38485c;
   text-decoration: underline;
   display: block;
 }
 
-.background{
-  background-color: red ;
+.card-overline{
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 10px;
 }
-
-.subcontent{
-  display: flex;
-  float: right;
-}
+*/
