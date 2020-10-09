@@ -49,7 +49,7 @@ export const TitleSubtitleText = (): JSX.Element => {
           </div>    
         </div>
       </div>
-      <div className="card">
+      <a href="#" className="btn-link card">
         <div className="card-body">
           <h5 className="card-title">Título Tarjeta </h5>
           <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>   
@@ -63,7 +63,8 @@ export const TitleSubtitleText = (): JSX.Element => {
             <small className="text-muted">Lorem ipsum dolor</small>
           </div>    
         </div>
-      </div>
+      </a>
+
     </div>
   );
 };
@@ -148,13 +149,13 @@ export const TitleSubtitleLink = (): JSX.Element => {
           <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
         </div>
       </div>
-      <div className="card">
+      <a href="#" className="btn-link card">
 
         <div className="card-body">          
           <h5 className="card-title">Título Tarjeta </h5>
           <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
         </div>
-      </div>
+      </a>
     </div>
   );
 };
