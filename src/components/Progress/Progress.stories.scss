@@ -1,3 +1,104 @@
 .container {
   min-width: 800px;
 }
+
+ul.stepper {
+  padding: 0 1.5rem;
+  padding: 1.5rem;
+  margin: 1em -1.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  counter-reset: section;
+}
+
+.stepper-horizontal {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.stepper-horizontal li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  //align-items: center;
+  align-items: baseline;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.stepper-horizontal li:not(:last-child):after {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 4px;
+  margin: .5rem 0 0 0;
+  content: "";
+  background-color: rgb(66 133 244);
+}
+
+.stepper-horizontal li:not(:first-child):before {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 4px;
+  margin: .5rem 0 0 0;
+  content: "";
+  background-color: rgb(66 133 244);
+}
+
+ul.stepper li a {
+  //padding: 1.5rem;
+  text-align: center;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background-color: transparent;
+}
+
+li.completed a .circle {
+  background-color: #4285f4 !important;
+}
+
+ul.stepper li a .circle {
+  display: inline-block;
+  width: 2.75rem;
+  height: 2.75rem;
+  //margin-right: 1.5rem;
+  line-height: 2.7rem;
+  color: #fff;
+  text-align: center;
+  background: rgba(0,0,0,0.38);
+  border-radius: 50%;
+}
+
+ul.stepper li.completed a .label {
+  font-weight: 600;
+  color: rgba(0,0,0,0.87);
+}
+
+ul.stepper li a .label {
+  display: block;
+  color: rgba(0,0,0,0.38);
+}
+
+.stepper-horizontal li a .label {
+  margin-top: .63rem;
+}
