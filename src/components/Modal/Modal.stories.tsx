@@ -29,8 +29,8 @@ export const Generico = (): JSX.Element => {
             <p>The quick, brown fox jumps over a lazy dog. DJs flock by when</p>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Acción 2</button>
-            <button type="button" className="btn btn-primary">Acción 1</button>
+            <button type="button" className="btn btn-secondary btn-sm" data-dismiss="modal">Acción 2</button>
+            <button type="button" className="btn btn-primary btn-sm">Acción 1</button>
           </div>
         </div>
       </div>
@@ -62,8 +62,8 @@ export const Demo = (): JSX.Element => {
             <p>The quick, brown fox jumps over a lazy dog. DJs flock by when</p>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" className="btn btn-primary">Otra acción</button>
+            <button type="button" className="btn btn-secondary btn-sm" data-dismiss="modal">Acción 2</button>
+            <button type="button" className="btn btn-primary btn-sm">Acción 1</button>
           </div>
         </div>
       </div>
@@ -99,8 +99,8 @@ export const MuchoTexto = (): JSX.Element => {
             <p>Praesent sit amet leo sed magna finibus pellentesque. Praesent tristique lorem sed vulputate bibendum. Etiam aliquam augue nulla, a vestibulum metus fringilla sed. Sed mattis fermentum enim nec gravida. Duis consectetur vel massa sed venenatis. Praesent pellentesque massa quis nibh ornare, in sagittis dui maximus. Vivamus id dolor et elit pulvinar eleifend eget sed nibh. Donec quis lorem leo. Maecenas et libero ultricies, gravida justo in, tincidunt nunc. Donec pharetra feugiat purus ut varius.</p>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" className="btn btn-primary">Otra acción</button>
+            <button type="button" className="btn btn-secondary btn-sm" data-dismiss="modal">Acción 2</button>
+            <button type="button" className="btn btn-primary btn-sm">Acción 1</button>
           </div>
         </div>
       </div>
@@ -129,13 +129,17 @@ export const Formulario = (): JSX.Element => {
             </button>
           </div>
           <div className="modal-body">
-            <form>
-              ...
+            <form className="form-group">
+              <label htmlFor="name-input">Nombre</label>
+              <input type="text" className="form-control" id="name-input" name="name" placeholder="Ejemplo: Camila" />
+              
+              <label htmlFor="text-area">Bloque de texto</label>
+              <textarea className="form-control" id="text-area" rows={3}></textarea>
             </form>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" className="btn btn-primary">Otra acción</button>
+            <button type="button" className="btn btn-secondary btn-sm" data-dismiss="modal">Acción 2</button>
+            <button type="button" className="btn btn-primary btn-sm">Acción 1</button>
           </div>
         </div>
       </div>
