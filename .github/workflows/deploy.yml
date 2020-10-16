@@ -27,7 +27,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           buildScriptName: build:storybook
 
-      - name: Build
+      - name: Build storybook
         run: npm run build:storybook
 
       - name: Deploy
@@ -36,6 +36,11 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: storybook
           FOLDER: .storybook-out
+
+      - name: Build sass and typescript
+        run: |
+          npm run build:typescript
+          npm run build:sass
 
       - name: Release
         run: npm run release
