@@ -21,9 +21,9 @@ export const Stepper = (): JSX.Element => {
           <ul className="stepper stepper-horizontal">
             <li className="completed">
               <a href="#!">
-                <span className="circle">1</span>
-                <span className="label">Primer paso</span>
-              </a>
+                <span className="circle">1</span>                 
+                <span className="label">Primer paso</span>             
+              </a>             
             </li>
             <li className="completed">
               <a href="#!">
