@@ -130,11 +130,9 @@ export const Formulario = (): JSX.Element => {
           </div>
           <div className="modal-body">
             <form className="form-group">
-              <label htmlFor="name-input">Nombre</label>
-              <input type="text" className="form-control" id="name-input" name="name" placeholder="Ejemplo: Camila" />
-              
-              <label htmlFor="text-area">Bloque de texto</label>
-              <textarea className="form-control" id="text-area" rows={3}></textarea>
+              <input type="text" className="form-control" id="name-input" name="name" placeholder="Asunto" aria-label="Ingrese el asunto"/>
+
+              <textarea className="form-control" id="text-area" placeholder="Mensaje" aria-label="Ingrese el mensaje" rows={3}></textarea>
             </form>
           </div>
           <div className="modal-footer">
