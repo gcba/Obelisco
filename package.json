@@ -8,9 +8,7 @@
     "access": "public"
   },
   "main": "dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist", "src"],
   "scripts": {
     "start": "start-storybook -s ./static -p 6006",
     "lint": "npm run lint:typescript && npm run lint:sass",
