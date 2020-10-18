@@ -16,7 +16,6 @@ export default {
 //Images
 import paseobajo from './../../../static/cards/paseobajo.jpg';
 
-
 export const TitleSubtitleText = (): JSX.Element => {
   return (
     <div className="container">
@@ -25,7 +24,9 @@ export const TitleSubtitleText = (): JSX.Element => {
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
             <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
-            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
+            <p className="card-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            </p>
             <hr className="line"></hr>
             <div className="subcontent">
               <small className="text-muted">Lorem ipsum dolor</small>
@@ -36,7 +37,9 @@ export const TitleSubtitleText = (): JSX.Element => {
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
             <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
-            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
+            <p className="card-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            </p>
             <hr className="line"></hr>
             <div className="subcontent">
               <small className="text-muted">Lorem ipsum dolor</small>
@@ -47,10 +50,12 @@ export const TitleSubtitleText = (): JSX.Element => {
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
             <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
-            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
+            <p className="card-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            </p>
             <hr className="line"></hr>
             <div className="subcontent">
-              <small className="text-muted">Lorem ipsum dolor</small> 
+              <small className="text-muted">Lorem ipsum dolor</small>
             </div>
           </div>
         </a>
@@ -61,37 +66,52 @@ export const TitleSubtitleText = (): JSX.Element => {
 
 TitleSubtitleText.story = { name: 'Título + Subtítulo + Texto' };
 
-
 export const TitleTextLink = (): JSX.Element => {
   return (
     <div className="container">
       <div className="cards-content">
-        <div className="card-max">       
+        <div className="card-max">
           <div className="card-body">
-            <h5 className="card-title">Título Tarjeta</h5>   
-            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            <a href="#" className="btn-link">Ver título card</a>
+            <h5 className="card-title">Título Tarjeta </h5>
+            <p className="card-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            </p>
+            <a href="#" className="btn-link">
+              Ver título card
+            </a>
           </div>
         </div>
-        <div className="card-max">       
+        <div className="card-max">
           <div className="card-body">
-            <h5 className="card-title">Título Tarjeta</h5>   
-            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            <a href="#" className="btn-link">Ver título card</a>
+            <h5 className="card-title">Título Tarjeta </h5>
+            <p className="card-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            </p>
+            <a href="#" className="btn-link">
+              Ver título card
+            </a>
           </div>
         </div>
-        <div className="card-max">       
+        <div className="card-max">
           <div className="card-body">
-            <h5 className="card-title">Título Tarjeta </h5>   
-            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            <a href="#" className="btn-link">Ver título card</a>
+            <h5 className="card-title">Título Tarjeta </h5>
+            <p className="card-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            </p>
+            <a href="#" className="btn-link">
+              Ver título card
+            </a>
           </div>
         </div>
-        <div className="card-max">       
+        <div className="card-max">
           <div className="card-body">
-            <h5 className="card-title">Título Tarjeta </h5>   
-            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            <a href="#" className="btn-link">Ver título card</a>
+            <h5 className="card-title">Título Tarjeta </h5>
+            <p className="card-text">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            </p>
+            <a href="#" className="btn-link">
+              Ver título card
+            </a>
           </div>
         </div>
       </div>
@@ -101,46 +121,44 @@ export const TitleTextLink = (): JSX.Element => {
 
 TitleTextLink.story = { name: 'Título + Texto + Link' };
 
-
 export const TitleSubtitleLink = (): JSX.Element => {
   return (
     <div className="container">
       <div className="cards-content">
         <div className="card">
-          <img src={paseobajo} className="card-img-top class-img" />
-          <div className="card-body">          
+          <img src="/cards/paseobajo.jpg" className="card-img-top class-img" />
+          <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
-            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
+            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
           </div>
         </div>
         <div className="card">
-          <img src={paseobajo} className="card-img-top class-img" />
-          <div className="card-body">          
+          <img src="/cards/paseobajo.jpg" className="card-img-top class-img" />
+          <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
-            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
+            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
           </div>
         </div>
         <div className="card">
-          <img src={paseobajo} className="card-img-top class-img" />
-          <div className="card-body">          
+          <img src="/cards/paseobajo.jpg" className="card-img-top class-img" />
+          <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
-            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
+            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
           </div>
         </div>
         <a href="#" className="btn-link card">
-        <img src={paseobajo} className="card-img-top class-img" />
-        <div className="card-body">          
-          <h5 className="card-title">Título Tarjeta </h5>
-          <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>       
-        </div>
-      </a>
+          <img src="/cards/paseobajo.jpg" className="card-img-top class-img" />
+          <div className="card-body">
+            <h5 className="card-title">Título Tarjeta </h5>
+            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
+          </div>
+        </a>
       </div>
     </div>
   );
 };
 
 TitleSubtitleLink.story = { name: 'Imagen + Título + Subtítulo' };
-
 
 //Proximas Cards
 /*export const OverlineTitleTextButtonCaption = (): JSX.Element => {

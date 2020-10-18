@@ -1,16 +1,16 @@
 // Base
-import React from "react";
+import React from 'react';
 
 // Addons
-import { withA11y } from "@storybook/addon-a11y";
+import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { Table, TableCellContet } from ".";
-import { Button } from "../Button";
+import { Table, TableCellContet } from '.';
+import { Button } from '../Button';
 
 // Config
 export default {
-  title: "Componentes|Tablas",
+  title: 'Componentes|Tablas',
   component: Table,
   decorators: [withA11y]
 };
@@ -18,12 +18,12 @@ export default {
 export const Normal = (): JSX.Element => {
   return (
     <Table
-      head={["#", "Encabezado", "Otro más"]}
+      head={['#', 'Encabezado', 'Otro más']}
       body={[
-        ["1", "Juan", "Alberto"],
-        ["2", "María", "Julia"],
-        ["3", "Esther", "Fermin"],
-        ["4", "José", "Juana"]
+        ['1', 'Juan', 'Alberto'],
+        ['2', 'María', 'Julia'],
+        ['3', 'Esther', 'Fermin'],
+        ['4', 'José', 'Juana']
       ]}
     />
   );
@@ -32,12 +32,12 @@ export const Normal = (): JSX.Element => {
 export const ConBordes = (): JSX.Element => {
   return (
     <Table
-      head={["#", "Encabezado", "Otro más"]}
+      head={['#', 'Encabezado', 'Otro más']}
       body={[
-        ["1", "Juan", "Alberto"],
-        ["2", "María", "Julia"],
-        ["3", "Esther", "Fermin"],
-        ["4", "José", "Juana"]
+        ['1', 'Juan', 'Alberto'],
+        ['2', 'María', 'Julia'],
+        ['3', 'Esther', 'Fermin'],
+        ['4', 'José', 'Juana']
       ]}
       bordered={true}
     />
@@ -47,12 +47,12 @@ export const ConBordes = (): JSX.Element => {
 export const AlineaciónHorizontal = (): JSX.Element => {
   return (
     <Table
-      head={["#", "Primero", rightAligned("Cantidad")]}
+      head={['#', 'Primero', rightAligned('Cantidad')]}
       body={[
-        ["1", "Juan", rightAligned("1.234.567")],
-        ["2", "María", rightAligned("34.567")],
-        ["3", "Esther", rightAligned("82.428,53")],
-        ["4", "José", rightAligned("99.131.413")]
+        ['1', 'Juan', rightAligned('1.234.567')],
+        ['2', 'María', rightAligned('34.567')],
+        ['3', 'Esther', rightAligned('82.428,53')],
+        ['4', 'José', rightAligned('99.131.413')]
       ]}
       bordered={true}
     />
@@ -62,10 +62,10 @@ export const AlineaciónHorizontal = (): JSX.Element => {
 export const AlineaciónVertical = (): JSX.Element => {
   return (
     <Table
-      head={["#", "Primero", rightAligned("Cantidad")]}
+      head={['#', 'Primero', rightAligned('Cantidad')]}
       body={[
-        [SmallContent, "Juan", rightAligned("1.234.567")],
-        [SmallContent, "María", rightAligned("34.567")]
+        [SmallContent, 'Juan', rightAligned('1.234.567')],
+        [SmallContent, 'María', rightAligned('34.567')]
       ]}
       className="table-align-bottom"
       bordered={true}
@@ -76,12 +76,12 @@ export const AlineaciónVertical = (): JSX.Element => {
 export const Intercalada = (): JSX.Element => {
   return (
     <Table
-      head={["#", "Encabezado", "Otro más"]}
+      head={['#', 'Encabezado', 'Otro más']}
       body={[
-        ["1", "Juan", "Alberto"],
-        ["2", "María", "Julia"],
-        ["3", "Esther", "Fermin"],
-        ["4", "José", "Juana"]
+        ['1', 'Juan', 'Alberto'],
+        ['2', 'María', 'Julia'],
+        ['3', 'Esther', 'Fermin'],
+        ['4', 'José', 'Juana']
       ]}
       striped={true}
     />
@@ -91,12 +91,12 @@ export const Intercalada = (): JSX.Element => {
 export const Resaltable = (): JSX.Element => {
   return (
     <Table
-      head={["#", "Encabezado", "Otro más"]}
+      head={['#', 'Encabezado', 'Otro más']}
       body={[
-        ["1", "Juan", "Alberto"],
-        ["2", "María", "Julia"],
-        ["3", "Esther", "Fermin"],
-        ["4", "José", "Juana"]
+        ['1', 'Juan', 'Alberto'],
+        ['2', 'María', 'Julia'],
+        ['3', 'Esther', 'Fermin'],
+        ['4', 'José', 'Juana']
       ]}
       hoverable={true}
     />
@@ -106,12 +106,12 @@ export const Resaltable = (): JSX.Element => {
 export const TodoJunto = (): JSX.Element => {
   return (
     <Table
-      head={["#", "Encabezado", "Otro más"]}
+      head={['#', 'Encabezado', 'Otro más']}
       body={[
-        ["1", "Juan", "Alberto"],
-        ["2", "María", "Julia"],
-        ["3", "Esther", "Fermin"],
-        ["4", "José", "Juana"]
+        ['1', 'Juan', 'Alberto'],
+        ['2', 'María', 'Julia'],
+        ['3', 'Esther', 'Fermin'],
+        ['4', 'José', 'Juana']
       ]}
       bordered={true}
       striped={true}
@@ -123,12 +123,12 @@ export const TodoJunto = (): JSX.Element => {
 export const Seleccionable = (): JSX.Element => {
   return (
     <Table
-      head={["#", "Encabezado", "Otro más"]}
+      head={['#', 'Encabezado', 'Otro más']}
       body={[
-        ["1", "Juan", "Alberto"],
-        ["2", "María", "Julia"],
-        ["3", "Esther", "Fermin"],
-        ["4", "José", "Juana"]
+        ['1', 'Juan', 'Alberto'],
+        ['2', 'María', 'Julia'],
+        ['3', 'Esther', 'Fermin'],
+        ['4', 'José', 'Juana']
       ]}
       selectable={true}
     />
@@ -138,12 +138,12 @@ export const Seleccionable = (): JSX.Element => {
 export const ConAcciones = (): JSX.Element => {
   return (
     <Table
-      head={["#", "Primero", "Segundo", ""]}
+      head={['#', 'Primero', 'Segundo', '']}
       body={[
-        ["1", "Juan", "Alberto", ActionButton],
-        ["2", "María", "Julia", ActionButton],
-        ["3", "Esther", "Fermin", ActionButton],
-        ["4", "José", "Juana", ActionButton]
+        ['1', 'Juan', 'Alberto', ActionButton],
+        ['2', 'María', 'Julia', ActionButton],
+        ['3', 'Esther', 'Fermin', ActionButton],
+        ['4', 'José', 'Juana', ActionButton]
       ]}
     />
   );
@@ -171,6 +171,6 @@ const SmallContent: JSX.Element = (
 const rightAligned = (content: TableCellContet) => {
   return {
     content,
-    props: { className: "text-right" }
+    props: { className: 'text-right' }
   };
 };
