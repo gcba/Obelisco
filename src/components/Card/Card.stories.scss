@@ -5,12 +5,12 @@
   min-width: 0;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.5rem;
-  width: auto; 
-  -webkit-box-shadow: 5px 5px 5px -2px rgba(245,242,245,0.73);
-  -moz-box-shadow: 5px 5px 5px -2px rgba(245,242,245,0.73);
-  box-shadow: 5px 5px 5px -2px rgba(245,242,245,0.73)
+  width: auto;
+  -webkit-box-shadow: 5px 5px 5px -2px rgba(245, 242, 245, 0.73);
+  -moz-box-shadow: 5px 5px 5px -2px rgba(245, 242, 245, 0.73);
+  box-shadow: 5px 5px 5px -2px rgba(245, 242, 245, 0.73);
 }
 
 .card:hover {
@@ -46,22 +46,21 @@
   padding: 1.25rem;
 }
 
-.subcontent{
+.subcontent {
   display: flex;
   float: right;
 }
 
-.class-img{
+.class-img {
   height: 190px;
   width: 100%;
   display: block;
 }
 
-.card-img-top{
-  border-top-left-radius: calc(.25rem - 1px);
-  border-top-right-radius: calc(.25rem - 1px);
+.card-img-top {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
 }
-
 
 //scss cards futuras
 /*
