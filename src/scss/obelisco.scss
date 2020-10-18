@@ -4,26 +4,26 @@
  * Licensed under MIT (https://github.com/gcba/obelisco/blob/master/LICENSE)
  */
 
-// @import "../../node_modules/bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
 
 // Custom variables
 @import 'colors';
 @import 'typography';
 
 // Bootstrap base
-@import '../../node_modules/bootstrap/scss/functions';
-@import '../../node_modules/bootstrap/scss/variables';
-@import '../../node_modules/bootstrap/scss/mixins';
-@import '../../node_modules/bootstrap/scss/utilities';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/utilities';
 $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
-@import '../../node_modules/bootstrap/scss/root';
-@import '../../node_modules/bootstrap/scss/reboot';
-@import '../../node_modules/bootstrap/scss/print';
-@import '../../node_modules/bootstrap/scss/transitions';
-@import '../../node_modules/bootstrap/scss/type';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/print';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/type';
 
-@import '../../node_modules/bootstrap/scss/code';
-@import '../../node_modules/bootstrap/scss/close';
+@import '~bootstrap/scss/code';
+@import '~bootstrap/scss/close';
 
 // Custom styles
 @import 'grid';

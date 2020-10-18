@@ -27,8 +27,8 @@ $form-validation-states: (
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
-@import '../../../node_modules/bootstrap/scss/forms';
-@import '../../../node_modules/bootstrap/scss/custom-forms';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/custom-forms';
 
 /* === Custom styles === */
 
