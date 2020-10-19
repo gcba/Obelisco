@@ -52,7 +52,14 @@ $nav-link-hover-bg: $grisulado-10;
   .nav-link {
     padding-left: $nav-link-padding-x * 2;
   }
-  .nav .nav-link {
-    padding-left: $nav-link-padding-x * 3;
+  .nav {
+    .nav-link {
+      padding-left: $nav-link-padding-x * 3;
+    }
+    .nav {
+      .nav-link {
+        padding-left: $nav-link-padding-x * 4;
+      }
+    }
   }
 }
