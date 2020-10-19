@@ -1,0 +1,51 @@
+/* === Variable and mixins overides === */
+
+$nav-link-font-weight: 400;
+$nav-link-active-font-weight: 600;
+$nav-pills-link-active-font-weight: 400;
+
+$nav-link-padding-y: 0.75rem;
+$nav-link-padding-x: 1rem;
+$nav-link-disabled-color: $grisulado-300;
+$nav-link-hover-bg: $grisulado-10;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+@import '~bootstrap/scss/_nav';
+
+/* === Custom styles === */
+
+.nav-link {
+  color: $grisulado-900;
+  font-weight: $nav-link-font-weight;
+  @include border-radius($border-radius-container);
+
+  &.active {
+    color: $blue;
+    font-weight: $nav-link-active-font-weight;
+  }
+
+  @include hover() {
+    background-color: $nav-link-hover-bg;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: $input-btn-focus-box-shadow;
+  }
+}
+
+.nav-pills {
+  .nav-link {
+    &.active {
+      font-weight: $nav-pills-link-active-font-weight;
+    }
+  }
+}
+
+.nav .nav-pills .nav-link {
+  padding-left: spaceUnits(8);
+}
