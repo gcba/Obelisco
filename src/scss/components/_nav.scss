@@ -40,6 +40,8 @@ $nav-link-hover-bg: $grisulado-10;
 
 .nav-pills {
   .nav-link {
+    @include border-radius($border-radius-container);
+
     &.active {
       font-weight: $nav-pills-link-active-font-weight;
     }
