@@ -79,9 +79,21 @@ export const Con2Niveles = (): JSX.Element => (
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link active" href="#">
+            <a className="nav-link" href="#">
               Locales gastronómicos: “para llevar/takeaway”
             </a>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Con local a la calle
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="#">
+                  Food trucks
+                </a>
+              </li>
+            </ul>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">

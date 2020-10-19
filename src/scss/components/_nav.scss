@@ -48,6 +48,11 @@ $nav-link-hover-bg: $grisulado-10;
   }
 }
 
-.nav .nav-pills .nav-link {
-  padding-left: spaceUnits(8);
+.nav .nav {
+  .nav-link {
+    padding-left: $nav-link-padding-x * 2;
+  }
+  .nav .nav-link {
+    padding-left: $nav-link-padding-x * 3;
+  }
 }
