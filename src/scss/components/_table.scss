@@ -20,7 +20,7 @@ $table-striped-order: even;
 
 /* === Bootstrap Import === */
 
-@import "../../../node_modules/bootstrap/scss/tables";
+@import '../../../node_modules/bootstrap/scss/tables';
 
 /* === Custom styles === */
 
@@ -97,8 +97,7 @@ $table-striped-order: even;
     }
   }
 
-  $table-alignments: "baseline", "top", "middle", "bottom", "text-bottom",
-    "text-top";
+  $table-alignments: 'baseline', 'top', 'middle', 'bottom', 'text-bottom', 'text-top';
 
   @each $alignment in $table-alignments {
     &.table-align-#{$alignment} {
