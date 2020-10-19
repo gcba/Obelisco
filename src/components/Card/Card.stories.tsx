@@ -14,7 +14,7 @@ export default {
 };
 
 //Images
-var paseobajo = require('./../../../static/cards/paseobajo.jpg');
+import paseobajo from './../../../static/cards/paseobajo.jpg';
 
 
 export const TitleSubtitleText = (): JSX.Element => {
@@ -24,46 +24,34 @@ export const TitleSubtitleText = (): JSX.Element => {
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
-            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>   
-            <p className="card-text">
-              Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy
-              eirmod tempor
-            </p>    
-            <hr className="line"></hr> 
-            <div className="subcontent"> 
+            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
+            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
+            <hr className="line"></hr>
+            <div className="subcontent">
               <small className="text-muted">Lorem ipsum dolor</small>
-            </div>    
+            </div>
           </div>
         </div>
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
-            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>   
-            <p className="card-text">
-              Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy
-              eirmod tempor
-            </p>    
-            <hr className="line"></hr> 
-            <div className="subcontent"> 
+            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
+            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
+            <hr className="line"></hr>
+            <div className="subcontent">
               <small className="text-muted">Lorem ipsum dolor</small>
-            </div>    
+            </div>
           </div>
         </div>
         <a href="#" className="btn-link card">
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
-            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>   
-            <p className="card-text">
-              Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy
-              eirmod tempor
-            </p>    
-            <hr className="line"></hr> 
-            <div className="subcontent"> 
-              <small className="text-muted">Lorem ipsum dolor</small>
-            </div>    
+            <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
+            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor </p>
+            <hr className="line"></hr>
+            <div className="subcontent">
+              <small className="text-muted">Lorem ipsum dolor</small> 
+            </div>
           </div>
         </a>
       </div>
@@ -71,7 +59,7 @@ export const TitleSubtitleText = (): JSX.Element => {
   );
 };
 
-TitleSubtitleText.story = { name: 'Título + Subtítulo + Texto'};
+TitleSubtitleText.story = { name: 'Título + Subtítulo + Texto' };
 
 
 export const TitleTextLink = (): JSX.Element => {
@@ -80,45 +68,29 @@ export const TitleTextLink = (): JSX.Element => {
       <div className="cards-content">
         <div className="card-max">       
           <div className="card-body">
-            <h5 className="card-title">Título Tarjeta </h5>   
-            <p className="card-text">
-              Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy
-              eirmod tempor
-            </p>
+            <h5 className="card-title">Título Tarjeta</h5>   
+            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+            <a href="#" className="btn-link">Ver título card</a>
+          </div>
+        </div>
+        <div className="card-max">       
+          <div className="card-body">
+            <h5 className="card-title">Título Tarjeta</h5>   
+            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
             <a href="#" className="btn-link">Ver título card</a>
           </div>
         </div>
         <div className="card-max">       
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>   
-            <p className="card-text">
-              Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy
-              eirmod tempor
-            </p>
+            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
             <a href="#" className="btn-link">Ver título card</a>
           </div>
         </div>
         <div className="card-max">       
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>   
-            <p className="card-text">
-              Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy
-              eirmod tempor
-            </p>
-            <a href="#" className="btn-link">Ver título card</a>
-          </div>
-        </div>
-        <div className="card-max">       
-          <div className="card-body">
-            <h5 className="card-title">Título Tarjeta </h5>   
-            <p className="card-text">
-              Lorem ipsum dolor sit amet, consetetur
-              sadipscing elitr, sed diam nonumy
-              eirmod tempor
-            </p>
+            <p className="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
             <a href="#" className="btn-link">Ver título card</a>
           </div>
         </div>
@@ -127,7 +99,7 @@ export const TitleTextLink = (): JSX.Element => {
   );
 };
 
-TitleTextLink.story = { name: 'Título + Texto + Link'};
+TitleTextLink.story = { name: 'Título + Texto + Link' };
 
 
 export const TitleSubtitleLink = (): JSX.Element => {
@@ -167,7 +139,7 @@ export const TitleSubtitleLink = (): JSX.Element => {
   );
 };
 
-TitleSubtitleLink.story = { name: 'Imagen + Título + Subtítulo'};
+TitleSubtitleLink.story = { name: 'Imagen + Título + Subtítulo' };
 
 
 //Proximas Cards
