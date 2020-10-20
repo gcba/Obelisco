@@ -51,7 +51,7 @@ $alert-icons: (
 // Eliminamos el color secundario para las alertas.
 $tmp: $theme-colors;
 $theme-colors: map-remove($theme-colors, 'secondary');
-@import '../../../node_modules/bootstrap/scss/alert';
+@import '~bootstrap/scss/alert';
 
 /* === Custom styles === */
 

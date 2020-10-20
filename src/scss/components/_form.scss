@@ -1,0 +1,69 @@
+/* === Variable and mixins overides === */
+
+$input-bg: $light;
+$custom-select-bg: $input-bg;
+$input-placeholder-color: $grisulado-300;
+
+$input-disabled-color: $grisulado-400;
+$input-disabled-bg: $grisulado-50;
+
+$custom-select-disabled-color: $input-disabled-color;
+$custom-select-disabled-bg: $input-disabled-bg;
+
+$custom-control-indicator-checked-color: $info;
+$custom-control-indicator-active-color: $info;
+
+$form-validation-states: (
+  'valid': (
+    'color': $form-feedback-valid-color,
+    'icon': none
+  ),
+  'invalid': (
+    'color': $form-feedback-invalid-color,
+    'icon': none
+  )
+);
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/custom-forms';
+
+/* === Custom styles === */
+
+.form-group label {
+  font-size: $font-size-sm;
+}
+
+.bg-light {
+  .form-control,
+  .custom-select {
+    &:not(:disabled) {
+      background-color: $white;
+    }
+  }
+}
+
+.custom-control-label {
+  padding: spaceUnits(1);
+  padding-left: $custom-control-indicator-size + spaceUnits(6);
+  padding-right: spaceUnits(3);
+  background-color: $light;
+  margin-bottom: spaceUnits(2);
+  border-radius: $border-radius;
+
+  &::before {
+    left: spaceUnits(3);
+    top: spaceUnits(2);
+  }
+
+  &::after {
+    left: spaceUnits(3);
+    top: spaceUnits(2);
+  }
+}
+
+.custom-control-input:disabled ~ .custom-control-label {
+  color: $custom-select-disabled-color;
+}

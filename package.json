@@ -9,7 +9,8 @@
   },
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
     "start": "start-storybook -s ./static -p 6006",
@@ -17,7 +18,7 @@
     "lint:typescript": "eslint --ext .ts,.tsx . --fix",
     "lint:sass": "stylelint '**/*.{css,scss,sass}' --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:sass": "sass src/scss/:dist/",
+    "build:sass": "node-sass src/scss/obelisco.scss dist/obelisco.css --source-map true --output-style compressed --importer node_modules/node-sass-package-importer/dist/cli.js",
     "build:typescript": "tsc --outDir dist",
     "build:storybook": "build-storybook -s ./static -c .storybook -o .storybook-out",
     "release": "semantic-release"
@@ -47,6 +48,8 @@
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.20.0",
     "fork-ts-checker-webpack-plugin": "^4.1.4",
+    "node-sass": "^4.14.1",
+    "node-sass-package-importer": "^5.3.2",
     "prettier-stylelint": "^0.4.2",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
