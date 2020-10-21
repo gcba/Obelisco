@@ -16,6 +16,16 @@ $modal-footer-divisor: $modal-inner-padding * -1;
 
 /* === Custom styles === */
 
+.form-group{
+  input, textarea{
+    margin-bottom: $modal-inner-padding;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
 .modal-body > *:last-child {
   margin: 0;
 }
