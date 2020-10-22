@@ -22,25 +22,29 @@ export const Stepper = (): JSX.Element => {
             <li className="completed">
               <a href="#!">
                 <span className="circle">1</span>                 
-                <span className="label">Primer paso</span>             
-              </a>             
-            </li>
+                <span className="label">Primer paso</span>
+                <span className="sublabel">Opcional</span>
+              </a>       
+            </li>            
             <li className="completed">
               <a href="#!">
                 <span className="circle">2</span>
                 <span className="label">Segundo paso</span>
+                <span className="sublabel">Opcional</span>
               </a>
             </li>
             <li className="active">
               <a href="#!">
                 <span className="circle">3</span>
                 <span className="label">Tercer paso</span>
+                <span className="sublabel">Opcional</span>
               </a>
             </li>
             <li className="active">
               <a href="#!">
                 <span className="circle">4</span>
                 <span className="label">Cuarto paso</span>
+                <span className="sublabel">Opcional</span>
               </a>
             </li>
           </ul>

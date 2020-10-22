@@ -13,31 +13,18 @@ ul.stepper {
 
 .stepper-horizontal {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .stepper-horizontal li {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  //align-items: center;
   align-items: baseline;
-  -webkit-transition: .5s;
-  transition: .5s;
 }
 
-.stepper-horizontal li:not(:last-child):after {
+/**/.stepper-horizontal li:not(:last-child):after {
   position: relative;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -54,13 +41,20 @@ ul.stepper {
   -ms-flex: 1;
   flex: 1;
   height: 4px;
-  margin: .5rem 0 0 0;
+  margin: 0.5rem 0 0 0;
   content: "";
   background-color: rgb(66 133 244);
 }
 
+.stepper-horizontal li:not(:first-child).active:before {
+  background-color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.stepper-horizontal li:not(:first-child).active:after{
+  background-color: rgba(0, 0, 0, 0.38) !important;
+}
+
 ul.stepper li a {
-  //padding: 1.5rem;
   text-align: center;
 }
 
@@ -81,22 +75,23 @@ ul.stepper li a .circle {
   display: inline-block;
   width: 2.75rem;
   height: 2.75rem;
-  //margin-right: 1.5rem;
   line-height: 2.7rem;
   color: #fff;
   text-align: center;
-  background: rgba(0,0,0,0.38);
+  background: rgba(0, 0, 0, 0.38);
   border-radius: 50%;
 }
 
-ul.stepper li.completed a .label {
+ul.stepper li.completed a .label, 
+ul.stepper li.completed a .sublabel {
   font-weight: 600;
-  color: rgba(0,0,0,0.87);
+  color: rgba(0, 0, 0, 0.87);
 }
 
-ul.stepper li a .label {
+ul.stepper li a .label, 
+ul.stepper li a .sublabel {
   display: block;
-  color: rgba(0,0,0,0.38);
+  color: rgba(0, 0, 0, 0.38);
 }
 
 .stepper-horizontal li a .label {
