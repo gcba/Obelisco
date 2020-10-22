@@ -13,7 +13,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const Stepper = (): JSX.Element => {
+export const DesktopStepper = (): JSX.Element => {
   return (
     <div className="container">
       <div className="row">
@@ -53,3 +53,25 @@ export const Stepper = (): JSX.Element => {
     </div>
   );
 };
+
+
+/*
+export const MobileStepper = (): JSX.Element => {
+  return (
+    <div className="container">
+      <div className="card  content">
+        <div className="text-left card-header">
+          <span className="label">Paso actual</span><br></br>
+          <span className="sublabel">Paso siguiente: Lorem ipsum</span><br></br>
+          <span className="step">Paso 2 de 3</span>
+        </div>
+        <div className="card-body"></div>
+        <div className="card-footer text-muted text-right">
+          <button className="btn btn-secondary">Anterior</button>
+          <button className="btn btn-primary">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+*/

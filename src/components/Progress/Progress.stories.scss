@@ -24,7 +24,7 @@ ul.stepper {
   align-items: baseline;
 }
 
-/**/.stepper-horizontal li:not(:last-child):after {
+/*.stepper-horizontal li:not(:last-child):after {
   position: relative;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -33,7 +33,7 @@ ul.stepper {
   margin: .5rem 0 0 0;
   content: "";
   background-color: rgb(66 133 244);
-}
+}*/
 
 .stepper-horizontal li:not(:first-child):before {
   position: relative;
@@ -45,6 +45,11 @@ ul.stepper {
   content: "";
   background-color: rgb(66 133 244);
 }
+
+.stepper-horizontal li:first-child:before {
+  background-color: rgb(66 133 244) !important;
+}
+
 
 .stepper-horizontal li:not(:first-child).active:before {
   background-color: rgba(0, 0, 0, 0.38) !important;
@@ -97,3 +102,42 @@ ul.stepper li a .sublabel {
 .stepper-horizontal li a .label {
   margin-top: .63rem;
 }
+
+/////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// MOBILE ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+/*
+.content {
+  width: 400px;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0,0,0,.03);
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-body {
+  height: 250px;
+}
+
+.card-footer {
+  padding: .75rem 1.25rem;
+  background-color: rgba(0,0,0,.03);
+  border-top: 1px solid rgba(0,0,0,.125);
+}*/
