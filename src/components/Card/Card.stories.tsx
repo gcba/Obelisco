@@ -13,10 +13,6 @@ export default {
   decorators: [withA11y]
 };
 
-//Images
-import paseobajo from './../../../static/cards/paseobajo.jpg';
-
-
 export const TitleSubtitleText = (): JSX.Element => {
   return (
     <div className="container">
@@ -27,11 +23,12 @@ export const TitleSubtitleText = (): JSX.Element => {
             <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
             <p className="card-text">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            </p>
-            <hr className="line"></hr>
-            <div className="subcontent">
-              <small className="text-muted">Lorem ipsum dolor</small>
-            </div>
+            </p>        
+          </div>        
+          <div className="card-footer">
+            <div className="text-muted pt-3">
+              <small>Last updated 3 mins ago</small>
+            </div>            
           </div>
         </div>
         <div className="card">
@@ -41,24 +38,26 @@ export const TitleSubtitleText = (): JSX.Element => {
             <p className="card-text">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
             </p>
-            <hr className="line"></hr>
-            <div className="subcontent">
-              <small className="text-muted">Lorem ipsum dolor</small>
-            </div>
+          </div>
+          <div className="card-footer">
+            <div className="text-muted pt-3">
+              <small>Last updated 3 mins ago</small>
+            </div>   
           </div>
         </div>
-        <a href="#" className="btn-link card">
+        <a href="#" className="card btn-link card-link">
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
             <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
             <p className="card-text">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
             </p>
-            <hr className="line"></hr>
-            <div className="subcontent">
-              <small className="text-muted">Lorem ipsum dolor</small>
             </div>
-          </div>
+            <div className="card-footer">
+              <div className="text-muted pt-3">
+                <small>Last updated 3 mins ago</small>
+              </div>   
+            </div>          
         </a>
       </div>
     </div>
@@ -71,8 +70,7 @@ export const TitleTextLink = (): JSX.Element => {
   return (
     <div className="container">
       <div className="cards-content">
-        <div className="card-max">
-          <div className="card-body">
+          <div className="card-body-content">
             <h5 className="card-title">Título Tarjeta </h5>
             <p className="card-text">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
@@ -81,9 +79,7 @@ export const TitleTextLink = (): JSX.Element => {
               Ver título card
             </a>
           </div>
-        </div>
-        <div className="card-max">
-          <div className="card-body">
+          <div className="card-body-content">
             <h5 className="card-title">Título Tarjeta </h5>
             <p className="card-text">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
@@ -92,9 +88,7 @@ export const TitleTextLink = (): JSX.Element => {
               Ver título card
             </a>
           </div>
-        </div>
-        <div className="card-max">
-          <div className="card-body">
+          <div className="card-body-content">
             <h5 className="card-title">Título Tarjeta </h5>
             <p className="card-text">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
@@ -103,9 +97,7 @@ export const TitleTextLink = (): JSX.Element => {
               Ver título card
             </a>
           </div>
-        </div>
-        <div className="card-max">
-          <div className="card-body">
+          <div className="card-body-content">
             <h5 className="card-title">Título Tarjeta </h5>
             <p className="card-text">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
@@ -114,7 +106,6 @@ export const TitleTextLink = (): JSX.Element => {
               Ver título card
             </a>
           </div>
-        </div>
       </div>
     </div>
   );
@@ -127,28 +118,28 @@ export const TitleSubtitleLink = (): JSX.Element => {
     <div className="container">
       <div className="cards-content">
         <div className="card">
-          <img src="/cards/paseobajo.jpg" className="card-img-top class-img" />
+          <img src="/cards/paseobajo.jpg" className="card-img-top card-img" />
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
             <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
           </div>
         </div>
         <div className="card">
-          <img src="/cards/paseobajo.jpg" className="card-img-top class-img" />
+          <img src="/cards/paseobajo.jpg" className="card-img-top card-img" />
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
             <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
           </div>
         </div>
         <div className="card">
-          <img src="/cards/paseobajo.jpg" className="card-img-top class-img" />
+          <img src="/cards/paseobajo.jpg" className="card-img-top card-img" />
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
             <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
           </div>
         </div>
-        <a href="#" className="btn-link card">
-          <img src="/cards/paseobajo.jpg" className="card-img-top class-img" />
+        <a href="#" className="card btn-link card-link">
+          <img src="/cards/paseobajo.jpg" className="card-img-top card-img" />
           <div className="card-body">
             <h5 className="card-title">Título Tarjeta </h5>
             <h6 className="card-subtitle mb-2 text-muted">Subtítulo</h6>
