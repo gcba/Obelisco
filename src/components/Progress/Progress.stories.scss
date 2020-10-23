@@ -3,9 +3,9 @@
 }
 
 ul.stepper {
-  padding: 0 1.5rem;
-  padding: 1.5rem;
-  margin: 1em -1.5rem;
+  //padding: 0 1.5rem;
+  //padding: 1.5rem;
+  //margin: 1em -1.5rem;
   overflow-x: hidden;
   overflow-y: auto;
   counter-reset: section;
@@ -52,11 +52,11 @@ ul.stepper {
 
 
 .stepper-horizontal li:not(:first-child).active:before {
-  background-color: rgba(0, 0, 0, 0.38) !important;
+  background-color: rgb(203 203 203) !important;
 }
 
 .stepper-horizontal li:not(:first-child).active:after{
-  background-color: rgba(0, 0, 0, 0.38) !important;
+  background-color: rgb(203 203 203) !important;
 }
 
 ul.stepper li a {
@@ -83,7 +83,7 @@ ul.stepper li a .circle {
   line-height: 2.7rem;
   color: #fff;
   text-align: center;
-  background: rgba(0, 0, 0, 0.38);
+  background: rgb(203 203 203);
   border-radius: 50%;
 }
 
@@ -106,7 +106,7 @@ ul.stepper li a .sublabel {
 /////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////// MOBILE ////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
-/*
+
 .content {
   width: 400px;
 }
@@ -121,15 +121,15 @@ ul.stepper li a .sublabel {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: .25rem;
 }
 
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0,0,0,.03);
-  border-bottom: 1px solid rgba(0,0,0,.125);
+  background-color: rgba(0, 0, 0, .03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .card-body {
@@ -138,6 +138,14 @@ ul.stepper li a .sublabel {
 
 .card-footer {
   padding: .75rem 1.25rem;
-  background-color: rgba(0,0,0,.03);
-  border-top: 1px solid rgba(0,0,0,.125);
-}*/
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+li.completed a .step {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #4285f4 !important;
+  float: left;
+}

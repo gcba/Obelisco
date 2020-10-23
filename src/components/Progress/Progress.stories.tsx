@@ -55,15 +55,22 @@ export const DesktopStepper = (): JSX.Element => {
 };
 
 
-/*
+
 export const MobileStepper = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="card  content">
+      <div className="card content">
         <div className="text-left card-header">
-          <span className="label">Paso actual</span><br></br>
-          <span className="sublabel">Paso siguiente: Lorem ipsum</span><br></br>
-          <span className="step">Paso 2 de 3</span>
+          <ul className="stepper stepper-horizontal p-0">
+            <li className="completed">
+              <a href="#">
+                <span className="label text-left">Paso actual</span>
+                <span className="sublabel text-muted">Paso siguiente: Lorem ipsum</span>
+                <span className="step"></span>
+                <span className="label text-left">Paso 1 de 3</span>
+              </a>
+            </li>            
+          </ul>
         </div>
         <div className="card-body"></div>
         <div className="card-footer text-muted text-right">
@@ -74,4 +81,3 @@ export const MobileStepper = (): JSX.Element => {
     </div>
   );
 };
-*/
