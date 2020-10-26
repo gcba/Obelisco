@@ -20,43 +20,30 @@ ul.stepper {
 .stepper-horizontal li {
   position: relative;
   display: flex;
-  flex: 1;
   align-items: baseline;
 }
 
-/*.stepper-horizontal li:not(:last-child):after {
-  position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 4px;
-  margin: .5rem 0 0 0;
-  content: "";
-  background-color: rgb(66 133 244);
-}*/
-
 .stepper-horizontal li:not(:first-child):before {
-  position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  height: 4px;
-  margin: 0.5rem 0 0 0;
   content: "";
-  background-color: rgb(66 133 244);
+  position: relative;
+  width: 16rem;
+  height: 4px;
+  margin: 0.5rem -3rem 0 -3rem;
+  background-color: #191919;
+  z-index: -1;
 }
 
 .stepper-horizontal li:first-child:before {
-  background-color: rgb(66 133 244) !important;
+  background-color: #191919;
 }
 
 
 .stepper-horizontal li:not(:first-child).active:before {
-  background-color: rgb(203 203 203) !important;
+  background-color: rgb(203 203 203);
 }
 
 .stepper-horizontal li:not(:first-child).active:after{
-  background-color: rgb(203 203 203) !important;
+  background-color: rgb(203 203 203);
 }
 
 ul.stepper li a {
@@ -72,10 +59,6 @@ a {
   background-color: transparent;
 }
 
-li.completed a .circle {
-  background-color: #4285f4 !important;
-}
-
 ul.stepper li a .circle {
   display: inline-block;
   width: 2.75rem;
@@ -87,13 +70,17 @@ ul.stepper li a .circle {
   border-radius: 50%;
 }
 
-ul.stepper li.completed a .label, 
+ul.stepper li.completed a .circle {
+  background-color: #191919;
+}
+
+ul.stepper li.completed a .label,
 ul.stepper li.completed a .sublabel {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.87);
 }
 
-ul.stepper li a .label, 
+ul.stepper li a .label,
 ul.stepper li a .sublabel {
   display: block;
   color: rgba(0, 0, 0, 0.38);

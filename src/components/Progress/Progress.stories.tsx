@@ -21,11 +21,11 @@ export const DesktopStepper = (): JSX.Element => {
           <ul className="stepper stepper-horizontal">
             <li className="completed">
               <a href="#!">
-                <span className="circle">1</span>                 
+                <span className="circle">1</span>
                 <span className="label">Primer paso</span>
                 <span className="sublabel">Opcional</span>
-              </a>       
-            </li>            
+              </a>
+            </li>
             <li className="completed">
               <a href="#!">
                 <span className="circle">2</span>
@@ -69,7 +69,7 @@ export const MobileStepper = (): JSX.Element => {
                 <span className="step"></span>
                 <span className="label text-left">Paso 1 de 3</span>
               </a>
-            </li>            
+            </li>
           </ul>
         </div>
         <div className="card-body"></div>
