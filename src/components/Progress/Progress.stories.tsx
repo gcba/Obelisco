@@ -28,9 +28,11 @@ export const DesktopStepper = (): JSX.Element => {
             </li>
             <li className="completed">
               <a href="#!">
+                <b>
                 <span className="circle">2</span>
                 <span className="label">Segundo paso</span>
                 <span className="sublabel">Opcional</span>
+                </b>
               </a>
             </li>
             <li className="active">
@@ -43,7 +45,7 @@ export const DesktopStepper = (): JSX.Element => {
             <li className="active">
               <a href="#!">
                 <span className="circle">4</span>
-                <span className="label">Cuarto paso</span>
+                <span className="label">Último paso</span>
                 <span className="sublabel">Opcional</span>
               </a>
             </li>
@@ -55,7 +57,7 @@ export const DesktopStepper = (): JSX.Element => {
 };
 
 
-
+/*
 export const MobileStepper = (): JSX.Element => {
   return (
     <div className="container">
@@ -66,9 +68,50 @@ export const MobileStepper = (): JSX.Element => {
               <a href="#">
                 <span className="label text-left">Paso actual</span>
                 <span className="sublabel text-muted">Paso siguiente: Lorem ipsum</span>
+                <span className="step active"></span>
+                <span className="step"></span>
+                <span className="step"></span>
+                <span className="step"></span>
                 <span className="step"></span>
                 <span className="label text-left">Paso 1 de 3</span>
               </a>
+            </li>
+          </ul>
+        </div>
+        <div className="card-body"></div>
+        <div className="card-footer text-muted text-right">
+          <button className="btn btn-secondary">Anterior</button>
+          <button className="btn btn-primary">Siguiente</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+*/
+
+
+export const MobileStepper = (): JSX.Element => {
+  return (
+    <div className="container">
+      <div className="card content">
+        <div className="card-title">
+          <h3>Paso a paso</h3>
+        </div>
+        <div className="text-left card-header">
+          <ul className="stepper stepper-horizontal p-0">
+            <li className="completed">
+              <div>
+                <h4 className="step-title">Paso actual</h4>
+                <span className="step-next text-muted">Paso siguiente: Lorem ipsum</span>
+                <div className="steps">
+                  <span className="step active"></span>
+                  <span className="step"></span>
+                  <span className="step"></span>
+                  <span className="step"></span>
+                  <span className="step"></span>
+                </div>   
+                <p className="step-text">Paso 1 de 5</p>
+              </div>
             </li>
           </ul>
         </div>

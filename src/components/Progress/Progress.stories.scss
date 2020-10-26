@@ -39,11 +39,11 @@ ul.stepper {
 
 
 .stepper-horizontal li:not(:first-child).active:before {
-  background-color: rgb(203 203 203);
+  background-color: #E6EBF0;
 }
 
 .stepper-horizontal li:not(:first-child).active:after{
-  background-color: rgb(203 203 203);
+  background-color: #E6EBF0;
 }
 
 ul.stepper li a {
@@ -64,26 +64,30 @@ ul.stepper li a .circle {
   width: 2.75rem;
   height: 2.75rem;
   line-height: 2.7rem;
-  color: #fff;
+  color: #9EAAB8;
   text-align: center;
-  background: rgb(203 203 203);
+  background: #E6EBF0;
   border-radius: 50%;
 }
 
 ul.stepper li.completed a .circle {
+  color: #ffffff;
   background-color: #191919;
 }
 
 ul.stepper li.completed a .label,
 ul.stepper li.completed a .sublabel {
-  font-weight: 600;
   color: rgba(0, 0, 0, 0.87);
 }
 
-ul.stepper li a .label,
-ul.stepper li a .sublabel {
+ul.stepper li a .label {
   display: block;
-  color: rgba(0, 0, 0, 0.38);
+  color: #38485C;
+}
+
+ul.stepper li a .sublabel {
+  color: #505E70;
+  float: left;
 }
 
 .stepper-horizontal li a .label {
@@ -93,7 +97,7 @@ ul.stepper li a .sublabel {
 /////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////// MOBILE ////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////
-
+/*
 .content {
   width: 400px;
 }
@@ -133,6 +137,78 @@ li.completed a .step {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: #4285f4 !important;
+  border: 1px solid #191919;
+  background-color: transparent;
   float: left;
+  margin-right: 10px;
+}
+*/
+
+
+.content {
+  width: 400px;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: .25rem;
+}
+
+.card-title {
+  background-color: #E6EBF0;
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  border-bottom: 1px rgba(0, 0, 0, 0.125);
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, .03);
+  border-bottom: 1px rgba(0, 0, 0, 0.125);
+}
+
+.card-body {
+  height: 250px;
+}
+
+.card-footer {
+  padding: .75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px rgba(0, 0, 0, 0.125);
+}
+.step-title {
+  margin-bottom: 0;
+}
+
+.step-next {
+  font-size: 13px;
+}
+
+.step {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid #191919;
+  background-color: transparent;
+  float: left;
+  margin-top: 6px;
+  margin-right: 6px;
+}
+
+.step-text {
+  font-size: 13px;
+}
+
+.active {
+  background-color: #38485C;
 }
