@@ -104,7 +104,7 @@ export const MobileStepper = (): JSX.Element => {
                 <h4 className="step-title">Paso actual</h4>
                 <span className="step-next text-muted">Paso siguiente: Lorem ipsum</span>
                 <div className="steps">
-                  <span className="step active"></span>
+                  <span className="step-active"></span>
                   <span className="step"></span>
                   <span className="step"></span>
                   <span className="step"></span>

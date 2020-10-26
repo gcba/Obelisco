@@ -194,7 +194,7 @@ li.completed a .step {
   font-size: 13px;
 }
 
-.step {
+.steps .step {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
@@ -205,10 +205,18 @@ li.completed a .step {
   margin-right: 6px;
 }
 
+.step-active {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid #191919;
+  float: left;
+  margin-top: 6px;
+  margin-right: 6px;
+  background-color: #38485C;
+}
+
 .step-text {
   font-size: 13px;
 }
 
-.active {
-  background-color: #38485C;
-}
