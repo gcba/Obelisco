@@ -22,10 +22,14 @@
 }
 
 .card-link {
-  color: #38485c !important;
-  text-decoration: none !important;
-  font-weight: 400 !important;
-  line-height: 1.5 !important;
+  color: #38485c;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.card-link:focus {
+  box-shadow: 0 0 0 0.2rem #00568b;
 }
 
 .card .card-body {
