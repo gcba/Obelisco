@@ -22,31 +22,29 @@ export const DesktopStepper = (): JSX.Element => {
             <li className="completed">
               <a href="#!">
                 <span className="circle">1</span>
-                <span className="label">Primer paso</span>
-                <span className="sublabel">Opcional</span>
-              </a>
-            </li>
-            <li className="completed">
-              <a href="#!">
-                <b>
-                <span className="circle">2</span>
-                <span className="label">Segundo paso</span>
-                <span className="sublabel">Opcional</span>
-                </b>
+                <p className="label">Primer paso</p>
+                <p className="sublabel">Opcional</p>
               </a>
             </li>
             <li className="active">
+              <a href="#!">
+                <span className="circle">2</span>
+                <p className="label">Segundo paso</p>
+                <p className="sublabel">Opcional</p>
+              </a>
+            </li>
+            <li className="incomplete">
               <a href="#!">
                 <span className="circle">3</span>
-                <span className="label">Tercer paso</span>
-                <span className="sublabel">Opcional</span>
+                <p className="label">Tercer paso</p>
+                <p className="sublabel">Opcional</p>
               </a>
             </li>
-            <li className="active">
+            <li className="incomplete">
               <a href="#!">
                 <span className="circle">4</span>
-                <span className="label">Último paso</span>
-                <span className="sublabel">Opcional</span>
+                <p className="label">Cuarto paso</p>
+                <p className="sublabel">Opcional</p>
               </a>
             </li>
           </ul>
@@ -55,6 +53,7 @@ export const DesktopStepper = (): JSX.Element => {
     </div>
   );
 };
+
 
 
 /*
@@ -109,7 +108,7 @@ export const MobileStepper = (): JSX.Element => {
                   <span className="step"></span>
                   <span className="step"></span>
                   <span className="step"></span>
-                </div>   
+                </div>
                 <p className="step-text">Paso 1 de 5</p>
               </div>
             </li>

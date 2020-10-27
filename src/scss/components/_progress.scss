@@ -1,0 +1,223 @@
+/* === Variable and mixins overides === */
+
+
+/* === Custom variables and mixins === */
+
+
+/* === Bootstrap Import === */
+
+
+/* === Custom styles === */
+
+ul.stepper {
+  //padding: 0 1.5rem;
+  //padding: 1.5rem;
+  //margin: 1em -1.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  counter-reset: section;
+}
+
+.stepper-horizontal {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stepper-horizontal li {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+.stepper-horizontal li:not(:first-child):before {
+  content: "";
+  position: relative;
+  min-width: 16rem;
+  height: 0.25rem;
+  margin: 0.5rem -3rem 0 -5rem;
+  background-color: $grisulado-900;
+  z-index: -1;
+}
+
+.stepper-horizontal li:first-child:before {
+  background-color: $grisulado-900;
+}
+
+
+.stepper-horizontal li:not(:first-child).incomplete:before {
+  background-color: $grisulado-50;
+}
+
+ul.stepper li a {
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+ul.stepper li a .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.125rem;
+  color: $grisulado-300;
+
+  background: $grisulado-50;
+  border-radius: 50%;
+}
+
+ul.stepper li.completed a .circle,
+ul.stepper li.active a .circle {
+  background-color: $grisulado-900;
+  color: $white;
+}
+
+ul.stepper li a .label{
+  margin: 0.5rem 0 0 0;
+  font-size: 1.125rem;
+}
+
+ul.stepper li a .sublabel{
+  margin-top: 0.25rem 0 0 0;
+}
+
+ul.stepper li a .label,
+ul.stepper li a .sublabel {
+  color: $grisulado-900;
+  text-align: left;
+}
+
+ul.stepper li.active a .label,
+ul.stepper li.active a .sublabel {
+  font-weight: 600;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////// MOBILE ////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+/*
+.content {
+  width: 400px;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: .25rem;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, .03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-body {
+  height: 250px;
+}
+
+.card-footer {
+  padding: .75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+li.completed a .step {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid #191919;
+  background-color: transparent;
+  float: left;
+  margin-right: 10px;
+}
+*/
+
+
+.content {
+  width: 400px;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: .25rem;
+}
+
+.card-title {
+  background-color: #E6EBF0;
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  border-bottom: 1px rgba(0, 0, 0, 0.125);
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, .03);
+  border-bottom: 1px rgba(0, 0, 0, 0.125);
+}
+
+.card-body {
+  height: 250px;
+}
+
+.card-footer {
+  padding: .75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px rgba(0, 0, 0, 0.125);
+}
+.step-title {
+  margin-bottom: 0;
+}
+
+.step-next {
+  font-size: 13px;
+}
+
+.steps .step {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid #191919;
+  background-color: transparent;
+  float: left;
+  margin-top: 6px;
+  margin-right: 6px;
+}
+
+.step-active {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid #191919;
+  float: left;
+  margin-top: 6px;
+  margin-right: 6px;
+  background-color: $grisulado-900;
+}
+
+.step-text {
+  font-size: 13px;
+}
