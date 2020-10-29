@@ -17,14 +17,8 @@ $nav-link-hover-bg: $grisulado-50;
 $nav-pills-link-active-bg: $grisulado-900;
 $nav-link-hover-color: $grisulado-700;
 
-$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
-
-
-$icon-expand: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAAXnVPIAAAAPElEQVQ4EWNkwAEsPGL+I0ud2LGEEZkPYzPBGOTSowYwMDCihzapgTkMAhFr6gKFA3rYjKZE3KmD4nQAADIcCfkjs4flAAAAAElFTkSuQmCC');
-
-$icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAEKADAAQAAAABAAAABAAAAACC/WKKAAAAGElEQVQYGWO08Ij5z0ABYKJAL1jrwBsAAOG3AePub4ocAAAAAElFTkSuQmCC');
-
-
+//Este estilo es válido pero como no está la variable $lightBlue-700 en esta branch rompe. Cuando mergeemos la branch "colors" con master y hagamos rebase de esto descomentamos.
+//$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $lightBlue-700;
 
 /* === Custom variables and mixins === */
 
@@ -37,9 +31,9 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
 .nav-link {
   color: $grisulado-900;
   font-weight: $nav-link-font-weight;
-  @include border-radius($border-radius-container);
+  @include border-radius($border-radius-container); //la definición de esa variable está en _miscellaneous y es .5rem
 
-  &-header{
+  &-header {
     font-size: $nav-link-header-font-size;
     font-weight: $nav-link-header-font-weight;
   }
@@ -90,39 +84,38 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
 
 /* === Mobile styles === */
 
-.nav-mobile{
+.nav-mobile {
   @extend .nav;
   background-color: $nav-link-hover-bg;
 
-  &-inner{
+  &-inner {
     padding: $nav-mobile-inner-padding-y 0;
   }
 
-  .nav-item{
+  .nav-item {
     margin-bottom: 0;
 
-
-    .nav-link{
+    .nav-link {
       padding: $nav-link-padding-y $nav-link-padding-x + $nav-link-padding-x/4;
 
-      &-header{
+      &-header {
         border-radius: 0;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
 
-        &-main{
-          &_expand:after{
-            content: "";
+        &-main {
+          &_expand:after {
+            content: '';
             display: block;
             background: $icon-expand no-repeat center;
             width: 1rem;
             height: 1rem;
           }
 
-          &_collapse:after{
-            content: "";
+          &_collapse:after {
+            content: '';
             display: block;
             background: $icon-collapse no-repeat center;
             background-repeat: no-repeat;

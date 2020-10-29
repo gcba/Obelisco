@@ -136,64 +136,63 @@ export const MobileCollapsed = (): JSX.Element => (
 export const MobileExpanded = (): JSX.Element => (
   <nav className="nav-container">
     <ul className="nav-mobile flex-column">
-    <li className="nav-item">
-      <a className="nav-link nav-link-header nav-link-header-main_collapse" href="#">
-        Categorías
-      </a>
-
-
-      <ul className="nav-mobile nav-mobile-inner flex-column">
       <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
-          Locales y comercios
+        <a className="nav-link nav-link-header nav-link-header-main_collapse" href="#">
+          Categorías
         </a>
-        <ul className="nav flex-column">
+
+        <ul className="nav-mobile nav-mobile-inner flex-column">
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Local Indumentaria y calzado. (Actividades comerciales de venta).
+            <a className="nav-link nav-link-header" href="#">
+              Locales y comercios
             </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link active" href="#">
-              Locales gastronómicos: “para llevar/takeaway”
-            </a>
-            <ul className="nav nav-pills flex-column">
+            <ul className="nav flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Local Indumentaria y calzado. (Actividades comerciales de venta).
+                </a>
+              </li>
               <li className="nav-item">
                 <a className="nav-link active" href="#">
-                  Con local a la calle
+                  Locales gastronómicos: “para llevar/takeaway”
+                </a>
+                <ul className="nav nav-pills flex-column">
+                  <li className="nav-item">
+                    <a className="nav-link active" href="#">
+                      Con local a la calle
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      Food trucks
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Locales de óptica.
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Food trucks
+                  Comercial minorista (excluyendo indumentaria y calzado)
                 </a>
               </li>
             </ul>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Locales de óptica.
+            <a className="nav-link nav-link-header" href="#">
+              Actividades jurídicas
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
-              Comercial minorista (excluyendo indumentaria y calzado)
+            <a className="nav-link nav-link-header" href="#">
+              Otras actividades
             </a>
           </li>
         </ul>
       </li>
-      <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
-          Actividades jurídicas
-        </a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
-          Otras actividades
-        </a>
-      </li>
     </ul>
-    </li>
-  </ul>
-</nav>
+  </nav>
 );
