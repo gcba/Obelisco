@@ -12,7 +12,7 @@ export default {
 };
 
 export const Simple = (): JSX.Element => (
-  <div className="nav-container">
+  <nav className="nav-container">
     <ul className="nav flex-column">
       <li className="nav-item">
         <a className="nav-link" href="#">
@@ -35,11 +35,11 @@ export const Simple = (): JSX.Element => (
         </a>
       </li>
     </ul>
-  </div>
+  </nav>
 );
 
 export const ConFondo = (): JSX.Element => (
-  <div className="nav-container">
+  <nav className="nav-container">
     <ul className="nav nav-pills flex-column">
       <li className="nav-item">
         <a className="nav-link active" href="#">
@@ -62,11 +62,11 @@ export const ConFondo = (): JSX.Element => (
         </a>
       </li>
     </ul>
-  </div>
+  </nav>
 );
 
 export const Con2Niveles = (): JSX.Element => (
-  <div className="nav-container">
+  <nav className="nav-container">
     <ul className="nav flex-column">
       <li className="nav-item">
         <a className="nav-link active" href="#">
@@ -130,5 +130,5 @@ export const Con2Niveles = (): JSX.Element => (
         </a>
       </li>
     </ul>
-  </div>
+  </nav>
 );
