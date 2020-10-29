@@ -25,7 +25,7 @@ $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('inf
 .nav-link {
   color: $grisulado-900;
   font-weight: $nav-link-font-weight;
-  @include border-radius($border-radius-container);
+  @include border-radius($border-radius-container); //la definición de esa variable está en _miscellaneous y es .5rem
 
   &.active {
     color: $blue;
