@@ -15,7 +15,7 @@ export default {
 
 export const DesktopStepper = (): JSX.Element => {
   return (
-    <div className="container">
+    <div className="container d-none d-md-block">
       <div className="row">
         <div className="col-md-12">
           <ul className="stepper stepper-horizontal">
@@ -100,8 +100,8 @@ export const MobileStepper = (): JSX.Element => {
           <ul className="stepper stepper-horizontal p-0">
             <li className="completed">
               <div>
-                <h4 className="step-title">Paso actual</h4>
-                <span className="step-next text-muted">Paso siguiente: Lorem ipsum</span>
+                <h4 className="step-title">Nombre del paso</h4>
+                <span className="step-next text-muted">Paso siguiente: Nombre del paso 2</span>
                 <div className="steps">
                   <span className="step-active"></span>
                   <span className="step"></span>
@@ -123,3 +123,4 @@ export const MobileStepper = (): JSX.Element => {
     </div>
   );
 };
+// d-block d-md-none
