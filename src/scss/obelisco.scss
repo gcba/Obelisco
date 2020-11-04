@@ -37,8 +37,5 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/form';
 @import 'components/nav';
 @import 'components/table';
-<<<<<<< HEAD
 @import 'components/modal';
-=======
-@import 'components/progress';
->>>>>>> Corrección de estilos
+@import 'components/stepper';

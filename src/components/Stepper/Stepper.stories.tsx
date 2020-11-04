@@ -1,6 +1,6 @@
 // Base
 import React from 'react';
-import './Progress.stories.scss';
+import './Stepper.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -15,7 +15,7 @@ export default {
 
 export const DesktopStepper = (): JSX.Element => {
   return (
-    <div className="container d-none d-md-block">
+    <div className="stepper-container d-none d-md-block">
       <div className="row">
         <div className="col-md-12">
           <ul className="stepper stepper-horizontal">
@@ -91,12 +91,12 @@ export const MobileStepper = (): JSX.Element => {
 
 export const MobileStepper = (): JSX.Element => {
   return (
-    <div className="container">
-      <div className="card content">
-        <div className="card-title">
+    <div className="stepper-container">
+      <div className="stepper-card stepper-content">
+        <div className="stepper-card-title">
           <h3>Paso a paso</h3>
         </div>
-        <div className="text-left card-header">
+        <div className="text-left stepper-card-header">
           <ul className="stepper stepper-horizontal p-0">
             <li className="completed">
               <div>
@@ -114,8 +114,8 @@ export const MobileStepper = (): JSX.Element => {
             </li>
           </ul>
         </div>
-        <div className="card-body"></div>
-        <div className="card-footer text-muted text-right">
+        <div className="stepper-card-body"></div>
+        <div className="stepper-card-footer text-muted text-right">
           <button className="btn btn-secondary">Anterior</button>
           <button className="btn btn-primary">Siguiente</button>
         </div>
