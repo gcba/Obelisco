@@ -12,9 +12,7 @@ $nav-link-hover-bg: $grisulado-50;
 $nav-pills-link-active-bg: $grisulado-900;
 $nav-link-hover-color: $grisulado-700;
 
-
-//Este estilo es válido pero como no está la variable $lightBlue-700 en esta branch rompe. Cuando mergeemos la branch "colors" con master y hagamos rebase de esto descomentamos.
-//$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $lightBlue-700;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width theme-color-level('info', 3);
 
 /* === Custom variables and mixins === */
 
@@ -27,7 +25,7 @@ $nav-link-hover-color: $grisulado-700;
 .nav-link {
   color: $grisulado-900;
   font-weight: $nav-link-font-weight;
-  @include border-radius($border-radius-container); //la definición de esa variable está en _miscellaneous y es .5rem
+  @include border-radius($border-radius-container);
 
   &.active {
     color: $blue;
