@@ -1,17 +1,30 @@
 /* === Variable and mixins overides === */
 
-$breadcrumb-divider: quote('>');
+$breadcrumb-divider: url('data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE2IDE2Ij4KPHBhdGggZmlsbD0iIzM4NDg1QyIgZD0iTTUuNSwxNS4xTDEyLjYsOEw1LjUsMC45TDMuNCwzLjFMOC4zLDhsLTQuOSw0LjlMNS41LDE1LjF6Ii8+Cjwvc3ZnPgo=');
+$breadcrimb-divider-width: 1.5rem;
 $breadcrumb-bg: none;
+$breadcrumb-item-padding: 0.75rem;
 
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
 
-@import '../../../node_modules/bootstrap/scss/breadcrumb';
+@import '~bootstrap/scss/breadcrumb';
 
 /* === Custom styles === */
 
-.breadcrumb a {
-  color: $grisulado-900;
+.breadcrumb .breadcrumb-item {
+  a {
+    color: $link-color;
+  }
+
+  &:before {
+    width: $breadcrimb-divider-width;
+  }
 }
-//pendiente revisar como agregarle el icono de la casa
+
+@include media-breakpoint-down(md) {
+  .breadcrumb .breadcrumb-item:not(:first-child):not(:last-child) {
+    display: none;
+  }
+}
