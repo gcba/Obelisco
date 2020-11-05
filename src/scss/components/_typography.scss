@@ -1,3 +1,15 @@
+/* === Custom variables and mixins === */
+
+$text-muted: $grisulado-700;
+
+// Links
+$link-color: theme-color-level('info', 0);
+$link-hover-color: theme-color-level('info', 2);
+$link-decoration: underline;
+$link-hover-decoration: underline;
+
+$right-arrow-icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMDA3YmM3IiBkPSJNMTEuMjkzIDE3LjI5M0wxMi43MDcgMTguNzA3IDE5LjQxNCAxMiAxMi43MDcgNS4yOTMgMTEuMjkzIDYuNzA3IDE1LjU4NiAxMSA2IDExIDYgMTMgMTUuNTg2IDEzeiIvPjwvc3ZnPg==');
+
 /* === Custom styles === */
 
 h1,
@@ -7,8 +19,16 @@ h2,
   font-weight: $large-headings-font-weight;
 }
 
-// Links
-$link-color: theme-color-level('info', 0);
-$link-hover-color: theme-color-level('info', 2);
-$link-decoration: underline;
-$link-hover-decoration: underline;
+.link-arrow {
+  &:after {
+    content: $right-arrow-icon;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: spaceUnits(1);
+    transition: $transition-base;
+  }
+
+  &:hover:after {
+    margin-left: spaceUnits(2);
+  }
+}
