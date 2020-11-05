@@ -18,33 +18,33 @@ export const DesktopStepper = (): JSX.Element => {
     <div className="stepper-container d-none d-md-block">
       <div className="row">
         <div className="col-md-12">
-          <ul className="stepper stepper-horizontal">
+          <ul className="stepper">
             <li className="completed">
               <a href="#!">
-                <span className="circle">1</span>
-                <p className="label">Primer paso</p>
-                <p className="sublabel">Opcional</p>
+                <span className="stepper-circle">1</span>
+                <p className="stepper-label">Primer paso</p>
+                <p className="stepper-sublabel">Opcional</p>
               </a>
             </li>
             <li className="active">
               <a href="#!">
-                <span className="circle">2</span>
-                <p className="label">Segundo paso</p>
-                <p className="sublabel">Opcional</p>
+                <span className="stepper-circle">2</span>
+                <p className="stepper-label">Segundo paso</p>
+                <p className="stepper-sublabel">Opcional</p>
               </a>
             </li>
-            <li className="incomplete">
+            <li>
               <a href="#!">
-                <span className="circle">3</span>
-                <p className="label">Tercer paso</p>
-                <p className="sublabel">Opcional</p>
+                <span className="stepper-circle">3</span>
+                <p className="stepper-label">Tercer paso</p>
+                <p className="stepper-sublabel">Opcional</p>
               </a>
             </li>
-            <li className="incomplete">
+            <li>
               <a href="#!">
-                <span className="circle">4</span>
-                <p className="label">Cuarto paso</p>
-                <p className="sublabel">Opcional</p>
+                <span className="stepper-circle">4</span>
+                <p className="stepper-label">Cuarto paso</p>
+                <p className="stepper-sublabel">Opcional</p>
               </a>
             </li>
           </ul>
@@ -54,25 +54,23 @@ export const DesktopStepper = (): JSX.Element => {
   );
 };
 
-
-
 /*
 export const MobileStepper = (): JSX.Element => {
   return (
     <div className="container">
       <div className="card content">
         <div className="text-left card-header">
-          <ul className="stepper stepper-horizontal p-0">
+          <ul className="stepper p-0">
             <li className="completed">
               <a href="#">
-                <span className="label text-left">Paso actual</span>
-                <span className="sublabel text-muted">Paso siguiente: Lorem ipsum</span>
+                <span className="stepper-label text-left">Paso actual</span>
+                <span className="stepper-sublabel text-muted">Paso siguiente: Lorem ipsum</span>
                 <span className="step active"></span>
                 <span className="step"></span>
                 <span className="step"></span>
                 <span className="step"></span>
                 <span className="step"></span>
-                <span className="label text-left">Paso 1 de 3</span>
+                <span className="stepper-label text-left">Paso 1 de 3</span>
               </a>
             </li>
           </ul>
@@ -88,7 +86,6 @@ export const MobileStepper = (): JSX.Element => {
 };
 */
 
-
 export const MobileStepper = (): JSX.Element => {
   return (
     <div className="stepper-container">
@@ -97,7 +94,7 @@ export const MobileStepper = (): JSX.Element => {
           <h3>Paso a paso</h3>
         </div>
         <div className="text-left stepper-card-header">
-          <ul className="stepper stepper-horizontal p-0">
+          <ul className="stepper p-0">
             <li className="completed">
               <div>
                 <h4 className="step-title">Nombre del paso</h4>

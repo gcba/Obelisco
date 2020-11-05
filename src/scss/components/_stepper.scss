@@ -1,127 +1,87 @@
 /* === Variable and mixins overides === */
 
+$stepper-circle-size: 3rem;
+
+$stepper-default-color: $grisulado-50;
+$stepper-active-color: $grisulado-900;
+$stepper-circle-color: $grisulado-300;
+
+$stepper-line-height: 0.25rem;
 
 /* === Custom variables and mixins === */
 
-
 /* === Bootstrap Import === */
-
 
 /* === Custom styles === */
 
 ul.stepper {
-  overflow-x: hidden;
-  overflow-y: auto;
-  counter-reset: section;  
-    li a {
+  counter-reset: section;
+  display: flex;
+  @extend .list-unstyled;
+
+  li {
+    position: relative;
+
+    &:not(:last-child) {
+      flex-grow: 1;
+    }
+
+    &:not(:last-child):before {
+      content: '';
+      position: absolute;
+      background-color: $stepper-default-color;
+      z-index: -1;
+      width: 100%;
+      height: $stepper-line-height;
+      top: $stepper-circle-size / 2 - $stepper-line-height / 2;
+      left: $stepper-circle-size / 2;
+    }
+
+    a {
       text-decoration: none;
-      &:hover{
+      color: $body-color;
+
+      &:hover {
         text-decoration: none;
       }
+
+      .stepper-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: $stepper-circle-size;
+        height: $stepper-circle-size;
+        font-size: 1.125rem;
+        color: $stepper-circle-color;
+
+        background: $stepper-default-color;
+        border-radius: 50%;
+      }
+
+      .stepper-label {
+        margin: 0.5rem 0 0 0;
+        font-size: 1.125rem;
+      }
+
+      .stepper-sublabel {
+        margin-top: 0.25rem 0 0 0;
+        font-weight: 600;
+      }
     }
-    & li a .circle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    
-      width: 3rem;
-      height: 3rem;
-      font-size: 1.125rem;
-      color: $grisulado-300;
-    
-      background: $grisulado-50;
-      border-radius: 50%;
+
+    &.completed,
+    &.active {
+      a .stepper-circle {
+        background-color: $stepper-active-color;
+        color: $white;
+      }
     }
-    & li.completed a .circle,
-      li.active    a .circle {
-      background-color: $grisulado-900;
-      color: $white;
+
+    &.completed:before {
+      background-color: $stepper-active-color;
     }
-    & li a .label {
-      margin: 0.5rem 0 0 0;
-      font-size: 1.125rem;
-    }
-    & li a .sublabel {
-      margin-top: 0.25rem 0 0 0;
-    }
-}
-
-.stepper-horizontal {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.stepper-horizontal li {
-  position: relative;
-  display: flex;
-  align-items: baseline;
-}
-
-.stepper-horizontal li:not(:first-child):before {
-  content: "";
-  position: relative;
-  min-width: 16rem;
-  height: 0.25rem;
-  margin: 0.5rem -3rem 0 -5rem;
-  background-color: $grisulado-900;
-  z-index: -1;
-}
-
-.stepper-horizontal li:first-child:before {
-  background-color: $grisulado-900;
-}
-
-
-.stepper-horizontal li:not(:first-child).incomplete:before {
-  background-color: $grisulado-50;
-}
-
-/*ul.stepper li a {
-  text-decoration: none;
-  &:hover{
-    text-decoration: none;
   }
-}
-
-ul.stepper li a .circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.125rem;
-  color: $grisulado-300;
-
-  background: $grisulado-50;
-  border-radius: 50%;
-}
-
-ul.stepper li.completed a .circle,
-ul.stepper li.active a .circle {
-  background-color: $grisulado-900;
-  color: $white;
-}
-
-ul.stepper li a .label{
-  margin: 0.5rem 0 0 0;
-  font-size: 1.125rem;
-}
-
-ul.stepper li a .sublabel{
-  margin-top: 0.25rem 0 0 0;
-}*/
-
-ul.stepper li a .label,
-ul.stepper li a .sublabel {
-  color: $grisulado-900;
-  text-align: left;
-}
-
-ul.stepper li.active a .label,
-ul.stepper li.active a .sublabel {
-  font-weight: 600;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -140,20 +100,20 @@ ul.stepper li.active a .sublabel {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 .stepper-card-title {
-  background-color: #E6EBF0;
-  padding: .75rem 1.25rem;
+  background-color: #e6ebf0;
+  padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   border-bottom: 1px rgba(0, 0, 0, 0.125);
 }
 
 .stepper-card-header {
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, .03);
+  background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px rgba(0, 0, 0, 0.125);
 }
 
@@ -162,7 +122,7 @@ ul.stepper li.active a .sublabel {
 }
 
 .stepper-card-footer {
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px rgba(0, 0, 0, 0.125);
 }
