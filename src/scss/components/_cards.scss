@@ -1,83 +1,79 @@
+/* === Variable and mixins overides === */
+
+$card-border-radius: $border-radius-container;
+$card-spacer-y: 1rem;
+$card-spacer-x: 1.5rem;
+
+$card-subtitle-font-size: 1.1875rem;
+$card-subtitle-font-weight: 400;
+
+$card-cap-color: $text-muted;
+$card-cap-bg: initial;
+
+$card-border-width: 0;
+$card-footer-border-width: 1px;
+$card-shadow-color: rgba($grisulado-900, 0.3);
+$card-box-shadow: 0px 1px 3px $card-shadow-color;
+$card-box-hover-shadow: 0px 0px 24px $card-shadow-color;
+
+$card-focus-width: 0.25rem;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+@import '~bootstrap/scss/card';
+
+/* === Custom styles === */
+
 .card {
-  margin: 5px;
-  position: relative;
-  display: block;
-  min-width: 0;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.5rem;
-  width: auto;
-  -webkit-box-shadow: 5px 5px 5px -2px rgba(245, 242, 245, 0.73);
-  -moz-box-shadow: 5px 5px 5px -2px rgba(245, 242, 245, 0.73);
-  box-shadow: 5px 5px 5px -2px rgba(245, 242, 245, 0.73);
+  box-shadow: $card-box-shadow;
+  transition: $transition-base;
+
+  .card-title {
+    margin-bottom: 0;
+  }
+
+  .card-subtitle {
+    font-size: $card-subtitle-font-size;
+    font-weight: $card-subtitle-font-weight;
+    margin-top: 0;
+  }
+
+  .card-text {
+    margin-top: $card-spacer-y;
+  }
+
+  .card-footer {
+    border-top-width: $card-footer-border-width;
+    padding: $card-spacer-y 0 $card-spacer-x;
+    margin: 0 $card-spacer-x;
+  }
+
+  &.card-simple {
+    box-shadow: none;
+
+    .card-body {
+      padding: 0;
+    }
+  }
 }
 
-.card:hover {
-  color: #38485c;
-  text-decoration: none;
-  background-color: #dfe7f0;
-  font-weight: 400;
-  line-height: 1.5;
-}
+a.card,
+button.card {
+  text-align: left;
+  color: $body-color;
+  padding: 0;
+  margin: 0;
 
-.card-link {
-  color: #38485c;
-  text-decoration: none;
-  font-weight: 400;
-  line-height: 1.5;
-}
+  @include hover() {
+    text-decoration: none;
+    box-shadow: $card-box-hover-shadow;
+  }
 
-.card-link:focus {
-  box-shadow: 0 0 0 0.2rem #00568b;
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 $card-focus-width theme-color-level('info', 2);
+  }
 }
-
-.card .card-body {
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 1px;
-  padding: 1.25rem;
-}
-
-.card-body-content {
-  padding: 10px;
-}
-
-.card .card-footer {
-  margin: 1.25rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-  text-align: right;
-  margin-top: 0;
-}
-
-.subcontent {
-  display: flex;
-  float: right;
-}
-
-.card-img {
-  height: 190px;
-  width: 100%;
-  display: block;
-}
-
-.card-img-top {
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-}
-
-//scss cards futuras
-/*
-.card-link-btn{
-  color: #38485c;
-  text-decoration: underline;
-  display: block;
-}
-
-.card-overline{
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  font-size: 10px;
-}
-*/
