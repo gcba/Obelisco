@@ -7,7 +7,12 @@ $nav-pills-link-active-font-weight: 400;
 $nav-link-padding-y: 0.75rem;
 $nav-link-padding-x: 1rem;
 $nav-link-disabled-color: $grisulado-300;
-$nav-link-hover-bg: $grisulado-10;
+$nav-link-hover-bg: $grisulado-50;
+
+$nav-pills-link-active-bg: $grisulado-900;
+$nav-link-hover-color: $grisulado-700;
+
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width theme-color-level('info', 3);
 
 /* === Custom variables and mixins === */
 
@@ -29,6 +34,7 @@ $nav-link-hover-bg: $grisulado-10;
 
   @include hover() {
     background-color: $nav-link-hover-bg;
+    color: $nav-link-hover-color;
   }
 
   &:focus,
@@ -44,6 +50,7 @@ $nav-link-hover-bg: $grisulado-10;
 
     &.active {
       font-weight: $nav-pills-link-active-font-weight;
+      background-color: $nav-pills-link-active-bg;
     }
   }
 }
