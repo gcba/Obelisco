@@ -12,7 +12,7 @@ Fue creado para reemplazar [BAstrap](https://github.com/gcba/bastrap).
 Obelisco está en proceso de desarrollo, por lo que **todavía no se puede utilizar**.
 
 Si bien hay un [paquete publicado en npm](https://www.npmjs.com/package/@gcba/obelisco), solo tiene algunos elementos y componentes.
-El lanzamiento oficial de la primer versión BETA, está planificado para fines de Septiembre 2020.
+El lanzamiento oficial de la primer versión BETA, está planificado para fines de Noviembre 2020.
 
 ## Desarrollo
 
