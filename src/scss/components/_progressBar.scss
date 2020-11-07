@@ -1,0 +1,100 @@
+/* === Variable and mixins overides === */
+
+$progress-font-color: $grisulado-300;
+$progress-title-margin: 0.5rem;
+$progress-subtitle-size: 0.813rem;
+
+$progress-default-color: $grisulado-50;
+$progress-line-width: 0.125rem;
+
+$progress-circle-size: 0.5rem;
+$progress-circle-active-size: 1rem;
+
+$progress-padding-left: 2.75rem;
+
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+/* === Custom styles === */
+.progress {
+  @extend .list-unstyled;
+  margin-bottom: 0;
+
+  &-item,
+  &-link{
+    padding-left: $progress-padding-left;
+  }
+
+  &-item{
+  color: $progress-font-color;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-bottom: 8px;
+
+    &:before {
+      content:'';
+      position: absolute;
+      background-color: $progress-default-color;
+      width: $progress-circle-size;
+      height: $progress-circle-size;
+      border-radius: 50%;
+      left: $progress-circle-size / 2;
+      top: $font-size-base /2;
+    }
+
+    &:not(:last-child):after{
+      content: '';
+      position: absolute;
+      background-color: $progress-default-color;
+      z-index: -1;
+      width: $progress-line-width;
+      height: 100%;
+      left: $progress-circle-active-size / 2 - $progress-line-width / 2;
+      top: $progress-circle-size / 2 + $font-size-base / 2;
+    }
+  }
+
+
+  &-active {
+    .progress-title{
+      font-weight: $headings-font-weight;
+    }
+
+    .progress-title, .progress-subtitle{
+      color: $body-color;
+    }
+
+    &:before{
+      top: $line-height-base / 2 - $font-size-base / 2;
+      width: $progress-circle-active-size;
+      height: $progress-circle-active-size;
+      left: 0;
+    }
+
+    &:not(:last-child):after{
+      background: linear-gradient(0deg, $progress-default-color 50%, $body-color 50%);
+    }
+  }
+
+  &-active,
+  &-completed{
+    &:before,
+    &:not(:last-child):after{
+      background-color: $body-color;
+    }
+  }
+
+  &-title{
+    margin-bottom: $progress-title-margin;
+  }
+
+  &-subtitle{
+    font-size: $progress-subtitle-size;
+    margin-bottom: $progress-title-margin;
+  }
+
+}
