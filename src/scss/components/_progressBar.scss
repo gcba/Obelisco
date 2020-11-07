@@ -1,16 +1,15 @@
 /* === Variable and mixins overides === */
 
-$progress-font-color: $grisulado-300;
-$progress-title-margin: 0.5rem;
+$progress-text-spacing: 0.5rem;
 $progress-subtitle-size: 0.813rem;
-
-$progress-default-color: $grisulado-50;
+$progress-padding-left: 2.75rem;
 $progress-line-width: 0.125rem;
 
 $progress-circle-size: 0.5rem;
 $progress-circle-active-size: 1rem;
 
-$progress-padding-left: 2.75rem;
+$progress-font-color: $grisulado-300;
+$progress-default-color: $grisulado-50;
 
 
 /* === Custom variables and mixins === */
@@ -33,7 +32,7 @@ $progress-padding-left: 2.75rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-bottom: 8px;
+  padding-bottom: $progress-text-spacing;
 
     &:before {
       content:'';
@@ -89,12 +88,12 @@ $progress-padding-left: 2.75rem;
   }
 
   &-title{
-    margin-bottom: $progress-title-margin;
+    margin-bottom: $progress-text-spacing;
   }
 
   &-subtitle{
     font-size: $progress-subtitle-size;
-    margin-bottom: $progress-title-margin;
+    margin-bottom: $progress-text-spacing;
   }
 
 }
