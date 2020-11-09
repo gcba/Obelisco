@@ -89,16 +89,12 @@ export const MobileStepper = (): JSX.Element => {
 export const MobileStepper = (): JSX.Element => {
   return (
     <div className="stepper-container">
-      <div className="stepper-card stepper-content">
-        <div className="stepper-card-title">
-          <h3>Paso a paso</h3>
-        </div>
+      <div className="stepper-content">
         <div className="text-left stepper-card-header">
-          <ul className="stepper p-0">
-            <li className="completed">
-              <div>
-                <h4 className="step-title">Nombre del paso</h4>
-                <span className="step-next text-muted">Paso siguiente: Nombre del paso 2</span>
+          <ul className="stepper mb-0">
+            <li className="completed">              
+                <p className="step-title">Nombre del paso</p>
+                <p className="step-next text-muted">Paso siguiente: Nombre del paso 2</p>
                 <div className="steps">
                   <span className="step-active"></span>
                   <span className="step"></span>
@@ -106,18 +102,12 @@ export const MobileStepper = (): JSX.Element => {
                   <span className="step"></span>
                   <span className="step"></span>
                 </div>
-                <p className="step-text">Paso 1 de 5</p>
-              </div>
+                <p className="step-text">Paso 1 de 5</p>              
             </li>
           </ul>
         </div>
         <div className="stepper-card-body"></div>
-        <div className="stepper-card-footer text-muted text-right">
-          <button className="btn btn-secondary">Anterior</button>
-          <button className="btn btn-primary">Siguiente</button>
-        </div>
       </div>
     </div>
   );
 };
-// d-block d-md-none

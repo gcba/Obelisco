@@ -8,6 +8,9 @@ $stepper-circle-color: $grisulado-300;
 
 $stepper-line-height: 0.25rem;
 
+$stepper-mobile-mt: 6px;
+$stepper-mobile-mr: 6px;
+
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
@@ -84,30 +87,13 @@ ul.stepper {
   }
 }
 
-/////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////// MOBILE ////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////
+/* === Mobile styles === */
 
 .stepper-content {
   width: 360px;
-}
-
-.stepper-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word;
   background-color: #fff;
-  background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-}
-
-.stepper-card-title {
-  background-color: #e6ebf0;
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
-  border-bottom: 1px rgba(0, 0, 0, 0.125);
 }
 
 .stepper-card-header {
@@ -121,18 +107,14 @@ ul.stepper {
   height: 250px;
 }
 
-.stepper-card-footer {
-  padding: 0.75rem 1.25rem;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px rgba(0, 0, 0, 0.125);
-}
-
 .step-title {
-  margin-bottom: 0;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
 }
 
-.step-next {
+.step-next, .step-text {
   font-size: 13px;
+  margin: 0 0 0.5rem 0;
 }
 
 .steps .step {
@@ -142,8 +124,8 @@ ul.stepper {
   border: 1px solid #191919;
   background-color: transparent;
   float: left;
-  margin-top: 6px;
-  margin-right: 6px;
+  margin-top: $stepper-mobile-mt;
+  margin-right: $stepper-mobile-mr;
 }
 
 .step-active {
@@ -152,11 +134,7 @@ ul.stepper {
   border-radius: 50%;
   border: 1px solid #191919;
   float: left;
-  margin-top: 6px;
-  margin-right: 6px;
+  margin-top: $stepper-mobile-mt;
+  margin-right: $stepper-mobile-mr;
   background-color: $grisulado-900;
-}
-
-.step-text {
-  font-size: 13px;
 }
