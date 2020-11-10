@@ -9,104 +9,111 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Barra de Progreso',
+  title: 'Componentes|Pasos de un formulario',
   decorators: [withA11y]
 };
 
-export const DesktopStepper = (): JSX.Element => {
+export const Desktop = (): JSX.Element => {
   return (
-    <div className="stepper-container d-none d-md-block">
-      <div className="row">
-        <div className="col-md-12">
-          <ul className="stepper">
-            <li className="completed">
-              <a href="#!">
-                <span className="stepper-circle">1</span>
-                <p className="stepper-label">Primer paso</p>
-                <p className="stepper-sublabel">Opcional</p>
-              </a>
-            </li>
-            <li className="active">
-              <a href="#!">
-                <span className="stepper-circle">2</span>
-                <p className="stepper-label">Segundo paso</p>
-                <p className="stepper-sublabel">Opcional</p>
-              </a>
-            </li>
-            <li>
-              <a href="#!">
-                <span className="stepper-circle">3</span>
-                <p className="stepper-label">Tercer paso</p>
-                <p className="stepper-sublabel">Opcional</p>
-              </a>
-            </li>
-            <li>
-              <a href="#!">
-                <span className="stepper-circle">4</span>
-                <p className="stepper-label">Cuarto paso</p>
-                <p className="stepper-sublabel">Opcional</p>
-              </a>
-            </li>
-          </ul>
+    <div className="stepper-wrapper-desktop">
+      <div className="stepper">
+        <ul className="stepper-desktop">
+          <li className="completed">
+            <a href="#!">
+              <div className="step-circle">1</div>
+              <p className="step-label">Primer paso</p>
+              <p className="step-sublabel">Opcional</p>
+            </a>
+          </li>
+          <li className="active">
+            <div className="step-circle">2</div>
+            <p className="step-label">Segundo paso</p>
+            <p className="step-sublabel">Opcional</p>
+          </li>
+          <li>
+            <div className="step-circle">3</div>
+            <p className="step-label">Tercer paso</p>
+            <p className="step-sublabel">Opcional</p>
+          </li>
+          <li>
+            <div className="step-circle">4</div>
+            <p className="step-label">Cuarto paso</p>
+            <p className="step-sublabel">Opcional</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export const Mobile = (): JSX.Element => {
+  return (
+    <div className="stepper-wrapper-mobile">
+      <div className="stepper">
+        <div className="stepper-mobile">
+          <p className="step-title">Nombre del paso</p>
+          <p className="step-next">Paso siguiente: Nombre del paso 2</p>
+          <div className="steps">
+            <div className="step active"></div>
+            <div className="step"></div>
+            <div className="step"></div>
+            <div className="step"></div>
+            <div className="step"></div>
+          </div>
+          <span className="step-text">Paso 1 de 5</span>
         </div>
       </div>
     </div>
   );
 };
 
-/*
-export const MobileStepper = (): JSX.Element => {
+export const DesktopYMobile = (): JSX.Element => {
   return (
-    <div className="container">
-      <div className="card content">
-        <div className="text-left card-header">
-          <ul className="stepper p-0">
-            <li className="completed">
-              <a href="#">
-                <span className="stepper-label text-left">Paso actual</span>
-                <span className="stepper-sublabel text-muted">Paso siguiente: Lorem ipsum</span>
-                <span className="step active"></span>
-                <span className="step"></span>
-                <span className="step"></span>
-                <span className="step"></span>
-                <span className="step"></span>
-                <span className="stepper-label text-left">Paso 1 de 3</span>
-              </a>
-            </li>
-          </ul>
+    <div className="stepper-wrapper-desktop">
+      <div className="stepper">
+        <div className="row d-none d-md-flex">
+          <div className="col">
+            <ul className="stepper-desktop">
+              <li className="completed">
+                <a href="#!">
+                  <div className="step-circle">1</div>
+                  <p className="step-label">Primer paso</p>
+                  <p className="step-sublabel">Opcional</p>
+                </a>
+              </li>
+              <li className="completed">
+                <a href="#!">
+                  <div className="step-circle">2</div>
+                  <p className="step-label">Segundo paso</p>
+                  <p className="step-sublabel">Opcional</p>
+                </a>
+              </li>
+              <li className="completed">
+                <a href="#!">
+                  <div className="step-circle">3</div>
+                  <p className="step-label">Tercer paso</p>
+                  <p className="step-sublabel">Opcional</p>
+                </a>
+              </li>
+              <li className="active">
+                <div className="step-circle">4</div>
+                <p className="step-label">Cuarto paso</p>
+                <p className="step-sublabel">Opcional</p>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="card-body"></div>
-        <div className="card-footer text-muted text-right">
-          <button className="btn btn-secondary">Anterior</button>
-          <button className="btn btn-primary">Siguiente</button>
+        <div className="stepper-mobile d-md-none">
+          <p className="step-title">Cuarto paso</p>
+          <p className="step-next">Último paso</p>
+          <div className="steps">
+            <div className="step active"></div>
+            <div className="step active"></div>
+            <div className="step active"></div>
+            <div className="step active"></div>
+          </div>
+          <span className="step-text">Paso 4 de 4</span>
         </div>
-      </div>
-    </div>
-  );
-};
-*/
-
-export const MobileStepper = (): JSX.Element => {
-  return (
-    <div className="stepper-container">
-      <div className="stepper-content">
-        <div className="text-left stepper-card-header">
-          <ul className="stepper mb-0">
-            <li className="completed">              
-                <p className="step-title">Nombre del paso</p>
-                <p className="step-next text-muted">Paso siguiente: Nombre del paso 2</p>
-                <div className="steps">
-                  <span className="step-active"></span>
-                  <span className="step"></span>
-                  <span className="step"></span>
-                  <span className="step"></span>
-                  <span className="step"></span>
-                </div>
-                <p className="step-text">Paso 1 de 5</p>              
-            </li>
-          </ul>
-        </div>
-        <div className="stepper-card-body"></div>
       </div>
     </div>
   );

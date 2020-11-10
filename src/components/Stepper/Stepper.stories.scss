@@ -1,3 +1,7 @@
-.stepper-container {
-  min-width: 800px;
+.stepper-wrapper-desktop {
+  width: 800px;
+  max-width: 100%;
+}
+.stepper-wrapper-mobile {
+  width: 360px;
 }

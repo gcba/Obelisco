@@ -1,6 +1,7 @@
 /* === Variable and mixins overides === */
 
-$stepper-circle-size: 3rem;
+$stepper-circle-desktop: 3rem;
+$stepper-circle-mobile: 0.625rem;
 
 $stepper-default-color: $grisulado-50;
 $stepper-active-color: $grisulado-900;
@@ -17,44 +18,46 @@ $stepper-mobile-mr: 6px;
 
 /* === Custom styles === */
 
-ul.stepper {
-  counter-reset: section;
-  display: flex;
-  @extend .list-unstyled;
+.stepper {
+  ul.stepper-desktop {
+    counter-reset: section;
+    display: flex;
+    @extend .list-unstyled;
 
-  li {
-    position: relative;
+    li {
+      position: relative;
 
-    &:not(:last-child) {
-      flex-grow: 1;
-    }
-
-    &:not(:last-child):before {
-      content: '';
-      position: absolute;
-      background-color: $stepper-default-color;
-      z-index: -1;
-      width: 100%;
-      height: $stepper-line-height;
-      top: $stepper-circle-size / 2 - $stepper-line-height / 2;
-      left: $stepper-circle-size / 2;
-    }
-
-    a {
-      text-decoration: none;
-      color: $body-color;
-
-      &:hover {
-        text-decoration: none;
+      &:not(:last-child) {
+        flex-grow: 1;
       }
 
-      .stepper-circle {
+      &:not(:last-child):before {
+        content: '';
+        position: absolute;
+        background-color: $stepper-default-color;
+        z-index: -1;
+        width: 100%;
+        height: $stepper-line-height;
+        top: $stepper-circle-desktop / 2 - $stepper-line-height / 2;
+        left: $stepper-circle-desktop / 2;
+      }
+
+      a {
+        text-decoration: none;
+        color: $body-color;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .step-circle {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        width: $stepper-circle-size;
-        height: $stepper-circle-size;
+        width: $stepper-circle-desktop;
+        height: $stepper-circle-desktop;
         font-size: 1.125rem;
         color: $stepper-circle-color;
 
@@ -62,79 +65,69 @@ ul.stepper {
         border-radius: 50%;
       }
 
-      .stepper-label {
+      .step-label {
         margin: 0.5rem 0 0 0;
         font-size: 1.125rem;
       }
 
-      .stepper-sublabel {
+      .step-sublabel {
         margin-top: 0.25rem 0 0 0;
         font-weight: 600;
       }
-    }
 
-    &.completed,
-    &.active {
-      a .stepper-circle {
+      &.completed,
+      &.active {
+        .step-circle {
+          background-color: $stepper-active-color;
+          color: $white;
+        }
+      }
+
+      &.completed:before {
         background-color: $stepper-active-color;
-        color: $white;
       }
     }
+  }
 
-    &.completed:before {
-      background-color: $stepper-active-color;
+  /* === Mobile styles === */
+  .stepper-mobile {
+    padding: 1rem 0.75rem;
+    margin-bottom: 0;
+    background-color: $grisulado-10;
+    border-bottom: 1px rgba(0, 0, 0, 0.125);
+
+    .step-title {
+      @extend .h4;
+    }
+
+    .step-next {
+      @extend .text-muted, small;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-text {
+      @extend small;
+      display: inline-block;
+    }
+
+    .steps {
+      display: inline-block;
+      margin-right: 0.5rem;
+
+      .step {
+        width: $stepper-circle-mobile;
+        height: $stepper-circle-mobile;
+        border-radius: 100%;
+        border: 1px solid $stepper-active-color;
+        background-color: $stepper-default-color;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: $stepper-circle-mobile / 2;
+
+        &.active {
+          background-color: $stepper-active-color;
+        }
+      }
     }
   }
-}
-
-/* === Mobile styles === */
-
-.stepper-content {
-  width: 360px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-
-.stepper-card-header {
-  padding: 0.75rem 1.25rem;
-  margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px rgba(0, 0, 0, 0.125);
-}
-
-.stepper-card-body {
-  height: 250px;
-}
-
-.step-title {
-  margin: 0 0 0.5rem 0;
-  font-weight: 600;
-}
-
-.step-next, .step-text {
-  font-size: 13px;
-  margin: 0 0 0.5rem 0;
-}
-
-.steps .step {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  border: 1px solid #191919;
-  background-color: transparent;
-  float: left;
-  margin-top: $stepper-mobile-mt;
-  margin-right: $stepper-mobile-mr;
-}
-
-.step-active {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  border: 1px solid #191919;
-  float: left;
-  margin-top: $stepper-mobile-mt;
-  margin-right: $stepper-mobile-mr;
-  background-color: $grisulado-900;
 }
