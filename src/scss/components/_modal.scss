@@ -1,0 +1,37 @@
+/* === Variable and mixins overides === */
+
+$modal-header-padding-x: 1.5rem; // 24px
+$modal-header-padding: $modal-header-padding-y $modal-header-padding-x;
+$modal-header-border-color: $grisulado-100;
+
+// Whitespace on modal body content
+$modal-inner-padding: 1.5rem; // 24px
+
+$modal-footer-divisor: $modal-inner-padding * -1;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+@import "../../../node_modules/bootstrap/scss/modal";
+
+/* === Custom styles === */
+
+.form-group{
+  input, textarea{
+    margin-bottom: $modal-inner-padding;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.modal-body > *:last-child {
+  margin: 0;
+}
+
+.modal-footer{
+  border-top: 0;
+  box-shadow: 0 -1.563rem 0 $modal-footer-divisor rgba($grisulado-50, 1);
+  padding: $modal-inner-padding - $modal-footer-margin-between 1.25rem;
+}

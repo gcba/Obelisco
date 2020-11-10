@@ -8,8 +8,8 @@ on:
       - dev
 
 jobs:
-  lint:
-    name: Lint
+  check:
+    name: Lint and build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,9 +23,15 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Build sass
+        run: npm run build:sass
+
+      - name: Build typescript
+        run: npm run build:typescript
+
   test:
     name: Test
-    needs: lint
+    needs: check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
