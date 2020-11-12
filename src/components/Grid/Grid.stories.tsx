@@ -111,8 +111,8 @@ export const Divisiones = (): JSX.Element => {
     <div className="container text-center">
       <div className="row mb-2">
         <div className="col-2">
-          <div>col-2</div>          
-          </div>
+          <div>col-2</div>
+        </div>
         <div className="col-6">
           <div>col-6</div>
         </div>
@@ -135,8 +135,8 @@ export const Divisiones = (): JSX.Element => {
         <div className="col-8">
           <div>col-8</div>
         </div>
-      </div>       
-      <div className="row mb-2">        
+      </div>
+      <div className="row mb-2">
         <div className="col-9">
           <div>col-9</div>
         </div>
@@ -167,48 +167,47 @@ export const Divisiones = (): JSX.Element => {
   );
 };
 
-
 export const AlineacionHorizontal = (): JSX.Element => {
   return (
     <div className="container">
       <div className="row justify-content-start mb-2">
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
       </div>
       <div className="row justify-content-center mb-2">
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
       </div>
       <div className="row justify-content-end mb-2">
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
       </div>
       <div className="row justify-content-around mb-2">
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
       </div>
       <div className="row justify-content-between mb-2">
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
         <div className="col-4">
-          <div>Una de dos columnas</div> 
+          <div>Una de dos columnas</div>
         </div>
       </div>
     </div>
@@ -222,11 +221,11 @@ export const OrdenarClases = (): JSX.Element => {
     <div className="container">
       <div className="row mb-2">
         <div className="col-4">
-          <div>Primero, pero desordenado</div> 
+          <div>Primero, pero desordenado</div>
         </div>
         <div className="col-4 order-12">
           <div>Tercero, pero primero</div>
-        </div> 
+        </div>
         <div className="col-4 order-1">
           <div>Segundo, pero último</div>
         </div>
@@ -245,7 +244,6 @@ export const OrdenarClases = (): JSX.Element => {
     </div>
   );
 };
-
 
 export const Desplazamientos = (): JSX.Element => {
   return (

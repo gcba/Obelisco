@@ -1,0 +1,79 @@
+/* === Variable and mixins overides === */
+
+$card-border-radius: $border-radius-container;
+$card-spacer-y: 1rem;
+$card-spacer-x: 1.5rem;
+
+$card-subtitle-font-size: 1.1875rem;
+$card-subtitle-font-weight: 400;
+
+$card-cap-color: $text-muted;
+$card-cap-bg: initial;
+
+$card-border-width: 0;
+$card-footer-border-width: 1px;
+$card-shadow-color: rgba($grisulado-900, 0.3);
+$card-box-shadow: 0px 1px 3px $card-shadow-color;
+$card-box-hover-shadow: 0px 0px 24px $card-shadow-color;
+
+$card-focus-width: 0.25rem;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+@import '~bootstrap/scss/card';
+
+/* === Custom styles === */
+
+.card {
+  box-shadow: $card-box-shadow;
+  transition: $transition-base;
+
+  .card-title {
+    margin-bottom: 0;
+  }
+
+  .card-subtitle {
+    font-size: $card-subtitle-font-size;
+    font-weight: $card-subtitle-font-weight;
+    margin-top: 0;
+  }
+
+  .card-text {
+    margin-top: $card-spacer-y;
+  }
+
+  .card-footer {
+    border-top-width: $card-footer-border-width;
+    padding: $card-spacer-y 0 $card-spacer-x;
+    margin: 0 $card-spacer-x;
+  }
+
+  &.card-simple {
+    box-shadow: none;
+
+    .card-body {
+      padding: 0;
+    }
+  }
+}
+
+a.card,
+button.card {
+  text-align: left;
+  color: $body-color;
+  padding: 0;
+  margin: 0;
+
+  @include hover() {
+    text-decoration: none;
+    box-shadow: $card-box-hover-shadow;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 $card-focus-width theme-color-level('info', 2);
+  }
+}

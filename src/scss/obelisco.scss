@@ -26,14 +26,15 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import '~bootstrap/scss/close';
 
 // Custom styles
+@import 'miscellaneous';
 @import 'grid';
 @import 'components/typography';
-@import 'miscellaneous';
 
 // Components
 @import 'components/alert';
-@import 'components/breadcrumb';
 @import 'components/button';
+@import 'components/breadcrumb';
+@import 'components/cards';
 @import 'components/form';
 @import 'components/nav';
 @import 'components/table';

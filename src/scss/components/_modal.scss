@@ -12,15 +12,16 @@ $modal-footer-divisor: $modal-inner-padding * -1;
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
-@import "../../../node_modules/bootstrap/scss/modal";
+@import '../../../node_modules/bootstrap/scss/modal';
 
 /* === Custom styles === */
 
-.form-group{
-  input, textarea{
+.form-group {
+  input,
+  textarea {
     margin-bottom: $modal-inner-padding;
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -30,7 +31,7 @@ $modal-footer-divisor: $modal-inner-padding * -1;
   margin: 0;
 }
 
-.modal-footer{
+.modal-footer {
   border-top: 0;
   box-shadow: 0 -1.563rem 0 $modal-footer-divisor rgba($grisulado-50, 1);
   padding: $modal-inner-padding - $modal-footer-margin-between 1.25rem;
