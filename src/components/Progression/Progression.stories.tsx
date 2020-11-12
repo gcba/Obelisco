@@ -16,7 +16,7 @@ export const Colapsado = (): JSX.Element => (
     <ul className="progression">
       <li className="progression-item completed" aria-expanded="false">
         <p className="progression-title">Estado anterior</p>
-        <p className="progression-subtitle d-none">Descripción del estado dd/mm/aa - 00:00hs</p>
+        <p className="progression-subtitle">Descripción del estado dd/mm/aa - 00:00hs</p>
       </li>
 
       <li className="progression-item active" aria-expanded="true">
@@ -26,27 +26,27 @@ export const Colapsado = (): JSX.Element => (
 
       <li className="progression-item" aria-expanded="false">
         <p className="progression-title">Próximo estado</p>
-        <p className="progression-subtitle d-none">Descripción del estado dd/mm/aa - 00:00hs</p>
+        <p className="progression-subtitle">Descripción del estado dd/mm/aa - 00:00hs</p>
       </li>
 
       <li className="progression-item" aria-expanded="false">
         <p className="progression-title">Próximo estado</p>
-        <p className="progression-subtitle d-none">Descripción del estado dd/mm/aa - 00:00hs</p>
+        <p className="progression-subtitle">Descripción del estado dd/mm/aa - 00:00hs</p>
       </li>
 
       <li className="progression-item" aria-expanded="false">
         <p className="progression-title">Estado final</p>
-        <p className="progression-subtitle d-none">Descripción del estado dd/mm/aa - 00:00hs</p>
+        <p className="progression-subtitle">Descripción del estado dd/mm/aa - 00:00hs</p>
       </li>
     </ul>
 
-    <a href="*" className="progression-link">Más detalles</a>
+    <button className="progression-link">Menos detalles</button>
   </div>
 );
 
 export const ConDetalles = (): JSX.Element => (
   <div className="progression-container">
-    <ul className="progression">
+    <ul className="progression expanded">
       <li className="progression-item completed" aria-expanded="true">
         <p className="progression-title">Estado anterior</p>
         <p className="progression-subtitle">Descripción del estado dd/mm/aa - 00:00hs</p>
@@ -73,6 +73,6 @@ export const ConDetalles = (): JSX.Element => (
       </li>
     </ul>
 
-    <a href="*" className="progression-link">Menos detalles</a>
+    <button className="progression-link">Menos detalles</button>
   </div>
 );
