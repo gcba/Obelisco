@@ -1,0 +1,110 @@
+/* === Variable and mixins overides === */
+
+$progression-text-spacing: 0.5rem;
+$progression-subtitle-size: 0.813rem;
+$progression-padding-left: 2.75rem;
+$progression-line-width: 0.125rem;
+
+$progression-circle-size: 0.5rem;
+$progression-circle-active-size: 1rem;
+
+$progression-font-color: $grisulado-300;
+$progression-default-color: $grisulado-50;
+
+/* === Custom variables and mixins === */
+
+/* === Bootstrap Import === */
+
+/* === Custom styles === */
+.progression {
+  @extend .list-unstyled, .flex-column;
+
+  margin-bottom: 0;
+
+  &-item {
+    padding-left: $progression-padding-left;
+  }
+
+  &-item {
+    color: $progression-font-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: $progression-text-spacing;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: $progression-default-color;
+      width: $progression-circle-size;
+      height: $progression-circle-size;
+      border-radius: 50%;
+      left: $progression-circle-size / 2;
+      top: $font-size-base / 2;
+    }
+
+    &:not(:last-child):after {
+      content: '';
+      position: absolute;
+      background-color: $progression-default-color;
+      z-index: -1;
+      width: $progression-line-width;
+      height: 100%;
+      left: $progression-circle-active-size / 2 - $progression-line-width / 2;
+      top: $progression-circle-size / 2 + $font-size-base / 2;
+    }
+  }
+
+  .active {
+    .progression-title {
+      font-weight: $headings-font-weight;
+    }
+
+    .progression-title,
+    .progression-subtitle {
+      color: $body-color;
+      display: block;
+    }
+
+    &:before {
+      top: $line-height-base / 2 - $font-size-base / 2;
+      width: $progression-circle-active-size;
+      height: $progression-circle-active-size;
+      left: 0;
+    }
+
+    &:not(:last-child):after {
+      background: linear-gradient(0deg, $progression-default-color 50%, $body-color 50%);
+    }
+  }
+
+  .active,
+  .completed {
+    &:before,
+    &:not(:last-child):after {
+      background-color: $body-color;
+    }
+  }
+
+  &-title {
+    margin-bottom: $progression-text-spacing;
+  }
+
+  &-subtitle {
+    font-size: $progression-subtitle-size;
+    margin-bottom: $progression-text-spacing;
+    display: none;
+  }
+
+  &.expanded {
+    .progression-subtitle {
+      display: block;
+    }
+  }
+
+  &-link {
+    margin-left: $progression-padding-left - $btn-padding-x;
+    @extend .btn, .btn-link;
+  }
+}
