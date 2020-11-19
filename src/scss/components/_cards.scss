@@ -8,15 +8,23 @@ $card-subtitle-font-size: 1.1875rem;
 $card-subtitle-font-weight: 400;
 
 $card-cap-color: $text-muted;
-$card-cap-bg: initial;
+$card-cap-bg: inherit;
+$card-header-bg: $grisulado-50;
+$card-header-paddin-y: 0.75rem;
 
-$card-border-width: 0;
+$card-border-width: 0px;
 $card-footer-border-width: 1px;
 $card-shadow-color: rgba($grisulado-900, 0.3);
 $card-box-shadow: 0px 1px 3px $card-shadow-color;
 $card-box-hover-shadow: 0px 0px 24px $card-shadow-color;
 
 $card-focus-width: 0.25rem;
+$card-focus-box-shadow: $focus-box-shadow;
+
+$accordion-margin: 0.75rem;
+
+$accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
+$accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
 
 /* === Custom variables and mixins === */
 
@@ -74,6 +82,71 @@ button.card {
   &:focus,
   &.focus {
     outline: 0;
-    box-shadow: 0 0 0 $card-focus-width theme-color-level('info', 2);
+    box-shadow: $card-focus-box-shadow;
+  }
+}
+
+.accordion {
+  > .card {
+    margin-bottom: $accordion-margin;
+    border-radius: 0 !important;
+    box-shadow: none;
+    overflow: visible;
+
+    &:not(:last-of-type) {
+      @include border-bottom-radius($card-border-radius);
+    }
+
+    &:not(:first-of-type) {
+      @include border-top-radius($card-border-radius);
+    }
+
+    > .card-header {
+      background-color: $card-header-bg;
+      border-width: 0;
+      text-align: left;
+      padding-top: $card-header-paddin-y;
+      padding-bottom: $card-header-paddin-y;
+      transition: background-color 0.2s;
+      border-radius: $border-radius $border-radius 0 0;
+      position: relative;
+      z-index: 1;
+      @extend .h5;
+
+      &:hover,
+      &.hover {
+        background-color: darken($card-header-bg, 5%);
+
+        + * > .card-body {
+          border-color: darken($card-header-bg, 5%);
+        }
+      }
+
+      &:focus,
+      &.focus {
+        outline: none;
+        box-shadow: $card-focus-box-shadow;
+        border-radius: $border-radius;
+      }
+
+      &:after {
+        content: $accordion-icon-expanded;
+        height: spaceUnits(5);
+        float: right;
+      }
+
+      &.collapsed {
+        border-radius: $border-radius;
+
+        &:after {
+          content: $accordion-icon-collapsed;
+        }
+      }
+    }
+
+    .card-body {
+      border: 2px solid $card-header-bg;
+      @include border-bottom-radius($card-border-radius);
+    }
   }
 }

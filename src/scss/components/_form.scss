@@ -13,6 +13,9 @@ $custom-select-disabled-bg: $input-disabled-bg;
 $custom-control-indicator-checked-color: $info;
 $custom-control-indicator-active-color: $info;
 
+$input-focus-border-color: $input-disabled-color;
+$input-focus-box-shadow: $focus-box-shadow;
+
 $form-validation-states: (
   'valid': (
     'color': $form-feedback-valid-color,
