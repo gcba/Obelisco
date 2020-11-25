@@ -33,6 +33,22 @@ export const TitleSubtitleText = (): JSX.Element => {
 };
 TitleSubtitleText.story = { name: 'Contenedor simple' };
 
+export const Ícono = (): JSX.Element => {
+  return (
+    <div className="cards-container">
+      <a className="card" href="#">
+        <div className="card-body">
+          <i className="bx bx-news card-icon text-info"></i>
+          <h4 className="card-title">Título de tarjeta</h4>
+          <p className="card-text">
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+          </p>
+        </div>
+      </a>
+    </div>
+  );
+};
+
 export const TitleSubtitleLink = (): JSX.Element => {
   return (
     <div className="cards-container">
@@ -42,7 +58,7 @@ export const TitleSubtitleLink = (): JSX.Element => {
           <h4 className="card-title">Título Tarjeta</h4>
           <div className="card-subtitle">Subtítulo</div>
           <p className="card-text">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
           </p>
         </div>
       </button>
@@ -51,6 +67,23 @@ export const TitleSubtitleLink = (): JSX.Element => {
 };
 TitleSubtitleLink.story = { name: 'Contenedor con imagen' };
 
+export const HorizontalCard = (): JSX.Element => {
+  return (
+    <div className="horizontal-container">
+      <button className="card card-horizontal">
+        <img src="/cards/paseobajo-wide.png" className="card-img-left" width={168} />
+        <div className="card-body">
+          <h4 className="card-title">Título Tarjeta</h4>
+          <p className="card-text">
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+          </p>
+        </div>
+      </button>
+    </div>
+  );
+};
+HorizontalCard.story = { name: 'Contenedor con imagen horizontal' };
+
 export const TitleTextLink = (): JSX.Element => {
   return (
     <div className="cards-container">
@@ -58,7 +91,7 @@ export const TitleTextLink = (): JSX.Element => {
         <div className="card-body">
           <h4 className="card-title">Título Tarjeta</h4>
           <p className="card-text">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
           </p>
           <a href="#" className="link-arrow">
             Ver título card

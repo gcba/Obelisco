@@ -1,24 +1,26 @@
-.container {
-  min-width: 800px;
-  font-size: 14px;
-  padding-left: 16px;
-  padding-right: 16px;
-}
+.grid-wraper {
+  .container {
+    min-width: 800px;
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
-.row {
-  margin-left: -8px;
-  margin-right: -8px;
-}
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
 
-.col {
-  padding-right: 8px;
-  padding-left: 8px;
-}
+  .col {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
 
-.row > [class^='col-'] > div {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
-  text-align: center;
+  .row > [class^='col-'] > div {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(86, 61, 124, 0.15);
+    border: 1px solid rgba(86, 61, 124, 0.2);
+    text-align: center;
+  }
 }
