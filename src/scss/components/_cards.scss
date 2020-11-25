@@ -58,11 +58,26 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
     margin: 0 $card-spacer-x;
   }
 
+  .card-icon {
+    font-size: 3rem;
+    margin-bottom: $card-spacer-y;
+  }
+
   &.card-simple {
     box-shadow: none;
 
     .card-body {
       padding: 0;
+    }
+  }
+
+  &.card-horizontal {
+    flex-direction: row;
+
+    .card-img-left {
+      width: 154px;
+      object-fit: cover;
+      border-radius: $card-border-radius 0 0 $card-border-radius;
     }
   }
 }
