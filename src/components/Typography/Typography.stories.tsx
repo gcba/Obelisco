@@ -56,10 +56,7 @@ export const Transformaciones = (): JSX.Element => {
 export const Citas = (): JSX.Element => {
   return (
     <blockquote className="blockquote">
-      <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer className="blockquote-footer">
-        Alguien reconocido en <cite title="Source Title">título de la fuente</cite>
-      </footer>
+      <p className="mb-0">Lorem ipsum dolor sit amet.</p>
     </blockquote>
   );
 };
