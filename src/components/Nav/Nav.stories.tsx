@@ -136,6 +136,7 @@ export const MobileCollapsed = (): JSX.Element => (
 export const MobileExpanded = (): JSX.Element => (
   <nav className="nav-container">
     <ul className="nav-mobile flex-column">
+<<<<<<< HEAD
       <li className="nav-item">
         <a className="nav-link nav-link-header nav-link-header-main_collapse" href="#">
           Categorías
@@ -172,16 +173,48 @@ export const MobileExpanded = (): JSX.Element => (
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Locales de óptica.
+=======
+    <li className="nav-item">
+      <a className="nav-link nav-link-header nav-link-header-main_otro" href="#">
+        Categorías
+      </a>
+
+
+      <ul className="nav-mobile nav-mobile-inner flex-column">
+      <li className="nav-item">
+        <a className="nav-link nav-link-header" href="#">
+          Locales y comercios
+        </a>
+        <ul className="nav flex-column">
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Local Indumentaria y calzado. (Actividades comerciales de venta).
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" href="#">
+              Locales gastronómicos: “para llevar/takeaway”
+            </a>
+            <ul className="nav nav-pills flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Con local a la calle
+>>>>>>> Creación de nav-mobile y actualización de nav respecto al UI Kit
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
+<<<<<<< HEAD
                   Comercial minorista (excluyendo indumentaria y calzado)
+=======
+                  Food trucks
+>>>>>>> Creación de nav-mobile y actualización de nav respecto al UI Kit
                 </a>
               </li>
             </ul>
           </li>
           <li className="nav-item">
+<<<<<<< HEAD
             <a className="nav-link nav-link-header" href="#">
               Actividades jurídicas
             </a>
@@ -189,10 +222,36 @@ export const MobileExpanded = (): JSX.Element => (
           <li className="nav-item">
             <a className="nav-link nav-link-header" href="#">
               Otras actividades
+=======
+            <a className="nav-link" href="#">
+              Locales de óptica.
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Comercial minorista (excluyendo indumentaria y calzado)
+>>>>>>> Creación de nav-mobile y actualización de nav respecto al UI Kit
             </a>
           </li>
         </ul>
       </li>
+<<<<<<< HEAD
     </ul>
   </nav>
+=======
+      <li className="nav-item">
+        <a className="nav-link nav-link-header" href="#">
+          Actividades jurídicas
+        </a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link nav-link-header" href="#">
+          Otras actividades
+        </a>
+      </li>
+    </ul>
+    </li>
+  </ul>
+</nav>
+>>>>>>> Creación de nav-mobile y actualización de nav respecto al UI Kit
 );
