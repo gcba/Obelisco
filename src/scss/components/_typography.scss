@@ -34,11 +34,16 @@ h2,
 }
 
 blockquote {
-  padding: 32px 16px 24px 16px;
-  margin: 0 0 24px 0;
-  border-left-style: solid;
-  border-left-width: 8px;
-  border-left-color: #505E70;
-  color: #505E70;
+  @extend .lead;
+  padding-left: spaceUnits(4);
+  margin: spaceUnits(8);
+  border-left: spaceUnits(1) solid $grisulado-700;
   font-style: italic;
+}
+
+@include media-breakpoint-up(sm) {
+  blockquote {
+    padding-left: spaceUnits(6);
+    margin: spaceUnits(8) spaceUnits(22);
+  }
 }

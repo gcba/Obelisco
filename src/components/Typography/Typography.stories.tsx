@@ -1,5 +1,6 @@
 // Base
 import React from 'react';
+import './Typography.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -55,9 +56,21 @@ export const Transformaciones = (): JSX.Element => {
 
 export const Citas = (): JSX.Element => {
   return (
-    <blockquote className="blockquote">
-      <p className="mb-0">Lorem ipsum dolor sit amet.</p>
-    </blockquote>
+    <div className="bloquote-wrapper">
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua.
+      </p>
+      <blockquote>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut dolore.
+        </p>
+      </blockquote>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua.
+      </p>
+    </div>
   );
 };
 
