@@ -175,7 +175,7 @@ export const MobileExpanded = (): JSX.Element => (
                   Locales de óptica.
 =======
     <li className="nav-item">
-      <a className="nav-link nav-link-header nav-link-header-main_otro" href="#">
+      <a className="nav-link nav-link-header nav-link-header-main_collapse" href="#">
         Categorías
       </a>
 
