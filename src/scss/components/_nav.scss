@@ -121,7 +121,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
             height: 1rem;
           }
 
-          &_otro:after{
+          &_collapse:after{
             content: "";
             display: block;
             background: $icon-collapse no-repeat center;
