@@ -10,6 +10,7 @@ $nav-link-header-font-size: 1.125rem;
 $nav-link-padding-y: 0.75rem;
 $nav-link-padding-x: 1rem;
 $nav-mobile-inner-padding-y: 0.75rem;
+$nav-mobile-bg: $grisulado-10;
 
 $nav-link-disabled-color: $grisulado-300;
 $nav-link-hover-bg: $grisulado-50;
@@ -89,7 +90,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
 
 .nav-mobile {
   @extend .nav;
-  background-color: $nav-link-hover-bg;
+  background-color: $nav-mobile-bg;
 
   &-inner {
     padding: $nav-mobile-inner-padding-y 0;
@@ -100,6 +101,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
 
     .nav-link {
       padding: $nav-link-padding-y $nav-link-padding-x + $nav-link-padding-x/4;
+      border-radius: 0;
 
       &-header {
         border-radius: 0;
