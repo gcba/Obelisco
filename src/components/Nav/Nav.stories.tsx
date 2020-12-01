@@ -159,7 +159,7 @@ export const MobileExpanded = (): JSX.Element => (
             </a>
             <ul className="nav nav-pills flex-column">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link active" href="#">
                   Con local a la calle
                 </a>
               </li>
