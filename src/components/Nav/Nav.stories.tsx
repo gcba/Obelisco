@@ -15,22 +15,22 @@ export const Simple = (): JSX.Element => (
   <nav className="nav-container">
     <ul className="nav flex-column">
       <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
+        <a className="nav-link" href="#">
           Active
         </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link nav-link-header active" href="#">
+        <a className="nav-link active" href="#">
           Link
         </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
+        <a className="nav-link" href="#">
           Link
         </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link nav-link-header disabled" href="#" tabIndex={-1} aria-disabled="true">
+        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">
           Disabled
         </a>
       </li>
@@ -42,22 +42,22 @@ export const ConFondo = (): JSX.Element => (
   <nav className="nav-container">
     <ul className="nav nav-pills flex-column">
       <li className="nav-item">
-        <a className="nav-link nav-link-header active" href="#">
+        <a className="nav-link active" href="#">
           Active
         </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
+        <a className="nav-link" href="#">
           Link
         </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
+        <a className="nav-link" href="#">
           Link
         </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link nav-link-header disabled" href="#" tabIndex={-1} aria-disabled="true">
+        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">
           Disabled
         </a>
       </li>
@@ -67,9 +67,9 @@ export const ConFondo = (): JSX.Element => (
 
 export const Con2Niveles = (): JSX.Element => (
   <nav className="nav-container">
-    <ul className="nav flex-column">
+    <ul className="nav nav-lg flex-column">
       <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
+        <a className="nav-link" href="#">
           Locales y comercios
         </a>
         <ul className="nav flex-column">
@@ -108,12 +108,12 @@ export const Con2Niveles = (): JSX.Element => (
         </ul>
       </li>
       <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
+        <a className="nav-link" href="#">
           Actividades jurídicas
         </a>
       </li>
       <li className="nav-item">
-        <a className="nav-link nav-link-header" href="#">
+        <a className="nav-link" href="#">
           Otras actividades
         </a>
       </li>
@@ -121,29 +121,21 @@ export const Con2Niveles = (): JSX.Element => (
   </nav>
 );
 
-export const MobileCollapsed = (): JSX.Element => (
-  <nav className="nav-container">
-    <ul className="nav-mobile flex-column">
-      <li className="nav-item">
-        <a className="nav-link nav-link-header nav-link-header-main_expand" href="#">
-          Categorías
-        </a>
-      </li>
-    </ul>
-  </nav>
-);
-
-export const MobileExpanded = (): JSX.Element => (
-  <nav className="nav-container">
-    <ul className="nav-mobile flex-column">
-      <li className="nav-item">
-        <a className="nav-link nav-link-header nav-link-header-main_collapse" href="#">
-          Categorías
-        </a>
-
-        <ul className="nav-mobile nav-mobile-inner flex-column">
+export const Responsive = (): JSX.Element => (
+  <div className="nav-container">
+    <nav>
+      <a className="nav-link nav-mobile-trigger collapsed" data-toggle="collapse" href="#sidebar-nav">
+        Acerca de Obelisco
+      </a>
+      <div className="nav-responsive collapse" id="sidebar-nav">
+        <ul className="nav nav-lg flex-column">
           <li className="nav-item">
-            <a className="nav-link nav-link-header" href="#">
+            <a className="nav-link" href="#">
+              Categorías
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link nav-link-lg" href="#">
               Locales y comercios
             </a>
             <ul className="nav flex-column">
@@ -158,12 +150,12 @@ export const MobileExpanded = (): JSX.Element => (
                 </a>
                 <ul className="nav nav-pills flex-column">
                   <li className="nav-item">
-                    <a className="nav-link active" href="#">
+                    <a className="nav-link" href="#">
                       Con local a la calle
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a className="nav-link active" href="#">
                       Food trucks
                     </a>
                   </li>
@@ -182,17 +174,17 @@ export const MobileExpanded = (): JSX.Element => (
             </ul>
           </li>
           <li className="nav-item">
-            <a className="nav-link nav-link-header" href="#">
+            <a className="nav-link nav-link-lg" href="#">
               Actividades jurídicas
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link nav-link-header" href="#">
+            <a className="nav-link nav-link-lg" href="#">
               Otras actividades
             </a>
           </li>
         </ul>
-      </li>
-    </ul>
-  </nav>
+      </div>
+    </nav>
+  </div>
 );
