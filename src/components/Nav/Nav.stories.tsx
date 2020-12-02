@@ -67,19 +67,19 @@ export const ConFondo = (): JSX.Element => (
 
 export const Con2Niveles = (): JSX.Element => (
   <nav className="nav-container">
-    <ul className="nav flex-column">
+    <ul className="nav nav-lg flex-column">
       <li className="nav-item">
-        <a className="nav-link active" href="#">
+        <a className="nav-link" href="#">
           Locales y comercios
         </a>
-        <ul className="nav nav-pills flex-column">
+        <ul className="nav flex-column">
           <li className="nav-item">
             <a className="nav-link" href="#">
               Local Indumentaria y calzado. (Actividades comerciales de venta).
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <a className="nav-link active" href="#">
               Locales gastronómicos: “para llevar/takeaway”
             </a>
             <ul className="nav nav-pills flex-column">
@@ -87,21 +87,9 @@ export const Con2Niveles = (): JSX.Element => (
                 <a className="nav-link" href="#">
                   Con local a la calle
                 </a>
-                <ul className="nav nav-pills flex-column">
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Restaurante
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" href="#">
-                      Rotisería
-                    </a>
-                  </li>
-                </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link " href="#">
+                <a className="nav-link active" href="#">
                   Food trucks
                 </a>
               </li>
@@ -131,4 +119,72 @@ export const Con2Niveles = (): JSX.Element => (
       </li>
     </ul>
   </nav>
+);
+
+export const Responsive = (): JSX.Element => (
+  <div className="nav-container">
+    <nav>
+      <a className="nav-link nav-mobile-trigger collapsed" data-toggle="collapse" href="#sidebar-nav">
+        Acerca de Obelisco
+      </a>
+      <div className="nav-responsive collapse" id="sidebar-nav">
+        <ul className="nav nav-lg flex-column">
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Categorías
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link nav-link-lg" href="#">
+              Locales y comercios
+            </a>
+            <ul className="nav flex-column">
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Local Indumentaria y calzado. (Actividades comerciales de venta).
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="#">
+                  Locales gastronómicos: “para llevar/takeaway”
+                </a>
+                <ul className="nav nav-pills flex-column">
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      Con local a la calle
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link active" href="#">
+                      Food trucks
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Locales de óptica.
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Comercial minorista (excluyendo indumentaria y calzado)
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link nav-link-lg" href="#">
+              Actividades jurídicas
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link nav-link-lg" href="#">
+              Otras actividades
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 );

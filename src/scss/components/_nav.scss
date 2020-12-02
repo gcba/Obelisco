@@ -4,8 +4,14 @@ $nav-link-font-weight: 400;
 $nav-link-active-font-weight: 600;
 $nav-pills-link-active-font-weight: 400;
 
+$nav-link-lg-font-weight: 600;
+$nav-link-lg-font-size: 1.125rem;
+
 $nav-link-padding-y: 0.75rem;
 $nav-link-padding-x: 1rem;
+$nav-mobile-inner-padding-y: 0.75rem;
+$nav-mobile-bg: $grisulado-10;
+
 $nav-link-disabled-color: $grisulado-300;
 $nav-link-hover-bg: $grisulado-50;
 
@@ -14,11 +20,14 @@ $nav-link-hover-color: $grisulado-700;
 
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
 
+$icon-expand: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAAXnVPIAAAAPElEQVQ4EWNkwAEsPGL+I0ud2LGEEZkPYzPBGOTSowYwMDCihzapgTkMAhFr6gKFA3rYjKZE3KmD4nQAADIcCfkjs4flAAAAAElFTkSuQmCC');
+$icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAEKADAAQAAAABAAAABAAAAACC/WKKAAAAGElEQVQYGWO08Ij5z0ABYKJAL1jrwBsAAOG3AePub4ocAAAAAElFTkSuQmCC');
+
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
 
-@import '~bootstrap/scss/_nav';
+@import '~bootstrap/scss/nav';
 
 /* === Custom styles === */
 
@@ -55,6 +64,14 @@ $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('inf
   }
 }
 
+.nav.nav-lg {
+  > .nav-link,
+  > .nav-item > .nav-link {
+    font-size: $nav-link-lg-font-size;
+    font-weight: $nav-link-lg-font-weight;
+  }
+}
+
 .nav .nav {
   .nav-link {
     padding-left: $nav-link-padding-x * 2;
@@ -68,5 +85,50 @@ $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('inf
         padding-left: $nav-link-padding-x * 4;
       }
     }
+  }
+}
+
+/* === Mobile styles === */
+
+.nav-mobile-trigger {
+  background-color: $nav-mobile-bg;
+  border-radius: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $nav-link-lg-font-size;
+  font-weight: $nav-link-lg-font-weight;
+
+  &:after {
+    content: '';
+    display: block;
+    background: $icon-collapse no-repeat center;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &.collapsed:after {
+    background-image: $icon-expand;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .nav-responsive {
+    background-color: $nav-mobile-bg;
+
+    .nav-link {
+      padding: $nav-link-padding-y $nav-link-padding-x + $nav-link-padding-x/4;
+      border-radius: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .nav-mobile-trigger {
+    display: none;
+  }
+  .nav-responsive.collapse:not(.show) {
+    display: block;
   }
 }
