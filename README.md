@@ -5,14 +5,55 @@
 Obelisco es el nuevo sistema de diseño basado en componentes para los productos digitales de la ciudad de Buenos Aires.
 Fue creado para reemplazar [BAstrap](https://github.com/gcba/bastrap).
 
-### [Ver la lista de componentes](https://gcba.github.io/Obelisco/).
+### [Ver la documentación de componentes](https://gcba.github.io/estandares/componentes/web//).
 
 ## Cómo usarlo
 
-Obelisco está en proceso de desarrollo, por lo que **todavía no se puede utilizar**.
+Obelisco se distribuye por medio del [paquete publicado en npm](https://www.npmjs.com/package/@gcba/obelisco).
+Es recomendable usar este sistema para definir la versión a usar y poder actualizarla fácilmente.
 
-Si bien hay un [paquete publicado en npm](https://www.npmjs.com/package/@gcba/obelisco), solo tiene algunos elementos y componentes.
-El lanzamiento oficial de la primer versión BETA, está planificado para fines de Noviembre 2020.
+Para instalarlo en un proyecto que ya usa npm, hay que ejecutar:
+```
+npm install @gcba/obelisco
+```
+
+Si en cambio, se necesitan los archivos para importarlos en algún proyecto, se pueden descargar desde la [sección de versiones](https://github.com/gcba/Obelisco/releases).
+
+## Cómo importarlo
+
+Obelisco cuenta de dos partes principales que se pueden importar de varias formas.
+
+### Estilos (css o sass)
+
+Las ojas de estilos se pueden importar tanto en **sass** como en **css** ya compilado.
+El archivo css está ubicado en `/dist/obelisco.css` y el archivo principal de sass en `/src/scss/obelisco.scss`.
+
+Para importar el css, podemos hacerlo de la siguiente forma:
+```
+<link rel="stylesheet" href="ruta/al/proyecto/dist/obelisco.css">
+```
+
+### Tipografías
+
+Obelisco requiere las tipografías **Nunito** y **Open sans** disponibles en google fonts, para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
+```
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"></link>
+```
+
+### Javascript
+
+Como Obelisco está construido sobre bootstrap 4, [debemos tener esas dependencias](https://getbootstrap.com/docs/4.6/getting-started/introduction/#js).
+
+Un ejemplo de cómo importalas es:
+```
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+```
+
+> **Importante**<br>
+> Revisá las [versiones y herramientas aceptadas](https://asijira-confluence.buenosaires.gob.ar/display/ASI/Versiones++y+Herramientas+aceptadas+por+la+ASI) por la **Agencia de Seguridad Informática (ASI)** del Gobierno de la Ciudad antes de elegir una versión de estas dependencias.
 
 ## Desarrollo
 
