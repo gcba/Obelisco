@@ -53,7 +53,7 @@ export const TitleSubtitleLink = (): JSX.Element => {
   return (
     <div className="cards-container">
       <button className="card">
-        <img src="/cards/paseobajo.jpg" className="card-img-top" />
+        <img src="cards/paseobajo.jpg" className="card-img-top" />
         <div className="card-body">
           <h4 className="card-title">Título Tarjeta</h4>
           <div className="card-subtitle">Subtítulo</div>
@@ -71,7 +71,7 @@ export const HorizontalCard = (): JSX.Element => {
   return (
     <div className="horizontal-container">
       <button className="card card-horizontal">
-        <img src="/cards/paseobajo-wide.png" className="card-img-left" width={168} />
+        <img src="cards/paseobajo-wide.png" className="card-img-left" width={168} />
         <div className="card-body">
           <h4 className="card-title">Título Tarjeta</h4>
           <p className="card-text">

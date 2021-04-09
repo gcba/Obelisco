@@ -93,8 +93,10 @@ export const Expandible = (): JSX.Element => {
 export const MuchoTexto = (): JSX.Element => {
   return (
     <div className="btn btn-success" role="button" tabIndex={0}>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime non deserunt suscipit quasi adipisci
-      laborum vel ullam, quibusdam id dolorem? Dicta possimus nemo cumque porro dolorem quam nam eligendi.
+      No está bien que un botón tenga mucho texto, este es un caso extremo que usamos únicamente con propósitos de
+      prueba.
+      <br />
+      Por favor leer la documentación correspondiente en los estándares.
     </div>
   );
 };
