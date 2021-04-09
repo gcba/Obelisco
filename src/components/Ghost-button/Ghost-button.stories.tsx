@@ -15,14 +15,11 @@ export default {
 
 
 
-export const Colores = (): JSX.Element => {
+export const BtnFantasma = (): JSX.Element => {
   return (
     <div>
-      <button type="button" className="btn btn-ghost-primary">Botón</button>
-      <button type="button" className="btn btn-ghost-secondary">Botón</button>
-      <button type="button" className="btn btn-ghost-success">Éxito</button>
-      <button type="button" className="btn btn-ghost-danger">Peligro</button>
       <button type="button" className="btn btn-ghost-link">Botón</button>
     </div>
   );
 };
+BtnFantasma.story = { name: 'Botón Fantasma' };

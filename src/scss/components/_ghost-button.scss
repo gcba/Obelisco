@@ -1,37 +1,14 @@
-.btn-ghost-primary {
-  font-weight: $btn-font-weight;
-  color: #38485c;
-  background-color: #b2b2b2;
-}
-
-.btn-ghost-secondary {
-  font-weight: $btn-font-weight;
-  color: #38485c;
-  background-color: #CCCCCC;
-}
-
-.btn-ghost-success {
-  font-weight: $btn-font-weight;
-  color: #38485c;
-  background-color: #BBE3C7;
-}
-
-.btn-ghost-danger {
-  font-weight: $btn-font-weight;
-  color: #38485c;
-  background-color: #EDBEBE;
-}
-
 .btn-ghost-link {
   font-weight: $btn-font-weight;
-  color: #38485c;
+  color: #007bc7;
 
-  /*@include hover() {
+  @include hover() {
     background-color: $grisulado-50;
+    color: #007bc7;
   }
 
   &:focus,
   &.focus {
     box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
-  }*/
+  }
 }
