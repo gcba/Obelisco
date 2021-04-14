@@ -60,13 +60,15 @@ $btn-link-disabled-color: $gray-600;
 
 .btn-link {
   font-weight: $btn-font-weight;
-
+  text-decoration: none;
   @include hover() {
-    background-color: $grisulado-50;
+    background-color: $grisulado-50;    
+    text-decoration: none;
   }
 
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
+    box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);    
+    text-decoration: none;
   }
 }
