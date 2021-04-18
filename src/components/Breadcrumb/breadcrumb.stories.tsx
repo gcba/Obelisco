@@ -44,7 +44,7 @@ export const TresNiveles = (): JSX.Element => (
           <a href="#">Buenos Aires</a>
         </li>
         <li className="breadcrumb-item">
-          <a href="#">Intermedia</a>
+          <a href="#">Página intermedia con mucho mucho texto</a>
         </li>
         <li className="breadcrumb-item">
           <a href="#">Pagina anterior</a>
