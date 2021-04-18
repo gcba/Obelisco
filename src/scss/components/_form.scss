@@ -10,11 +10,25 @@ $input-disabled-bg: $grisulado-50;
 $custom-select-disabled-color: $input-disabled-color;
 $custom-select-disabled-bg: $input-disabled-bg;
 
-$custom-control-indicator-checked-color: $info;
-$custom-control-indicator-active-color: $info;
+$custom-control-indicator-checked-color: $grisulado-900;
+$custom-control-indicator-active-color: $grisulado-900;
 
 $input-focus-border-color: $input-disabled-color;
 $input-focus-box-shadow: $focus-box-shadow;
+
+$custom-control-indicator-size: spaceUnits(5);
+$custom-control-indicator-bg: transparent;
+$custom-control-indicator-border-color: $grisulado-900;
+$custom-control-indicator-border-width: 3px;
+$custom-control-indicator-checked-bg: transparent;
+$custom-control-indicator-checked-border-color: $grisulado-900;
+$custom-control-indicator-focus-border-color: $grisulado-900;
+$custom-control-indicator-active-bg: transparent;
+$custom-control-indicator-active-border-color: $grisulado-900;
+$custom-control-indicator-checked-disabled-bg: transparent;
+$custom-control-indicator-disabled-bg: transparent;
+
+// Some configuration is inside ../_colors.scs
 
 $form-validation-states: (
   'valid': (
@@ -39,6 +53,49 @@ $form-validation-states: (
   font-size: $font-size-sm;
 }
 
+.custom-control-label {
+  padding: spaceUnits(1);
+  padding-left: $custom-control-indicator-size + spaceUnits(6);
+  padding-right: spaceUnits(3);
+  margin-bottom: spaceUnits(3);
+  border-radius: $border-radius * 2;
+
+  &::before {
+    left: spaceUnits(3);
+    top: spaceUnits(1.5);
+  }
+
+  &::after {
+    left: spaceUnits(3);
+    top: spaceUnits(1.5);
+  }
+}
+
+.custom-control-input {
+  &:not(:disabled) ~ .custom-control-label {
+    cursor: pointer;
+
+    :hover {
+      background-color: $light;
+    }
+  }
+  &:not(:disabled):focus ~ .custom-control-label {
+    box-shadow: $input-focus-box-shadow;
+
+    &:before {
+      box-shadow: none;
+    }
+  }
+
+  &:disabled ~ .custom-control-label {
+    color: $custom-select-disabled-color;
+
+    &:before {
+      border-color: $input-disabled-color;
+    }
+  }
+}
+
 .bg-light {
   .form-control,
   .custom-select {
@@ -46,27 +103,7 @@ $form-validation-states: (
       background-color: $white;
     }
   }
-}
-
-.custom-control-label {
-  padding: spaceUnits(1);
-  padding-left: $custom-control-indicator-size + spaceUnits(6);
-  padding-right: spaceUnits(3);
-  background-color: $light;
-  margin-bottom: spaceUnits(2);
-  border-radius: $border-radius;
-
-  &::before {
-    left: spaceUnits(3);
-    top: spaceUnits(2);
+  .custom-control-input:not(:disabled) ~ .custom-control-label:hover {
+    background-color: $white;
   }
-
-  &::after {
-    left: spaceUnits(3);
-    top: spaceUnits(2);
-  }
-}
-
-.custom-control-input:disabled ~ .custom-control-label {
-  color: $custom-select-disabled-color;
 }

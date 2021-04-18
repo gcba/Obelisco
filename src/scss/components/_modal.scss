@@ -16,13 +16,19 @@ $modal-footer-divisor: $modal-inner-padding * -1;
 
 /* === Custom styles === */
 
-.form-group {
-  input,
-  textarea {
-    margin-bottom: $modal-inner-padding;
+// Nota de Nico: Estos estilos no se comportan siempre de la forma experada,
+// habría que ajustarlos, pero al cambiar el funcionamiento de los modals,
+// no va a hacer falta.
 
-    &:last-child {
-      margin-bottom: 0;
+.modal {
+  .form-group {
+    input,
+    textarea {
+      margin-bottom: $modal-inner-padding;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
