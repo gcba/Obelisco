@@ -38,7 +38,6 @@ export const Titulo = (): JSX.Element => {
     </div>
   );
 };
-/*  <h4>Título de la alerta</h4> */
 Titulo.story = {
   name: 'Título y texto'
 };
@@ -65,12 +64,6 @@ export const Toggle = (): JSX.Element => {
     </div>
   );
 };
-
-/*
-    <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-*/
 
 export const Lista = (): JSX.Element => {
   return (
