@@ -57,7 +57,6 @@ $theme-colors: map-remove($theme-colors, 'secondary');
 
 .alert {
   border-left-width: 6px;
-
   @each $color, $value in $theme-colors {
     &.alert-#{$color} {
       @include alert-icon($color);
@@ -65,10 +64,25 @@ $theme-colors: map-remove($theme-colors, 'secondary');
   }
 }
 
+//Cambio fondo de colores en alerta
+.alert-primary {
+  background-color: #fdd306;
+}
+.alert-danger {
+  background-color: #c93b3b;
+}
+.alert-info {
+  background-color: #007bc7;
+}
+.alert-success {
+  background-color: #26874a;
+}
+
 .alert h4,
 .alert p,
 .alert ol {
   margin-left: 2.375rem;
+  color: #fff; 
 }
 
 .alert p,
@@ -78,6 +92,11 @@ $theme-colors: map-remove($theme-colors, 'secondary');
 
 .alert ol {
   padding-left: 1.5rem;
+}
+
+.button-close {
+  margin-left: 2.375rem;
+  margin-top: 5px;
 }
 
 // Volvemos a agregar el color secundario

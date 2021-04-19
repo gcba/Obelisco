@@ -28,7 +28,9 @@ export const Texto = (): JSX.Element => {
 export const Titulo = (): JSX.Element => {
   return (
     <div className="alert alert-danger" role="alert">
-      <h4>Título de la alerta</h4>
+      <p>
+        <strong>Este es un destacado de una alerta (opcional).</strong>
+      </p>     
       <p>
         Un texto simple para una alerta simple, incluso&nbsp;
         <a href="#">con hipervínculos</a>.
@@ -36,6 +38,7 @@ export const Titulo = (): JSX.Element => {
     </div>
   );
 };
+/*  <h4>Título de la alerta</h4> */
 Titulo.story = {
   name: 'Título y texto'
 };
@@ -56,13 +59,18 @@ export const Toggle = (): JSX.Element => {
         Un texto simple para una alerta simple, incluso&nbsp;
         <a href="#">con hipervínculos</a>.
       </p>
-
-      <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+        <button type="button" className="btn btn-sm button-close btn-danger">
+          Cerrar
+        </button>
     </div>
   );
 };
+
+/*
+    <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+*/
 
 export const Lista = (): JSX.Element => {
   return (
