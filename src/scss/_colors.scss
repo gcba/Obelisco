@@ -77,6 +77,9 @@ $text-muted: $grisulado-500;
 
 $component-active-bg: $blue;
 $link-color: $blue;
+
 $custom-select-indicator-color: $gray-800;
 $custom-select-bg-size: 10px 7.5px;
 $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='3' viewBox='0 0 4 3'><path fill='#{$custom-select-indicator-color}' d='M2 2.8L0 0.2h4L2 2.8z'/></svg>") !default;
+
+$custom-control-indicator-checked-color: $grisulado-900;

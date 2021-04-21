@@ -43,4 +43,6 @@ $border-radius-container: spaceUnits(2);
 
 /* === Focus === */
 
-$focus-box-shadow: 0 0 0 $input-focus-width theme-color-level('info', 2);
+$focus-color: theme-color-level('info', 2);
+$focus-width: 2px;
+$focus-box-shadow: 0 0 0 $focus-width $focus-color;
