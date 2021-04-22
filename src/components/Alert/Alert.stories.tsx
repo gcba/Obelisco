@@ -29,10 +29,8 @@ export const Titulo = (): JSX.Element => {
   return (
     <div className="alert alert-danger" role="alert">
       <p>
-        <strong>Este es un destacado de una alerta (opcional).</strong>
-      </p>     
-      <p>
-        Un texto simple para una alerta simple, incluso&nbsp;
+        <strong>Este es un destacado de una alerta (opcional). </strong><br />
+         Un texto simple para una alerta simple, incluso&nbsp;
         <a href="#">con hipervínculos</a>.
       </p>
     </div>
@@ -58,9 +56,9 @@ export const Toggle = (): JSX.Element => {
         Un texto simple para una alerta simple, incluso&nbsp;
         <a href="#">con hipervínculos</a>.
       </p>
-        <button type="button" className="btn btn-sm button-close btn-danger">
-          Cerrar
-        </button>
+      <button type="button" className="btn btn-sm button-close btn-danger text-right">
+        Cerrar
+      </button>
     </div>
   );
 };
@@ -83,10 +81,6 @@ export const Lista = (): JSX.Element => {
             <a href="#">Un texto simple para un enlace en una lista de alerta</a>
           </li>
         </ol>
-
-        <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
     </div>
   );
