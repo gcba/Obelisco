@@ -5,18 +5,23 @@ $alert-padding-x: 1rem;
 
 $alert-border-width: 2px;
 
-$alert-bg-level: -9;
+$alert-bg-level: 0;
 $alert-border-level: 0;
+
+$alert-icon-size: 1.25rem;
+$alert-icon-margin: 1.125rem;
+$alert-close-btn-width: 5.5rem;
+$alert-text-distance: 0.5rem;
 
 // Íconos para cada tipo de alerta
 
 $alert-icons: (
-  'success':    
+  'success':
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:;-ms-filter:"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8s3.589-8,8-8 s8,3.589,8,8S16.411,20,12,20z"></path><path d="M9.999 13.587L7.7 11.292 6.288 12.708 10.001 16.413 16.707 9.707 15.293 8.293z"></path></svg>'),
   'danger':
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:;-ms-filter:"><path d="M9.172 16.242L12 13.414 14.828 16.242 16.242 14.828 13.414 12 16.242 9.172 14.828 7.758 12 10.586 9.172 7.758 7.758 9.172 10.586 12 7.758 14.828z"></path><path d="M12,22c5.514,0,10-4.486,10-10S17.514,2,12,2S2,6.486,2,12S6.486,22,12,22z M12,4c4.411,0,8,3.589,8,8s-3.589,8-8,8 s-8-3.589-8-8S7.589,4,12,4z"></path></svg>'),
-  'primary':    
-   url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(56, 72, 92, 1);transform:;-ms-filter:"><path d="M11.001 10H13.001V15H11.001zM11 16H13V18H11z"></path><path d="M13.768,4.2C13.42,3.545,12.742,3.138,12,3.138s-1.42,0.407-1.768,1.063L2.894,18.064 c-0.331,0.626-0.311,1.361,0.054,1.968C3.313,20.638,3.953,21,4.661,21h14.678c0.708,0,1.349-0.362,1.714-0.968 c0.364-0.606,0.385-1.342,0.054-1.968L13.768,4.2z M4.661,19L12,5.137L19.344,19H4.661z"></path></svg>'),
+  'primary':
+    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(56, 72, 92, 1);transform:;-ms-filter:"><path d="M11.001 10H13.001V15H11.001zM11 16H13V18H11z"></path><path d="M13.768,4.2C13.42,3.545,12.742,3.138,12,3.138s-1.42,0.407-1.768,1.063L2.894,18.064 c-0.331,0.626-0.311,1.361,0.054,1.968C3.313,20.638,3.953,21,4.661,21h14.678c0.708,0,1.349-0.362,1.714-0.968 c0.364-0.606,0.385-1.342,0.054-1.968L13.768,4.2z M4.661,19L12,5.137L19.344,19H4.661z"></path></svg>'),
   'info':
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:;-ms-filter:"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,20c-4.411,0-8-3.589-8-8s3.589-8,8-8 s8,3.589,8,8S16.411,20,12,20z"></path><path d="M11 11H13V17H11zM11 7H13V9H11z"></path></svg>')
 );
@@ -24,6 +29,8 @@ $alert-icons: (
 /* === Custom variables and mixins === */
 
 @mixin alert-variant($background, $border, $color) {
+  @include gradient-bg($background);
+  border-color: $border;
   a {
     color: inherit;
   }
@@ -31,15 +38,7 @@ $alert-icons: (
 
 @mixin alert-icon($type) {
   &::before {
-    content: '';
-    background: map-get($alert-icons, $type);
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 1.25rem;
-    height: 1.25rem;
-    top: 1.125rem;
-    left: 1.125rem;
+    background-image: map-get($alert-icons, $type);
   }
 }
 
@@ -48,55 +47,90 @@ $alert-icons: (
 // Eliminamos el color secundario para las alertas.
 $tmp: $theme-colors;
 $theme-colors: map-remove($theme-colors, 'secondary');
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'primary': $orange
+  )
+);
 @import '~bootstrap/scss/alert';
 
 /* === Custom styles === */
 
 .alert {
-  border-left-width: 6px;
+  padding-left: $alert-padding-y + 2.375rem;
+  color: $white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: $alert-icon-size;
+    height: $alert-icon-size;
+    top: $alert-icon-margin;
+    left: $alert-icon-margin;
+  }
+
   @each $color, $value in $theme-colors {
     &.alert-#{$color} {
       @include alert-icon($color);
     }
-    &.alert-primary p{     
-      color: rgba(56, 72, 92, 1);
+  }
+
+  p,
+  ol {
+    margin-bottom: $alert-text-distance;
+  }
+
+  ol {
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: $alert-text-distance / 2;
+    }
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  &.alert-primary {
+    color: $grisulado-900;
+  }
+}
+
+.alert-dismissible {
+  padding-right: $alert-padding-x;
+
+  .close-btn {
+    margin-top: $alert-padding-y;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .alert-dismissible {
+    padding-right: $alert-close-btn-width + $alert-padding-x * 2;
+
+    .close-btn {
+      position: absolute;
+      top: 50%;
+      right: $alert-padding-x;
+      width: $alert-close-btn-width;
+      transform: translate(0, -50%);
+      margin-top: 0;
     }
   }
 }
 
-//Cambio fondo de colores en alerta
-.alert-primary {
-  background-color: #FFA82E;
-}
-.alert-danger {
-  background-color: #c93b3b;
-}
-.alert-info {
-  background-color: #007bc7;
-}
-.alert-success {
-  background-color: #26874a;
-}
+@include media-breakpoint-down(sm) {
+  .alert {
+    padding-left: 2.375rem;
 
-.alert h4,
-.alert p,
-.alert ol {
-  margin-left: 2.375rem;
-  color: #fff; 
-}
-
-.alert p,
-.alert ol {
-  margin-bottom: 0;
-}
-
-.alert ol {
-  padding-left: 1.5rem;
-}
-
-.button-close {
-  margin-left: 2.375rem;
-  margin-top: 5px;
+    &::before {
+      left: $alert-icon-margin / 2;
+    }
+  }
 }
 
 // Volvemos a agregar el color secundario
