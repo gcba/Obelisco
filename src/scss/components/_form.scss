@@ -76,7 +76,7 @@ $form-validation-states: (
   &:not(:disabled) ~ .custom-control-label {
     cursor: pointer;
 
-    :hover {
+    &:hover {
       background-color: $light;
     }
   }
