@@ -23,6 +23,11 @@ h5,
   font-family: $h5-font-family;
   font-weight: $h5-font-weight;
 }
+h6,
+.h6 {
+  font-family: $h6-font-family;
+  font-weight: $h6-font-weight;
+}
 
 .link-arrow {
   &:after {

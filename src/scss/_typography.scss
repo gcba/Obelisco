@@ -6,6 +6,14 @@ $font-family-polyfill: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica 
 $font-family-sans-serif: 'Open Sans', $font-family-polyfill;
 $font-family-headings: 'Nunito', $font-family-sans-serif;
 
+/*
+ * Font weight names
+ * 300: Light
+ * 400: Regular
+ * 600: Semi-bold
+ * 700: Bold
+ */
+
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 
 $headings-font-family: $font-family-headings;
@@ -17,9 +25,13 @@ $h2-font-size: $font-size-base * 1.75;
 $h3-font-size: $font-size-base * 1.3125;
 $h4-font-size: $font-size-base * 1.1875;
 $h5-font-size: $font-size-base;
+$h6-font-size: $font-size-base;
 
 $h5-font-family: $font-family-sans-serif;
 $h5-font-weight: $large-headings-font-weight;
+
+$h6-font-family: $font-family-sans-serif;
+$h6-font-weight: $large-headings-font-weight;
 
 
 $display1-size: 6rem;

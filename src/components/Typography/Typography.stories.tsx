@@ -23,6 +23,7 @@ export const Títulos = (): JSX.Element => {
       <h3>h3 - {demoText}</h3>
       <h4>h4 - {demoText}</h4>
       <h5>h5 - {demoText}</h5>
+      <h6>h6 - {demoText}</h6>
     </>
   );
 };
