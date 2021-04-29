@@ -57,20 +57,18 @@ CasillaMultiple.story = {
 
 export const TerminosYCondiciones = (): JSX.Element => {
   return (
-    <>
-      <div className="custom-control custom-checkbox">
-        <input
-          className="custom-control-input"
-          type="checkbox"
-          id="skills-copywrite-input"
-          name="skills"
-          value="copywrite"
-        />
-        <label className="custom-control-label" htmlFor="skills-copywrite-input">
-          Acepto los <a href="#">términos y condiciones</a>
-        </label>
-      </div>
-    </>
+    <div className="custom-control custom-checkbox">
+      <input
+        className="custom-control-input"
+        type="checkbox"
+        id="skills-copywrite-input"
+        name="skills"
+        value="copywrite"
+      />
+      <label className="custom-control-label" htmlFor="skills-copywrite-input">
+        Acepto los <a href="#">términos y condiciones</a>
+      </label>
+    </div>
   );
 };
 TerminosYCondiciones.story = {

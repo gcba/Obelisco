@@ -18,8 +18,8 @@ $black: #000;
 /* === Grisulado === */
 
 $grisulado-10: #f3f6f9;
-$grisulado-50: #dfe7f0;
-$grisulado-100: #d3d9e0;
+$grisulado-50: #e6ebf0;
+$grisulado-100: #d1d8e0;
 $grisulado-200: #b8c1cc;
 $grisulado-300: #9eaab8;
 $grisulado-400: #8a98a8;
@@ -31,16 +31,16 @@ $grisulado-900: #38485c;
 
 /* === Color palette === */
 
-$blue: #037dbf;
+$blue: #007bc7;
 // $indigo:  #9b59b6; // Bootstrap's default
-// $purple:  #9b59b6; // Bootstrap's default
+$purple: #9b59b6;
 // $pink:    #f54789; // Bootstrap's default
-$red: #c93b3b;
-$orange: #ffa82e;
-$yellow: #fdd306;
-$green: #26874a;
-// $teal:    #18b596; // Bootstrap's default
-$cyan: #007bc7;
+$red: #e74c3c;
+$orange: #f39c12;
+$yellow: #ffdb2e;
+$green: #88bf48;
+$teal: #18b596;
+$cyan: #009afd;
 
 /* === Color types === */
 
@@ -77,6 +77,9 @@ $text-muted: $grisulado-500;
 
 $component-active-bg: $blue;
 $link-color: $blue;
+
 $custom-select-indicator-color: $gray-800;
 $custom-select-bg-size: 10px 7.5px;
 $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='3' viewBox='0 0 4 3'><path fill='#{$custom-select-indicator-color}' d='M2 2.8L0 0.2h4L2 2.8z'/></svg>") !default;
+
+$custom-control-indicator-checked-color: $grisulado-900;

@@ -49,3 +49,22 @@ export const BloqueDeTexto = (): JSX.Element => {
     </div>
   );
 };
+
+export const CasillaDeSeleccion = (): JSX.Element => {
+  return (
+    <div className="form-wrapper bg-light p-4">
+      <div className="custom-control custom-checkbox">
+        <input
+          className="custom-control-input"
+          type="checkbox"
+          id="terms-and-conditions"
+          name="terms-and-conditions"
+          value="true"
+        />
+        <label className="custom-control-label" htmlFor="terms-and-conditions">
+          Acepto los <a href="#">términos y condiciones</a>
+        </label>
+      </div>
+    </div>
+  );
+};

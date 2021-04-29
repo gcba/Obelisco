@@ -4,6 +4,7 @@ $breadcrumb-divider: url('data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93
 $breadcrimb-divider-width: 1.5rem;
 $breadcrumb-bg: none;
 $breadcrumb-item-padding: 0.75rem;
+$breadcrumb-padding-x: 0;
 
 /* === Custom variables and mixins === */
 
@@ -16,6 +17,11 @@ $breadcrumb-item-padding: 0.75rem;
 .breadcrumb .breadcrumb-item {
   a {
     color: $link-color;
+    max-width: 16rem;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &:before {
