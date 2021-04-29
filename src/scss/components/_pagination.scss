@@ -1,0 +1,51 @@
+/* === Variable and mixins overides === */
+
+$pagination-padding-y: 0.25rem;
+$pagination-padding-x: 0.6rem;
+$pagination-margin-x: 0.2rem;
+$pagination-border-width: 0;
+
+$pagination-hover-bg: transparent;
+
+/* === Custom variables and mixins === */
+
+$pagination-icon-color: svgColor($link-color);
+$pagination-icon-size: 1.25rem;
+$pagination-left-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="#{$pagination-icon-size}" height="#{$pagination-icon-size}" viewBox="0 0 24 24" style="fill:#{$pagination-icon-color};transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
+$pagination-right-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="#{$pagination-icon-size}" height="#{$pagination-icon-size}" viewBox="0 0 24 24" style="fill:#{$pagination-icon-color};transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
+
+$page-navigation-border: 1px solid $border-color;
+
+/* === Bootstrap Import === */
+
+@import '~bootstrap/scss/pagination';
+
+/* === Custom styles === */
+
+.page-link {
+  border-radius: $border-radius;
+  margin: 0 $pagination-margin-x;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+*[class^='page-'][class$='-icon'] {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.page-previous-icon {
+  content: $pagination-left-icon;
+}
+
+.page-next-icon {
+  content: $pagination-right-icon;
+}
+
+.page-navigation {
+  padding-top: spaceUnits(6);
+  padding-bottom: spaceUnits(4);
+  border-bottom: $page-navigation-border;
+}
