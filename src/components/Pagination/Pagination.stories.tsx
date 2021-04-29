@@ -15,7 +15,7 @@ export default {
 
 export const Simple = (): JSX.Element => {
   return (
-    <nav aria-label="Ejemplo de pagiación">
+    <nav aria-label="Ejemplo de paginación">
       <ul className="pagination">
         <li className="page-item">
           <a className="page-link" href="#">
@@ -49,7 +49,7 @@ export const Simple = (): JSX.Element => {
 
 export const Compleja = (): JSX.Element => {
   return (
-    <nav aria-label="Ejemplo de pagiación">
+    <nav aria-label="Ejemplo de paginación">
       <ul className="pagination">
         <li className="page-item">
           <a className="page-link" href="#">
