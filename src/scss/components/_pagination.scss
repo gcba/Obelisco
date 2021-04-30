@@ -5,6 +5,7 @@ $pagination-padding-x: 0.6rem;
 $pagination-margin-x: 0.2rem;
 $pagination-border-width: 0;
 
+$pagination-bg: transparent;
 $pagination-hover-bg: transparent;
 
 /* === Custom variables and mixins === */
@@ -22,26 +23,30 @@ $page-navigation-border: 1px solid $border-color;
 
 /* === Custom styles === */
 
-.page-link {
-  border-radius: $border-radius;
-  margin: 0 $pagination-margin-x;
+.pagination {
+  justify-content: center;
 
-  &:hover {
-    text-decoration: underline;
+  .page-link {
+    border-radius: $border-radius;
+    margin: 0 $pagination-margin-x;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
-}
 
-*[class^='page-'][class$='-icon'] {
-  display: inline-block;
-  vertical-align: text-bottom;
-}
+  *[class^='page-'][class$='-icon'] {
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
 
-.page-previous-icon {
-  content: $pagination-left-icon;
-}
+  .page-previous-icon {
+    content: $pagination-left-icon;
+  }
 
-.page-next-icon {
-  content: $pagination-right-icon;
+  .page-next-icon {
+    content: $pagination-right-icon;
+  }
 }
 
 .page-navigation {
