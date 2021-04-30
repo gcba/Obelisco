@@ -32,20 +32,20 @@ $grisulado-900: #38485c;
 /* === Color palette === */
 
 $blue: #007bc7;
-// $indigo:  #9b59b6; // Bootstrap's default
 $purple: #9b59b6;
-// $pink:    #f54789; // Bootstrap's default
-$red: #e74c3c;
-$orange: #f39c12;
-$yellow: #ffdb2e;
-$green: #88bf48;
+$red: #c93b3b;
+$orange: #ffa82e;
+$yellow: #fdd306;
+$green: #26874a;
 $teal: #18b596;
 $cyan: #009afd;
+// $indigo:  #9b59b6; // Bootstrap's default
+// $pink:    #f54789; // Bootstrap's default
 
 /* === Color types === */
 
 $primary: $yellow;
-$secondary: $grisulado-500;
+$secondary: $grisulado-600;
 $success: $green;
 $info: $cyan;
 $warning: $yellow;
