@@ -15,7 +15,7 @@ export default {
 export const Generico = (): JSX.Element => {
   return (
     <div className="modal d-block" tabIndex={-1} role="dialog">
-      <div className="modal-dialog" role="document">
+      <div className="modal-dialog modal-sm" role="document">
         <div className="modal-content">
           <div className="modal-header">
             <h4 className="modal-title">Modal</h4>
@@ -47,7 +47,7 @@ export const Demo = (): JSX.Element => {
       </button>
 
       <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal">
-        <div className="modal-dialog" role="document">
+        <div className="modal-dialog modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <h4 className="modal-title">Modal</h4>

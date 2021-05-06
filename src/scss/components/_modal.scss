@@ -13,6 +13,8 @@ $modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x;
 
 $modal-footer-margin-between: 0.75rem; // 12px
 
+$modal-content-border-radius: .5rem; // 8px
+$modal-sm: 340px;
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
@@ -51,7 +53,11 @@ $modal-footer-margin-between: 0.75rem; // 12px
   border-top: 0;
   padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x;
 
-  & > *:last-child{
+  & > *:first-child {
+    margin-left: 0;
+  }
+
+  & > *:last-child {
     margin-right: 0;
   }
 }
