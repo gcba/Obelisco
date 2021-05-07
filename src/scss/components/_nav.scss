@@ -37,7 +37,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
   @include border-radius($border-radius-container);
 
   &.active {
-    color: $blue;
+    color: $grisulado-900;
     font-weight: $nav-link-active-font-weight;
   }
 
