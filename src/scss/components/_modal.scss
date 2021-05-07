@@ -13,8 +13,9 @@ $modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x;
 
 $modal-footer-margin-between: 0.75rem; // 12px
 
-$modal-content-border-radius: .5rem; // 8px
+$modal-content-border-radius: 0.5rem; // 8px
 $modal-sm: 340px;
+$modal-dialog-margin-y-sm-up: 3rem;
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
@@ -22,7 +23,7 @@ $modal-sm: 340px;
 
 /* === Custom styles === */
 
-// Nota de Nico: Estos estilos no se comportan siempre de la forma experada,
+// Nota de Nico: Estos estilos no se comportan siempre de la forma esperada,
 // habría que ajustarlos, pero al cambiar el funcionamiento de los modals,
 // no va a hacer falta.
 
@@ -39,7 +40,7 @@ $modal-sm: 340px;
   }
 }
 
-.modal-header{
+.modal-header {
   border-bottom: 0;
   box-shadow: 0 1.563rem 0 $modal-header-divisor rgba($grisulado-50, 1);
   padding-bottom: $modal-header-padding-y * 0.8;
