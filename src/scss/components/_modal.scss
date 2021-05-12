@@ -1,14 +1,21 @@
 /* === Variable and mixins overides === */
 
 $modal-header-padding-x: 1.5rem; // 24px
+$modal-header-padding-y: 1.25rem; // 20px
 $modal-header-padding: $modal-header-padding-y $modal-header-padding-x;
-$modal-header-border-color: $grisulado-100;
+
+$modal-header-divisor: $modal-header-padding-x * -1;
 
 // Whitespace on modal body content
-$modal-inner-padding: 1.5rem; // 24px
+$modal-inner-padding-x: 1.5rem; // 24px
+$modal-inner-padding-y: 1.25rem; // 20px
+$modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x;
 
-$modal-footer-divisor: $modal-inner-padding * -1;
+$modal-footer-margin-between: 0.75rem; // 12px
 
+$modal-content-border-radius: 0.5rem; // 8px
+$modal-sm: 340px;
+$modal-dialog-margin-y-sm-up: 3rem;
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
@@ -16,7 +23,7 @@ $modal-footer-divisor: $modal-inner-padding * -1;
 
 /* === Custom styles === */
 
-// Nota de Nico: Estos estilos no se comportan siempre de la forma experada,
+// Nota de Nico: Estos estilos no se comportan siempre de la forma esperada,
 // habría que ajustarlos, pero al cambiar el funcionamiento de los modals,
 // no va a hacer falta.
 
@@ -33,12 +40,25 @@ $modal-footer-divisor: $modal-inner-padding * -1;
   }
 }
 
+.modal-header {
+  border-bottom: 0;
+  box-shadow: 0 1.563rem 0 $modal-header-divisor rgba($grisulado-50, 1);
+  padding-bottom: $modal-header-padding-y * 0.8;
+}
+
 .modal-body > *:last-child {
   margin: 0;
 }
 
 .modal-footer {
   border-top: 0;
-  box-shadow: 0 -1.563rem 0 $modal-footer-divisor rgba($grisulado-50, 1);
-  padding: $modal-inner-padding - $modal-footer-margin-between 1.25rem;
+  padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x;
+
+  & > *:first-child {
+    margin-left: 0;
+  }
+
+  & > *:last-child {
+    margin-right: 0;
+  }
 }
