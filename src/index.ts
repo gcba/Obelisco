@@ -6,3 +6,5 @@
 // Components
 export { Button } from './components/Button';
 export { ButtonType } from './components/utils';
+
+export { Card, SimpleCard, SimpleCardProps, CardProps } from './components/Card';
