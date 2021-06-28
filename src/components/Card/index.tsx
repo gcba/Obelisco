@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-type CardImage = {
+export type CardImage = {
   src: string;
   alt?: string;
   width?: number;
 };
-type CardIcon = {
+export type CardIcon = {
   icon: string;
   color?: string;
 };
-type CardPicture = CardImage | CardIcon;
+export type CardPicture = CardImage | CardIcon;
 
 interface BaseCardProps {
   title: string;
@@ -45,10 +45,11 @@ export interface CardProps extends BaseCardProps {
   picture?: CardPicture;
   footer?: string | JSX.Element;
   orientation?: 'horizontal' | 'vertical';
+  onClick?: (event?: React.MouseEvent) => void;
 }
 
 export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardProps>) => {
-  const { title, subTitle, description, href, picture, footer, orientation } = props;
+  const { title, subTitle, description, href, picture, footer, orientation, onClick } = props;
   const isHorizontal = orientation === 'horizontal';
 
   let className = `card`;
@@ -57,6 +58,7 @@ export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardPro
 
   const containerProps: { [key: string]: unknown } = { className };
   if (href) containerProps.href = href;
+  if (onClick) containerProps.onClick = onClick;
 
   containerProps.children = (
     <>
@@ -75,7 +77,7 @@ export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardPro
     </>
   );
 
-  return React.createElement(href ? 'a' : 'div', containerProps);
+  return React.createElement(href ? 'a' : onClick ? 'button' : 'div', containerProps);
 };
 
 const getImage = (picture?: CardImage, isHorizontal?: boolean): JSX.Element | null => {
