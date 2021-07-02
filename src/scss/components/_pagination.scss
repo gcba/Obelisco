@@ -50,6 +50,25 @@ $page-navigation-border: 1px solid $border-color;
   }
 }
 
+@include media-breakpoint-down(xs) {
+  .pagination {
+    display: block;
+
+    .page-item {
+      display: inline-block;
+
+      .page-link {
+        margin: 0;
+      }
+
+      .page-previous-text,
+      .page-next-text {
+        display: none;
+      }
+    }
+  }
+}
+
 .page-navigation {
   padding-top: spaceUnits(6);
   padding-bottom: spaceUnits(4);

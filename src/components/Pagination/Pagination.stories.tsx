@@ -19,7 +19,8 @@ export const Simple = (): JSX.Element => {
       <ul className="pagination">
         <li className="page-item">
           <a className="page-link" href="#">
-            <span className="page-previous-icon" aria-hidden="true" /> Anterior
+            <span className="page-previous-icon" aria-hidden="true" />
+            <span className="page-previous-text"> Anterior</span>
           </a>
         </li>
         <li className="page-item active">
@@ -39,7 +40,8 @@ export const Simple = (): JSX.Element => {
         </li>
         <li className="page-item">
           <a className="page-link" href="#">
-            Siguiente <span className="page-next-icon" aria-hidden="true" />
+            <span className="page-next-text">Siguiente </span>
+            <span className="page-next-icon" aria-hidden="true" />
           </a>
         </li>
       </ul>
@@ -53,7 +55,8 @@ export const Compleja = (): JSX.Element => {
       <ul className="pagination">
         <li className="page-item">
           <a className="page-link" href="#">
-            <span className="page-previous-icon" aria-hidden="true" /> Anterior
+            <span className="page-previous-icon" aria-hidden="true" />
+            <span className="page-previous-text"> Anterior</span>
           </a>
         </li>
         <li className="page-item active">
@@ -78,7 +81,8 @@ export const Compleja = (): JSX.Element => {
         </li>
         <li className="page-item">
           <a className="page-link" href="#">
-            Siguiente <span className="page-next-icon" aria-hidden="true" />
+            <span className="page-next-text">Siguiente </span>
+            <span className="page-next-icon" aria-hidden="true" />
           </a>
         </li>
       </ul>
