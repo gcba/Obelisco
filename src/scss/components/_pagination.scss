@@ -82,7 +82,7 @@ $pagination-icon-size: 1.25rem;
 
       .page-previous-text,
       .page-next-text {
-        display: none;
+        @include sr-only;
       }
     }
   }
