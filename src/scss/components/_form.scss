@@ -7,6 +7,8 @@ $input-placeholder-color: $grisulado-300;
 $input-disabled-color: $grisulado-400;
 $input-disabled-bg: $grisulado-50;
 
+$label-margin-bottom: spaceUnits(1);
+
 $custom-select-disabled-color: $input-disabled-color;
 $custom-select-disabled-bg: $input-disabled-bg;
 
@@ -52,6 +54,7 @@ $form-validation-states: (
 
 .form-group label {
   font-size: $font-size-sm;
+  margin-bottom: $label-margin-bottom;
 }
 
 .custom-control-label {
