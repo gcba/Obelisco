@@ -6,88 +6,21 @@ import './Pagination.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
+import { Pagination } from '.';
 
 // Config
 export default {
   title: 'Componentes|Paginación',
+  component: Pagination,
   decorators: [withA11y]
 };
 
 export const Simple = (): JSX.Element => {
-  return (
-    <nav aria-label="Ejemplo de paginación">
-      <ul className="pagination">
-        <li className="page-item">
-          <a className="page-link" href="#">
-            <span className="page-previous-icon" aria-hidden="true" />
-            <span className="page-previous-text"> Anterior</span>
-          </a>
-        </li>
-        <li className="page-item active">
-          <a className="page-link" href="#">
-            1
-          </a>
-        </li>
-        <li className="page-item">
-          <a className="page-link" href="#">
-            2
-          </a>
-        </li>
-        <li className="page-item">
-          <a className="page-link" href="#">
-            3
-          </a>
-        </li>
-        <li className="page-item">
-          <a className="page-link" href="#">
-            <span className="page-next-text">Siguiente </span>
-            <span className="page-next-icon" aria-hidden="true" />
-          </a>
-        </li>
-      </ul>
-    </nav>
-  );
+  return <Pagination pages={3} ariaLabel="Ejemplo de paginación simple" />;
 };
 
 export const Compleja = (): JSX.Element => {
-  return (
-    <nav aria-label="Ejemplo de paginación">
-      <ul className="pagination">
-        <li className="page-item">
-          <a className="page-link" href="#">
-            <span className="page-previous-icon" aria-hidden="true" />
-            <span className="page-previous-text"> Anterior</span>
-          </a>
-        </li>
-        <li className="page-item active">
-          <a className="page-link" href="#">
-            1
-          </a>
-        </li>
-        {[2, 3, 4, 5, 6, 7].map(i => (
-          <li className="page-item" key={i}>
-            <a className="page-link" href="#">
-              {i}
-            </a>
-          </li>
-        ))}
-        <li className="page-item disabled">
-          <span className="page-link">...</span>
-        </li>
-        <li className="page-item">
-          <a className="page-link" href="#">
-            60
-          </a>
-        </li>
-        <li className="page-item">
-          <a className="page-link" href="#">
-            <span className="page-next-text">Siguiente </span>
-            <span className="page-next-icon" aria-hidden="true" />
-          </a>
-        </li>
-      </ul>
-    </nav>
-  );
+  return <Pagination pages={60} default={9} ariaLabel="Ejemplo de paginación compleja" />;
 };
 
 export const NavegacionDePagina = (): JSX.Element => (

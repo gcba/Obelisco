@@ -11,12 +11,20 @@ $pagination-disabled-bg: transparent;
 
 /* === Custom variables and mixins === */
 
-$pagination-icon-color: svgColor($link-color);
-$pagination-icon-size: 1.25rem;
-$pagination-left-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="#{$pagination-icon-size}" height="#{$pagination-icon-size}" viewBox="0 0 24 24" style="fill:#{$pagination-icon-color};transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
-$pagination-right-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="#{$pagination-icon-size}" height="#{$pagination-icon-size}" viewBox="0 0 24 24" style="fill:#{$pagination-icon-color};transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
-
 $page-navigation-border: 1px solid $border-color;
+
+$pagination-icon-size: 1.25rem;
+
+@function pagination-icon($side, $color) {
+  $path: '';
+  @if $side == left {
+    $path: "<path d='M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z'></path>";
+  } @else {
+    $path: "<path d='M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z'></path>";
+  }
+  $color: svgColor($color);
+  @return url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="#{$pagination-icon-size}" height="#{$pagination-icon-size}" viewBox="0 0 24 24" style="fill:#{$color};transform:;-ms-filter:">#{$path}</svg>');
+}
 
 /* === Bootstrap Import === */
 
@@ -25,38 +33,49 @@ $page-navigation-border: 1px solid $border-color;
 /* === Custom styles === */
 
 .pagination {
-  justify-content: center;
+  display: block;
+  text-align: center;
 
-  .page-link {
-    border-radius: $border-radius;
-    margin: 0 $pagination-margin-x;
+  .page-item {
+    display: inline-block;
 
-    &:hover {
-      text-decoration: underline;
+    .page-link {
+      border-radius: $border-radius;
+      margin: 0 $pagination-margin-x;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
-  *[class^='page-'][class$='-icon'] {
+  .page-previous-icon,
+  .page-next-icon {
     display: inline-block;
     vertical-align: text-bottom;
   }
 
   .page-previous-icon {
-    content: $pagination-left-icon;
+    content: pagination-icon(left, $link-color);
   }
 
   .page-next-icon {
-    content: $pagination-right-icon;
+    content: pagination-icon(right, $link-color);
+  }
+
+  .page-item.disabled {
+    .page-previous-icon {
+      content: pagination-icon(left, $pagination-disabled-color);
+    }
+    .page-next-icon {
+      content: pagination-icon(right, $pagination-disabled-color);
+    }
   }
 }
 
 @include media-breakpoint-down(xs) {
   .pagination {
-    display: block;
-
     .page-item {
-      display: inline-block;
-
       .page-link {
         margin: 0;
       }
