@@ -9,6 +9,7 @@
 // Custom variables
 @import 'colors';
 @import 'typography';
+@import 'grid';
 
 // Bootstrap base
 @import '~bootstrap/scss/functions';
@@ -23,10 +24,10 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import '~bootstrap/scss/type';
 @import '~bootstrap/scss/code';
 @import '~bootstrap/scss/close';
+@import '~bootstrap/scss/grid';
 
 // Custom styles
 @import 'miscellaneous';
-@import 'grid';
 @import 'components/typography';
 
 // Components
