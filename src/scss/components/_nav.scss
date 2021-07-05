@@ -37,7 +37,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
   font-weight: $nav-link-font-weight;
   @include border-radius($border-radius);
 
-  &.active {
+  &.active-child {
     color: $grisulado-900;
     font-weight: $nav-link-active-font-weight;
   }
@@ -114,22 +114,29 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
   }
 }
 
-@include media-breakpoint-down(md) {
-  .nav-responsive {
-    background-color: $nav-mobile-bg;
+.nav-responsive {
+  background-color: $nav-mobile-bg;
 
-    .nav-link {
-      padding: $nav-link-padding-y $nav-link-padding-x + $nav-link-padding-x/4;
-      border-radius: 0;
-    }
+  .nav-link {
+    padding: $nav-link-padding-y $nav-link-padding-x + $nav-link-padding-x/4;
+    border-radius: 0;
   }
 }
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
   .nav-mobile-trigger {
     display: none;
   }
-  .nav-responsive.collapse:not(.show) {
-    display: block;
+  .nav-responsive {
+    background-color: transparent;
+
+    .nav-link {
+      padding: $nav-link-padding-y $nav-link-padding-x;
+      @include border-radius($border-radius);
+    }
+
+    &.collapse:not(.show) {
+      display: block;
+    }
   }
 }

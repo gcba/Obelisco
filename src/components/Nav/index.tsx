@@ -12,25 +12,24 @@ export interface NavItem {
 export interface NavProps {
   items: NavItem[];
   selected?: string;
-  isMainNav?: boolean;
+  navSize?: 'default' | 'large';
   onClick?: (id: string) => void;
 }
 
+const listClasses = 'nav flex-column nav-pills';
+
 export const Nav: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
-  const { items, selected, isMainNav, onClick } = props;
+  const { items, selected, navSize, onClick } = props;
+
+  const mainListClasses = classnames(listClasses, {
+    'nav-lg': navSize === 'large'
+  });
 
   return (
     <nav>
-      <ul className="nav flex-column">
+      <ul className={mainListClasses}>
         {items.map(item => (
-          <NavItemComponent
-            {...item}
-            key={item.id}
-            level={0}
-            onClick={onClick}
-            selected={selected}
-            isMainNav={isMainNav}
-          />
+          <NavItemComponent {...item} key={item.id} level={0} onClick={onClick} selected={selected} />
         ))}
       </ul>
     </nav>
@@ -41,22 +40,18 @@ interface NavItemComponentProps extends NavItem {
   level: number;
   selected?: string;
   onClick?: (id: string) => void;
-  isMainNav?: boolean;
 }
 
 const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
-  const { name, id, href, children, level, disabled, selected, isMainNav } = props;
+  const { name, id, href, children, level, disabled, selected } = props;
 
-  const isActive = selected && (id === selected || hasActiveChild(children, selected));
+  const isActive = selected && id === selected;
+  const hasActiveChild = checkActiveChild(children, selected);
 
   const linkClassName = classnames('nav-link', {
-    'nav-link-header': level === 0 && isMainNav,
+    'active-child': !disabled && hasActiveChild,
     active: !disabled && isActive,
     disabled: disabled
-  });
-
-  const childrenClassName = classnames('nav', 'flex-column', {
-    'nav-pills': level > 0
   });
 
   const handleClick: React.MouseEventHandler = event => {
@@ -76,8 +71,8 @@ const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemCompone
         tabIndex={disabled ? -1 : undefined}>
         {name}
       </a>
-      {!disabled && isActive && children && (
-        <ul className={childrenClassName}>
+      {!disabled && (isActive || hasActiveChild) && children && (
+        <ul className={listClasses}>
           {children.map(item => (
             <NavItemComponent {...item} key={item.id} level={level + 1} onClick={props.onClick} selected={selected} />
           ))}
@@ -87,8 +82,8 @@ const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemCompone
   );
 };
 
-const hasActiveChild = (children?: NavItem[], selected?: string): boolean => {
+const checkActiveChild = (children?: NavItem[], selected?: string): boolean => {
   return !!children?.some(child => {
-    return child.id === selected || (child.children && hasActiveChild(child.children, selected));
+    return child.id === selected || (child.children && checkActiveChild(child.children, selected));
   });
 };

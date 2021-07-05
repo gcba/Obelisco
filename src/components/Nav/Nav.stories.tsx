@@ -29,11 +29,12 @@ export const Simple = (): JSX.Element => (
 );
 
 const multiLevel = [
+  { name: 'Categorías', id: '0' },
   {
     name: 'Locales y comercios',
     id: '1',
     children: [
-      { name: 'Local Indumentaria y calzado. (Actividades comerciales de venta).', id: '1.2' },
+      { name: 'Local Indumentaria y calzado. (Actividades comerciales de venta).', id: '1.1' },
       {
         name: 'Locales gastronómicos: “para llevar/takeaway”',
         id: '1.2',
@@ -52,7 +53,7 @@ const multiLevel = [
 
 export const Con2Niveles = (): JSX.Element => (
   <div className="nav-container">
-    <Nav items={multiLevel} selected="1.2.2" />
+    <Nav items={multiLevel} navSize="large" selected="1.2.2" />
   </div>
 );
 
@@ -63,62 +64,7 @@ export const Responsive = (): JSX.Element => (
         Acerca de Obelisco
       </a>
       <div className="nav-responsive collapse" id="sidebar-nav">
-        <ul className="nav nav-lg flex-column">
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Categorías
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link nav-link-lg" href="#">
-              Locales y comercios
-            </a>
-            <ul className="nav flex-column">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Local Indumentaria y calzado. (Actividades comerciales de venta).
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" href="#">
-                  Locales gastronómicos: “para llevar/takeaway”
-                </a>
-                <ul className="nav nav-pills flex-column">
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Con local a la calle
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" href="#">
-                      Food trucks
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Locales de óptica.
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Comercial minorista (excluyendo indumentaria y calzado)
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link nav-link-lg" href="#">
-              Actividades jurídicas
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link nav-link-lg" href="#">
-              Otras actividades
-            </a>
-          </li>
-        </ul>
+        <Nav items={multiLevel} navSize="large" selected="1.2.2" />
       </div>
     </nav>
   </div>
