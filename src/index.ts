@@ -8,3 +8,4 @@ export { Button, ButtonProps } from './components/Button';
 export { ButtonType } from './components/utils';
 export { Card, SimpleCard, SimpleCardProps, CardProps } from './components/Card';
 export { Pagination, PaginationProps } from './components/Pagination';
+export { Nav, NavProps, NavItem } from './components/Nav';
