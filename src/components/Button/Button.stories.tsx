@@ -62,7 +62,7 @@ export const Activos = (): JSX.Element => {
 export const Tamanos = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {sizes.slice(0, 2).map(size => (
+      {sizes.map(size => (
         <Button key={size} type="secondary" size={size}>
           {size}
         </Button>
@@ -74,9 +74,14 @@ Tamanos.story = { name: 'Tamaños' };
 
 export const Deshabilitado = (): JSX.Element => {
   return (
-    <Button type="secondary" disabled={true}>
-      Deshabilitado
-    </Button>
+    <div className="btn-wrapper">
+      <Button type="secondary" disabled={true}>
+        Deshabilitado
+      </Button>
+      <Button type="link" disabled={true}>
+        Deshabilitado
+      </Button>
+    </div>
   );
 };
 
