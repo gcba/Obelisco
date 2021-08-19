@@ -10,7 +10,7 @@ import { Card, SimpleCard } from '.';
 
 // Config
 export default {
-  title: 'Componentes|Tarjetas',
+  title: 'Componentes|Tarjetas/Tipos',
   component: Card,
   decorators: [withA11y]
 };
@@ -23,7 +23,7 @@ const footer = 'Last updated 3 mins ago';
 export const TitleSubtitleText = (): JSX.Element => {
   return (
     <div className="cards-container">
-      <Card title={title} subTitle={subTitle} description={description} footer={footer} />
+      <Card title={title} subTitle={subTitle} description={description} footer={footer} href="#" />
     </div>
   );
 };
@@ -39,6 +39,7 @@ export const Ícono = (): JSX.Element => {
           icon: 'bx-news',
           color: '#009afd'
         }}
+        href="#"
       />
     </div>
   );
