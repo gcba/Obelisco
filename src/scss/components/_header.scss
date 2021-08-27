@@ -8,20 +8,3 @@ header {
   opacity: 1;
   padding-top: 20px;
 }
-
-.icon-search {
-  content: "";
-  background-image: url(../../static/header/search-regular-24.png);
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-.icon-user {
-  content: "";
-  background-image: url(../../static/header/user-solid-24.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-}
