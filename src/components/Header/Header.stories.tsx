@@ -17,29 +17,33 @@ export default {
 export const Header = (): JSX.Element => {
   return (
     <header>
-      <div className="container">
+      <nav className="navbar navbar-expand-lg">
         <div className="row justify-content-between">
-          <div className="col-md-6 col-sm-12 col-xs-12 text-center">
+          <div className="col-md-6 col-sm-12 col-xs-12 text-center">          
             <a href="http://buenosaires.local" className="inline-block">
               <img src="header/Recurso 5@4x.png"></img>
             </a>
           </div>
-          <div className="col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center">
-            {iconTypes.map(type => (
-              <div className="form-wrapper">
-                <div className="form-group">
-                  <input type="search" className={`form-control form-${type}`} id="name-input" name="name" placeholder="Buscar..." />
+          <div className="col-md-4 col-sm-12 col-xs-12 d-flex">
+            <form className="form-inline ">
+              {iconTypes.map(type => (
+                <div className="form-wrapper">
+                  <div className="form-group">
+                    <input type="search" className={`form-control form-${type}`} id="name-input" name="name" placeholder="Buscar..." />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </form>
           </div>
         </div>
-      </div>
+      </nav>
     </header>
   );
 };
 
+
+
 {/* <div className="col-md-2 col-sm-12 col-xs-12 d-flex justify-content-center p-2">
-            <span>Mi perfil</span>
-            <span className="icon-user"></span>
-          </div> */}
+    <span>Mi perfil</span>
+    <span className="icon-user"></span>
+  </div> */}
