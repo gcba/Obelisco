@@ -10,9 +10,6 @@ export const alertTypes: AlertType[] = ['primary', 'success', 'info', 'danger'];
 export type Size = 'default' | 'small' | 'large';
 export const sizes: Size[] = ['small', 'default', 'large'];
 
-export type IconType = 'search';
-export const iconTypes: IconType[] = ['search'];
-
 export const sizeToClass = (size: Size | 'default'): string => {
   switch (size) {
     case 'default':

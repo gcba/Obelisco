@@ -1,12 +1,10 @@
 // Base
 import React from 'react';
-import './Header.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { iconTypes } from '../utils';
 
 // Config
 export default {
@@ -14,36 +12,58 @@ export default {
   decorators: [withA11y]
 };
 
-export const Header = (): JSX.Element => {
+export const BusquedaCerrada = (): JSX.Element => {
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg">
-        <div className="row justify-content-between">
-          <div className="col-md-6 col-sm-12 col-xs-12 text-center">          
-            <a href="http://buenosaires.local" className="inline-block">
-              <img src="header/Recurso 5@4x.png"></img>
-            </a>
-          </div>
-          <div className="col-md-4 col-sm-12 col-xs-12 d-flex">
-            <form className="form-inline ">
-              {iconTypes.map(type => (
-                <div className="form-wrapper">
-                  <div className="form-group">
-                    <input type="search" className={`form-control form-${type}`} id="name-input" name="name" placeholder="Buscar..." />
-                  </div>
-                </div>
-              ))}
-            </form>
-          </div>
+    <header className="navbar navbar-light search-active">
+      <div className="container">
+        <a className="navbar-brand" href="#">
+          <img className="d-none d-md-inline" src="header/header-logo.png" alt="Logo de la ciudad de buenos aires" />
+          <img className="d-md-none" src="header/header-logo-mobile.png" alt="Logo de la ciudad de buenos aires" />
+        </a>
+        <div className="navbar-search">
+          <form className="form-inline">
+            <input
+              type="search"
+              className="form-control input-search"
+              id="name-input"
+              name="name"
+              placeholder="Buscar..."
+            />
+          </form>
         </div>
-      </nav>
+      </div>
     </header>
   );
 };
 
+BusquedaCerrada.story = {
+  name: 'Búsqueda cerrada en mobile'
+};
 
+export const BusquedaAbierta = (): JSX.Element => {
+  return (
+    <header className="navbar navbar-light active-search">
+      <div className="container">
+        <a className="navbar-brand" href="#">
+          <img className="d-none d-md-inline" src="header/header-logo.png" alt="Logo de la ciudad de buenos aires" />
+          <img className="d-md-none" src="header/header-logo-mobile.png" alt="Logo de la ciudad de buenos aires" />
+        </a>
+        <div className="navbar-search">
+          <form className="form-inline">
+            <input
+              type="search"
+              className="form-control input-search"
+              id="name-input"
+              name="name"
+              placeholder="Buscar..."
+            />
+          </form>
+        </div>
+      </div>
+    </header>
+  );
+};
 
-{/* <div className="col-md-2 col-sm-12 col-xs-12 d-flex justify-content-center p-2">
-    <span>Mi perfil</span>
-    <span className="icon-user"></span>
-  </div> */}
+BusquedaAbierta.story = {
+  name: 'Búsqueda abierta en mobile'
+};
