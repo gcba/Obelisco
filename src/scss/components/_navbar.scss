@@ -1,0 +1,77 @@
+/* === Variable and mixins overides === */
+
+$navbar-padding-y: spaceUnits(2);
+$navbar-padding-y-desktop: spaceUnits(4);
+$navbar-brand-padding-y: 0;
+
+/* === Custom variables and mixins === */
+
+$navbar-height: spaceUnits(16);
+$navbar-height-desktop: spaceUnits(20);
+$navbar-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+$navbar-search-with: spaceUnits(80);
+$navbar-search-closed-padding-x: spaceUnits(5);
+
+/* === Bootstrap Import === */
+
+@import '~bootstrap/scss/navbar';
+
+/* === Custom styles === */
+
+.navbar {
+  height: $navbar-height;
+
+  .input-search {
+    width: $navbar-search-with;
+  }
+
+  @include media-breakpoint-down(xs) {
+    &:not(.active-search) {
+      .input-search {
+        width: 0;
+        padding-left: $navbar-search-closed-padding-x;
+        padding-right: $navbar-search-closed-padding-x;
+        background-position: center;
+        color: transparent;
+        pointer-events: none;
+
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+
+    &.active-search {
+      .container > *:not(.navbar-search) {
+        display: none;
+      }
+
+      .navbar-search {
+        width: 100%;
+        .input-search {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    height: $navbar-height-desktop;
+    padding-top: $navbar-padding-y-desktop;
+    padding-bottom: $navbar-padding-y-desktop;
+
+    .form-group {
+      margin-bottom: 0;
+
+      .input-search {
+        width: $navbar-search-with;
+      }
+    }
+  }
+}
+
+.navbar-light {
+  background-color: $white;
+  box-shadow: $navbar-box-shadow;
+}

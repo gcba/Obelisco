@@ -23,7 +23,9 @@
     "build:storybook": "build-storybook -s ./static -c .storybook -o .storybook-out",
     "release": "semantic-release"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@gcba/obelisco": "^1.13.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@storybook/addon-a11y": "^5.3.18",
