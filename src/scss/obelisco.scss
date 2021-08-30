@@ -7,9 +7,9 @@
 // @import "~bootstrap/scss/bootstrap";
 
 // Custom variables
-@import 'colors';
-@import 'typography';
-@import 'grid';
+@import 'variables/colors';
+@import 'variables/typography';
+@import 'variables/grid';
 
 // Bootstrap base
 @import '~bootstrap/scss/functions';
@@ -27,8 +27,9 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import '~bootstrap/scss/grid';
 
 // Custom styles
-@import 'miscellaneous';
+@import 'variables/miscellaneous';
 @import 'components/typography';
+@import 'utilities/background';
 
 // Components
 @import 'components/alert';
@@ -36,6 +37,7 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/button';
 @import 'components/cards';
 @import 'components/form';
+@import 'components/footer';
 @import 'components/nav';
 @import 'components/navbar';
 @import 'components/progression';

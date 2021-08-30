@@ -1,0 +1,61 @@
+/* === Custom variables and mixins === */
+
+$footer-padding-y: spaceUnits(12);
+$footer-legal-margin-top: spaceUnits(18);
+$footer-legal-margin-bottom: spaceUnits(6);
+
+$footer-border-width: spaceUnits(1);
+$footer-border-color: $yellow;
+
+$footer-link-separation: spaceUnits(8);
+$footer-icon-separation: spaceUnits(2);
+$footer-icon-size: spaceUnits(6);
+
+/* === Custom styles === */
+
+.main-footer {
+  @extend .bg-dark, .text-white;
+  padding: $footer-padding-y 0;
+  border-top: $footer-border-width solid $footer-border-color;
+
+  a {
+    @extend .text-white;
+    text-decoration: underline;
+
+    .bx {
+      font-size: $footer-icon-size;
+      vertical-align: middle;
+      margin-right: $footer-icon-separation;
+    }
+  }
+
+  section {
+    margin-bottom: $footer-padding-y;
+
+    &.footer-legal-section {
+      margin-top: $footer-legal-margin-top;
+      margin-bottom: $footer-legal-margin-bottom;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .list-inline .list-inline-item {
+    margin-right: $footer-link-separation;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      margin-bottom: spaceUnits(3);
+    }
+  }
+
+  .footer-license-text {
+    @extend small;
+  }
+}
