@@ -61,13 +61,23 @@ const SocialSection = (): JSX.Element => (
 
 const LegalSection = (): JSX.Element => (
   <section className="footer-legal-section">
-    <div className="row justify-content-between">
-      <div className="col-12 col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
-        <img className="mr-3 d-lg-none" src="footer/ciudad-ba-sm.png" alt="Logo de la Ciudad de Buenos Aires" />
-        <img className="mr-3 d-none d-lg-inline" src="footer/ciudad-ba.png" alt="Logo de la Ciudad de Buenos Aires" />
-        <img src="footer/vamos-ba.png" alt="Logo de Vamos Buenos Aires" />
+    <div className="row align-items-center">
+      <div className="col-12 col-md-5 col-xl-4 mb-4 mb-md-0">
+        <img
+          className="mr-3 d-lg-none"
+          src="footer/ciudad-ba-sm.svg"
+          alt="Logo de la Ciudad de Buenos Aires"
+          height="38"
+        />
+        <img
+          className="mr-3 d-none d-lg-inline"
+          src="footer/ciudad-ba.svg"
+          alt="Logo de la Ciudad de Buenos Aires"
+          height="38"
+        />
+        <img src="footer/vamos-ba.svg" alt="Logo de Vamos Buenos Aires" height="38" />
       </div>
-      <div className="col-12 col-md-6 col-lg-7 col-xl-8">
+      <div className="col-12 col-md-7 col-xl-8">
         <ul className="list-inline">
           <li className="list-inline-item">
             <a href="https://boletinoficial.buenosaires.gob.ar">Boletín oficial</a>

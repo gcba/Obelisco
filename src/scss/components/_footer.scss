@@ -35,6 +35,10 @@ $footer-icon-size: spaceUnits(6);
     &.footer-legal-section {
       margin-top: $footer-legal-margin-top;
       margin-bottom: $footer-legal-margin-bottom;
+
+      .list-inline {
+        margin-bottom: 0;
+      }
     }
 
     &:last-of-type {
