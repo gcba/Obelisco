@@ -17,8 +17,7 @@ export const BusquedaCerrada = (): JSX.Element => {
     <header className="navbar navbar-light search-active">
       <div className="container">
         <a className="navbar-brand" href="#">
-          <img className="d-none d-md-inline" src="header/header-logo.png" alt="Logo de la ciudad de buenos aires" />
-          <img className="d-md-none" src="header/header-logo-sm.png" alt="Logo de la ciudad de buenos aires" />
+          <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
         </a>
         <div className="navbar-search">
           <form className="form-inline">
@@ -45,8 +44,7 @@ export const BusquedaAbierta = (): JSX.Element => {
     <header className="navbar navbar-light active-search">
       <div className="container">
         <a className="navbar-brand" href="#">
-          <img className="d-none d-md-inline" src="header/header-logo.png" alt="Logo de la ciudad de buenos aires" />
-          <img className="d-md-none" src="header/header-logo-sm.png" alt="Logo de la ciudad de buenos aires" />
+          <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
         </a>
         <div className="navbar-search">
           <form className="form-inline">

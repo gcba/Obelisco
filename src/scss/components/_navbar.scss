@@ -10,6 +10,9 @@ $navbar-height: spaceUnits(16);
 $navbar-height-desktop: spaceUnits(20);
 $navbar-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 
+$navbar-logo: spaceUnits(11.5);
+$navbar-logo-sm: spaceUnits(8.5);
+
 $navbar-search-with: spaceUnits(80);
 $navbar-search-closed-padding-x: spaceUnits(5);
 
@@ -21,6 +24,10 @@ $navbar-search-closed-padding-x: spaceUnits(5);
 
 .navbar {
   height: $navbar-height;
+
+  .header-logo {
+    height: $navbar-logo-sm;
+  }
 
   .input-search {
     width: $navbar-search-with;
@@ -60,6 +67,10 @@ $navbar-search-closed-padding-x: spaceUnits(5);
     height: $navbar-height-desktop;
     padding-top: $navbar-padding-y-desktop;
     padding-bottom: $navbar-padding-y-desktop;
+
+    .header-logo {
+      height: $navbar-logo;
+    }
 
     .form-group {
       margin-bottom: 0;
