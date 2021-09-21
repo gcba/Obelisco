@@ -1,0 +1,38 @@
+/* === Variable and mixins overides === */
+
+/* === Bootstrap Import === */
+
+/* === Custom styles === */
+
+.enlace {
+  color: $blue;
+  text-decoration: underline;
+  cursor: pointer;
+
+  @include hover() {
+    color: #005387;
+    text-decoration: underline;
+  }
+
+}
+
+.focus {
+  background: $blue;
+  color: $white;
+  text-decoration: underline;
+}
+
+.externo {
+  color: $blue;
+  text-decoration: underline;
+
+  &::after {
+    content: "";
+    background-image: url(./../../static/enlace/bx-link-external.svg);
+    background-repeat: no-repeat;
+    display: inline;
+    background-position: center;
+    padding: 7px;
+    margin-left: 10px;
+  }
+}
