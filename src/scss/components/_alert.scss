@@ -5,6 +5,7 @@ $alert-padding-x: 1rem;
 
 $alert-border-width: 2px;
 
+$alert-bg-level: -9;
 $alert-bg-level: 0;
 $alert-border-level: 0;
 
@@ -62,8 +63,7 @@ $theme-colors: map-merge(
 
 .alert {
   padding-left: $alert-padding-y + 2.375rem;
-  color: $grisulado-900;
-  background: #FCF5F5 0% 0%;
+  background: $alert-bg-level;
 
   &::before {
     content: '';
