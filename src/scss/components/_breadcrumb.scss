@@ -32,4 +32,9 @@ $breadcrumb-padding-x: 0;
   .breadcrumb .breadcrumb-item:not(:first-child):not(:last-child) {
     display: none;
   }
+  
+  &:before {
+    margin-right: $breadcrumb-item-padding;
+    transform: rotate(0.5turn);
+  }
 }
