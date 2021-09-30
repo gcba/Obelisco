@@ -16,22 +16,13 @@ export default {
 export const Default = (): JSX.Element => {
   return (
     <p>
-      You never see a frog so modest and <a className="enlace" href="#" target="_blank">enlace en párrafo</a> as he was, for all he was so gifted. 
+      You never see a frog so modest and <a className="" href="#" target="_blank">enlace en párrafo</a> as he was, for all he was so gifted. 
       And when it come to fair and square jumping on a dead level, 
       he could get over more ground at one straddle than any animal of his breed you ever see.
     </p>
   );
 };
 
-export const Focus = (): JSX.Element => {
-  return (
-    <p>
-      You never see a frog so modest and <a className="focus" href="#" target="_blank">enlace en párrafo</a> as he was, for all he was so gifted. 
-      And when it come to fair and square jumping on a dead level, 
-      he could get over more ground at one straddle than any animal of his breed you ever see.
-    </p>
-  );
-};
 
 export const Externo = (): JSX.Element => {
   return (
@@ -40,7 +31,7 @@ export const Externo = (): JSX.Element => {
         And when it come to fair and square jumping on a dead level, he could get over more ground at one straddle than any animal of his breed you ever see.
       </p>
       <p> 
-        <a className="externo" href="#" target="_blank">Enlace externo</a>
+        <a className="external" href="#" target="_blank">Enlace externo</a>
       </p>
     </div>    
   );
