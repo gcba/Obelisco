@@ -29,8 +29,13 @@ $breadcrumb-padding-x: 0;
 }
 
 @include media-breakpoint-down(md) {
-  .breadcrumb .breadcrumb-item:not(:first-child):not(:last-child) {
-    display: none;
+  .breadcrumb {
+    .breadcrumb-item:last-child {
+      padding-left: 0;
+    }
+    .breadcrumb-item:not(:last-child) {
+      display: none;
+    }
   }
   
   &:before {
