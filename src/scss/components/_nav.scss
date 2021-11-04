@@ -15,10 +15,8 @@ $nav-mobile-bg: $grisulado-10;
 
 $nav-link-disabled-color: $grisulado-300;
 $nav-link-hover-bg: $grisulado-50;
-$nav-link-margin: 0rem 0.5rem 0 .5rem;
 
-//$nav-pills-link-active-bg: $grisulado-900;
-$nav-pills-link-active-bg: #005387;
+$nav-pills-link-active-bg: theme-color-level('info', 3.25);
 $nav-link-hover-color: $grisulado-700;
 
 $nav-focus-width: 2px;
@@ -35,19 +33,12 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
 
 /* === Custom styles === */
 
-.nav-container {
-  background-color: $grisulado-10;
-  border-radius: 12px;
-}
-
 .nav-link {
   color: $grisulado-900;
   font-weight: $nav-link-font-weight;
-  margin: $nav-link-margin;  
   @include border-radius($border-radius);
 
   &.active-child {
-    // color: $grisulado-900; 
     color: $blue;   
     font-weight: $nav-link-active-font-weight;
   }
@@ -70,7 +61,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
 
     &.active {
       font-weight: $nav-pills-link-active-font-weight;
-      // background-color: $nav-pills-link-active-bg;
+      background-color: $nav-pills-link-active-bg;
     }
   }
 }
@@ -86,17 +77,14 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
 .nav .nav {
   .nav-link {
     padding-left: $nav-link-padding-x * 2;
-    margin: 0rem 0.5rem 0 .5rem;
   }
   .nav {
     .nav-link {
       padding-left: $nav-link-padding-x * 3;
-      margin: 0rem 0.5rem 0 .5rem;
     }
     .nav {
       .nav-link {
         padding-left: $nav-link-padding-x * 4;   
-        margin: 0rem 0.5rem 0 .5rem;     
       }
     }
   }
