@@ -3,8 +3,11 @@ $link-display: inline;
 $link-position: center;
 $link-padding: 0.5rem;
 $link-margin-x: 0.5rem;
-$link-decoration: underline;
-$link-hover: #005387;
+$link-visited-color: theme-color-level('info', 1); 
+$link-active-color: theme-color-level('info', 1.5);
+
+$link-external-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(0,123,199); transform: ;msFilter:;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>');
+$link-external-icon-active: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255,255,255); transform: ;msFilter:;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>');
 
 /* === Bootstrap Import === */
 
@@ -12,32 +15,35 @@ $link-hover: #005387;
 
 a {
   color: $blue;
-  text-decoration: $link-decoration;
   cursor: pointer;
 
+  &:visited {
+    color: $link-visited-color;
+  }
+  
   @include hover() {
-    color: $link-hover;
-    text-decoration: $link-decoration;
+    color: $link-active-color;
+  }
+  
+  &.external {
+    text-decoration: underline;
+    
+    &::after {
+      content: $link-external-icon;
+      display: inline-block;
+      vertical-align: sub;
+      height: 1em;
+      margin-left: spaceUnits(1); 
+    }
   }
 
   &:focus {
-    background: $blue;
+    background: $link-active-color;
     color: $white;
     text-decoration: $link-decoration;
-  }
-}
 
-.external {
-  color: $blue;
-  text-decoration: underline;
-
-  &::after {
-    content: "";
-    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>');
-    background-repeat: no-repeat;
-    display: $link-display;
-    background-position: $link-position;
-    padding: $link-padding;
-    margin-left: $link-margin-x;
+    &.external::after {
+      content: $link-external-icon-active;
+    }
   }
 }
