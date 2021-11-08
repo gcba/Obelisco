@@ -11,7 +11,7 @@ export default {
 };
 
 const phones = [
-  [102, 'Niñez y Adolesencia'],
+  [102, 'Niñez y Adolescencia'],
   [103, 'Emergencias'],
   [107, 'SAME'],
   [911, 'Policía'],
