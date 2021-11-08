@@ -45,3 +45,4 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/modal';
 @import 'components/pagination';
 @import 'components/stepper';
+@import 'components/link';
