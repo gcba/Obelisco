@@ -4,7 +4,7 @@ $access-icon-arrow: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www
 $access-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(201, 59, 59, 1);transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>');
 $access-color: #007BC7;
 $access-border: 8px;
-$access-padding: 16px;
+$access-padding: 12px;
 
 
 /* === Custom styles === */
@@ -16,8 +16,9 @@ $access-padding: 16px;
   text-align: left;
   border: 0;
   margin-bottom: 2px;
-  padding-left: $access-padding;
-  padding-right: $access-padding;
+  padding: $access-padding;
+  list-style: none;
+  cursor: pointer;
   
   &:hover{
     background:#F3F6F9;

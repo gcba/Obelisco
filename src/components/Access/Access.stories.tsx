@@ -13,21 +13,27 @@ export default {
 };
 
 export const AccesoGrande = (): JSX.Element => (
-  <div className="d-flex justify-content-between align-items-center">
-    <button className="access-link access-large icon-access">Datos de mi cuenta</button>
-  </div>
+  <ul className="d-flex flex-column justify-content-between">
+    <li className="access-link access-large icon-access">Datos de mi cuenta</li>
+    <li className="access-link access-large icon-access">Datos de mi cuenta</li>
+    <li className="access-link access-large icon-access">Datos de mi cuenta</li>
+  </ul>
 );
 
-export const AccesoPequeño = (): JSX.Element => (
-  <div className="d-flex justify-content-between align-items-center">
-    <button className="access-link access-small icon-access">Opción 1</button>
-  </div>
+export const AccesoPequeno = (): JSX.Element => (
+  <ul className="d-flex flex-column justify-content-between">
+    <li className="access-link access-small icon-access">Opción 1</li>
+    <li className="access-link access-small icon-access">Opción 1</li>
+    <li className="access-link access-small icon-access">Opción 1</li>
+  </ul>
 );
-AccesoPequeño.story = { name: 'Acceso Pequeño' };
+AccesoPequeno.story = { name: 'Acceso Pequeño' };
 
 export const VarianteCerrarSesion = (): JSX.Element => (
-  <div className="d-flex justify-content-between align-items-center">
-    <button className="access-link access-small close-sesion">Cerrar sesión</button>
-  </div>
+  <ul className="d-flex flex-column justify-content-between">
+    <li className="access-link access-small close-sesion">Cerrar sesión</li>
+    <li className="access-link access-small close-sesion">Cerrar sesión</li>
+    <li className="access-link access-small close-sesion">Cerrar sesión</li>
+  </ul>
 );
 VarianteCerrarSesion.story = { name: 'Variante Cerrar Sesión' };
