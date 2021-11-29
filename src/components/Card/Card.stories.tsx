@@ -29,6 +29,15 @@ export const TitleSubtitleText = (): JSX.Element => {
 };
 TitleSubtitleText.story = { name: 'Contenedor simple' };
 
+export const Tags = (): JSX.Element => {
+  return (
+    <div className="cards-container">
+      <Card title={title} description={description} href="#" tags={['Etiqueta 1', 'Etiqueta 2']} />
+    </div>
+  );
+};
+Tags.story = { name: 'Con etiquetas' };
+
 export const Ícono = (): JSX.Element => {
   return (
     <div className="cards-container">
@@ -49,6 +58,7 @@ export const TitleSubtitleLink = (): JSX.Element => {
   return (
     <div className="cards-container">
       <Card
+        tags={['Etiqueta 1', 'Etiqueta 2']}
         title={title}
         subTitle={subTitle}
         description={description}

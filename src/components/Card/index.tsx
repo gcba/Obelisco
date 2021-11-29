@@ -17,6 +17,7 @@ interface BaseCardProps {
   description: string | JSX.Element;
   href?: string;
   className?: string;
+  tags?: string[];
 }
 
 export interface SimpleCardProps extends BaseCardProps {
@@ -24,7 +25,7 @@ export interface SimpleCardProps extends BaseCardProps {
 }
 
 export const SimpleCard: React.FC<SimpleCardProps> = (props: React.PropsWithChildren<SimpleCardProps>) => {
-  const { title, subTitle, description, href, picture } = props;
+  const { title, subTitle, description, href, picture, tags } = props;
 
   let className = `card card-simple`;
   if (props.className) className += ` ${props.className}`;
@@ -33,6 +34,11 @@ export const SimpleCard: React.FC<SimpleCardProps> = (props: React.PropsWithChil
     <div className={className}>
       <div className="card-body">
         {getIcon(picture)}
+        {tags?.map(text => (
+          <span key={text} className="badge badge-info">
+            {text}
+          </span>
+        ))}
         <h3 className="card-title">{href ? <a href={href}>{title}</a> : title}</h3>
         {subTitle && <div className="card-subtitle">{subTitle}</div>}
         <p className="card-text">{description}</p>
@@ -49,7 +55,7 @@ export interface CardProps extends BaseCardProps {
 }
 
 export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardProps>) => {
-  const { title, subTitle, description, href, picture, footer, orientation, onClick } = props;
+  const { title, subTitle, description, href, picture, footer, orientation, tags, onClick } = props;
   const isHorizontal = orientation === 'horizontal';
 
   let className = `card`;
@@ -65,6 +71,7 @@ export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardPro
       {getImage(picture as CardImage, isHorizontal)}
       <div className="card-body">
         {getIcon(picture as CardIcon)}
+        <Tags tags={tags} />
         <h3 className="card-title">{title}</h3>
         {subTitle && <div className="card-subtitle">{subTitle}</div>}
         <p className="card-text">{description}</p>
@@ -99,4 +106,20 @@ const getIcon = (picture?: CardIcon): JSX.Element | null => {
     return <i className={`bx ${picture.icon} card-icon`} style={{ color: picture.color }} />;
   }
   return null;
+};
+
+const Tags = ({ tags }: { tags: BaseCardProps['tags'] }): JSX.Element | null => {
+  if (tags) {
+    return (
+      <div className="mb-2">
+        {tags?.map(text => (
+          <span key={text} className="badge badge-info">
+            {text}
+          </span>
+        ))}
+      </div>
+    );
+  } else {
+    return null;
+  }
 };
