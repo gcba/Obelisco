@@ -26,7 +26,6 @@ a {
   }
   
   &.external {
-    text-decoration: underline;
     
     &::after {
       content: $link-external-icon;
