@@ -38,6 +38,7 @@ $badge-bg-level-hover: -7;
 /* === Custom styles === */
 
 .badge {
+  text-decoration: none;
   text-transform: uppercase;
 
   +.badge {
