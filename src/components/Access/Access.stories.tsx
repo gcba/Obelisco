@@ -14,9 +14,9 @@ export default {
 
 export const AccesoGrande = (): JSX.Element => (
   <ul className="d-flex flex-column justify-content-between">
-    <li className="access-link access-large icon-access">Datos de mi cuenta</li>
-    <li className="access-link access-large icon-access">Datos de mi cuenta</li>
-    <li className="access-link access-large icon-access">Datos de mi cuenta</li>
+    <li className="access-link access-large icon-access p-4">Datos de mi cuenta</li>
+    <li className="access-link access-large icon-access p-4">Datos de mi cuenta</li>
+    <li className="access-link access-large icon-access p-4">Datos de mi cuenta</li>
   </ul>
 );
 
