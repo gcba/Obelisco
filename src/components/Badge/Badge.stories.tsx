@@ -16,6 +16,19 @@ export default {
 
 export const Simple = (): JSX.Element => <Badge text="Etiqueta 1" />;
 
-export const Multiple = (): JSX.Element[] => ['Etiqueta 1', 'Etiqueta 2'].map(text => <Badge text={text} key={text} />);
+export const Multiple = (): JSX.Element => (
+  <>
+    <Badge text="Etiqueta 1" />
+    <Badge text="Etiqueta 2" />
+    <Badge text="Etiqueta 3" />
+  </>
+);
 
-export const Link = (): JSX.Element => <Badge text="Etiqueta 1" href="#" />;
+export const Link = (): JSX.Element => (
+  <>
+    <Badge text="Etiqueta 1" href="#" />
+    <Badge text="Etiqueta 2" href="#" className="active" />
+    <Badge text="Etiqueta 3" href="#" className="focus active" />
+    <Badge text="Etiqueta 4" href="#" className="focus" />
+  </>
+);

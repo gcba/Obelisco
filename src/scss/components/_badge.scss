@@ -14,15 +14,18 @@ $badge-bg-level-hover: -7;
   background-color: theme-color-level($color, $badge-bg-level);
 
   @at-root a#{&} {
-    @include hover-focus() {
-      color: $value;
-      background-color: theme-color-level($color, $badge-bg-level-hover);
-    }
-
     &:focus,
     &.focus {
       outline: 0;
+      color: $value;
+      background-color: theme-color-level($color, $badge-bg-level);
       box-shadow: $focus-box-shadow;
+    }
+
+    &:hover,
+    &.active {
+      color: $value;
+      background-color: theme-color-level($color, $badge-bg-level-hover);
     }
   }
 }
