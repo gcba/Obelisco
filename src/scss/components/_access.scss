@@ -6,36 +6,40 @@ $access-color: #007BC7;
 $access-border: 8px;
 $access-padding: 12px;
 
+/* === Bootstrap Import === */
+
+// Eliminamos el color secundario para las alertas.
+@import '~bootstrap/scss/list-group';
+
 
 /* === Custom styles === */
 
-.access-link {
-  background: #FFFFFF 0% 0% no-repeat padding-box;
-  border-radius: $access-border;
-  color: $access-color;
-  text-align: left;
+a.list-group-item, .list-group-item:last-child {
   border: 0;
+  border-radius: $access-border;
   margin-bottom: 2px;
-  padding: $access-padding;
-  list-style: none;
-  cursor: pointer;
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
   
   &:hover{
-    background:#F3F6F9;
+     background:#F3F6F9;
+     text-decoration: none;
   }
-
+  
   &:focus {    
     outline: $access-border auto $access-color;
+    background: $white !important;
+    color: $access-color !important;
+    text-decoration: none;
   }
 }
 
-.icon-session, .icon-access:after {
+.icon-access:after {
     content: $access-icon-arrow;
     float: right;  
 }
 
 .close-sesion {
-  color: #C93B3B;
 
   &::after{
     content: $access-icon-logout;
