@@ -16,7 +16,7 @@ export const AccesoGrande = (): JSX.Element => (
   <div className="list-group-container">
     <div className="list-group">
       <a href="#" className="list-group-item list-group-item-lg icon-access">Datos de mi cuenta</a>
-      <a href="#" className="list-group-item icon-access">Datos de mi cuenta</a>
+      <a href="#" className="list-group-item list-group-item-lg icon-access">Datos de mi cuenta</a>
     </div>
   </div>
 );
