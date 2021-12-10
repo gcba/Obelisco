@@ -34,7 +34,7 @@ export const SimpleCard: React.FC<SimpleCardProps> = (props: React.PropsWithChil
     <div className={className}>
       <div className="card-body">
         {getIcon(picture)}
-        {tags?.map(text => (
+        {tags?.map((text) => (
           <span key={text} className="badge badge-info">
             {text}
           </span>
@@ -112,7 +112,7 @@ const Tags = ({ tags }: { tags: BaseCardProps['tags'] }): JSX.Element | null => 
   if (tags) {
     return (
       <div className="mb-2">
-        {tags?.map(text => (
+        {tags?.map((text) => (
           <span key={text} className="badge badge-info">
             {text}
           </span>

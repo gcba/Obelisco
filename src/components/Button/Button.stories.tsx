@@ -26,7 +26,7 @@ export default {
 export const Colores = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map(type => (
+      {buttonTypes.map((type) => (
         <Button key={type} type={type}>
           {type}
         </Button>
@@ -38,7 +38,7 @@ export const Colores = (): JSX.Element => {
 export const ConFoco = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map(type => (
+      {buttonTypes.map((type) => (
         <Button key={type} type={type} className="focus">
           {type}
         </Button>
@@ -50,7 +50,7 @@ export const ConFoco = (): JSX.Element => {
 export const Activos = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map(type => (
+      {buttonTypes.map((type) => (
         <Button key={type} type={type} className="active">
           {type}
         </Button>
@@ -62,7 +62,7 @@ export const Activos = (): JSX.Element => {
 export const Tamanos = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {sizes.map(size => (
+      {sizes.map((size) => (
         <Button key={size} type="secondary" size={size}>
           {size}
         </Button>

@@ -28,7 +28,7 @@ export const Nav: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>
   return (
     <nav>
       <ul className={mainListClasses}>
-        {items.map(item => (
+        {items.map((item) => (
           <NavItemComponent {...item} key={item.id} level={0} onClick={onClick} selected={selected} />
         ))}
       </ul>
@@ -54,7 +54,7 @@ const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemCompone
     disabled: disabled
   });
 
-  const handleClick: React.MouseEventHandler = event => {
+  const handleClick: React.MouseEventHandler = (event) => {
     if (!href) {
       event.preventDefault();
       !disabled && props.onClick && props.onClick(id);
@@ -73,7 +73,7 @@ const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemCompone
       </a>
       {!disabled && (isActive || hasActiveChild) && children && (
         <ul className={listClasses}>
-          {children.map(item => (
+          {children.map((item) => (
             <NavItemComponent {...item} key={item.id} level={level + 1} onClick={props.onClick} selected={selected} />
           ))}
         </ul>
@@ -83,7 +83,7 @@ const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemCompone
 };
 
 const checkActiveChild = (children?: NavItem[], selected?: string): boolean => {
-  return !!children?.some(child => {
+  return !!children?.some((child) => {
     return child.id === selected || (child.children && checkActiveChild(child.children, selected));
   });
 };

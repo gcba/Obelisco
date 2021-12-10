@@ -52,7 +52,7 @@ Titulo.story = {
 export const Colores = (): JSX.Element => {
   return (
     <div className="alert-wrapper">
-      {alertTypes.map(type => (
+      {alertTypes.map((type) => (
         <div key={type} className={`alert alert-${type}`} role="alert">
           <p>Un texto simple para una alerta simple.</p>
         </div>

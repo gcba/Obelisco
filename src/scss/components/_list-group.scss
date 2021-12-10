@@ -1,7 +1,7 @@
 /* === Variable and mixins overides === */
 
-$list-group-color: #007BC7;
-$list-group-hober-bg: #F3F6F9;
+$list-group-color: #007bc7;
+$list-group-hober-bg: #f3f6f9;
 $list-group-border: 8px;
 
 $list-gorup-padding-y: spaceUnits(6);
@@ -18,7 +18,6 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
 // Eliminamos el color secundario para las alertas.
 @import '~bootstrap/scss/list-group';
 
-
 /* === Custom styles === */
 
 a.list-group-item {
@@ -26,34 +25,34 @@ a.list-group-item {
   margin-bottom: 2px;
   border-radius: $list-group-border;
   padding: $list-gorup-padding-y $list-gorup-padding-x;
-  
+
   &:last-child {
     border-radius: $list-group-border;
   }
-  
+
   &:focus,
-  &.focus {    
+  &.focus {
     box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
     background: $white;
     color: $list-group-color;
     text-decoration: none;
   }
-  
+
   &:hover,
   &.hover {
-     background: $list-group-hober-bg;
-     text-decoration: none;
+    background: $list-group-hober-bg;
+    text-decoration: none;
   }
-  
+
   &:after {
     content: $list-group-icon-arrow;
     float: right;
     height: 1.5rem;
   }
 
-  &.list-group-item-logout{
+  &.list-group-item-logout {
     color: $danger;
-    &:after{
+    &:after {
       content: $list-group-icon-logout;
     }
   }
@@ -78,6 +77,5 @@ a.list-group-item {
 .list-group-item.list-group-sm {
   padding: $list-gorup-padding-sm;
 }
-
 
 /* === Mobile styles === */
