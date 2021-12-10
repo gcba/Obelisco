@@ -31,18 +31,20 @@ a.list-group-item {
     border-radius: $list-group-border;
   }
   
-  &:hover{
-     background:$list-group-hober-bg;
+  &:focus,
+  &.focus {    
+    box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
+    background: $white;
+    color: $list-group-color;
+    text-decoration: none;
+  }
+  
+  &:hover,
+  &.hover {
+     background: $list-group-hober-bg;
      text-decoration: none;
   }
   
-  &:focus {    
-    outline: $list-group-border auto $list-group-color;
-    background: $white !important;
-    color: $list-group-color !important;
-    text-decoration: none;
-  }
-
   &:after {
     content: $list-group-icon-arrow;
     float: right;

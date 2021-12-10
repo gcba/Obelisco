@@ -18,7 +18,13 @@ export const Acceso = (): JSX.Element => (
       <a href="#" className="list-group-item">
         Datos de mi cuenta
       </a>
-      <a href="#" className="list-group-item">
+      <a href="#" className="list-group-item hover">
+        Opciones de seguridad
+      </a>
+      <a href="#" className="list-group-item focus">
+        Datos de mi cuenta
+      </a>
+      <a href="#" className="list-group-item hover focus">
         Opciones de seguridad
       </a>
       <a href="#" className="list-group-item list-group-item-logout">
