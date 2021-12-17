@@ -4,6 +4,8 @@ $card-border-radius: $border-radius-container;
 $card-spacer-y: 1rem;
 $card-spacer-x: 1.5rem;
 
+$border-radius: 0.5rem;
+
 $card-subtitle-font-size: 1.1875rem;
 $card-subtitle-font-weight: 400;
 
@@ -26,6 +28,8 @@ $card-deck-margin: $grid-gutter-width / 2;
 $card-deck-margin-top: $grid-gutter-width;
 
 $card-text-decoration: none;
+
+$card-font-weight: 600;
 
 /* === Custom variables and mixins === */
 
@@ -178,7 +182,7 @@ button.card {
       @include border-top-radius($card-border-radius);
     }
 
-    > .card-header {
+    > .card-header  {
       background-color: $card-header-bg;
       border-width: 0;
       text-align: left;
@@ -189,7 +193,7 @@ button.card {
       position: relative;
       z-index: 1;
       @extend .h5;
-
+      
       &:hover,
       &.hover {
         background-color: darken($card-header-bg, 5%);
@@ -219,6 +223,36 @@ button.card {
           content: $accordion-icon-collapsed;
         }
       }
+
+      &.card-info {
+        background-color: $grisulado-900;
+        color: $white;
+        
+        &:after {
+           content: 'Ver menos';
+           margin-top: -9px;
+           text-decoration: underline;
+           font-weight: $card-font-weight;
+        }
+        &.collapsed {
+          border-radius: $border-radius;
+  
+          &:after {
+            content: 'Ver detalle';  
+          }
+        }
+      }
+    }
+
+    .collpase-title {
+      text-transform: uppercase;
+      font-weight: $card-subtitle-font-weight;
+      font-size: 13px;
+    }
+
+    .collpase-subtitle {
+      font-weight: $card-font-weight;
+      font-size: 21px;
     }
 
     .card-body {
