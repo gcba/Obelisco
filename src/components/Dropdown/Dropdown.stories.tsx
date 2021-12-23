@@ -15,8 +15,7 @@ export const DesplegableGrande = (): JSX.Element => (
   <div className="dropdown-container">
     <div className="btn-group dropdown">
       <button type="button" className="btn btn-dropdown btn-dropdown-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Mi perfil
-        <span className="btn dropdown-user dropdown-lg dropdown-toggle-split"></span>
+        Mi perfil <span className="btn dropdown-user dropdown-lg dropdown-toggle-split"></span>
       </button>
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">Opción 1</button>
@@ -64,9 +63,8 @@ export const SoloIcono = (): JSX.Element => (
 export const Idioma = (): JSX.Element => (
   <div className="dropdown-container">
       <div className="btn-group dropdown">
-        <button type="button" className="btn btn-dropdown btn-dropdown-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          ES
-          <span className="btn dropdown-es dropdown-sm"></span>
+        <button type="button" className="btn btn-dropdown btn-dropdown-es" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          ES<span className="btn dropdown-es"></span>
         </button>
         <div className="dropdown-menu">
           <button className="dropdown-item" type="button">Inglés</button>
