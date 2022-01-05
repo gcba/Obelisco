@@ -14,6 +14,7 @@
 // Bootstrap base
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
+@import 'variables/miscellaneous';
 @import '~bootstrap/scss/mixins';
 @import '~bootstrap/scss/utilities';
 $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
@@ -27,7 +28,6 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import '~bootstrap/scss/grid';
 
 // Custom styles
-@import 'variables/miscellaneous';
 @import 'components/typography';
 @import 'utilities/background';
 

@@ -39,7 +39,8 @@ $spacers: map-merge(
 
 /* === Border === */
 
-$border-radius-container: spaceUnits(2);
+$border-radius-lg: spaceUnits(2);
+$border-radius-container: $border-radius-lg;
 
 /* === Focus === */
 

@@ -24,7 +24,13 @@ a {
   @include hover() {
     color: $link-active-color;
   }
-
+  
+  &:focus:not(.navbar-brand):not(.text-reset) {
+    background: $link-active-color;
+    color: $white;
+    text-decoration: $link-decoration;
+  }
+  
   &.external {
     &::after {
       content: $link-external-icon;
@@ -33,14 +39,8 @@ a {
       height: 1em;
       margin-left: spaceUnits(1);
     }
-  }
 
-  &:focus {
-    background: $link-active-color;
-    color: $white;
-    text-decoration: $link-decoration;
-
-    &.external::after {
+    &:focus::after {
       content: $link-external-icon-active;
     }
   }
