@@ -24,7 +24,7 @@ export const CasillaMultiple = (): JSX.Element => {
           name="skills"
           value="copywrite"
           checked={value}
-          onChange={event => setValue(event.target.checked)}
+          onChange={(event) => setValue(event.target.checked)}
         />
         <label className="custom-control-label" htmlFor="skills-copywrite-input">
           Redacción

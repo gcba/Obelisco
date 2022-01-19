@@ -1,6 +1,5 @@
 /* === Variable and mixins overides === */
 
-
 $nav-link-font-weight: 400;
 $nav-link-active-font-weight: 600;
 $nav-pills-link-active-font-weight: 400;
@@ -39,7 +38,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
   @include border-radius($border-radius);
 
   &.active-child {
-    color: $blue;   
+    color: $blue;
     font-weight: $nav-link-active-font-weight;
   }
 
@@ -84,7 +83,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
     }
     .nav {
       .nav-link {
-        padding-left: $nav-link-padding-x * 4;   
+        padding-left: $nav-link-padding-x * 4;
       }
     }
   }

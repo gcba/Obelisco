@@ -1,0 +1,81 @@
+/* === Variable and mixins overides === */
+
+$list-group-color: #007bc7;
+$list-group-hober-bg: #f3f6f9;
+$list-group-border: 8px;
+
+$list-gorup-padding-y: spaceUnits(6);
+$list-gorup-padding-x: spaceUnits(4);
+$list-gorup-padding-sm: spaceUnits(3);
+
+$list-gorup-category-margin: spaceUnits(2);
+
+$list-group-icon-arrow: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>');
+$list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(201, 59, 59, 1);transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>');
+
+/* === Bootstrap Import === */
+
+// Eliminamos el color secundario para las alertas.
+@import '~bootstrap/scss/list-group';
+
+/* === Custom styles === */
+
+a.list-group-item {
+  border: 0;
+  margin-bottom: 2px;
+  border-radius: $list-group-border;
+  padding: $list-gorup-padding-y $list-gorup-padding-x;
+
+  &:last-child {
+    border-radius: $list-group-border;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
+    background: $white;
+    color: $list-group-color;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &.hover {
+    background: $list-group-hober-bg;
+    text-decoration: none;
+  }
+
+  &:after {
+    content: $list-group-icon-arrow;
+    float: right;
+    height: 1.5rem;
+  }
+
+  &.list-group-item-logout {
+    color: $danger;
+    &:after {
+      content: $list-group-icon-logout;
+    }
+  }
+}
+
+.list-group {
+  .list-group-title,
+  .list-group-category {
+    padding: $list-gorup-category-margin $list-gorup-padding-x;
+    margin: 0;
+  }
+
+  &.list-group-sm {
+    .list-group-item,
+    .list-group-title,
+    .list-group-category {
+      padding: $list-gorup-padding-sm;
+    }
+  }
+}
+
+.list-group-item.list-group-sm {
+  padding: $list-gorup-padding-sm;
+}
+
+/* === Mobile styles === */

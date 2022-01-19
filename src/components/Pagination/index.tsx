@@ -63,7 +63,7 @@ export const Pagination: React.FC<PaginationProps> = (props: PaginationProps) =>
           </>
         )}
 
-        {pagesToShow.map(i => (
+        {pagesToShow.map((i) => (
           <PaginationNumber index={i} key={i} current={current} onClick={() => onPageSelected(i)} />
         ))}
 
@@ -91,7 +91,7 @@ interface PaginationItemProps {
 }
 
 export const PaginationItem: React.FC<PaginationItemProps> = (props: React.PropsWithChildren<PaginationItemProps>) => {
-  const onClick: React.MouseEventHandler = event => {
+  const onClick: React.MouseEventHandler = (event) => {
     event.preventDefault();
     props.onClick && props.onClick();
   };

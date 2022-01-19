@@ -9,6 +9,7 @@ $card-subtitle-font-weight: 400;
 
 $card-cap-color: $text-muted;
 $card-cap-bg: inherit;
+$card-active-color: $white;
 $card-header-bg: $grisulado-50;
 $card-header-paddin-y: 0.75rem;
 
@@ -23,6 +24,8 @@ $card-focus-box-shadow: $focus-box-shadow;
 
 $card-deck-margin: $grid-gutter-width / 2;
 $card-deck-margin-top: $grid-gutter-width;
+
+$card-text-decoration: none;
 
 /* === Custom variables and mixins === */
 
@@ -139,16 +142,24 @@ button.card {
   color: $body-color;
   padding: 0;
   margin: 0;
+  text-decoration: $card-text-decoration;
 
   @include hover() {
-    text-decoration: none;
     box-shadow: $card-box-hover-shadow;
+    text-decoration: $card-text-decoration;
+    color: $body-color;
   }
 
   &:focus,
   &.focus {
     outline: 0;
     box-shadow: $card-focus-box-shadow;
+    text-decoration: $card-text-decoration;
+    color: $card-active-color;
+    
+    * {
+      color: $card-active-color;
+    }
   }
 }
 

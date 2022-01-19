@@ -31,7 +31,6 @@ $badge-bg-level-hover: -7;
   }
 }
 
-
 /* === Bootstrap Import === */
 
 @import '~bootstrap/scss/badge';
@@ -42,7 +41,7 @@ $badge-bg-level-hover: -7;
   text-decoration: none;
   text-transform: uppercase;
 
-  +.badge {
+  + .badge {
     margin-left: $badge-separation;
   }
 }
