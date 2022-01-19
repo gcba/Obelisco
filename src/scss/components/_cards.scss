@@ -229,6 +229,10 @@ button.card {
         background-color: $grisulado-900;
         color: $white;
 
+        + * > .card-body {
+          border-color: $grisulado-900;
+        }
+
         &:hover,
         &.hover {
           background-color: $card-bg-info;
@@ -242,12 +246,7 @@ button.card {
         &.focus {
           outline: none;
           box-shadow: $card-focus-box-shadow;
-          //border-radius: $border-radius;
           background-color: $card-bg-info;
-
-          + * > .card-body {
-            border-color: $card-bg-info;
-          }
         }
 
         &:after {
