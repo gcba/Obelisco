@@ -14,6 +14,7 @@ $card-cap-bg: inherit;
 $card-active-color: $white;
 $card-header-bg: $grisulado-50;
 $card-header-paddin-y: 0.75rem;
+$card-bg-info: #005387;
 
 $card-border-width: 0px;
 $card-footer-border-width: 1px;
@@ -227,7 +228,28 @@ button.card {
       &.card-info {
         background-color: $grisulado-900;
         color: $white;
-        
+
+        &:hover,
+        &.hover {
+          background-color: $card-bg-info;
+  
+          + * > .card-body {
+            border-color: $card-bg-info;
+          }
+        }
+
+        &:focus,
+        &.focus {
+          outline: none;
+          box-shadow: $card-focus-box-shadow;
+          //border-radius: $border-radius;
+          background-color: $card-bg-info;
+
+          + * > .card-body {
+            border-color: $card-bg-info;
+          }
+        }
+
         &:after {
            content: 'Ver menos';
            margin-top: -9px;
