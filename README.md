@@ -25,7 +25,7 @@ Obelisco cuenta de dos partes principales que se pueden importar de varias forma
 
 ### Estilos (css o sass)
 
-Las ojas de estilos se pueden importar tanto en **sass** como en **css** ya compilado.
+Las hojas de estilos se pueden importar tanto en **sass** como en **css** ya compilado.
 El archivo css está ubicado en `/dist/obelisco.css` y el archivo principal de sass en `/src/scss/obelisco.scss`.
 
 Para importar el css, podemos hacerlo de la siguiente forma:
