@@ -60,8 +60,10 @@ $form-validation-states: (
 /* === Custom styles === */
 
 .form-group label {
-  font-size: $font-size-sm;
-  margin-bottom: $label-margin-bottom;
+  //font-size: $font-size-sm;
+  font-size: 1.063rem;
+  margin-bottom: 0;
+  font-weight: 600;
 }
 
 .custom-control-label {

@@ -41,6 +41,9 @@ export const CorreoElectronico = (): JSX.Element => {
     <div className="form-wrapper">
       <div className="form-group">
         <label htmlFor="email-input">Correo electrónico</label>
+        <span id="email-help" className="form-text">
+          Nunca vamos a compartir tu correo electrónico con nadie.
+        </span>
         <input
           type="email"
           className="form-control"
@@ -49,9 +52,6 @@ export const CorreoElectronico = (): JSX.Element => {
           aria-describedby="email-help"
           placeholder="nombre@ejemplo.com"
         />
-        <small id="email-help" className="form-text text-muted">
-          Nunca vamos a compartir tu correo electrónico con nadie.
-        </small>
       </div>
     </div>
   );
@@ -63,10 +63,10 @@ export const Fecha = (): JSX.Element => {
     <div className="form-wrapper">
       <div className="form-group">
         <label htmlFor="date-input">Fecha</label>
-        <input type="date" className="form-control" id="date-input" name="date" aria-describedby="date-help" />
-        <small id="date-help" className="form-text text-muted">
+        <span id="date-help" className="form-text">
           Ingrese una fecha posterior a hoy.
-        </small>
+        </span>
+        <input type="date" className="form-control" id="date-input" name="date" aria-describedby="date-help" />
       </div>
     </div>
   );
