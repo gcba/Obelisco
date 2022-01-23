@@ -12,6 +12,8 @@ $card-cap-bg: inherit;
 $card-active-color: $white;
 $card-header-bg: $grisulado-50;
 $card-header-paddin-y: 0.75rem;
+$card-header-paddin-x: 1.5rem;
+$card-bg-info: #005387;
 
 $card-border-width: 0px;
 $card-footer-border-width: 1px;
@@ -26,6 +28,11 @@ $card-deck-margin: $grid-gutter-width / 2;
 $card-deck-margin-top: $grid-gutter-width;
 
 $card-text-decoration: none;
+$card-font-weight: 600;
+
+$collapse-border-width: 2px;
+$collapse-info-title-size: 1.3125rem;
+$collapse-info-subtitle-size: 0.825rem;
 
 /* === Custom variables and mixins === */
 
@@ -178,7 +185,7 @@ button.card {
       @include border-top-radius($card-border-radius);
     }
 
-    > .card-header {
+    > .card-header  {
       background-color: $card-header-bg;
       border-width: 0;
       text-align: left;
@@ -189,7 +196,7 @@ button.card {
       position: relative;
       z-index: 1;
       @extend .h5;
-
+      
       &:hover,
       &.hover {
         background-color: darken($card-header-bg, 5%);
@@ -219,10 +226,63 @@ button.card {
           content: $accordion-icon-collapsed;
         }
       }
+
+      &.card-info {
+        background-color: $grisulado-900;
+        color: $white;
+
+        + * > .card-body {
+          border-color: $grisulado-900;
+        }
+
+        &:hover,
+        &.hover {
+          background-color: $card-bg-info;
+  
+          + * > .card-body {
+            border-color: $card-bg-info;
+          }
+        }
+
+        &:focus,
+        &.focus {
+          outline: none;
+          box-shadow: $card-focus-box-shadow;
+          background-color: $card-bg-info;
+        }
+
+        &:after {
+           content: 'Ver menos';
+           position: absolute;
+           top: 50%;
+           right: $card-header-paddin-x;
+           transform: translateY(-50%);
+           text-decoration: underline;
+           font-weight: $card-font-weight;
+        }
+        &.collapsed {
+          border-radius: $card-border-radius;
+  
+          &:after {
+            content: 'Ver detalle';  
+          }
+        }
+      }
+    }
+
+    .collpase-subtitle {
+      text-transform: uppercase;
+      font-weight: $card-font-weight;
+      font-size: $collapse-info-title-size;
+    }
+
+    .collpase-title {
+      font-weight: $card-subtitle-font-weight;
+      font-size: $collapse-info-subtitle-size;
     }
 
     .card-body {
-      border: 2px solid $card-header-bg;
+      border: $collapse-border-width solid $card-header-bg;
       @include border-bottom-radius($card-border-radius);
     }
   }

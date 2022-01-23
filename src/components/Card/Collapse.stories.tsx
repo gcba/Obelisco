@@ -93,3 +93,31 @@ export const SeleccionMultiple = (): JSX.Element => (
   </div>
 );
 SeleccionMultiple.story = { name: 'Selección múltiple' };
+
+export const ConInformacion = (): JSX.Element => (
+  <div className="accordion-wrapper-info">
+    <div className="accordion" id="accordionExample">
+      <div className="card">
+        <button
+          className="card-header collapsed card-link card-info"
+          data-toggle="collapse"
+          data-target="#collapseFive">
+          <span className="collpase-title">Total: </span> <br />
+          <span className="collpase-subtitle">$ 450</span>
+        </button>
+        <div id="collapseFive" className="collapse" data-parent="#accordion">
+          <div className="card-body">
+            <small>BOLETA N° 2564-59879543</small>
+            <h4 className="mb-0">Solicitud de informes varios</h4>
+            <small>$ 450</small>
+            <hr />
+            <small>BOLETA N° 2564-59879543</small>
+            <h4 className="mb-0">Solicitud de informes varios</h4>
+            <small>$ 450</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+ConInformacion.story = { name: 'Con Información' };
