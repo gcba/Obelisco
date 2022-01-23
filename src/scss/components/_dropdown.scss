@@ -1,0 +1,98 @@
+/* === Variable and mixins overides === */
+
+$dropdown-box-shadow: 0 0 spaceUnits(3) transparentize($grisulado-100, .25);
+$dropdown-item-padding: spaceUnits(2) spaceUnits(2);
+
+$icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>');
+$icon-chevron-down: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
+$icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>');
+
+/* === Bootstrap Import === */
+@import '~bootstrap/scss/dropdown';
+
+/* === Custom styles === */
+
+.btn .dropdown-chevron {
+  padding: 2px;
+
+  &:hover {
+    background-color: transparent;
+    border-radius: 0.5rem;
+  }
+}
+
+.btn.btn-dropdown {
+  padding: $btn-padding-y;
+  font-weight: $body-font-weight;
+
+  &:hover {
+    background-color: $grisulado-10;
+    border-radius: 0.5rem;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem #00568b;
+    background: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem;
+  }
+
+  &.active {
+    color: $blue;
+  }
+
+  &.btn-dropdown-sm {
+    padding: $btn-padding-y / 2 $btn-padding-y;
+  }
+
+  &.dropdown-toggle:after {
+    content: $icon-chevron-down;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.4em;
+    height: 1.4em;
+    border: none;
+  }
+
+  .dropdown-user-icon {
+    content: $icon-user;
+    display: inline-block;
+    background-color: $grisulado-50;
+    padding: spaceUnits(2);
+    margin-left: spaceUnits(1);
+    vertical-align: middle;
+    vertical-align: -10px; // Es una prueba
+    border-radius: $border-radius;
+  }
+
+  .dropdown-language-icon {
+    content: $icon-world;
+    display: inline-block;
+    vertical-align: sub;
+  }
+}
+
+.dropdown-menu {
+  padding: spaceUnits(2);
+  margin-top: spaceUnits(2);
+  border: none;
+  box-shadow: $dropdown-box-shadow;
+
+  .dropdown-item {
+    border-radius: $border-radius;
+    padding: $dropdown-item-padding;
+    color: $body-color;
+    
+    &:hover {
+      background-color: $grisulado-10;
+      // border-radius: 4px;
+    }
+  
+    &:focus {
+      box-shadow: 0 0 0 0.2rem #00568b;
+      border-radius: 0.5rem;
+      outline: 2px;
+      color: black;
+    } 
+  }
+}
