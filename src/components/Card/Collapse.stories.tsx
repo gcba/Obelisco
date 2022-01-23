@@ -98,7 +98,10 @@ export const ConInformacion = (): JSX.Element => (
   <div className="accordion-wrapper-info">
     <div className="accordion" id="accordionExample">
       <div className="card">
-        <button className="card-header collapsed card-link card-info" data-toggle="collapse" data-target="#collapseFive">
+        <button
+          className="card-header collapsed card-link card-info"
+          data-toggle="collapse"
+          data-target="#collapseFive">
           <span className="collpase-title">Total: </span> <br />
           <span className="collpase-subtitle">$ 450</span>
         </button>
