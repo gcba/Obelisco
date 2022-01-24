@@ -19,9 +19,9 @@ Si estás trabajando con Obelisco y tenés un caso de uso que no está contempla
 
 Si encontrás un error en alguno de los componentes o alguna mejora que impacte en la usabilidad, accesibilidad o rendimiento, seguí estos pasos:
 
-**Primero**: [Buscá en las tareas de errores](https://github.com/gcba/estandares/issues?q=is%3Aopen+is%3Aissue+label%3Acomponente+label%3Aerror3) para entender si ya fue reportado.
+**Primero**: [Buscá en las tareas de errores](https://github.com/gcba/obelisco/issues?q=is%3Aopen+is%3Aissue+label%3Acomponente+label%3Aerror3) para entender si ya fue reportado.
 
-- **Si no lo encontrás**, [creá un nuevo issue](https://github.com/gcba/estandares/issues) el error o mejora. (Usá el template para reportar errores de componentes).
+- **Si no lo encontrás**, [creá un nuevo issue](https://github.com/gcba/obelisco/issues) el error o mejora. (Usá el template para reportar errores de componentes).
 
 - **Si ya existe**, comentá tu caso o dejanos tu feedback reaccionando con un :thumbsup: .
 
