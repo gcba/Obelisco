@@ -32,14 +32,14 @@ $breadcrumb-padding-x: 0;
   .breadcrumb {
     .breadcrumb-item:last-child {
       padding-left: 0;
+      &:before {
+        margin-right: $breadcrumb-item-padding;
+        transform: rotate(0.5turn);
+      }
     }
     .breadcrumb-item:not(:last-child) {
       display: none;
     }
   }
 
-  &:before {
-    margin-right: $breadcrumb-item-padding;
-    transform: rotate(0.5turn);
-  }
 }

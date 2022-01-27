@@ -30,7 +30,7 @@ export const DosNiveles = (): JSX.Element => (
           <a href="#">Buenos Aires</a>
         </li>
         <li className="breadcrumb-item">
-          <a href="#">Pagina anterior</a>
+          <a href="#">Página anterior</a>
         </li>
       </ol>
     </nav>
@@ -47,7 +47,7 @@ export const TresNiveles = (): JSX.Element => (
           <a href="#">Página intermedia con mucho mucho texto</a>
         </li>
         <li className="breadcrumb-item">
-          <a href="#">Pagina anterior</a>
+          <a href="#">Página anterior</a>
         </li>
       </ol>
     </nav>
@@ -68,7 +68,7 @@ export const CuatroNiveles = (): JSX.Element => (
           <a href="#">Intermedia</a>
         </li>
         <li className="breadcrumb-item">
-          <a href="#">Pagina anterior</a>
+          <a href="#">Página anterior</a>
         </li>
       </ol>
     </nav>
@@ -83,7 +83,7 @@ export const Mobile = (): JSX.Element => (
           <a href="#">Buenos Aires</a>
         </li>
         <li className="breadcrumb-item">
-          <a href="#">Pagina anterior</a>
+          <a href="#">Página anterior</a>
         </li>
       </ol>
     </nav>
