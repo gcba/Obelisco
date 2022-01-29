@@ -15,20 +15,24 @@ $card-header-paddin-y: 0.75rem;
 $card-header-paddin-x: 1.5rem;
 $card-bg-info: #005387;
 
-$card-border-width: 0px;
-$card-footer-border-width: 1px;
-$card-shadow-color: rgba($grisulado-900, 0.3);
-$card-box-shadow: 0px 1px 3px $card-shadow-color;
-$card-box-hover-shadow: 0px 0px 24px $card-shadow-color;
+$card-border-width: 0;
+$card-shadow-color: $grisulado-50;
+$card-box-shadow: 0 0 0 2px $card-shadow-color;
+$card-box-hover-shadow: 0 0 0 2px $blue;
 
-$card-focus-width: 0.25rem;
-$card-focus-box-shadow: $focus-box-shadow;
+$card-icon-size: 1.8rem;
+$card-icon-background-size: 52px;
+
+$card-footer-icon-size: 1.25rem;
+
+$card-focus-box-shadow: 0 0 0 4px $blue;
 
 $card-deck-margin: $grid-gutter-width / 2;
 $card-deck-margin-top: $grid-gutter-width;
 
 $card-text-decoration: none;
 $card-font-weight: 600;
+
 
 $collapse-border-width: 2px;
 $collapse-info-title-size: 1.3125rem;
@@ -79,11 +83,18 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
 
 .card {
   box-shadow: $card-box-shadow;
-  transition: $transition-base;
 
+  .card-body {
+    padding: $card-spacer-y $card-spacer-x $card-spacer-x;
+  }
+  
   .card-title {
     margin-bottom: 0;
   }
+
+  // h3.card-title {
+  //   @extend .h4;
+  // }
 
   .card-subtitle {
     font-size: $card-subtitle-font-size;
@@ -92,18 +103,37 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
   }
 
   .card-text {
-    margin-top: $card-spacer-y;
+    margin-top: $card-spacer-y / 2;
   }
 
   .card-footer {
-    border-top-width: $card-footer-border-width;
-    padding: $card-spacer-y 0 $card-spacer-x;
+    padding: 0 0 $card-spacer-x;
     margin: 0 $card-spacer-x;
+
+    .bx {
+      font-size: $card-footer-icon-size;
+      vertical-align: sub;
+      margin-right: spaceUnits(1);
+    }
   }
 
   .card-icon {
     font-size: 3rem;
     margin-bottom: $card-spacer-y;
+
+    &.card-icon-with-bg {
+      font-size: $card-icon-size;
+      background-color: #f3f6f9;
+      width: $card-icon-background-size;
+      height: $card-icon-background-size;
+      border-radius: 50%;
+      text-align: center;
+      line-height: $card-icon-background-size;
+    }
+  }
+
+  .card-img-top {
+    border-radius: $card-border-radius $card-border-radius 0 0;
   }
 
   &.card-simple {
@@ -144,6 +174,7 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
 }
 
 a.card,
+a.card:visited,
 button.card {
   text-align: left;
   color: $body-color;
@@ -155,6 +186,15 @@ button.card {
     box-shadow: $card-box-hover-shadow;
     text-decoration: $card-text-decoration;
     color: $body-color;
+
+    .card-body,
+    .card-footer {
+      color: $blue;
+
+      .card-title {
+        text-decoration: underline;
+      }
+    }
   }
 
   &:focus,
@@ -162,11 +202,7 @@ button.card {
     outline: 0;
     box-shadow: $card-focus-box-shadow;
     text-decoration: $card-text-decoration;
-    color: $card-active-color;
-    
-    * {
-      color: $card-active-color;
-    }
+    color: $body-color;
   }
 }
 

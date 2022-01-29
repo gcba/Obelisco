@@ -77,7 +77,7 @@ export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardPro
         <p className="card-text">{description}</p>
       </div>
       {footer && (
-        <div className="card-footer text-right">
+        <div className="card-footer">
           <small>{footer}</small>
         </div>
       )}

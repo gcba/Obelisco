@@ -38,7 +38,7 @@ export const Tags = (): JSX.Element => {
 };
 Tags.story = { name: 'Con etiquetas' };
 
-export const Ícono = (): JSX.Element => {
+export const Icon = (): JSX.Element => {
   return (
     <div className="cards-container">
       <Card
@@ -53,6 +53,26 @@ export const Ícono = (): JSX.Element => {
     </div>
   );
 };
+Icon.story = { name: 'Con ícono' };
+
+export const IconWithBackGround = (): JSX.Element => {
+  return (
+    <div className="cards-container">
+      <div className="cards-container">
+        <a className="card" href="#">
+          <div className="card-body">
+            <i className="bx bx-news card-icon card-icon-with-bg"></i>
+            <h3 className="card-title">Título de tarjeta</h3>
+            <p className="card-text">
+              Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  );
+};
+IconWithBackGround.story = { name: 'Ícono con fondo' };
 
 export const TitleSubtitleLink = (): JSX.Element => {
   return (
@@ -117,3 +137,30 @@ export const TitleIconTextLink = (): JSX.Element => {
   );
 };
 TitleIconTextLink.story = { name: 'Sin contenedor con ícono' };
+
+export const SimpleEventCard = (): JSX.Element => {
+  const eventTitle = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed';
+  const eventSubtitle = 'Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.';
+  const footer = (
+    <>
+      <i className="bx bx-calendar-event"></i> Vie 21/1
+      <br />
+      <i className="bx bx-time-five"></i> 17 | 18 | 19 hs
+    </>
+  );
+  return (
+    <div className="cards-container">
+      <Card
+        title={eventTitle}
+        description={eventSubtitle}
+        footer={footer}
+        picture={{
+          src: 'cards/evento.jpg',
+          alt: 'descripción alternativa'
+        }}
+        href="#"
+      />
+    </div>
+  );
+};
+SimpleEventCard.story = { name: 'Evento simple' };
