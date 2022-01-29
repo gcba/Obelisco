@@ -51,13 +51,19 @@ $focus-box-shadow: 0 0 0 $focus-width $focus-color;
 
 /* === SVG color scape === */
 
-@function svgColor($string) {
-  @if type-of($string) == 'color' and str-index(#{$string}, '#') == 1 {
-    $hex: str-slice(ie-hex-str($string), 4);
-    $string: unquote('#{$hex}');
+@function svgColor($color) {
+  // @if type-of($string) == 'color' and str-index(#{$string}, '#') == 1 {
+  //   $hex: str-slice(ie-hex-str($string), 4);
+  //   $string: unquote('#{$hex}');
 
-    @return '%23' + $string;
-  }
+  //   @return '%23' + $string;
+  // }
 
-  @return $string;
+  // Prueba para ver si resuelve un error con postcss-loader
+
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+
+  @return rgb1($red, $green, $blue), 0.9999;
 }
