@@ -14,7 +14,7 @@ export default {
 
 export const BusquedaCerrada = (): JSX.Element => {
   return (
-    <header className="navbar navbar-light search-active">
+    <header className="navbar navbar-light">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />

@@ -18,7 +18,13 @@ export const Buscador = (): JSX.Element => {
     <div className="form-wrapper">
       <div className="form-group">
         <label htmlFor="search-input">Buscar</label>
-        <input type="search" className="form-control input-search" id="name-input" name="name" placeholder="Buscar..." />
+        <input
+          type="search"
+          className="form-control input-search"
+          id="name-input"
+          name="name"
+          placeholder="Buscar..."
+        />
       </div>
     </div>
   );
