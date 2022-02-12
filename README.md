@@ -12,12 +12,24 @@ Fue creado para reemplazar [BAstrap](https://github.com/gcba/bastrap).
 Obelisco se distribuye por medio del [paquete publicado en npm](https://www.npmjs.com/package/@gcba/obelisco).
 Es recomendable usar este sistema para definir la versión a usar y poder actualizarla fácilmente.
 
+### Instalación
+
 Para instalarlo en un proyecto que ya usa npm, hay que ejecutar:
 ```
 npm install @gcba/obelisco
 ```
 
-Si en cambio, se necesitan los archivos para importarlos en algún proyecto, se pueden descargar desde la [sección de versiones](https://github.com/gcba/Obelisco/releases).
+### Actualización
+
+Si Obelisco ya está instalado en el proyecto y necesitás actualizarlo a la última versión, en el directorio del proyecto hay que ejecutar:
+```
+npm update @gcba/obelisco
+```
+
+### Sin usar npm
+
+Si en cambio, se necesitan los archivos para importarlos en algún proyecto, se pueden descargar desde la [sección de versiones](https://github.com/gcba/Obelisco/releases).  
+En caso de tener que actualizar a la última versión, hay que volver a descargar los archivos y reemplazarlos.
 
 ## Cómo importarlo
 
