@@ -13,8 +13,7 @@ export type CardPicture = CardImage | CardIcon;
 
 interface BaseCardProps {
   title: string;
-  subTitle?: string;
-  description: string | JSX.Element;
+  description?: string | JSX.Element;
   href?: string;
   className?: string;
   tags?: string[];
@@ -25,7 +24,7 @@ export interface SimpleCardProps extends BaseCardProps {
 }
 
 export const SimpleCard: React.FC<SimpleCardProps> = (props: React.PropsWithChildren<SimpleCardProps>) => {
-  const { title, subTitle, description, href, picture, tags } = props;
+  const { title, description, href, picture, tags } = props;
 
   let className = `card card-simple`;
   if (props.className) className += ` ${props.className}`;
@@ -39,9 +38,8 @@ export const SimpleCard: React.FC<SimpleCardProps> = (props: React.PropsWithChil
             {text}
           </span>
         ))}
-        <h3 className="card-title">{href ? <a href={href}>{title}</a> : title}</h3>
-        {subTitle && <div className="card-subtitle">{subTitle}</div>}
-        <p className="card-text">{description}</p>
+        <h4 className="card-title">{href ? <a href={href}>{title}</a> : title}</h4>
+        {description && <p className="card-text">{description}</p>}
       </div>
     </div>
   );
@@ -55,7 +53,7 @@ export interface CardProps extends BaseCardProps {
 }
 
 export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardProps>) => {
-  const { title, subTitle, description, href, picture, footer, orientation, tags, onClick } = props;
+  const { title, description, href, picture, footer, orientation, tags, onClick } = props;
   const isHorizontal = orientation === 'horizontal';
 
   let className = `card`;
@@ -72,9 +70,8 @@ export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardPro
       <div className="card-body">
         {getIcon(picture as CardIcon)}
         <Tags tags={tags} />
-        <h3 className="card-title">{title}</h3>
-        {subTitle && <div className="card-subtitle">{subTitle}</div>}
-        <p className="card-text">{description}</p>
+        <h4 className="card-title">{title}</h4>
+        {description && <p className="card-text">{description}</p>}
       </div>
       {footer && (
         <div className="card-footer">

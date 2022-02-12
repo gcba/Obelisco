@@ -16,112 +16,10 @@ export default {
 };
 
 const title = 'Título de tarjeta';
-const subTitle = 'Subtítulo de tarjeta';
 const description = 'Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.';
-const footer = 'Last updated 3 mins ago';
-
-export const TitleSubtitleText = (): JSX.Element => {
-  return (
-    <div className="cards-container">
-      <Card title={title} subTitle={subTitle} description={description} footer={footer} href="#" />
-    </div>
-  );
-};
-TitleSubtitleText.story = { name: 'Contenedor simple' };
-
-export const Tags = (): JSX.Element => {
-  return (
-    <div className="cards-container">
-      <Card title={title} description={description} href="#" tags={['Etiqueta 1', 'Etiqueta 2']} />
-    </div>
-  );
-};
-Tags.story = { name: 'Con etiquetas' };
-
-export const Icon = (): JSX.Element => {
-  return (
-    <div className="cards-container">
-      <Card
-        title={title}
-        description={description}
-        picture={{
-          icon: 'bx-news',
-          color: '#009afd'
-        }}
-        href="#"
-      />
-    </div>
-  );
-};
-Icon.story = { name: 'Con ícono' };
-
-export const IconWithBackGround = (): JSX.Element => {
-  return (
-    <div className="cards-container">
-      <div className="cards-container">
-        <a className="card" href="#">
-          <div className="card-body">
-            <i className="bx bx-news card-icon card-icon-with-bg"></i>
-            <h3 className="card-title">Título de tarjeta</h3>
-            <p className="card-text">
-              Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  );
-};
-IconWithBackGround.story = { name: 'Ícono con fondo' };
-
-export const TitleSubtitleLink = (): JSX.Element => {
-  return (
-    <div className="cards-container">
-      <Card
-        tags={['Etiqueta 1', 'Etiqueta 2']}
-        title={title}
-        subTitle={subTitle}
-        description={description}
-        picture={{
-          src: 'cards/paseobajo.jpg',
-          alt: 'descripción alternativa'
-        }}
-        href="#"
-      />
-    </div>
-  );
-};
-TitleSubtitleLink.story = { name: 'Contenedor con imagen' };
-
-export const HorizontalCard = (): JSX.Element => {
-  return (
-    <div className="horizontal-container">
-      <Card
-        title={title}
-        description={description}
-        picture={{
-          src: 'cards/paseobajo-wide.png',
-          alt: 'descripción alternativa',
-          width: 168
-        }}
-        orientation="horizontal"
-        href="#"
-      />
-    </div>
-  );
-};
-HorizontalCard.story = { name: 'Contenedor con imagen horizontal' };
+const footer = 'Fecha de publicación: 10/10/2021';
 
 export const TitleTextLink = (): JSX.Element => {
-  return (
-    <div className="cards-container">
-      <SimpleCard title={title} description={description} href="#" />
-    </div>
-  );
-};
-TitleTextLink.story = { name: 'Sin contenedor' };
-
-export const TitleIconTextLink = (): JSX.Element => {
   return (
     <div className="cards-container">
       <SimpleCard
@@ -129,14 +27,130 @@ export const TitleIconTextLink = (): JSX.Element => {
         description={description}
         href="#"
         picture={{
-          icon: 'bx-news',
-          color: '#26874a'
+          icon: 'bx-news'
         }}
+      />
+      <br />
+      <br />
+      <SimpleCard
+        title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
+        description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
+        href="#"
+      />
+      <br />
+      <br />
+      <SimpleCard title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed" href="#" />
+    </div>
+  );
+};
+TitleTextLink.story = { name: 'Sin contenedor' };
+
+export const TitleText = (): JSX.Element => {
+  return (
+    <div className="cards-container">
+      <Card
+        title={title}
+        description={description}
+        picture={{
+          icon: 'bx-news'
+        }}
+        href="#"
+      />
+      <br />
+      <Card title={title} description={description} href="#" />
+      <br />
+      <Card title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed" href="#" />
+    </div>
+  );
+};
+TitleText.story = { name: 'Con contenedor' };
+
+export const HorizontalCard = (): JSX.Element => {
+  return (
+    <>
+      <div className="horizontal-container">
+        <Card
+          title={title}
+          description={description}
+          picture={{
+            src: 'cards/paseobajo-wide.png',
+            alt: 'descripción alternativa'
+          }}
+          orientation="horizontal"
+          href="#"
+        />
+        <br />
+        <Card
+          title={title}
+          description={description}
+          picture={{
+            src: 'cards/paseobajo-wide.png',
+            alt: 'descripción alternativa'
+          }}
+          orientation="horizontal"
+          className="card-lg"
+          href="#"
+        />
+      </div>
+      <br />
+      <div className="cards-container">
+        <Card
+          title="Lorem ipsum dolor sit amet, consetetur"
+          picture={{
+            src: 'cards/paseobajo-wide.png',
+            alt: 'descripción alternativa'
+          }}
+          orientation="horizontal"
+          href="#"
+        />
+        <br />
+
+        <Card
+          title={title}
+          description={description}
+          picture={{
+            src: 'cards/paseobajo-wide.png',
+            alt: 'descripción alternativa'
+          }}
+          orientation="horizontal"
+          href="#"
+        />
+        <br />
+        <Card
+          title={title}
+          description={description}
+          picture={{
+            src: 'cards/paseobajo-wide.png',
+            alt: 'descripción alternativa'
+          }}
+          orientation="horizontal"
+          className="card-lg"
+          href="#"
+        />
+      </div>
+    </>
+  );
+};
+HorizontalCard.story = { name: 'Contenedor con imagen horizontal' };
+
+export const NewsCard = (): JSX.Element => {
+  return (
+    <div className="cards-container">
+      <Card
+        tags={['Etiqueta 1', 'Etiqueta 2']}
+        title={title}
+        description={description}
+        footer={footer}
+        picture={{
+          src: 'cards/evento.jpg',
+          alt: 'descripción alternativa'
+        }}
+        href="#"
       />
     </div>
   );
 };
-TitleIconTextLink.story = { name: 'Sin contenedor con ícono' };
+NewsCard.story = { name: 'Noticia' };
 
 export const SimpleEventCard = (): JSX.Element => {
   const eventTitle = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed';
