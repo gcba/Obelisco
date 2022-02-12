@@ -17,7 +17,7 @@ export const Texto = (): JSX.Element => {
   return (
     <div className="form-wrapper">
       <div className="form-group">
-        <label htmlFor="name-input">Nombre</label>
+        <label htmlFor="name-input">Nombre *</label>
         <input type="text" className="form-control" id="name-input" name="name" placeholder="Ejemplo: Camila" />
       </div>
     </div>
@@ -28,7 +28,7 @@ export const Numero = (): JSX.Element => {
   return (
     <div className="form-wrapper">
       <div className="form-group">
-        <label htmlFor="number-input">Edad</label>
+        <label htmlFor="number-input">Campo numérico *</label>
         <input type="number" className="form-control" id="number-input" name="number" value="30" />
       </div>
     </div>
@@ -42,7 +42,7 @@ export const CorreoElectronico = (): JSX.Element => {
       <div className="form-group">
         <label htmlFor="email-input">Correo electrónico</label>
         <span id="email-help" className="form-text">
-          Nunca vamos a compartir tu correo electrónico con nadie.
+          Nunca lo vamos a compartir con nadie.
         </span>
         <input
           type="email"
@@ -87,7 +87,7 @@ BloqueDeTexto.story = { name: 'Bloque de texto' };
 export const Deshabilitado = (): JSX.Element => {
   return (
     <div className="form-wrapper">
-      <div className="form-group">
+      <div className="form-group disabled">
         <label htmlFor="name-input">Nombre</label>
         <input type="text" className="form-control" id="name-input" name="name" value="Camila" disabled />
       </div>

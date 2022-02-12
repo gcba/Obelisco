@@ -4,34 +4,46 @@ $input-bg: $light;
 $custom-select-bg: $input-bg;
 $input-placeholder-color: $grisulado-300;
 
-$input-disabled-color: $grisulado-400;
-$input-disabled-bg: $grisulado-50;
+$input-disabled-color: $grisulado-300;
+$input-disabled-bg: $grisulado-10;
 
 $label-margin-bottom: 0;
 $label-font-weight: 600;
 
+$input-border-color: $grisulado-50;
+$input-border-width: 2px;
+$input-box-shadow: 0 0 0 $input-border-width $input-border-color;
+
+$input-height: 48px;
+$input-border-radius: $border-radius-lg;
+
+$custom-select-height: $input-height;
 $custom-select-disabled-color: $input-disabled-color;
 $custom-select-disabled-bg: $input-disabled-bg;
-
-$custom-control-indicator-checked-color: $grisulado-900;
-$custom-control-indicator-active-color: $grisulado-900;
 
 $input-focus-border-color: $input-disabled-color;
 $input-focus-box-shadow: $focus-box-shadow;
 
+$custom-control-indicator-checked-color: $blue;
+$custom-control-indicator-active-color: $blue;
 $custom-control-indicator-size: spaceUnits(5);
 $custom-control-indicator-bg: transparent;
 $custom-control-indicator-border-color: $grisulado-900;
-$custom-control-indicator-border-width: 3px;
-$custom-control-indicator-checked-bg: transparent;
-$custom-control-indicator-checked-border-color: $grisulado-900;
+$custom-control-indicator-border-width: 2px;
+$custom-control-indicator-checked-bg: $blue;
+$custom-control-indicator-checked-border-color: $blue;
 $custom-control-indicator-focus-border-color: $grisulado-900;
-$custom-control-indicator-active-bg: transparent;
-$custom-control-indicator-active-border-color: $grisulado-900;
+$custom-control-indicator-active-bg: $blue;
+$custom-control-indicator-active-border-color: $blue;
 $custom-control-indicator-checked-disabled-bg: transparent;
 $custom-control-indicator-disabled-bg: transparent;
 
-$input-validation-focus-width: $focus-width;
+$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$white}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>");
+
+$input-validation-focus-width: $input-border-width;
+
+$form-text-margin-top: 0;
+$form-text-margin-bottom: spaceUnits(1);
 
 $form-icons: (
   'search':
@@ -64,16 +76,22 @@ $form-validation-states: (
 
 /* === Custom styles === */
 
-.form-group label {
-  margin-bottom: $label-margin-bottom;
-  font-weight: $label-font-weight;
+.form-group {
+  label {
+    margin-bottom: $label-margin-bottom;
+    font-weight: $label-font-weight;
+  }
+
+  &.disabled label {
+    color: $input-disabled-color;
+  }
 }
 
 .custom-control-label {
   padding: spaceUnits(1);
-  padding-left: $custom-control-indicator-size + spaceUnits(6);
+  padding-left: $custom-control-indicator-size + spaceUnits(5);
   padding-right: spaceUnits(3);
-  margin-bottom: spaceUnits(3);
+  margin-bottom: spaceUnits(2);
   border-radius: $border-radius * 2;
 
   &::before {
@@ -93,20 +111,24 @@ $form-validation-states: (
   background-position: center right spaceUnits(2);
 }
 
-.form-control {
+.form-control,
+.custom-select {
   transition: none;
   border: none;
-  box-shadow: 0 0 0 1px $input-focus-border-color;
+  box-shadow: $input-box-shadow;
+  margin: $input-border-width;
+  width: calc(100% - #{$input-border-width * 2});
 
   &:focus {
     background-color: $input-bg;
+    box-shadow: $input-focus-box-shadow;
   }
   
   &.input-search {
     @include form-icon('search');
     &:hover,
     &:focus {
-      background: none;
+      background-image: none;
     }
   }
 
@@ -119,11 +141,23 @@ $form-validation-states: (
   }
   
   &.is-valid {
-    box-shadow: 0 0 0 $focus-width $success;
+    box-shadow: 0 0 0 $input-validation-focus-width $success;
   }
   &.is-invalid {
-    box-shadow: 0 0 0 $focus-width $danger;
+    box-shadow: 0 0 0 $input-validation-focus-width $danger;
   }
+
+  &:disabled, &[readonly] {
+    color: $input-disabled-color;
+  }
+}
+
+.form-text {
+  margin-bottom: $form-text-margin-bottom;
+}
+
+.valid-feedback, .invalid-feedback {
+  margin-top: spaceUnits(2);
 }
 
 .valid-feedback::before {
@@ -137,12 +171,23 @@ $form-validation-states: (
   margin-right: spaceUnits(1);
 }
 
+// Custom controls
+
+.custom-control {
+  padding-left: 0;
+}
+
 .custom-control-input {
   &:not(:disabled) ~ .custom-control-label {
     cursor: pointer;
 
     &:hover {
-      background-color: $light;
+      color: $custom-control-indicator-active-color;
+      text-decoration: underline;
+
+      &:before {
+        border-color: $custom-control-indicator-active-color;
+      }
     }
   }
   &:not(:disabled):focus ~ .custom-control-label {
@@ -162,14 +207,30 @@ $form-validation-states: (
   }
 }
 
+// Radios
+.custom-radio {
+  .custom-control-input:checked ~ .custom-control-label {
+    
+    &:before {
+      background: transparent;
+    }
+    
+    &::after {
+      background-image: none;
+      width: 10px;
+      height: 10px;
+      margin: 5px;
+      background-color: $custom-control-indicator-checked-color;
+      border-radius: 100%;
+    }
+  }
+}
+
 .bg-light {
   .form-control,
   .custom-select {
     &:not(:disabled) {
       background-color: $white;
     }
-  }
-  .custom-control-input:not(:disabled) ~ .custom-control-label:hover {
-    background-color: $white;
   }
 }
