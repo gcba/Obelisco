@@ -21,26 +21,42 @@ const footer = 'Fecha de publicación: 10/10/2021';
 
 export const TitleTextLink = (): JSX.Element => {
   return (
-    <div className="cards-container">
-      <SimpleCard
-        title={title}
-        description={description}
-        href="#"
-        picture={{
-          icon: 'bx-news'
-        }}
-      />
+    <>
+      <div className="horizontal-container">
+        <SimpleCard
+          title={title}
+          description={description}
+          picture={{
+            src: 'cards/ciudad.jpg',
+            alt: 'descripción alternativa'
+          }}
+          className="card-lg"
+          href="#"
+        />
+      </div>
       <br />
       <br />
-      <SimpleCard
-        title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
-        description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
-        href="#"
-      />
-      <br />
-      <br />
-      <SimpleCard title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed" href="#" />
-    </div>
+      <div className="cards-container">
+        <SimpleCard
+          title={title}
+          description={description}
+          href="#"
+          picture={{
+            icon: 'bx-news'
+          }}
+        />
+        <br />
+        <br />
+        <SimpleCard
+          title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
+          href="#"
+        />
+        <br />
+        <br />
+        <SimpleCard title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed" href="#" />
+      </div>
+    </>
   );
 };
 TitleTextLink.story = { name: 'Sin contenedor' };

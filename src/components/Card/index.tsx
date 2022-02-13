@@ -3,7 +3,6 @@ import * as React from 'react';
 export type CardImage = {
   src: string;
   alt?: string;
-  width?: number;
 };
 export type CardIcon = {
   icon: string;
@@ -20,19 +19,22 @@ interface BaseCardProps {
 }
 
 export interface SimpleCardProps extends BaseCardProps {
-  picture?: CardIcon;
+  picture?: CardPicture;
 }
 
 export const SimpleCard: React.FC<SimpleCardProps> = (props: React.PropsWithChildren<SimpleCardProps>) => {
   const { title, description, href, picture, tags } = props;
+  const hasPicture = (picture as CardImage)?.src != undefined;
 
   let className = `card card-simple`;
+  if (hasPicture) className += ` card-horizontal`;
   if (props.className) className += ` ${props.className}`;
 
   return (
     <div className={className}>
+      {getImage(picture as CardImage, true)}
       <div className="card-body">
-        {getIcon(picture)}
+        {getIcon(picture as CardIcon)}
         {tags?.map((text) => (
           <span key={text} className="badge badge-info">
             {text}
@@ -86,14 +88,7 @@ export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardPro
 
 const getImage = (picture?: CardImage, isHorizontal?: boolean): JSX.Element | null => {
   if (picture && picture.src !== undefined) {
-    return (
-      <img
-        src={picture.src}
-        className={`card-img-${isHorizontal ? 'left' : 'top'}`}
-        alt={picture.alt || ''}
-        width={picture.width}
-      />
-    );
+    return <img src={picture.src} className={`card-img-${isHorizontal ? 'left' : 'top'}`} alt={picture.alt || ''} />;
   }
   return null;
 };

@@ -82,6 +82,18 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
   }
 }
 
+@mixin card-deck-1 {
+  .card {
+    // Esto es necesario que siempre se vea de a 1 columna en todos los tamaños
+    flex: 1 0 100% !important; 
+    margin-top: 0;
+    
+    &:nth-of-type(n + 1) {
+      margin-top: $card-deck-margin-top;
+    }
+  }
+}
+
 /* === Bootstrap Import === */
 
 @import '~bootstrap/scss/card';
@@ -175,7 +187,13 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
           padding: $card-spacer-lg $card-spacer;
         }
       }
+    }
 
+    &.card-simple {
+      .card-img-left {
+        margin: $card-spacer;
+        border-radius: 0;
+      }
     }
   }
 }
@@ -195,6 +213,10 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
   .card-deck:not(.max-cards-2):not(.max-cards-3) {
     @include card-deck-4;
   }
+}
+
+.card-deck.max-cards-1 {
+  @include card-deck-1;
 }
 
 a.card,
