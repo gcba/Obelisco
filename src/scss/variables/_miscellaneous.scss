@@ -65,5 +65,5 @@ $focus-box-shadow: 0 0 0 $focus-width $focus-color;
   $green: green($color);
   $blue: blue($color);
 
-  @return rgb1($red, $green, $blue), 0.9999;
+  @return rgba($red, $green, $blue, 0.9999);
 }
