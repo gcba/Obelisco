@@ -16,6 +16,10 @@ export const CasillaMultiple = (): JSX.Element => {
   const [value, setValue] = React.useState<boolean>(true);
   return (
     <>
+      <div className="form-group">
+        <label>Seleccioná una o varias opciónes *</label>
+        <span className="form-text">Texto de asistencia</span>
+      </div>
       <div className="custom-control custom-checkbox">
         <input
           className="custom-control-input"

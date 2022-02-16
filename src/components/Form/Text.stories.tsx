@@ -17,7 +17,7 @@ export const Texto = (): JSX.Element => {
   return (
     <div className="form-wrapper">
       <div className="form-group">
-        <label htmlFor="name-input">Nombre</label>
+        <label htmlFor="name-input">Nombre *</label>
         <input type="text" className="form-control" id="name-input" name="name" placeholder="Ejemplo: Camila" />
       </div>
     </div>
@@ -28,7 +28,7 @@ export const Numero = (): JSX.Element => {
   return (
     <div className="form-wrapper">
       <div className="form-group">
-        <label htmlFor="number-input">Edad</label>
+        <label htmlFor="number-input">Campo numérico *</label>
         <input type="number" className="form-control" id="number-input" name="number" value="30" />
       </div>
     </div>
@@ -41,6 +41,9 @@ export const CorreoElectronico = (): JSX.Element => {
     <div className="form-wrapper">
       <div className="form-group">
         <label htmlFor="email-input">Correo electrónico</label>
+        <span id="email-help" className="form-text">
+          Nunca lo vamos a compartir con nadie.
+        </span>
         <input
           type="email"
           className="form-control"
@@ -49,9 +52,6 @@ export const CorreoElectronico = (): JSX.Element => {
           aria-describedby="email-help"
           placeholder="nombre@ejemplo.com"
         />
-        <small id="email-help" className="form-text text-muted">
-          Nunca vamos a compartir tu correo electrónico con nadie.
-        </small>
       </div>
     </div>
   );
@@ -63,10 +63,10 @@ export const Fecha = (): JSX.Element => {
     <div className="form-wrapper">
       <div className="form-group">
         <label htmlFor="date-input">Fecha</label>
-        <input type="date" className="form-control" id="date-input" name="date" aria-describedby="date-help" />
-        <small id="date-help" className="form-text text-muted">
+        <span id="date-help" className="form-text">
           Ingrese una fecha posterior a hoy.
-        </small>
+        </span>
+        <input type="date" className="form-control" id="date-input" name="date" aria-describedby="date-help" />
       </div>
     </div>
   );
@@ -87,7 +87,7 @@ BloqueDeTexto.story = { name: 'Bloque de texto' };
 export const Deshabilitado = (): JSX.Element => {
   return (
     <div className="form-wrapper">
-      <div className="form-group">
+      <div className="form-group disabled">
         <label htmlFor="name-input">Nombre</label>
         <input type="text" className="form-control" id="name-input" name="name" value="Camila" disabled />
       </div>

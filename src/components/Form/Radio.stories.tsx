@@ -15,6 +15,10 @@ export default {
 export const CasillaUnica = (): JSX.Element => {
   return (
     <>
+      <div className="form-group">
+        <label>Seleccioná una opción *</label>
+        <span className="form-text">Texto de asistencia</span>
+      </div>
       <div className="custom-control custom-radio">
         <input
           className="custom-control-input"
@@ -22,10 +26,10 @@ export const CasillaUnica = (): JSX.Element => {
           name="profession"
           id="profession-designer"
           value="designer"
-          checked
+          defaultChecked={true}
         />
         <label className="custom-control-label" htmlFor="profession-designer">
-          Designer
+          Diseñador
         </label>
       </div>
       <div className="custom-control custom-radio">
@@ -37,7 +41,19 @@ export const CasillaUnica = (): JSX.Element => {
           value="developer"
         />
         <label className="custom-control-label" htmlFor="profession-developer">
-          Developer
+          Desarrollador
+        </label>
+      </div>
+      <div className="custom-control custom-radio">
+        <input
+          className="custom-control-input"
+          type="radio"
+          name="profession"
+          id="profession-content"
+          value="content"
+        />
+        <label className="custom-control-label" htmlFor="profession-content">
+          Redactor de contenidos
         </label>
       </div>
     </>
