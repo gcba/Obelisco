@@ -194,3 +194,24 @@ export const SimpleEventCard = (): JSX.Element => {
   );
 };
 SimpleEventCard.story = { name: 'Evento simple' };
+
+export const EventCard = (): JSX.Element => {
+  return (
+    <div className="cards-container">
+      <a className="card" href="#">
+        <div className="card-event-top">
+          <img src="cards/evento-bg.jpg" className="card-event-bg" alt="descripción alternativa" />
+          <div className="card-event-img">
+            <img src="cards/evento-thumb.jpg" alt="descripción alternativa" />
+          </div>
+          <p className="card-event-name">Actividades y clases en polideportivos</p>
+        </div>
+        <div className="card-body">
+          <p className="card-headline">18 de Enero al 1 de Febrero</p>
+          <h4 className="card-title">Comienza una nueva edición de actividades en polideportivos</h4>
+        </div>
+      </a>
+    </div>
+  );
+};
+EventCard.story = { name: 'Evento' };
