@@ -99,6 +99,23 @@ $theme-colors: map-merge(
 
   &.alert-primary {
     color: $grisulado-900;
+    border: 2px solid $yellow;
+    border-left: 2px solid $yellow;
+  }
+
+  &.alert-danger {
+    border: 2px solid $red;
+    border-left: 2px solid $red;
+  }
+
+  &.alert-success {
+    border: 2px solid $green;
+    border-left: 2px solid $green;
+  }
+
+  &.alert-info {
+    border: 2px solid $blue;
+    border-left: 2px solid $blue;
   }
 }
 

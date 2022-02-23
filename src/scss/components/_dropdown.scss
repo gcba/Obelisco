@@ -1,10 +1,14 @@
 /* === Variable and mixins overides === */
+$btn-height: 48px;
+$btn-height-md: 40px;
 
 $dropdown-box-shadow: 0 0 spaceUnits(3) transparentize($grisulado-100, .25);
 $dropdown-item-padding: spaceUnits(2) spaceUnits(2);
 
 $icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>');
 $icon-chevron-down: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
+$icon-chevron-down-active: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(255,255,255)" width="20" height="20" viewBox="0 0 24 24" style=";transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
+$icon-chevron-down-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(0, 123, 199)" width="20" height="20" viewBox="0 0 24 24" style=";transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
 $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>');
 
 /* === Bootstrap Import === */
@@ -12,7 +16,14 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
 
 /* === Custom styles === */
 
+.dropdown-container {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
 .btn .dropdown-chevron {
+  height: $btn-height;
   padding: 2px;
 
   &:hover {
@@ -22,27 +33,71 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
 }
 
 .btn.btn-dropdown {
+  width: 100%;
   padding: $btn-padding-y;
   font-weight: $body-font-weight;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px 12px 12px;
+  border-radius: 8px;
 
-  &:hover {
-    background-color: $grisulado-10;
-    border-radius: 0.5rem;
+  &:active, &.active {
+    background: $blue;
+    color: $white;
+    font-weight: bold;
+
+    &:hover, &.hover {
+      color: $white;
+      text-decoration: none;
+
+      &.dropdown-toggle::after {
+        content: $icon-chevron-down-active;
+        display: inline-block;
+        vertical-align: middle;
+        width: 1.4em;
+        height: 1.4em;
+        border: none;
+      }
+    }
+
+    &.dropdown-toggle::after {
+      content: $icon-chevron-down-active;
+      display: inline-block;
+      vertical-align: middle;
+      width: 1.4em;
+      height: 1.4em;
+      border: none;
+    }
   }
 
-  &:focus {
-    box-shadow: 0 0 0 0.2rem #00568b;
-    background: #fff;
-    text-decoration: none;
-    border-radius: 0.5rem;
-  }
-
-  &.active {
+  &:hover, &.hover {
+    border: 2px solid $blue !important;
+    text-decoration: underline;
     color: $blue;
+
+    &.dropdown-toggle::after {
+      content: $icon-chevron-down-hover;
+      display: inline-block;
+      vertical-align: middle;
+      width: 1.4em;
+      height: 1.4em;
+      border: none;
+    }
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 4px theme-color-level('info', 4.5);
   }
 
   &.btn-dropdown-sm {
     padding: $btn-padding-y / 2 $btn-padding-y;
+  }
+
+  &.btn-dropdown-md {
+    height: $btn-height-md;
   }
 
   &.dropdown-toggle:after {
@@ -70,6 +125,13 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
     display: inline-block;
     vertical-align: sub;
   }
+
+  &.dropdown-border {
+    border: 2px solid $grisulado-50;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .dropdown-menu {
@@ -82,7 +144,7 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
     border-radius: $border-radius;
     padding: $dropdown-item-padding;
     color: $body-color;
-    
+
     &:hover {
       background-color: $grisulado-10;
       // border-radius: 4px;

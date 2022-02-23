@@ -14,6 +14,7 @@ $pagination-disabled-bg: transparent;
 $page-navigation-border: 1px solid $border-color;
 
 $pagination-icon-size: 1.25rem;
+$pagination-size: 40px;
 
 @function pagination-icon($side, $color) {
   $path: '';
@@ -26,6 +27,10 @@ $pagination-icon-size: 1.25rem;
   @return url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="#{$pagination-icon-size}" height="#{$pagination-icon-size}" viewBox="0 0 24 24" style="fill:#{$color};transform:;-ms-filter:">#{$path}</svg>');
 }
 
+$pagination-icon-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="#{$pagination-icon-size}" height="#{$pagination-icon-size}" viewBox="0 0 24 24" style="fill: rgb(0, 123, 199);transform: ;msFilter:;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg>');
+$pagination-icon-left: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="#{$pagination-icon-size}" height="#{$pagination-icon-size}" viewBox="0 0 24 24" style="fill: rgb(0, 123, 199);transform: ;msFilter:;"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg>');
+
+$color-pagination-focus: #005387;
 /* === Bootstrap Import === */
 
 @import '~bootstrap/scss/pagination';
@@ -33,18 +38,49 @@ $pagination-icon-size: 1.25rem;
 /* === Custom styles === */
 
 .pagination {
-  display: block;
-  text-align: center;
-
   .page-item {
     display: inline-block;
 
     .page-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: $border-radius;
       margin: 0 $pagination-margin-x;
+      color: $grisulado-900;
+      background-color: $white;
+      border: 1px solid $grisulado-50;
+      height: $pagination-size;
+      min-width: 35px;
 
-      &:hover {
+      &.page-navigation {
+        max-width: 118px;
+      }
+
+      &:active, &.active {
+        color: $white;
+        background-color: $blue;
+      }
+      
+      &:hover, &.hover {
         text-decoration: underline;
+        border: 2px solid $blue;
+        color: $blue;
+
+        .page-previous-icon {
+          content: $pagination-icon-left;
+        }
+
+        .page-next-icon {
+          content: $pagination-icon-right;
+        }
+      }
+
+      &:focus, &.focus {
+        box-shadow: none;
+        text-decoration: none;
+        padding: 0.25rem 0.5rem;
+        border: 4px solid $color-pagination-focus;
       }
     }
   }
@@ -92,4 +128,10 @@ $pagination-icon-size: 1.25rem;
   padding-top: spaceUnits(6);
   padding-bottom: spaceUnits(4);
   border-bottom: $page-navigation-border;
+  width: 100%;
+  
+  &.page-item {
+    display: flex;
+  justify-content: space-between;
+  }
 }

@@ -1,0 +1,14 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+
+  .form {
+    width: 70%;
+  }
+
+  > h3  {
+    width: 30%;
+  }
+}

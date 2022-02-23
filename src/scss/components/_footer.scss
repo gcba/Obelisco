@@ -62,4 +62,10 @@ $footer-icon-size: spaceUnits(6);
   .footer-license-text {
     @extend small;
   }
+
+  .clearfix {
+    margin-top: 3rem;
+    border-top: 2px solid $grisulado-800;
+  }
 }
+

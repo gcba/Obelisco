@@ -5,31 +5,15 @@ $badge-font-weight: $font-weight-normal;
 $badge-border-radius: spaceUnits(0.5);
 $badge-separation: spaceUnits(2);
 
-$badge-bg-level: -9;
-$badge-bg-level-hover: -7;
+$badge-bg-level: -10;
+$badge-bg-level-hover: -10;
+$focus-color: #005387;
 
 /* === Custom variables and mixins === */
 
-@mixin badge-variant-custom($color, $value) {
-  color: $value;
-  background-color: theme-color-level($color, $badge-bg-level);
 
-  @at-root a#{&} {
-    &:focus,
-    &.focus {
-      outline: 0;
-      color: $value;
-      background-color: theme-color-level($color, $badge-bg-level);
-      box-shadow: $focus-box-shadow;
-    }
 
-    &:hover,
-    &.active {
-      color: $value;
-      background-color: theme-color-level($color, $badge-bg-level-hover);
-    }
-  }
-}
+
 
 /* === Bootstrap Import === */
 
@@ -40,14 +24,44 @@ $badge-bg-level-hover: -7;
 .badge {
   text-decoration: none;
   text-transform: uppercase;
+  border: 2px solid;
+  border-radius: 8px;
+  color: $black;
+
 
   + .badge {
     margin-left: $badge-separation;
   }
 }
 
+
+
 @each $color, $value in $theme-colors {
+  
+
   .badge-#{$color} {
-    @include badge-variant-custom($color, $value);
+    background-color: theme-color-level($color, -9);
+    border-color: theme-color-level($color, 1);
+  }
+
+  a {
+    &.badge {
+      &:focus,
+        &.focus {
+          outline: 4px solid $focus-color ;
+          border: none ;
+          text-decoration: none ;
+          color: $blue;
+          background: theme-color-level($color, $badge-bg-level-hover) ;
+        }
+      
+        &:hover,
+        &.active {
+          color: $blue ;
+          text-decoration: underline ;
+          background: theme-color-level($color, $badge-bg-level-hover) ;
+          border-color: theme-color-level('info', 1);
+        }
+    }
   }
 }

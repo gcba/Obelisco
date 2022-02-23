@@ -1,0 +1,15 @@
+@import '../../../scss/variables/colors';
+
+.rounded {
+  border: 3px solid $grisulado-50;
+  border-radius: .25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.row-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}

@@ -33,6 +33,13 @@ $navbar-search-closed-padding-x: spaceUnits(5);
     width: $navbar-search-with;
   }
 
+  .icon-log-out {
+    transform: rotate(180deg);
+    font-size: 24px;
+    position: relative;
+    left: 2px;
+  }
+
   @include media-breakpoint-down(xs) {
     &:not(.active-search) {
       .input-search {
@@ -75,9 +82,15 @@ $navbar-search-closed-padding-x: spaceUnits(5);
     .form-group {
       margin-bottom: 0;
 
-      .input-search {
-        width: $navbar-search-with;
-      }
+        .input-search {
+          width: $navbar-search-with;
+        }
+    }
+
+    .navbar-search {
+      display: flex;
+      align-items: center;
+      gap: spaceUnits(2);
     }
   }
 }
@@ -86,3 +99,16 @@ $navbar-search-closed-padding-x: spaceUnits(5);
   background-color: $white;
   box-shadow: $navbar-box-shadow;
 }
+
+
+.show {
+  min-height: 116px;
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  align-items: end;
+} 
+

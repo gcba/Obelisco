@@ -8,27 +8,36 @@ $link-active-color: theme-color-level('info', 1.5);
 $link-focus-color: theme-color-level('info', 3);
 
 $link-external-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(0,123,199); transform: ;msFilter:;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>');
+$link-access-icon: url('data:image/svg+xml;charset=utf-8, <svg version="1.1" width="20" height="20" style="fill: rgb(0,123,199); transform: ;msFilter:;" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 476.213 476.213" > <polygon points="345.606,107.5 324.394,128.713 418.787,223.107 0,223.107 0,253.107 418.787,253.107 324.394,347.5  345.606,368.713 476.213,238.106 "/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>');
+$link-download-icon: url('data:image/svg+xml;charset=utf-8, <svg version="1.1"  width="20" height="20" style="fill: rgb(0,123,199); transform: ;msFilter:;" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485 485"> <g><g> <path d="M426.5,458h-368C51,458,45,464,45,471.5S51,485,58.5,485h368c7.5,0,13.5-6,13.5-13.5S434,458,426.5,458z"/> <path d="M233,378.7c2.5,2.5,6,4,9.5,4s7-1.4,9.5-4l107.5-107.5c5.3-5.3,5.3-13.8,0-19.1c-5.3-5.3-13.8-5.3-19.1,0L256,336.5v-323   C256,6,250,0,242.5,0S229,6,229,13.5v323l-84.4-84.4c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1L233,378.7z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>');
 $link-external-icon-active: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255,255,255); transform: ;msFilter:;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>');
 
 /* === Bootstrap Import === */
 
 /* === Custom styles === */
 
-a {
+.link {
   color: $blue;
   cursor: pointer;
 
-  &:visited {
+  &:visited, &.visited {
     color: $link-visited-color;
   }
 
   @include hover() {
     color: $link-active-color;
   }
+
+  &.active {
+    color: $link-active-color;
+  }
   
-  &:focus {
+  &:focus, &.focus {
     color: $link-focus-color;
     text-decoration: $link-decoration;
+    border-radius: 8px;
+    padding: 0 3px;
+    box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
   }
   
   &.external {
@@ -42,6 +51,34 @@ a {
 
     &:focus::after {
       content: $link-external-icon-active;
+    }
+  }
+
+  &.download {
+    &::before {
+      content: $link-download-icon;
+      display: inline-block;
+      vertical-align: sub;
+      height: 1em;
+      margin-left: spaceUnits(1);
+    }
+
+    &:focus::before {
+      content: $link-download-icon;
+    }
+  }
+
+  &.access {
+    &::after {
+      content: $link-access-icon;
+      display: inline-block;
+      vertical-align: sub;
+      height: 1em;
+      margin-left: spaceUnits(1);
+    }
+
+    &:focus::after {
+      content: $link-access-icon;
     }
   }
 }

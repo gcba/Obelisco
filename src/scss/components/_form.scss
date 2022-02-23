@@ -17,6 +17,8 @@ $custom-control-indicator-active-color: $grisulado-900;
 
 $input-focus-border-color: $input-disabled-color;
 $input-focus-box-shadow: $focus-box-shadow;
+$input-error-box-shadow: $error-box-shadow;
+$input-success-box-shadow: $success-box-shadow;
 
 $custom-control-indicator-size: spaceUnits(5);
 $custom-control-indicator-bg: transparent;
@@ -32,8 +34,13 @@ $custom-control-indicator-disabled-bg: transparent;
 
 $form-icons: (
   'search':
-    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>')
+    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>'),
+  'cancel':
+    url('data:image/svg+xml;charset=utf-8,<svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.75827 17.2426L12.0009 12M17.2435 6.75736L12.0009 12M12.0009 12L6.75827 6.75736M12.0009 12L17.2435 17.2426" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> </svg> ')
 );
+
+$form-icon-error: url('data:image/svg+xml;charset=utf-8,<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M12 7L12 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M12 17.01L12.01 16.9989" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> </svg>');
+$form-icon-success: url('data:image/svg+xml;charset=utf-8,<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M7 12.5L10 15.5L17 8.5"  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/> </svg>');
 
 // Some configuration is inside ../_colors.scs
 
@@ -56,6 +63,104 @@ $form-validation-states: (
 @import '~bootstrap/scss/custom-forms';
 
 /* === Custom styles === */
+.bg-form {
+  background: #F3F6F9;
+}
+
+.form-group {
+
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  > small {
+
+    &.help-success {
+      color: theme-color-level('success', 0);
+
+      &::before {
+        content: $form-icon-success;
+        margin-right: spaceUnits(1);
+        vertical-align: middle;
+      }
+  
+      &:focus::before {
+        content: $form-icon-success;
+      }
+    }
+    &.help-error {
+      color: theme-color-level('danger', 0);
+
+      &::before {
+        content: $form-icon-error;
+        margin-right: spaceUnits(1);
+        vertical-align: middle;
+      }
+  
+      &:focus::before {
+        content: $form-icon-error;
+      }
+    }
+  }
+
+  .justify-input {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+
+    &:hover {
+
+      input[type="radio"] {
+        text-decoration: underline;
+        color: $blue;
+      
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: 3px solid $blue;
+        }
+      }
+
+      input[type="checkbox"] {
+        text-decoration: underline;
+        color: $blue;
+      
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          border: 3px solid $blue;
+        }
+      }
+  
+      > span {
+        text-decoration: underline;
+        color: $blue;
+      }
+    }
+
+    > span {
+      
+      &:hover, &.active {
+        text-decoration: underline;
+        color: $blue;
+      }
+
+  
+      &.completed {
+        color: $blue;
+      }
+    }
+
+  }
+}
+
+
 
 .form-group label {
   font-size: $font-size-sm;
@@ -89,27 +194,159 @@ $form-validation-states: (
 .form-control {
   &.input-search {
     @include form-icon('search');
-    &:hover,
-    &:focus {
-      background: none;
+
+    &.completed {
+      @include form-icon('cancel');
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &.default {
+    color: $grisulado-300;
+  }
+
+  &.focus {
+    border: none;
+    box-shadow: $input-focus-box-shadow;
+  }
+
+  &.error {
+    border: none;
+    box-shadow: $input-error-box-shadow;
+  }
+
+  &.success {
+    border: none;
+    box-shadow: $input-success-box-shadow;
+  }
+
+  &[type="radio"] {
+    width: 20px;
+    height: 20px;
+
+    &:hover, &.active {
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 3px solid $blue;
+      }
+    }
+
+    &.error {
+      border: none;
+      box-shadow: none;
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 3px solid theme-color-level('danger', 0);
+      }
+    }
+
+    &:focus, &.focus {
+      box-shadow: none;
+  
+      &:before {
+        content: '';
+        display: block;
+        width: 23px;
+        height: 23px;
+        margin: -1px;
+        border-radius: 30%;
+        outline: 4px theme-color-level('info', 2) solid;
+      }
+    }
+  }
+
+  &[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+
+    &:checked {
+      background-color: $blue;
+    }
+
+    &.active {
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 3px solid $blue;
+      }
+    }
+
+    &.error {
+      border: none;
+      box-shadow: none;
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 3px solid theme-color-level('danger', 0);
+      }
+    }
+
+    &.focus {
+      box-shadow: none;
+  
+      &:before {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 22px;
+        margin: -2px;
+        border-radius: 30%;
+        outline: 4px theme-color-level('info', 2) solid;
+      }
     }
   }
 }
 
+.custom-control {
+  padding-left: 0;
+
+  .custom-control-label {
+    &::before {
+      left: 0;
+      right: 0;
+    }
+  
+    &::after {
+      left: 0;
+    }
+  }
+}
+
+
 .custom-control-input {
+  position: relative;
+  left: 20px;
+  top: 5px;
+  z-index: 1;
+  
   &:not(:disabled) ~ .custom-control-label {
     cursor: pointer;
 
-    &:hover {
-      background-color: $light;
-    }
+    // &:hover {
+    //   background-color: $light;
+    // }
   }
   &:not(:disabled):focus ~ .custom-control-label {
     box-shadow: $input-focus-box-shadow;
 
-    &:before {
-      box-shadow: none;
-    }
+    // &:before {
+    //   box-shadow: none;
+    // }
   }
 
   &:disabled ~ .custom-control-label {

@@ -28,6 +28,10 @@ $modal-dialog-margin-y-sm-up: 3rem;
 // no va a hacer falta.
 
 .modal {
+  .modal-title {
+    font-weight: 900;
+  }
+
   .form-group {
     input,
     textarea {

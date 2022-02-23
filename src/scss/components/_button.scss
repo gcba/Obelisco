@@ -69,6 +69,10 @@ $btn-disabled-color: $gray-600;
       }
     }
   }
+
+  .btn-outline-#{$color} {
+    outline: 2px solid theme-color-level($color, 1);
+  }
 }
 
 .btn-link {
@@ -99,3 +103,23 @@ $btn-disabled-color: $gray-600;
     background-color: $btn-disabled-bg;
   }
 }
+
+// TODO: ADD LINK COLOR TO $theme-colors
+.btn-outline-link {
+  outline: 1px solid $link-color;
+  color: $link-color;
+
+  @include hover() {
+    background-color: theme-color-level('info');
+    color: $light;
+  }
+}
+
+.btn-collapse {
+  border-radius: 8px !important;
+  border: $gray-500 2px solid !important;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
