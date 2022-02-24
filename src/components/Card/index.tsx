@@ -3,7 +3,6 @@ import * as React from 'react';
 export type CardImage = {
   src: string;
   alt?: string;
-  width?: number;
 };
 export type CardIcon = {
   icon: string;
@@ -13,35 +12,36 @@ export type CardPicture = CardImage | CardIcon;
 
 interface BaseCardProps {
   title: string;
-  subTitle?: string;
-  description: string | JSX.Element;
+  description?: string | JSX.Element;
   href?: string;
   className?: string;
   tags?: string[];
 }
 
 export interface SimpleCardProps extends BaseCardProps {
-  picture?: CardIcon;
+  picture?: CardPicture;
 }
 
 export const SimpleCard: React.FC<SimpleCardProps> = (props: React.PropsWithChildren<SimpleCardProps>) => {
-  const { title, subTitle, description, href, picture, tags } = props;
+  const { title, description, href, picture, tags } = props;
+  const hasPicture = (picture as CardImage)?.src != undefined;
 
   let className = `card card-simple`;
+  if (hasPicture) className += ` card-horizontal`;
   if (props.className) className += ` ${props.className}`;
 
   return (
     <div className={className}>
+      {getImage(picture as CardImage, true)}
       <div className="card-body">
-        {getIcon(picture)}
+        {getIcon(picture as CardIcon)}
         {tags?.map((text) => (
           <span key={text} className="badge badge-info">
             {text}
           </span>
         ))}
-        <h3 className="card-title">{href ? <a href={href}>{title}</a> : title}</h3>
-        {subTitle && <div className="card-subtitle">{subTitle}</div>}
-        <p className="card-text">{description}</p>
+        <h4 className="card-title">{href ? <a href={href}>{title}</a> : title}</h4>
+        {description && <p className="card-text">{description}</p>}
       </div>
     </div>
   );
@@ -55,7 +55,7 @@ export interface CardProps extends BaseCardProps {
 }
 
 export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardProps>) => {
-  const { title, subTitle, description, href, picture, footer, orientation, tags, onClick } = props;
+  const { title, description, href, picture, footer, orientation, tags, onClick } = props;
   const isHorizontal = orientation === 'horizontal';
 
   let className = `card`;
@@ -72,9 +72,8 @@ export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardPro
       <div className="card-body">
         {getIcon(picture as CardIcon)}
         <Tags tags={tags} />
-        <h3 className="card-title">{title}</h3>
-        {subTitle && <div className="card-subtitle">{subTitle}</div>}
-        <p className="card-text">{description}</p>
+        <h4 className="card-title">{title}</h4>
+        {description && <p className="card-text">{description}</p>}
       </div>
       {footer && (
         <div className="card-footer">
@@ -89,14 +88,7 @@ export const Card: React.FC<CardProps> = (props: React.PropsWithChildren<CardPro
 
 const getImage = (picture?: CardImage, isHorizontal?: boolean): JSX.Element | null => {
   if (picture && picture.src !== undefined) {
-    return (
-      <img
-        src={picture.src}
-        className={`card-img-${isHorizontal ? 'left' : 'top'}`}
-        alt={picture.alt || ''}
-        width={picture.width}
-      />
-    );
+    return <img src={picture.src} className={`card-img-${isHorizontal ? 'left' : 'top'}`} alt={picture.alt || ''} />;
   }
   return null;
 };
