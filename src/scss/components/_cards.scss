@@ -86,10 +86,10 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
 @mixin card-deck-1 {
   .card {
     // Esto es necesario que siempre se vea de a 1 columna en todos los tamaños
-    flex: 1 0 100% !important; 
+    flex: 1 0 55% !important; 
     margin-top: 0;
     
-    &:nth-of-type(n + 1) {
+    &:nth-of-type(n + 2) {
       margin-top: $card-deck-margin-top;
     }
   }
