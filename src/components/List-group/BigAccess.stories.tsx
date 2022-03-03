@@ -14,6 +14,9 @@ export const BigAccess = (): JSX.Element => {
           <a href="#" className="list-group-item focus">
             Acceso grande
           </a>
+          <a href="#" className="list-group-item list-group-item-logout">
+            Cerrar sesión
+          </a>
         </div>
       </div>
     </div>

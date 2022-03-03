@@ -50,6 +50,10 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
 
 /* === Custom styles === */
 
+.list-group-item + .list-group-item {
+  border-top-width: 2px;
+}
+
 a.list-group-item {
   border: $border-access;
   border-radius: $list-group-border;
