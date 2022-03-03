@@ -23,7 +23,7 @@ export const Accesos = (): JSX.Element => (
   </div>
 );
 
-export const ModoDeUso = (): JSX.Element => {
+export const AccesoConIcono = (): JSX.Element => {
   return (
     <div>
       <ModeOfUseAccess />
