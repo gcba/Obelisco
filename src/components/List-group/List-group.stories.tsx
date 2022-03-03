@@ -17,9 +17,8 @@ export default {
   decorators: [withA11y]
 };
 
-export const AccesoGrande = (): JSX.Element => (
+export const Accesos = (): JSX.Element => (
   <div>
-    <h2>Acceso grande</h2>
     <BigAccess />
   </div>
 );
