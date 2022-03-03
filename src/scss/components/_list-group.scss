@@ -35,7 +35,7 @@ $list-group-border: 8px;
 
 $list-gorup-padding-y: spaceUnits(6);
 $list-gorup-padding-x: spaceUnits(4);
-$list-gorup-padding-sm: spaceUnits(3);
+$list-group-padding-sm: 1.5rem 1.5rem;
 
 $list-gorup-category-margin: spaceUnits(2);
 
@@ -108,6 +108,30 @@ a.list-group-item {
       content: $list-group-icon-logout;
     }
   }
+
+  &.item-sm {
+    padding: 1rem;
+    border: none;
+    @include display-flex-between;
+    align-items: flex-start;
+
+    :is(.access-text) {
+      padding: 0.5rem 0 0;
+    }
+
+    .access-content {
+      width: 100%;
+      
+      .access-text {
+        text-decoration: $no-text-decoration;
+      }
+    }
+    
+    .access-text {
+      font-size: 13px;
+      margin: 0;
+    }
+  }
 }
 
 .list-group {
@@ -116,18 +140,6 @@ a.list-group-item {
     padding: $list-gorup-category-margin $list-gorup-padding-x;
     margin: 0;
   }
-
-  &.list-group-sm {
-    .list-group-item,
-    .list-group-title,
-    .list-group-category {
-      padding: $list-gorup-padding-sm;
-    }
-  }
-}
-
-.list-group-item.list-group-sm {
-  padding: $list-gorup-padding-sm;
 }
 
 .group-access {
@@ -187,143 +199,5 @@ a.list-group-item {
     border-radius: $border-radius-card-item !important;
   }
 }
-
-/* === Mobile styles === */
-
-
-// /* === Variable and mixins overides === */
-
-// $list-group-color: $grisulado-900;
-// $list-group-hober-bg: #f3f6f9;
-// $list-group-border: 8px;
-
-// $list-gorup-padding-y: spaceUnits(5);
-// $list-gorup-padding-x: spaceUnits(4);
-// $list-group-padding-sm: 1.5rem 1.5rem;
-
-// $list-gorup-category-margin: spaceUnits(2);
-
-// $list-group-icon-arrow-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>');
-// $list-group-icon-arrow-default: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(25, 25, 25);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>');
-// $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(201, 59, 59, 1);transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>');
-
-// $padding-card-access-body: 1.5rem 1.5rem 0;
-// $font-size-icon-card: 2.5rem;
-// $card-size: 64px;
-// $font-title-option: 17px;
-
-// $border-access: 2px solid $grisulado-50;
-// $border-access-hover: 2px solid $blue !important;
-// $border-radius-card-item: 0 0 8px 8px;
-
-// $box-shadow-access-focus: 0 0 0 4px theme-color-level('info', 3);
-
-// $no-text-decoration: none;
-
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-// /* === Bootstrap Import === */
-
-// // Eliminamos el color secundario para las alertas.
-// @import '~bootstrap/scss/list-group';
-
-// /* === Custom styles === */
-
-// a.list-group-item {
-//   border: $border-access;
-//   margin-bottom: 2px;
-//   border-radius: $list-group-border !important;
-//   padding: $list-gorup-padding-y $list-gorup-padding-x;
-
-//   &:focus,
-//   &.focus {
-//     box-shadow: $box-shadow-access-focus;
-//     background: $white;
-//     color: $list-group-color;
-//     text-decoration: $no-text-decoration;
-//   }
-
-//   &:hover,
-//   &.hover {
-//     text-decoration: $no-text-decoration;
-//     border: $border-access-hover;
-//     color: $blue;
-
-//     // .access-content {
-//     //   .access-title {
-//     //     text-decoration: underline;
-//     //     width: 100%;
-//     //     @include display-flex-between;
-  
-//     //     &:after {
-//     //       content: $list-group-icon-arrow-hover;
-//     //       float: right;
-//     //       height: 1.5rem;
-//     //     }
-//     //   }
-  
-//     //   &.access-text {
-//     //     text-decoration: $no-text-decoration !important;
-//     //   }
-//     // }
-//   }
-
-//   // .access-content {
-//   //   .access-title {
-//   //     width: 100%;
-//   //     @include display-flex-between;
-    
-//   //     &:after {
-//   //       content: $list-group-icon-arrow-default;
-//   //       float: right;
-//   //       height: 1.5rem;
-//   //     }
-//   //   }
-//   // }
-
-//   &.list-group-item-logout {
-//     color: $danger;
-//     &:after {
-//       content: $list-group-icon-logout;
-//     }
-//   }
-
-//   &.item-sm {
-//     padding: 1rem;
-//     border: none;
-//     @include display-flex-between;
-//     align-items: center;
-//     margin-bottom: 4px;
-
-//     :is(.access-text) {
-//       padding: 0.5rem 0 0;
-//     }
-
-//     // .access-content {
-//     //   width: 100%;
-      
-//     //   .access-text {
-//     //     text-decoration: $no-text-decoration;
-//     //   }
-//     // }
-    
-//     .access-text {
-//       font-size: 13px;
-//       margin: 0;
-//     }
-//   }
-// }
-
-// /* === Mobile styles === */
-
-/* === Variable and mixins overides === */
-
-
 
 /* === Mobile styles === */

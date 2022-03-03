@@ -10,6 +10,7 @@ import { ModeOfUseAccess } from './ModeOfUseAccess.stories';
 import { SmallAccess } from './SmallAcces.stories';
 import { ModeOfUseTypeTwo } from './ModeOfUseAccessTwo.stories';
 import { AccessMobile } from './AccessMobile.stories';
+import { SmallAccessDescription } from './SmallAccessDescription.stories';
 
 // Configuración del general del componente
 export default {
@@ -35,6 +36,14 @@ export const AccesoChico = (): JSX.Element => {
   return (
     <div>
       <SmallAccess />
+    </div>
+  );
+};
+
+export const AccesoChicoConDescripcion = (): JSX.Element => {
+  return (
+    <div>
+      <SmallAccessDescription />
     </div>
   );
 };
