@@ -8,9 +8,10 @@ import './List-group.stories.scss';
 import { BigAccess } from './BigAccess.stories';
 import { ModeOfUseAccess } from './ModeOfUseAccess.stories';
 import { SmallAccess } from './SmallAcces.stories';
-import { ModeOfUseTypeTwo } from './ModeOfUseAccessTwo.stories';
-import { AccessMobile } from './AccessMobile.stories';
+import { AccessList } from './AccessList.stories';
 import { SmallAccessDescription } from './SmallAccessDescription.stories';
+import { AccessListCategory } from './AccessListCategory.stories';
+import { AccessListDescriptive } from './ListAccessDescriptive.stories';
 
 // Configuración del general del componente
 export default {
@@ -48,18 +49,26 @@ export const AccesoChicoConDescripcion = (): JSX.Element => {
   );
 };
 
-export const ModoDeUso2 = (): JSX.Element => {
+export const ListaDeAccesos = (): JSX.Element => {
   return (
     <div>
-      <ModeOfUseTypeTwo />
+      <AccessList />
     </div>
   );
 };
 
-export const Mobile = (): JSX.Element => {
+export const ListaDeAccesosConCategoria = (): JSX.Element => {
   return (
     <div>
-      <AccessMobile />
+      <AccessListCategory />
+    </div>
+  );
+};
+
+export const ListaDeAccesosDescriptivo = (): JSX.Element => {
+  return (
+    <div>
+      <AccessListDescriptive />
     </div>
   );
 };

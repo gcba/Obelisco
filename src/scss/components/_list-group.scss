@@ -59,19 +59,24 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
   border-top-width: 2px;
 }
 
+.list-group-container .group-access {
+  margin-bottom: 1rem;
+}
+
 a.list-group-item {
   border: $border-access;
   border-radius: $list-group-border;
   border: $border-access;
   margin-bottom: 2px;
   padding: $list-gorup-padding-y $list-gorup-padding-x;
-
+  
   &:first-child {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
-
+  
   &:last-child {
+    margin-bottom: 0px;
     border-radius: $list-group-border;
   }
 
@@ -197,6 +202,7 @@ a.list-group-item {
     border-bottom: 0;
     margin-bottom: 0 !important;
     border-radius: $border-radius-card-item !important;
+    @include display-flex-between;
   }
 }
 
