@@ -6,7 +6,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 import './List-group.stories.scss';
 import { BigAccess } from './BigAccess.stories';
-import { ModeOfUseAccess } from './ModeOfUseAccess.stories';
+import { AccesIcon } from './AccesIcon.stories';
 import { SmallAccess } from './SmallAcces.stories';
 import { AccessList } from './AccessList.stories';
 import { SmallAccessDescription } from './SmallAccessDescription.stories';
@@ -28,7 +28,7 @@ export const Accesos = (): JSX.Element => (
 export const AccesoConIcono = (): JSX.Element => {
   return (
     <div>
-      <ModeOfUseAccess />
+      <AccesIcon />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ModeOfUseAccess = (): JSX.Element => {
+export const AccesIcon = (): JSX.Element => {
   return (
     <div>
       <div className="list-group-container">
