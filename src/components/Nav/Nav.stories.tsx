@@ -28,16 +28,26 @@ export const Simple = (): JSX.Element => (
   </div>
 );
 
-const multiLevel = [
+const doubleLevel = [
   { name: 'Categorías', id: '0' },
-  {
-    name: 'Locales y comercios',
-    id: '1',
+  { name: 'Locales y comercios', id: '1',
     children: [
       { name: 'Local Indumentaria y calzado. (Actividades comerciales de venta).', id: '1.1' },
-      {
-        name: 'Locales gastronómicos: “para llevar/takeaway”',
-        id: '1.2',
+      { name: 'Locales gastronómicos: “para llevar/takeaway”',id: '1.2',},
+      { name: 'Locales de óptica', id: '1.3' },
+      { name: 'Comercial minorista (excluyendo indumentaria y calzado)', id: '1.4' }
+    ]
+  },
+  { name: 'Actividades jurídicas', id: '2' },
+  { name: 'Otras actividades', id: '3' }
+];
+
+const tripleLevel = [
+  { name: 'Categorías', id: '0' },
+  { name: 'Locales y comercios', id: '1',
+    children: [
+      { name: 'Local Indumentaria y calzado. (Actividades comerciales de venta).', id: '1.1' },
+      { name: 'Locales gastronómicos: “para llevar/takeaway”', id: '1.2',
         children: [
           { name: 'Con local a la calle', id: '1.2.1' },
           { name: 'Food trucks', id: '1.2.2' }
@@ -53,7 +63,13 @@ const multiLevel = [
 
 export const Con2Niveles = (): JSX.Element => (
   <div className="nav-container">
-    <Nav items={multiLevel} navSize="large" selected="1.2.2" />
+    <Nav items={doubleLevel} navSize="large" selected="1.2" />
+  </div>
+);
+
+export const Con3Niveles = (): JSX.Element => (
+  <div className="nav-container">
+    <Nav items={tripleLevel} navSize="large" selected="1.2.2" />
   </div>
 );
 
@@ -64,7 +80,7 @@ export const Responsive = (): JSX.Element => (
         Acerca de Obelisco
       </a>
       <div className="nav-responsive collapse" id="sidebar-nav">
-        <Nav items={multiLevel} navSize="large" selected="1.2.2" />
+        <Nav items={tripleLevel} navSize="large" selected="1.2.2" />
       </div>
     </nav>
   </div>

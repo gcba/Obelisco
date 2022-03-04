@@ -15,11 +15,12 @@ $nav-mobile-bg: $grisulado-10;
 $nav-link-disabled-color: $grisulado-300;
 $nav-link-hover-bg: $grisulado-50;
 
-$nav-pills-link-active-bg: theme-color-level('info', 3.25);
-$nav-link-hover-color: $grisulado-700;
+$nav-pills-link-active-bg: $blue;
+$nav-link-hover-color: $blue;
 
-$nav-focus-width: 2px;
+$nav-focus-width: 0.25rem;
 $input-btn-focus-box-shadow: 0 0 0 $nav-focus-width theme-color-level('info', 4.5);
+$input-btn-hover-box-shadow: 0 0 0 $nav-focus-width/2 $blue;
 
 $icon-expand: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAAXnVPIAAAAPElEQVQ4EWNkwAEsPGL+I0ud2LGEEZkPYzPBGOTSowYwMDCihzapgTkMAhFr6gKFA3rYjKZE3KmD4nQAADIcCfkjs4flAAAAAElFTkSuQmCC');
 $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAEKADAAQAAAABAAAABAAAAACC/WKKAAAAGElEQVQYGWO08Ij5z0ABYKJAL1jrwBsAAOG3AePub4ocAAAAAElFTkSuQmCC');
@@ -35,7 +36,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
 .nav-link {
   color: $grisulado-900;
   font-weight: $nav-link-font-weight;
-  @include border-radius($border-radius);
+  @include border-radius($border-radius * 2);
 
   &.active-child {
     color: $blue;
@@ -43,8 +44,9 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
   }
 
   @include hover() {
-    background-color: $nav-link-hover-bg;
+    box-shadow: $input-btn-hover-box-shadow;
     color: $nav-link-hover-color;
+    text-decoration: underline;
   }
 
   &:focus,
@@ -56,7 +58,7 @@ $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAA
 
 .nav-pills {
   .nav-link {
-    @include border-radius($border-radius);
+    @include border-radius($border-radius * 2);
 
     &.active {
       font-weight: $nav-pills-link-active-font-weight;
