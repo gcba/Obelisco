@@ -15,32 +15,27 @@ export default {
   decorators: [withA11y]
 };
 
-export const Simple = (): JSX.Element => {
-  return <Pagination pages={3} ariaLabel="Ejemplo de paginación simple" />;
-};
+export const Paginacion = (): JSX.Element => {
+  return (
+    <div>
+      <div className="mt-5">
+        <Pagination isShowNext={true} pages={56} default={0} ariaLabel="Ejemplo de paginación simple" />
+      </div>
 
-export const Compleja = (): JSX.Element => {
-  return <Pagination pages={60} default={9} ariaLabel="Ejemplo de paginación compleja" />;
-};
-
-export const NavegacionDePagina = (): JSX.Element => (
-  <div className="page-navigation-wrapper">
-    <div className="page-navigation">
-      <div className="row">
-        <div className="col-6">
-          <a className="page-navigation-prev" href="#">
-            <span className="page-previous-icon" aria-hidden="true" /> Página anterior
-          </a>
-        </div>
-        <div className="col-6 text-right">
-          <a className="page-navigation-next" href="#">
-            Página siguiente <span className="page-next-icon" aria-hidden="true" />
-          </a>
-        </div>
+      <div className="mt-5">
+        <Pagination
+          isShowNext={true}
+          isShowPrev={true}
+          pages={10}
+          default={1}
+          ariaLabel="Ejemplo de paginación simple"
+        />
+      </div>
+      <div className="mt-5">
+        <Pagination isShowPrev={true} pages={56} default={55} ariaLabel="Ejemplo de paginación simple" />
       </div>
     </div>
-  </div>
-);
-NavegacionDePagina.story = {
-  name: 'Navegación de página'
+  );
 };
+
+Paginacion.story = { name: 'Paginación' };
