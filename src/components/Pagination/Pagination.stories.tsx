@@ -39,3 +39,24 @@ export const Paginacion = (): JSX.Element => {
 };
 
 Paginacion.story = { name: 'Paginación' };
+
+export const NavegacionDePagina = (): JSX.Element => (
+  <>
+    <div className="pagination">
+      <div className="page-navigation page-item">
+        <a className="btn page-link page-navitation" href="#">
+          <span className="page-previous-icon" aria-hidden="true"></span>
+          <span className="page-next-text">Anterior</span>
+        </a>
+        <a className="btn page-link page-navitation" href="#">
+          <span className="page-next-text">Siguiente</span>
+          <span className="page-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </>
+);
+
+NavegacionDePagina.story = {
+  name: 'Navegación de página'
+};
