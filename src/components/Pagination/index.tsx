@@ -128,7 +128,7 @@ export const PaginationItem: React.FC<PaginationItemProps> = (props: React.Props
   if (props.isHover) {
     return (
       <li className="page-item">
-        <a className="page-link hover" href="javascript:void(0)" onClick={onClick}>
+        <a className="page-link hover" href="#" onClick={onClick}>
           {props.children}
         </a>
       </li>
@@ -138,7 +138,7 @@ export const PaginationItem: React.FC<PaginationItemProps> = (props: React.Props
   if (props.isFocus) {
     return (
       <li className="page-item">
-        <a className="page-link focus" href="javascript:void(0)" onClick={onClick}>
+        <a className="page-link focus" href="#" onClick={onClick}>
           {props.children}
         </a>
       </li>
@@ -147,7 +147,7 @@ export const PaginationItem: React.FC<PaginationItemProps> = (props: React.Props
 
   return (
     <li className={`page-item ${props.isActive ? 'active' : ''}`}>
-      <a className="page-link" href="javascript:void(0)" onClick={onClick}>
+      <a className="page-link" href="#" onClick={onClick}>
         {props.children}
       </a>
     </li>
