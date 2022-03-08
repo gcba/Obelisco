@@ -5,21 +5,21 @@ export const SmallAccessDescription = (): JSX.Element => {
     <div>
       <div className="list-group-container">
         <div className="list-group">
-          <a href="javascript:void(0)" className="list-group-item item-sm">
+          <a href="#" className="list-group-item item-sm">
             <div className="access-content">
-              <span className="access-title">Acceso grande</span>
+              <span className="access-title">Acceso chico</span>
               <p className="access-text">Descripción</p>
             </div>
           </a>
-          <a href="javascript:void(0)" className="list-group-item item-sm hover">
+          <a href="#" className="list-group-item item-sm hover">
             <div className="access-content">
-              <span className="access-title">Acceso grande</span>
+              <span className="access-title">Acceso chico</span>
               <p className="access-text">Descripción</p>
             </div>
           </a>
-          <a href="javascript:void(0)" className="list-group-item item-sm focus">
+          <a href="#" className="list-group-item item-sm focus">
             <div className="access-content">
-              <span className="access-title">Acceso grande</span>
+              <span className="access-title">Acceso chico</span>
               <p className="access-text">Descripción</p>
             </div>
           </a>

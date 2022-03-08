@@ -5,14 +5,14 @@ export const SmallAccess = (): JSX.Element => {
     <div>
       <div className="list-group-container">
         <div className="list-group">
-          <a href="javascript:void(0)" className="list-group-item item-sm">
-            Acceso grande
+          <a href="#" className="list-group-item item-sm">
+            Acceso chico
           </a>
-          <a href="javascript:void(0)" className="list-group-item item-sm hover">
-            Acceso grande
+          <a href="#" className="list-group-item item-sm hover">
+            Acceso chico
           </a>
-          <a href="javascript:void(0)" className="list-group-item item-sm focus">
-            Acceso grande
+          <a href="#" className="list-group-item item-sm focus">
+            Acceso chico
           </a>
         </div>
       </div>

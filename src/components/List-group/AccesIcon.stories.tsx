@@ -8,10 +8,10 @@ export const AccesIcon = (): JSX.Element => {
           <div className="card-access">
             <div className="card-access-body">
               <div className="">
-                <h3 className="card-access-title text-bold">Lorem ipsum dolor sit</h3>
+                <h3 className="card-access-title ">Lorem ipsum dolor sit</h3>
                 <p className="card-access-text">Lorem ipsum dolor sit amet</p>
               </div>
-              <i className="bx bxs-shield-x card-access-icon bx-flip-horizontal"></i>
+              <i className="bx bxs-shield-x card-access-icon"></i>
             </div>
             <a href="#" className="list-group-item card-item">
               Lorem ipsum dolor sit amet
@@ -23,10 +23,10 @@ export const AccesIcon = (): JSX.Element => {
           <div className="card-access">
             <div className="card-access-body reverse">
               <div className="">
-                <h3 className="card-access-title text-bold">Lorem ipsum dolor sit</h3>
+                <h3 className="card-access-title ">Lorem ipsum dolor sit</h3>
                 <p className="card-access-text">Lorem ipsum dolor sit amet</p>
               </div>
-              <i className="bx bxs-shield-x card-access-icon bx-flip-horizontal"></i>
+              <i className="bx bxs-shield-x card-access-icon"></i>
             </div>
             <a href="#" className="list-group-item card-item">
               Lorem ipsum dolor sit amet

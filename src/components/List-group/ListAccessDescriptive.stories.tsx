@@ -9,37 +9,37 @@ export const AccessListDescriptive = (): JSX.Element => {
             <div className="card-access">
               <div className="card-access-body">
                 <div className="">
-                  <h3 className="card-access-title text-bold">Titulo</h3>
+                  <h3 className="card-access-title ">Titulo</h3>
                   <p className="card-access-text">Bajada</p>
                 </div>
-                <i className="bx bxs-shield-x card-access-icon bx-flip-horizontal"></i>
+                <i className="bx bxs-shield-x card-access-icon"></i>
               </div>
               <div className="container-access">
                 <hr className="clearfix" />
                 <div className="access-option">
-                  <a href="j#" className="list-group-item item-sm">
+                  <a href="#" className="list-group-item item-sm">
                     <div className="access-content">
-                      <span className="access-title">Acceso grande</span>
+                      <span className="access-title">Acceso chico</span>
                       <p className="access-text">Descripción</p>
                     </div>
                   </a>
-                  <a href="j#" className="list-group-item item-sm">
+                  <a href="#" className="list-group-item item-sm">
                     <div className="access-content">
-                      <span className="access-title">Acceso grande</span>
+                      <span className="access-title">Acceso chico</span>
                       <p className="access-text">Descripción</p>
                     </div>
                   </a>
-                  <a href="j#" className="list-group-item item-sm">
+                  <a href="#" className="list-group-item item-sm">
                     <div className="access-content">
-                      <span className="access-title">Acceso grande</span>
+                      <span className="access-title">Acceso chico</span>
                       <p className="access-text">Descripción</p>
                     </div>
                   </a>
                 </div>
               </div>
-              <a href="j#" className="list-group-item card-item">
+              <a href="#" className="list-group-item card-item">
                 <div className="access-content">
-                  <span className="access-title">Lorem ipsum dolor sit amet</span>
+                  <span className="access-title">Acceso grande</span>
                 </div>
               </a>
             </div>
