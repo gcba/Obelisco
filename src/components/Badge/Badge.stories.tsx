@@ -2,6 +2,7 @@
 import React from 'react';
 
 // Component
+import { badgeTypes } from '../utils';
 import { Badge } from '.';
 
 // Addons
@@ -23,6 +24,16 @@ export const Multiple = (): JSX.Element => (
     <Badge text="Etiqueta 3" />
   </>
 );
+
+export const Colores = (): JSX.Element => {
+  return (
+    <>
+      {badgeTypes.map((type) => (
+        <Badge text='Etiqueta' type={type} />
+      ))}
+    </>
+  );
+};
 
 export const Link = (): JSX.Element => (
   <>

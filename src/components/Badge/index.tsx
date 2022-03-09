@@ -1,15 +1,18 @@
 import * as React from 'react';
+import { BadgeType } from '../utils';
 
 export interface BadgeProps {
+  type?: BadgeType;
   text: string;
   href?: string;
   className?: string;
 }
 
 export const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
-  const { text, href } = props;
+  const { type, text, href } = props;
 
-  let className = 'badge badge-info';
+  let className = `badge badge-info badge-${type}`;
+ 
   if (props.className) className += ` ${props.className}`;
 
   if (href) {
