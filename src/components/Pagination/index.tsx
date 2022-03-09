@@ -6,20 +6,16 @@ export interface PaginationProps {
   default?: number;
   prevText?: string;
   nextText?: string;
-  isShowPrev?: boolean;
-  isShowNext?: boolean;
-  isHoverItem?: boolean;
-  isFocusItem?: boolean;
   onPageSelected?: (page: number) => void;
 }
 
 export const Pagination: React.FC<PaginationProps> = (props: PaginationProps) => {
   const pages = Array.from(Array(props.pages).keys());
   const [current, setCurrent] = React.useState<number>(props.default || 0);
-  const { prevText, nextText, isShowPrev, isShowNext, isHoverItem, isFocusItem } = props;
+  const { prevText, nextText } = props;
 
-  const isPrevDisabled = current === 0;
-  const isNextDisabled = current === pages.length - 1;
+  const isShowPrev = current === 0;
+  const isShowNext = current === pages.length - 1;
 
   const onPageSelected = (page: number): void => {
     setCurrent(page);
@@ -58,21 +54,15 @@ export const Pagination: React.FC<PaginationProps> = (props: PaginationProps) =>
   return (
     <nav aria-label={props.ariaLabel}>
       <ul className="pagination">
-        {isShowPrev && (
-          <PaginationItem
-            isDisabled={isPrevDisabled}
-            isHover={isHoverItem}
-            isFocus={isFocusItem}
-            onClick={() => onPrev()}>
-            <span className="page-previous-icon" aria-hidden="true" />
-            <span className="page-previous-text"> {prevText ? prevText : 'Anterior'}</span>
-          </PaginationItem>
-        )}
+        <PaginationItem isHidden={isShowPrev} onClick={() => onPrev()}>
+          <span className="page-previous-icon" aria-hidden="true" />
+          <span className="page-previous-text"> {prevText ? prevText : 'Anterior'}</span>
+        </PaginationItem>
 
         {isShowBottomTrimmer && (
           <>
             <PaginationNumber index={0} current={current} onClick={() => onPageSelected(0)} />
-            <PaginationItem isDisabled={true}>...</PaginationItem>
+            <PaginationItem>...</PaginationItem>
           </>
         )}
 
@@ -82,21 +72,15 @@ export const Pagination: React.FC<PaginationProps> = (props: PaginationProps) =>
 
         {isShowTopTrimmer && (
           <>
-            <PaginationItem isDisabled={true}>...</PaginationItem>
+            <PaginationItem>...</PaginationItem>
             <PaginationNumber index={lastIndex} current={current} onClick={() => onPageSelected(lastIndex)} />
           </>
         )}
 
-        {isShowNext && (
-          <PaginationItem
-            isDisabled={isNextDisabled}
-            isHover={isHoverItem}
-            isFocus={isFocusItem}
-            onClick={() => onNext()}>
-            <span className="page-next-text">{nextText ? nextText : 'Siguiente'} </span>
-            <span className="page-next-icon" aria-hidden="true" />
-          </PaginationItem>
-        )}
+        <PaginationItem isHidden={isShowNext} onClick={() => onNext()}>
+          <span className="page-next-text">{nextText ? nextText : 'Siguiente'} </span>
+          <span className="page-next-icon" aria-hidden="true" />
+        </PaginationItem>
       </ul>
     </nav>
   );
@@ -106,9 +90,7 @@ interface PaginationItemProps {
   onClick?: () => void;
   className?: string;
   isActive?: boolean;
-  isDisabled?: boolean;
-  isHover?: boolean;
-  isFocus?: boolean;
+  isHidden?: boolean;
 }
 
 export const PaginationItem: React.FC<PaginationItemProps> = (props: React.PropsWithChildren<PaginationItemProps>) => {
@@ -117,30 +99,10 @@ export const PaginationItem: React.FC<PaginationItemProps> = (props: React.Props
     props.onClick && props.onClick();
   };
 
-  if (props.isDisabled) {
+  if (props.isHidden) {
     return (
-      <li className="page-item disabled">
+      <li className="page-item" style={{ display: 'none' }}>
         <span className="page-link">{props.children}</span>
-      </li>
-    );
-  }
-
-  if (props.isHover) {
-    return (
-      <li className="page-item">
-        <a className="page-link hover" href="#" onClick={onClick}>
-          {props.children}
-        </a>
-      </li>
-    );
-  }
-
-  if (props.isFocus) {
-    return (
-      <li className="page-item">
-        <a className="page-link focus" href="#" onClick={onClick}>
-          {props.children}
-        </a>
       </li>
     );
   }

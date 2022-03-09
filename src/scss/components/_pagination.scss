@@ -1,20 +1,28 @@
 /* === Variable and mixins overides === */
-$border-radius: 8px;
 
-$pagination-padding-y: 0.25rem;
+$pagination-bg: $white;
+
+$pagination-color: $grisulado-900;
+$pagination-active-color: $white;
+$pagination-hover-color: $blue;
+
+$pagination-box-shadow: 0 0 0 2px $grisulado-50;
+$pagination-focus-box-shadow: 0 0 0 4px theme-color-level('info', 3) !important;
+$pagination-hover-active-box-shadow: 0 0 0 2px $blue;
+
+$pagination-padding-y: spaceUnits(1);
 $pagination-padding-x: 0.6rem;
 $pagination-margin-x: 0.2rem;
 $pagination-border-width: 0;
 
-$pagination-bg: transparent;
 $pagination-hover-bg: transparent;
 $pagination-disabled-bg: transparent;
 
 /* === Custom variables and mixins === */
 
-$page-navigation-border: 1px solid $border-color;
+$page-navigation-border: 2px solid $border-color;
 
-$pagination-icon-size: 1.25rem;
+$pagination-icon-size: spaceUnits(5);
 $pagination-size: 40px;
 
 $pagination-icon-left-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
@@ -24,7 +32,6 @@ $pagination-icon-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.o
 $pagination-icon-right-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
 $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
 
-$color-pagination-focus: #005387;
 /* === Bootstrap Import === */
 
 @import '~bootstrap/scss/pagination';
@@ -35,20 +42,22 @@ $color-pagination-focus: #005387;
   .page-item {
     display: inline-block;
 
-    &:active, &.active {
+    &:active,
+    &.active {
       .page-link {
-        color: $white;
-        background-color: $blue;
+        background-color: $pagination-active-bg;
+        box-shadow: $pagination-hover-active-box-shadow;
 
-        &:hover, &.hover {
+        &:hover,
+        &.hover {
           color: $white;
 
           .page-previous-icon {
-            content: $pagination-icon-left-active-hover;
+            content: $pagination-icon-left-active-hover !important;
           }
-  
+
           .page-next-icon {
-            content: $pagination-icon-right-active-hover;
+            content: $pagination-icon-right-active-hover !important;
           }
         }
       }
@@ -60,19 +69,14 @@ $color-pagination-focus: #005387;
       align-items: center;
       border-radius: $border-radius;
       margin: 0 $pagination-margin-x;
-      color: $grisulado-900;
-      background-color: $white;
-      border: 1px solid $grisulado-50;
+      box-shadow: $pagination-box-shadow;
       height: $pagination-size;
       min-width: 35px;
 
-      &.page-navigation {
-        max-width: 118px;
-      }
-      
-      &:hover, &.hover {
-        border: 2px solid $blue;
-        color: $blue;
+      &:hover,
+      &.hover {
+        text-decoration: underline;
+        box-shadow: $pagination-hover-active-box-shadow;
 
         .page-previous-icon {
           content: $pagination-icon-left-hover;
@@ -83,10 +87,22 @@ $color-pagination-focus: #005387;
         }
       }
 
-      &:focus, &.focus {
-        box-shadow: none;
-        padding: 0.25rem 0.5rem;
-        border: 4px solid $color-pagination-focus;
+      &:focus,
+      &.focus {
+        color: $pagination-color;
+        text-decoration: none;
+        padding: spaceUnits(1) spaceUnits(2);
+
+        &:hover,
+        &.hover {
+          .page-previous-icon {
+            content: $pagination-icon-left;
+          }
+
+          .page-next-icon {
+            content: $pagination-icon-right;
+          }
+        }
       }
     }
   }
@@ -135,9 +151,43 @@ $color-pagination-focus: #005387;
   padding-bottom: spaceUnits(4);
   border-bottom: $page-navigation-border;
   width: 100%;
-  
+
   &.page-item {
     display: flex;
     justify-content: space-between;
+
+    .page-link {
+      &:active {
+        background-color: $pagination-active-bg;
+
+        &:hover {
+          .page-previous-text,
+          .page-next-text {
+            color: $white !important;
+          }
+        }
+      }
+
+      &:hover {
+        .page-previous-text,
+        .page-next-text {
+          color: $pagination-hover-color;
+        }
+      }
+
+      &:focus{
+        &:hover {
+          .page-previous-text,
+          .page-next-text {
+            color: $pagination-color;
+          }
+        }
+      }
+
+      .page-previous-text,
+      .page-next-text {
+        color: $pagination-color;
+      }
+    }
   }
 }
