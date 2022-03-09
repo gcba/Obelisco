@@ -6,13 +6,13 @@ export const SmallAccess = (): JSX.Element => {
       <div className="list-group-container">
         <div className="list-group">
           <a href="#" className="list-group-item item-sm">
-            Acceso chico
+            <span className="access-title">Acceso chico</span>
           </a>
           <a href="#" className="list-group-item item-sm hover">
-            Acceso chico
+            <span className="access-title">Acceso chico</span>
           </a>
           <a href="#" className="list-group-item item-sm focus">
-            Acceso chico
+            <span className="access-title">Acceso chico</span>
           </a>
         </div>
       </div>

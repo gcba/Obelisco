@@ -14,7 +14,7 @@ export const AccesIcon = (): JSX.Element => {
               <i className="bx bxs-shield-x card-access-icon"></i>
             </div>
             <a href="#" className="list-group-item card-item">
-              Lorem ipsum dolor sit amet
+              <span className="access-title">Lorem ipsum dolor sit amet</span>
             </a>
           </div>
         </div>
@@ -29,7 +29,7 @@ export const AccesIcon = (): JSX.Element => {
               <i className="bx bxs-shield-x card-access-icon"></i>
             </div>
             <a href="#" className="list-group-item card-item">
-              Lorem ipsum dolor sit amet
+              <span className="access-title">Lorem ipsum dolor sit amet</span>
             </a>
           </div>
         </div>

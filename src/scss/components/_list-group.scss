@@ -13,6 +13,7 @@ $font-title-option: 17px;
 
 $box-shadow-access: 0 0 0 2px $grisulado-50;
 $box-shadow-access-hover: 0 0 0 2px $blue;
+$box-shadow-access-hover-danger: 0 0 0 2px $red;
 $border-radius-card-item: 0 0 8px 8px;
 
 $box-shadow-access-focus: 0 0 0 4px theme-color-level('info', 3);
@@ -57,6 +58,7 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
 }
 
 a.list-group-item {
+  color: $list-group-color;
   border: none;
   box-shadow: $box-shadow-access;
   border-radius: $list-group-border;
@@ -82,9 +84,30 @@ a.list-group-item {
 
   &:hover,
   &.hover {
-    text-decoration: $no-text-decoration;
     box-shadow: $box-shadow-access-hover;
     color: $list-group-color-hover;
+
+    &.list-group-item-logout {
+      box-shadow: $box-shadow-access-hover-danger;
+    }
+
+    .access-title {
+      text-decoration: underline;
+    }
+
+    .access-content {
+      width: 100%;
+
+      .access-title {
+        color: $list-group-color-hover;
+        text-decoration: underline;
+      }
+
+      .access-text {
+        color: $list-group-color-hover;
+        text-decoration: $no-text-decoration !important;
+      }
+    }
 
     &:after {
       content: $list-group-icon-arrow-hover;
@@ -105,14 +128,47 @@ a.list-group-item {
   }
 
   &.item-sm {
-    color: $grisulado-900;
+    color: $list-group-color;
     padding: 1rem;
     @include display-flex-between;
     align-items: flex-start;
 
+    &.descriptive-item {
+
+      .access-title {
+        color: $list-group-color-hover;
+      }
+
+      &:after {
+        content: $list-group-icon-arrow-hover;
+        @include float-height-icon;
+      }
+    }
+
+    &:hover,
+    &.hover {
+      box-shadow: $box-shadow-access-hover;
+      color: $list-group-color-hover;
+      text-decoration: $no-text-decoration;
+      
+      .access-content {
+        width: 100%;
+        
+        .access-title {
+          color: $list-group-color-hover;
+          text-decoration: underline;
+        }
+
+        .access-text {
+          color: $list-group-color-hover;
+          text-decoration: $no-text-decoration;
+        }
+      }
+  }
+
     .access-content {
       width: 100%;
-
+      
       .access-text {
         text-decoration: $no-text-decoration;
       }
@@ -168,6 +224,12 @@ a.list-group-item {
         border-radius: $list-group-border;
         text-align: center;
         line-height: $card-size;
+        
+        &.descriptive {
+          color: $blue;
+          font-size: 24px;
+          font-weight: 900;
+        }
       }
 
       &.reverse {
@@ -202,7 +264,6 @@ a.list-group-item {
 
           &:hover,
           &.hover {
-            text-decoration: $no-text-decoration;
             box-shadow: $box-shadow-access-hover;
             color: $list-group-color-hover;
 
@@ -222,6 +283,10 @@ a.list-group-item {
           }
         }
       }
+    }
+
+    .list-group-item {
+      padding: $list-gorup-padding-y;
     }
   }
 

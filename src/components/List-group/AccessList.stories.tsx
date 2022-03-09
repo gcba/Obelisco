@@ -18,21 +18,21 @@ export const AccessList = (): JSX.Element => {
                 <hr className="clearfix" />
                 <div className="access-option">
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                 </div>
               </div>
               <a href="#" className="list-group-item card-item">
-                Acceso grande
+                <span className="access-title">Acceso grande</span>
               </a>
             </div>
           </div>
@@ -48,18 +48,18 @@ export const AccessList = (): JSX.Element => {
                 <hr className="clearfix" />
                 <div className="access-option">
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                 </div>
               </div>
               <a href="#" className="list-group-item card-item">
-                Acceso grande
+                <span className="access-title">Acceso grande</span>
               </a>
             </div>
           </div>
@@ -75,19 +75,19 @@ export const AccessList = (): JSX.Element => {
                 <hr className="clearfix" />
                 <div className="access-option">
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                   <a href="#" className="list-group-item item-sm">
-                    Acceso chico
+                    <span className="access-title">Acceso chico</span>
                   </a>
                 </div>
               </div>
