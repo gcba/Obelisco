@@ -1,0 +1,50 @@
+/* === Custom variables and mixins === */
+$options-container-spacer-x: spaceUnits(2);
+$options-border-radius: 0.5rem;
+$icon-chevron-up: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
+
+$option-focus-width: 0.25rem;
+$option-btn-focus-box-shadow: 0 0 0 $option-focus-width theme-color-level('info', 4.5);
+$option-btn-hover-box-shadow: 0 0 0 $option-focus-width/2 $blue;
+
+/* === Custom styles === */
+
+.options-container {
+  gap: $options-container-spacer-x;
+
+  .dropdown.show .btn.btn-dropdown,
+  input:checked + .dropdown-item {
+    background-color: $blue;
+    color: $white;
+  }
+
+  .dropdown.show .btn.btn-dropdown.dropdown-toggle:after {
+    content: $icon-chevron-up;
+    rotate: 180deg;
+    height: 1.3em;
+  }
+
+  .dropdown-menu {
+    padding: 0;
+    box-shadow: none;
+    border-radius: $options-border-radius;
+    border: 2px solid $grisulado-50;
+  }
+
+  input:focus + .dropdown-item {
+    box-shadow: $option-btn-focus-box-shadow;
+  }
+
+  .dropdown-item {
+    padding: 0.75rem 2rem;
+    border-radius: $options-border-radius;
+    margin: 0;
+
+    &:hover {
+      text-decoration: underline;
+      background-color: inherit;
+      color: $blue;
+      box-shadow: $option-btn-hover-box-shadow;
+    }
+  }
+}
