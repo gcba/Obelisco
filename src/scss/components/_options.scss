@@ -1,6 +1,8 @@
 /* === Custom variables and mixins === */
 $options-container-spacer-x: spaceUnits(2);
 $options-border-radius: 0.5rem;
+$options-btn-padding-x: 0.75rem;
+$options-btn-padding-y: 0.5rem;
 $icon-chevron-up: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
 
 $option-focus-width: 0.25rem;
@@ -11,6 +13,19 @@ $option-btn-hover-box-shadow: 0 0 0 $option-focus-width/2 $blue;
 
 .options-container {
   gap: $options-container-spacer-x;
+
+  .btn.btn-dropdown {
+    border: 2px solid $grisulado-50;
+    border-radius: $options-border-radius;
+
+    &-lg {
+      padding: $options-btn-padding-x;
+    }
+
+    &-sm {
+      padding: $options-btn-padding-y $options-btn-padding-x;
+    }
+  }
 
   .dropdown.show .btn.btn-dropdown,
   input:checked + .dropdown-item {
