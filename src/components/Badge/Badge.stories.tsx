@@ -2,7 +2,6 @@
 import React from 'react';
 
 // Component
-import { badgeTypes } from '../utils';
 import { Badge } from '.';
 
 // Addons
@@ -15,31 +14,31 @@ export default {
   component: Badge
 };
 
-export const Simple = (): JSX.Element => <Badge text="Etiqueta 1" />;
+export const Simple = (): JSX.Element => <Badge text="Etiqueta 1" className="badge-info" />;
 
 export const Multiple = (): JSX.Element => (
   <>
-    <Badge text="Etiqueta 1" />
-    <Badge text="Etiqueta 2" />
-    <Badge text="Etiqueta 3" />
+    <Badge text="Etiqueta 1" className="badge-info" />
+    <Badge text="Etiqueta 2" className="badge-info" />
+    <Badge text="Etiqueta 3" className="badge-info" />
   </>
 );
 
-export const Colores = (): JSX.Element => {
-  return (
-    <>
-      {badgeTypes.map((type) => (
-        <Badge text='Etiqueta' type={type} />
-      ))}
-    </>
-  );
-};
+export const Colores = (): JSX.Element => (
+  <>
+    <Badge text="Etiqueta 1" className="bagde-secondary" />
+    <Badge text="Etiqueta 2" className="badge-danger" />
+    <Badge text="Etiqueta 3" className="badge-success" />
+    <Badge text="Etiqueta 4" className="badge-info" />
+    <Badge text="Etiqueta 5" className="badge-primary" />
+  </>
+);
 
 export const Link = (): JSX.Element => (
   <>
-    <Badge text="Etiqueta 1" href="#" />
-    <Badge text="Etiqueta 2" href="#" className="active" />
-    <Badge text="Etiqueta 3" href="#" className="focus active" />
-    <Badge text="Etiqueta 4" href="#" className="focus" />
+    <Badge text="Etiqueta 1" href="#" className='badge-info' />
+    <Badge text="Etiqueta 2" href="#" className="active badge-info" />
+    <Badge text="Etiqueta 3" href="#" className="focus active badge-info" />
+    <Badge text="Etiqueta 4" href="#" className="focus badge-info" />
   </>
 );

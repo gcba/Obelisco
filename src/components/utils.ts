@@ -4,9 +4,6 @@ export const types: Type[] = ['primary', 'success', 'danger'];
 export type ButtonType = Type | 'secondary' | 'link';
 export const buttonTypes: ButtonType[] = [...types, 'secondary', 'link'];
 
-export type BadgeType = Type | 'info';
-export const badgeTypes: BadgeType[] = ['primary', 'success', 'info', 'danger'];
-
 export type AlertType = Type | 'info';
 export const alertTypes: AlertType[] = ['primary', 'success', 'info', 'danger'];
 
