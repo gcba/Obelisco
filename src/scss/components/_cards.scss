@@ -56,8 +56,8 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
 $accordion-icon-collapsed-hover: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAM1JREFUSEvtljEOwjAMRb/DAeAoXSsGyo3aFXWsWOFGlAF15ShwAOKq9cKQUBrUFISzOtGPX/ztEGZaNJMuVDga+R9DvbskIHPo8bAtsF9fx6IKy7hsMjBOvRhhiyqtVXiIgKIeIiTxSYurswzT0nmThUnAfJSqphwP67YT8d1nNf8bl00NxuY9BJ5dhDOqNHNFv1C4Q23MypkLcwKQdC5wASI3amtv41G/YjxpcanwMwFFHW0sitWkc1mbx/sIfNTO5HDYWFThAAL/h7oFTi5pH1CwniIAAAAASUVORK5CYII=');
 $accordion-icon-expanded-hover: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAGlJREFUSEtjZBggwDhA9jKMWky3kB8N6tGgplkIjCYumgUtusG4g7rmuANVXNFieQCbObgtrj6+n4GBgVLLDzC0WjoOEYsHLKipEsG4DRnNxzQOYITxo0E9GtQ0C4HRxEWzoCW+PqaxEwA3Ew4fZOJSMwAAAABJRU5ErkJggg==');
 
-$accordion-icon-user: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfdJREFUSEvFltE1REEQRGsjIANEgAyIABEgAkSACBABIkAEZIAIkAEZOPed2XPm9fZ0z+5+7Py8jzfT1VXTXdMTrWhNVoSrRYB3JG1I4sv6kPRTvt08eoE3JV1KOpS03oj+K+lZ0rWk7yyDDBgQAM+zQOb/bUmAZNwVAcPyqZJ0TuzhCo5a7FvAgL4HsvYmAeNdD9wDRt7XJZjapGC+L2kkuwfM/Zx1UPose7Y79t7ZOrHASPyVBHqRdFIxQKEHSQfJua1acgtMgOMgACyn/etJGrF/LAkP5yww97AWAF9I4iq8RcvdBGfpbVjPAMOESo4WRfLW2LBXijI6T4VTbCPGuBJ9G61lGBOXvsbdRsBXxaUiYLIla2/xL6tw7BScuYE5Q8anpqrvi48ngg0+PgPcI3UdeLirOY3GlbqnuDJG2X+3uDiUtRPmgdT22cN4UCwyEd5s9g2r10A4ROCpvC1mqEZiDAp2hQbiWeZfybT5thoEYpCgNaLQMolhHwkAKYqWcVhmKEOV15NK+kgQhAOA2J7MporWtIK/42rpswh4S67pXIWUdTtxt948xjXxb2YGy0YfCiVzo1ahwZRk3MGvZ9jDaXoGgzoB7pRzCw17dSCkJxAMWs8mLUdtsG/p8daTkTsjkXqgByjr8VGsTOrMAhf+vzLgfylQZx+q6pqOAAAAAElFTkSuQmCC');
-$accordion-icon-user-hover: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAArhJREFUSEvFluFxFDEMhZ8qgFQAVEBSAaECoILQAaECkgpIKoBUAKmApAKSCiAdJBWI+XbkHa3XvvPx5zRzs3dnr5/0JD3ZtCezPeFqZ2B3P5b0TNJhOH0n6cHMeA7bELC7v5T0RdJ7Sc87pz9K+inp3Mz+bvNgI7C7A/JV0sdtB1Xr3yV9NjOcaVoXOKL8kSjlgGtJUHoTT/6Dcujn+S6hsO9DL/omcID+TrQ+ELWZAdi1yD/RvohNRHzUAl8BB72/UqSXks4ybQHwuhSXmd0Wb+L9M0mfUvG9rWlvAePxSbx0aWan6VDo/FbRz/KKVne/SOBXZraokwVwUPwngKD3sHgakUA/Fd4yKhlap4KK/ThUaH+VKa+Bc7TQM+fU3cvaU+Sb1gGASIiO3q4ZouhIG7aIugbGWw64NjN6djZ3x3vyujg8wAutd2Z2VL2H828kPZrZQVmbgaNgineIAAWSgT1+tNbYi8DIzOpg5rVIxaRwGZgI6VtsQXNENRLxvZkVKZ0Ocvd8Ln09pSgDZ88O6vJPVUo6Ts3sKuWYSsdaaaAYS8HObO0CjHzmKs2Z4PuiC8pi1SlN4I1UR3R4D1VFPMr59wyQlkJVVM8pHC6uqtCKNvM3ldyVUnfPKVwDR0Tddkr5pDVqEUE8bkreO+30ZGbzSB0SEHenUmm13iwuWDhOVFPLVC26UUCy0kwSGGD1pKoHPQwsJhKCISlL7KJFW0MiizuTiWihF2O4s74yd2eYcGnAyDkFVybUqs16Y7HVNivFqtGriVSWm23WuwgQJW1T6OOQlZo1gHOqWCZqLhCri+Cmqw+FBGW5Z/kN1UjjlOcQCPZANcC5t497966Ryx4H8mFqjRhjE+cu/uuyV/Ui0QM+TaANdr4NsLw7dK9uOEEN5As96tW9yrYc3Rl4hOuRPXsD/geHFF4uxrUMiQAAAABJRU5ErkJggg==');
+$accordion-icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
+$accordion-icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
 
 @mixin card-deck-4 {
   .card {
@@ -451,11 +451,14 @@ button.card {
         }
       }
       
-      // &.accordion-card-icon {
-      //   &::before{
-      //     content: $accordion-icon-user;
-      //   }
-      // }
+      &.accordion-card-icon {
+        &::before{
+          content: $accordion-icon-user;
+          display: inline-block;
+          margin-right: 0.25rem;
+          vertical-align: middle;
+        }
+      }
 
     }
 
