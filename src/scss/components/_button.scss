@@ -26,7 +26,12 @@ $btn-disabled-opacity: 0.5;
 
 $btn-disabled-bg: $grisulado-50;
 $btn-disabled-color: $gray-600;
+$btn-border-radius: spaceUnits(2);
+$btn-border-radius-sm: spaceUnits(2);
+$btn-border-radius-lg: spaceUnits(2);
 
+$box-shadow-button: theme-color-level('info', 3);
+$link-decoration: none;
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
@@ -46,7 +51,8 @@ $btn-disabled-color: $gray-600;
 
     &:focus,
     &.focus {
-      box-shadow: 0 0 0 $input-btn-focus-width theme-color-level($color, 3);
+      box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+      text-decoration: none;
 
       &:not(:hover) {
         background-color: theme-color-level($color, 0);
@@ -64,8 +70,14 @@ $btn-disabled-color: $gray-600;
     .show > &.dropdown-toggle {
       background-color: theme-color-level($color, 1);
 
-      &:focus {
-        box-shadow: 0 0 0 $input-btn-focus-width theme-color-level($color, 3);
+      &:focus,
+      &.focus {
+        box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+        text-decoration: none;
+
+        &:not(:hover) {
+          background-color: theme-color-level($color, 0);
+        }
       }
     }
   }
@@ -73,25 +85,25 @@ $btn-disabled-color: $gray-600;
 
 .btn-link {
   font-weight: $btn-font-weight;
-  text-decoration: none;
+  background-color: $ghost;
+
   @include hover() {
-    background-color: $grisulado-50;
-    text-decoration: none;
+    background-color: $ghost-hover;
+    color: $link-color;
+    text-decoration: $link-decoration;
   }
 
   &:focus,
   &.focus {
-    box-shadow: 0 0 0 $input-btn-focus-width theme-color-level('info', 3);
+    box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
     text-decoration: none;
   }
-}
 
-.btn-link {
-  background-color: theme-color-level('info', -9.5);
-
-  @include hover() {
-    background-color: theme-color-level('info', -8.5);
-    color: $link-color;
+  &:active,
+  &.active {
+    &:not(:hover) {
+      background-color: $ghost-hover;
+    }
   }
 
   &:disabled,
