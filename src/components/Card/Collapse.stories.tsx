@@ -121,3 +121,23 @@ export const ConInformacion = (): JSX.Element => (
   </div>
 );
 ConInformacion.story = { name: 'Con Información' };
+
+export const ConIcono = (): JSX.Element => (
+  <div id="accordion">
+    <div className="accordion-wrapper">
+      <div className="accordion" id="accordionExample">
+        <div className="card">
+          <button className="card-header collapsed card-link accordion-card-icon" data-toggle="collapse" data-target="#collapseEight">
+            Colapsable
+          </button>
+          <div id="collapseEight" className="collapse" data-parent="#accordion">
+            <div className="card-body">
+              Este es el área descriptiva de un colapsable de selección única. Una vez que se accione sobre el área de
+              títulos, se abrirá el componente mostrando el área descriptiva.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);

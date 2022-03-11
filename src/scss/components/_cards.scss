@@ -11,13 +11,13 @@ $card-subtitle-font-weight: 400;
 $card-cap-color: $text-muted;
 $card-cap-bg: inherit;
 $card-active-color: $white;
-$card-header-bg: $grisulado-50;
+$card-header-bg: $grisulado-10;
 $card-header-padding-y: 0.75rem;
 $card-header-padding-x: 1.5rem;
 $card-bg-info: #005387;
 
 $card-border-width: 0;
-$card-shadow-color: $grisulado-50;
+$card-shadow-color: $grisulado-10;
 $card-box-shadow: 0 0 0 2px $card-shadow-color;
 $card-box-hover-shadow: 0 0 0 2px $blue;
 
@@ -52,6 +52,12 @@ $accordion-margin: 0.75rem;
 
 $accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
 $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
+
+$accordion-icon-collapsed-hover: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAM1JREFUSEvtljEOwjAMRb/DAeAoXSsGyo3aFXWsWOFGlAF15ShwAOKq9cKQUBrUFISzOtGPX/ztEGZaNJMuVDga+R9DvbskIHPo8bAtsF9fx6IKy7hsMjBOvRhhiyqtVXiIgKIeIiTxSYurswzT0nmThUnAfJSqphwP67YT8d1nNf8bl00NxuY9BJ5dhDOqNHNFv1C4Q23MypkLcwKQdC5wASI3amtv41G/YjxpcanwMwFFHW0sitWkc1mbx/sIfNTO5HDYWFThAAL/h7oFTi5pH1CwniIAAAAASUVORK5CYII=');
+$accordion-icon-expanded-hover: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAGlJREFUSEtjZBggwDhA9jKMWky3kB8N6tGgplkIjCYumgUtusG4g7rmuANVXNFieQCbObgtrj6+n4GBgVLLDzC0WjoOEYsHLKipEsG4DRnNxzQOYITxo0E9GtQ0C4HRxEWzoCW+PqaxEwA3Ew4fZOJSMwAAAABJRU5ErkJggg==');
+
+$accordion-icon-user: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfdJREFUSEvFltE1REEQRGsjIANEgAyIABEgAkSACBABIkAEZIAIkAEZOPed2XPm9fZ0z+5+7Py8jzfT1VXTXdMTrWhNVoSrRYB3JG1I4sv6kPRTvt08eoE3JV1KOpS03oj+K+lZ0rWk7yyDDBgQAM+zQOb/bUmAZNwVAcPyqZJ0TuzhCo5a7FvAgL4HsvYmAeNdD9wDRt7XJZjapGC+L2kkuwfM/Zx1UPose7Y79t7ZOrHASPyVBHqRdFIxQKEHSQfJua1acgtMgOMgACyn/etJGrF/LAkP5yww97AWAF9I4iq8RcvdBGfpbVjPAMOESo4WRfLW2LBXijI6T4VTbCPGuBJ9G61lGBOXvsbdRsBXxaUiYLIla2/xL6tw7BScuYE5Q8anpqrvi48ngg0+PgPcI3UdeLirOY3GlbqnuDJG2X+3uDiUtRPmgdT22cN4UCwyEd5s9g2r10A4ROCpvC1mqEZiDAp2hQbiWeZfybT5thoEYpCgNaLQMolhHwkAKYqWcVhmKEOV15NK+kgQhAOA2J7MporWtIK/42rpswh4S67pXIWUdTtxt948xjXxb2YGy0YfCiVzo1ahwZRk3MGvZ9jDaXoGgzoB7pRzCw17dSCkJxAMWs8mLUdtsG/p8daTkTsjkXqgByjr8VGsTOrMAhf+vzLgfylQZx+q6pqOAAAAAElFTkSuQmCC');
+$accordion-icon-user-hover: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAArhJREFUSEvFluFxFDEMhZ8qgFQAVEBSAaECoILQAaECkgpIKoBUAKmApAKSCiAdJBWI+XbkHa3XvvPx5zRzs3dnr5/0JD3ZtCezPeFqZ2B3P5b0TNJhOH0n6cHMeA7bELC7v5T0RdJ7Sc87pz9K+inp3Mz+bvNgI7C7A/JV0sdtB1Xr3yV9NjOcaVoXOKL8kSjlgGtJUHoTT/6Dcujn+S6hsO9DL/omcID+TrQ+ELWZAdi1yD/RvohNRHzUAl8BB72/UqSXks4ybQHwuhSXmd0Wb+L9M0mfUvG9rWlvAePxSbx0aWan6VDo/FbRz/KKVne/SOBXZraokwVwUPwngKD3sHgakUA/Fd4yKhlap4KK/ThUaH+VKa+Bc7TQM+fU3cvaU+Sb1gGASIiO3q4ZouhIG7aIugbGWw64NjN6djZ3x3vyujg8wAutd2Z2VL2H828kPZrZQVmbgaNgineIAAWSgT1+tNbYi8DIzOpg5rVIxaRwGZgI6VtsQXNENRLxvZkVKZ0Ocvd8Ln09pSgDZ88O6vJPVUo6Ts3sKuWYSsdaaaAYS8HObO0CjHzmKs2Z4PuiC8pi1SlN4I1UR3R4D1VFPMr59wyQlkJVVM8pHC6uqtCKNvM3ldyVUnfPKVwDR0Tddkr5pDVqEUE8bkreO+30ZGbzSB0SEHenUmm13iwuWDhOVFPLVC26UUCy0kwSGGD1pKoHPQwsJhKCISlL7KJFW0MiizuTiWihF2O4s74yd2eYcGnAyDkFVybUqs16Y7HVNivFqtGriVSWm23WuwgQJW1T6OOQlZo1gHOqWCZqLhCri+Cmqw+FBGW5Z/kN1UjjlOcQCPZANcC5t497966Ryx4H8mFqjRhjE+cu/uuyV/Ui0QM+TaANdr4NsLw7dK9uOEEN5As96tW9yrYc3Rl4hOuRPXsD/geHFF4uxrUMiQAAAABJRU5ErkJggg==');
 
 @mixin card-deck-4 {
   .card {
@@ -388,16 +394,19 @@ button.card {
       padding-bottom: $card-header-padding-y;
       transition: background-color 0.2s;
       border-radius: $border-radius $border-radius 0 0;
+      border: 2px solid $card-header-bg;
       position: relative;
       z-index: 1;
       @extend .h5;
       
       &:hover,
       &.hover {
-        background-color: darken($card-header-bg, 5%);
+        background-color: $card-header-bg;
+        color: $blue;
+        border: 2px solid $blue;
 
         + * > .card-body {
-          border-color: darken($card-header-bg, 5%);
+          border-color: $card-header-bg;
         }
       }
 
@@ -423,28 +432,6 @@ button.card {
       }
 
       &.card-info {
-        background-color: $grisulado-900;
-        color: $white;
-
-        + * > .card-body {
-          border-color: $grisulado-900;
-        }
-
-        &:hover,
-        &.hover {
-          background-color: $card-bg-info;
-  
-          + * > .card-body {
-            border-color: $card-bg-info;
-          }
-        }
-
-        &:focus,
-        &.focus {
-          outline: none;
-          box-shadow: $card-focus-box-shadow;
-          background-color: $card-bg-info;
-        }
 
         &:after {
            content: 'Ver menos';
@@ -463,6 +450,13 @@ button.card {
           }
         }
       }
+      
+      // &.accordion-card-icon {
+      //   &::before{
+      //     content: $accordion-icon-user;
+      //   }
+      // }
+
     }
 
     .collpase-subtitle {
