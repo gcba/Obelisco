@@ -99,6 +99,14 @@ export const PaginationItem: React.FC<PaginationItemProps> = (props: React.Props
     props.onClick && props.onClick();
   };
 
+  if (props.children === '...') {
+    return (
+      <li className="page-item no-events">
+        <span className="page-link">{props.children}</span>
+      </li>
+    );
+  }
+
   if (props.isHidden) {
     return (
       <li className="page-item" style={{ display: 'none' }}>

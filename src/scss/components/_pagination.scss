@@ -42,6 +42,10 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
   .page-item {
     display: inline-block;
 
+    &.no-events {
+      pointer-events: none;
+    }
+
     &:active,
     &.active {
       .page-link {
@@ -91,7 +95,6 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
       &.focus {
         color: $pagination-color;
         text-decoration: none;
-        padding: spaceUnits(1) spaceUnits(2);
 
         &:hover,
         &.hover {
@@ -151,43 +154,40 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
   padding-bottom: spaceUnits(4);
   border-bottom: $page-navigation-border;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 
-  &.page-item {
-    display: flex;
-    justify-content: space-between;
-
-    .page-link {
-      &:active {
-        background-color: $pagination-active-bg;
-
-        &:hover {
-          .page-previous-text,
-          .page-next-text {
-            color: $white !important;
-          }
-        }
-      }
+  .page-link {
+    &:active {
+      background-color: $pagination-active-bg;
 
       &:hover {
         .page-previous-text,
         .page-next-text {
-          color: $pagination-hover-color;
+          color: $white !important;
         }
       }
+    }
 
-      &:focus{
-        &:hover {
-          .page-previous-text,
-          .page-next-text {
-            color: $pagination-color;
-          }
-        }
-      }
-
+    &:hover {
       .page-previous-text,
       .page-next-text {
-        color: $pagination-color;
+        color: $pagination-hover-color;
       }
+    }
+
+    &:focus {
+      &:hover {
+        .page-previous-text,
+        .page-next-text {
+          color: $pagination-color;
+        }
+      }
+    }
+
+    .page-previous-text,
+    .page-next-text {
+      color: $pagination-color;
     }
   }
 }
