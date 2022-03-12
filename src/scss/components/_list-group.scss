@@ -134,7 +134,6 @@ a.list-group-item {
     align-items: flex-start;
 
     &.descriptive-item {
-
       .access-title {
         color: $list-group-color-hover;
       }
@@ -150,10 +149,10 @@ a.list-group-item {
       box-shadow: $box-shadow-access-hover;
       color: $list-group-color-hover;
       text-decoration: $no-text-decoration;
-      
+
       .access-content {
         width: 100%;
-        
+
         .access-title {
           color: $list-group-color-hover;
           text-decoration: underline;
@@ -164,11 +163,11 @@ a.list-group-item {
           text-decoration: $no-text-decoration;
         }
       }
-  }
+    }
 
     .access-content {
       width: 100%;
-      
+
       .access-text {
         text-decoration: $no-text-decoration;
       }
@@ -196,11 +195,10 @@ a.list-group-item {
     border-radius: $list-group-border;
     padding-bottom: 0;
 
-    
     .card-access-body {
       padding: $padding-card-access-body;
       @include display-flex-between;
-      
+
       &.p-list {
         padding: $padding-card-access-body-list;
       }
@@ -210,7 +208,7 @@ a.list-group-item {
         font-weight: 900;
         margin-top: 0.5rem;
       }
-      
+
       .card-access-text {
         font-size: 13px;
         margin: 0;
@@ -224,7 +222,7 @@ a.list-group-item {
         border-radius: $list-group-border;
         text-align: center;
         line-height: $card-size;
-        
+
         &.descriptive {
           color: $blue;
           font-size: 24px;
