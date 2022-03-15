@@ -22,16 +22,19 @@ $btn-padding-x-lg: 1rem;
 $btn-font-size-lg: 1.125rem;
 $btn-line-height-lg: 1.375;
 
-$btn-disabled-opacity: 0.5;
+$btn-disabled-opacity: 1;
 
 $btn-disabled-bg: $grisulado-50;
-$btn-disabled-color: $gray-600;
+$btn-disabled-color: $grisulado-300 !important;
 $btn-border-radius: spaceUnits(2);
 $btn-border-radius-sm: spaceUnits(2);
 $btn-border-radius-lg: spaceUnits(2);
 
 $box-shadow-button: theme-color-level('info', 3);
 $link-decoration: none;
+
+$btn-link-disabled-color: $grisulado-300;
+
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
