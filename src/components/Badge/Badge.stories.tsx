@@ -36,7 +36,7 @@ export const Colores = (): JSX.Element => (
 
 export const Link = (): JSX.Element => (
   <>
-    <Badge text="Etiqueta 1" href="#" className='badge-info' />
+    <Badge text="Etiqueta 1" href="#" className="badge-info" />
     <Badge text="Etiqueta 2" href="#" className="active badge-info" />
     <Badge text="Etiqueta 3" href="#" className="focus active badge-info" />
     <Badge text="Etiqueta 4" href="#" className="focus badge-info" />
