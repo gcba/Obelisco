@@ -387,23 +387,23 @@ button.card {
     }
 
     > .card-header  {
-      background-color: $card-header-bg;
+      background-color: $blue;
       border-width: 0;
       text-align: left;
       padding-top: $card-header-padding-y;
       padding-bottom: $card-header-padding-y;
       transition: background-color 0.2s;
       border-radius: $border-radius $border-radius 0 0;
-      border: 2px solid $card-header-bg;
       position: relative;
       z-index: 1;
+      color: $white;
       @extend .h5;
       
       &:hover,
       &.hover {
         background-color: $card-header-bg;
         color: $blue;
-        border: 2px solid $blue;
+        box-shadow: 0 0 0 2px $blue;
 
         + * > .card-body {
           border-color: $card-header-bg;
@@ -424,7 +424,20 @@ button.card {
       }
 
       &.collapsed {
-        border-radius: $border-radius;
+        border-radius: $border-radius-lg;
+        background-color: $card-header-bg;
+        color: $grisulado-900;
+
+        &:hover,
+        &.hover {
+          background-color: $card-header-bg;
+          color: $blue;
+          box-shadow: 0 0 0 2px $blue;
+  
+          + * > .card-body {
+            border-color: $card-header-bg;
+          }
+        }
 
         &:after {
           content: $accordion-icon-collapsed;
@@ -446,17 +459,25 @@ button.card {
           border-radius: $card-border-radius;
   
           &:after {
-            content: 'Ver detalle';  
+            content: 'Ver detalle';
           }
         }
       }
       
       &.accordion-card-icon {
-        &::before{
-          content: $accordion-icon-user;
+
+        &::before {
+          content: $accordion-icon-user-hover;
           display: inline-block;
           margin-right: 0.25rem;
-          vertical-align: middle;
+          vertical-align: middle;          
+        }
+
+        &.collapsed {
+
+          &:before {
+            content: $accordion-icon-user;
+          }
         }
       }
 
