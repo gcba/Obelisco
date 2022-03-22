@@ -11,6 +11,7 @@ $btn-border-width: 0;
 
 $btn-box-shadow: none;
 $btn-focus-width: 4px;
+$btn-hover-width: 2px;
 $input-btn-focus-color: darken($component-active-bg, 60%);
 
 $btn-padding-y-sm: 0.25rem;
@@ -50,6 +51,7 @@ $btn-link-disabled-color: $grisulado-300;
     @include hover() {
       background-color: theme-color-level($color, 1);
       border-color: theme-color-level($color, 1);
+      box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
     }
 
     &:focus,
@@ -66,12 +68,14 @@ $btn-link-disabled-color: $grisulado-300;
     &:disabled {
       background-color: $btn-disabled-bg;
       color: $btn-disabled-color;
+      pointer-events: none;
     }
 
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
       background-color: theme-color-level($color, 1);
+      box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
 
       &:focus,
       &.focus {
@@ -94,6 +98,7 @@ $btn-link-disabled-color: $grisulado-300;
     background-color: $ghost-hover;
     color: $link-color;
     text-decoration: $link-decoration;
+    box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
   }
 
   &:focus,
@@ -106,6 +111,7 @@ $btn-link-disabled-color: $grisulado-300;
   &.active {
     &:not(:hover) {
       background-color: $ghost-hover;
+      box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
     }
   }
 
