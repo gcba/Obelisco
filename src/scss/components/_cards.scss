@@ -433,7 +433,7 @@ button.card {
           background-color: $card-header-bg;
           color: $blue;
           box-shadow: 0 0 0 2px $blue;
-  
+          
           + * > .card-body {
             border-color: $card-header-bg;
           }
