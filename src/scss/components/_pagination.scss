@@ -54,7 +54,7 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
 
         &:hover,
         &.hover {
-          color: $white;
+          color: $pagination-active-color;
 
           .page-previous-icon {
             content: $pagination-icon-left-active-hover !important;
@@ -64,6 +64,11 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
             content: $pagination-icon-right-active-hover !important;
           }
         }
+      }
+
+      .page-previous-text,
+      .page-next-text {
+        color: $pagination-active-color !important;
       }
     }
 
@@ -93,8 +98,12 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
 
       &:focus,
       &.focus {
-        color: $pagination-color;
         text-decoration: none;
+
+        .page-previous-text,
+        .page-next-text {
+          color: $pagination-color;
+        }
 
         &:hover,
         &.hover {
@@ -156,38 +165,4 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
   width: 100%;
   display: flex;
   justify-content: space-between;
-
-  .page-link {
-    &:active {
-      background-color: $pagination-active-bg;
-
-      &:hover {
-        .page-previous-text,
-        .page-next-text {
-          color: $white !important;
-        }
-      }
-    }
-
-    &:hover {
-      .page-previous-text,
-      .page-next-text {
-        color: $pagination-hover-color;
-      }
-    }
-
-    &:focus {
-      &:hover {
-        .page-previous-text,
-        .page-next-text {
-          color: $pagination-color;
-        }
-      }
-    }
-
-    .page-previous-text,
-    .page-next-text {
-      color: $pagination-color;
-    }
-  }
 }
