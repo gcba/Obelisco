@@ -24,7 +24,7 @@ $badge-bg-level-hover: -9.6;
       outline: 0;
       background-color: theme-color-level($color, $badge-bg-level);
       box-shadow: $focus-box-shadow;
-      color: $blue;
+      color: $badge-color;
     }
 
     &:hover,
@@ -45,8 +45,7 @@ $badge-bg-level-hover: -9.6;
 
 .badge {
   text-decoration: none;
-  text-transform: uppercase;  
-
+  text-transform: uppercase;
   + .badge {
     margin-left: $badge-separation;
   }
