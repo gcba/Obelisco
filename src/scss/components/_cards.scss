@@ -53,11 +53,15 @@ $accordion-margin: 0.75rem;
 $accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
 $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
 
-$accordion-icon-collapsed-hover: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAM1JREFUSEvtljEOwjAMRb/DAeAoXSsGyo3aFXWsWOFGlAF15ShwAOKq9cKQUBrUFISzOtGPX/ztEGZaNJMuVDga+R9DvbskIHPo8bAtsF9fx6IKy7hsMjBOvRhhiyqtVXiIgKIeIiTxSYurswzT0nmThUnAfJSqphwP67YT8d1nNf8bl00NxuY9BJ5dhDOqNHNFv1C4Q23MypkLcwKQdC5wASI3amtv41G/YjxpcanwMwFFHW0sitWkc1mbx/sIfNTO5HDYWFThAAL/h7oFTi5pH1CwniIAAAAASUVORK5CYII=');
-$accordion-icon-expanded-hover: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAGlJREFUSEtjZBggwDhA9jKMWky3kB8N6tGgplkIjCYumgUtusG4g7rmuANVXNFieQCbObgtrj6+n4GBgVLLDzC0WjoOEYsHLKipEsG4DRnNxzQOYITxo0E9GtQ0C4HRxEWzoCW+PqaxEwA3Ew4fZOJSMwAAAABJRU5ErkJggg==');
+$accordion-icon-collapsed-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>');
+$accordion-icon-expanded-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 11h14v2H5z"></path></svg>');
 
-$accordion-icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
-$accordion-icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
+$accordion-icon-collapsed-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 123, 199);transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>');
+$accordion-icon-expanded-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 123, 199);transform: ;msFilter:;"><path d="M5 11h14v2H5z"></path></svg>');
+
+$accordion-icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(56, 72, 92);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
+$accordion-icon-user-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
+$accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 123, 199);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
 
 @mixin card-deck-4 {
   .card {
@@ -397,7 +401,13 @@ button.card {
       position: relative;
       z-index: 1;
       color: $white;
-      @extend .h5;
+      @extend .h5;      
+
+      &:after {
+        content: $accordion-icon-expanded-blue;
+        height: spaceUnits(5);
+        float: right;
+      }
       
       &:hover,
       &.hover {
@@ -408,6 +418,13 @@ button.card {
         + * > .card-body {
           border-color: $card-header-bg;
         }
+
+        &:after {
+          content: $accordion-icon-expanded-blue;
+          height: spaceUnits(5);
+          float: right;
+        }
+
       }
 
       &:focus,
@@ -437,6 +454,12 @@ button.card {
           + * > .card-body {
             border-color: $card-header-bg;
           }
+
+          &:after {
+            content: $accordion-icon-collapsed-blue;
+            height: spaceUnits(5);
+            float: right;
+          }
         }
 
         &:after {
@@ -465,20 +488,26 @@ button.card {
       }
       
       &.accordion-card-icon {
-
         &::before {
-          content: $accordion-icon-user-hover;
+          content: $accordion-icon-user-white;
           display: inline-block;
           margin-right: 0.25rem;
-          vertical-align: middle;          
+          vertical-align: middle;
         }
 
         &.collapsed {
-
           &:before {
             content: $accordion-icon-user;
           }
         }
+
+        &:hover,
+        &.hover {
+          &::before {
+            content: $accordion-icon-user-blue;
+          }  
+        }
+
       }
 
     }
