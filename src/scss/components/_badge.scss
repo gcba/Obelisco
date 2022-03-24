@@ -17,11 +17,11 @@ $badge-padding-y: 0;
 @mixin badge-variant-custom($color, $value) {
   color: $badge-color !important;
   background-color: theme-color-level($color, $badge-bg-level);  
-  box-shadow: 0 0 0 2px theme-color-level($color);
+  box-shadow: 0 0 0 1px theme-color-level($color);
 
   @at-root a#{&} {
     &:hover,
-    &.active {
+    &.hover {
       color: $badge-color-hover !important;
       background-color: theme-color-level($color, $badge-bg-level-hover);
       text-decoration: underline;
