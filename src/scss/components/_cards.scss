@@ -425,7 +425,6 @@ button.card {
           height: spaceUnits(5);
           float: right;
         }
-
       }
 
       &:focus,
@@ -479,6 +478,7 @@ button.card {
            text-decoration: underline;
            font-weight: $card-font-weight;
         }
+
         &.collapsed {
           border-radius: $card-border-radius;
   
@@ -508,9 +508,7 @@ button.card {
             content: $accordion-icon-user-blue;
           }  
         }
-
       }
-
     }
 
     .collpase-subtitle {
