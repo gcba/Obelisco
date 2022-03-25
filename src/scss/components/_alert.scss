@@ -2,6 +2,7 @@
 
 $alert-padding-y: spaceUnits(4);
 $alert-padding-x: spaceUnits(4);
+$alert-padding-left: 2.375rem;
 
 $alert-border-width: 2px;
 
@@ -61,7 +62,7 @@ $theme-colors: map-merge(
 
 .alert {
   counter-reset: section;
-  padding-left: $alert-padding-y + 2.375rem;
+  padding-left: $alert-padding-y + $alert-padding-left;
 
   &::before {
     content: '';
@@ -70,8 +71,7 @@ $theme-colors: map-merge(
     background-size: contain;
     width: $alert-icon-size;
     height: $alert-icon-size;
-    top: $alert-icon-margin;
-    left: $alert-icon-margin;
+    inset: $alert-icon-margin 0 0 $alert-icon-margin;
   }
 
   @each $color, $value in $theme-colors {
@@ -112,7 +112,7 @@ $theme-colors: map-merge(
 
 @include media-breakpoint-down(sm) {
   .alert {
-    padding-left: 2.375rem;
+    padding-left: $alert-padding-left;
 
     &::before {
       left: $alert-icon-margin / 2;
