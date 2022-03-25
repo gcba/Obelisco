@@ -37,8 +37,8 @@ export const Colores = (): JSX.Element => (
 export const Link = (): JSX.Element => (
   <>
     <Badge text="Etiqueta 1" href="#" className="badge-secondary" />
-    <Badge text="Etiqueta 2" href="#" className="active badge-secondary" />
-    <Badge text="Etiqueta 3" href="#" className="focus active badge-secondary" />
+    <Badge text="Etiqueta 2" href="#" className="hover badge-secondary" />
+    <Badge text="Etiqueta 3" href="#" className="focus hover badge-secondary" />
     <Badge text="Etiqueta 4" href="#" className="focus badge-secondary" />
   </>
 );
