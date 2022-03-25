@@ -17,7 +17,7 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
 
   &:hover {
     background-color: transparent;
-    border-radius: 0.5rem;    
+    border-radius: spaceUnits(2);  
   }
 }
 
@@ -27,28 +27,29 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
   border: 2px solid transparent;
 
   &.btn-dropdown-border {
-    border: 2px solid #E6EBF0;
-    border-radius: 0.5rem;
+    box-shadow: 0 0 0 2px #E6EBF0;
+    border-radius: spaceUnits(2);
+    
   }
 
   &:hover {
-    border-radius: 0.5rem;
-    border: 2px solid #007BC7;
+    border-radius: spaceUnits(2);
+    box-shadow: 0 0 0 2px $blue;
     text-decoration: underline;
-    color: #007BC7;
+    color: $blue;
   }
 
   &:focus {
-    box-shadow: 0 0 0 0.2rem #00568b;
+    box-shadow: 0 0 0 0.2rem #005387;
     background: #fff;
     text-decoration: none;
-    border-radius: 0.5rem;    
+    border-radius: spaceUnits(2);    
   }
 
   &.active {
     color: $white;
-    background: #007BC7;
-    border-radius: 0.5rem;
+    background: $blue;
+    border-radius: spaceUnits(2);
   }
 
   &.btn-dropdown-sm {
@@ -83,27 +84,29 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
 }
 
 .dropdown-menu {
-  padding: spaceUnits(2);
+  padding: 0;
   margin-top: spaceUnits(2);
-  border: none;
-  box-shadow: $dropdown-box-shadow;
+  border: solid #f3f6f9;
+  border-radius: spaceUnits(2);
 
   .dropdown-item {
     border-radius: $border-radius;
     padding: $dropdown-item-padding;
     color: $body-color;
     
-    &:hover {
-      background-color: $grisulado-10;
-      border-radius: 0.5rem;
-      border: 0 0 0 0.2rem #007BC7;;
+    &:hover {      
+      background-color: $white;
+      border-radius: spaceUnits(2);
+      box-shadow: 0 0 0 2px $blue;
+      color: $blue;
+      text-decoration: underline;
     }
   
     &:focus {
-      box-shadow: 0 0 0 0.2rem #00568b;
-      border-radius: 0.5rem;
+      box-shadow: 0 0 0 0.2rem #005387;
+      border-radius: spaceUnits(2);
       outline: 2px;
-      color: black;
+      color: $blue;
     } 
   }
 }
