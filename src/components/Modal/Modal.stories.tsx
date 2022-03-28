@@ -25,10 +25,10 @@ export const Generico = (): JSX.Element => {
               <p>Esta es la descripción del modal.</p>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-link btn-sm" data-dismiss="modal">
+              <button type="button" className="btn btn-secondary" data-dismiss="modal">
                 Acción 2
               </button>
-              <button type="button" className="btn btn-danger btn-sm">
+              <button type="button" className="btn btn-danger">
                 Acción 1
               </button>
             </div>
@@ -59,10 +59,10 @@ export const Demo = (): JSX.Element => {
               <p>Esta es la descripción del modal.</p>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-link btn-sm" data-dismiss="modal">
+              <button type="button" className="btn btn-link" data-dismiss="modal">
                 Acción 2
               </button>
-              <button type="button" className="btn btn-danger btn-sm">
+              <button type="button" className="btn btn-primary">
                 Acción 1
               </button>
             </div>
