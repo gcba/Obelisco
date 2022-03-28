@@ -1,13 +1,17 @@
 /* === Custom variables and mixins === */
+
+$dropdown-item-padding-x: spaceUnits(8);
+$dropdown-item-padding-y: spaceUnits(3);
+
 $options-container-spacer-x: spaceUnits(2);
-$options-border-radius: 0.5rem;
-$options-btn-padding-x: 0.75rem;
-$options-btn-padding-y: 0.5rem;
+$options-btn-padding-x: spaceUnits(3);
+$options-btn-padding-y: spaceUnits(2);
 $icon-chevron-up: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
 
 $option-focus-width: 0.25rem;
 $option-btn-focus-box-shadow: 0 0 0 $option-focus-width theme-color-level('info', 4.5);
 $option-btn-hover-box-shadow: 0 0 0 $option-focus-width/2 $blue;
+$option-btn-dropwdown-box-shadow: 0 0 0 $option-focus-width/2 $grisulado-50;
 
 /* === Custom styles === */
 
@@ -15,8 +19,8 @@ $option-btn-hover-box-shadow: 0 0 0 $option-focus-width/2 $blue;
   gap: $options-container-spacer-x;
 
   .btn.btn-dropdown {
-    border: 2px solid $grisulado-50;
-    border-radius: $options-border-radius;
+    box-shadow: $option-btn-dropwdown-box-shadow;
+    border-radius: $border-radius-lg;
 
     &-lg {
       padding: $options-btn-padding-x;
@@ -24,6 +28,10 @@ $option-btn-hover-box-shadow: 0 0 0 $option-focus-width/2 $blue;
 
     &-sm {
       padding: $options-btn-padding-y $options-btn-padding-x;
+    }
+
+    &:focus {
+      box-shadow: $option-btn-focus-box-shadow;
     }
   }
 
@@ -42,7 +50,7 @@ $option-btn-hover-box-shadow: 0 0 0 $option-focus-width/2 $blue;
   .dropdown-menu {
     padding: 0;
     box-shadow: none;
-    border-radius: $options-border-radius;
+    border-radius: $border-radius-lg;
     border: 2px solid $grisulado-50;
   }
 
@@ -51,8 +59,8 @@ $option-btn-hover-box-shadow: 0 0 0 $option-focus-width/2 $blue;
   }
 
   .dropdown-item {
-    padding: 0.75rem 2rem;
-    border-radius: $options-border-radius;
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+    border-radius: $border-radius-lg;
     margin: 0;
 
     &:hover {
