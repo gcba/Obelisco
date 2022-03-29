@@ -86,8 +86,9 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
 .dropdown-menu {
   padding: 0;
   margin-top: spaceUnits(2);
-  border: solid #f3f6f9;
+  border: 0;
   border-radius: spaceUnits(2);
+  box-shadow: 0 0 0 2px #E6EBF0 !important;
 
   .dropdown-item {
     border-radius: $border-radius;
