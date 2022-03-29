@@ -1,7 +1,7 @@
 /* === Variable and mixins overides === */
 
 $modal-header-padding-x: spaceUnits(6);
-$modal-header-padding-y: spaceUnits(4);
+$modal-header-padding-y: spaceUnits(6);
 $modal-header-padding: $modal-header-padding-y $modal-header-padding-x;
 
 $modal-header-divisor: $modal-header-padding-x * -1;
@@ -10,6 +10,7 @@ $modal-header-divisor: $modal-header-padding-x * -1;
 $modal-inner-padding-x: spaceUnits(6);
 $modal-inner-padding-y: spaceUnits(4);
 $modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x;
+$modal-inner-padding-bottom: 1.125rem;
 
 $modal-footer-margin-between: spaceUnits(3);
 
@@ -64,7 +65,8 @@ $modal-dialog-margin-y-sm-up: 3rem;
 
     .modal-footer {
       border-top: 0;
-      padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x;
+      padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x $modal-inner-padding-bottom;
+      gap: spaceUnits(1);
 
       & > *:first-child {
         margin-left: 0;
