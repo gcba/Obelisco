@@ -27,8 +27,8 @@ $pagination-size: 40px;
 
 $pagination-icon-left-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
 $pagination-icon-right-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
-$pagination-icon-left: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(102, 102, 102);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
-$pagination-icon-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(102, 102, 102);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
+$pagination-icon-left: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(56, 72, 92);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
+$pagination-icon-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(56, 72, 92);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
 $pagination-icon-right-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
 $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
 
@@ -55,6 +55,7 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
         &:hover,
         &.hover {
           color: $pagination-active-color;
+          text-decoration: none;
 
           .page-previous-icon {
             content: $pagination-icon-left-active-hover !important;
@@ -165,4 +166,38 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  .page-link {
+    &:active {
+      background-color: $pagination-active-bg;
+
+      &:hover {
+        .page-previous-text,
+        .page-next-text {
+          color: $white !important;
+        }
+      }
+    }
+
+    &:hover {
+      .page-previous-text,
+      .page-next-text {
+        color: $pagination-hover-color;
+      }
+    }
+
+    &:focus {
+      &:hover {
+        .page-previous-text,
+        .page-next-text {
+          color: $pagination-color;
+        }
+      }
+    }
+
+    .page-previous-text,
+    .page-next-text {
+      color: $pagination-color;
+    }
+  }
 }
