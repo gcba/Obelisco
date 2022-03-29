@@ -2,7 +2,7 @@
 
 $card-border-radius: $border-radius-lg;
 $card-spacer: 1rem;
-$card-spacer-sm: .75rem;
+$card-spacer-sm: 0.75rem;
 $card-spacer-lg: 1.5rem;
 
 $card-subtitle-font-size: 1.1875rem;
@@ -33,7 +33,7 @@ $card-footer-icon-size: 1.25rem;
 
 $card-event-img-border-radius: $border-radius-lg * 1.5;
 $card-event-name-bg-gradient: linear-gradient(0deg, rgba($grisulado-900, 0.75) 25%, rgba($grisulado-900, 0) 100%);
-$card-event-name-text-shadow: 0 0 2px rgba(0,0,0,0.3);
+$card-event-name-text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 $card-event-thumb-bracket: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"> <circle fill="%236F6F6F" cx="6" cy="18" r="6"/> <path fill="%23E6EBF0" d="M6,0L6,0C3.8,0,2,1.8,2,4v14c0,2.2,1.8,4,4,4h0c2.2,0,4-1.8,4-4V4C10,1.8,8.2,0,6,0z"/> <path fill="%23FFFFFF" d="M6,0L6,0C3.8,0,2,1.8,2,4v6c0,2.2,1.8,4,4,4h0c2.2,0,4-1.8,4-4V4C10,1.8,8.2,0,6,0z"/> </svg>');
 
 $card-focus-box-shadow: $focus-box-shadow;
@@ -96,9 +96,9 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 @mixin card-deck-1 {
   .card {
     // Esto es necesario que siempre se vea de a 1 columna en todos los tamaños
-    flex: 1 0 55% !important; 
+    flex: 1 0 55% !important;
     margin-top: 0;
-    
+
     &:nth-of-type(n + 2) {
       margin-top: $card-deck-margin-top;
     }
@@ -115,7 +115,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   box-shadow: $card-box-shadow;
 
   .card-body {
-    padding:  $card-spacer;
+    padding: $card-spacer;
   }
 
   @include media-breakpoint-up(md) {
@@ -123,13 +123,13 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       padding: $card-spacer-lg;
     }
   }
-  
+
   .card-headline {
     font-size: $small-font-size;
     text-transform: uppercase;
     margin-bottom: spaceUnits(1);
   }
-  
+
   .card-title {
     margin-bottom: 0;
     @extend .h4;
@@ -182,7 +182,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     position: relative;
     margin-bottom: $card-spacer;
     z-index: 1;
-    
+
     .card-event-bg {
       @extend .card-img-top;
     }
@@ -194,7 +194,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       right: 0;
       bottom: 0;
       margin: 0;
-      padding: ($card-spacer * 3) $card-spacer-lg $card-spacer ($card-spacer-lg + $card-picture-size-lg + $card-spacer-sm);
+      padding: ($card-spacer * 3) $card-spacer-lg $card-spacer
+        ($card-spacer-lg + $card-picture-size-lg + $card-spacer-sm);
       background: $card-event-name-bg-gradient;
       text-shadow: $card-event-name-text-shadow;
       color: $white;
@@ -206,7 +207,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       left: $card-spacer-lg;
       bottom: -$card-spacer-lg;
       z-index: 3;
-      
+
       img {
         width: $card-picture-size-lg;
         height: $card-picture-size-lg;
@@ -220,15 +221,14 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         position: absolute;
         top: spaceUnits(-3);
       }
-      
+
       &:before {
         left: spaceUnits(4);
       }
-      
+
       &:after {
         right: spaceUnits(4);
       }
-      
     }
   }
 
@@ -253,7 +253,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       object-fit: cover;
       flex-shrink: 0;
 
-      +.card-body {
+      + .card-body {
         padding: $card-spacer-sm;
       }
     }
@@ -262,8 +262,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       .card-img-left {
         width: $card-picture-size-lg;
         height: $card-picture-size-lg;
-        
-        +.card-body {
+
+        + .card-body {
           padding: $card-spacer;
         }
       }
@@ -274,14 +274,14 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         margin: $card-spacer;
         margin-right: 0;
 
-        +.card-body {
+        + .card-body {
           padding: $card-spacer;
         }
       }
 
       &.card-lg {
         .card-img-left {
-          +.card-body {
+          + .card-body {
             padding: $card-spacer-lg $card-spacer;
           }
         }
@@ -290,14 +290,14 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     &.card-simple.card-horizontal {
       flex-direction: column;
-      
+
       .card-img-left {
         width: $card-picture-size-lg-mobile;
         height: $card-picture-size-lg-mobile;
         margin: 0 0 $card-spacer;
         border-radius: 0;
 
-        +.card-body {
+        + .card-body {
           padding: 0;
         }
       }
@@ -306,13 +306,13 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     @include media-breakpoint-up(md) {
       &.card-simple.card-horizontal {
         flex-direction: row;
-        
+
         .card-img-left {
           width: $card-picture-size-lg;
-        height: $card-picture-size-lg;
+          height: $card-picture-size-lg;
           margin: $card-spacer;
 
-          +.card-body {
+          + .card-body {
             padding: $card-spacer;
           }
         }
@@ -390,7 +390,7 @@ button.card {
       @include border-top-radius($card-border-radius);
     }
 
-    > .card-header  {
+    > .card-header {
       background-color: $blue;
       border-width: 0;
       text-align: left;
@@ -402,30 +402,13 @@ button.card {
       z-index: 1;
       color: $white;
       min-height: 48px;
-      line-height: 1.4;  
+      line-height: 1.4;
       @extend .h5;
 
       &:after {
         content: $accordion-icon-expanded-blue;
         height: spaceUnits(5);
         float: right;
-      }
-      
-      &:hover,
-      &.hover {
-        background-color: $card-header-bg;
-        color: $blue;
-        box-shadow: 0 0 0 2px $blue;
-
-        + * > .card-body {
-          border-color: $card-header-bg;
-        }
-
-        &:after {
-          content: $accordion-icon-expanded-blue;
-          height: spaceUnits(6);
-          float: right;
-        }
       }
 
       &:focus,
@@ -451,7 +434,7 @@ button.card {
           background-color: $card-header-bg;
           color: $blue;
           content: $accordion-icon-user-white;
-          
+
           + * > .card-body {
             border-color: $card-header-bg;
           }
@@ -469,28 +452,27 @@ button.card {
       }
 
       &.card-info {
-
         &:after {
-           content: 'Ver menos';
-           position: absolute;
-           top: 50%;
-           right: $card-header-padding-x;
-           transform: translateY(-50%);
-           text-decoration: underline;
-           font-weight: $card-font-weight;
+          content: 'Ver menos';
+          position: absolute;
+          top: 50%;
+          right: $card-header-padding-x;
+          transform: translateY(-50%);
+          text-decoration: underline;
+          font-weight: $card-font-weight;
         }
 
         &.collapsed {
           border-radius: $card-border-radius;
-  
+
           &:after {
             content: 'Ver detalle';
           }
         }
       }
-      
+
       &.accordion-card-icon {
-        &::before {
+        &:before {
           content: $accordion-icon-user-white;
           display: inline-block;
           margin-right: 0.25rem;
@@ -501,13 +483,13 @@ button.card {
           &:before {
             content: $accordion-icon-user;
           }
-        }
 
-        &:hover,
-        &.hover {
-          &::before {
-            content: $accordion-icon-user-blue;
-          }  
+          &:hover,
+          &.hover {
+            &:before {
+              content: $accordion-icon-user-blue;
+            }
+          }
         }
       }
     }
