@@ -401,7 +401,8 @@ button.card {
       position: relative;
       z-index: 1;
       color: $white;
-      min-height: 48px;      
+      min-height: 48px;
+      line-height: 1.4;  
       @extend .h5;
 
       &:after {
@@ -422,7 +423,7 @@ button.card {
 
         &:after {
           content: $accordion-icon-expanded-blue;
-          height: spaceUnits(5);
+          height: spaceUnits(6);
           float: right;
         }
       }
@@ -436,7 +437,7 @@ button.card {
 
       &:after {
         content: $accordion-icon-expanded-white;
-        height: spaceUnits(5);
+        height: spaceUnits(6);
         float: right;
       }
 
@@ -457,7 +458,7 @@ button.card {
 
           &:after {
             content: $accordion-icon-collapsed-blue;
-            height: spaceUnits(5);
+            height: spaceUnits(6);
             float: right;
           }
         }
