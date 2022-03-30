@@ -84,6 +84,7 @@ $animation-toggle: transform 0.2s ease-in-out;
     width: 1.4em;
     height: 1.4em;
     border: none;
+    transition: $animation-toggle;
   }
 
   .dropdown-user-icon {
