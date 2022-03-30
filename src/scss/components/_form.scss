@@ -49,9 +49,9 @@ $form-icons: (
   'search':
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>'),
   'valid':
-  url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(38, 135, 74, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>'),
+    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(38, 135, 74, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>'),
   'invalid':
-  url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(201, 59, 59, 1);transform: ;msFilter:;"><path d="M11.953 2C6.465 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.493 2 11.953 2zM13 17h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>')
+    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(201, 59, 59, 1);transform: ;msFilter:;"><path d="M11.953 2C6.465 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.493 2 11.953 2zM13 17h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>')
 );
 
 // Some configuration is inside ../_colors.scs
@@ -123,7 +123,7 @@ $form-validation-states: (
     background-color: $input-bg;
     box-shadow: $input-focus-box-shadow;
   }
-  
+
   &.input-search {
     @include form-icon('search');
     &:hover,
@@ -132,14 +132,15 @@ $form-validation-states: (
     }
   }
 
-  &.is-valid, &.is-invalid {
+  &.is-valid,
+  &.is-invalid {
     border: none;
-    
+
     &:focus {
       box-shadow: 0 0 0 $focus-width $focus-color;
     }
   }
-  
+
   &.is-valid {
     box-shadow: 0 0 0 $input-validation-focus-width $success;
   }
@@ -147,7 +148,8 @@ $form-validation-states: (
     box-shadow: 0 0 0 $input-validation-focus-width $danger;
   }
 
-  &:disabled, &[readonly] {
+  &:disabled,
+  &[readonly] {
     color: $input-disabled-color;
   }
 }
@@ -156,17 +158,18 @@ $form-validation-states: (
   margin-bottom: $form-text-margin-bottom;
 }
 
-.valid-feedback, .invalid-feedback {
+.valid-feedback,
+.invalid-feedback {
   margin-top: spaceUnits(2);
 }
 
 .valid-feedback::before {
-  content: map-get($form-icons, "valid");
+  content: map-get($form-icons, 'valid');
   vertical-align: middle;
   margin-right: spaceUnits(1);
 }
 .invalid-feedback::before {
-  content: map-get($form-icons, "invalid");
+  content: map-get($form-icons, 'invalid');
   vertical-align: middle;
   margin-right: spaceUnits(1);
 }
@@ -210,11 +213,10 @@ $form-validation-states: (
 // Radios
 .custom-radio {
   .custom-control-input:checked ~ .custom-control-label {
-    
     &:before {
       background: transparent;
     }
-    
+
     &::after {
       background-image: none;
       width: 10px;

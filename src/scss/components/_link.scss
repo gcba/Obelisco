@@ -25,12 +25,12 @@ a {
   @include hover() {
     color: $link-active-color;
   }
-  
+
   &:focus {
     color: $link-focus-color;
     text-decoration: $link-decoration;
   }
-  
+
   &.external {
     &::after {
       content: $link-external-icon;

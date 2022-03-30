@@ -1,8 +1,9 @@
 /* === Variable and mixins overides === */
 
-$card-border-radius: $border-radius-container;
-$card-spacer-y: 1rem;
-$card-spacer-x: 1.5rem;
+$card-border-radius: $border-radius-lg;
+$card-spacer: 1rem;
+$card-spacer-sm: 0.75rem;
+$card-spacer-lg: 1.5rem;
 
 $card-subtitle-font-size: 1.1875rem;
 $card-subtitle-font-weight: 400;
@@ -11,8 +12,8 @@ $card-cap-color: $text-muted;
 $card-cap-bg: inherit;
 $card-active-color: $white;
 $card-header-bg: $grisulado-50;
-$card-header-paddin-y: 0.75rem;
-$card-header-paddin-x: 1.5rem;
+$card-header-padding-y: 0.75rem;
+$card-header-padding-x: 1.5rem;
 $card-bg-info: #005387;
 
 $card-border-width: 0;
@@ -20,12 +21,22 @@ $card-shadow-color: $grisulado-50;
 $card-box-shadow: 0 0 0 2px $card-shadow-color;
 $card-box-hover-shadow: 0 0 0 2px $blue;
 
-$card-icon-size: 1.8rem;
-$card-icon-background-size: 52px;
+$card-picture-size: 4rem;
+$card-picture-size-lg: 6rem;
+$card-picture-size-lg-mobile: 4.5rem;
+
+$card-icon-size: 2rem;
+$card-icon-background-size: $card-picture-size;
+$card-icon-bg: $grisulado-10;
 
 $card-footer-icon-size: 1.25rem;
 
-$card-focus-box-shadow: 0 0 0 4px $blue;
+$card-event-img-border-radius: $border-radius-lg * 1.5;
+$card-event-name-bg-gradient: linear-gradient(0deg, rgba($grisulado-900, 0.75) 25%, rgba($grisulado-900, 0) 100%);
+$card-event-name-text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+$card-event-thumb-bracket: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"> <circle fill="%236F6F6F" cx="6" cy="18" r="6"/> <path fill="%23E6EBF0" d="M6,0L6,0C3.8,0,2,1.8,2,4v14c0,2.2,1.8,4,4,4h0c2.2,0,4-1.8,4-4V4C10,1.8,8.2,0,6,0z"/> <path fill="%23FFFFFF" d="M6,0L6,0C3.8,0,2,1.8,2,4v6c0,2.2,1.8,4,4,4h0c2.2,0,4-1.8,4-4V4C10,1.8,8.2,0,6,0z"/> </svg>');
+
+$card-focus-box-shadow: $focus-box-shadow;
 
 $card-deck-margin: $grid-gutter-width / 2;
 $card-deck-margin-top: $grid-gutter-width;
@@ -33,12 +44,9 @@ $card-deck-margin-top: $grid-gutter-width;
 $card-text-decoration: none;
 $card-font-weight: 600;
 
-
 $collapse-border-width: 2px;
 $collapse-info-title-size: 1.3125rem;
 $collapse-info-subtitle-size: 0.825rem;
-
-/* === Custom variables and mixins === */
 
 $accordion-margin: 0.75rem;
 
@@ -75,6 +83,18 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
   }
 }
 
+@mixin card-deck-1 {
+  .card {
+    // Esto es necesario que siempre se vea de a 1 columna en todos los tamaños
+    flex: 1 0 55% !important;
+    margin-top: 0;
+
+    &:nth-of-type(n + 2) {
+      margin-top: $card-deck-margin-top;
+    }
+  }
+}
+
 /* === Bootstrap Import === */
 
 @import '~bootstrap/scss/card';
@@ -85,16 +105,26 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
   box-shadow: $card-box-shadow;
 
   .card-body {
-    padding: $card-spacer-y $card-spacer-x $card-spacer-x;
-  }
-  
-  .card-title {
-    margin-bottom: 0;
+    padding: $card-spacer;
   }
 
-  // h3.card-title {
-  //   @extend .h4;
-  // }
+  @include media-breakpoint-up(md) {
+    .card-body {
+      padding: $card-spacer-lg;
+    }
+  }
+
+  .card-headline {
+    font-size: $small-font-size;
+    text-transform: uppercase;
+    margin-bottom: spaceUnits(1);
+  }
+
+  .card-title {
+    margin-bottom: 0;
+    @extend .h4;
+    font-weight: 700;
+  }
 
   .card-subtitle {
     font-size: $card-subtitle-font-size;
@@ -103,12 +133,12 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
   }
 
   .card-text {
-    margin-top: $card-spacer-y / 2;
+    margin-top: $card-spacer / 2;
   }
 
   .card-footer {
-    padding: 0 0 $card-spacer-x;
-    margin: 0 $card-spacer-x;
+    padding: 0 0 $card-spacer-lg;
+    margin: -$card-spacer-sm $card-spacer 0;
 
     .bx {
       font-size: $card-footer-icon-size;
@@ -117,23 +147,79 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
     }
   }
 
-  .card-icon {
-    font-size: 3rem;
-    margin-bottom: $card-spacer-y;
-
-    &.card-icon-with-bg {
-      font-size: $card-icon-size;
-      background-color: #f3f6f9;
-      width: $card-icon-background-size;
-      height: $card-icon-background-size;
-      border-radius: 50%;
-      text-align: center;
-      line-height: $card-icon-background-size;
+  @include media-breakpoint-up(md) {
+    .card-footer {
+      margin: -$card-spacer $card-spacer-lg 0;
     }
+  }
+
+  .card-icon {
+    margin-bottom: $card-spacer;
+    font-size: $card-icon-size;
+    background-color: $card-icon-bg;
+    width: $card-icon-background-size;
+    height: $card-icon-background-size;
+    border-radius: $border-radius-lg;
+    text-align: center;
+    line-height: $card-icon-background-size;
   }
 
   .card-img-top {
     border-radius: $card-border-radius $card-border-radius 0 0;
+  }
+
+  .card-event-top {
+    position: relative;
+    margin-bottom: $card-spacer;
+    z-index: 1;
+
+    .card-event-bg {
+      @extend .card-img-top;
+    }
+
+    .card-event-name {
+      @extend .h4;
+      position: absolute;
+      width: 100%;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: ($card-spacer * 3) $card-spacer-lg $card-spacer
+        ($card-spacer-lg + $card-picture-size-lg + $card-spacer-sm);
+      background: $card-event-name-bg-gradient;
+      text-shadow: $card-event-name-text-shadow;
+      color: $white;
+      z-index: 2;
+    }
+
+    .card-event-img {
+      position: absolute;
+      left: $card-spacer-lg;
+      bottom: -$card-spacer-lg;
+      z-index: 3;
+
+      img {
+        width: $card-picture-size-lg;
+        height: $card-picture-size-lg;
+        object-fit: cover;
+        border-radius: $card-event-img-border-radius;
+      }
+
+      &:before,
+      &:after {
+        content: $card-event-thumb-bracket;
+        position: absolute;
+        top: spaceUnits(-3);
+      }
+
+      &:before {
+        left: spaceUnits(4);
+      }
+
+      &:after {
+        right: spaceUnits(4);
+      }
+    }
   }
 
   &.card-simple {
@@ -149,9 +235,78 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
     flex-direction: row;
 
     .card-img-left {
-      width: 154px;
+      width: $card-picture-size;
+      height: $card-picture-size;
+      margin: $card-spacer-sm;
+      margin-right: 0;
+      border-radius: $card-border-radius;
       object-fit: cover;
-      border-radius: $card-border-radius 0 0 $card-border-radius;
+      flex-shrink: 0;
+
+      + .card-body {
+        padding: $card-spacer-sm;
+      }
+    }
+
+    &.card-lg {
+      .card-img-left {
+        width: $card-picture-size-lg;
+        height: $card-picture-size-lg;
+
+        + .card-body {
+          padding: $card-spacer;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .card-img-left {
+        margin: $card-spacer;
+        margin-right: 0;
+
+        + .card-body {
+          padding: $card-spacer;
+        }
+      }
+
+      &.card-lg {
+        .card-img-left {
+          + .card-body {
+            padding: $card-spacer-lg $card-spacer;
+          }
+        }
+      }
+    }
+
+    &.card-simple.card-horizontal {
+      flex-direction: column;
+
+      .card-img-left {
+        width: $card-picture-size-lg-mobile;
+        height: $card-picture-size-lg-mobile;
+        margin: 0 0 $card-spacer;
+        border-radius: 0;
+
+        + .card-body {
+          padding: 0;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      &.card-simple.card-horizontal {
+        flex-direction: row;
+
+        .card-img-left {
+          width: $card-picture-size-lg;
+          height: $card-picture-size-lg;
+          margin: $card-spacer;
+
+          + .card-body {
+            padding: $card-spacer;
+          }
+        }
+      }
     }
   }
 }
@@ -171,6 +326,10 @@ $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo
   .card-deck:not(.max-cards-2):not(.max-cards-3) {
     @include card-deck-4;
   }
+}
+
+.card-deck.max-cards-1 {
+  @include card-deck-1;
 }
 
 a.card,
@@ -221,18 +380,18 @@ button.card {
       @include border-top-radius($card-border-radius);
     }
 
-    > .card-header  {
+    > .card-header {
       background-color: $card-header-bg;
       border-width: 0;
       text-align: left;
-      padding-top: $card-header-paddin-y;
-      padding-bottom: $card-header-paddin-y;
+      padding-top: $card-header-padding-y;
+      padding-bottom: $card-header-padding-y;
       transition: background-color 0.2s;
       border-radius: $border-radius $border-radius 0 0;
       position: relative;
       z-index: 1;
       @extend .h5;
-      
+
       &:hover,
       &.hover {
         background-color: darken($card-header-bg, 5%);
@@ -274,7 +433,7 @@ button.card {
         &:hover,
         &.hover {
           background-color: $card-bg-info;
-  
+
           + * > .card-body {
             border-color: $card-bg-info;
           }
@@ -288,19 +447,19 @@ button.card {
         }
 
         &:after {
-           content: 'Ver menos';
-           position: absolute;
-           top: 50%;
-           right: $card-header-paddin-x;
-           transform: translateY(-50%);
-           text-decoration: underline;
-           font-weight: $card-font-weight;
+          content: 'Ver menos';
+          position: absolute;
+          top: 50%;
+          right: $card-header-padding-x;
+          transform: translateY(-50%);
+          text-decoration: underline;
+          font-weight: $card-font-weight;
         }
         &.collapsed {
           border-radius: $card-border-radius;
-  
+
           &:after {
-            content: 'Ver detalle';  
+            content: 'Ver detalle';
           }
         }
       }
