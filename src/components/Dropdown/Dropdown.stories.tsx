@@ -11,7 +11,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const DesplegableGrande = (): JSX.Element => (
+export const DesplegableConIcono = (): JSX.Element => (
   <div className="dropdown-container">
     <div className="dropdown mb-3">
       <button
@@ -37,7 +37,7 @@ export const DesplegableGrande = (): JSX.Element => (
     <div className="dropdown">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown-border btn-dropdown-lg"
+        className="btn btn-dropdown btn-dropdown-border btn-dropdown-md"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
@@ -58,7 +58,7 @@ export const DesplegableGrande = (): JSX.Element => (
   </div>
 );
 
-export const DesplegableMediano = (): JSX.Element => (
+export const Desplegable = (): JSX.Element => (
   <>
     <div className="dropdown-container">
       <div className="dropdown mb-3">
@@ -127,6 +127,75 @@ export const DesplegableMediano = (): JSX.Element => (
     </div>
   </>
 );
+
+export const Tamanos = (): JSX.Element => (
+  <div className="dropdown-container">
+    <div className="dropdown mb-3">
+      <button
+        type="button"
+        className="btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false">
+        Filtro (1)
+      </button>
+      <div className="dropdown-menu">
+        <button className="dropdown-item" type="button">
+          Opción 1
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 2
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 3
+        </button>
+      </div>
+    </div>
+    <div className="dropdown mb-3">
+      <button
+        type="button"
+        className="btn btn-dropdown btn-dropdown-border btn-dropdown-md dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false">
+        Filtro (1)
+      </button>
+      <div className="dropdown-menu">
+        <button className="dropdown-item" type="button">
+          Opción 1
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 2
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 3
+        </button>
+      </div>
+    </div>
+    <div className="dropdown mb-3">
+      <button
+        type="button"
+        className="btn btn-dropdown btn-dropdown-border btn-dropdown-sm dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false">
+        Filtro (1)
+      </button>
+      <div className="dropdown-menu">
+        <button className="dropdown-item" type="button">
+          Opción 1
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 2
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 3
+        </button>
+      </div>
+    </div>
+  </div>
+);
+Tamanos.story = { name: 'Tamaños' };
 
 export const SoloIcono = (): JSX.Element => (
   <div className="dropdown-container">
