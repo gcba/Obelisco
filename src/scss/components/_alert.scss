@@ -10,8 +10,8 @@ $alert-bg-level: -9.5;
 $alert-border-level: 0;
 
 $alert-icon-size: spaceUnits(5);
-$alert-icon-margin-y: 1.125rem;
-$alert-icon-margin-x: 1.625rem;
+$alert-icon-position-top: 1.125rem;
+$alert-icon-position-left: 1.625rem;
 $alert-close-btn-width: 5.5rem;
 $alert-text-distance: spaceUnits(2);
 
@@ -72,7 +72,7 @@ $theme-colors: map-merge(
     background-size: contain;
     width: $alert-icon-size;
     height: $alert-icon-size;
-    inset: $alert-icon-margin-y 0 0 $alert-icon-margin-x;
+    inset: $alert-icon-position-top 0 0 $alert-icon-position-left;
   }
 
   @each $color, $value in $theme-colors {
@@ -116,7 +116,7 @@ $theme-colors: map-merge(
     padding-left: $alert-padding-left;
 
     &::before {
-      left: $alert-icon-margin-x / 2;
+      left: $alert-icon-position-left / 2;
     }
   }
 }
