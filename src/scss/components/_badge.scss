@@ -11,12 +11,11 @@ $badge-bg-level: -9;
 $badge-bg-level-hover: -9.6;
 $badge-padding-y: 0;
 
-
 /* === Custom variables and mixins === */
 
 @mixin badge-variant-custom($color, $value) {
   color: $badge-color !important;
-  background-color: theme-color-level($color, $badge-bg-level);  
+  background-color: theme-color-level($color, $badge-bg-level);
   box-shadow: 0 0 0 1px theme-color-level($color);
 
   @at-root a#{&} {
