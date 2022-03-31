@@ -120,9 +120,21 @@ export const Con2Niveles = (): JSX.Element => (
   </div>
 );
 
+export const Con2NivelesConIcono = (): JSX.Element => (
+  <div>
+    <NavHorizontal items={doubleLevel} navSize="large" selected="1.2" hasIcon={true} />
+  </div>
+);
+
 export const Con3Niveles = (): JSX.Element => (
   <div>
     <NavHorizontal items={tripleLevel} navSize="large" selected="1.2.2" />
+  </div>
+);
+
+export const Con3NivelesConIcono = (): JSX.Element => (
+  <div>
+    <NavHorizontal items={tripleLevel} navSize="large" selected="1.2.2" hasIcon={true} />
   </div>
 );
 

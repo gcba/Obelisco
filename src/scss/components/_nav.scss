@@ -39,34 +39,28 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   gap: 10px;
 }
 
-.nav-icon {
-  .nav-item:first-child {
-    .nav-link {
-      &::before {
-        content: $icon-user;
-        display: inline-block;
-        margin-right: 0.55rem;
-        vertical-align: middle;
-        height: 1.6rem;
-      }
+.nav-pills {
+  .nav-item {
 
-      &:active {
-        &::before {
-          content: $icon-user-active !important;
-        }
-      }
-
-      &:hover {
-        &::before {
-          content: $icon-user-hover;
-        }
-      }
-
-      &:focus {
-        &:hover {
-          &::before {
-            content: $icon-user;
+    &:first-child {
+      .nav-link {
+        .nav-icon {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+      
+          i {
+            font-size: 20px;
+            display: inline;
           }
+        }
+      }
+    }
+
+    .nav-link {
+      .nav-icon {
+        i {
+          display: none;
         }
       }
     }
@@ -87,10 +81,29 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     box-shadow: 0 0 0 2px $grisulado-50;
   }
 
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+      font-size: 20px;
+    }
+  }
+
   @include hover() {
     box-shadow: $input-btn-hover-box-shadow;
     color: $nav-link-hover-color;
-    text-decoration: underline;
+
+    .nav-icon {
+      i {
+        text-decoration: none;
+      }
+
+      span {
+        text-decoration: underline;
+      }
+    }
   }
 
   &:focus,
@@ -108,9 +121,14 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     &:hover,
     &:focus {
       color: $blue;
-      text-decoration: none;
       font-weight: $nav-link-active-font-weight;
       box-shadow: none;
+
+      &.nav-icon {  
+        span {
+          text-decoration: none;
+        }
+      }
     }
   }
 }
@@ -141,6 +159,12 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         font-weight: $nav-link-active-font-weight;
         box-shadow: none;
         background-color: $white;
+      }
+
+      .nav-icon {  
+        span {
+          text-decoration: none;
+        }
       }
     }
   }
