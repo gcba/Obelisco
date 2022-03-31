@@ -37,7 +37,7 @@ export const DesplegableConIcono = (): JSX.Element => (
     <div className="dropdown">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown-border btn-dropdown-md"
+        className="btn btn-dropdown btn-dropdown-border"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
@@ -154,7 +154,7 @@ export const Tamanos = (): JSX.Element => (
     <div className="dropdown mb-3">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown-border btn-dropdown-md dropdown-toggle"
+        className="btn btn-dropdown btn-dropdown-border dropdown-toggle"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
