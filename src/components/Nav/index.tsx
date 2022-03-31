@@ -14,15 +14,18 @@ export interface NavProps {
   selected?: string;
   navSize?: 'default' | 'large';
   onClick?: (id: string) => void;
+  hasBordered?: boolean;
+  hasIcon?: boolean;
 }
 
 const listClasses = 'nav flex-column nav-pills';
 
 export const Nav: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
-  const { items, selected, navSize, onClick } = props;
+  const { items, selected, navSize, onClick, hasIcon } = props;
 
   const mainListClasses = classnames(listClasses, {
-    'nav-lg': navSize === 'large'
+    'nav-lg': navSize === 'large',
+    'nav-icon': hasIcon
   });
 
   return (
@@ -36,10 +39,33 @@ export const Nav: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>
   );
 };
 
+const listClassesHorizontal = 'nav flex-row nav-pills';
+
+export const NavHorizontal: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
+  const { items, selected, navSize, onClick, hasIcon } = props;
+
+  const mainListClasses = classnames(listClassesHorizontal, {
+    'nav-lg': navSize === 'large',
+    'nav-icon': hasIcon
+  });
+
+  return (
+    <nav>
+      <ul className={mainListClasses}>
+        {items.map((item) => (
+          <NavItemComponentHorizontal {...item} key={item.id} level={0} onClick={onClick} selected={selected} />
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
 interface NavItemComponentProps extends NavItem {
   level: number;
   selected?: string;
   onClick?: (id: string) => void;
+  hasBordered?: boolean;
+  isSize?: boolean;
 }
 
 const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
@@ -49,6 +75,48 @@ const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemCompone
   const hasActiveChild = checkActiveChild(children, selected);
 
   const linkClassName = classnames('nav-link', {
+    'active-child': !disabled && hasActiveChild,
+    active: !disabled && isActive,
+    disabled: disabled
+  });
+
+  const handleClick: React.MouseEventHandler = (event) => {
+    if (!href) {
+      event.preventDefault();
+      !disabled && props.onClick && props.onClick(id);
+    }
+  };
+
+  return (
+    <li className="nav-item">
+      <a
+        className={linkClassName}
+        href={href || '#'}
+        onClick={handleClick}
+        aria-disabled={disabled}
+        tabIndex={disabled ? -1 : undefined}>
+        {name}
+      </a>
+      {!disabled && (isActive || hasActiveChild) && children && (
+        <ul className={listClasses}>
+          {children.map((item) => (
+            <NavItemComponent {...item} key={item.id} level={level + 1} onClick={props.onClick} selected={selected} />
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+};
+
+const NavItemComponentHorizontal: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
+  const { name, id, href, children, level, disabled, selected, hasBordered, isSize } = props;
+
+  const isActive = selected && id === selected;
+  const hasActiveChild = checkActiveChild(children, selected);
+
+  const linkClassName = classnames('nav-link', {
+    'nav-link-sm': isSize,
+    'border-link': hasBordered,
     'active-child': !disabled && hasActiveChild,
     active: !disabled && isActive,
     disabled: disabled
