@@ -1,11 +1,13 @@
 /* === Variable and mixins overides === */
 
 $nav-link-font-weight: 400;
-$nav-link-active-font-weight: 800;
-$nav-pills-link-active-font-weight: 800;
+$nav-link-active-font-weight: 600;
+$nav-pills-link-active-font-weight: 600;
 
 $nav-link-lg-font-weight: 600;
 $nav-link-lg-font-size: 1.125rem;
+
+$nav-icon-font-size: 1.25rem;
 
 $nav-link-padding-y: 0.75rem;
 $nav-link-padding-x: 0.75rem;
@@ -36,7 +38,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 /* === Custom styles === */
 
 .flex-row {
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .nav-pills {
@@ -47,10 +49,10 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         .nav-icon {
           display: flex;
           align-items: center;
-          gap: 10px;
-      
+          gap: 0.625rem;
+
           i {
-            font-size: 20px;
+            font-size: $nav-icon-font-size;
             display: inline;
           }
         }
@@ -68,7 +70,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 }
 
 .nav-link {
-  font-size: 18px;
+  font-size: $nav-link-lg-font-size;
   color: $grisulado-900;
   font-weight: $nav-link-font-weight;
   @include border-radius($border-radius * 2);
@@ -124,7 +126,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       font-weight: $nav-link-active-font-weight;
       box-shadow: none;
 
-      &.nav-icon {  
+      &.nav-icon {
         span {
           text-decoration: none;
         }
@@ -161,7 +163,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         background-color: $white;
       }
 
-      .nav-icon {  
+      .nav-icon {
         span {
           text-decoration: none;
         }
