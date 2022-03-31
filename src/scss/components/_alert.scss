@@ -1,8 +1,8 @@
 /* === Variable and mixins overides === */
 
 $alert-padding-y: spaceUnits(4);
-$alert-padding-x: spaceUnits(4);
-$alert-padding-left: 2.375rem;
+$alert-padding-x: spaceUnits(6);
+$alert-padding-left: 2.75rem;
 
 $alert-border-width: 2px;
 
@@ -10,7 +10,8 @@ $alert-bg-level: -9.5;
 $alert-border-level: 0;
 
 $alert-icon-size: spaceUnits(5);
-$alert-icon-margin: 1.125rem;
+$alert-icon-margin-y: 1.125rem;
+$alert-icon-margin-x: 1.625rem;
 $alert-close-btn-width: 5.5rem;
 $alert-text-distance: spaceUnits(2);
 
@@ -71,7 +72,7 @@ $theme-colors: map-merge(
     background-size: contain;
     width: $alert-icon-size;
     height: $alert-icon-size;
-    inset: $alert-icon-margin 0 0 $alert-icon-margin;
+    inset: $alert-icon-margin-y 0 0 $alert-icon-margin-x;
   }
 
   @each $color, $value in $theme-colors {
@@ -92,7 +93,7 @@ $theme-colors: map-merge(
     list-style: none;
 
     li {
-      margin-bottom: $alert-text-distance / 2;
+      margin-bottom: $alert-text-distance;
 
       &::before {
         counter-increment: section;
@@ -115,7 +116,7 @@ $theme-colors: map-merge(
     padding-left: $alert-padding-left;
 
     &::before {
-      left: $alert-icon-margin / 2;
+      left: $alert-icon-margin-x / 2;
     }
   }
 }
