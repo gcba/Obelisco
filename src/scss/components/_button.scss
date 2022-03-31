@@ -2,7 +2,7 @@
 
 $btn-padding-y: spaceUnits(2);
 $btn-padding-x: 0.75rem;
-$btn-font-size: 1rem;
+$btn-font-size: 1.125rem;
 $btn-line-height: 1.375;
 $btn-focus-width: 0.125rem;
 $btn-font-weight: 600;
@@ -128,11 +128,9 @@ $btn-link-disabled-color: $grisulado-300;
 
 .btn {
   min-height: 40px;
-  font-size: 18px;
 
   &.btn-sm {
     min-height: 30px;
-    font-size: 16px;
   }
 
   &.btn-lg {
