@@ -1,32 +1,36 @@
 /* === Variable and mixins overides === */
 
+$badge-color: $grisulado-900;
+$badge-color-hover: $blue;
 $badge-font-size: 0.8125rem;
 $badge-font-weight: $font-weight-normal;
-$badge-border-radius: spaceUnits(0.5);
+$badge-border-radius: spaceUnits(2);
 $badge-separation: spaceUnits(2);
 
 $badge-bg-level: -9;
-$badge-bg-level-hover: -7;
+$badge-bg-level-hover: -9.6;
+$badge-padding-y: 0;
 
 /* === Custom variables and mixins === */
 
 @mixin badge-variant-custom($color, $value) {
-  color: $value;
+  color: $badge-color !important;
   background-color: theme-color-level($color, $badge-bg-level);
+  box-shadow: 0 0 0 1px theme-color-level($color);
 
   @at-root a#{&} {
+    &:hover,
+    &.hover {
+      color: $badge-color-hover !important;
+      background-color: theme-color-level($color, $badge-bg-level-hover);
+      text-decoration: underline;
+      box-shadow: 0 0 0 2px $blue;
+    }
     &:focus,
     &.focus {
       outline: 0;
-      color: $value;
       background-color: theme-color-level($color, $badge-bg-level);
       box-shadow: $focus-box-shadow;
-    }
-
-    &:hover,
-    &.active {
-      color: $value;
-      background-color: theme-color-level($color, $badge-bg-level-hover);
     }
   }
 }
@@ -40,7 +44,8 @@ $badge-bg-level-hover: -7;
 .badge {
   text-decoration: none;
   text-transform: uppercase;
-
+  min-height: 22px;
+  line-height: 1.6;
   + .badge {
     margin-left: $badge-separation;
   }
