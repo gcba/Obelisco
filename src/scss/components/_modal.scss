@@ -1,21 +1,23 @@
 /* === Variable and mixins overides === */
 
-$modal-header-padding-x: 1.5rem; // 24px
-$modal-header-padding-y: 1.25rem; // 20px
+$modal-header-padding-x: spaceUnits(6);
+$modal-header-padding-y: spaceUnits(6);
 $modal-header-padding: $modal-header-padding-y $modal-header-padding-x;
 
 $modal-header-divisor: $modal-header-padding-x * -1;
 
 // Whitespace on modal body content
-$modal-inner-padding-x: 1.5rem; // 24px
-$modal-inner-padding-y: 1.25rem; // 20px
+$modal-inner-padding-x: spaceUnits(6);
+$modal-inner-padding-y: spaceUnits(4);
 $modal-inner-padding: $modal-inner-padding-y $modal-inner-padding-x;
+$modal-inner-padding-bottom: 1.125rem;
 
-$modal-footer-margin-between: 0.75rem; // 12px
+$modal-footer-margin-between: spaceUnits(3);
 
-$modal-content-border-radius: 0.5rem; // 8px
+$modal-content-border-radius: spaceUnits(2);
 $modal-sm: 340px;
 $modal-dialog-margin-y-sm-up: 3rem;
+
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
@@ -38,27 +40,41 @@ $modal-dialog-margin-y-sm-up: 3rem;
       }
     }
   }
-}
 
-.modal-header {
-  border-bottom: 0;
-  box-shadow: 0 1.563rem 0 $modal-header-divisor rgba($grisulado-50, 1);
-  padding-bottom: $modal-header-padding-y * 0.8;
-}
+  .modal-content {
+    box-shadow: 0 0 0 2px $grisulado-50;
+    border: none;
 
-.modal-body > *:last-child {
-  margin: 0;
-}
+    .modal-header {
+      border-bottom: 0;
+      box-shadow: 0 1.563rem 0 $modal-header-divisor rgba($grisulado-50, 1);
+      padding-bottom: 0.4rem;
 
-.modal-footer {
-  border-top: 0;
-  padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x;
+      .modal-title {
+        font-weight: bold;
+      }
+    }
 
-  & > *:first-child {
-    margin-left: 0;
-  }
+    .modal-body {
+      padding: spaceUnits(2) spaceUnits(6) 0;
 
-  & > *:last-child {
-    margin-right: 0;
+      > *:last-child {
+        margin: 0;
+      }
+    }
+
+    .modal-footer {
+      border-top: 0;
+      padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x $modal-inner-padding-bottom;
+      gap: spaceUnits(1);
+
+      & > *:first-child {
+        margin-left: 0;
+      }
+
+      & > *:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
