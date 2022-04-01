@@ -394,8 +394,7 @@ button.card {
       background-color: $blue;
       border-width: 0;
       text-align: left;
-      padding-top: $card-header-padding-y;
-      padding-bottom: $card-header-padding-y;
+      padding: $card-header-padding-y $card-header-padding-x;
       transition: background-color 0.2s;
       border-radius: $border-radius $border-radius 0 0;
       position: relative;
@@ -407,8 +406,7 @@ button.card {
 
       &:hover,
       &.hover {
-        background-color: darken($card-header-bg, 5%);
-
+        background-color: $card-bg-info;
       }
 
       &:after {
@@ -437,8 +435,9 @@ button.card {
 
         &:hover,
         &.hover {
-          background-color: $card-header-bg;
+          background-color: $grisulado-10;
           color: $blue;
+          box-shadow: $card-box-hover-shadow;
           content: $accordion-icon-user-white;
 
           + * > .card-body {
@@ -479,6 +478,7 @@ button.card {
         &:hover,
         &.hover {
           background-color: $card-bg-info;
+          color: $white;
 
           + * > .card-body {
             border-color: $card-bg-info;
@@ -539,6 +539,7 @@ button.card {
     }
 
     .card-body {
+      padding-top: 1rem;
       border: $collapse-border-width solid $card-header-bg;
       @include border-bottom-radius($card-border-radius);
     }
