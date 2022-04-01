@@ -404,11 +404,6 @@ button.card {
       line-height: 1.4;
       @extend .h5;
 
-      &:hover,
-      &.hover {
-        background-color: $card-bg-info;
-      }
-
       &:after {
         content: $accordion-icon-expanded-blue;
         height: spaceUnits(5);
@@ -475,16 +470,6 @@ button.card {
           }
         }
 
-        &:hover,
-        &.hover {
-          background-color: $card-bg-info;
-          color: $white;
-
-          + * > .card-body {
-            border-color: $card-bg-info;
-
-          }
-        }
       }
 
       &.accordion-card-icon {
@@ -508,22 +493,6 @@ button.card {
           }
         }
 
-        &:after {
-          content: 'Ver menos';
-          position: absolute;
-          top: 50%;
-          right: $card-header-padding-x;
-          transform: translateY(-50%);
-          text-decoration: underline;
-          font-weight: $card-font-weight;
-        }
-        &.collapsed {
-          border-radius: $card-border-radius;
-
-          &:after {
-            content: 'Ver detalle';
-          }
-        }
       }
     }
 

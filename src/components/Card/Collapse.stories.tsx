@@ -95,7 +95,7 @@ export const SeleccionMultiple = (): JSX.Element => (
 SeleccionMultiple.story = { name: 'Selección múltiple' };
 
 export const ConInformacion = (): JSX.Element => (
-  <div className="accordion-wrapper-info">
+  <div className="accordion-wrapper">
     <div className="accordion" id="accordionExample">
       <div className="card">
         <button
