@@ -5,44 +5,91 @@ $dropdown-item-padding: spaceUnits(2) spaceUnits(2);
 
 $icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>');
 $icon-chevron-down: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
+$icon-chevron-down-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
+$icon-chevron-down-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
 $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>');
+
+$animation-toggle: transform 0.2s ease-in-out;
 
 /* === Bootstrap Import === */
 @import '~bootstrap/scss/dropdown';
 
 /* === Custom styles === */
 
+.dropdown.show .btn.btn-dropdown.dropdown-toggle:after {
+  content: $icon-chevron-down;
+  transform: rotate(180deg);
+  transition: $animation-toggle;
+  height: 1.3em;
+}
+
 .btn .dropdown-chevron {
   padding: 2px;
 
   &:hover {
     background-color: transparent;
-    border-radius: 0.5rem;
+    border-radius: spaceUnits(2);
   }
 }
 
 .btn.btn-dropdown {
   padding: $btn-padding-y;
   font-weight: $body-font-weight;
+  border: 2px solid transparent;
+
+  &.btn-dropdown-border {
+    box-shadow: 0 0 0 2px #e6ebf0;
+    border-radius: spaceUnits(2);
+  }
 
   &:hover {
-    background-color: $grisulado-10;
-    border-radius: 0.5rem;
+    border-radius: spaceUnits(2);
+    box-shadow: 0 0 0 2px $blue;
+    text-decoration: underline;
+    color: $blue;
+
+    &.dropdown-toggle:after {
+      content: $icon-chevron-down-hover !important;
+    }
   }
 
   &:focus {
-    box-shadow: 0 0 0 0.2rem #00568b;
+    box-shadow: 0 0 0 0.2rem #005387;
     background: #fff;
     text-decoration: none;
-    border-radius: 0.5rem;
+    border-radius: spaceUnits(2);
   }
 
-  &.active {
-    color: $blue;
+  &.active,
+  &:active {
+    color: $white;
+    background: $blue;
+    border-radius: spaceUnits(2);
+    text-decoration: none;
+    box-shadow: none;
+
+    &.dropdown-toggle:after {
+      content: $icon-chevron-down-white !important;
+    }
   }
 
-  &.btn-dropdown-sm {
-    padding: $btn-padding-y / 2 $btn-padding-y;
+  &.btn-dropdown {
+    max-height: 40px;
+    font-size: 1.125rem;
+    line-height: 1;
+    padding: 0.5rem 0.75rem;
+
+    &-sm {
+      max-height: 32px;
+      font-size: 1rem;
+      padding: 0.375rem 0.5rem 0.250rem;
+    }
+
+    &-lg {
+      padding: 0.75rem;
+      max-height: 48px;
+      padding: 0.75rem;
+    }
   }
 
   &.dropdown-toggle:after {
@@ -52,47 +99,69 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
     width: 1.4em;
     height: 1.4em;
     border: none;
+    transition: $animation-toggle;
   }
 
   .dropdown-user-icon {
     content: $icon-user;
     display: inline-block;
     background-color: $grisulado-50;
-    padding: spaceUnits(2);
     margin-left: spaceUnits(1);
     vertical-align: middle;
-    vertical-align: -10px; // Es una prueba
     border-radius: $border-radius;
+    width: 1.4rem;
+    padding: 0.2rem;
   }
 
   .dropdown-language-icon {
     content: $icon-world;
     display: inline-block;
-    vertical-align: sub;
+    vertical-align: top;
   }
 }
 
 .dropdown-menu {
-  padding: spaceUnits(2);
+  padding: 0;
   margin-top: spaceUnits(2);
-  border: none;
-  box-shadow: $dropdown-box-shadow;
+  border: 0;
+  border-radius: spaceUnits(2);
+  box-shadow: 0 0 0 2px #e6ebf0 !important;
 
   .dropdown-item {
     border-radius: $border-radius;
     padding: $dropdown-item-padding;
     color: $body-color;
+    white-space: normal;
 
     &:hover {
-      background-color: $grisulado-10;
-      // border-radius: 4px;
+      background-color: $white;
+      border-radius: spaceUnits(2);
+      box-shadow: 0 0 0 2px $blue;
+      color: $blue;
+      text-decoration: underline;
     }
 
     &:focus {
-      box-shadow: 0 0 0 0.2rem #00568b;
-      border-radius: 0.5rem;
+      box-shadow: 0 0 0 0.2rem #005387;
+      border-radius: spaceUnits(2);
       outline: 2px;
-      color: black;
+      color: $blue;
     }
+
+    &.active,
+    &:active {
+      color: $white;
+      background: $blue;
+      border-radius: spaceUnits(2);
+      text-decoration: none;
+      box-shadow: none;
+
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .dropdown-menu {
+    max-width: 340px;
   }
 }
