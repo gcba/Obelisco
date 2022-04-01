@@ -61,27 +61,10 @@ export const Colores = (): JSX.Element => {
   );
 };
 
-export const Cerrar = (): JSX.Element => {
-  return (
-    <div className="alert-wrapper">
-      <div className="alert alert-danger alert-dismissible fade show" role="alert">
-        <p>
-          <strong>Este es un destacado de una alerta (opcional). </strong>
-          Un texto simple para una alerta simple, incluso&nbsp;
-          <a href="#">con hipervínculos</a>.
-        </p>
-        <button type="button" data-dismiss="alert" className="btn btn-sm btn-danger close-btn">
-          Cerrar
-        </button>
-      </div>
-    </div>
-  );
-};
-
 export const Lista = (): JSX.Element => {
   return (
     <div className="alert-wrapper">
-      <div className="alert alert-danger alert-dismissible fade show" role="alert">
+      <div className="alert alert-danger fade show" role="alert">
         <p>
           <strong>Este es un destacado de una alerta (opcional). </strong>
         </p>
