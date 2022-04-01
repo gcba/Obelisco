@@ -1,0 +1,102 @@
+/* === Custom variables and mixins === */
+
+$dropdown-item-padding-x: spaceUnits(8);
+$dropdown-item-padding-y: spaceUnits(3);
+
+$options-container-spacer-x: spaceUnits(2);
+$options-btn-padding-x: spaceUnits(3);
+$options-btn-padding-y: spaceUnits(2);
+$icon-chevron-up: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
+$icon-chevron-up-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(0, 123, 199);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
+
+$option-focus-width: spaceUnits(1);
+
+$option-btn-box-shadow: 0 0 0 $option-focus-width/2 $grisulado-50;
+$option-btn-focus-box-shadow: 0 0 0 $option-focus-width theme-color-level('info', 3);
+$option-btn-hover-box-shadow: 0 0 0 $option-focus-width/2 $blue;
+
+$animation-toggle: transform 0.2s ease-in-out;
+
+@mixin dropdown-hover {
+  text-decoration: underline;
+  background-color: inherit;
+  color: $blue;
+  box-shadow: $option-btn-hover-box-shadow;
+}
+
+/* === Custom styles === */
+
+.options-container {
+  gap: $options-container-spacer-x;
+
+  .btn.btn-dropdown {
+    border-radius: $border-radius-lg;
+    box-shadow: $option-btn-box-shadow;
+    min-height: 40px;
+    padding: 0 $options-btn-padding-x;
+
+    &:hover {
+      @include dropdown-hover;
+
+      &:after {
+        content: $icon-chevron-up-hover;
+      }
+    }
+
+    &-lg {
+      min-height: 48px;
+      padding: $options-btn-padding-x;
+    }
+
+    &-sm {
+      min-height: 32px;
+    }
+
+    &:focus {
+      box-shadow: $option-btn-focus-box-shadow;
+    }
+  }
+
+  .dropdown.show .btn.btn-dropdown,
+  input:checked + .dropdown-item {
+    background-color: $blue;
+    color: $white;
+    text-decoration: none;
+    box-shadow: $option-btn-box-shadow;
+  }
+
+  .dropdown .btn.btn-dropdown.dropdown-toggle:after {
+    transition: $animation-toggle;
+  }
+
+  .dropdown.show .btn.btn-dropdown.dropdown-toggle:after {
+    content: $icon-chevron-up;
+    transform: rotate(180deg);
+    transition: $animation-toggle;
+    height: 1.3em;
+  }
+
+  .dropdown-menu {
+    padding: 0;
+    border-radius:$border-radius-lg;
+    box-shadow: $option-btn-box-shadow;
+  }
+
+  input:focus + .dropdown-item {
+    background-color: $white;
+    color: $grisulado-900;
+    box-shadow: $option-btn-focus-box-shadow;
+    text-decoration: none;
+  }
+
+  .dropdown-item {
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+    border-radius: $border-radius-lg;
+    margin: 0;
+    cursor: pointer;
+
+    &:hover {
+      @include dropdown-hover;
+    }
+  }
+}

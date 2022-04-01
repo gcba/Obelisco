@@ -46,6 +46,7 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/modal';
 @import 'components/nav';
 @import 'components/navbar';
+@import 'components/options';
 @import 'components/pagination';
 @import 'components/progression';
 @import 'components/stepper';
