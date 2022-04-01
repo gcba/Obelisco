@@ -30,6 +30,7 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 // Custom styles
 @import 'components/typography';
 @import 'utilities/background';
+@import 'utilities/text-decoration';
 
 // Components
 @import 'components/alert';
