@@ -6,12 +6,12 @@ $pagination-color: $grisulado-900;
 $pagination-active-color: $white;
 $pagination-hover-color: $blue;
 
-$pagination-box-shadow: 0 0 0 2px $grisulado-50;
-$pagination-focus-box-shadow: 0 0 0 4px theme-color-level('info', 3) !important;
-$pagination-hover-active-box-shadow: 0 0 0 2px $blue;
+$pagination-box-shadow: 0 0 0 0.125rem $grisulado-50;
+$pagination-focus-box-shadow: 0 0 0 0.25rem theme-color-level('info', 3) !important;
+$pagination-hover-box-shadow: 0 0 0 0.125rem $blue;
 
 $pagination-padding-y: spaceUnits(1);
-$pagination-padding-x: 0.6rem;
+$pagination-padding-x: spaceUnits(3);
 $pagination-margin-x: 0.2rem;
 $pagination-border-width: 0;
 
@@ -39,6 +39,8 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
 /* === Custom styles === */
 
 .pagination {
+  gap: 0.25rem;
+
   .page-item {
     display: inline-block;
 
@@ -50,7 +52,6 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
     &.active {
       .page-link {
         background-color: $pagination-active-bg;
-        box-shadow: $pagination-hover-active-box-shadow;
 
         &:hover,
         &.hover {
@@ -77,16 +78,18 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: $border-radius;
+      border-radius: $border-radius * 2;
       margin: 0 $pagination-margin-x;
       box-shadow: $pagination-box-shadow;
       height: $pagination-size;
       min-width: 35px;
+      font-family: $font-family-headings;
+      gap: 0.5rem;
 
       &:hover,
       &.hover {
         text-decoration: underline;
-        box-shadow: $pagination-hover-active-box-shadow;
+        box-shadow: $pagination-hover-box-shadow;
 
         .page-previous-icon {
           content: $pagination-icon-left-hover;
