@@ -114,6 +114,16 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     box-shadow: $input-btn-focus-box-shadow;
     color: $grisulado-900;
     text-decoration: none;
+
+    .nav-icon {
+      i {
+        text-decoration: none;
+      }
+
+      span {
+        text-decoration: none;
+      }
+    }
   }
 
   &.active-child {
@@ -126,7 +136,11 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       font-weight: $nav-link-active-font-weight;
       box-shadow: none;
 
-      &.nav-icon {
+      .nav-icon {
+        i {
+          text-decoration: none;
+        }
+  
         span {
           text-decoration: none;
         }
@@ -152,6 +166,16 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         text-decoration: none;
         font-weight: $nav-pills-link-active-font-weight;
         box-shadow: none;
+
+        .nav-icon {
+          i {
+            text-decoration: none;
+          }
+    
+          span {
+            text-decoration: none;
+          }
+        }
       }
 
       &.active-child {
