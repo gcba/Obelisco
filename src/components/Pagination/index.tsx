@@ -14,52 +14,55 @@ export const Pagination: React.FC<PaginationProps> = (props: PaginationProps) =>
   const [current, setCurrent] = React.useState<number>(props.default || 0);
   const { prevText, nextText } = props;
 
-  const isPrevDisabled = current === 0;
-  const isNextDisabled = current === pages.length - 1;
+  const isShowPrev = current === 0;
+  const isShowNext = current === pages.length - 1;
 
-  const onPageSelected = (page: number) => {
+  const onPageSelected = (page: number): void => {
     setCurrent(page);
     props.onPageSelected && props.onPageSelected(page);
   };
-  const onPrev = () => {
+
+  const onPrev = (): void => {
     if (current > 0) onPageSelected(current - 1);
   };
-  const onNext = () => {
+
+  const onNext = (): void => {
     if (current < pages.length - 1) onPageSelected(current + 1);
   };
 
   let pagesToShow = pages;
-  let showTopTrimmer = false;
-  let showBottomTrimmer = false;
+  let isShowTopTrimmer = true;
+  let isShowBottomTrimmer = false;
 
   const lastIndex = pages.length - 1;
 
-  if (pages.length > 9) {
-    if (current < 5) {
-      pagesToShow = pagesToShow.slice(0, 7);
-      showTopTrimmer = true;
-    } else if (current > lastIndex - 5) {
-      pagesToShow = pagesToShow.slice(lastIndex - 5);
-      showBottomTrimmer = true;
+  if (pages.length > 2) {
+    if (current < 2) {
+      pagesToShow = pagesToShow.slice(0, 2);
+      isShowTopTrimmer = true;
+    } else if (current > lastIndex - 2) {
+      pagesToShow = pagesToShow.slice(lastIndex - 1);
+      isShowTopTrimmer = false;
+      isShowBottomTrimmer = true;
     } else {
-      pagesToShow = pagesToShow.slice(current - 2, current + 3);
-      showBottomTrimmer = true;
-      showTopTrimmer = true;
+      pagesToShow = pagesToShow.slice(current - 1, current + 2);
+      isShowBottomTrimmer = true;
+      isShowTopTrimmer = true;
     }
   }
 
   return (
     <nav aria-label={props.ariaLabel}>
       <ul className="pagination">
-        <PaginationItem disabled={isPrevDisabled} onClick={() => onPrev()}>
+        <PaginationItem isHidden={isShowPrev} onClick={() => onPrev()}>
           <span className="page-previous-icon" aria-hidden="true" />
           <span className="page-previous-text"> {prevText ? prevText : 'Anterior'}</span>
         </PaginationItem>
 
-        {showBottomTrimmer && (
+        {isShowBottomTrimmer && (
           <>
             <PaginationNumber index={0} current={current} onClick={() => onPageSelected(0)} />
-            <PaginationItem disabled={true}>...</PaginationItem>
+            <PaginationItem>...</PaginationItem>
           </>
         )}
 
@@ -67,14 +70,14 @@ export const Pagination: React.FC<PaginationProps> = (props: PaginationProps) =>
           <PaginationNumber index={i} key={i} current={current} onClick={() => onPageSelected(i)} />
         ))}
 
-        {showTopTrimmer && (
+        {isShowTopTrimmer && (
           <>
-            <PaginationItem disabled={true}>...</PaginationItem>
+            <PaginationItem>...</PaginationItem>
             <PaginationNumber index={lastIndex} current={current} onClick={() => onPageSelected(lastIndex)} />
           </>
         )}
 
-        <PaginationItem disabled={isNextDisabled} onClick={() => onNext()}>
+        <PaginationItem isHidden={isShowNext} onClick={() => onNext()}>
           <span className="page-next-text">{nextText ? nextText : 'Siguiente'} </span>
           <span className="page-next-icon" aria-hidden="true" />
         </PaginationItem>
@@ -86,8 +89,8 @@ export const Pagination: React.FC<PaginationProps> = (props: PaginationProps) =>
 interface PaginationItemProps {
   onClick?: () => void;
   className?: string;
-  active?: boolean;
-  disabled?: boolean;
+  isActive?: boolean;
+  isHidden?: boolean;
 }
 
 export const PaginationItem: React.FC<PaginationItemProps> = (props: React.PropsWithChildren<PaginationItemProps>) => {
@@ -96,16 +99,24 @@ export const PaginationItem: React.FC<PaginationItemProps> = (props: React.Props
     props.onClick && props.onClick();
   };
 
-  if (props.disabled) {
+  if (props.children === '...') {
     return (
-      <li className="page-item disabled">
+      <li className="page-item no-events">
+        <span className="page-link">{props.children}</span>
+      </li>
+    );
+  }
+
+  if (props.isHidden) {
+    return (
+      <li className="page-item" style={{ display: 'none' }}>
         <span className="page-link">{props.children}</span>
       </li>
     );
   }
 
   return (
-    <li className={`page-item ${props.active ? 'active' : ''}`}>
+    <li className={`page-item ${props.isActive ? 'active' : ''}`}>
       <a className="page-link" href="#" onClick={onClick}>
         {props.children}
       </a>
@@ -123,7 +134,7 @@ export const PaginationNumber: React.FC<PaginationNumberProps> = (props: Paginat
   const { index, current, onClick } = props;
 
   return (
-    <PaginationItem active={index === current} onClick={onClick}>
+    <PaginationItem isActive={index === current} onClick={onClick}>
       {index + 1}
     </PaginationItem>
   );

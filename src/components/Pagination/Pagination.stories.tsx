@@ -15,32 +15,46 @@ export default {
   decorators: [withA11y]
 };
 
-export const Simple = (): JSX.Element => {
-  return <Pagination pages={3} ariaLabel="Ejemplo de paginación simple" />;
+export const Paginacion = (): JSX.Element => {
+  return (
+    <div>
+      <div className="mt-5">
+        <Pagination pages={56} default={0} ariaLabel="Ejemplo de paginación simple" />
+      </div>
+
+      <div className="mt-5">
+        <Pagination pages={56} default={1} ariaLabel="Ejemplo de paginación simple" />
+      </div>
+      <div className="mt-5">
+        <Pagination pages={56} default={55} ariaLabel="Ejemplo de paginación simple" />
+      </div>
+    </div>
+  );
 };
 
-export const Compleja = (): JSX.Element => {
-  return <Pagination pages={60} default={9} ariaLabel="Ejemplo de paginación compleja" />;
-};
+Paginacion.story = { name: 'Paginación' };
 
 export const NavegacionDePagina = (): JSX.Element => (
-  <div className="page-navigation-wrapper">
-    <div className="page-navigation">
-      <div className="row">
-        <div className="col-6">
-          <a className="page-navigation-prev" href="#">
-            <span className="page-previous-icon" aria-hidden="true" /> Página anterior
+  <>
+    <div className="pagination">
+      <div className="page-navigation">
+        <div className="page-item">
+          <a className="btn page-link" href="#">
+            <span className="page-previous-icon" aria-hidden="true"></span>
+            <span className="page-next-text">Anterior</span>
           </a>
         </div>
-        <div className="col-6 text-right">
-          <a className="page-navigation-next" href="#">
-            Página siguiente <span className="page-next-icon" aria-hidden="true" />
+        <div className="page-item">
+          <a className="btn page-link" href="#">
+            <span className="page-next-text">Siguiente</span>
+            <span className="page-next-icon" aria-hidden="true"></span>
           </a>
         </div>
       </div>
     </div>
-  </div>
+  </>
 );
+
 NavegacionDePagina.story = {
   name: 'Navegación de página'
 };

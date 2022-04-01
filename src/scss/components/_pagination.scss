@@ -1,35 +1,36 @@
 /* === Variable and mixins overides === */
 
-$pagination-padding-y: 0.25rem;
-$pagination-padding-x: 0.6rem;
+$pagination-bg: $white;
+
+$pagination-color: $grisulado-900;
+$pagination-active-color: $white;
+$pagination-hover-color: $blue;
+
+$pagination-box-shadow: 0 0 0 0.125rem $grisulado-50;
+$pagination-focus-box-shadow: 0 0 0 0.25rem theme-color-level('info', 3) !important;
+$pagination-hover-box-shadow: 0 0 0 0.125rem $blue;
+
+$pagination-padding-y: spaceUnits(1);
+$pagination-padding-x: spaceUnits(3);
 $pagination-margin-x: 0.2rem;
 $pagination-border-width: 0;
 
-$pagination-bg: transparent;
 $pagination-hover-bg: transparent;
 $pagination-disabled-bg: transparent;
 
 /* === Custom variables and mixins === */
 
-$page-navigation-border: 1px solid $border-color;
+$page-navigation-border: 2px solid $border-color;
 
-$pagination-icon-size: 1.25rem;
+$pagination-icon-size: spaceUnits(5);
+$pagination-size: 40px;
 
-// @function pagination-icon($side, $color) {
-//   $path: '';
-//   @if $side == left {
-//     $path: "<path d='M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z'></path>";
-//   } @else {
-//     $path: "<path d='M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z'></path>";
-//   }
-//   $color: svgColor($color);
-//   @return url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="#{$pagination-icon-size}" height="#{$pagination-icon-size}" viewBox="0 0 24 24" style="fill:#{$color};transform:;-ms-filter:">#{$path}</svg>');
-// }
-
-$pagination-icon-left: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
-$pagination-icon-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
-$pagination-icon-left-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(102, 102, 102);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
-$pagination-icon-right-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(102, 102, 102);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
+$pagination-icon-left-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
+$pagination-icon-right-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
+$pagination-icon-left: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(56, 72, 92);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
+$pagination-icon-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(56, 72, 92);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
+$pagination-icon-right-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M10.061 19.061L17.121 12 10.061 4.939 7.939 7.061 12.879 12 7.939 16.939z"></path></svg>');
+$pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M13.939 4.939L6.879 12 13.939 19.061 16.061 16.939 11.121 12 16.061 7.061z"></path></svg>');
 
 /* === Bootstrap Import === */
 
@@ -38,18 +39,86 @@ $pagination-icon-right-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
 /* === Custom styles === */
 
 .pagination {
-  display: block;
-  text-align: center;
+  gap: 0.25rem;
 
   .page-item {
     display: inline-block;
 
-    .page-link {
-      border-radius: $border-radius;
-      margin: 0 $pagination-margin-x;
+    &.no-events {
+      pointer-events: none;
+    }
 
-      &:hover {
+    &:active,
+    &.active {
+      .page-link {
+        background-color: $pagination-active-bg;
+
+        &:hover,
+        &.hover {
+          color: $pagination-active-color;
+          text-decoration: none;
+
+          .page-previous-icon {
+            content: $pagination-icon-left-active-hover !important;
+          }
+
+          .page-next-icon {
+            content: $pagination-icon-right-active-hover !important;
+          }
+        }
+      }
+
+      .page-previous-text,
+      .page-next-text {
+        color: $pagination-active-color !important;
+      }
+    }
+
+    .page-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: $border-radius * 2;
+      margin: 0 $pagination-margin-x;
+      box-shadow: $pagination-box-shadow;
+      height: $pagination-size;
+      min-width: 35px;
+      font-family: $font-family-headings;
+      gap: 0.5rem;
+
+      &:hover,
+      &.hover {
         text-decoration: underline;
+        box-shadow: $pagination-hover-box-shadow;
+
+        .page-previous-icon {
+          content: $pagination-icon-left-hover;
+        }
+
+        .page-next-icon {
+          content: $pagination-icon-right-hover;
+        }
+      }
+
+      &:focus,
+      &.focus {
+        text-decoration: none;
+
+        .page-previous-text,
+        .page-next-text {
+          color: $pagination-color;
+        }
+
+        &:hover,
+        &.hover {
+          .page-previous-icon {
+            content: $pagination-icon-left;
+          }
+
+          .page-next-icon {
+            content: $pagination-icon-right;
+          }
+        }
       }
     }
   }
@@ -97,4 +166,41 @@ $pagination-icon-right-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
   padding-top: spaceUnits(6);
   padding-bottom: spaceUnits(4);
   border-bottom: $page-navigation-border;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .page-link {
+    &:active {
+      background-color: $pagination-active-bg;
+
+      &:hover {
+        .page-previous-text,
+        .page-next-text {
+          color: $white !important;
+        }
+      }
+    }
+
+    &:hover {
+      .page-previous-text,
+      .page-next-text {
+        color: $pagination-hover-color;
+      }
+    }
+
+    &:focus {
+      &:hover {
+        .page-previous-text,
+        .page-next-text {
+          color: $pagination-color;
+        }
+      }
+    }
+
+    .page-previous-text,
+    .page-next-text {
+      color: $pagination-color;
+    }
+  }
 }
