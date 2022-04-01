@@ -109,12 +109,14 @@ $animation-toggle: transform 0.2s ease-in-out;
     margin-left: spaceUnits(1);
     vertical-align: middle;
     border-radius: $border-radius;
+    width: 1.4rem;
+    padding: 0.2rem;
   }
 
   .dropdown-language-icon {
     content: $icon-world;
     display: inline-block;
-    vertical-align: sub;
+    vertical-align: top;
   }
 }
 
