@@ -58,6 +58,7 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
 }
 
 a.list-group-item {
+  text-decoration: $no-text-decoration;
   color: $list-group-color;
   border: none;
   box-shadow: $box-shadow-access;
@@ -73,13 +74,6 @@ a.list-group-item {
   &:last-child {
     margin-bottom: 0px;
     border-radius: $list-group-border;
-  }
-
-  &:focus,
-  &.focus {
-    box-shadow: $box-shadow-access-focus;
-    background: $white;
-    text-decoration: $no-text-decoration;
   }
 
   &:hover,
@@ -115,6 +109,33 @@ a.list-group-item {
     }
   }
 
+  &:focus,
+  &.focus {
+    box-shadow: $box-shadow-access-focus;
+    background: $white;
+
+    &:hover {
+      color: $list-group-color;
+
+      &.list-group-item-logout {
+        color: $danger;
+        box-shadow: $box-shadow-access-focus;
+        &:after {
+          content: $list-group-icon-logout;
+        }
+      }
+
+      &:after {
+        content: $list-group-icon-arrow;
+        @include float-height-icon;
+      }
+
+      .access-title {
+        text-decoration: $no-text-decoration;
+      }
+    }
+  }
+
   &:after {
     content: $list-group-icon-arrow;
     @include float-height-icon;
@@ -122,6 +143,7 @@ a.list-group-item {
 
   &.list-group-item-logout {
     color: $danger;
+
     &:after {
       content: $list-group-icon-logout;
     }
@@ -160,6 +182,23 @@ a.list-group-item {
 
         .access-text {
           color: $list-group-color-hover;
+          text-decoration: $no-text-decoration;
+        }
+      }
+    }
+
+    &:focus, &.focus {
+      box-shadow: $box-shadow-access-focus;
+      color: $list-group-color;
+
+      .access-title {
+        color: $list-group-color;
+        text-decoration: $no-text-decoration;
+      }
+
+      .access-content {
+        .access-text, .access-title {
+          color: $list-group-color;
           text-decoration: $no-text-decoration;
         }
       }
@@ -253,13 +292,6 @@ a.list-group-item {
             margin-bottom: 13px;
           }
 
-          &:focus,
-          &.focus {
-            box-shadow: $box-shadow-access-focus;
-            background: $white;
-            text-decoration: $no-text-decoration;
-          }
-
           &:hover,
           &.hover {
             box-shadow: $box-shadow-access-hover;
@@ -267,6 +299,18 @@ a.list-group-item {
 
             &:after {
               content: $list-group-icon-arrow-hover;
+              @include float-height-icon;
+            }
+          }
+
+          &:focus,
+          &.focus {
+            box-shadow: $box-shadow-access-focus;
+            background: $white;
+            text-decoration: $no-text-decoration;
+
+            &:after {
+              content: $list-group-icon-arrow;
               @include float-height-icon;
             }
           }
