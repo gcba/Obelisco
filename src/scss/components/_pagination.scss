@@ -55,6 +55,7 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
 
         &:hover,
         &.hover {
+          box-shadow: $pagination-box-shadow;
           color: $pagination-active-color;
           text-decoration: none;
 
@@ -85,6 +86,7 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
       min-width: 35px;
       font-family: $font-family-headings;
       gap: 0.5rem;
+      text-decoration: none;
 
       &:hover,
       &.hover {
