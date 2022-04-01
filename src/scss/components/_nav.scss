@@ -60,6 +60,20 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     }
 
     .nav-link {
+      text-decoration: none;
+
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
+
+      &:focus {
+        span {
+          text-decoration: none;
+        }
+      }
+
       .nav-icon {
         i {
           display: none;
@@ -74,7 +88,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   color: $grisulado-900;
   font-weight: $nav-link-font-weight;
   @include border-radius($border-radius * 2);
-
+  
   &-sm {
     padding: 0.5rem 0.75rem;
   }
@@ -96,6 +110,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   @include hover() {
     box-shadow: $input-btn-hover-box-shadow;
     color: $nav-link-hover-color;
+    text-decoration: underline;
 
     .nav-icon {
       i {
@@ -136,6 +151,10 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       font-weight: $nav-link-active-font-weight;
       box-shadow: none;
 
+      span {
+        text-decoration: none !important;
+      }
+
       .nav-icon {
         i {
           text-decoration: none;
@@ -166,6 +185,10 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         text-decoration: none;
         font-weight: $nav-pills-link-active-font-weight;
         box-shadow: none;
+
+        span {
+          text-decoration: none;
+        }
 
         .nav-icon {
           i {
