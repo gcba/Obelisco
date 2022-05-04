@@ -8,18 +8,18 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Header',
+  title: 'Componentes|Header/Con Buscador',
   decorators: [withA11y]
 };
 
-export const BusquedaCerrada = (): JSX.Element => {
+export const HeaderNoLogin = (): JSX.Element => {
   return (
     <header className="navbar navbar-light">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
         </a>
-        <div className="navbar-search">
+        <div className="navbar-search d-md-none d-block ml-auto">
           <form className="form-inline">
             <input
               type="search"
@@ -30,23 +30,147 @@ export const BusquedaCerrada = (): JSX.Element => {
             />
           </form>
         </div>
+        <button
+          className="navbar-toggler collapsed ml-2"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          Menú <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="nav nav-pills">
+            <li className="nav-item">
+              <a type="button" className="nav-link active">
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a type="button" className="nav-link">
+                <span>Chateá con BOTI</span>
+              </a>
+            </li>
+            <li className="nav-item d-none d-md-block">
+              <div className="navbar-search">
+                <form className="form-inline">
+                  <input
+                    type="search"
+                    className="form-control input-search"
+                    id="name-input"
+                    name="name"
+                    placeholder="Buscar..."
+                  />
+                </form>
+              </div>
+            </li>
+            <li className="nav-item">
+              <a type="button" className="btn btn-link">
+                <span>Accedé a tu cuenta</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
   );
 };
 
-BusquedaCerrada.story = {
-  name: 'Búsqueda cerrada en mobile'
+HeaderNoLogin.story = {
+  name: 'No logueado'
 };
 
-export const BusquedaAbierta = (): JSX.Element => {
+export const HeaderLogin = (): JSX.Element => {
   return (
-    <header className="navbar navbar-light active-search">
+    <header className="navbar navbar-light">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
         </a>
-        <div className="navbar-search">
+        <div className="navbar-search d-md-none d-block ml-auto">
+          <form className="form-inline">
+            <input
+              type="search"
+              className="form-control input-search"
+              id="name-input"
+              name="name"
+              placeholder="Buscar..."
+            />
+          </form>
+        </div>
+        <button
+          className="navbar-toggler collapsed ml-2"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          Menú <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="d-md-none d-block ml-2">
+          <a href="#" className="list-group-item list-group-item-logout"></a>
+        </div>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="nav nav-pills">
+            <li className="nav-item">
+              <a className="nav-link active">
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">
+                <span>Chateá con BOTI</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">
+                <span>Mi actividad</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">
+                <span>Mi cuenta</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">
+                <i className="bx bxs-bell"></i>
+              </a>
+            </li>
+            <li className="nav-item d-none d-md-block">
+              <div className="navbar-search">
+                <form className="form-inline">
+                  <input
+                    type="search"
+                    className="form-control input-search"
+                    id="name-input"
+                    name="name"
+                    placeholder="Buscar..."
+                  />
+                </form>
+              </div>
+            </li>
+            <li className="nav-item d-none d-md-block">
+              <a href="#" className="list-group-item list-group-item-logout"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+HeaderLogin.story = {
+  name: 'Logueado'
+};
+
+export const HeaderSearchSelected = (): JSX.Element => {
+  return (
+    <header className="navbar navbar-light">
+      <div className="container">
+        <div className="navbar-search active-search">
           <form className="form-inline">
             <input
               type="search"
@@ -62,6 +186,31 @@ export const BusquedaAbierta = (): JSX.Element => {
   );
 };
 
-BusquedaAbierta.story = {
-  name: 'Búsqueda abierta en mobile'
+HeaderSearchSelected.story = {
+  name: 'Buscador seleccionado'
+};
+
+export const HeaderSearch = (): JSX.Element => {
+  return (
+    <header className="navbar navbar-light">
+      <div className="container">
+        <div className="navbar-search active-search">
+          <form className="form-inline">
+            <input
+              type="search"
+              className="form-control input-search"
+              id="name-input"
+              name="name"
+              placeholder="Buscar..."
+              value="Coronavirus"
+            />
+          </form>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+HeaderSearch.story = {
+  name: 'Busqueda realizada'
 };
