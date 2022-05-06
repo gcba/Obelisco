@@ -43,12 +43,12 @@ export const HeaderNoLogin = (): JSX.Element => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a type="button" className="nav-link active">
+              <a type="button" className="nav-link nav-link-sm active">
                 <span>Inicio</span>
               </a>
             </li>
             <li className="nav-item">
-              <a type="button" className="nav-link">
+              <a type="button" className="nav-link nav-link-sm">
                 <span>Chateá con BOTI</span>
               </a>
             </li>
@@ -115,27 +115,27 @@ export const HeaderLogin = (): JSX.Element => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a className="nav-link active">
+              <a className="nav-link nav-link-sm active">
                 <span>Inicio</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a className="nav-link nav-link-sm">
                 <span>Chateá con BOTI</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a className="nav-link nav-link-sm">
                 <span>Mi actividad</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a className="nav-link nav-link-sm">
                 <span>Mi cuenta</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a className="nav-link nav-link-sm">
                 <i className="bx bxs-bell"></i>
               </a>
             </li>
@@ -164,53 +164,4 @@ export const HeaderLogin = (): JSX.Element => {
 
 HeaderLogin.story = {
   name: 'Logueado'
-};
-
-export const HeaderSearchSelected = (): JSX.Element => {
-  return (
-    <header className="navbar navbar-light">
-      <div className="container">
-        <div className="navbar-search active-search">
-          <form className="form-inline">
-            <input
-              type="search"
-              className="form-control input-search"
-              id="name-input"
-              name="name"
-              placeholder="Buscar..."
-            />
-          </form>
-        </div>
-      </div>
-    </header>
-  );
-};
-
-HeaderSearchSelected.story = {
-  name: 'Buscador seleccionado'
-};
-
-export const HeaderSearch = (): JSX.Element => {
-  return (
-    <header className="navbar navbar-light">
-      <div className="container">
-        <div className="navbar-search active-search">
-          <form className="form-inline">
-            <input
-              type="search"
-              className="form-control input-search"
-              id="name-input"
-              name="name"
-              placeholder="Buscar..."
-              value="Coronavirus"
-            />
-          </form>
-        </div>
-      </div>
-    </header>
-  );
-};
-
-HeaderSearch.story = {
-  name: 'Busqueda realizada'
 };

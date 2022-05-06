@@ -32,12 +32,12 @@ export const HeaderNoLoginSearch = (): JSX.Element => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a className="nav-link active">
+              <a className="nav-link nav-link-sm active">
                 <span>Inicio</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a className="nav-link nav-link-sm">
                 <span>Chateá con BOTI</span>
               </a>
             </li>
@@ -80,27 +80,27 @@ export const HeaderLoginSearch = (): JSX.Element => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a className="nav-link active">
+              <a className="nav-link nav-link-sm active">
                 <span>Inicio</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a className="nav-link nav-link-sm">
                 <span>Chateá con BOTI</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a className="nav-link nav-link-sm">
                 <span>Mi actividad</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a className="nav-link nav-link-sm">
                 <span>Mi cuenta</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
+              <a className="nav-link nav-link-sm">
                 <i className="bx bxs-bell"></i>
               </a>
             </li>
