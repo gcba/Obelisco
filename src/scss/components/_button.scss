@@ -162,14 +162,18 @@ $btn-link-disabled-color: $grisulado-300;
     &:not(:hover) {
       background-color: $ghost-hover;
       box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
+      color: #fff;
+      background-color: $blue;
     }
   }
 
   &:disabled,
   &.disabled {
     background-color: $btn-disabled-bg;
+    color: $grisulado-300;
   }
 }
+
 
 .btn-check:active+.btn-chip, .btn-check:checked+.btn-chip, .btn-chip.active, .btn-chip:active {
   color: #fff;
