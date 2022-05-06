@@ -12,11 +12,23 @@ $footer-icon-separation: spaceUnits(2);
 $footer-icon-size: spaceUnits(6);
 
 /* === Custom styles === */
+@function custom-colores($color: pink, $level: 0) {
+  $darken: darken($color, abs($level) * 5%);
+  $lighten: lighten($color, abs($level) * 5%);
+
+  @return if($level > 0, $darken, $lighten);
+}
 
 .main-footer {
   @extend .bg-dark, .text-white;
   padding: $footer-padding-y 0;
   border-top: $footer-border-width solid $footer-border-color;
+
+  h4 {
+    margin-bottom: spaceUnits(4);
+    color: custom-colores(#7FE3FF , 2 )
+    // color: hsla(210, 100%, 75%);
+  }
 
   a {
     @extend .text-white;
@@ -35,9 +47,22 @@ $footer-icon-size: spaceUnits(6);
     &.footer-legal-section {
       margin-top: $footer-legal-margin-top;
       margin-bottom: $footer-legal-margin-bottom;
+      padding-top: 1.506rem;
 
       .list-inline {
         margin-bottom: 0;
+      }
+
+      
+      @include media-breakpoint-down(md) {
+        .footer-content-img {
+          display: flex;
+          justify-content: space-between;
+
+          .img-vamos-ba {
+            height: 48px;
+          }
+        }
       }
     }
 
@@ -62,4 +87,16 @@ $footer-icon-size: spaceUnits(6);
   .footer-license-text {
     @extend small;
   }
+
+  .divider {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border-top: 2px solid $grisulado-700;
+    margin-top: 0;
+  }
 }
+
+
+
+// hsl()

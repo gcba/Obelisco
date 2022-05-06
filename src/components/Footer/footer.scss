@@ -1,0 +1,9 @@
+.divider {
+  width: 95.3% !important;
+  left: 50% !important;
+  transform: translate(-50%);
+
+  @media screen and (max-width: 576px) {
+    width: 88.7% !important;
+  }
+}

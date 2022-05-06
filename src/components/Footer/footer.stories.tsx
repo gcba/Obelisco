@@ -1,5 +1,6 @@
 // Base
 import React from 'react';
+import './footer.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -62,20 +63,20 @@ const SocialSection = (): JSX.Element => (
 const LegalSection = (): JSX.Element => (
   <section className="footer-legal-section">
     <div className="row align-items-center">
-      <div className="col-12 col-md-5 col-xl-4 mb-4 mb-md-0">
+      <div className="col-12 col-md-5 col-xl-4 mb-4 mb-md-0 footer-content-img">
         <img
           className="mr-3 d-lg-none"
           src="footer/ciudad-ba-sm.svg"
           alt="Logo de la Ciudad de Buenos Aires"
-          height="38"
+          height="48"
         />
         <img
           className="mr-3 d-none d-lg-inline"
           src="footer/ciudad-ba.svg"
           alt="Logo de la Ciudad de Buenos Aires"
-          height="38"
+          height="40"
         />
-        <img src="footer/vamos-ba.svg" alt="Logo de Vamos Buenos Aires" height="38" />
+        <img className="img-vamos-ba" src="footer/vamos-ba.svg" alt="Logo de Vamos Buenos Aires" height="38" />
       </div>
       <div className="col-12 col-md-7 col-xl-8">
         <ul className="list-inline">
@@ -113,6 +114,7 @@ export const Completo = (): JSX.Element => (
     <div className="container">
       <PhonesSection />
       <SocialSection />
+      <hr className="divider" />
       <LegalSection />
       <LicenseSection />
     </div>
@@ -123,6 +125,7 @@ export const SoloTelefonos = (): JSX.Element => (
   <footer className="main-footer">
     <div className="container">
       <PhonesSection />
+      <hr className="divider" />
       <LegalSection />
       <LicenseSection />
     </div>
@@ -137,6 +140,7 @@ export const SoloRedes = (): JSX.Element => (
   <footer className="main-footer">
     <div className="container">
       <SocialSection />
+      <hr className="divider" />
       <LegalSection />
       <LicenseSection />
     </div>
