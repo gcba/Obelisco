@@ -12,12 +12,6 @@ $footer-icon-separation: spaceUnits(2);
 $footer-icon-size: spaceUnits(6);
 
 /* === Custom styles === */
-@function custom-colores($color: pink, $level: 0) {
-  $darken: darken($color, abs($level) * 5%);
-  $lighten: lighten($color, abs($level) * 5%);
-
-  @return if($level > 0, $darken, $lighten);
-}
 
 .main-footer {
   @extend .bg-dark, .text-white;
@@ -26,8 +20,6 @@ $footer-icon-size: spaceUnits(6);
 
   h4 {
     margin-bottom: spaceUnits(4);
-    color: custom-colores(#7FE3FF , 2 )
-    // color: hsla(210, 100%, 75%);
   }
 
   a {
