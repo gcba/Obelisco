@@ -74,7 +74,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
           aria-label="Toggle navigation">
           Menú <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="list-group-content display-responsive ml-2">
+        <div className="list-group-content d-responsive ml-2">
           <a href="#" className="list-group-item list-group-item-logout"></a>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
