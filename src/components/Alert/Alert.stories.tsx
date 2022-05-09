@@ -36,11 +36,6 @@ export const Titulo = (): JSX.Element => {
           Un texto simple para una alerta simple, incluso&nbsp;
           <a href="#">con hipervínculos</a>.
         </p>
-        <p>
-          <strong>Este es un destacado de una alerta (opcional). </strong>
-          Un texto simple para una alerta simple, incluso&nbsp;
-          <a href="#">con hipervínculos</a>.
-        </p>
       </div>
     </div>
   );

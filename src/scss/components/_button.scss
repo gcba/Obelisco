@@ -48,6 +48,7 @@ $btn-link-disabled-color: $grisulado-300;
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     color: color-yiq($value) !important;
+    text-decoration: none;
 
     @include hover() {
       background-color: theme-color-level($color, 1);
