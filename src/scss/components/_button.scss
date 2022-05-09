@@ -162,7 +162,7 @@ $btn-link-disabled-color: $grisulado-300;
     &:not(:hover) {
       background-color: $ghost-hover;
       box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
-      color: #fff;
+      color: $white;
       background-color: $blue;
     }
   }
@@ -174,14 +174,14 @@ $btn-link-disabled-color: $grisulado-300;
   }
 }
 
-
-.btn-check:active+.btn-chip, .btn-check:checked+.btn-chip, .btn-chip.active, .btn-chip:active {
-  color: #fff;
-  background-color: $blue;
-}
-
 .btn-check {
   position: absolute;
   clip: rect(0,0,0,0);
   pointer-events: none;
+
+  &:active, &:checked + .btn-chip {
+    color: #fff;
+    background-color: $blue;
+  }
+
 }

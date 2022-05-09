@@ -122,8 +122,8 @@ export const BotonCheck = (): JSX.Element => {
       <input type="checkbox" className="btn-check" id="btn-check2" autoComplete="off" />
       <label className="btn btn-chip btn-sm" htmlFor="btn-check2">Checkbox button</label>
 
-      <input type="checkbox" className="btn-check" id="btn-check3" autoComplete="off" />
-      <label className="btn btn-chip btn-sm disabled" htmlFor="btn-check3">Checkbox button</label>
+      <input type="checkbox" className="btn-check" id="btn-check3" autoComplete="off" disabled />
+      <label className="btn btn-chip btn-sm" htmlFor="btn-check3">Checkbox button</label>
     </div>
   );
 };
