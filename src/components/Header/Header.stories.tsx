@@ -14,12 +14,12 @@ export default {
 
 export const HeaderNoLogin = (): JSX.Element => {
   return (
-    <header className="navbar navbar-light">
+    <header className="navbar navbar-light navbar-md">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
         </a>
-        <div className="navbar-search d-md-none d-block ml-auto">
+        <div className="navbar-search d-responsive ml-auto">
           <form className="form-inline">
             <input
               type="search"
@@ -52,7 +52,7 @@ export const HeaderNoLogin = (): JSX.Element => {
                 <span>Chateá con BOTI</span>
               </a>
             </li>
-            <li className="nav-item d-none d-md-block">
+            <li className="nav-item d-responsive">
               <div className="navbar-search">
                 <form className="form-inline">
                   <input
@@ -83,12 +83,12 @@ HeaderNoLogin.story = {
 
 export const HeaderLogin = (): JSX.Element => {
   return (
-    <header className="navbar navbar-light">
+    <header className="navbar navbar-light navbar-lg">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
         </a>
-        <div className="navbar-search d-md-none d-block ml-auto">
+        <div className="navbar-search d-responsive ml-auto">
           <form className="form-inline">
             <input
               type="search"
@@ -109,7 +109,7 @@ export const HeaderLogin = (): JSX.Element => {
           aria-label="Toggle navigation">
           Menú <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="d-md-none d-block ml-2">
+        <div className="list-group-content d-responsive ml-2">
           <a href="#" className="list-group-item list-group-item-logout"></a>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -139,7 +139,7 @@ export const HeaderLogin = (): JSX.Element => {
                 <i className="bx bxs-bell"></i>
               </a>
             </li>
-            <li className="nav-item d-none d-md-block">
+            <li className="nav-item d-responsive">
               <div className="navbar-search">
                 <form className="form-inline">
                   <input
@@ -152,7 +152,7 @@ export const HeaderLogin = (): JSX.Element => {
                 </form>
               </div>
             </li>
-            <li className="nav-item d-none d-md-block">
+            <li className="nav-item d-responsive">
               <a href="#" className="list-group-item list-group-item-logout"></a>
             </li>
           </ul>

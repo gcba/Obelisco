@@ -59,7 +59,7 @@ HeaderNoLoginSearch.story = {
 
 export const HeaderLoginSearch = (): JSX.Element => {
   return (
-    <header className="navbar navbar-light">
+    <header className="navbar navbar-light navbar-md">
       <div className="container">
         <a className="navbar-brand" href="#">
           <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
@@ -74,7 +74,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
           aria-label="Toggle navigation">
           Menú <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="d-md-none d-block ml-2">
+        <div className="list-group-content display-responsive ml-2">
           <a href="#" className="list-group-item list-group-item-logout"></a>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -104,7 +104,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
                 <i className="bx bxs-bell"></i>
               </a>
             </li>
-            <li className="nav-item d-none d-md-block">
+            <li className="nav-item d-responsive">
               <a href="#" className="list-group-item list-group-item-logout"></a>
             </li>
           </ul>
