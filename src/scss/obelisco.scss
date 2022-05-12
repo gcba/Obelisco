@@ -51,3 +51,4 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/progression';
 @import 'components/stepper';
 @import 'components/table';
+@import 'components/audio';
