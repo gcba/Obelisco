@@ -63,14 +63,14 @@ const LegalSection = (): JSX.Element => (
   <section className="footer-legal-section">
     <div className="row align-items-center">
       <div className="col-12 col-md-5 col-xl-4 mb-4 mb-md-0 footer-content-img">
-        <img className="d-lg-none" src="footer/ciudad-ba-sm.svg" alt="Logo de la Ciudad de Buenos Aires" height="48" />
+        <img className="d-lg-none" src="footer/ciudad-ba-sm.svg" alt="Ciudad de Buenos Aires" height="48" />
         <img
           className="d-none d-lg-inline"
           src="footer/ciudad-ba.svg"
-          alt="Logo de la Ciudad de Buenos Aires"
+          alt="Ciudad de Buenos Aires"
           height="40"
         />
-        <img className="img-vamos-ba" src="footer/vamos-ba.svg" alt="Logo de Vamos Buenos Aires" height="38" />
+        <img className="img-vamos-ba" src="footer/vamos-ba.svg" alt="Vamos Buenos Aires" height="38" />
       </div>
       <div className="col-12 col-md-7 col-xl-8">
         <ul className="list-inline">
