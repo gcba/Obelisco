@@ -3,7 +3,7 @@
 $btn-padding-y: spaceUnits(2);
 $btn-padding-x: 0.75rem;
 $btn-font-size: 1.125rem;
-$btn-line-height: 1.375;
+$btn-line-height: 1.3;
 $btn-focus-width: 0.125rem;
 $btn-font-weight: 600;
 
@@ -18,11 +18,12 @@ $input-btn-focus-width: 0.25rem;
 $btn-padding-y-sm: 0.25rem;
 $btn-padding-x-sm: 0.5rem;
 $btn-font-size-sm: 1rem;
+$btn-line-height-sm: 1.3;
 
 $btn-padding-y-lg: spaceUnits(3);
 $btn-padding-x-lg: spaceUnits(3);
 $btn-font-size-lg: 1.125rem;
-$btn-line-height-lg: 1.375;
+$btn-line-height-lg: 1.3;
 
 $btn-disabled-opacity: 1;
 
@@ -121,6 +122,10 @@ $btn-link-disabled-color: $grisulado-300;
   &.disabled {
     background-color: $btn-disabled-bg;
   }
+}
+
+a.btn {
+  text-decoration: none;
 }
 
 //
