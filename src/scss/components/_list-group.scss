@@ -76,6 +76,25 @@ a.list-group-item {
     border-radius: $list-group-border;
   }
 
+  &.list-group-item-logout {
+    box-shadow: $box-shadow-access-hover-danger;
+
+    &.logout-sm {
+      padding: 10px;
+      line-height: 1.25;
+
+      &:focus {
+        &::after {
+          float: left;
+        }
+      }
+      
+      &::after {
+        float: left;
+      }
+    }
+  }
+
   &:hover,
   &.hover {
     box-shadow: $box-shadow-access-hover;
