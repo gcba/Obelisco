@@ -7,6 +7,8 @@ $footer-border-width: spaceUnits(1);
 $footer-border-color: $yellow;
 
 $footer-link-separation: spaceUnits(8);
+$footer-link-separation-phone: spaceUnits(6);
+$footer-link-separation-redes: spaceUnits(10.564);
 $footer-icon-separation: spaceUnits(2);
 $footer-icon-size: spaceUnits(6);
 
@@ -51,6 +53,8 @@ $divider-border: 2px solid $grisulado-700;
         justify-content: space-between;
         
         .img-vamos-ba {
+          height: 38px;
+          
             @include media-breakpoint-down(md) {
             height: 48px;
           }
@@ -65,6 +69,15 @@ $divider-border: 2px solid $grisulado-700;
 
   .list-inline .list-inline-item {
     margin-right: $footer-link-separation;
+
+    &.phone-items {
+      margin-right: $footer-link-separation-phone;
+      font-weight: 600;
+    }
+
+    &.redes-items {
+      margin-right: $footer-link-separation-redes;
+    }
 
     &:last-of-type {
       margin-right: 0;
