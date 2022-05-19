@@ -3,6 +3,7 @@
 $nav-link-font-weight: 400;
 $nav-link-active-font-weight: 600;
 $nav-pills-link-active-font-weight: 600;
+$nav-link-line-heght: 1.378;
 
 $nav-link-lg-font-weight: 600;
 $nav-link-lg-font-size: 1.125rem;
@@ -88,10 +89,13 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   font-size: $nav-link-lg-font-size;
   color: $grisulado-900;
   font-weight: $nav-link-font-weight;
+  max-height: 48px;
+  line-height: $nav-link-line-heght;
   @include border-radius($border-radius * 2);
   
   &-sm {
     padding: 0.5rem 0.75rem;
+    max-height: 40px;
   }
 
   &.border-link {
