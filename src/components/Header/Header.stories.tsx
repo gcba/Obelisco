@@ -24,9 +24,10 @@ export const HeaderNoLogin = (): JSX.Element => {
             <input
               type="search"
               className="form-control input-search"
-              id="name-input"
+              id="name-input-no-login-1"
               name="name"
               placeholder="Buscar..."
+              aria-label="search"
             />
           </form>
         </div>
@@ -58,9 +59,10 @@ export const HeaderNoLogin = (): JSX.Element => {
                   <input
                     type="search"
                     className="form-control input-search"
-                    id="name-input"
+                    id="name-input-no-login-2"
                     name="name"
                     placeholder="Buscar..."
+                    aria-label="search"
                   />
                 </form>
               </div>
@@ -93,9 +95,10 @@ export const HeaderLogin = (): JSX.Element => {
             <input
               type="search"
               className="form-control input-search"
-              id="name-input"
+              id="name-input-login-1"
               name="name"
               placeholder="Buscar..."
+              aria-label="search"
             />
           </form>
         </div>
@@ -110,7 +113,9 @@ export const HeaderLogin = (): JSX.Element => {
           Menú <span className="navbar-toggler-icon"></span>
         </button>
         <div className="list-group-content d-responsive ml-2">
-          <a href="#" className="list-group-item list-group-item-logout"></a>
+          <a href="#" aria-label="logout" className="list-group-item list-group-item-logout">
+            &nbsp;
+          </a>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
@@ -145,15 +150,18 @@ export const HeaderLogin = (): JSX.Element => {
                   <input
                     type="search"
                     className="form-control input-search"
-                    id="name-input"
+                    id="name-input-login-2"
                     name="name"
                     placeholder="Buscar..."
+                    aria-label="search"
                   />
                 </form>
               </div>
             </li>
             <li className="nav-item d-responsive">
-              <a href="#" className="list-group-item list-group-item-logout"></a>
+              <a href="#" aria-label="logout" className="list-group-item list-group-item-logout">
+                &nbsp;
+              </a>
             </li>
           </ul>
         </div>

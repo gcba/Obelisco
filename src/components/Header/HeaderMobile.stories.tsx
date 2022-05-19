@@ -24,6 +24,7 @@ export const HeaderSearchSelected = (): JSX.Element => {
               id="name-input"
               name="name"
               placeholder="Buscar..."
+              aria-label="search"
             />
           </form>
         </div>
@@ -49,6 +50,7 @@ export const HeaderSearch = (): JSX.Element => {
               name="name"
               placeholder="Buscar..."
               value="Coronavirus"
+              aria-label="search"
             />
           </form>
         </div>
