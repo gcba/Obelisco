@@ -16,16 +16,19 @@ export default {
 export const Buscador = (): JSX.Element => {
   return (
     <div className="form-wrapper">
-      <div className="form-group">
-        <label htmlFor="search-input">Buscar</label>
-        <input
-          type="search"
-          className="form-control input-search"
-          id="name-input"
-          name="name"
-          placeholder="Buscar..."
-        />
-      </div>
+      <form>
+        <div className="form-group">
+          <label htmlFor="search-input">Buscar</label>
+          <input
+            type="search"
+            className="form-control input-search"
+            id="name-input"
+            name="name"
+            placeholder="Buscar..."
+          />
+          <button className="reset" type="reset"></button>
+        </div>
+      </form>
     </div>
   );
 };

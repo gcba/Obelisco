@@ -24,6 +24,8 @@ $custom-select-disabled-bg: $input-disabled-bg;
 $input-focus-border-color: $input-disabled-color;
 $input-focus-box-shadow: $focus-box-shadow;
 
+$input-height-sm: 40px;
+
 $custom-control-indicator-checked-color: $blue;
 $custom-control-indicator-active-color: $blue;
 $custom-control-indicator-size: spaceUnits(5);
@@ -85,6 +87,25 @@ $form-validation-states: (
   &.disabled label {
     color: $input-disabled-color;
   }
+
+  .input-search, input[type='search'],
+  .reset {
+    vertical-align: middle;
+  }
+  
+  .reset {
+    display: block;
+    cursor: pointer;
+
+    &::after {
+      content: '|';
+      font-size: 1.5rem;
+      color: $grisulado-100;
+      position: relative;
+      top: -2px;
+      left: 15px;
+    }
+  }
 }
 
 .custom-control-label {
@@ -126,9 +147,33 @@ $form-validation-states: (
 
   &.input-search {
     @include form-icon('search');
-    &:hover,
-    &:focus {
-      background-image: none;
+
+    &[type="search"]::-webkit-search-cancel-button {
+      display: none;
+    }
+    
+    &[type="search"]:invalid ~ .reset[type="reset"] {
+      display: none;
+    }
+    
+    &[type="search"]:placeholder-shown {
+      ~ .reset {
+        display: none;
+      }
+    }
+    
+    &[type="search"] ~ .reset[type="reset"] {
+      border: none;
+      position: relative;
+      left: calc(83%);
+      top: -45px;
+      background: transparent url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>') no-repeat center center;
+    }
+
+    &.form-control-sm {
+      &[type="search"] ~ .reset[type="reset"] {
+        top: -40px;
+      }
     }
   }
 
