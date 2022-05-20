@@ -17,7 +17,7 @@ export const Default = (): JSX.Element => {
   return (
     <p>
       You never see a frog so modest and{' '}
-      <a className="" href="#" target="_blank">
+      <a className="" href="#" target="_blank" rel="noreferrer">
         enlace en párrafo
       </a>{' '}
       as he was, for all he was so gifted. And when it come to fair and square jumping on a dead level, he could get
@@ -31,7 +31,7 @@ export const Externo = (): JSX.Element => {
     <div>
       <p>
         You never see a frog so modest and{' '}
-        <a className="external" href="#" target="_blank">
+        <a className="external" href="#" target="_blank" rel="noreferrer">
           enlace externo
         </a>{' '}
         as he was, for all he was so gifted. And when it come to fair and square jumping on a dead level, he could get
@@ -46,7 +46,7 @@ export const Descarga = (): JSX.Element => {
     <div>
       <p>
         You never see a frog so modest and{' '}
-        <a className="download" href="#" target="_blank">
+        <a className="download" href="#" target="_blank" rel="noreferrer">
           enlace de descarga
         </a>{' '}
         as he was, for all he was so gifted. And when it come to fair and square jumping on a dead level, he could get
