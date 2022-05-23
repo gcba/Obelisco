@@ -32,7 +32,7 @@ const PhonesSection = (): JSX.Element => (
     <h4>Teléfonos útiles</h4>
     <ul className="list-inline">
       {phones.map(([number, name]) => (
-        <li className="list-inline-item" key={number}>
+        <li className="list-inline-item phone-items" key={number}>
           <a href={`tel:${number}`}>
             {number} - {name}
           </a>
@@ -48,7 +48,7 @@ const SocialSection = (): JSX.Element => (
     <h4>Redes de la ciudad</h4>
     <ul className="list-inline">
       {social.map(([network, href]) => (
-        <li className="list-inline-item" key={network}>
+        <li className="list-inline-item redes-items" key={network}>
           <a href={href}>
             <i className={`bx bxl-${network.toLocaleLowerCase()}`} />
             {network}
@@ -62,20 +62,10 @@ const SocialSection = (): JSX.Element => (
 const LegalSection = (): JSX.Element => (
   <section className="footer-legal-section">
     <div className="row align-items-center">
-      <div className="col-12 col-md-5 col-xl-4 mb-4 mb-md-0">
-        <img
-          className="mr-3 d-lg-none"
-          src="footer/ciudad-ba-sm.svg"
-          alt="Logo de la Ciudad de Buenos Aires"
-          height="38"
-        />
-        <img
-          className="mr-3 d-none d-lg-inline"
-          src="footer/ciudad-ba.svg"
-          alt="Logo de la Ciudad de Buenos Aires"
-          height="38"
-        />
-        <img src="footer/vamos-ba.svg" alt="Logo de Vamos Buenos Aires" height="38" />
+      <div className="col-12 col-md-5 col-xl-4 mb-4 mb-md-0 footer-content-img">
+        <img className="d-lg-none" src="footer/ciudad-ba-sm.svg" alt="Ciudad de Buenos Aires" height="48" />
+        <img className="d-none d-lg-inline" src="footer/ciudad-ba.svg" alt="Ciudad de Buenos Aires" height="40" />
+        <img className="img-vamos-ba" src="footer/vamos-ba.svg" alt="Vamos Buenos Aires" />
       </div>
       <div className="col-12 col-md-7 col-xl-8">
         <ul className="list-inline">
@@ -113,6 +103,9 @@ export const Completo = (): JSX.Element => (
     <div className="container">
       <PhonesSection />
       <SocialSection />
+    </div>
+    <hr className="divider" />
+    <div className="container">
       <LegalSection />
       <LicenseSection />
     </div>
@@ -123,6 +116,9 @@ export const SoloTelefonos = (): JSX.Element => (
   <footer className="main-footer">
     <div className="container">
       <PhonesSection />
+    </div>
+    <hr className="divider" />
+    <div className="container">
       <LegalSection />
       <LicenseSection />
     </div>
@@ -137,6 +133,9 @@ export const SoloRedes = (): JSX.Element => (
   <footer className="main-footer">
     <div className="container">
       <SocialSection />
+    </div>
+    <hr className="divider" />
+    <div className="container">
       <LegalSection />
       <LicenseSection />
     </div>

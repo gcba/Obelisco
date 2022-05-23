@@ -1,15 +1,22 @@
 /* === Custom variables and mixins === */
 
 $footer-padding-y: spaceUnits(12);
-$footer-legal-margin-top: spaceUnits(18);
 $footer-legal-margin-bottom: spaceUnits(6);
 
 $footer-border-width: spaceUnits(1);
 $footer-border-color: $yellow;
 
 $footer-link-separation: spaceUnits(8);
+$footer-link-separation-phone: spaceUnits(6);
+$footer-link-separation-redes: spaceUnits(10.564);
 $footer-icon-separation: spaceUnits(2);
 $footer-icon-size: spaceUnits(6);
+
+$footer-icon-height-vamos-ba: 2.375rem;
+$footer-icon-height-vamos-ba-sm: 3rem;
+
+$divier-margin: 3.063rem 0 3.188rem;
+$divider-border: 0.125rem solid $grisulado-700;
 
 /* === Custom styles === */
 
@@ -17,6 +24,10 @@ $footer-icon-size: spaceUnits(6);
   @extend .bg-dark, .text-white;
   padding: $footer-padding-y 0;
   border-top: $footer-border-width solid $footer-border-color;
+
+  h4 {
+    margin-bottom: spaceUnits(4);
+  }
 
   a {
     @extend .text-white;
@@ -33,11 +44,24 @@ $footer-icon-size: spaceUnits(6);
     margin-bottom: $footer-padding-y;
 
     &.footer-legal-section {
-      margin-top: $footer-legal-margin-top;
       margin-bottom: $footer-legal-margin-bottom;
 
       .list-inline {
         margin-bottom: 0;
+      }
+
+      
+      .footer-content-img {
+        display: flex;
+        justify-content: space-between;
+        
+        .img-vamos-ba {
+          height: $footer-icon-height-vamos-ba;
+          
+            @include media-breakpoint-down(md) {
+            height: $footer-icon-height-vamos-ba-sm;
+          }
+        }
       }
     }
 
@@ -48,6 +72,15 @@ $footer-icon-size: spaceUnits(6);
 
   .list-inline .list-inline-item {
     margin-right: $footer-link-separation;
+
+    &.phone-items {
+      margin-right: $footer-link-separation-phone;
+      font-weight: 600;
+    }
+
+    &.redes-items {
+      margin-right: $footer-link-separation-redes;
+    }
 
     &:last-of-type {
       margin-right: 0;
@@ -61,5 +94,10 @@ $footer-icon-size: spaceUnits(6);
 
   .footer-license-text {
     @extend small;
+  }
+
+  .divider {
+    border-top: $divider-border;
+    margin: $divier-margin;
   }
 }
