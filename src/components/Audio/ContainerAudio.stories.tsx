@@ -5,11 +5,11 @@ import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 
 export default {
-  title: 'Componentes|Audio/Tarjeta',
+  title: 'Componentes|Audio/Con contenedor',
   decorators: [withA11y]
 };
 
-export const BigCard = (): JSX.Element => {
+export const CompleteContainer = (): JSX.Element => {
   return (
     <div className="cards-container">
       <a className="card" href="#">
@@ -31,9 +31,9 @@ export const BigCard = (): JSX.Element => {
   );
 };
 
-BigCard.story = { name: 'Tarjeta grande' };
+CompleteContainer.story = { name: 'Completo' };
 
-export const MediumCard = (): JSX.Element => {
+export const TitledContainer = (): JSX.Element => {
   return (
     <div className="cards-container">
       <a className="card" href="#">
@@ -68,9 +68,9 @@ export const MediumCard = (): JSX.Element => {
   );
 };
 
-MediumCard.story = { name: 'Tarjeta mediana' };
+TitledContainer.story = { name: 'Solo titulo' };
 
-export const SmallCard = (): JSX.Element => {
+export const ContainerAudio = (): JSX.Element => {
   return (
     <div className="cards-container">
       <a className="card" href="#">
@@ -88,9 +88,9 @@ export const SmallCard = (): JSX.Element => {
   );
 };
 
-SmallCard.story = { name: 'Tarjeta pequeña' };
+ContainerAudio.story = { name: 'Solo audio' };
 
-export const EventoNews = (): JSX.Element => {
+export const ContainerNews = (): JSX.Element => {
   return (
     <div className="cards-container">
       <a className="card" href="#">
@@ -120,4 +120,4 @@ export const EventoNews = (): JSX.Element => {
   );
 };
 
-EventoNews.story = { name: 'Tarjeta noticias' };
+ContainerNews.story = { name: 'Noticias' };
