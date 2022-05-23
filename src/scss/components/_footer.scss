@@ -12,8 +12,11 @@ $footer-link-separation-redes: spaceUnits(10.564);
 $footer-icon-separation: spaceUnits(2);
 $footer-icon-size: spaceUnits(6);
 
+$footer-icon-height-vamos-ba: 2.375rem;
+$footer-icon-height-vamos-ba-sm: 3rem;
+
 $divier-margin: 3.063rem 0 3.188rem;
-$divider-border: 2px solid $grisulado-700;
+$divider-border: 0.125rem solid $grisulado-700;
 
 /* === Custom styles === */
 
@@ -53,10 +56,10 @@ $divider-border: 2px solid $grisulado-700;
         justify-content: space-between;
         
         .img-vamos-ba {
-          height: 38px;
+          height: $footer-icon-height-vamos-ba;
           
             @include media-breakpoint-down(md) {
-            height: 48px;
+            height: $footer-icon-height-vamos-ba-sm;
           }
         }
       }
