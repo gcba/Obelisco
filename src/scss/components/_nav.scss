@@ -39,11 +39,20 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
 .flex-row {
   gap: 0.625rem;
+
+  .nav-item {
+    .nav-link {
+      max-height: 48px;
+
+      &-sm {
+        max-height: 40px;
+      }
+    }
+  }
 }
 
 .nav-pills {
   .nav-item {
-
     &:first-child {
       .nav-link {
         .nav-icon {
@@ -88,13 +97,11 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   font-size: $nav-link-lg-font-size;
   color: $grisulado-900;
   font-weight: $nav-link-font-weight;
-  max-height: 48px;
   line-height: $nav-link-line-heght;
   @include border-radius($border-radius * 2);
-  
+
   &-sm {
     padding: 0.5rem 0.75rem;
-    max-height: 40px;
   }
 
   &.border-link {
@@ -163,7 +170,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         i {
           text-decoration: none;
         }
-  
+
         span {
           text-decoration: none;
         }
@@ -196,7 +203,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
           i {
             text-decoration: none;
           }
-    
+
           span {
             text-decoration: none;
           }
