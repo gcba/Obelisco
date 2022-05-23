@@ -19,14 +19,14 @@ export const Paginacion = (): JSX.Element => {
   return (
     <div>
       <div className="mt-5">
-        <Pagination pages={56} default={0} ariaLabel="Ejemplo de paginación simple" />
+        <Pagination pages={56} default={0} ariaLabel="Primer ejemplo de paginación simple" />
       </div>
 
       <div className="mt-5">
-        <Pagination pages={56} default={1} ariaLabel="Ejemplo de paginación simple" />
+        <Pagination pages={56} default={1} ariaLabel="Segundo ejemplo de paginación simple" />
       </div>
       <div className="mt-5">
-        <Pagination pages={56} default={55} ariaLabel="Ejemplo de paginación simple" />
+        <Pagination pages={56} default={55} ariaLabel="Tercer ejemplo de paginación simple" />
       </div>
     </div>
   );
