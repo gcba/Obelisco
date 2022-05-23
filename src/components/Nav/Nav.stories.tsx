@@ -99,8 +99,12 @@ export const Con3NivelesConIcono = (): JSX.Element => (
 
 export const Responsive = (): JSX.Element => (
   <div className="nav-container">
-    <nav>
-      <a className="nav-link nav-mobile-trigger collapsed" data-toggle="collapse" href="#sidebar-nav">
+    <nav aria-label="nav-link">
+      <a
+        className="nav-link nav-mobile-trigger collapsed"
+        data-toggle="collapse"
+        href="#sidebar-nav"
+        aria-label="collapse">
         Acerca de Obelisco
       </a>
       <div className="nav-responsive collapse" id="sidebar-nav">

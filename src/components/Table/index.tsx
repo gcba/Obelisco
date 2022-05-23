@@ -100,4 +100,4 @@ const TableCellRenderer: React.FC<TableCellRendererProps> = (props: TableCellRen
   return <></>;
 };
 
-const Selectable: React.FC = () => <input type="checkbox" />;
+const Selectable: React.FC = () => <input type="checkbox" aria-label="checkbox" />;
