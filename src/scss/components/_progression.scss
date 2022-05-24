@@ -11,10 +11,13 @@ $progression-circle-active-size: 1rem;
 $progression-font-color: $grisulado-300;
 $progression-default-color: $grisulado-50;
 
+$progress-height: 0.25rem;
+$progress-bg: $grisulado-100;
+
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
-
+@import '~bootstrap/scss/progress';
 /* === Custom styles === */
 .progression {
   @extend .list-unstyled, .flex-column;
@@ -107,4 +110,9 @@ $progression-default-color: $grisulado-50;
     margin-left: $progression-padding-left - $btn-padding-x;
     @extend .btn, .btn-link;
   }
+}
+
+.steps {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
