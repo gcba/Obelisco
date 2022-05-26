@@ -75,7 +75,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
           Menú <span className="navbar-toggler-icon"></span>
         </button>
         <div className="list-group-content d-responsive ml-2">
-          <a href="#" aria-label="logout" className="list-group-item list-group-item-logout">
+          <a href="#" aria-label="logout" className="list-group-item list-group-item-logout logout-sm">
             &nbsp;
           </a>
         </div>
@@ -107,7 +107,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
               </a>
             </li>
             <li className="nav-item d-responsive">
-              <a href="#" aria-label="logout" className="list-group-item list-group-item-logout">
+              <a href="#" aria-label="logout" className="list-group-item list-group-item-logout logout-sm">
                 &nbsp;
               </a>
             </li>

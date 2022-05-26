@@ -20,15 +20,17 @@ export const HeaderNoLogin = (): JSX.Element => {
           <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
         </a>
         <div className="navbar-search d-responsive ml-auto">
-          <form className="form-inline">
-            <input
-              type="search"
-              className="form-control input-search"
-              id="name-input-no-login-1"
-              name="name"
-              placeholder="Buscar..."
-              aria-label="search"
-            />
+          <form className="form-search form-search-sm">
+            <div className="form-group">
+              <input
+                type="search"
+                className="form-control form-control-sm input-search"
+                id="name-input"
+                name="name"
+                placeholder="Buscar..."
+              />
+              <button className="reset" type="reset"></button>
+            </div>
           </form>
         </div>
         <button
@@ -55,15 +57,17 @@ export const HeaderNoLogin = (): JSX.Element => {
             </li>
             <li className="nav-item d-responsive">
               <div className="navbar-search">
-                <form className="form-inline">
-                  <input
-                    type="search"
-                    className="form-control input-search"
-                    id="name-input-no-login-2"
-                    name="name"
-                    placeholder="Buscar..."
-                    aria-label="search"
-                  />
+                <form className="form-search form-search-sm">
+                  <div className="form-group">
+                    <input
+                      type="search"
+                      className="form-control form-control-sm input-search"
+                      id="name-input"
+                      name="name"
+                      placeholder="Buscar..."
+                    />
+                    <button className="reset" type="reset"></button>
+                  </div>
                 </form>
               </div>
             </li>
@@ -91,15 +95,17 @@ export const HeaderLogin = (): JSX.Element => {
           <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
         </a>
         <div className="navbar-search d-responsive ml-auto">
-          <form className="form-inline">
-            <input
-              type="search"
-              className="form-control input-search"
-              id="name-input-login-1"
-              name="name"
-              placeholder="Buscar..."
-              aria-label="search"
-            />
+          <form className="form-search form-search-sm">
+            <div className="form-group">
+              <input
+                type="search"
+                className="form-control form-control-sm input-search"
+                id="name-input"
+                name="name"
+                placeholder="Buscar..."
+              />
+              <button className="reset" type="reset"></button>
+            </div>
           </form>
         </div>
         <button
@@ -113,7 +119,7 @@ export const HeaderLogin = (): JSX.Element => {
           Menú <span className="navbar-toggler-icon"></span>
         </button>
         <div className="list-group-content d-responsive ml-2">
-          <a href="#" aria-label="logout" className="list-group-item list-group-item-logout">
+          <a href="#" aria-label="logout" className="list-group-item list-group-item-logout logout-sm">
             &nbsp;
           </a>
         </div>
@@ -146,20 +152,22 @@ export const HeaderLogin = (): JSX.Element => {
             </li>
             <li className="nav-item d-responsive">
               <div className="navbar-search">
-                <form className="form-inline">
-                  <input
-                    type="search"
-                    className="form-control input-search"
-                    id="name-input-login-2"
-                    name="name"
-                    placeholder="Buscar..."
-                    aria-label="search"
-                  />
+                <form className="form-search form-search-sm">
+                  <div className="form-group">
+                    <input
+                      type="search"
+                      className="form-control form-control-sm input-search"
+                      id="name-input"
+                      name="name"
+                      placeholder="Buscar..."
+                    />
+                    <button className="reset" type="reset"></button>
+                  </div>
                 </form>
               </div>
             </li>
             <li className="nav-item d-responsive">
-              <a href="#" aria-label="logout" className="list-group-item list-group-item-logout">
+              <a href="#" aria-label="logout" className="list-group-item list-group-item-logout logout-sm">
                 &nbsp;
               </a>
             </li>

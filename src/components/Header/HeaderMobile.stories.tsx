@@ -17,15 +17,17 @@ export const HeaderSearchSelected = (): JSX.Element => {
     <header className="navbar navbar-light">
       <div className="container">
         <div className="navbar-search active-search">
-          <form className="form-inline">
-            <input
-              type="search"
-              className="form-control input-search"
-              id="name-input"
-              name="name"
-              placeholder="Buscar..."
-              aria-label="search"
-            />
+          <form className="form-search form-search-sm">
+            <div className="form-group">
+              <input
+                type="search"
+                className="form-control form-control-sm input-search"
+                id="name-input"
+                name="name"
+                placeholder="Buscar..."
+              />
+              <button className="reset" type="reset"></button>
+            </div>
           </form>
         </div>
       </div>
@@ -42,16 +44,17 @@ export const HeaderSearch = (): JSX.Element => {
     <header className="navbar navbar-light">
       <div className="container">
         <div className="navbar-search active-search">
-          <form className="form-inline">
-            <input
-              type="search"
-              className="form-control input-search"
-              id="name-input"
-              name="name"
-              placeholder="Buscar..."
-              value="Coronavirus"
-              aria-label="search"
-            />
+          <form className="form-search form-search-sm">
+            <div className="form-group">
+              <input
+                type="search"
+                className="form-control form-control-sm input-search"
+                id="name-input"
+                name="name"
+                placeholder="Buscar..."
+              />
+              <button className="reset" type="reset"></button>
+            </div>
           </form>
         </div>
       </div>
