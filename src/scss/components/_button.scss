@@ -44,6 +44,15 @@ $btn-link-disabled-color: $grisulado-300;
 @import '~bootstrap/scss/buttons';
 
 /* === Custom styles === */
+@mixin btn-disabled {
+  &.disabled,
+  &:disabled {
+    background-color: $btn-disabled-bg;
+    color: $btn-disabled-color;
+    pointer-events: none;
+  }
+}
+
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
@@ -65,12 +74,7 @@ $btn-link-disabled-color: $grisulado-300;
       }
     }
 
-    &.disabled,
-    &:disabled {
-      background-color: $btn-disabled-bg;
-      color: $btn-disabled-color;
-      pointer-events: none;
-    }
+    @include btn-disabled;
 
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
@@ -95,6 +99,8 @@ $btn-link-disabled-color: $grisulado-300;
   font-weight: $btn-font-weight;
   background-color: $ghost;
 
+  @include btn-disabled;
+
   @include hover() {
     background-color: $ghost-hover;
     color: $link-color;
@@ -114,11 +120,6 @@ $btn-link-disabled-color: $grisulado-300;
       background-color: $ghost-hover;
       box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
     }
-  }
-
-  &:disabled,
-  &.disabled {
-    background-color: $btn-disabled-bg;
   }
 }
 
