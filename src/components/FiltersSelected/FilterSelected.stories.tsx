@@ -1,5 +1,5 @@
 // Base
-import React, { MouseEvent, useState } from 'react';
+import React, { useState } from 'react';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -31,8 +31,6 @@ const LIST = [
   'Comercial, ventas y negocios 3',
   'Comunicación 3'
 ];
-
-const LIST2 = ['Element 1', 'Element 2', 'Element 3', 'Element 4'];
 
 export const Filtro = (): JSX.Element => {
   const [checked, setChecked] = useState<boolean[]>([]);
@@ -96,11 +94,6 @@ export const Filtro2 = (): JSX.Element => {
 
     if (items.length === 4) return;
     setItems([...items, value]);
-  };
-
-  const handleDeleteFruit = (item: string, e: MouseEvent): void => {
-    e.stopPropagation();
-    setItems(items.filter((i) => i !== item));
   };
 
   return (
