@@ -1,5 +1,5 @@
 // Base
-import React, { useState } from 'react';
+import React, { MouseEvent, useState } from 'react';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -96,20 +96,25 @@ export const Filtro2 = (): JSX.Element => {
     setItems([...items, value]);
   };
 
+  const handleDeleteFruit = (item: string, e: MouseEvent): void => {
+    e.stopPropagation();
+    setItems(items.filter((i) => i !== item));
+  };
+
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row' }}>
       <div className="dropdown-check-list">
         <span>Categorías</span>
         <div className="anchor" id="category">
           {items.length === 0 && <span>Todas</span>}
-          {/* {items.length !== 0 &&
-          items.map((item, index) => (
-            <span key={index} className="badge badge-secondary">
-              <div className="badge-content-item">
-                {item} <i onClick={(e) => handleDeleteFruit(item, e)} className="bx bx-x"></i>
-              </div>
-            </span>
-          ))} */}
+          {items.length !== 0 &&
+            items.map((item, index) => (
+              <span key={index} className="badge badge-secondary">
+                <div className="badge-content-item">
+                  {item} <i onClick={(e) => handleDeleteFruit(item, e)} className="bx bx-x"></i>
+                </div>
+              </span>
+            ))}
         </div>
         <ul className="dropdown-menu">
           {LIST.map((item, index) => (
