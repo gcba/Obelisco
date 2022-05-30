@@ -42,6 +42,9 @@ function collectionHas(a, b) {
 }
 function findParentBySelector(elm, selector) {
   var all = document.querySelectorAll(selector);
+
+  if (!elm['parentNode']) return;
+
   var cur = elm['parentNode'];
   while (cur && !collectionHas(all, cur)) {
     cur = cur.parentNode;
@@ -101,19 +104,55 @@ const DROPDOWN_MULTIPLE_ID = 'dropdownFilter';
 let objDrop = {};
 let idDropDown = null;
 
+const hasCheckListClass = (event) => {
+  if (!event?.target?.['classList'].value || event?.target?.['classList'].value === '') return;
+  return ARR_CLASS_DROPDOWN_CHECK_LIST.some(
+    (className) =>
+      event?.target?.['classList'].contains(className) ||
+      event.target.parentNode?.['classList'].contains(className) ||
+      event.target.parentNode.parentNode?.['classList'].contains(className)
+  );
+};
+
+const removeItem = (e) => {
+  e.preventDefault();
+  const text = e.target.parentNode.textContent.trim();
+
+  const inputAssociated = document.querySelector(`input[type="checkbox"][value="${text}"]`);
+
+  inputAssociated.checked = false;
+
+  objDrop[idDropDown] = objDrop[idDropDown].filter((el) => el !== text);
+
+  e.target.parentNode.parentNode.remove();
+
+  if (objDrop[idDropDown].length === 0) {
+    var initSpan = document.createElement('span');
+    initSpan.innerHTML = 'Todas';
+    const anchor = document.querySelector(`#${idDropDown}`);
+    anchor.appendChild(initSpan);
+  }
+};
+
 (function (window, document) {
   document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener(
       'click',
       function (event) {
-        if (ARR_CLASS_DROPDOWN_CHECK_LIST.some((className) => event?.target?.['classList'].contains(className))) {
-          idDropDown = event.target['id'];
-          dropDownCheckList(event.target['id']);
+        if (hasCheckListClass(event)) {
+          if (event.target.localName === 'i') return;
+
+          idDropDown =
+            (event.target['id'] === '' && event.target.parentNode['id']) ||
+            event.target.parentNode.parentNode['id'] ||
+            event.target['id'];
+
+          dropDownCheckList(idDropDown);
         }
 
         if (event?.target.dataset.filterItem === `filter-${idDropDown}`) {
-          if (!objDrop[`#${idDropDown}`] || objDrop[`#${idDropDown}`].length === 0) {
-            objDrop[`#${idDropDown}`] = [];
+          if (!objDrop[idDropDown] || objDrop[idDropDown].length === 0) {
+            objDrop[idDropDown] = [];
           }
 
           const anchor = document.querySelector(`#${idDropDown}`);
@@ -125,11 +164,11 @@ let idDropDown = null;
 
             if (!event.target.checked) {
               if (anchor?.children.length > 0) {
-                anchor?.children[objDrop[`#${idDropDown}`].indexOf(event.target.value)].remove();
+                anchor?.children[objDrop[idDropDown].indexOf(event.target.value)].remove();
               }
-              objDrop[`#${idDropDown}`].splice(objDrop[`#${idDropDown}`].indexOf(event.target.value), 1);
+              objDrop[idDropDown].splice(objDrop[idDropDown].indexOf(event.target.value), 1);
 
-              if (objDrop[`#${idDropDown}`].length === 0) {
+              if (objDrop[idDropDown].length === 0) {
                 var initSpan = document.createElement('span');
                 initSpan.innerHTML = 'Todas';
                 anchor.appendChild(initSpan);
@@ -139,10 +178,10 @@ let idDropDown = null;
                 anchor.removeChild(anchor.firstChild);
               }
 
-              objDrop[`#${idDropDown}`].push(event.target.value);
+              objDrop[idDropDown].push(event.target.value);
               if (anchor) {
                 child.innerHTML = `
-                <div class="badge-content-item">${event.target.value} <i id="close" class="bx bx-x"></i></div>
+                <div class="badge-content-item">${event.target.value} <i onclick="removeItem(event)" class="bx bx-x"></i></div>
                 `;
                 anchor.appendChild(child);
               }
