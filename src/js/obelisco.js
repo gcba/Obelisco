@@ -121,15 +121,16 @@ const removeItem = (e) => {
   const inputAssociated = document.querySelector(`input[type="checkbox"][value="${text}"]`);
 
   inputAssociated.checked = false;
+  const getItByInput = inputAssociated.dataset.filterItem.split('filter-')[1];
 
-  objDrop[idDropDown] = objDrop[idDropDown].filter((el) => el !== text);
+  objDrop[getItByInput] = objDrop[getItByInput].filter((el) => el !== text);
 
   e.target.parentNode.parentNode.remove();
 
-  if (objDrop[idDropDown].length === 0) {
+  if (objDrop[getItByInput].length === 0) {
     var initSpan = document.createElement('span');
     initSpan.innerHTML = 'Todas';
-    const anchor = document.querySelector(`#${idDropDown}`);
+    const anchor = document.querySelector(`#${getItByInput}`);
     anchor.appendChild(initSpan);
   }
 };
