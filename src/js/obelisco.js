@@ -134,6 +134,45 @@ const removeItem = (e) => {
   }
 };
 
+function dropDownCheckListItems(event) {
+  if (!objDrop[idDropDown] || objDrop[idDropDown].length === 0) {
+    objDrop[idDropDown] = [];
+  }
+
+  const anchor = document.querySelector(`#${idDropDown}`);
+
+  if (event.target.localName === 'input') {
+    const child = document.createElement('span');
+    child.classList.add('badge');
+    child.classList.add('badge-secondary');
+
+    if (!event.target.checked) {
+      if (anchor?.children.length > 0) {
+        anchor?.children[objDrop[idDropDown].indexOf(event.target.value)].remove();
+      }
+      objDrop[idDropDown].splice(objDrop[idDropDown].indexOf(event.target.value), 1);
+
+      if (objDrop[idDropDown].length === 0) {
+        var initSpan = document.createElement('span');
+        initSpan.innerHTML = 'Todas';
+        anchor.appendChild(initSpan);
+      }
+    } else {
+      if (anchor.firstChild.textContent === 'Todas') {
+        anchor.removeChild(anchor.firstChild);
+      }
+
+      objDrop[idDropDown].push(event.target.value);
+      if (anchor) {
+        child.innerHTML = `
+        <div class="badge-content-item">${event.target.value} <i onclick="removeItem(event)" class="bx bx-x"></i></div>
+        `;
+        anchor.appendChild(child);
+      }
+    }
+  }
+}
+
 (function (window, document) {
   document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener(
@@ -151,42 +190,7 @@ const removeItem = (e) => {
         }
 
         if (event?.target.dataset.filterItem === `filter-${idDropDown}`) {
-          if (!objDrop[idDropDown] || objDrop[idDropDown].length === 0) {
-            objDrop[idDropDown] = [];
-          }
-
-          const anchor = document.querySelector(`#${idDropDown}`);
-
-          if (event.target.localName === 'input') {
-            const child = document.createElement('span');
-            child.classList.add('badge');
-            child.classList.add('badge-secondary');
-
-            if (!event.target.checked) {
-              if (anchor?.children.length > 0) {
-                anchor?.children[objDrop[idDropDown].indexOf(event.target.value)].remove();
-              }
-              objDrop[idDropDown].splice(objDrop[idDropDown].indexOf(event.target.value), 1);
-
-              if (objDrop[idDropDown].length === 0) {
-                var initSpan = document.createElement('span');
-                initSpan.innerHTML = 'Todas';
-                anchor.appendChild(initSpan);
-              }
-            } else {
-              if (anchor.firstChild.textContent === 'Todas') {
-                anchor.removeChild(anchor.firstChild);
-              }
-
-              objDrop[idDropDown].push(event.target.value);
-              if (anchor) {
-                child.innerHTML = `
-                <div class="badge-content-item">${event.target.value} <i onclick="removeItem(event)" class="bx bx-x"></i></div>
-                `;
-                anchor.appendChild(child);
-              }
-            }
-          }
+          dropDownCheckListItems(event);
         }
 
         if (event?.target?.['id'] === DROPDOWN_MULTIPLE_ID) {
