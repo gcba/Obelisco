@@ -71,12 +71,13 @@ function dropDownCheckList(id) {
 }
 
 const CLASS_SHOW = 'show';
-const CLASS_DROPDOWN_MENU = '.dropdown-menu';
-const CLASS_DROPDOWN = '.dropdown';
+let dropChildren = null;
 
-function dropDownMultiple() {
-  const dropMenu = document.querySelector(CLASS_DROPDOWN_MENU);
-  const drop = document.querySelector(CLASS_DROPDOWN);
+function dropDownMultiple(id) {
+  const drop = document.querySelector(`#drop-${id}`);
+  const dropMenu = document.querySelector(`#drop-menu-${id}`);
+
+  dropChildren = drop.children.item(0);
 
   if (!dropMenu || !drop) return;
 
@@ -100,9 +101,8 @@ function dropDownMultiple() {
 }
 
 const ARR_CLASS_DROPDOWN_CHECK_LIST = ['anchor', 'badge-content-item'];
-const DROPDOWN_MULTIPLE_ID = 'dropdownFilter';
 let objDrop = {};
-let idDropDown = null;
+let idDropDownCheckList = null;
 
 const hasCheckListClass = (event) => {
   if (!event?.target?.['classList'].value || event?.target?.['classList'].value === '') return;
@@ -136,11 +136,11 @@ const removeItem = (e) => {
 };
 
 function dropDownCheckListItems(event) {
-  if (!objDrop[idDropDown] || objDrop[idDropDown].length === 0) {
-    objDrop[idDropDown] = [];
+  if (!objDrop[idDropDownCheckList] || objDrop[idDropDownCheckList].length === 0) {
+    objDrop[idDropDownCheckList] = [];
   }
 
-  const anchor = document.querySelector(`#${idDropDown}`);
+  const anchor = document.querySelector(`#${idDropDownCheckList}`);
 
   if (event.target.localName === 'input') {
     const child = document.createElement('span');
@@ -149,11 +149,11 @@ function dropDownCheckListItems(event) {
 
     if (!event.target.checked) {
       if (anchor?.children.length > 0) {
-        anchor?.children[objDrop[idDropDown].indexOf(event.target.value)].remove();
+        anchor?.children[objDrop[idDropDownCheckList].indexOf(event.target.value)].remove();
       }
-      objDrop[idDropDown].splice(objDrop[idDropDown].indexOf(event.target.value), 1);
+      objDrop[idDropDownCheckList].splice(objDrop[idDropDownCheckList].indexOf(event.target.value), 1);
 
-      if (objDrop[idDropDown].length === 0) {
+      if (objDrop[idDropDownCheckList].length === 0) {
         var initSpan = document.createElement('span');
         initSpan.innerHTML = 'Todas';
         anchor.appendChild(initSpan);
@@ -163,7 +163,7 @@ function dropDownCheckListItems(event) {
         anchor.removeChild(anchor.firstChild);
       }
 
-      objDrop[idDropDown].push(event.target.value);
+      objDrop[idDropDownCheckList].push(event.target.value);
       if (anchor) {
         child.innerHTML = `
         <div class="badge-content-item">${event.target.value} <i onclick="removeItem(event)" class="bx bx-x"></i></div>
@@ -171,6 +171,27 @@ function dropDownCheckListItems(event) {
         anchor.appendChild(child);
       }
     }
+  }
+}
+
+let idDropDownMultiple = null;
+function dropDownSelectedItems(event) {
+  if (!objDrop[idDropDownMultiple] || objDrop[idDropDownMultiple].length === 0) {
+    objDrop[idDropDownMultiple] = [];
+  }
+
+  if (event.target.localName === 'input') {
+    if (!event.target.checked) {
+      objDrop[idDropDownMultiple].splice(objDrop[idDropDownMultiple].indexOf(event.target.value), 1);
+    } else {
+      objDrop[idDropDownMultiple].push(event.target.value);
+    }
+  }
+
+  if (objDrop[idDropDownMultiple].length === 0) {
+    dropChildren.innerHTML = `${dropChildren.textContent.split('(')[0]}`;
+  } else {
+    dropChildren.innerHTML = `${dropChildren.textContent.split('(')[0]} (${objDrop[idDropDownMultiple].length})`;
   }
 }
 
@@ -182,20 +203,26 @@ function dropDownCheckListItems(event) {
         if (hasCheckListClass(event)) {
           if (event.target.localName === 'i') return;
 
-          idDropDown =
+          idDropDownCheckList =
             (event.target['id'] === '' && event.target.parentNode['id']) ||
             event.target.parentNode.parentNode['id'] ||
             event.target['id'];
 
-          dropDownCheckList(idDropDown);
+          dropDownCheckList(idDropDownCheckList);
         }
 
-        if (event?.target.dataset.filterItem === `filter-${idDropDown}`) {
+        if (event?.target.dataset.filterItem === `filter-${idDropDownCheckList}`) {
           dropDownCheckListItems(event);
         }
 
-        if (event?.target?.['id'] === DROPDOWN_MULTIPLE_ID) {
-          dropDownMultiple();
+        if (!!event?.target.dataset.oToggle && event?.target.dataset.oToggle.includes('dropdown-')) {
+          idDropDownMultiple = event.target.dataset.oToggle.split('dropdown-')[1];
+
+          dropDownMultiple(idDropDownMultiple);
+        }
+
+        if (event?.target.dataset.selectItem === `select-${idDropDownMultiple}`) {
+          dropDownSelectedItems(event);
         }
       },
       false
