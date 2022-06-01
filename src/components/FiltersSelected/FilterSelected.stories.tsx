@@ -33,45 +33,29 @@ const LIST = [
 ];
 
 export const Filtro = (): JSX.Element => {
-  const [checked, setChecked] = useState<boolean[]>([]);
-
-  let arr: boolean[] = [];
-  const handleInputChange = (event: React.ChangeEvent) => {
-    const target = event.target;
-    const value = target['type'] === 'checkbox' ? target['checked'] : target['value'];
-
-    if (!value) {
-      arr = checked.filter((item, index) => index !== checked.length - 1);
-    } else {
-      arr = [...checked, value];
-    }
-
-    setChecked(arr);
-  };
-
   return (
     <div>
       <form>
-        <fieldset className="dropdown dropdown-multiple">
+        <fieldset className="dropdown dropdown-multiple" id="drop-multiple">
           <button
             type="button"
             className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border dropdown-toggle"
-            id="dropdownFilter">
-            Modalidad {checked.length !== 0 && `(${checked.length})`}
+            data-o-toggle="dropdown-multiple">
+            Modalidad
           </button>
-          <div className="dropdown-menu check-menu" role="menu">
+          <div className="dropdown-menu check-menu" id="drop-menu-multiple">
             <label htmlFor="drop1" className="dropdown-item">
-              <input type="checkbox" id="drop1" onChange={handleInputChange} />
+              <input type="checkbox" id="drop1" data-select-item="select-multiple" />
               <span>Presencial</span>
             </label>
 
             <label htmlFor="drop2" className="dropdown-item">
-              <input type="checkbox" id="drop2" onChange={handleInputChange} />
+              <input type="checkbox" id="drop2" data-select-item="select-multiple" />
               <span>Virtual</span>
             </label>
 
             <label htmlFor="drop3" className="dropdown-item">
-              <input type="checkbox" id="drop3" onChange={handleInputChange} />
+              <input type="checkbox" id="drop3" data-select-item="select-multiple" />
               <span>Presencial y virtual</span>
             </label>
           </div>
