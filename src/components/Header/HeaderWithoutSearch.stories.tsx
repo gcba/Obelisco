@@ -25,8 +25,7 @@ export const HeaderNoLoginSearch = (): JSX.Element => {
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-expanded="false">
           Menú <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -62,7 +61,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
     <header className="navbar navbar-light navbar-md">
       <div className="container">
         <a className="navbar-brand" href="#">
-          <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
+          <img className="header-logo" src="header/header-logo.svg" alt="Ciudad de Buenos Aires" />
         </a>
         <button
           className="navbar-toggler collapsed ml-auto"
@@ -70,8 +69,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-expanded="false">
           Menú <span className="navbar-toggler-icon"></span>
         </button>
         <div className="list-group-content d-responsive ml-2">
@@ -107,7 +105,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
               </a>
             </li>
             <li className="nav-item d-responsive">
-              <a href="#" aria-label="logout" className="list-group-item list-group-item-logout logout-sm">
+              <a href="#" aria-label="Cerrar sesión" className="list-group-item list-group-item-logout logout-sm">
                 &nbsp;
               </a>
             </li>

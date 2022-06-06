@@ -25,6 +25,7 @@ export const HeaderSearchSelected = (): JSX.Element => {
                 id="name-input"
                 name="name"
                 placeholder="Buscar..."
+                aria-label="Ingrese su búsqueda"
               />
               <button className="reset" type="reset"></button>
             </div>
@@ -52,6 +53,7 @@ export const HeaderSearch = (): JSX.Element => {
                 id="name-input"
                 name="name"
                 placeholder="Buscar..."
+                aria-label="Ingrese su búsqueda"
               />
               <button className="reset" type="reset"></button>
             </div>

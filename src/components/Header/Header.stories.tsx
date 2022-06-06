@@ -28,6 +28,7 @@ export const HeaderNoLogin = (): JSX.Element => {
                 id="name-input"
                 name="name"
                 placeholder="Buscar..."
+                aria-label="Ingrese su búsqueda"
               />
               <button className="reset" type="reset"></button>
             </div>
@@ -39,8 +40,7 @@ export const HeaderNoLogin = (): JSX.Element => {
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-expanded="false">
           Menú <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -65,6 +65,7 @@ export const HeaderNoLogin = (): JSX.Element => {
                       id="name-input"
                       name="name"
                       placeholder="Buscar..."
+                      aria-label="Ingrese su búsqueda"
                     />
                     <button className="reset" type="reset"></button>
                   </div>
@@ -102,6 +103,7 @@ export const HeaderLogin = (): JSX.Element => {
                 className="form-control form-control-sm input-search"
                 id="name-input"
                 name="name"
+                aria-label="Ingrese su búsqueda"
                 placeholder="Buscar..."
               />
               <button className="reset" type="reset"></button>
@@ -114,8 +116,7 @@ export const HeaderLogin = (): JSX.Element => {
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-expanded="false">
           Menú <span className="navbar-toggler-icon"></span>
         </button>
         <div className="list-group-content d-responsive ml-2">
@@ -159,6 +160,7 @@ export const HeaderLogin = (): JSX.Element => {
                       className="form-control form-control-sm input-search"
                       id="name-input"
                       name="name"
+                      id="header-search-example-4"
                       placeholder="Buscar..."
                     />
                     <button className="reset" type="reset"></button>
