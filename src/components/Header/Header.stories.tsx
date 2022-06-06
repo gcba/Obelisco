@@ -36,7 +36,6 @@ export const HeaderNoLogin = (): JSX.Element => {
         </div>
         <button
           className="navbar-toggler collapsed ml-2"
-          type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
@@ -112,7 +111,6 @@ export const HeaderLogin = (): JSX.Element => {
         </div>
         <button
           className="navbar-toggler collapsed ml-2"
-          type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
