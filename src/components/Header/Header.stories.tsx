@@ -16,8 +16,8 @@ export const HeaderNoLogin = (): JSX.Element => {
   return (
     <header className="navbar navbar-light navbar-md">
       <div className="container">
-        <a className="navbar-brand" href="#">
-          <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
+        <a href="#" className="navbar-brand">
+          <img className="header-logo" src="header/header-logo.svg" alt="Ciudad de buenos aires" />
         </a>
         <div className="navbar-search d-responsive ml-auto">
           <form className="form-search form-search-sm">
@@ -25,8 +25,8 @@ export const HeaderNoLogin = (): JSX.Element => {
               <input
                 type="search"
                 className="form-control form-control-sm input-search"
-                id="name-input"
-                name="name"
+                id="header-search-example-1"
+                name="header-search"
                 placeholder="Buscar..."
                 aria-label="Ingrese su búsqueda"
               />
@@ -46,12 +46,12 @@ export const HeaderNoLogin = (): JSX.Element => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a type="button" className="nav-link nav-link-sm active">
+              <a href="#" className="nav-link nav-link-sm active">
                 <span>Inicio</span>
               </a>
             </li>
             <li className="nav-item">
-              <a type="button" className="nav-link nav-link-sm">
+              <a href="#" className="nav-link nav-link-sm">
                 <span>Chateá con BOTI</span>
               </a>
             </li>
@@ -62,8 +62,8 @@ export const HeaderNoLogin = (): JSX.Element => {
                     <input
                       type="search"
                       className="form-control form-control-sm input-search"
-                      id="name-input"
-                      name="name"
+                      id="header-search-example-2"
+                      name="header-search"
                       placeholder="Buscar..."
                       aria-label="Ingrese su búsqueda"
                     />
@@ -73,7 +73,7 @@ export const HeaderNoLogin = (): JSX.Element => {
               </div>
             </li>
             <li className="nav-item">
-              <a type="button" className="btn btn-link">
+              <a href="#" className="btn btn-link">
                 <span>Accedé a tu cuenta</span>
               </a>
             </li>
@@ -101,8 +101,8 @@ export const HeaderLogin = (): JSX.Element => {
               <input
                 type="search"
                 className="form-control form-control-sm input-search"
-                id="name-input"
-                name="name"
+                id="header-search-example-3"
+                name="header-search"
                 aria-label="Ingrese su búsqueda"
                 placeholder="Buscar..."
               />
@@ -120,34 +120,34 @@ export const HeaderLogin = (): JSX.Element => {
           Menú <span className="navbar-toggler-icon"></span>
         </button>
         <div className="list-group-content d-responsive ml-2">
-          <a href="#" aria-label="logout" className="list-group-item list-group-item-logout logout-sm">
+          <a href="#" aria-label="Cerrar sesión" className="list-group-item list-group-item-logout logout-sm">
             &nbsp;
           </a>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a className="nav-link nav-link-sm active">
+              <a href="#" className="nav-link nav-link-sm active">
                 <span>Inicio</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link nav-link-sm">
+              <a href="#" className="nav-link nav-link-sm">
                 <span>Chateá con BOTI</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link nav-link-sm">
+              <a href="#" className="nav-link nav-link-sm">
                 <span>Mi actividad</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link nav-link-sm">
+              <a href="#" className="nav-link nav-link-sm">
                 <span>Mi cuenta</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link nav-link-sm">
+              <a href="#" aria-label="Notificaciones" className="nav-link nav-link-sm">
                 <i className="bx bxs-bell"></i>
               </a>
             </li>
@@ -158,9 +158,9 @@ export const HeaderLogin = (): JSX.Element => {
                     <input
                       type="search"
                       className="form-control form-control-sm input-search"
-                      id="name-input"
-                      name="name"
                       id="header-search-example-4"
+                      name="header-search"
+                      aria-label="Ingrese su búsqueda"
                       placeholder="Buscar..."
                     />
                     <button className="reset" type="reset"></button>
@@ -169,7 +169,7 @@ export const HeaderLogin = (): JSX.Element => {
               </div>
             </li>
             <li className="nav-item d-responsive">
-              <a href="#" aria-label="logout" className="list-group-item list-group-item-logout logout-sm">
+              <a href="#" aria-label="Cerrar sesión" className="list-group-item list-group-item-logout logout-sm">
                 &nbsp;
               </a>
             </li>
