@@ -38,6 +38,8 @@ $link-decoration: none;
 
 $btn-link-disabled-color: $grisulado-300;
 
+$btn-font-family: $font-family-headings;
+
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
@@ -96,6 +98,7 @@ $btn-link-disabled-color: $grisulado-300;
 .btn-link {
   font-weight: $btn-font-weight;
   background-color: $ghost;
+  color: $blue;
 
   @include hover() {
     background-color: $ghost-hover;
