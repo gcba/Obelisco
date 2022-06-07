@@ -168,6 +168,11 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
   }
 
   .navbar-search {
+
+    .form-group {
+      margin-bottom: 0;
+    }
+    
     @include media-breakpoint-down(sm) {
       &:is(.active-search) {
         width: 100%;
@@ -271,8 +276,6 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
 
   @include media-breakpoint-up(md) {
     .form-group {
-      margin-bottom: 0;
-
       .input-search {
         width: $navbar-search-with;
       }
