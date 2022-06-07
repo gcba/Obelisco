@@ -52,7 +52,8 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
     border: 2px $grisulado-50 solid;
     color: $grisulado-900;
     border-radius: 8px;
-    padding: 0.5rem 0.75rem;
+    padding: 0 0.75rem;
+    height: 44px;
   }
 
   .navbar-collapse {
@@ -215,7 +216,8 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
       border: 2px $grisulado-50 solid;
       color: $grisulado-900;
       border-radius: 8px;
-      padding: 0.5rem 0.75rem;
+      padding: 0 0.75rem;
+      height: 44px;
     }
 
     @include media-breakpoint-up(md) {
