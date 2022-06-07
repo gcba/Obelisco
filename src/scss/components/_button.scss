@@ -47,6 +47,15 @@ $btn-font-family: $font-family-headings;
 @import '~bootstrap/scss/buttons';
 
 /* === Custom styles === */
+@mixin btn-disabled {
+  &.disabled,
+  &:disabled {
+    background-color: $btn-disabled-bg;
+    color: $btn-disabled-color;
+    pointer-events: none;
+  }
+}
+
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
@@ -69,12 +78,7 @@ $btn-font-family: $font-family-headings;
       }
     }
 
-    &.disabled,
-    &:disabled {
-      background-color: $btn-disabled-bg;
-      color: $btn-disabled-color;
-      pointer-events: none;
-    }
+    @include btn-disabled;
 
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
@@ -100,6 +104,8 @@ $btn-font-family: $font-family-headings;
   background-color: $ghost;
   color: $blue;
 
+  @include btn-disabled;
+
   @include hover() {
     background-color: $ghost-hover;
     color: $link-color;
@@ -119,11 +125,6 @@ $btn-font-family: $font-family-headings;
       background-color: $ghost-hover;
       box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
     }
-  }
-
-  &:disabled,
-  &.disabled {
-    background-color: $btn-disabled-bg;
   }
 }
 

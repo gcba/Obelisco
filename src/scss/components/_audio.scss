@@ -1,0 +1,35 @@
+/* === Variable and mixins overides === */
+
+
+/* === Custom variables and mixins === */
+
+
+
+/* === Bootstrap Import === */
+
+
+/* === Custom styles === */
+
+
+audio {
+  background-color: $grisulado-10;
+  height: 40px;
+  width: 340px;
+  border: 2px solid $grisulado-50;
+  border-radius: 8px;
+  
+  &.audio-sm {
+    width: 292px;
+  }
+
+  &.audio-event {
+    border: none;
+    border-radius: 0;
+  }
+
+  &::-webkit-media-controls-enclosure {
+    background-color: $grisulado-10;
+  }  
+}
+
+

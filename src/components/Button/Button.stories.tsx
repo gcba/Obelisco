@@ -93,4 +93,3 @@ export const Expandible = (): JSX.Element => {
     </div>
   );
 };
-
