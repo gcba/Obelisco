@@ -21,7 +21,7 @@ export const HeaderNoLoginSearch = (): JSX.Element => {
         </a>
         <button
           className="navbar-toggler collapsed"
-          data-toggle="collapse"
+          data-o-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false">
@@ -64,7 +64,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
         </a>
         <button
           className="navbar-toggler collapsed ml-auto"
-          data-toggle="collapse"
+          data-o-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false">
