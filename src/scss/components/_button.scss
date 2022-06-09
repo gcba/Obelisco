@@ -3,7 +3,7 @@
 $btn-padding-y: spaceUnits(2);
 $btn-padding-x: 0.75rem;
 $btn-font-size: 1.125rem;
-$btn-line-height: 1.375;
+$btn-line-height: 1.378;
 $btn-focus-width: 0.125rem;
 $btn-font-weight: 600;
 
@@ -18,11 +18,12 @@ $input-btn-focus-width: 0.25rem;
 $btn-padding-y-sm: 0.25rem;
 $btn-padding-x-sm: 0.5rem;
 $btn-font-size-sm: 1rem;
+$btn-line-height-sm: $btn-line-height;
 
 $btn-padding-y-lg: spaceUnits(3);
 $btn-padding-x-lg: spaceUnits(3);
 $btn-font-size-lg: 1.125rem;
-$btn-line-height-lg: 1.375;
+$btn-line-height-lg: $btn-line-height;
 
 $btn-disabled-opacity: 1;
 
@@ -36,6 +37,8 @@ $box-shadow-button: theme-color-level('info', 3);
 $link-decoration: none;
 
 $btn-link-disabled-color: $grisulado-300;
+
+$btn-font-family: $font-family-headings;
 
 /* === Custom variables and mixins === */
 
@@ -57,6 +60,7 @@ $btn-link-disabled-color: $grisulado-300;
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     color: color-yiq($value) !important;
+    text-decoration: none;
 
     @include hover() {
       background-color: theme-color-level($color, 1);
@@ -98,6 +102,7 @@ $btn-link-disabled-color: $grisulado-300;
 .btn-link {
   font-weight: $btn-font-weight;
   background-color: $ghost;
+  color: $blue;
 
   @include btn-disabled;
 
@@ -123,18 +128,22 @@ $btn-link-disabled-color: $grisulado-300;
   }
 }
 
+a.btn {
+  text-decoration: none;
+}
+
 //
 // Button Sizes
 //
 
 .btn {
-  min-height: 40px;
+  max-height: 40px;
 
-  &.btn-sm {
-    min-height: 30px;
+  &-sm {
+    max-height: 30px;
   }
 
-  &.btn-lg {
-    min-height: 48px;
+  &-lg {
+    max-height: 48px;
   }
 }

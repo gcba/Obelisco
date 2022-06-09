@@ -75,78 +75,78 @@ export const SimpleConBordeEIcono = (): JSX.Element => (
 
 SimpleConBordeEIcono.story = { name: 'Simple Con Borde e Icono' };
 
-const doubleLevel = [
-  { name: 'Categorías', id: '0' },
-  {
-    name: 'Locales y comercios',
-    id: '1',
-    children: [
-      { name: 'Local Indumentaria y calzado. (Actividades comerciales de venta).', id: '1.1' },
-      { name: 'Locales gastronómicos: “para llevar/takeaway”', id: '1.2' },
-      { name: 'Locales de óptica', id: '1.3' },
-      { name: 'Comercial minorista (excluyendo indumentaria y calzado)', id: '1.4' }
-    ]
-  },
-  { name: 'Actividades jurídicas', id: '2' },
-  { name: 'Otras actividades', id: '3' }
-];
+// const doubleLevel = [
+//   { name: 'Categorías', id: '0' },
+//   {
+//     name: 'Locales y comercios',
+//     id: '1',
+//     children: [
+//       { name: 'Local Indumentaria y calzado. (Actividades comerciales de venta).', id: '1.1' },
+//       { name: 'Locales gastronómicos: “para llevar/takeaway”', id: '1.2' },
+//       { name: 'Locales de óptica', id: '1.3' },
+//       { name: 'Comercial minorista (excluyendo indumentaria y calzado)', id: '1.4' }
+//     ]
+//   },
+//   { name: 'Actividades jurídicas', id: '2' },
+//   { name: 'Otras actividades', id: '3' }
+// ];
 
-const tripleLevel = [
-  { name: 'Categorías', id: '0' },
-  {
-    name: 'Locales y comercios',
-    id: '1',
-    children: [
-      { name: 'Local Indumentaria y calzado. (Actividades comerciales de venta).', id: '1.1' },
-      {
-        name: 'Locales gastronómicos: “para llevar/takeaway”',
-        id: '1.2',
-        children: [
-          { name: 'Con local a la calle', id: '1.2.1' },
-          { name: 'Food trucks', id: '1.2.2' }
-        ]
-      },
-      { name: 'Locales de óptica', id: '1.3' },
-      { name: 'Comercial minorista (excluyendo indumentaria y calzado)', id: '1.4' }
-    ]
-  },
-  { name: 'Actividades jurídicas', id: '2' },
-  { name: 'Otras actividades', id: '3' }
-];
+// const tripleLevel = [
+//   { name: 'Categorías', id: '0' },
+//   {
+//     name: 'Locales y comercios',
+//     id: '1',
+//     children: [
+//       { name: 'Local Indumentaria y calzado. (Actividades comerciales de venta).', id: '1.1' },
+//       {
+//         name: 'Locales gastronómicos: “para llevar/takeaway”',
+//         id: '1.2',
+//         children: [
+//           { name: 'Con local a la calle', id: '1.2.1' },
+//           { name: 'Food trucks', id: '1.2.2' }
+//         ]
+//       },
+//       { name: 'Locales de óptica', id: '1.3' },
+//       { name: 'Comercial minorista (excluyendo indumentaria y calzado)', id: '1.4' }
+//     ]
+//   },
+//   { name: 'Actividades jurídicas', id: '2' },
+//   { name: 'Otras actividades', id: '3' }
+// ];
 
-export const Con2Niveles = (): JSX.Element => (
-  <div>
-    <NavHorizontal items={doubleLevel} navSize="large" selected="1.2" />
-  </div>
-);
+// export const Con2Niveles = (): JSX.Element => (
+//   <div>
+//     <NavHorizontal items={doubleLevel} navSize="large" selected="1.2" />
+//   </div>
+// );
 
-export const Con2NivelesConIcono = (): JSX.Element => (
-  <div>
-    <NavHorizontal items={doubleLevel} navSize="large" selected="1.2" hasIcon={true} />
-  </div>
-);
+// export const Con2NivelesConIcono = (): JSX.Element => (
+//   <div>
+//     <NavHorizontal items={doubleLevel} navSize="large" selected="1.2" hasIcon={true} />
+//   </div>
+// );
 
-export const Con3Niveles = (): JSX.Element => (
-  <div>
-    <NavHorizontal items={tripleLevel} navSize="large" selected="1.2.2" />
-  </div>
-);
+// export const Con3Niveles = (): JSX.Element => (
+//   <div>
+//     <NavHorizontal items={tripleLevel} navSize="large" selected="1.2.2" />
+//   </div>
+// );
 
-export const Con3NivelesConIcono = (): JSX.Element => (
-  <div>
-    <NavHorizontal items={tripleLevel} navSize="large" selected="1.2.2" hasIcon={true} />
-  </div>
-);
+// export const Con3NivelesConIcono = (): JSX.Element => (
+//   <div>
+//     <NavHorizontal items={tripleLevel} navSize="large" selected="1.2.2" hasIcon={true} />
+//   </div>
+// );
 
-export const Responsive = (): JSX.Element => (
-  <div>
-    <nav>
-      <a className="nav-link nav-mobile-trigger collapsed" data-toggle="collapse" href="#sidebar-nav">
-        Acerca de Obelisco
-      </a>
-      <div className="nav-responsive collapse" id="sidebar-nav">
-        <NavHorizontal items={tripleLevel} navSize="large" selected="1.2.2" />
-      </div>
-    </nav>
-  </div>
-);
+// export const Responsive = (): JSX.Element => (
+//   <div>
+//     <nav>
+//       <a className="nav-link nav-mobile-trigger collapsed" data-toggle="collapse" href="#sidebar-nav">
+//         Acerca de Obelisco
+//       </a>
+//       <div className="nav-responsive collapse" id="sidebar-nav">
+//         <NavHorizontal items={tripleLevel} navSize="large" selected="1.2.2" />
+//       </div>
+//     </nav>
+//   </div>
+// );

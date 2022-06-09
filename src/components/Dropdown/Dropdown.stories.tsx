@@ -203,10 +203,11 @@ export const SoloIcono = (): JSX.Element => (
       <button
         type="button"
         className="btn btn-dropdown"
+        aria-label="Dropdown"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
-        <span className="dropdown-user-icon ml-0"></span>
+        <span className="dropdown-user-icon ml-0">&nbsp;</span>
       </button>
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">

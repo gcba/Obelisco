@@ -1,13 +1,13 @@
 // Base
 import React from 'react';
-import './Progression.stories.scss';
+import './ProgressBar.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Componentes | Barra de progreso/ Con pasos',
+  title: 'Componentes | Barra de progreso',
   decorators: [withA11y]
 };
 

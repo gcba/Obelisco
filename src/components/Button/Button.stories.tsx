@@ -93,25 +93,3 @@ export const Expandible = (): JSX.Element => {
     </div>
   );
 };
-
-export const MuchoTexto = (): JSX.Element => {
-  return (
-    <div className="btn btn-success" role="button" tabIndex={0}>
-      No está bien que un botón tenga mucho texto, este es un caso extremo que usamos únicamente con propósitos de
-      prueba.
-      <br />
-      Por favor leer la documentación correspondiente en los estándares.
-    </div>
-  );
-};
-
-export const PocoTexto = (): JSX.Element => {
-  return (
-    <div className="btn btn-success" role="button" tabIndex={0}>
-      Lor
-    </div>
-  );
-};
-
-
-
