@@ -21,7 +21,7 @@ export const HeaderNoLogin = (): JSX.Element => {
         </a>
         <div className="navbar-search d-responsive ml-auto">
           <form className="form-search form-search-sm">
-            <div className="form-group">
+            <div className="form-group" data-form-search="true">
               <input
                 type="search"
                 className="form-control form-control-sm input-search"
@@ -36,7 +36,7 @@ export const HeaderNoLogin = (): JSX.Element => {
         </div>
         <button
           className="navbar-toggler collapsed ml-2"
-          data-toggle="collapse"
+          data-o-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false">
@@ -57,7 +57,7 @@ export const HeaderNoLogin = (): JSX.Element => {
             <li className="nav-item d-responsive">
               <div className="navbar-search">
                 <form className="form-search form-search-sm">
-                  <div className="form-group">
+                  <div className="form-group" data-form-search="true">
                     <input
                       type="search"
                       className="form-control form-control-sm input-search"
@@ -96,7 +96,7 @@ export const HeaderLogin = (): JSX.Element => {
         </a>
         <div className="navbar-search d-responsive ml-auto">
           <form className="form-search form-search-sm">
-            <div className="form-group">
+            <div className="form-group" data-form-search="true">
               <input
                 type="search"
                 className="form-control form-control-sm input-search"
@@ -111,7 +111,7 @@ export const HeaderLogin = (): JSX.Element => {
         </div>
         <button
           className="navbar-toggler collapsed ml-2"
-          data-toggle="collapse"
+          data-o-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false">
@@ -152,7 +152,7 @@ export const HeaderLogin = (): JSX.Element => {
             <li className="nav-item d-responsive">
               <div className="navbar-search">
                 <form className="form-search form-search-sm">
-                  <div className="form-group">
+                  <div className="form-group" data-form-search="true">
                     <input
                       type="search"
                       className="form-control form-control-sm input-search"

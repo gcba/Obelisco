@@ -115,34 +115,8 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
   }
 
   &.navbar-md {
-    @media screen and (max-width: 976px) {
+    @media screen and (max-width: 984px) {
       @include responsive;
-    }
-
-    @media screen and (max-width: 997px) {
-      .navbar-search {
-        &:is(.active-search) {
-          width: 100%;
-          .input-search {
-            width: 100%;
-          }
-        }
-
-        &:not(.active-search) {
-          .input-search {
-            width: 48px;
-            padding: $navbar-search-closed-padding;
-            background-position: center;
-            color: transparent;
-            pointer-events: none;
-            background-color: $white;
-
-            &::placeholder {
-              color: transparent;
-            }
-          }
-        }
-      }
     }
   }
 
