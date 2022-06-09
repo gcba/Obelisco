@@ -37,17 +37,23 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
 /* === Custom styles === */
 
-.flex-row {
-  gap: 0.625rem;
+.nav {
+  &.flex-row {
+    gap: 0.625rem;
 
-  .nav-item {
-    .nav-link {
-      max-height: 48px;
+    .nav-item {
+      .nav-link {
+        max-height: 48px;
 
-      &-sm {
-        max-height: 40px;
+        &-sm {
+          max-height: 40px;
+        }
       }
     }
+  }
+
+  &.flex-column {
+    gap: 0.188rem;
   }
 }
 
