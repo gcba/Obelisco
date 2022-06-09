@@ -54,6 +54,7 @@ export const HeaderSearch = (): JSX.Element => {
                 name="name"
                 placeholder="Buscar..."
                 aria-label="Ingrese su búsqueda"
+                value="coronavirus"
               />
               <button className="reset" type="reset"></button>
             </div>
