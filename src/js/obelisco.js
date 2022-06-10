@@ -14,6 +14,9 @@ const CLASS_ACTIVE_SEARCH = 'active-search';
 const CLASS_FORM_CONTROL_SM = 'form-control-sm';
 const CLASS_NAVBAR_TOGGLER_ICON = 'navbar-toggler-icon';
 const CLASS_NAVBAR_COLLAPSE = '.navbar-collapse';
+const CLASS_NAV = '.nav';
+const CLASS_NAV_PILL = '.nav-pills';
+const CLASS_COLLAPSE = '.collapse';
 
 function showInputSearch() {
   const headerSearch = document.querySelector(CLASS_NAVBAR_SEARCH);
@@ -66,6 +69,20 @@ function showInputSearch() {
   }
 }
 
+function buttonCollapsed() {
+  const buttonToggle = document.querySelector(CLASS_NAVBAR_COLLAPSE);
+  const navPill = document.querySelector(CLASS_NAV, CLASS_NAV_PILL);
+  const collapse = document.querySelector(CLASS_NAVBAR_COLLAPSE, CLASS_COLLAPSE, `.${CLASS_SHOW}`);
+
+  if (buttonToggle.classList.contains(CLASS_SHOW)) {
+    collapse.style.height = '0px';
+    buttonToggle.classList.remove(CLASS_SHOW);
+  } else {
+    collapse.style.height = `${navPill.getBoundingClientRect().height}px`;
+    buttonToggle.classList.add(CLASS_SHOW);
+  }
+}
+
 // Init
 (function (window, document) {
   document.addEventListener('DOMContentLoaded', () => {
@@ -80,15 +97,9 @@ function showInputSearch() {
           showInputSearch();
         }
 
-        // button toggle
+        // button collapsed
         if (event.target.dataset.oToggle === 'collapse' || event.target.classList.contains(CLASS_NAVBAR_TOGGLER_ICON)) {
-          const buttonToggle = document.querySelector(CLASS_NAVBAR_COLLAPSE);
-
-          if (buttonToggle.classList.contains(CLASS_SHOW)) {
-            buttonToggle.classList.remove(CLASS_SHOW);
-          } else {
-            buttonToggle.classList.add(CLASS_SHOW);
-          }
+          buttonCollapsed();
         }
       },
       false

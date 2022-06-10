@@ -62,8 +62,17 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
     float: right;
     align-items: flex-end;
 
-    &.collapse:not(.show) {
-      display: none;
+    &.collapse {
+      &:not(.show) {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s ease height;
+      }
+
+      &.show {
+        overflow: hidden;
+        transition: 0.5s ease height;
+      }
     }
 
     .nav {
@@ -211,8 +220,17 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
       float: right;
       align-items: flex-end;
 
-      &.collapse:not(.show) {
-        display: none;
+      &.collapse {
+        &:not(.show) {
+          height: 0;
+          overflow: hidden;
+          transition: 0.5s ease height;
+        }
+  
+        &.show {
+          overflow: hidden;
+          transition: 0.5s ease height;
+        }
       }
 
       .nav {
