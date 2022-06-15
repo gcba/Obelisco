@@ -18,18 +18,22 @@ const CLASS_NAV = '.nav';
 const CLASS_NAV_PILL = '.nav-pills';
 const CLASS_COLLAPSE = '.collapse';
 
-function showInputSearch() {
-  const headerSearch = document.querySelector(CLASS_NAVBAR_SEARCH);
-  const navbarBrand = document.querySelector(CLASS_NAVBAR_BRAND);
-  const navbarToggler = document.querySelector(CLASS_NAVBAR_TOGGLE);
-  const buttonSignOut = document.querySelector(CLASS_LIST_GROUP_CONTENT);
-  const formSearch = document.querySelector(CLASS_FORM_SEARCH_SM);
+function showInputSearch(): void {
+  const headerSearch = document.querySelector(CLASS_NAVBAR_SEARCH) as HTMLElement;
+  const navbarBrand = document.querySelector(CLASS_NAVBAR_BRAND) as HTMLElement;
+  const navbarToggler = document.querySelector(CLASS_NAVBAR_TOGGLE) as HTMLElement;
+  const buttonSignOut = document.querySelector(CLASS_LIST_GROUP_CONTENT) as HTMLElement;
+  const formSearch = document.querySelector(CLASS_FORM_SEARCH_SM) as HTMLElement;
 
-  const formGroup = document.querySelector(CLASS_FORM_GROUP);
-  const inputSearch = formGroup.dataset.formSearch === 'true' && formGroup.children[0];
+  const formGroup = document.querySelector(CLASS_FORM_GROUP) as HTMLElement;
 
-  if (!headerSearch.classList.contains(CLASS_ACTIVE_SEARCH)) {
-    headerSearch.classList.add(CLASS_ACTIVE_SEARCH);
+  let inputSearch: HTMLInputElement;
+  if (formGroup?.['dataset'].formSearch === 'true') {
+    inputSearch = formGroup.children[0] as HTMLInputElement;
+  }
+
+  if (!headerSearch?.classList.contains(CLASS_ACTIVE_SEARCH)) {
+    headerSearch?.classList.add(CLASS_ACTIVE_SEARCH);
     navbarBrand.style.display = 'none';
     headerSearch.style.display = 'block';
     navbarToggler.style.display = 'none';
@@ -50,17 +54,20 @@ function showInputSearch() {
     formSearch.style.justifyContent = 'space-between';
     formSearch.style.gap = '0.938rem';
     formGroup.style.height = '2.75rem';
-    formSearch.appendChild(closeSearch);
+    formSearch?.appendChild(closeSearch);
 
     closeSearch.addEventListener('click', () => {
-      headerSearch.classList.remove(CLASS_ACTIVE_SEARCH);
+      headerSearch?.classList.remove(CLASS_ACTIVE_SEARCH);
       navbarBrand.style.display = 'inline-block';
       navbarToggler.style.display = 'inline';
 
-      inputSearch.value = null;
-      formSearch.removeChild(closeSearch);
-      formSearch.style = null;
-      formGroup.style = null;
+      inputSearch.value = '';
+      formSearch?.removeChild(closeSearch);
+      formSearch.style.display = '';
+      formSearch.style.alignItems = '';
+      formSearch.style.justifyContent = '';
+      formSearch.style.gap = '';
+      formGroup.style.height = '';
 
       if (buttonSignOut) {
         buttonSignOut.style.display = 'block';
@@ -69,17 +76,17 @@ function showInputSearch() {
   }
 }
 
-function buttonCollapsed() {
-  const buttonToggle = document.querySelector(CLASS_NAVBAR_COLLAPSE);
-  const navPill = document.querySelector(CLASS_NAV, CLASS_NAV_PILL);
-  const collapse = document.querySelector(CLASS_NAVBAR_COLLAPSE, CLASS_COLLAPSE, `.${CLASS_SHOW}`);
+function buttonCollapsed(): void {
+  const buttonToggle = document.querySelector(CLASS_NAVBAR_COLLAPSE) as HTMLButtonElement;
+  const navPill = document.querySelector(`${CLASS_NAV}, ${CLASS_NAV_PILL}`) as HTMLUListElement;
+  const collapse = document.querySelector(`${CLASS_NAVBAR_COLLAPSE}, ${CLASS_COLLAPSE}, .${CLASS_SHOW}`) as HTMLElement;
 
-  if (buttonToggle.classList.contains(CLASS_SHOW)) {
+  if (buttonToggle?.classList.contains(CLASS_SHOW)) {
     collapse.style.height = '0px';
-    buttonToggle.classList.remove(CLASS_SHOW);
+    buttonToggle?.classList.remove(CLASS_SHOW);
   } else {
-    collapse.style.height = `${navPill.getBoundingClientRect().height}px`;
-    buttonToggle.classList.add(CLASS_SHOW);
+    collapse.style.height = `${navPill?.getBoundingClientRect().height}px`;
+    buttonToggle?.classList.add(CLASS_SHOW);
   }
 }
 
@@ -91,14 +98,17 @@ function buttonCollapsed() {
       function (event) {
         // navbar input search
         if (
-          event.target.dataset.formSearch === 'true' &&
-          event.target.children[0].classList.contains(CLASS_FORM_CONTROL_SM)
+          event?.target?.['dataset'].formSearch === 'true' &&
+          event?.target?.['children'][0].classList.contains(CLASS_FORM_CONTROL_SM)
         ) {
           showInputSearch();
         }
 
         // button collapsed
-        if (event.target.dataset.oToggle === 'collapse' || event.target.classList.contains(CLASS_NAVBAR_TOGGLER_ICON)) {
+        if (
+          event?.target?.['dataset'].oToggle === 'collapse' ||
+          event?.target?.['classList'].contains(CLASS_NAVBAR_TOGGLER_ICON)
+        ) {
           buttonCollapsed();
         }
       },
