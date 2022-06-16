@@ -64,6 +64,15 @@ Un ejemplo de cómo importalas es:
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 ```
 
+Además Obelisco cuenta con funcionalidades propias.
+
+El archivo js está ubicado en `/dist/js/obelisco.js` y el archivo principal de js en `/src/js/obelisco.js`.
+
+Para importar el js, podemos hacerlo de la siguiente forma:
+```
+<script src="ruta/al/proyecto/dist/js/obelisco.js"></script>
+```
+
 > **Importante**<br>
 > Revisá las [versiones y herramientas aceptadas](https://asijira-confluence.buenosaires.gob.ar/display/ASI/Versiones++y+Herramientas+aceptadas+por+la+ASI) por la **Agencia de Seguridad Informática (ASI)** del Gobierno de la Ciudad antes de elegir una versión de estas dependencias.
 
