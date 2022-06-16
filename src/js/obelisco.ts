@@ -85,7 +85,8 @@ function buttonCollapsed(): void {
     collapse.style.height = '0px';
     buttonToggle?.classList.remove(CLASS_SHOW);
   } else {
-    collapse.style.height = `${navPill?.getBoundingClientRect().height}px`;
+    collapse.style.height = `${navPill?.getBoundingClientRect().height + 3}px`;
+    navPill.style.margin = '0 3px 3px 0';
     buttonToggle?.classList.add(CLASS_SHOW);
   }
 }
