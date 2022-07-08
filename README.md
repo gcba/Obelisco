@@ -53,6 +53,20 @@ Obelisco requiere las tipografías **Nunito** y **Open sans** disponibles en goo
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"></link>
 ```
 
+### Iconografía
+
+Obelisco utiliza la librería de Boxicons que se puede instalar de las siguientes maneras:
+
+Utilizando el paquete npm:
+```
+npm install boxicons
+```
+
+Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
+```
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+```
+
 ### Javascript
 
 Como Obelisco está construido sobre bootstrap 4, [debemos tener esas dependencias](https://getbootstrap.com/docs/4.6/getting-started/introduction/#js).
