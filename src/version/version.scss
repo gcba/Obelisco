@@ -1,0 +1,9 @@
+.version-ul {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+
+  li {
+    cursor: pointer
+  }
+}
