@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Formulario/Lista de selección',
+  title: 'Formulario|Lista de selección',
   decorators: [withA11y]
 };
 

@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Formulario/Checkbox',
+  title: 'Formulario|Checkbox',
   decorators: [withA11y]
 };
 
@@ -123,13 +123,19 @@ export const BotonCheck = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
       <input type="checkbox" className="btn-check" id="btn-check" autoComplete="off" />
-      <label className="btn btn-chip btn-sm" htmlFor="btn-check">Checkbox button</label>
+      <label className="btn btn-chip btn-sm" htmlFor="btn-check">
+        Checkbox button
+      </label>
 
       <input type="checkbox" className="btn-check" id="btn-check2" autoComplete="off" />
-      <label className="btn btn-chip btn-sm" htmlFor="btn-check2">Checkbox button</label>
+      <label className="btn btn-chip btn-sm" htmlFor="btn-check2">
+        Checkbox button
+      </label>
 
       <input type="checkbox" className="btn-check" id="btn-check3" autoComplete="off" disabled />
-      <label className="btn btn-chip btn-sm disabled" htmlFor="btn-check3">Checkbox button</label>
+      <label className="btn btn-chip btn-sm disabled" htmlFor="btn-check3">
+        Checkbox button
+      </label>
     </div>
   );
 };

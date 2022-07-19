@@ -10,7 +10,7 @@ import { Button } from '../Button';
 
 // Config
 export default {
-  title: 'Componentes|Tablas',
+  title: 'Contenido|Tablas',
   component: Table,
   decorators: [withA11y]
 };
