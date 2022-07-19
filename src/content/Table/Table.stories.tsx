@@ -6,7 +6,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Components
 import { Table, TableCellContet } from '.';
-import { Button } from '../Button';
+import { Button } from '../../components/Button';
 
 // Config
 export default {

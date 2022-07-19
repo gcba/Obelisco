@@ -4,14 +4,14 @@ import React from 'react';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-import './List-group.stories.scss';
-import { BigAccess } from './BigAccess.stories';
 import { AccesIcon } from './AccesIcon.stories';
-import { SmallAccess } from './SmallAcces.stories';
 import { AccessList } from './AccessList.stories';
-import { SmallAccessDescription } from './SmallAccessDescription.stories';
 import { AccessListCategory } from './AccessListCategory.stories';
+import { BigAccess } from './BigAccess.stories';
+import './List-group.stories.scss';
 import { AccessListDescriptive } from './ListAccessDescriptive.stories';
+import { SmallAccess } from './SmallAcces.stories';
+import { SmallAccessDescription } from './SmallAccessDescription.stories';
 
 // Configuración del general del componente
 export default {
