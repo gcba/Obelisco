@@ -6,7 +6,7 @@ import './Nav.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { NavHorizontal } from '.';
+import { NavHorizontal, NavItem } from '.';
 
 // Configuración del general del componente
 export default {
@@ -34,9 +34,10 @@ export const SimpleConIcono = (): JSX.Element => (
   </div>
 );
 
-const simpleItemsSizes = [
-  { name: 'Link', id: '1', hasBordered: true },
-  { name: 'Link', id: '2', hasBordered: true, isSize: true }
+const simpleItemsSizes: NavItem[] = [
+  { name: 'Link', id: '1', hasBordered: true, type: 'large' },
+  { name: 'Link', id: '2', hasBordered: true, type: 'default' },
+  { name: 'Link', id: '3', hasBordered: true, type: 'small' }
 ];
 
 export const Tamanos = (): JSX.Element => (
@@ -56,7 +57,7 @@ const simpleItemsBorder = [
 
 export const SimpleConBorde = (): JSX.Element => (
   <div>
-    <NavHorizontal items={simpleItemsBorder} selected="2" hasBordered={true} />
+    <NavHorizontal items={simpleItemsBorder} selected="2" />
   </div>
 );
 
@@ -69,7 +70,7 @@ const simpleItemsBorderIcon = [
 
 export const SimpleConBordeEIcono = (): JSX.Element => (
   <div>
-    <NavHorizontal items={simpleItemsBorderIcon} selected="2" hasBordered={true} hasIcon={true} />
+    <NavHorizontal items={simpleItemsBorderIcon} selected="2" hasIcon={true} />
   </div>
 );
 

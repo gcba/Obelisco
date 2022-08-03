@@ -1,12 +1,15 @@
 import * as React from 'react';
 import classnames from 'classnames';
+import { Size } from '../utils';
 
 export interface NavItem {
   name: string;
   id: string;
+  type?: Size;
   href?: string;
   disabled?: boolean;
   children?: NavItem[];
+  hasBordered?: boolean;
 }
 
 export interface NavProps {
@@ -14,7 +17,6 @@ export interface NavProps {
   selected?: string;
   navSize?: 'default' | 'large';
   onClick?: (id: string) => void;
-  hasBordered?: boolean;
   hasIcon?: boolean;
 }
 
@@ -58,6 +60,7 @@ export const NavHorizontal: React.FC<NavProps> = (props: React.PropsWithChildren
             onClick={onClick}
             selected={selected}
             hasIcon={hasIcon}
+            type={item.type}
           />
         ))}
       </ul>
@@ -70,7 +73,7 @@ interface NavItemComponentProps extends NavItem {
   selected?: string;
   onClick?: (id: string) => void;
   hasBordered?: boolean;
-  isSize?: boolean;
+  type?: Size;
   hasIcon?: boolean;
 }
 
@@ -129,13 +132,14 @@ const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemCompone
 };
 
 const NavItemComponentHorizontal: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
-  const { name, id, href, children, level, disabled, selected, hasBordered, isSize, hasIcon } = props;
+  const { name, id, href, children, level, disabled, selected, hasBordered, type, hasIcon } = props;
 
   const isActive = selected && id === selected;
   const hasActiveChild = checkActiveChild(children, selected);
 
   const linkClassName = classnames('nav-link', {
-    'nav-link-sm': isSize,
+    'nav-link-sm': type === 'small',
+    'nav-link-lg': type === 'large',
     'border-link': hasBordered,
     'active-child': !disabled && hasActiveChild,
     active: !disabled && isActive,
