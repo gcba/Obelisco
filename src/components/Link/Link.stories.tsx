@@ -55,3 +55,18 @@ export const Descarga = (): JSX.Element => {
     </div>
   );
 };
+
+export const Acceso = (): JSX.Element => {
+  return (
+    <div>
+      <p>
+        You never see a frog so modest and{' '}
+        <a className="access" href="#" target="_blank" rel="noreferrer">
+          enlace de acceso
+        </a>{' '}
+        as he was, for all he was so gifted. And when it come to fair and square jumping on a dead level, he could get
+        over more ground at one straddle than any animal of his breed you ever see.
+      </p>
+    </div>
+  );
+};
