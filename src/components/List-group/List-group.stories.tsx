@@ -19,56 +19,15 @@ export default {
   decorators: [withA11y]
 };
 
-export const Accesos = (): JSX.Element => (
-  <div>
-    <BigAccess />
-  </div>
-);
+export const Accesos = (): JSX.Element => <BigAccess />;
 
-export const AccesoConIcono = (): JSX.Element => {
-  return (
-    <div>
-      <AccesIcon />
-    </div>
-  );
-};
+export const AccesoConIcono = (): JSX.Element => <AccesIcon />;
+export const AccesoChico = (): JSX.Element => <SmallAccess />;
 
-export const AccesoChico = (): JSX.Element => {
-  return (
-    <div>
-      <SmallAccess />
-    </div>
-  );
-};
+export const AccesoChicoConDescripcion = (): JSX.Element => <SmallAccessDescription />;
 
-export const AccesoChicoConDescripcion = (): JSX.Element => {
-  return (
-    <div>
-      <SmallAccessDescription />
-    </div>
-  );
-};
+export const ListaDeAccesos = (): JSX.Element => <AccessList />;
 
-export const ListaDeAccesos = (): JSX.Element => {
-  return (
-    <div>
-      <AccessList />
-    </div>
-  );
-};
+export const ListaDeAccesosConCategoria = (): JSX.Element => <AccessListCategory />;
 
-export const ListaDeAccesosConCategoria = (): JSX.Element => {
-  return (
-    <div>
-      <AccessListCategory />
-    </div>
-  );
-};
-
-export const ListaDeAccesosDescriptivo = (): JSX.Element => {
-  return (
-    <div>
-      <AccessListDescriptive />
-    </div>
-  );
-};
+export const ListaDeAccesosDescriptivo = (): JSX.Element => <AccessListDescriptive />;
