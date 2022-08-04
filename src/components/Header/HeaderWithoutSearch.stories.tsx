@@ -30,12 +30,12 @@ export const HeaderNoLoginSearch = (): JSX.Element => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a href="#" className="nav-link nav-link-sm active">
+              <a href="#" className="nav-link active">
                 <span>Inicio</span>
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link nav-link-sm">
+              <a href="#" className="nav-link">
                 <span>Chateá con BOTI</span>
               </a>
             </li>
@@ -78,27 +78,27 @@ export const HeaderLoginSearch = (): JSX.Element => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a href="#" className="nav-link nav-link-sm active">
+              <a href="#" className="nav-link active">
                 <span>Inicio</span>
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link nav-link-sm">
+              <a href="#" className="nav-link">
                 <span>Chateá con BOTI</span>
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link nav-link-sm">
+              <a href="#" className="nav-link">
                 <span>Mi actividad</span>
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link nav-link-sm">
+              <a href="#" className="nav-link">
                 <span>Mi cuenta</span>
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" aria-label="Notificaciones" className="nav-link nav-link-sm">
+              <a href="#" aria-label="Notificaciones" className="nav-link">
                 <i className="bx bxs-bell"></i>
               </a>
             </li>
