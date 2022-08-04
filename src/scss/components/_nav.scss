@@ -123,23 +123,14 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   font-family: $font-family-headings;
   @include border-radius($border-radius * 2);
 
-  &-sm {
-    padding: 0.5rem 0.75rem;
-  }
-
   &.border-link {
     box-shadow: 0 0 0 2px $grisulado-50;
   }
 
-  .nav-icon {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
     i {
       font-size: 20px;
+      vertical-align: middle;
     }
-  }
 
   @include hover() {
     box-shadow: $input-btn-hover-box-shadow;
