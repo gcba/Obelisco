@@ -57,6 +57,10 @@ a.list-group-item {
   border-radius: $list-group-border;
   margin-bottom: 1rem;
   padding: $list-gorup-padding-y $list-gorup-padding-x;
+  
+  &:visited {
+    color: $list-group-color;
+  }
 
   &:first-child {
     border-radius: $list-group-border;
@@ -69,6 +73,10 @@ a.list-group-item {
 
   &.list-group-item-logout {
     box-shadow: $box-shadow-access-hover-danger;
+    
+    &:visited {
+      color: $danger;
+    }
 
     &.logout-sm {
       padding: 0.525rem 0.75rem;
