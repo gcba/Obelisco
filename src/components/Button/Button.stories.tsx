@@ -31,6 +31,9 @@ export const Colores = (): JSX.Element => {
           {type}
         </Button>
       ))}
+      <a className="btn btn-primary" href="#" target="_blank">
+        enlace
+      </a>
     </div>
   );
 };
@@ -43,6 +46,9 @@ export const ConFoco = (): JSX.Element => {
           {type}
         </Button>
       ))}
+      <a className="btn btn-primary focus" href="#" target="_blank">
+        enlace
+      </a>
     </div>
   );
 };
@@ -55,6 +61,9 @@ export const Activos = (): JSX.Element => {
           {type}
         </Button>
       ))}
+      <a className="btn btn-primary active" href="#" target="_blank">
+        enlace
+      </a>
     </div>
   );
 };
@@ -67,6 +76,9 @@ export const Tamanos = (): JSX.Element => {
           {size}
         </Button>
       ))}
+      <a className="btn btn-secondary" href="#" target="_blank">
+        enlace
+      </a>
     </div>
   );
 };

@@ -49,26 +49,21 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
 
 /* === Custom styles === */
 
-.list-group-item + .list-group-item {
-  border-top-width: 2px;
-}
-
-.list-group-container .group-access {
-  margin-bottom: 1rem;
-}
-
 a.list-group-item {
   text-decoration: $no-text-decoration;
   color: $list-group-color;
   border: none;
   box-shadow: $box-shadow-access;
   border-radius: $list-group-border;
-  margin-bottom: 2px;
+  margin-bottom: 1rem;
   padding: $list-gorup-padding-y $list-gorup-padding-x;
+  
+  &:visited {
+    color: $list-group-color;
+  }
 
   &:first-child {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: $list-group-border;
   }
 
   &:last-child {
@@ -78,6 +73,10 @@ a.list-group-item {
 
   &.list-group-item-logout {
     box-shadow: $box-shadow-access-hover-danger;
+    
+    &:visited {
+      color: $danger;
+    }
 
     &.logout-sm {
       padding: 0.525rem 0.75rem;
@@ -237,6 +236,12 @@ a.list-group-item {
 }
 
 .group-access {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
   .card-access {
     width: 100%;
     box-shadow: $box-shadow-access;

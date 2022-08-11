@@ -32,6 +32,10 @@ $divider-border: 0.125rem solid $grisulado-700;
   a {
     @extend .text-white;
     text-decoration: underline;
+    
+    &:visited {
+      @extend .text-white;
+    }
 
     .bx {
       font-size: $footer-icon-size;

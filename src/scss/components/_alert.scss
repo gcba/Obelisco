@@ -108,6 +108,10 @@ $theme-colors: map-merge(
 
   a {
     color: $blue;
+
+    &:visited {
+      color: $blue;
+    }
   }
 }
 

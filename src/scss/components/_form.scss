@@ -92,8 +92,11 @@ $form-validation-states: (
     font-weight: $label-font-weight;
   }
 
-  &.disabled label {
-    color: $input-disabled-color;
+  &.disabled  {
+    label, .form-control, .reset {
+      color: $input-disabled-color;
+      pointer-events: none;
+    }
   }
 
   .input-search,
@@ -145,6 +148,7 @@ $form-validation-states: (
 .custom-select {
   transition: none;
   border: none;
+  border-radius: $border-radius-lg;
   box-shadow: $input-box-shadow;
   margin: $input-border-width;
   width: calc(100% - #{$input-border-width * 2});
@@ -208,6 +212,7 @@ $form-validation-states: (
   &:disabled,
   &[readonly] {
     color: $input-disabled-color;
+    pointer-events: none;
   }
 }
 
@@ -260,6 +265,7 @@ $form-validation-states: (
 
   &:disabled ~ .custom-control-label {
     color: $custom-select-disabled-color;
+    pointer-events: none;
 
     &:before {
       border-color: $input-disabled-color;
