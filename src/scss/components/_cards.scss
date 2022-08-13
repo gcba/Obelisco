@@ -387,7 +387,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 
   @include media-breakpoint-down(sm) {
-    .card {
+    .card.card-horizontal .card-img-left-panel {
       margin-top: 0px;
     }
   }
