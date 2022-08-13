@@ -50,6 +50,15 @@ $collapse-info-subtitle-size: 0.825rem;
 
 $accordion-margin: 0.75rem;
 
+$panel-deck-mt: 2.5rem;
+$card-panel-img-size: 3.75rem;
+$card-panel-img-mt: 1.25rem;
+$card-panel-card-body-pl: 1rem;
+$panel-deck-card-mb: 1.5rem;
+$panel-deck-card-mr: 2rem;
+
+
+
 $accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
 $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
 
@@ -93,16 +102,15 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 
-@mixin card-panel {
+@mixin panel-deck {
   .card {
     flex: 1 0 35%;
     margin-top: 0;
     &:nth-of-type(n + 3) {
-      margin-top: $card-deck-margin-top;
+      margin-top: $panel-deck-mt;
     }
   }
 }
-
 
 @mixin card-deck-1 {
   .card {
@@ -158,6 +166,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
   .card-text-panel {
     margin-top: $card-spacer / 4;
+    margin-bottom: 0px;
   }
 
   .card-footer {
@@ -271,18 +280,17 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         padding: $card-spacer-sm;
       }
     }
-    
+
     .card-img-left-panel {
-      width: 3.75rem;
-      height: 3.75rem;
-      // margin: $card-spacer-sm;
-      // margin-top: 0;
+      width: $card-panel-img-size;
+      height: $card-panel-img-size;
+      margin-top: $card-panel-img-mt;
       border-radius: $card-border-radius;
       object-fit: cover;
       flex-shrink: 0;
 
       + .card-body {
-        padding-left: 1rem;
+        padding-left: $card-panel-card-body-pl;
       }
     }
 
@@ -351,7 +359,34 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 .card-deck {
   @include card-deck-2;
+}
 
+.panel-deck {
+  .card {
+    margin-bottom: $panel-deck-card-mb;
+  }
+  .card.card-horizontal.card-simple.card-horizontal {
+    flex-direction: row;
+  }
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -$card-deck-margin;
+    margin-left: -$card-deck-margin;
+
+    .card {
+      flex: 1 0 0%;
+      margin-right: $panel-deck-card-mr;
+      margin-bottom: 0px;
+    }
+    .card.card-horizontal.card-simple.card-horizontal {
+      margin-bottom: 0px;
+    }
+    .card.card-horizontal .card-img-left-panel {
+      margin-top: 0px;
+    }
+    @include panel-deck;
+  }
 }
 
 @include media-breakpoint-up(md) {
@@ -498,7 +533,6 @@ button.card {
             content: 'Ver detalle';
           }
         }
-
       }
 
       &.accordion-card-icon {
@@ -521,7 +555,6 @@ button.card {
             }
           }
         }
-
       }
     }
 

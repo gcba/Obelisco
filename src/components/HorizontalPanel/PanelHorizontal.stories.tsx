@@ -16,7 +16,7 @@ export default {
 export const PanelHorizontal = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="card-deck max-cards-2">
+      <div className="panel-deck max-cards-2">
         <div className="card card-simple card-horizontal">
           <img src="horizontal-panel/server.png" className="card-img-left-panel" alt="descripción alternativa" />
           <div className="card-body">
