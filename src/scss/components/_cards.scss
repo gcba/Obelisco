@@ -53,6 +53,7 @@ $accordion-margin: 0.75rem;
 $panel-spacer-lg: 2rem;
 $panel-title-margin-vertical: 1.5rem 0 0.813rem 0;
 $panel-title-margin-horizontal: 2.5rem 0 0.813rem 0;
+$panel-title-margin-horizontal-sm: 1.5rem 0 0.813rem 0;
 $panel-text-margin-bottom: 1.5rem;
 $panel-link-margin-left: 1rem;
 
@@ -326,7 +327,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 
-
   &.panel-horizontal {
     flex-direction: row;
 
@@ -359,17 +359,19 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         @extend .h2;
         font-weight: 600;
         margin: $panel-title-margin-horizontal;
+
+        @include media-breakpoint-down(md) {
+          margin: $panel-title-margin-horizontal-sm;
+        }
       }
 
       .card-text {
         margin-bottom: $panel-text-margin-bottom;
       }
 
-      @include media-breakpoint-down(md) {
-        .card-link {
-          + .card-link {
-            margin-left: $panel-link-margin-left;
-          }
+      .card-link {
+        + .card-link {
+          margin-left: $panel-link-margin-left;
         }
       }
     }
@@ -404,11 +406,9 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         margin-bottom: $panel-text-margin-bottom;
       }
 
-      @include media-breakpoint-down(md) {
-        .card-link {
-          + .card-link {
-            margin-left: $panel-link-margin-left;
-          }
+      .card-link {
+        + .card-link {
+          margin-left: $panel-link-margin-left;
         }
       }
     }
@@ -563,7 +563,6 @@ button.card {
             content: 'Ver detalle';
           }
         }
-
       }
 
       &.accordion-card-icon {
@@ -586,7 +585,6 @@ button.card {
             }
           }
         }
-
       }
     }
 
