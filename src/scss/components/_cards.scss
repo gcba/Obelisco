@@ -88,7 +88,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     flex: 1 0 35%;
     margin-top: 0;
     &:nth-of-type(n + 3) {
-      margin-top:  $card-deck-margin-top;
+      margin-top: $card-deck-margin-top;
     }
   }
 }
@@ -98,7 +98,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     flex: 1 0 35%;
     margin-top: 0;
     &:nth-of-type(n + 3) {
-      margin-top: 10px;
+      margin-top: $card-deck-margin-top;
     }
   }
 }
@@ -353,10 +353,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   @include card-deck-2;
 
 }
-.panel-deck {
-  @include card-panel;
-  
-}
 
 @include media-breakpoint-up(md) {
   .card-deck:not(.max-cards-2),
@@ -372,23 +368,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.max-cards-1 {
-  @include card-deck-1;
-}
-
-@include media-breakpoint-up(md) {
-  .panel-deck:not(.max-cards-2),
-  .panel-deck.max-cards-3 {
-    @include card-deck-3;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .panel-deck:not(.max-cards-2):not(.max-cards-3) {
-    @include card-deck-4;
-  }
-}
-
-.panel-deck.max-cards-1 {
   @include card-deck-1;
 }
 
