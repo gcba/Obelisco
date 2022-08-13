@@ -16,7 +16,7 @@ export default {
 export const BtnDownload = (): JSX.Element => {
   return (
     <div className="panel-container">
-      <div className="card card-simple">
+      <div className="card card-simple panel-list-link">
         <img src="cards/paseobajo-wide.png" className="rounded-lg mb-4" width={154} height={154}  alt="descripción alternativa" />
         <div className="card-body">          
           <h3 className="card-title">Lista de enlaces con imagen</h3>
@@ -32,7 +32,7 @@ export const BtnDownload = (): JSX.Element => {
       </div>
       <br />
       <br />
-      <div className="card card-simple">
+      <div className="card card-simple panel-list-link">
         <img src="cards/paseobajo-wide.png" className="rounded-lg mb-4" width={154} height={154}  alt="descripción alternativa" />
         <div className="card-body">          
           <h3 className="card-title">Lista de enlaces con imagen</h3>
@@ -45,7 +45,7 @@ export const BtnDownload = (): JSX.Element => {
       </div>
       <br />
       <br />
-      <div className="card card-simple">
+      <div className="card card-simple panel-list-link">
         <div className="card-body">          
           <h3 className="card-title">Lista de enlaces</h3>
           <p className="card-text">
@@ -67,7 +67,7 @@ BtnDownload.story = { name: 'Botón descarga' };
 export const BtnLink = (): JSX.Element => {
   return (
     <div className="panel-container">
-      <div className="card card-simple">
+      <div className="card card-simple panel-list-link">
         <img src="cards/paseobajo-wide.png" className="rounded-lg mb-4" width={154} height={154}  alt="descripción alternativa" />
         <div className="card-body">          
           <h3 className="card-title">Lista de enlaces con imagen</h3>
@@ -83,7 +83,7 @@ export const BtnLink = (): JSX.Element => {
       </div>
       <br />
       <br />
-      <div className="card card-simple">
+      <div className="card card-simple panel-list-link">
         <img src="cards/paseobajo-wide.png" className="rounded-lg mb-4" width={154} height={154}  alt="descripción alternativa" />
         <div className="card-body">          
           <h3 className="card-title">Lista de enlaces con imagen</h3>
@@ -96,7 +96,7 @@ export const BtnLink = (): JSX.Element => {
       </div>
       <br />
       <br />
-      <div className="card card-simple">
+      <div className="card card-simple panel-list-link">
         <div className="card-body">          
           <h3 className="card-title">Lista de enlaces</h3>
           <p className="card-text">
@@ -118,7 +118,7 @@ BtnLink.story = { name: 'Con enlace' };
 export const BtnLinkDownload = (): JSX.Element => {
   return (
     <div className="panel-container">
-      <div className="card card-simple">
+      <div className="card card-simple panel-list-link">
         <img src="cards/paseobajo-wide.png" className="rounded-lg mb-4" width={154} height={154}  alt="descripción alternativa" />
         <div className="card-body">          
           <h3 className="card-title">Lista de enlaces con imagen</h3>
@@ -134,7 +134,7 @@ export const BtnLinkDownload = (): JSX.Element => {
       </div>
       <br />
       <br />
-      <div className="card card-simple">
+      <div className="card card-simple panel-list-link">
         <img src="cards/paseobajo-wide.png" className="rounded-lg mb-4" width={154} height={154}  alt="descripción alternativa" />
         <div className="card-body">          
           <h3 className="card-title">Lista de enlaces con imagen</h3>
@@ -147,7 +147,7 @@ export const BtnLinkDownload = (): JSX.Element => {
       </div>
       <br />
       <br />
-      <div className="card card-simple">
+      <div className="card card-simple panel-list-link">
         <div className="card-body">          
           <h3 className="card-title">Lista de enlaces</h3>
           <p className="card-text">

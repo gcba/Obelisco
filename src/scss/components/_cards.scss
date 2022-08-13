@@ -413,6 +413,14 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       }
     }
   }
+
+  &.panel-list-link {
+
+    .card-title {
+      font-weight: 600;
+      font-size: 1.313rem;
+    }
+  }
 }
 
 .card-deck {
