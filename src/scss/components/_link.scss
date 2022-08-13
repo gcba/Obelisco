@@ -77,3 +77,8 @@ a {
     }
   }
 }
+
+.list-link .card-link {
+    display: table;
+    margin: spaceUnits(2) 0;  
+}
