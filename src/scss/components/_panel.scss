@@ -1,0 +1,19 @@
+/* === Variable and mixins overides === */
+
+
+
+/* === Bootstrap Import === */
+
+
+
+/* === Custom styles === */
+
+
+.panel-footer {
+  display: flex;
+  margin-top: spaceUnits(4);
+}
+
+.panel-footer .btn {
+  margin-right: spaceUnits(4);
+}

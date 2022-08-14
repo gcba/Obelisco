@@ -359,10 +359,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         @extend .h2;
         font-weight: 600;
         margin: $panel-title-margin-horizontal;
-
-        @include media-breakpoint-down(md) {
-          margin: $panel-title-margin-horizontal-sm;
-        }
       }
 
       .card-text {
@@ -406,10 +402,35 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         margin-bottom: $panel-text-margin-bottom;
       }
 
+
       .card-link {
         + .card-link {
           margin-left: $panel-link-margin-left;
         }
+      }
+    }
+  }
+
+  &.panel-list-link {
+
+    .card-title {
+      @extend .h3;
+    }
+  }
+
+  &.panel-sm {
+    .card-title {
+      @extend .h3;
+    }
+
+    .panel-footer {
+      display: flex;
+      margin-top: spaceUnits(6);
+    }
+    
+    .card-link {
+      + .card-link {
+        margin-left: $panel-link-margin-left;
       }
     }
   }
