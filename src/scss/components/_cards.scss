@@ -423,6 +423,13 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       display: flex;
       margin-top: spaceUnits(6);
     }
+    
+    .card-link {
+      + .card-link {
+        margin-left: $panel-link-margin-left;
+      }
+    }
+    
   }
 }
 
