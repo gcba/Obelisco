@@ -43,20 +43,6 @@ export const ConEnlaces = (): JSX.Element => {
   );
 };
 
-export const Combinados = (): JSX.Element => {
-  return (
-    <Table
-      head={['#', 'Primero', 'Otro más']}
-      body={[
-        ['1', 'Juan', ActionButton],
-        ['2', 'María', ActionLinks],
-        ['3', 'Esther', ActionButton],
-        ['4', 'José', ActionLinks]
-      ]}
-    />
-  );
-};
-
 // Utils
 
 const ActionButton: JSX.Element = (
