@@ -414,6 +414,14 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 
+
+  &.panel-list-link {
+
+    .card-title {
+      @extend .h3;
+    }
+  }
+
   &.panel-sm {
     .card-title {
       @extend .h3;
@@ -429,7 +437,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         margin-left: $panel-link-margin-left;
       }
     }
-    
   }
 }
 
