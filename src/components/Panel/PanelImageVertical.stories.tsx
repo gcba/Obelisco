@@ -24,7 +24,7 @@ const BUTTONS_ARR = [
 ];
 const LINK_BUTTON = {
   name: 'Descargar',
-  className: 'btn btn-secondary download-link'
+  className: 'btn btn-secondary btn-lg download-link'
 };
 const LINK = {
   name: 'Descargar',
