@@ -371,6 +371,16 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       width: 328px;
     }
 
+    @media (max-width: 380px) {
+      width: 100%;
+    }
+
+    > video {
+      &.card-img {
+        height: auto;
+      }
+    }
+
     .card-img {
       width: 526px;
       border-radius: $card-border-radius;
@@ -387,6 +397,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         + .card-body {
           margin-left: 0;
         }
+      }
+
+      @media (max-width: 380px) {
+        width: 100%;
       }
     }
 
@@ -417,6 +431,16 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       width: 328px;
     }
 
+    @media (max-width: 380px) {
+      width: 100%;
+    }
+    
+    > video {
+      &.card-img {
+        height: auto;
+      }
+    }
+
     .card-img {
       border-radius: $card-border-radius;
       height: 296px;
@@ -424,6 +448,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       @include media-breakpoint-down(sm) {
         width: 328px;
         height: 175px;
+      }
+
+      @media (max-width: 380px) {
+        width: 100%;
       }
     }
 
