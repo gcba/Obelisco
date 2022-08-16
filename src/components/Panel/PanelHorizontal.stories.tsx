@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Panel/Panel de información',
+  title: 'Componentes|Panel',
   decorators: [withA11y]
 };
 
@@ -49,3 +49,5 @@ export const PanelInformacion = (): JSX.Element => {
     </div>
   );
 };
+
+PanelInformacion.story = { name: 'Panel de informacion' };
