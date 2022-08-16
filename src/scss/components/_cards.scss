@@ -50,7 +50,6 @@ $collapse-info-subtitle-size: 0.825rem;
 
 $accordion-margin: 0.75rem;
 
-
 $panel-deck-mt: 2.5rem;
 $card-panel-img-size: 3.75rem;
 $card-panel-img-mt: 1.25rem;
@@ -64,7 +63,6 @@ $panel-title-margin-horizontal: 2.5rem 0 0.813rem 0;
 $panel-title-margin-horizontal-sm: 1.5rem 0 0.813rem 0;
 $panel-text-margin-bottom: 1.5rem;
 $panel-link-margin-left: 1rem;
-
 
 $accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
 $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
@@ -434,7 +432,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     @media (max-width: 380px) {
       width: 100%;
     }
-    
+
     > video {
       &.card-img {
         height: auto;
@@ -466,7 +464,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         margin-bottom: $panel-text-margin-bottom;
       }
 
-
       .card-link {
         + .card-link {
           margin-left: $panel-link-margin-left;
@@ -476,25 +473,26 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 
   &.panel-list-link {
-
     .card-title {
       @extend .h3;
     }
   }
 
   &.panel-sm {
-    .card-title {
-      @extend .h3;
-    }
-
     .panel-footer {
       display: flex;
       margin-top: spaceUnits(6);
     }
-    
-    .card-link {
-      + .card-link {
-        margin-left: $panel-link-margin-left;
+
+    .card-body {
+      .card-title {
+        @extend .h3;
+      }
+
+      .card-link {
+        + .card-link {
+          margin-left: $panel-link-margin-left;
+        }
       }
     }
   }
@@ -688,7 +686,7 @@ button.card {
 
       &.accordion-card-icon {
         max-height: 48px;
-        
+
         &:before {
           content: $accordion-icon-user-white;
           display: inline-block;
