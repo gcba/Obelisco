@@ -604,6 +604,7 @@ button.card {
     }
 
     > .card-header {
+      font-family: $font-family-headings;
       background-color: $blue;
       border-width: 0;
       text-align: left;
@@ -615,7 +616,8 @@ button.card {
       color: $white;
       min-height: 48px;
       line-height: 1.4;
-      @extend .h5;
+      font-size: 18px;
+      font-weight: 900;
 
       &:after {
         content: $accordion-icon-expanded-blue;
@@ -685,6 +687,8 @@ button.card {
       }
 
       &.accordion-card-icon {
+        max-height: 48px;
+        
         &:before {
           content: $accordion-icon-user-white;
           display: inline-block;
