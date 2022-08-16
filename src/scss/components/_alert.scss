@@ -89,16 +89,11 @@ $theme-colors: map-merge(
   ol {
     color: $grisulado-900;
     padding-left: 0;
-    text-decoration: underline;
     list-style: none;
-
+    
     &.list-links {
       color: $blue;
-    }
-
-    
-    &.alert-span {
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     li {
