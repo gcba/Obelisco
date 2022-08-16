@@ -18,9 +18,9 @@ export const List = (): JSX.Element => {
         <p>
           <strong>Este es un destacado de una alerta (opcional). </strong>
         </p>
-        <ol>
+        <ol className='alert-span'>
           <li>
-            <span>Un texto simple para un enlace en una lista de alerta</span>
+            <span >Un texto simple para un enlace en una lista de alerta</span>
           </li>
 
           <li>

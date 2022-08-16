@@ -96,6 +96,11 @@ $theme-colors: map-merge(
       color: $blue;
     }
 
+    
+    &.alert-span {
+      text-decoration: none;
+    }
+
     li {
       margin-bottom: $alert-text-distance;
 
