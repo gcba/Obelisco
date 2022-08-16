@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Componentes|Panel/Tipos/Chico',
+  title: 'Componentes|Panel/Panel destacado chico',
   decorators: [withA11y]
 };
 
