@@ -165,11 +165,11 @@ a.list-group-item {
 
     &.descriptive-item {
       .access-title {
-        color: $list-group-color-hover;
+        color: $grisulado-900;
       }
 
       &:after {
-        content: $list-group-icon-arrow-hover;
+        content: $list-group-icon-arrow;
         @include float-height-icon;
       }
     }
@@ -228,6 +228,21 @@ a.list-group-item {
 }
 
 .list-group {
+
+  &.list-group-row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.875rem;
+
+    .list-group-item {
+      width: 100%;
+
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
   .list-group-title,
   .list-group-category {
     padding: $list-gorup-category-margin $list-gorup-padding-x;
