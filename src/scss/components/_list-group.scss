@@ -230,9 +230,10 @@ a.list-group-item {
 .list-group {
 
   &.list-group-row {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1.875rem;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      gap: 1rem;
+    }
 
     .list-group-item {
       width: 100%;
