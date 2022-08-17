@@ -44,12 +44,11 @@ $cyan: #009afd;
 // $indigo:  #9b59b6; // Bootstrap's default
 // $pink:    #f54789; // Bootstrap's default
 
-
 /* === Color pastel === */
 
 $cielo: #99e8ff;
 $lavanda: #99b5ff;
-$mora: #aF99ff;
+$mora: #af99ff;
 $frutos: #e299ff;
 $mosqueta: #ff99e8;
 $frutilla: #ff99e5;
@@ -59,7 +58,6 @@ $lima: #e8ff99;
 $palta: #b5ff99;
 $pistacho: #99ffaf;
 $agua: #99ffe2;
-
 
 /* === Color types === */
 
@@ -94,8 +92,8 @@ $text-muted: $grisulado-500;
 
 /* === Custom forms & stuff === */
 
-$ghost: #F5F9FC;
-$ghost-hover: #E5F1F9;
+$ghost: #f5f9fc;
+$ghost-hover: #e5f1f9;
 $component-active-bg: $blue;
 $link-color: $blue;
 
@@ -106,20 +104,23 @@ $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/
 $custom-control-indicator-checked-color: $grisulado-900;
 
 $theme-colors-obelisco: () !default;
-$theme-colors-obelisco: map-merge(("cielo": $cielo,
-    "lavanda": $lavanda,
-    "mora": $mora,
-    "frutos": $frutos,
-    "mosqueta": $mosqueta,
-    "frutilla": $frutilla,
-    "coral": $coral,
-    "citrus": $citrus,
-    "lima": $lima,
-    "palta": $palta,
-    "pistacho": $pistacho,
-    "agua": $agua,
+$theme-colors-obelisco: map-merge(
+  (
+    'cielo': $cielo,
+    'lavanda': $lavanda,
+    'mora': $mora,
+    'frutos': $frutos,
+    'mosqueta': $mosqueta,
+    'frutilla': $frutilla,
+    'coral': $coral,
+    'citrus': $citrus,
+    'lima': $lima,
+    'palta': $palta,
+    'pistacho': $pistacho,
+    'agua': $agua
   ),
-  $theme-colors-obelisco);
+  $theme-colors-obelisco
+);
 
 @function custom-colors($color: pink, $level: 0) {
   $darken: darken($color, abs($level) * 5%);
@@ -134,28 +135,16 @@ $theme-colors-obelisco: map-merge(("cielo": $cielo,
   }
 }
 
-@each $color,
-$value in $theme-colors-obelisco {
-  @include bg-variant(".bg-#{$color}", $value);
+@each $color, $value in $theme-colors-obelisco {
+  @include bg-variant('.bg-#{$color}', $value);
 }
 
 .bg {
-  @each $color,
-  $value in $theme-colors-obelisco {
+  @each $color, $value in $theme-colors-obelisco {
     @for $i from 1 through 10 {
       &-#{$color}-#{$i} {
-        @if($i==10) {
-          background-color: custom-colors($value, 10) !important;
-        }
-
-        @else if($i < 5) {
-          $number: -4 + $i;
-          background-color: custom-colors($value, $number) !important;
-        }
-
-        @else {
-          background-color: custom-colors($value, $i) !important;
-        }
+        $number: $i - 4;
+        background-color: custom-colors($value, $number) !important;
       }
     }
   }
