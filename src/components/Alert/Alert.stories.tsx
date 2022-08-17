@@ -55,28 +55,3 @@ export const Colores = (): JSX.Element => {
     </div>
   );
 };
-
-export const Lista = (): JSX.Element => {
-  return (
-    <div className="alert-wrapper">
-      <div className="alert alert-danger fade show" role="alert">
-        <p>
-          <strong>Este es un destacado de una alerta (opcional). </strong>
-        </p>
-        <ol>
-          <li>
-            <a href="#">Un texto simple para un enlace en una lista de alerta</a>
-          </li>
-
-          <li>
-            <a href="#">Un texto simple para un enlace en una lista de alerta</a>
-          </li>
-
-          <li>
-            <a href="#">Un texto simple para un enlace en una lista de alerta</a>
-          </li>
-        </ol>
-      </div>
-    </div>
-  );
-};

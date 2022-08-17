@@ -7,11 +7,11 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Panel/Tipos/Lista',
+  title: 'Componentes|Panel',
   decorators: [withA11y]
 };
 
-export const PanelHorizontal = (): JSX.Element => {
+export const PanelInformacion = (): JSX.Element => {
   return (
     <div className="container">
       <div className="panel-deck max-cards-2">
@@ -49,3 +49,5 @@ export const PanelHorizontal = (): JSX.Element => {
     </div>
   );
 };
+
+PanelInformacion.story = { name: 'Panel de informacion' };
