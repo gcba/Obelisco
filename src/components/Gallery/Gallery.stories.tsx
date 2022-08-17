@@ -118,28 +118,38 @@ Galeria.story = {
 export const Grilla = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
-      <div className="gallery-grid">
-        <div className="gallery-grid-item">
+      //La clase que se usa depende de la cantidad de imágenes que se quieran mostrar.
+      <div className="gallery-grid grid-with-6-images">
+        <div className="gallery-grid-item author" >
           <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
+          <p>Fotos GCBA</p>
         </div>
-        <div className="gallery-grid-item">
+        <div className="gallery-grid-item author">
           <img src="gallery/2.jpg" alt="Texto alternativo de la imagen" />
+          <p>Fotos GCBA</p>
         </div>
-        <div className="gallery-grid-item">
+        <div className="gallery-grid-item author">
           <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
+          <p>Fotos GCBA</p>
         </div>
-        <div className="gallery-grid-item">
+        <div className="gallery-grid-item author">
           <img src="gallery/4.jpg" alt="Texto alternativo de la imagen" />
+          <p>Fotos GCBA</p>
         </div>
-        <div className="gallery-grid-item">
+        <div className="gallery-grid-item author">
           <img src="gallery/5.jpg" alt="Texto alternativo de la imagen" />
+          <p>Fotos GCBA</p>
         </div>
-        <div className="gallery-grid-item">
+        <div className="gallery-grid-item author">
           <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
+          <p>Fotos GCBA</p>
         </div>
-        <div className="gallery-grid-item">
+        {/*  
+        <div className="gallery-grid-item author">
           <img src="gallery/4.jpg" alt="Texto alternativo de la imagen" />
-        </div>
+          <p>Fotos GCBA</p>
+        </div> 
+        */}
       </div>
     </div>
   );
@@ -151,15 +161,18 @@ export const Interactivo = (): JSX.Element => {
       <div className="row">
         <div className="col-12 col-md-8 offset-md-2">
           <div className="gallery-grid-container">
-            <div className="gallery-grid">
-              <a href="gallery/1.jpg" className="gallery-grid-item" data-toggle="modal" data-target="#modalGallery">
+            <div className="gallery-grid grid-with-3-images">
+              <a href="gallery/1.jpg" className="gallery-grid-item author" data-toggle="modal" data-target="#modalGallery">
                 <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
+                <p>Fotos GCBA</p>
               </a>
-              <a href="gallery/2.jpg" className="gallery-grid-item" data-toggle="modal" data-target="#modalGallery">
+              <a href="gallery/2.jpg" className="gallery-grid-item author" data-toggle="modal" data-target="#modalGallery">
                 <img src="gallery/2.jpg" alt="Texto alternativo de la imagen" />
+                <p>Fotos GCBA</p>
               </a>
-              <a href="gallery/3.jpg" className="gallery-grid-item" data-toggle="modal" data-target="#modalGallery">
+              <a href="gallery/3.jpg" className="gallery-grid-item author" data-toggle="modal" data-target="#modalGallery">
                 <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
+                <p>Fotos GCBA</p>
               </a>
             </div>
           </div>
