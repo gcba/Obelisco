@@ -1,3 +1,5 @@
+// @import '~/scss/obelisco.scss';
+
 // Color system
 
 /* === Gray scale === */
@@ -42,22 +44,20 @@ $cyan: #009afd;
 // $indigo:  #9b59b6; // Bootstrap's default
 // $pink:    #f54789; // Bootstrap's default
 
-
 /* === Color pastel === */
 
-$cielo:	#99e8ff;
-$lavanda:	#99b5ff;
-$mora:	#aF99ff;
-$frutos:	#e299ff;
-$mosqueta:	#ff99e8;
-$frutilla:	#ff99e5;
-$coral:	#ffaf99;
-$citrus:	#ffe299;
-$lima:	#e8ff99;
-$palta:	#b5ff99;
-$pistacho:	#99ffaf;
-$agua:	#99ffe2;
-
+$sky: #99e8ff;
+$lavender: #99b5ff;
+$blackberry: #af99ff;
+$berries: #e299ff;
+$musket: #ff99e8;
+$strawberry: #ff99e5;
+$coral: #ffaf99;
+$citrus: #ffe299;
+$lime: #e8ff99;
+$avocado: #b5ff99;
+$pistachio: #99ffaf;
+$aqua: #99ffe2;
 
 /* === Color types === */
 
@@ -92,8 +92,8 @@ $text-muted: $grisulado-500;
 
 /* === Custom forms & stuff === */
 
-$ghost: #F5F9FC;
-$ghost-hover: #E5F1F9;
+$ghost: #f5f9fc;
+$ghost-hover: #e5f1f9;
 $component-active-bg: $blue;
 $link-color: $blue;
 
@@ -102,3 +102,46 @@ $custom-select-bg-size: 10px 7.5px;
 $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='3' viewBox='0 0 4 3'><path fill='#{$custom-select-indicator-color}' d='M2 2.8L0 0.2h4L2 2.8z'/></svg>") !default;
 
 $custom-control-indicator-checked-color: $grisulado-900;
+
+$theme-colors-obelisco: (
+  'sky': $sky,
+  'lavender': $lavender,
+  'blackberry': $blackberry,
+  'berries': $berries,
+  'musket': $musket,
+  'strawberry': $strawberry,
+  'coral': $coral,
+  'citrus': $citrus,
+  'lime': $lime,
+  'avocado': $avocado,
+  'pistachio': $pistachio,
+  'aqua': $aqua
+);
+
+@function custom-colors($color: pink, $level: 0) {
+  $darken: darken($color, abs($level) * 5%);
+  $lighten: lighten($color, abs($level) * 5%);
+
+  @return if($level > 0, $darken, $lighten);
+}
+
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+}
+
+@each $color, $value in $theme-colors-obelisco {
+  @include bg-variant('.bg-#{$color}', $value);
+}
+
+.bg {
+  @each $color, $value in $theme-colors-obelisco {
+    @for $i from 1 through 10 {
+      &-#{$color}-#{$i} {
+        $number: $i - 4;
+        background-color: custom-colors($value, $number) !important;
+      }
+    }
+  }
+}
