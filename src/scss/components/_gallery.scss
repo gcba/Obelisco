@@ -239,41 +239,44 @@ $carousel-margin-bottom: spaceUnits(4);
       border-radius: $border-radius-lg;
     }
   }
-}
 
-
-.gallery-grid-container {
-  .gallery-max-1{
+  &.gallery-max-1 {
     .gallery-grid-item {
       @include makeGrid(1);
     }
   }
-  .gallery-max-2{
+
+  &.gallery-max-2 {
     .gallery-grid-item {
       @include makeGrid(2);
     }
   }
-  .gallery-max-3{
+
+  &.gallery-max-3 {
     .gallery-grid-item {
       @include makeGrid(3);
     }
   }
-  .gallery-max-4{
+
+  &.gallery-max-4 {
     .gallery-grid-item {
       @include makeGrid(4);
     }
   }
-  .gallery-max-5{
+
+  &.gallery-max-5 {
     .gallery-grid-item {
       @include makeGrid(5);
     }
   }
-  .gallery-max-6{
+
+  &.gallery-max-6 {
     .gallery-grid-item {
       @include makeGrid(6);
     }
   }
-  .gallery-max-7{
+
+  &.gallery-max-7 {
     .gallery-grid-item {
       @include makeGrid(7);
     }

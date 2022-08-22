@@ -363,14 +363,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
   &.panel-horizontal {
     flex-direction: row;
+    width: 100%;
 
     @include media-breakpoint-down(md) {
       flex-direction: column;
-      width: 328px;
-    }
-
-    @media (max-width: 380px) {
-      width: 100%;
     }
 
     > video {
@@ -381,24 +377,20 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     .card-img {
       width: 526px;
-      border-radius: $card-border-radius;
       height: 296px;
+      border-radius: $card-border-radius;
 
       + .card-body {
         margin-left: $panel-spacer-lg;
       }
 
       @include media-breakpoint-down(md) {
-        width: 328px;
-        height: 175px;
+        width: 100%;
+        height: auto;
 
         + .card-body {
           margin-left: 0;
         }
-      }
-
-      @media (max-width: 380px) {
-        width: 100%;
       }
     }
 
@@ -423,15 +415,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
   &.panel-vertical {
     flex-direction: column;
-    width: 526px;
-
-    @include media-breakpoint-down(sm) {
-      width: 328px;
-    }
-
-    @media (max-width: 380px) {
-      width: 100%;
-    }
+    width: 100%;
 
     > video {
       &.card-img {
@@ -441,15 +425,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     .card-img {
       border-radius: $card-border-radius;
-      height: 296px;
 
       @include media-breakpoint-down(sm) {
-        width: 328px;
-        height: 175px;
-      }
-
-      @media (max-width: 380px) {
         width: 100%;
+        height: auto;
       }
     }
 

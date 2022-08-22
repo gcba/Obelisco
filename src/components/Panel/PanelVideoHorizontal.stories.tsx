@@ -33,51 +33,45 @@ const LINK = {
 
 export const HighLightPanel = (): JSX.Element => {
   return (
-    <div className="panel-wrapper">
-      <PanelHorizontal
-        title={TITLE}
-        description={DESCRIPTION}
-        video={{
-          src: 'panel/larreta.mp4',
-          alt: 'descripción alternativa'
-        }}
-        buttons={BUTTONS_ARR}
-      />
-    </div>
+    <PanelHorizontal
+      title={TITLE}
+      description={DESCRIPTION}
+      video={{
+        src: 'panel/larreta.mp4',
+        alt: 'descripción alternativa'
+      }}
+      buttons={BUTTONS_ARR}
+    />
   );
 };
 HighLightPanel.story = { name: 'Con botones' };
 
 export const HighLightPanelButtonLink = (): JSX.Element => {
   return (
-    <div className="panel-wrapper">
-      <PanelHorizontal
-        title={TITLE}
-        description={DESCRIPTION}
-        video={{
-          src: 'panel/larreta.mp4',
-          alt: 'descripción alternativa'
-        }}
-        link={LINK_BUTTON}
-      />
-    </div>
+    <PanelHorizontal
+      title={TITLE}
+      description={DESCRIPTION}
+      video={{
+        src: 'panel/larreta.mp4',
+        alt: 'descripción alternativa'
+      }}
+      link={LINK_BUTTON}
+    />
   );
 };
 HighLightPanelButtonLink.story = { name: 'Con botón de descarga' };
 
 export const HighLightPanelLink = (): JSX.Element => {
   return (
-    <div className="panel-wrapper">
-      <PanelHorizontal
-        title={TITLE}
-        description={DESCRIPTION}
-        video={{
-          src: 'panel/larreta.mp4',
-          alt: 'descripción alternativa'
-        }}
-        link={LINK}
-      />
-    </div>
+    <PanelHorizontal
+      title={TITLE}
+      description={DESCRIPTION}
+      video={{
+        src: 'panel/larreta.mp4',
+        alt: 'descripción alternativa'
+      }}
+      link={LINK}
+    />
   );
 };
 HighLightPanelLink.story = { name: 'Con enlace de descarga' };
