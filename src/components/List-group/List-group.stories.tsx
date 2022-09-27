@@ -4,6 +4,10 @@ import React from 'react';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
+<<<<<<< HEAD
+=======
+import './List-group.stories.scss';
+>>>>>>> e24971ec4cb64596dba64ac20d83f72f57cd6ce9
 import { AccesIcon } from './AccesIcon.stories';
 import { AccessList } from './AccessList.stories';
 import { AccessListCategory } from './AccessListCategory.stories';
@@ -19,56 +23,12 @@ export default {
   decorators: [withA11y]
 };
 
-export const Accesos = (): JSX.Element => (
-  <div>
-    <BigAccess />
-  </div>
-);
+export const AccesoConIcono = (): JSX.Element => <AccesIcon />;
 
-export const AccesoConIcono = (): JSX.Element => {
-  return (
-    <div>
-      <AccesIcon />
-    </div>
-  );
-};
+export const AccesoChicoConDescripcion = (): JSX.Element => <SmallAccessDescription />;
 
-export const AccesoChico = (): JSX.Element => {
-  return (
-    <div>
-      <SmallAccess />
-    </div>
-  );
-};
+export const ListaDeAccesos = (): JSX.Element => <AccessList />;
 
-export const AccesoChicoConDescripcion = (): JSX.Element => {
-  return (
-    <div>
-      <SmallAccessDescription />
-    </div>
-  );
-};
+export const ListaDeAccesosConCategoria = (): JSX.Element => <AccessListCategory />;
 
-export const ListaDeAccesos = (): JSX.Element => {
-  return (
-    <div>
-      <AccessList />
-    </div>
-  );
-};
-
-export const ListaDeAccesosConCategoria = (): JSX.Element => {
-  return (
-    <div>
-      <AccessListCategory />
-    </div>
-  );
-};
-
-export const ListaDeAccesosDescriptivo = (): JSX.Element => {
-  return (
-    <div>
-      <AccessListDescriptive />
-    </div>
-  );
-};
+export const ListaDeAccesosDescriptivo = (): JSX.Element => <AccessListDescriptive />;

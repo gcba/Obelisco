@@ -135,28 +135,6 @@ export const Seleccionable = (): JSX.Element => {
   );
 };
 
-export const ConAcciones = (): JSX.Element => {
-  return (
-    <Table
-      head={['#', 'Primero', 'Segundo', '']}
-      body={[
-        ['1', 'Juan', 'Alberto', ActionButton],
-        ['2', 'María', 'Julia', ActionButton],
-        ['3', 'Esther', 'Fermin', ActionButton],
-        ['4', 'José', 'Juana', ActionButton]
-      ]}
-    />
-  );
-};
-
-// Utils
-
-const ActionButton: JSX.Element = (
-  <Button type="success" size="small">
-    Acción
-  </Button>
-);
-
 const SmallContent: JSX.Element = (
   <>
     <h5>Título</h5>

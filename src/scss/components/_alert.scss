@@ -87,10 +87,14 @@ $theme-colors: map-merge(
   }
 
   ol {
+    color: $grisulado-900;
     padding-left: 0;
-    color: $blue;
-    text-decoration: underline;
     list-style: none;
+    
+    &.list-links {
+      color: $blue;
+      text-decoration: underline;
+    }
 
     li {
       margin-bottom: $alert-text-distance;
@@ -108,6 +112,10 @@ $theme-colors: map-merge(
 
   a {
     color: $blue;
+
+    &:visited {
+      color: $blue;
+    }
   }
 }
 

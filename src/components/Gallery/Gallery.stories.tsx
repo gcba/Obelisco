@@ -115,43 +115,13 @@ Galeria.story = {
   name: 'Galería'
 };
 
-export const Grilla = (): JSX.Element => {
-  return (
-    <div className="gallery-grid-container">
-      <div className="gallery-grid">
-        <div className="gallery-grid-item">
-          <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/2.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/4.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/5.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/4.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-      </div>
-    </div>
-  );
-};
-
 export const Interactivo = (): JSX.Element => {
   return (
     <div className="container">
       <div className="row">
         <div className="col-12 col-md-8 offset-md-2">
           <div className="gallery-grid-container">
-            <div className="gallery-grid">
+            <div className="gallery-grid gallery-max-3">
               <a href="gallery/1.jpg" className="gallery-grid-item" data-toggle="modal" data-target="#modalGallery">
                 <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
               </a>

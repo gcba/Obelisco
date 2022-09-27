@@ -9,7 +9,9 @@ $link-focus-color: theme-color-level('info', 3);
 
 $link-external-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(0,123,199); transform: ;msFilter:;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>');
 $link-external-icon-active: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255,255,255); transform: ;msFilter:;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>');
-$link-download: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path></svg>');
+$link-download: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" transform="scale(0.8)" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path></svg>');
+$link-download-link: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" transform="scale(0.8)" style="fill: rgb(255, 255, 255);transform: ;msFilter:;"><path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path></svg>');
+$link-access: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>');
 
 /* === Bootstrap Import === */
 
@@ -52,5 +54,38 @@ a {
       height: 1em;
       margin-right: spaceUnits(1);
     }
+  }
+
+  &.download-link {
+    color: $white;
+    &::before {
+      content: $link-download-link;
+      display: inline-block;
+      vertical-align: top;
+      height: 1em;
+      margin-right: spaceUnits(2);
+    }
+  }
+
+  &.access {
+    &::after {
+      content: $link-access;
+      display: inline-block;
+      vertical-align: top;
+      height: 1em;
+      margin-right: spaceUnits(1);
+    }
+  }
+}
+
+.list-link {
+  margin-top: 1.5rem;
+  .list-link-item-title {
+    margin-bottom: 0.5rem;
+  }
+  .card-link {
+    display: table;
+    margin: spaceUnits(2) 0;
+    margin-bottom: 1.125rem;
   }
 }
