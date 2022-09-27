@@ -5,8 +5,8 @@ import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { Table, TableCellContet } from '.';
-import { Button } from '../../components/Button';
+import { Table, TableCellContet } from '../Table/index';
+//import { Button } from '../../components/Button';
 
 // Config
 export default {
