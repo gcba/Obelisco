@@ -38,7 +38,7 @@ const paletteInformation = [
   }
 ];
 
-export const PalleteComponent = (): JSX.Element => (
+export const PaletaDeColores = (): JSX.Element => (
   <div className="palette-container">
     <Palette items={paletteInformation}></Palette>
   </div>
