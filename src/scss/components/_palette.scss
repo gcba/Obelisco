@@ -1,0 +1,35 @@
+$palette-picture-border-radius:$card-border-radius $card-border-radius 0 0;
+$palette-body-padding:$card-spacer-sm;
+
+/* === Bootstrap Import === */
+
+@import '~bootstrap/scss/card';
+
+/* === Custom styles === */
+.palette-container{
+  width: 300px;
+  max-width: 100%;
+  text-align: left;
+  box-shadow: 0 0 0 2px #38485C inset;
+  border-radius: 0.5rem;
+}
+.palette-color-background{
+  width: 100%;
+  height: 160px;
+  border-radius: $palette-picture-border-radius;
+}
+.palette-body{
+  padding:$palette-body-padding;
+}
+.palette-card-title{
+  font-weight: normal;
+  margin:0;
+}
+.palette-span-bold{
+  font-weight: bold;
+}
+.palette-hex{
+  display:flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
