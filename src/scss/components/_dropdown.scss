@@ -189,7 +189,8 @@ $animation-toggle: transform 0.2s ease-in-out;
       padding: $dropdown-item-padding;
       color: $body-color;
       white-space: normal;
-  
+      text-decoration: none;
+      
       &:hover {
         background-color: $white;
         border-radius: spaceUnits(2);
@@ -214,6 +215,7 @@ $animation-toggle: transform 0.2s ease-in-out;
         box-shadow: none;
   
       }
+      
     }
   }
 }
