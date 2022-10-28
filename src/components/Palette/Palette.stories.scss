@@ -3,35 +3,7 @@
   flex-wrap:wrap;
 }
 
-.palette-card{
-  width: 240px;
-  max-width: 100%;
-  text-align: left;
-  border-radius: 0.5rem;
-  margin:2rem;
-}
-
-.palette-color-background{
-  width: 100%;
-  height: 120px;
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.palette-body{
-  padding: 1rem;
-}
-
-.palette-card-title{
-  font-weight: normal;
-  margin:0;
-}
-
-.palette-span-bold{
-  font-weight: bold;
-}
-
-.palette-hex{
-  display:flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+.palette-container div:not(.palette-container div *){
+  margin-right:2rem;
+  margin-bottom:2rem;
 }

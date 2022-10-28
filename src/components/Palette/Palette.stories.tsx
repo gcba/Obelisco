@@ -15,31 +15,35 @@ export default {
   decorators: [withA11y]
 };
 
-const paletteInformation = [
+const paletteTextos = [
   {
     name: 'Grisulado 90',
     level: 'Texto Primario',
-    hex: '#38485C'
+    hex: '#38485C',
+    className: 'grisulado-90',
   },
   {
     name: 'Grisulado 70',
     level: 'Texto Secundario',
-    hex: '#505E70'
+    hex: '#505E70',
+    className: 'grisulado-70',
   },
   {
     name: 'Grisulado 30',
     level: 'Texto deshabilitado',
-    hex: '#9EAAB8'
+    hex: '#9EAAB8',
+    className: 'grisulado-30',
   },
   {
     name: 'Celeste 50',
     level: 'Texto Enlace',
-    hex: '#007BC7'
+    hex: '#007BC7',
+    className: 'celeste-50',
   }
 ];
 
-export const PaletaDeColores = (): JSX.Element => (
+export const Textos = (): JSX.Element => (
   <div className="palette-container">
-    <Palette items={paletteInformation}></Palette>
+    <Palette items={paletteTextos} />
   </div>
 );

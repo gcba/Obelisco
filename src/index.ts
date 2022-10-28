@@ -8,5 +8,6 @@ export { Badge, BadgeProps } from './components/Badge';
 export { Button, ButtonProps } from './components/Button';
 export { AlertType, ButtonType, Size, Type } from './components/utils';
 export { Card, SimpleCard, SimpleCardProps, CardProps } from './components/Card';
+export { Palette, PaletteDetails, PaletteProps } from './components/Palette';
 export { Pagination, PaginationProps } from './components/Pagination';
 export { Nav, NavProps, NavItem } from './components/Nav';
