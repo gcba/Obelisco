@@ -325,6 +325,8 @@ $form-validation-states: (
     background-color: $blue;
     &:hover {
       color: #fff;
+      box-shadow: none;
+      text-decoration: none;
     }   
   }
 }

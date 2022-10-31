@@ -88,11 +88,11 @@ export const BotonRadio = (): JSX.Element => {
     <>
       <div className="btn-group btn-group-toggle btn-wrapper" data-toggle="buttons">
         <label className="btn btn-chip btn-sm">
-          <input type="radio" name="options1" id="option1" className="btn-check" checked></input>
+          <input type="radio" name="options1" id="option1" className="btn-check"></input>
           <span>Boton Radio</span>
         </label>
         <label className="btn btn-chip btn-sm active">
-          <input type="radio" name="options2" id="option2" className="btn-check"></input>
+          <input type="radio" name="options2" id="option2" className="btn-check" checked></input>
           <span>Boton Radio</span>
         </label>
         <label className="btn btn-chip btn-sm disabled ">
