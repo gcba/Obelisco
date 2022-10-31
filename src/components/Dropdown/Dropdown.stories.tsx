@@ -134,11 +134,11 @@ export const DesplegableConEnlaces = (): JSX.Element => (
       <div className="dropdown mb-3">
         <button
           type="button"
-          className="btn btn-dropdown dropdown-toggle"
+          className="btn btn-dropdown btn-dropdown-border btn-dropdown-sm dropdown-toggle"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Desplegable
+          Filtro
         </button>
         <ul className="dropdown-menu">
           <li>
@@ -165,7 +165,34 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Desplegable (1)
+          Filtro
+        </button>
+        <ul className="dropdown-menu">
+          <li>
+            <a className="dropdown-item" href="#">
+              Opción 1
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Opción 2
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Opción 3
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="dropdown mb-3">
+        <button
+          type="button"
+          className="btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          Filtro
         </button>
         <ul className="dropdown-menu">
           <li>
