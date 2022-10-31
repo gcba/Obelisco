@@ -6,7 +6,7 @@ import './Palette.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { Palette, PaletteDetailsColor } from '.';
+import { PaletteDetailsColor } from '.';
 
 // Configuración del general del componente
 export default {
@@ -18,7 +18,7 @@ export default {
 const paletteDetallesCromaticos = [
   {
     hex: '#E6EBF0',
-    className: 'grisulado-10'
+    className: 'grisulado-50'
   },
   {
     hex: '#F54789',
@@ -30,7 +30,7 @@ const paletteDetallesCromaticos = [
   },
   {
     hex: '009AFD',
-    className: 'celeste'
+    className: 'cian'
   },
   {
     hex: '#FFDB2E',
@@ -38,11 +38,11 @@ const paletteDetallesCromaticos = [
   },
   {
     hex: '#D1D8E0',
-    className: 'grisulado-20'
+    className: 'grisulado-100'
   },
   {
     hex: '#18B596',
-    className: 'cyan'
+    className: 'verde-azulado'
   },
   {
     hex: '#88BF48',

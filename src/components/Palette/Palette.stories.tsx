@@ -20,25 +20,25 @@ const paletteTextos = [
     name: 'Grisulado 90',
     level: 'Texto Primario',
     hex: '#38485C',
-    className: 'grisulado-90',
+    className: 'grisulado-900'
   },
   {
     name: 'Grisulado 70',
     level: 'Texto Secundario',
     hex: '#505E70',
-    className: 'grisulado-70',
+    className: 'grisulado-700'
   },
   {
     name: 'Grisulado 30',
     level: 'Texto deshabilitado',
     hex: '#9EAAB8',
-    className: 'grisulado-30',
+    className: 'grisulado-300'
   },
   {
     name: 'Celeste 50',
     level: 'Texto Enlace',
     hex: '#007BC7',
-    className: 'celeste-50',
+    className: 'celeste-50'
   }
 ];
 

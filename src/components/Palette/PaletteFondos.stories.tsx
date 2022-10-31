@@ -20,13 +20,13 @@ const paletteFondos = [
     name: 'Blanco',
     level: 'Fondos Primarios',
     hex: '#FFFFFF',
-    className: 'blanco',
+    className: 'blanco'
   },
   {
     name: 'Grisulado 1',
     level: 'Fondos Secundarios',
     hex: '#F3F6F9',
-    className: 'grisulado-1',
+    className: 'grisulado-10'
   }
 ];
 

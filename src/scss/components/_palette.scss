@@ -1,76 +1,77 @@
 /* === Variable and mixins overides === */
 
-$card-height: 120px;
+$card-height: 100px;
 $card-cap-padding-y: 1rem;
 $card-cap-padding-x: 1rem;
 $card-group-margin: 1rem;
-
-$theme-colors: (
-  "grisulado-90": #38485C,
-  "grisulado-70": #505E70,
-  "grisulado-30": #9EAAB8,
-  "celeste-50":  #007BC7,
-  "blanco":  #FFFFFF,
-  "grisulado-1": #F3F6F9,
-  "grisulado-10": #E6EBF0,
-  "magenta": #F54789,
-  "violeta": #9B59B6,
-  "celeste": #009AFD,
-  "amarillo": #FFDB2E,
-  "grisulado-20": #D1D8E0,
-  "cyan": #18B596,
-  "verde": #88BF48,
-  "naranja": #F39C12,
-  "rojo": #E74C3C
+$colors: (
+  'grisulado-900': $grisulado-900,
+  'grisulado-700': $grisulado-700,
+  'grisulado-300': $grisulado-300,
+  'celeste-50': $blue,
+  'blanco': $white,
+  'grisulado-10': $grisulado-10,
+  'grisulado-50': $grisulado-50,
+  'magenta': #f54789,
+  'violeta': $purple,
+  'cian': $cyan,
+  'amarillo': #ffdb2e,
+  'grisulado-100': $grisulado-100,
+  'verde-azulado': $teal,
+  'verde': #88bf48,
+  'naranja': #f39c12,
+  'rojo': #e74c3c
 );
 
 /* === Bootstrap Import === */
 
 @import '~bootstrap/scss/card';
 
-
 /* === Custom styles === */
 
-@each $color, $value in $theme-colors {
+@each $color, $value in $colors {
+  .palette-card-#{$color} {
+    width: 240px;
+    border-radius: $card-border-radius;
+    margin: $spacer * 0.5;
+    @if $color == 'blanco' {
+      border: 2px solid darken($value, 6%);
+    } @else if $color == 'grisulado-10' {
+      box-shadow: 0 0 0 2px lighten($value, 1%) inset;
+    } @else {
+      box-shadow: 0 0 0 2px lighten($value, 10%) inset;
+    }
+  }
 
-.palette-card-#{$color}{
-  width: 240px;
-  max-width: 100%;
-  text-align: left;
-  border-radius: $card-border-radius;
-  margin:$spacer * .5;
-  box-shadow: 0 0 0 2px $value inset;
+  .palette-background-#{$color} {
+    height: $card-height;
+    border-radius: $card-border-radius $card-border-radius 0 0;
+    background-color: $value;
+  }
 }
 
-.palette-background-#{$color}{
-  width: 100%;
-  height: $card-height;
-  border-radius: $card-border-radius $card-border-radius 0 0;
-  background-color: $value;
-}
- 
-}
-
-.palette-body{
+.palette-body {
   padding: $card-cap-padding-y $card-cap-padding-x;
-}
 
-.palette-card-title{
-  font-weight: normal;
-  margin: 0;
-}
+  .palette-card-title {
+    font-weight: normal;
+    margin: 0;
+  }
 
-.palette-span-bold{
-  font-weight: bold;
-}
+  .palette-span-bold {
+    font-weight: bold;
+  }
 
-.palette-hex{
-  display: flex;
-  justify-content: space-between;
-  margin-top: $card-group-margin;
-}
+  .palette-hex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $spacer * 2;
+    border-top: 1px solid $grisulado-10;
+    padding-top: $spacer * 2;
+  }
 
-.palette-hex-details{
-  display: flex;
-  justify-content: space-between;
+  .palette-hex-details {
+    display: flex;
+    justify-content: space-between;
+  }
 }
