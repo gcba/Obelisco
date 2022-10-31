@@ -212,6 +212,33 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           </li>
         </ul>
       </div>
+      <div className="dropdown mb-3">
+        <button
+          type="button"
+          className="btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle active"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          Filtro
+        </button>
+        <ul className="dropdown-menu">
+          <li>
+            <a className="dropdown-item" href="#">
+              Opción 1
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Opción 2
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#">
+              Opción 3
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </>
 );
