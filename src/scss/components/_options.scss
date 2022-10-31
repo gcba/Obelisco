@@ -106,6 +106,13 @@ $animation-toggle: transform 0.2s ease-in-out;
         &.dropdown-toggle:after {
           transition: $animation-toggle;
         }
+        &:active {
+          color:$grisulado-900;
+        
+          &.dropdown-toggle:after {
+            content: $icon-chevron-up;
+          }
+        }
       }
     }
 
