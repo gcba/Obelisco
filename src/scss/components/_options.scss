@@ -71,12 +71,6 @@ $animation-toggle: transform 0.2s ease-in-out;
     }
 
     .btn {
-      &:active {
-        color:$grisulado-900;
-      }
-      &.active {
-        color:$grisulado-900;
-      }
       &.btn-dropdown {
         border-radius: $border-radius-lg;
         box-shadow: $option-btn-box-shadow;
@@ -138,16 +132,11 @@ $animation-toggle: transform 0.2s ease-in-out;
         @include dropdown-hover;
       }
 
-      &:active {
+      &:active, &.active {
         &:hover {
           background-color: $blue;
           color: $white;
           text-decoration: none;
-        }
-      }
-      &.active {
-        &:hover{
-          color: $white;
         }
       }
     }
