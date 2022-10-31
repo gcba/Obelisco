@@ -22,6 +22,9 @@ export const HorizontalAccess = (): JSX.Element => (
       <a href="#" className="list-group-item focus">
         <span className="access-title">Acceso grande</span>
       </a>
+      <a href="#" className="list-group-item list-group-item-logout">
+        <span className="access-title">Cerrar sesión </span>
+      </a>
     </div>
   </>
 );
@@ -32,13 +35,16 @@ export const HorizontalAccessSmall = (): JSX.Element => (
   <>
     <div className="list-group list-group-row">
       <a href="#" className="list-group-item item-sm ">
-        <span className="access-title">Acceso grande</span>
+        <span className="access-title">Acceso chico</span>
       </a>
       <a href="#" className="list-group-item item-sm hover">
-        <span className="access-title">Acceso grande</span>
+        <span className="access-title">Acceso chico</span>
       </a>
       <a href="#" className="list-group-item item-sm focus">
-        <span className="access-title">Acceso grande</span>
+        <span className="access-title">Acceso chico</span>
+      </a>
+      <a href="#" className="list-group-item item-sm list-group-item-logout">
+        <span className="access-title">Cerrar sesión </span>
       </a>
     </div>
   </>

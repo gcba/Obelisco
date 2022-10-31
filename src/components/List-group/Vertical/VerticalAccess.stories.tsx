@@ -45,6 +45,9 @@ export const VerticalAccessSmall = (): JSX.Element => (
       <a href="#" className="list-group-item item-sm focus">
         <span className="access-title">Acceso chico</span>
       </a>
+      <a href="#" className="list-group-item item-sm list-group-item-logout">
+        <span className="access-title">Cerrar sesión </span>
+      </a>
     </div>
   </div>
 );
