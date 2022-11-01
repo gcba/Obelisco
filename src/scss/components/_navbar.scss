@@ -110,6 +110,11 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
     padding-bottom: $navbar-padding-y-desktop;
   }
 
+  @include media-breakpoint-down(xs) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &.navbar-light {
     background-color: $white;
     border-bottom: 2px $blue solid;
@@ -165,6 +170,12 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
     }
   }
 
+  .navbar-brand{
+    @include media-breakpoint-down(xs) {
+      margin-right: 0.7rem;
+    }
+  }
+  
   .header-logo {
     height: $navbar-logo-sm;
 
