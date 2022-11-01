@@ -86,18 +86,18 @@ export const Deshabilitado = (): JSX.Element => {
 export const BotonRadio = (): JSX.Element => {
   return (
     <>
-      <div className="btn-group btn-group-toggle btn-wrapper" data-toggle="buttons">
+      <div className="btn-wrapper" data-toggle="buttons">
         <label className="btn btn-chip btn-sm">
           <input type="radio" name="options1" id="option1" className="btn-check"></input>
-          <span>Boton Radio</span>
+          Boton Radio
         </label>
         <label className="btn btn-chip btn-sm active">
           <input type="radio" name="options2" id="option2" className="btn-check" checked></input>
-          <span>Boton Radio</span>
+          Boton Radio
         </label>
         <label className="btn btn-chip btn-sm disabled ">
           <input type="radio" name="options3" id="option3" className="btn-check"></input>
-          <span>Boton Radio</span>
+          Boton Radio
         </label>
       </div>
     </>
