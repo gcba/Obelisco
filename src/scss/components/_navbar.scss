@@ -111,8 +111,7 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
   }
 
   @include media-breakpoint-down(xs) {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0.5rem 0;
   }
 
   &.navbar-light {
