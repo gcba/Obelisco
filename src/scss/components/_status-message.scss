@@ -1,68 +1,57 @@
-$alert-icons: (
-  'success':
-    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" style="fill: rgba(38, 135, 74, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>'),
-  'danger':
-    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(201, 59, 59, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>'),
-  'primary':
-    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 168, 46, 1);transform: ;msFilter:;"><path d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z"></path></svg>'),
-  'info':
-    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M11.953 2C6.465 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.493 2 11.953 2zM13 17h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>')
-);
+$icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(56, 72, 92);transform: ;msFilter:;"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>');
+$inset: 1.125rem 0 0 1.625rem;
+$status-size: 3.75rem;
+$status-padding-top: 3.75rem;
+$status-title-padding-bottom: 1rem;
+$status-title-font-weight: 600;
+$status-margin-bottom: 2rem;
+$status-list-padding-left: 1.5rem;
+$status-list-icon-left: 1.7rem;
 
-@mixin alert-icon($type) {
+@mixin status-icon($type) {
   &::before {
     background-image: map-get($alert-icons, $type);
   }
 }
 
-$tmp: $theme-colors;
-$theme-colors: map-remove($theme-colors, 'secondary');
-$theme-colors: map-merge(
-  $theme-colors,
-  (
-    'primary': $orange
-  )
-);
-
-
 .status {
-  padding-top: 3.75rem;
+  padding-top: $status-padding-top;
 
   &::before {
     content: '';
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 3.75rem;
-    height: 3.75rem;
-    inset: $alert-icon-position-top 0 0 $alert-icon-position-left;
+    width: $status-size;
+    height: $status-size;
+    inset: $inset;
   }
 
   @each $color, $value in $theme-colors {
     &.status-#{$color} {
-      @include alert-icon($color);
+      @include status-icon($color);
     }
   }
 
   .status-title {
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-weight: $status-title-font-weight;
+    margin-bottom: $status-title-padding-bottom;
   }
 
   .status-text {
-    margin-bottom: 2rem;
+    margin-bottom: $status-margin-bottom;
   }
 
   .status-list {
     list-style: none;
-    padding-left: 1.5rem;
-    margin-bottom: 2rem;
+    padding-left: $status-list-padding-left;
+    margin-bottom: $status-margin-bottom;
 
     > li {
       &::before {
-        content: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(56, 72, 92);transform: ;msFilter:;"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>');
+        content: $icon-check;
         position: absolute;
-        left: 1.7rem;
+        left: $status-list-icon-left;
         vertical-align: middle;
       }
     }
