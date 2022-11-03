@@ -17,7 +17,7 @@ export const StatusMessage = (props: React.PropsWithChildren<StatusMessageProps>
     {props.list && (
       <ul className="status-list">
         {props.list.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
         ))}
       </ul>
     )}

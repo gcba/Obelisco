@@ -12,7 +12,7 @@ export default {
 };
 
 const LIST = [
-  'Contar con Clave Ciudad de AGIP',
+  'Contar con Clave Ciudad de <a href="#">AGIP</a>',
   'Cargar en el Sistema de Tramitación a Distancia (TAD) la siguiente documentación obligatoria:',
   'Anexo II Formulario de Presentación de Programa de Capacitación'
 ];
