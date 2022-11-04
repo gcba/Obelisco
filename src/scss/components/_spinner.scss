@@ -1,0 +1,19 @@
+/* === Variable and mixins overides === */
+$spinner-width: 3rem;
+$spinner-height: 3rem;
+
+/* === Custom variables and mixins === */
+.spinner-container{
+  display:flex;
+  flex-flow:wrap column;
+  align-items:center;
+}
+
+/* === Bootstrap Import === */
+@import '~bootstrap/scss/spinners';
+
+/* === Custom styles === */
+.spinner-border{
+  width:$spinner-width;
+  height: $spinner-height;
+}
