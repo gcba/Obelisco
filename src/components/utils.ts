@@ -7,6 +7,9 @@ export const buttonTypes: ButtonType[] = [...types, 'secondary', 'link'];
 export type AlertType = Type | 'info';
 export const alertTypes: AlertType[] = ['primary', 'success', 'info', 'danger'];
 
+export type SpinnerType = Type | 'secondary' | 'info';
+export const spinnerTypes: SpinnerType[] = [...types, 'secondary', 'info'];
+
 export type Size = 'default' | 'small' | 'large';
 export const sizes: Size[] = ['small', 'default', 'large'];
 

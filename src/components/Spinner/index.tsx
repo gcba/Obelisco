@@ -1,19 +1,28 @@
 import * as React from 'react';
+import { SpinnerType } from '../utils';
 
-export const Spinner = (): JSX.Element => {
+export interface SpinnerProps {
+  type: SpinnerType;
+}
+
+export const Spinner: React.FC<SpinnerProps> = (props: React.PropsWithChildren<SpinnerProps>) => {
+  const { type } = props;
+  const className = `spinner-border text-${type}`;
   return (
-    <div className="spinner-border text-info" role="status">
+    <div className={className} role="status">
       <span className="sr-only">Loading...</span>
     </div>
   );
 };
 
-export const SpinnerText = (): JSX.Element => {
+export const SpinnerText: React.FC<SpinnerProps> = (props: React.PropsWithChildren<SpinnerProps>) => {
+  const { type } = props;
+  const className = `spinner-border text-${type}`;
   return (
-    <div className="spinner-container">
+    <div className="d-flex flex-column align-items-center">
       <h4>Estamos creando tu trámite</h4>
       <p>Por favor esperá unos segundos...</p>
-      <div className="spinner-border text-info" role="status">
+      <div className={className} role="status">
         <span className="sr-only">Loading...</span>
       </div>
     </div>

@@ -1,10 +1,15 @@
-.spinner-container-sin-texto{
-  display:flex;
-  flex-flow:wrap column;
-  align-items:center;
-  width: 300px;
+.spinner-wrapper {
+  div {
+    margin-right: 2rem;
+  }
 }
 
-.spinner-container{
+.spinner-wrapper-text {
+  display: flex;
+  flex-flow: wrap column;
   align-content: flex-start;
+}
+
+.spinner-wrapper-text > div {
+  margin-bottom: 6rem;
 }

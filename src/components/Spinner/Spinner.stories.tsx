@@ -6,7 +6,8 @@ import './Spinner.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { Spinner } from '.';
+import { Spinner, SpinnerText } from '.';
+import { spinnerTypes } from '../utils';
 
 // Configuración del general del componente
 export default {
@@ -16,7 +17,19 @@ export default {
 };
 
 export const SinTexto = (): JSX.Element => (
-  <div className="spinner-container-sin-texto">
-    <Spinner />
+  <div className="spinner-wrapper">
+    {spinnerTypes.map((type) => (
+      <Spinner key={type} type={type} />
+    ))}
   </div>
 );
+
+export const Texto = (): JSX.Element => {
+  return (
+    <div className="spinner-wrapper-text">
+      {spinnerTypes.map((type) => (
+        <SpinnerText key={type} type={type} />
+      ))}
+    </div>
+  );
+};
