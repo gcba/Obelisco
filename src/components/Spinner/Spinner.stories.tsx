@@ -17,7 +17,7 @@ export default {
 };
 
 export const SinTexto = (): JSX.Element => (
-  <div className="spinner-wrapper">
+  <div className="spinner">
     {spinnerTypes.map((type) => (
       <Spinner key={type} type={type} />
     ))}
@@ -26,7 +26,7 @@ export const SinTexto = (): JSX.Element => (
 
 export const Texto = (): JSX.Element => {
   return (
-    <div className="spinner-wrapper-text">
+    <div className="spinner-text">
       {spinnerTypes.map((type) => (
         <SpinnerText key={type} type={type} />
       ))}

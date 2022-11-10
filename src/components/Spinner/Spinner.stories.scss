@@ -1,15 +1,15 @@
-.spinner-wrapper {
+.spinner {
   div {
     margin-right: 2rem;
   }
 }
 
-.spinner-wrapper-text {
+.spinner-text {
   display: flex;
   flex-flow: wrap column;
   align-content: flex-start;
 }
 
-.spinner-wrapper-text > div {
+.spinner-text > div {
   margin-bottom: 6rem;
 }
