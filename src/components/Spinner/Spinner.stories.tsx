@@ -19,8 +19,8 @@ export const SinTexto = (): JSX.Element => (
 
 export const Texto = (): JSX.Element => (
   <div className="spinner">
-    <h4>Estamos creando tu trámite</h4>
-    <p>Por favor esperá unos segundos...</p>
+    <h3>Estamos creando tu trámite</h3>
+    <p className="lead">Por favor esperá unos segundos...</p>
     <div className="spinner-border text-info" role="status">
       <span className="sr-only">Loading...</span>
     </div>
