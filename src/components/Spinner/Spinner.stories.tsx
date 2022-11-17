@@ -5,31 +5,24 @@ import './Spinner.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-import { Spinner, SpinnerText } from '.';
-import { spinnerTypes } from '../utils';
-
 // Configuración del general del componente
 export default {
   title: 'Componentes|Spinner',
-  component: Spinner,
   decorators: [withA11y]
 };
 
 export const SinTexto = (): JSX.Element => (
-  <div className="spinner">
-    {spinnerTypes.map((type) => (
-      <Spinner key={type} type={type} />
-    ))}
+  <div className="spinner-border text-info" role="status">
+    <span className="sr-only">Loading...</span>
   </div>
 );
 
-export const Texto = (): JSX.Element => {
-  return (
-    <div className="spinner-text">
-      {spinnerTypes.map((type) => (
-        <SpinnerText key={type} type={type} />
-      ))}
+export const Texto = (): JSX.Element => (
+  <div className="spinner">
+    <h4>Estamos creando tu trámite</h4>
+    <p>Por favor esperá unos segundos...</p>
+    <div className="spinner-border text-info" role="status">
+      <span className="sr-only">Loading...</span>
     </div>
-  );
-};
+  </div>
+);
