@@ -142,14 +142,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     padding: $card-spacer;
   }
 
-  .card-icon-body {
-    @extend .card-body;
-    padding: $card-spacer $card-spacer $card-spacer 0.75rem !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
   @include media-breakpoint-up(md) {
     .card-body {
       padding: $card-spacer-lg;
@@ -208,11 +200,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     border-radius: $border-radius-lg;
     text-align: center;
     line-height: $card-icon-background-size;
-  }
-
-  .card-icon-left {
-    @extend .card-icon;
-    @extend .card-img-left;
   }
 
   .card-img-top {
@@ -282,7 +269,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 
-  &.unbordered{
+  &.unbordered {
     box-shadow: none;
     background: none;
   }
@@ -375,6 +362,18 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
             padding: $card-spacer;
           }
         }
+      }
+    }
+
+    .card-icon-left {
+      @extend .card-icon;
+      @extend .card-img-left;
+      + .card-icon-body {
+        @extend .card-body;
+        padding-left: $card-spacer-sm;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }
