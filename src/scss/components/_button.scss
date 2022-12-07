@@ -24,6 +24,7 @@ $btn-padding-y-lg: spaceUnits(3);
 $btn-padding-x-lg: spaceUnits(3);
 $btn-font-size-lg: 1.125rem;
 $btn-line-height-lg: $btn-line-height;
+$btn-font-weight-lg: 700;
 
 $btn-disabled-opacity: 1;
 
@@ -53,9 +54,27 @@ $btn-font-family: $font-family-headings;
     background-color: $btn-disabled-bg;
     color: $btn-disabled-color;
     pointer-events: none;
+    border-color: $btn-disabled-bg;
   }
 }
 
+
+//
+// Button Sizes
+//
+
+.btn {
+  max-height: 40px;
+
+  &-sm {
+    max-height: 30px;
+  }
+
+  &-lg {
+    max-height: 48px;
+    font-weight: $btn-font-weight-lg;
+  }
+}
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
@@ -97,6 +116,80 @@ $btn-font-family: $font-family-headings;
       }
     }
   }
+  
+  .btn-outline-#{$color}{
+    border-width: 2px;
+    font-weight: $btn-font-weight-lg;
+    line-height: 1.13;
+
+    @include media-breakpoint-down(xs) {
+      font-weight: $btn-font-weight;
+      max-height: 36px;
+      line-height: 1;
+    }
+
+    @include hover() {
+      background-color: theme-color-level($color, 1);
+      border-color: theme-color-level($color, 1);
+      box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
+    }
+
+    &:focus,
+    &.focus {
+      box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+      text-decoration: $link-decoration;
+      color: $white;
+
+      &:not(:hover) {
+        background-color: theme-color-level($color, 0);
+      }
+    }
+
+    @include btn-disabled;
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      background-color: theme-color-level($color, 1);
+      box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+      border-color: theme-color-level($color, 1);
+
+      &:focus,
+      &.focus {
+        box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+        text-decoration: none;
+
+        &:not(:hover) {
+          background-color: theme-color-level($color, 0);
+          border-color: theme-color-level($color, 0);
+        }
+      }
+    }
+
+    &.btn-lg {
+      @include media-breakpoint-down(xs) {
+        max-height: 44px;
+      }
+    }
+
+    &.btn-sm {
+      @include media-breakpoint-down(xs) {
+        max-height: 28px;
+      }
+    }
+  }
+}
+
+.btn-outline-primary{
+  color: $grisulado-900;
+
+  &:focus,
+  &.focus {
+    color: $grisulado-900;
+
+    &:not(:hover) {
+      color: $grisulado-900;
+    }
+  }
 }
 
 .btn-link {
@@ -128,22 +221,70 @@ $btn-font-family: $font-family-headings;
   }
 }
 
-a.btn {
-  text-decoration: none;
+.btn-outline-link {
+  border: 2px solid $blue;
+  font-weight: $btn-font-weight-lg;
+  line-height: 1.13;
+  color: $blue;
+
+  @include media-breakpoint-down(xs) {
+    font-weight: $btn-font-weight;
+    max-height: 36px;
+    line-height: 1;
+  }
+
+  @include btn-disabled;
+
+  @include hover() {
+    background-color: $ghost-hover;
+    border-color: $ghost-hover;
+    text-decoration: $link-decoration;
+    color: $blue;
+    box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+    text-decoration: $link-decoration;
+
+    &:not(:hover) {
+      background-color: $ghost;
+      border-color: $ghost;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-color:  $ghost-hover;
+    box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+    border-color: $ghost-hover;
+
+    &:focus,
+    &.focus {
+      box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+      text-decoration: $link-decoration;
+
+      &:not(:hover) {
+        background-color: $ghost;
+        border-color: $ghost;
+      }
+    }
+  }
+  
+  &.btn-lg {
+    @include media-breakpoint-down(xs) {
+      max-height: 44px;
+    }
+  }
+
+  &.btn-sm {
+    @include media-breakpoint-down(xs) {
+      max-height: 28px;
+    }
+  }
 }
 
-//
-// Button Sizes
-//
-
-.btn {
-  max-height: 40px;
-
-  &-sm {
-    max-height: 30px;
-  }
-
-  &-lg {
-    max-height: 48px;
-  }
+a.btn {
+  text-decoration: $link-decoration;
 }

@@ -105,3 +105,18 @@ export const Expandible = (): JSX.Element => {
     </div>
   );
 };
+
+export const ConBordes = (): JSX.Element => {
+  return (
+    <div className="btn-wrapper">
+      {buttonTypes.map((type) => (
+        <Button key={type} type={type} outline={true}>
+          {type}
+        </Button>
+      ))}
+      <button type="button" className="btn btn-outline-primary" disabled>
+        Deshabilitado
+      </button>
+    </div>
+  );
+};
