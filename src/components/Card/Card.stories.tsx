@@ -143,11 +143,41 @@ export const HorizontalCard = (): JSX.Element => {
           className="card-lg"
           href="#"
         />
+        <br />
+        <a className="card card-horizontal" href="#">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-icon-body">
+            <h4 className="card-title">Título del acceso</h4>
+            <p className="card-text">Descripción del acceso</p>
+          </div>
+        </a>
+        <br />
+        <a className="card card-horizontal" href="#">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-icon-body">
+            <h4 className="card-title">Título del acceso</h4>
+          </div>
+        </a>
+        <br />
+        <a className="card card-horizontal unbordered" href="#">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-icon-body">
+            <h4 className="card-title">Título del acceso</h4>
+            <p className="card-text">Descripción del acceso</p>
+          </div>
+        </a>
+        <br />
+        <a className="card card-horizontal unbordered" href="#">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-icon-body">
+            <h4 className="card-title">Título del acceso</h4>
+          </div>
+        </a>
       </div>
     </>
   );
 };
-HorizontalCard.story = { name: 'Contenedor con imagen horizontal' };
+HorizontalCard.story = { name: 'Contenedor con imagen o icono horizontal' };
 
 export const NewsCard = (): JSX.Element => {
   return (
@@ -215,3 +245,47 @@ export const EventCard = (): JSX.Element => {
   );
 };
 EventCard.story = { name: 'Evento' };
+
+export const IconCard = (): JSX.Element => {
+  return (
+    <>
+      <div className="horizontal-container">
+        <a className="card card-simple card-horizontal" href="#">
+          <i className="bx bx-file card-icon-box "></i>
+          <div className="card-body-icon">
+            <h4 className="card-title">Título del acceso</h4>
+            <p className="card-text-icon mb-0">Descripción del acceso</p>
+          </div>
+        </a>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div className="horizontal-container">
+        <a className="card card-simple card-horizontal" href="#">
+          <i className="bx bx-file card-icon-box "></i>
+          <div className="card-body-icon">
+            <h4 className="card-title">Título del acceso</h4>
+          </div>
+        </a>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div className="horizontal-container">
+        <a className="card card-simple card-horizontal" href="#">
+          <i className="bx bx-file card-icon-box "></i>
+          <div className="card-body-icon">
+            <h4 className="card-title">Título del acceso</h4>
+            <p className="card-text-icon mb-0">
+              Descripción del acceso Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis animi dolor
+              inventore. Repellat, odit consequatur quas maiores laborum porro suscipit quaerat cum facere sed velit,
+              libero enim eligendi tempora laboriosam.
+            </p>
+          </div>
+        </a>
+      </div>
+    </>
+  );
+};
+IconCard.story = { name: 'Tarjeta con Icono' };
