@@ -11,10 +11,16 @@ $right-arrow-icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy
 /* === Custom styles === */
 
 h1,
-.h1,
+.h1 {
+  font-weight: $large-headings-font-weight;
+}
 h2,
 .h2 {
-  font-weight: $large-headings-font-weight;
+  font-weight: $headings-font-weight;
+}
+h4,
+.h4 {
+  font-weight: $h4-font-weight-mobile;
 }
 h5,
 .h5 {
@@ -53,5 +59,9 @@ blockquote {
   blockquote {
     padding-left: spaceUnits(6);
     margin: spaceUnits(8) spaceUnits(22);
+  }
+  h4,
+  .h4 {
+    font-weight: $h4-font-weight;
   }
 }
