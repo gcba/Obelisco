@@ -1,0 +1,18 @@
+/* === Variable and mixins overides === */
+$spinner-width: 3.75rem;
+$spinner-height: 3.75rem;
+
+/* === Bootstrap Import === */
+@import '~bootstrap/scss/spinners';
+
+/* === Custom styles === */
+.spinner{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  max-width: 712px;
+
+  .spinner-border{
+    margin-top:1.5rem;
+  }
+}

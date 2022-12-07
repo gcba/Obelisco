@@ -57,7 +57,7 @@ a.list-group-item {
   border-radius: $list-group-border;
   margin-bottom: 1rem;
   padding: $list-gorup-padding-y $list-gorup-padding-x;
-  
+
   &:visited {
     color: $list-group-color;
   }
@@ -69,19 +69,6 @@ a.list-group-item {
   &:last-child {
     margin-bottom: 0px;
     border-radius: $list-group-border;
-  }
-
-  &.list-group-item-logout {
-    box-shadow: $box-shadow-access-hover-danger;
-    
-    &:visited {
-      color: $danger;
-    }
-
-    &.logout-sm {
-      padding: 0.525rem 0.75rem;
-      line-height: 1.45;
-    }
   }
 
   &:hover,
@@ -147,14 +134,6 @@ a.list-group-item {
   &:after {
     content: $list-group-icon-arrow;
     @include float-height-icon;
-  }
-
-  &.list-group-item-logout {
-    color: $danger;
-
-    &:after {
-      content: $list-group-icon-logout;
-    }
   }
 
   &.item-sm {
@@ -225,6 +204,29 @@ a.list-group-item {
       margin: 0;
     }
   }
+
+  &.list-group-item-logout {
+    box-shadow: $box-shadow-access-hover-danger;
+    color: $danger;
+
+    &:visited {
+      color: $danger;
+    }
+
+    &:after {
+      content: $list-group-icon-logout;
+    }
+
+    &:hover {
+      box-shadow: $box-shadow-access-hover-danger;
+      color: $danger;
+    }
+
+    &.logout-sm {
+      padding: 0.525rem 0.75rem;
+      line-height: 1.45;
+    }
+  }
 }
 
 .list-group {
@@ -253,6 +255,7 @@ a.list-group-item {
 
 .group-access {
   margin-bottom: 1rem;
+  max-width: 712px;
 
   &:last-child {
     margin-bottom: 0px;
@@ -286,7 +289,7 @@ a.list-group-item {
       .card-access-icon {
         font-size: $font-size-icon-card;
         background-color: #f3f6f9;
-        width: $card-size;
+        flex: 0 0 $card-size;
         height: $card-size;
         border-radius: $list-group-border;
         text-align: center;
