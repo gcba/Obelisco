@@ -146,7 +146,7 @@ export const HorizontalCard = (): JSX.Element => {
         <br />
         <a className="card card-horizontal" href="#">
           <i className="bx bx-file card-icon-left"></i>
-          <div className="card-icon-body">
+          <div className="card-body">
             <h4 className="card-title">Título del acceso</h4>
             <p className="card-text">Descripción del acceso</p>
           </div>
@@ -154,14 +154,14 @@ export const HorizontalCard = (): JSX.Element => {
         <br />
         <a className="card card-horizontal" href="#">
           <i className="bx bx-file card-icon-left"></i>
-          <div className="card-icon-body">
+          <div className="card-body">
             <h4 className="card-title">Título del acceso</h4>
           </div>
         </a>
         <br />
         <a className="card card-horizontal unbordered" href="#">
           <i className="bx bx-file card-icon-left"></i>
-          <div className="card-icon-body">
+          <div className="card-body">
             <h4 className="card-title">Título del acceso</h4>
             <p className="card-text">Descripción del acceso</p>
           </div>
@@ -169,7 +169,7 @@ export const HorizontalCard = (): JSX.Element => {
         <br />
         <a className="card card-horizontal unbordered" href="#">
           <i className="bx bx-file card-icon-left"></i>
-          <div className="card-icon-body">
+          <div className="card-body">
             <h4 className="card-title">Título del acceso</h4>
           </div>
         </a>

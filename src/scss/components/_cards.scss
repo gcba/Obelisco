@@ -369,19 +369,11 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       @extend .card-icon;
       @extend .card-img-left;
 
-      + .card-icon-body {
-        @extend .card-body;
+      + .card-body {
         padding-left: $card-spacer-sm;
         display: flex;
         flex-direction: column;
         justify-content: center;
-      }
-    }
-
-    &:hover {
-      .card-icon-left,
-      .card-icon-body {
-        color: $blue;
       }
     }
   }
@@ -572,7 +564,8 @@ button.card {
     color: $body-color;
 
     .card-body,
-    .card-footer {
+    .card-footer,
+    .card-icon-left {
       color: $blue;
 
       .card-title {
