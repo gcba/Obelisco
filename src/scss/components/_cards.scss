@@ -269,6 +269,11 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 
+  &.unbordered {
+    box-shadow: none;
+    background: none;
+  }
+
   &.card-horizontal {
     flex-direction: row;
 
@@ -357,6 +362,18 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
             padding: $card-spacer;
           }
         }
+      }
+    }
+
+    .card-icon-left {
+      @extend .card-icon;
+      @extend .card-img-left;
+
+      + .card-body {
+        padding-left: $card-spacer-sm;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }
@@ -547,7 +564,8 @@ button.card {
     color: $body-color;
 
     .card-body,
-    .card-footer {
+    .card-footer,
+    .card-icon-left {
       color: $blue;
 
       .card-title {
