@@ -680,30 +680,6 @@ button.card {
           }
         }
       }
-
-      &.accordion-card-icon {
-        max-height: 48px;
-
-        &:before {
-          content: $accordion-icon-user-white;
-          display: inline-block;
-          margin-right: 0.25rem;
-          vertical-align: middle;
-        }
-
-        &.collapsed {
-          &:before {
-            content: $accordion-icon-user;
-          }
-
-          &:hover,
-          &.hover {
-            &:before {
-              content: $accordion-icon-user-blue;
-            }
-          }
-        }
-      }
     }
 
     .collpase-subtitle {
