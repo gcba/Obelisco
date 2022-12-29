@@ -16,19 +16,19 @@ export const AccessListDescriptive = (): JSX.Element => {
             <div className="container-access">
               <hr className="clearfix" />
               <div className="access-option">
-                <a href="#" className="list-group-item item-sm descriptive-item">
+                <a href="#" className="list-group-item item-sm">
                   <div className="access-content">
                     <span className="access-title ">Acceso chico</span>
                     <p className="access-text">Descripción</p>
                   </div>
                 </a>
-                <a href="#" className="list-group-item item-sm descriptive-item">
+                <a href="#" className="list-group-item item-sm">
                   <div className="access-content">
                     <span className="access-title ">Acceso chico</span>
                     <p className="access-text">Descripción</p>
                   </div>
                 </a>
-                <a href="#" className="list-group-item item-sm descriptive-item">
+                <a href="#" className="list-group-item item-sm">
                   <div className="access-content">
                     <span className="access-title ">Acceso chico</span>
                     <p className="access-text">Descripción</p>
