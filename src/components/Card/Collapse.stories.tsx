@@ -127,7 +127,8 @@ export const ConIcono = (): JSX.Element => (
     <div className="accordion-wrapper">
       <div className="accordion" id="accordionExample">
         <div className="card">
-          <button className="card-header collapsed card-link accordion-card-icon" data-toggle="collapse" data-target="#collapseEight">
+          <button className="card-header collapsed card-link " data-toggle="collapse" data-target="#collapseEight">
+            <i className="bx bx-sm align-top mr-1 bxs-user-circle"></i>
             Colapsable
           </button>
           <div id="collapseEight" className="collapse" data-parent="#accordion">

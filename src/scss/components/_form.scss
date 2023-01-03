@@ -258,10 +258,9 @@ $form-validation-states: (
     }
   }
   &:not(:disabled):focus ~ .custom-control-label {
-    box-shadow: $input-focus-box-shadow;
-
     &:before {
-      box-shadow: none;
+      box-shadow: 0 0 0 7px #005386;
+      outline: 3px solid $white;
     }
   }
 
