@@ -55,5 +55,12 @@ $status-list-icon-left: 1.7rem;
         vertical-align: middle;
       }
     }
+
+    @include media-breakpoint-down(sm) {
+      + .btn, .btn-secondary {
+        width: 100%;
+      }
+    }
   }
+
 }

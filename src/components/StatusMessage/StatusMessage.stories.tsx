@@ -18,12 +18,14 @@ const LIST = [
 ];
 
 export const StatusSuccess = (): JSX.Element => (
-  <StatusMessage
-    title="Esto es un título de una acción exitosa"
-    type="success"
-    text="Esto es un párrafo que acompaña que sirve para indicar que el usuario realizó una acción correctamente, como cuando realiza una tarea con éxito."
-    list={LIST}
-  />
+  <div className="status-container">
+    <StatusMessage
+      title="Esto es un título de una acción exitosa"
+      type="success"
+      text="Esto es un párrafo que acompaña que sirve para indicar que el usuario realizó una acción correctamente, como cuando realiza una tarea con éxito."
+      list={LIST}
+    />
+  </div>
 );
 
 StatusSuccess.story = {
@@ -31,13 +33,15 @@ StatusSuccess.story = {
 };
 
 export const StatusWarning = (): JSX.Element => (
-  <StatusMessage
-    title="Esto es un título de una acción importante"
-    type="primary"
-    text="Esta variante se utiliza para informar sobre una situación que debe abordarse pronto. Sirve para que la persona
-    usuaria preste atención a cierta información o acción que realizó o está por realizar."
-    list={LIST}
-  />
+  <div className="status-container">
+    <StatusMessage
+      title="Esto es un título de una acción importante"
+      type="primary"
+      text="Esta variante se utiliza para informar sobre una situación que debe abordarse pronto. Sirve para que la persona
+      usuaria preste atención a cierta información o acción que realizó o está por realizar."
+      list={LIST}
+    />
+  </div>
 );
 
 StatusWarning.story = {
@@ -45,13 +49,15 @@ StatusWarning.story = {
 };
 
 export const StatusInfo = (): JSX.Element => (
-  <StatusMessage
-    title="Esto es un título para información"
-    type="info"
-    text="Sirve para mostrar información destacada pero adicional, es decir que notifican al usuario sobre un cambio, para
+  <div className="status-container">
+    <StatusMessage
+      title="Esto es un título para información"
+      type="info"
+      text="Sirve para mostrar información destacada pero adicional, es decir que notifican al usuario sobre un cambio, para
     darles consejos o brindar información específica sobre la sección en la que se encuentran."
-    list={LIST}
-  />
+      list={LIST}
+    />
+  </div>
 );
 
 StatusInfo.story = {
@@ -59,13 +65,15 @@ StatusInfo.story = {
 };
 
 export const StatusDanger = (): JSX.Element => (
-  <StatusMessage
-    title="Esto es un título para un error o acción peligrosa"
-    type="danger"
-    text="Se usan para mostrar un error de validación, falla del sistema, o para transmitir algo que debe reconocerse o
-      abordarse de inmediato para continuar con su navegación."
-    list={LIST}
-  />
+  <div className="status-container">
+    <StatusMessage
+      title="Esto es un título para un error o acción peligrosa"
+      type="danger"
+      text="Se usan para mostrar un error de validación, falla del sistema, o para transmitir algo que debe reconocerse o
+        abordarse de inmediato para continuar con su navegación."
+      list={LIST}
+    />
+  </div>
 );
 
 StatusDanger.story = {
