@@ -1,13 +1,13 @@
 /* === Variable and mixins overides === */
 
 $btn-padding-y: spaceUnits(2);
-$btn-padding-x: 0.75rem;
+$btn-padding-x: spaceUnits(4);
 $btn-font-size: 1.125rem;
-$btn-line-height: 1.378;
+$btn-line-height: 1.11;
 $btn-focus-width: 0.125rem;
-$btn-font-weight: 600;
+$btn-font-weight: $font-weight-bold;
 
-$btn-border-width: 0;
+$btn-border-width: 0.125rem;
 
 $btn-box-shadow: none;
 $btn-focus-width: 4px;
@@ -21,7 +21,7 @@ $btn-font-size-sm: 1rem;
 $btn-line-height-sm: $btn-line-height;
 
 $btn-padding-y-lg: spaceUnits(3);
-$btn-padding-x-lg: spaceUnits(3);
+$btn-padding-x-lg: spaceUnits(5);
 $btn-font-size-lg: 1.125rem;
 $btn-line-height-lg: $btn-line-height;
 
@@ -57,25 +57,9 @@ $btn-font-family: $font-family-headings;
   }
 }
 
-//
-// Button Sizes
-//
-
-.btn {
-  max-height: 40px;
-
-  &-sm {
-    max-height: 30px;
-  }
-
-  &-lg {
-    max-height: 48px;
-    font-weight: $font-weight-bold;
-  }
-}
-
 @each $color, $value in $theme-colors {
   .btn-#{$color}, .btn-outline-#{$color} {
+    min-height: 40px;
     color: color-yiq($value);
     text-decoration: $link-decoration;
 
@@ -92,6 +76,7 @@ $btn-font-family: $font-family-headings;
 
       &:not(:hover) {
         background-color: theme-color-level($color, 0);
+        border-color: theme-color-level($color, 0);
       }
     }
 
@@ -102,6 +87,7 @@ $btn-font-family: $font-family-headings;
     .show > &.dropdown-toggle {
       background-color: theme-color-level($color, 1);
       box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
+      border-color: theme-color-level($color, 1);
 
       &:focus,
       &.focus {
@@ -110,81 +96,37 @@ $btn-font-family: $font-family-headings;
 
         &:not(:hover) {
           background-color: theme-color-level($color, 0);
+          border-color: theme-color-level($color, 0);
         }
       }
     }
   }
   
   .btn-outline-#{$color}{
-    border-width: 2px;
-    font-weight: $font-weight-bold;
-    line-height: 1.13;
     color: theme-color-level($color, 0);
-
-    @include media-breakpoint-down(xs) {
-      font-weight: $btn-font-weight;
-      max-height: 36px;
-      line-height: 1;
-    }
-
-    @include hover() {
-      color: color-yiq($value);
-    }
 
     &:focus,
     &.focus {
       color: color-yiq($value);
     }
 
-    &:not(:disabled):not(.disabled):active,
-    &:not(:disabled):not(.disabled).active {
-      box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
-      border-color: theme-color-level($color, 1);
-
-      &:focus,
-      &.focus {
-
-        &:not(:hover) {
-          border-color: theme-color-level($color, 0);
-        }
-      }
-    }
-
     @if $color == "primary" {
       color: $grisulado-900;
-      &:focus,
-      &.focus {
-        color: $grisulado-900;
-
-        &:not(:hover) {
-          color: $grisulado-900;
-        }
-      }
-    }
-
-    &.btn-lg {
-      @include media-breakpoint-down(xs) {
-        max-height: 44px;
-      }
-    }
-
-    &.btn-sm {
-      @include media-breakpoint-down(xs) {
-        max-height: 28px;
-      }
     }
   }
 }
 
 .btn-link, .btn-outline-link {
-  font-weight: $btn-font-weight;
+  min-height: 40px; 
   background-color: $ghost;
-  color: $blue;
+  color: $link-color;
+  font-weight: $btn-font-weight;
 
   @include btn-disabled;
 
   @include hover() {
     background-color: $ghost-hover;
+    border-color: $ghost-hover;
     color: $link-color;
     text-decoration: $link-decoration;
     box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
@@ -194,35 +136,6 @@ $btn-font-family: $font-family-headings;
   &.focus {
     box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
     text-decoration: $link-decoration;
-  }
-
-  &:active,
-  &.active {
-    &:not(:hover) {
-      background-color: $ghost-hover;
-      box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
-    }
-  }
-}
-
-.btn-outline-link {
-  font-weight: $font-weight-bold;
-  border: 2px solid $blue;
-  line-height: 1.13;
-  background-color: inherit;
-
-  @include media-breakpoint-down(xs) {
-    font-weight: $btn-font-weight;
-    max-height: 36px;
-    line-height: 1;
-  }
-
-  @include hover() {
-    border-color: $ghost-hover;
-  }
-
-  &:focus,
-  &.focus {
 
     &:not(:hover) {
       background-color: $ghost;
@@ -231,9 +144,10 @@ $btn-font-family: $font-family-headings;
   }
 
   &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    background-color:  $ghost-hover;
-    box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    background-color: $ghost-hover;
+    box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
     border-color: $ghost-hover;
 
     &:focus,
@@ -247,20 +161,54 @@ $btn-font-family: $font-family-headings;
       }
     }
   }
-  
-  &.btn-lg {
-    @include media-breakpoint-down(xs) {
-      max-height: 44px;
-    }
-  }
+}
 
-  &.btn-sm {
-    @include media-breakpoint-down(xs) {
-      max-height: 28px;
-    }
-  }
+.btn-outline-link {
+  background-color: transparent;
+  border-color: $link-color;
 }
 
 a.btn {
   text-decoration: $link-decoration;
+}
+
+.btn-container{
+  .card {
+    padding: 1.5rem;
+    .card-body {
+      padding: 0;
+      margin-bottom: 1rem;
+      .card-text{
+        margin-top: .25rem;
+      }
+    }
+  }
+}
+
+//
+// Button Sizes
+//
+.btn {
+  .btn-icon{
+    margin-right: 6.5px;
+    font-size: 0.9375rem;
+    vertical-align: baseline;
+  }
+
+  &-sm {
+    min-height: 30px;
+    line-height: 1.125;
+    .btn-icon{
+      vertical-align: -0.05rem;
+    }
+  }
+
+  &-lg {
+    min-height: 48px;
+    .btn-icon{
+      margin-right: 7px;
+      font-size: $btn-font-size;
+      vertical-align: -0.1rem;
+    }
+  }
 }

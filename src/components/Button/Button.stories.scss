@@ -5,3 +5,13 @@
 .btn-block-wrapper {
   width: 240px;
 }
+
+.btn-wrapper-container{
+  max-width: 360px;
+  .btn-container {
+    margin: 1rem 0;
+    .btn{
+      margin: 0;
+    }
+  }
+}
