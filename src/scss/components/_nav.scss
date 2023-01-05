@@ -1,10 +1,10 @@
 /* === Variable and mixins overides === */
 
 $nav-link-font-weight: 400;
-$nav-link-active-font-weight: 600;
+$nav-link-active-font-weight: $nav-link-font-weight;
 $nav-link-line-heght: 1.378;
 
-$nav-link-lg-font-weight: 600;
+$nav-link-lg-font-weight: $nav-link-font-weight;
 $nav-link-lg-font-size: 1.125rem;
 
 $nav-icon-font-size: 1.25rem;
