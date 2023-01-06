@@ -96,20 +96,3 @@ export const Con3NivelesConIcono = (): JSX.Element => (
     <Nav items={tripleLevel} navSize="large" selected="1.2.2" hasIcon={true} />
   </div>
 );
-
-export const Responsive = (): JSX.Element => (
-  <div className="nav-container">
-    <nav aria-label="nav-link">
-      <a
-        className="nav-link nav-mobile-trigger collapsed"
-        data-toggle="collapse"
-        href="#sidebar-nav"
-        aria-label="collapse">
-        Acerca de Obelisco
-      </a>
-      <div className="nav-responsive collapse" id="sidebar-nav">
-        <Nav items={tripleLevel} navSize="large" selected="1.2.2" />
-      </div>
-    </nav>
-  </div>
-);

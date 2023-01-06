@@ -17,7 +17,7 @@ export const HeaderNoLogin = (): JSX.Element => {
     <header className="navbar navbar-light navbar-md">
       <div className="container">
         <a href="#" className="navbar-brand">
-          <img className="header-logo" src="header/header-logo.svg" alt="Ciudad de buenos aires" />
+          <img className="header-logo" src="header/LogoBA.svg" alt="Ciudad de buenos aires" />
         </a>
         <div className="navbar-search d-responsive ml-auto">
           <form className="form-search form-search-sm">
@@ -92,7 +92,7 @@ export const HeaderLogin = (): JSX.Element => {
     <header className="navbar navbar-light navbar-lg">
       <div className="container">
         <a className="navbar-brand" href="#">
-          <img className="header-logo" src="header/header-logo.svg" alt="Logo de la ciudad de buenos aires" />
+          <img className="header-logo" src="header/LogoBA.svg" alt="Logo de la ciudad de buenos aires" />
         </a>
         <div className="navbar-search d-responsive ml-auto">
           <form className="form-search form-search-sm">

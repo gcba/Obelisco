@@ -12,7 +12,7 @@ export default {
 export const CompleteContainer = (): JSX.Element => {
   return (
     <div className="cards-container">
-      <a className="card" href="#">
+      <div className="card">
         <div className="card-body">
           <h4 className="card-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</h4>
           <p className="card-text">
@@ -26,7 +26,7 @@ export const CompleteContainer = (): JSX.Element => {
             Your browser does not support the audio tag.
           </audio>
         </div>
-      </a>
+      </div>
     </div>
   );
 };
@@ -36,7 +36,7 @@ CompleteContainer.story = { name: 'Completo' };
 export const TitledContainer = (): JSX.Element => {
   return (
     <div className="cards-container">
-      <a className="card" href="#">
+      <div className="card">
         <div className="card-body">
           <h4 className="card-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</h4>
           <audio className="audio-sm mt-3" controls>
@@ -47,10 +47,10 @@ export const TitledContainer = (): JSX.Element => {
             Your browser does not support the audio tag.
           </audio>
         </div>
-      </a>
+      </div>
 
       <br />
-      <a className="card" href="#">
+      <div className="card">
         <div className="card-body">
           <p className="card-text">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
@@ -63,7 +63,7 @@ export const TitledContainer = (): JSX.Element => {
             Your browser does not support the audio tag.
           </audio>
         </div>
-      </a>
+      </div>
     </div>
   );
 };
@@ -73,7 +73,7 @@ TitledContainer.story = { name: 'Solo titulo' };
 export const ContainerAudio = (): JSX.Element => {
   return (
     <div className="cards-container">
-      <a className="card" href="#">
+      <div className="card">
         <div className="card-body">
           <audio className="audio-sm" controls>
             <source
@@ -83,7 +83,7 @@ export const ContainerAudio = (): JSX.Element => {
             Your browser does not support the audio tag.
           </audio>
         </div>
-      </a>
+      </div>
     </div>
   );
 };

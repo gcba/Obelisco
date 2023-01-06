@@ -53,3 +53,4 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/table';
 @import 'components/audio';
 @import 'components/status-message';
+@import 'components/spinner';
