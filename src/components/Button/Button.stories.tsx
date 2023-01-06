@@ -225,13 +225,20 @@ export const EnCaja = (): JSX.Element => {
         </div>
         <div className="btn-container">
           <div className="card">
+            <a className="btn btn-primary btn-block" href="#" target="_blank">
+              Enlace
+            </a>
+          </div>
+        </div>
+        <div className="btn-container">
+          <div className="card">
             <div className="card-body">
               <h4 className="card-title">Iniciá el trámite y completá todos los pasos</h4>
               <p className="card-text">Si tenés un trámite iniciado podés continuarlo desde acá.</p>
             </div>
-            <button type="button" className="btn btn-primary btn-block">
+            <a className="btn btn-primary btn-block" href="#" target="_blank">
               Iniciar trámite
-            </button>
+            </a>
           </div>
         </div>
         <div className="btn-container">
@@ -239,9 +246,9 @@ export const EnCaja = (): JSX.Element => {
             <div className="card-body">
               <h4 className="card-title">Iniciá el trámite y completá todos los pasos</h4>
             </div>
-            <button type="button" className="btn btn-primary btn-block">
+            <a className="btn btn-primary btn-block" href="#" target="_blank">
               Iniciar trámite
-            </button>
+            </a>
           </div>
         </div>
         <div className="btn-container">
@@ -250,9 +257,9 @@ export const EnCaja = (): JSX.Element => {
               <h4 className="card-title">Iniciá el trámite y completá todos los pasos</h4>
               <p className="card-text">Si tenés un trámite iniciado podés continuarlo desde acá.</p>
             </div>
-            <button type="button" className="btn btn-primary btn-block">
+            <a className="btn btn-primary btn-block" href="#" target="_blank">
               Iniciar trámite
-            </button>
+            </a>
           </div>
         </div>
         <div className="btn-container">
@@ -261,9 +268,9 @@ export const EnCaja = (): JSX.Element => {
               <h4 className="card-title">Iniciá el trámite y completá todos los pasos</h4>
               <p className="card-text">Si tenés un trámite iniciado podés continuarlo desde acá.</p>
             </div>
-            <button type="button" className="btn btn-primary btn-block">
+            <a className="btn btn-primary btn-block" href="#" target="_blank">
               Iniciar trámite
-            </button>
+            </a>
           </div>
         </div>
       </div>
