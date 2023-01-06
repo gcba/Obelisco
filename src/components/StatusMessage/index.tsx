@@ -1,6 +1,6 @@
 import React from 'react';
 
-type StatusMessageTypes = 'success' | 'warning' | 'danger' | 'primary' | 'info';
+type StatusMessageTypes = 'success' | 'danger' | 'primary' | 'info';
 
 export interface StatusMessageProps {
   type: StatusMessageTypes;
