@@ -1,12 +1,12 @@
 $icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(56, 72, 92);transform: ;msFilter:;"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>');
-$inset: 1.125rem 0 0 1.625rem;
+$inset: -0.15rem 0 0 -0.2rem;
 $status-size: 3.75rem;
 $status-padding-top: 3.75rem;
 $status-title-padding-bottom: 1rem;
 $status-title-font-weight: 600;
 $status-margin-bottom: 2rem;
 $status-list-padding-left: 1.5rem;
-$status-list-icon-left: 1.7rem;
+$status-list-icon-left: -0.3rem;
 
 @mixin status-icon($type) {
   &::before {
@@ -15,6 +15,7 @@ $status-list-icon-left: 1.7rem;
 }
 
 .status {
+  position: relative;
   padding-top: $status-padding-top;
 
   &::before {
