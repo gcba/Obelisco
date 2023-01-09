@@ -92,8 +92,10 @@ $form-validation-states: (
     font-weight: $label-font-weight;
   }
 
-  &.disabled  {
-    label, .form-control, .reset {
+  &.disabled {
+    label,
+    .form-control,
+    .reset {
       color: $input-disabled-color;
       pointer-events: none;
     }
@@ -256,10 +258,9 @@ $form-validation-states: (
     }
   }
   &:not(:disabled):focus ~ .custom-control-label {
-    box-shadow: $input-focus-box-shadow;
-
     &:before {
-      box-shadow: none;
+      box-shadow: 0 0 0 7px #005386;
+      outline: 3px solid $white;
     }
   }
 
@@ -304,13 +305,12 @@ $form-validation-states: (
 .btn-chip {
   font-weight: normal;
   background-color: $grisulado-10;
-  
+
   @include btn-disabled;
 
   @include hover() {
     background-color: $grisulado-10;
     color: $link-color;
-    text-decoration: underline;
     box-shadow: 0 0 0 $btn-hover-width $blue;
   }
 
@@ -320,16 +320,28 @@ $form-validation-states: (
     text-decoration: none;
   }
 
+  &.active {
+    color: #fff;
+    background-color: $blue;
+    box-shadow: none;
+
+    &:hover {
+      color: #fff;
+      box-shadow: none;
+      text-decoration: none;
+    }
+  }
 }
 
 .btn-check {
   position: absolute;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   pointer-events: none;
 
-  &:active, &:checked + .btn-chip {
+  &:active,
+  &:checked + .btn-chip {
     color: #fff;
     background-color: $blue;
-    box-shadow: none;    
+    box-shadow: none;
   }
 }
