@@ -68,7 +68,7 @@ export const TitledContainer = (): JSX.Element => {
   );
 };
 
-TitledContainer.story = { name: 'Solo titulo' };
+TitledContainer.story = { name: 'Solo título' };
 
 export const ContainerAudio = (): JSX.Element => {
   return (
