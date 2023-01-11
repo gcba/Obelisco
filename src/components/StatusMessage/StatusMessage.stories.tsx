@@ -61,3 +61,17 @@ export const StatusDanger = (): JSX.Element => (
 StatusDanger.story = {
   name: 'Error'
 };
+
+export const StatusDefault = (): JSX.Element => (
+  <div className="status-container">
+    <StatusMessage
+      title="Este es un mensaje institucional del Gobierno de la Ciudad de Buenos Aires"
+      type="ba"
+      text={LOREM_TEXT}
+    />
+  </div>
+);
+
+StatusDefault.story = {
+  name: 'Default'
+};
