@@ -78,7 +78,7 @@ $accordion-icon-user-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="ht
 $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 123, 199);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
 
 @mixin card-deck-4 {
-  .card {
+  .card, .group-access {
     flex: 1 0 19%;
     margin-top: 0;
     &:nth-of-type(n + 5) {
@@ -88,7 +88,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 @mixin card-deck-3 {
-  .card {
+  .card, .group-access {
     flex: 1 0 25%;
     margin-top: 0;
     &:nth-of-type(n + 4) {
@@ -98,7 +98,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 @mixin card-deck-2 {
-  .card {
+  .card, .group-access {
     flex: 1 0 35%;
     margin-top: 0;
     &:nth-of-type(n + 3) {
@@ -118,7 +118,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 @mixin card-deck-1 {
-  .card {
+  .card, .group-access {
     // Esto es necesario que siempre se vea de a 1 columna en todos los tamaños
     flex: 1 0 55% !important;
     margin-top: 0;
@@ -269,6 +269,11 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 
+  &.unbordered {
+    box-shadow: none;
+    background: none;
+  }
+
   &.card-horizontal {
     flex-direction: row;
 
@@ -357,6 +362,18 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
             padding: $card-spacer;
           }
         }
+      }
+    }
+
+    .card-icon-left {
+      @extend .card-icon;
+      @extend .card-img-left;
+
+      + .card-body {
+        padding-left: $card-spacer-sm;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     }
   }
@@ -481,6 +498,25 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   @include card-deck-2;
 }
 
+.card-deck {
+  .group-access {
+    margin-bottom: $card-deck-margin;
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -$card-deck-margin;
+    margin-left: -$card-deck-margin;
+
+    .group-access {
+      margin-right: $card-deck-margin;
+      margin-bottom: 0;
+      margin-left: $card-deck-margin;
+    }
+  }
+}
+
 .panel-deck {
   .card {
     margin-bottom: $panel-deck-card-mb;
@@ -547,7 +583,8 @@ button.card {
     color: $body-color;
 
     .card-body,
-    .card-footer {
+    .card-footer,
+    .card-icon-left {
       color: $blue;
 
       .card-title {
@@ -594,7 +631,7 @@ button.card {
       min-height: 48px;
       line-height: 1.4;
       font-size: 18px;
-      font-weight: 900;
+      font-weight: 700;
 
       &:after {
         content: $accordion-icon-expanded-blue;
@@ -659,30 +696,6 @@ button.card {
 
           &:after {
             content: 'Ver detalle';
-          }
-        }
-      }
-
-      &.accordion-card-icon {
-        max-height: 48px;
-
-        &:before {
-          content: $accordion-icon-user-white;
-          display: inline-block;
-          margin-right: 0.25rem;
-          vertical-align: middle;
-        }
-
-        &.collapsed {
-          &:before {
-            content: $accordion-icon-user;
-          }
-
-          &:hover,
-          &.hover {
-            &:before {
-              content: $accordion-icon-user-blue;
-            }
           }
         }
       }

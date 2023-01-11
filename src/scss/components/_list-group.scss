@@ -142,17 +142,6 @@ a.list-group-item {
     @include display-flex-between;
     align-items: flex-start;
 
-    &.descriptive-item {
-      .access-title {
-        color: $grisulado-900;
-      }
-
-      &:after {
-        content: $list-group-icon-arrow;
-        @include float-height-icon;
-      }
-    }
-
     &:hover,
     &.hover {
       box-shadow: $box-shadow-access-hover;
@@ -254,14 +243,12 @@ a.list-group-item {
 }
 
 .group-access {
+  display: grid;
   margin-bottom: 1rem;
   max-width: 712px;
 
-  &:last-child {
-    margin-bottom: 0px;
-  }
-
   .card-access {
+    display: grid;
     width: 100%;
     box-shadow: $box-shadow-access;
     border-radius: $list-group-border;
@@ -362,6 +349,8 @@ a.list-group-item {
 
     .list-group-item {
       padding: $list-gorup-padding-y;
+      margin-top: auto;
+      width: 100%;
     }
   }
 
