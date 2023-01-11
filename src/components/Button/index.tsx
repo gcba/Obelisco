@@ -8,10 +8,11 @@ export interface ButtonProps {
   disabled?: boolean;
   className?: string;
   outline?: boolean;
+  icon?: string;
 }
 
 export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<ButtonProps>) => {
-  const { type, size, block, disabled, children, outline } = props;
+  const { type, size, block, disabled, children, outline, icon } = props;
 
   let className = `btn btn-${type}`;
   if (!!size && size !== 'default') className += ` btn-${sizeToClass(size)}`;
@@ -21,6 +22,7 @@ export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<But
 
   return (
     <button type="button" className={className} disabled={disabled}>
+      {icon != undefined ? <i className={`bx ${icon} btn-icon`}></i> : null}
       {children}
     </button>
   );
