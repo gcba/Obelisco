@@ -11,7 +11,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const SoloBotón = (): JSX.Element => {
+export const SoloBoton = (): JSX.Element => {
   return (
     <>
       <div className="btn-container">
@@ -38,6 +38,7 @@ export const SoloBotón = (): JSX.Element => {
     </>
   );
 };
+SoloBoton.story = { name: 'Solo Botón' };
 
 export const ConEnlace = (): JSX.Element => {
   return (
@@ -45,21 +46,21 @@ export const ConEnlace = (): JSX.Element => {
       <div className="btn-container">
         <div className="card">
           <a className="btn btn-primary btn-block btn-sm" href="#" target="_blank">
-            Botón
+            Enlace
           </a>
         </div>
       </div>
       <div className="btn-container">
         <div className="card">
           <a className="btn btn-primary btn-block" href="#" target="_blank">
-            Botón
+            Enlace
           </a>
         </div>
       </div>
       <div className="btn-container">
         <div className="card">
           <a className="btn btn-primary btn-block btn-lg" href="#" target="_blank">
-            Botón
+            Enlace
           </a>
         </div>
       </div>
@@ -83,7 +84,7 @@ export const Completo = (): JSX.Element => {
   );
 };
 
-export const SoloTítulo = (): JSX.Element => {
+export const SoloTitulo = (): JSX.Element => {
   return (
     <div className="btn-container">
       <div className="card">
@@ -97,6 +98,7 @@ export const SoloTítulo = (): JSX.Element => {
     </div>
   );
 };
+SoloTitulo.story = { name: 'Solo Título' };
 
 export const ConFondo = (): JSX.Element => {
   return (
