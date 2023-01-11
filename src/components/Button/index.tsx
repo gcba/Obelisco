@@ -19,10 +19,11 @@ export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<But
   if (block) className += ` btn-block`;
   if (props.className) className += ` ${props.className}`;
   if (outline) className = `btn btn-outline-${type}`;
+  if (icon) className += ` btn-icon`;
 
   return (
     <button type="button" className={className} disabled={disabled}>
-      {icon != undefined ? <i className={`bx ${icon} btn-icon`}></i> : null}
+      {icon && <i className={`bx ${icon}`}></i>}
       {children}
     </button>
   );
