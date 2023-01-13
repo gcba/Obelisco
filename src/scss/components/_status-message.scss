@@ -6,8 +6,8 @@ $padding-icon-ba: 4.35rem;
 $width-icon-ba: 6.972rem;
 $height-icon-ba: 3.75rem;
 $status-size: 3.75rem;
-$status-padding-top: 3.75rem;
-$status-title-padding-bottom: 1rem;
+$status-padding-top: 3.55rem;
+$status-title-padding: 1rem;
 $status-title-font-weight: 600;
 $status-margin-bottom: 2rem;
 $status-list-padding-left: 1.5rem;
@@ -58,7 +58,7 @@ $status-icons: map-merge($alert-icons, (
 
   .status-title {
     font-weight: $status-title-font-weight;
-    margin-bottom: $status-title-padding-bottom;
+    margin: $status-title-padding 0;
   }
 
   .status-text {
