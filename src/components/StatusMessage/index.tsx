@@ -5,14 +5,21 @@ type StatusMessageTypes = 'success' | 'danger' | 'primary' | 'info' | 'ba';
 export interface StatusMessageProps {
   type: StatusMessageTypes;
   title: string;
-  text: string;
+  text: string | string[];
   list?: string[];
+  isTwoButtons?: boolean;
 }
 
 export const StatusMessage = (props: React.PropsWithChildren<StatusMessageProps>): JSX.Element => (
   <div className={`status status-${props.type}`}>
     <h2 className="status-title">{props.title}</h2>
-    <p className="status-text">{props.text}</p>
+    {Array.isArray(props.text) ? (
+      props.text?.map((text, index) => (
+        <p key={index} className="status-text" dangerouslySetInnerHTML={{ __html: text }}></p>
+      ))
+    ) : (
+      <p className="status-text" dangerouslySetInnerHTML={{ __html: props.text }}></p>
+    )}
 
     {props.list && (
       <ul className="status-list">
@@ -27,9 +34,24 @@ export const StatusMessage = (props: React.PropsWithChildren<StatusMessageProps>
         Ir al sitio web
       </button>
     ) : (
-      <button type="button" className="btn btn-secondary">
-        Boton
-      </button>
+      <>
+        {props.isTwoButtons ? (
+          <>
+            <button type="button" className="btn btn-secondary">
+              Boton
+            </button>
+            <button type="button" className="btn btn-outline-secondary">
+              Boton
+            </button>
+          </>
+        ) : (
+          <>
+            <button type="button" className="btn btn-secondary">
+              Boton
+            </button>
+          </>
+        )}
+      </>
     )}
   </div>
 );

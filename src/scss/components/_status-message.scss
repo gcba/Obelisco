@@ -9,9 +9,9 @@ $status-size: 3.75rem;
 $status-padding-top: 3.55rem;
 $status-title-padding: 1rem;
 $status-title-font-weight: 600;
-$status-margin-bottom: 2rem;
+$status-margin-bottom: 1rem;
 $status-list-padding-left: 1.5rem;
-$status-list-margin-bottom: 1rem;
+$status-list-margin-bottom: 0.75rem;
 $status-list-icon-left: -0.3rem;
 
 $status-types: ('success' , 'danger' , 'primary' , 'info' , 'ba');
@@ -88,4 +88,7 @@ $status-icons: map-merge($alert-icons, (
     }
   }
 
+  > .btn + .btn {
+    margin-left: 1rem;
+  }
 }

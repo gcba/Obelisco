@@ -12,14 +12,26 @@ export default {
   decorators: [withA11y]
 };
 
-const LIST = ['Un texto simple para una lista', 'Un texto simple para una lista', 'Un texto simple para una lista'];
+const LIST_SUCCCESS = [
+  'Éste es un ítem dentro de una lista que puede contener un <a href="#">enlace</a>.',
+  'Los ítems pueden contener o no enlaces. Este es un ejemplo para un detalle que no lleva enlace.',
+  'Éste es otro ítem dentro de una lista.'
+];
 
-const LOREM_TEXT =
-  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi voluptas vero id voluptate ab quis aperiam est obcaecati, nulla, provident illo perspiciatis ipsum excepturi quidem.';
+const LIST = [
+  'Contar con Clave Ciudad de <a href="#">AGIP</a>',
+  'Cargar en el Sistema de Tramitación a Distancia (TAD) la siguiente documentación obligatoria:',
+  'Anexo II Formulario de Presentación de Programa de Capacitación'
+];
 
 export const StatusSuccess = (): JSX.Element => (
   <div className="status-container">
-    <StatusMessage title="Esto es un título de una acción exitosa" type="success" text={LOREM_TEXT} list={LIST} />
+    <StatusMessage
+      title="Esto es un título de un mensaje de éxito"
+      type="success"
+      text="Esto es un párrafo que acompaña y sirve para indicar que el usuario realizó una acción correctamente, como cuando realiza una tarea con éxito."
+      list={LIST_SUCCCESS}
+    />
   </div>
 );
 
@@ -29,7 +41,13 @@ StatusSuccess.story = {
 
 export const StatusWarning = (): JSX.Element => (
   <div className="status-container">
-    <StatusMessage title="Esto es un título de una acción importante" type="primary" text={LOREM_TEXT} list={LIST} />
+    <StatusMessage
+      title="Esto es un título de un mensaje de advertencia"
+      type="primary"
+      text="Esto es un párrafo que advierte y sirve para indicarle al usuario que preste atención a determinada información o acción que debe realizar."
+      list={LIST}
+      isTwoButtons={true}
+    />
   </div>
 );
 
@@ -39,7 +57,14 @@ StatusWarning.story = {
 
 export const StatusInfo = (): JSX.Element => (
   <div className="status-container">
-    <StatusMessage title="Esto es un título para información" type="info" text={LOREM_TEXT} list={LIST} />
+    <StatusMessage
+      title="Esto es un título de un mensaje de información"
+      type="info"
+      text={[
+        'Este es un párrafo que brinda información necesaria con la finalidad de guiar y ayudar a las personas usuarias a finalizar un proceso o iniciar uno nuevo.',
+        'Este es un párrafo que brinda información necesaria con la finalidad de guiar y ayudar a las personas usuarias a finalizar un proceso o iniciar uno nuevo.'
+      ]}
+    />
   </div>
 );
 
@@ -50,10 +75,11 @@ StatusInfo.story = {
 export const StatusDanger = (): JSX.Element => (
   <div className="status-container">
     <StatusMessage
-      title="Esto es un título para un error o acción peligrosa"
+      title="Esto es un título de un mensaje de peligro"
       type="danger"
-      text={LOREM_TEXT}
+      text="Este párrafo sirve para comunicar que algo salió mal y explica cómo puede ser solucionado. Muestra errores sobre algo que se realizó."
       list={LIST}
+      isTwoButtons={true}
     />
   </div>
 );
@@ -62,16 +88,16 @@ StatusDanger.story = {
   name: 'Error'
 };
 
-export const StatusDefault = (): JSX.Element => (
+export const StatusInstitutional = (): JSX.Element => (
   <div className="status-container">
     <StatusMessage
       title="Este es un mensaje institucional del Gobierno de la Ciudad de Buenos Aires"
       type="ba"
-      text={LOREM_TEXT}
+      text="En el cuerpo de este componente pueden ir enlaces o botones: <a href='#'>https://ejemplo.buenosaires.gob.ar</a>"
     />
   </div>
 );
 
-StatusDefault.story = {
-  name: 'Default'
+StatusInstitutional.story = {
+  name: 'Institucional'
 };
