@@ -2,7 +2,7 @@ $icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
 $icon-ba: url('/header/logoBA.svg');
 $inset: -0.15rem 0 0 -0.2rem;
 $inset-ba: 0.15rem 0 0 0;
-$padding-icon-ba: 4.35rem;
+$padding-icon-ba: 4.05rem;
 $width-icon-ba: 6.972rem;
 $height-icon-ba: 3.75rem;
 $status-size: 3.75rem;
@@ -10,8 +10,9 @@ $status-padding-top: 3.55rem;
 $status-title-padding: 1rem;
 $status-title-font-weight: 600;
 $status-margin-bottom: 1rem;
+$status-list-margin-bottom: 2rem;
 $status-list-padding-left: 1.5rem;
-$status-list-margin-bottom: 0.75rem;
+$status-list-item-margin-bottom: 0.75rem;
 $status-list-icon-left: -0.3rem;
 
 $status-types: ('success' , 'danger' , 'primary' , 'info' , 'ba');
@@ -68,10 +69,10 @@ $status-icons: map-merge($alert-icons, (
   .status-list {
     list-style: none;
     padding-left: $status-list-padding-left;
-    margin-bottom: $status-margin-bottom;
+    margin-bottom: $status-list-margin-bottom;
 
     > li {
-      margin-bottom: $status-list-margin-bottom;
+      margin-bottom: $status-list-item-margin-bottom;
 
       &::before {
         content: $icon-check;
