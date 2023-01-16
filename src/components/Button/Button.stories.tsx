@@ -130,31 +130,8 @@ export const ConIconos = (): JSX.Element => {
             Botón
           </Button>
         ))}
-      </div>
-      <div className="btn-wrapper">
         {sizes.map((size) => (
-          <Button key={size} type="success" size={size} icon="bxs-check-shield">
-            Botón
-          </Button>
-        ))}
-      </div>
-      <div className="btn-wrapper">
-        {sizes.map((size) => (
-          <Button key={size} type="danger" size={size} icon="bx-log-out">
-            Botón
-          </Button>
-        ))}
-      </div>
-      <div className="btn-wrapper">
-        {sizes.map((size) => (
-          <Button key={size} type="secondary" size={size} icon="bx-message-dots">
-            Botón
-          </Button>
-        ))}
-      </div>
-      <div className="btn-wrapper">
-        {sizes.map((size) => (
-          <Button key={size} type="link" size={size} icon="bxs-shield-x">
+          <Button key={size} type="primary" outline={true} size={size} icon="bxs-car">
             Botón
           </Button>
         ))}

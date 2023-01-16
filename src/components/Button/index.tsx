@@ -15,10 +15,10 @@ export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<But
   const { type, size, block, disabled, children, outline, icon } = props;
 
   let className = `btn btn-${type}`;
+  if (outline) className = `btn btn-outline-${type}`;
   if (!!size && size !== 'default') className += ` btn-${sizeToClass(size)}`;
   if (block) className += ` btn-block`;
   if (props.className) className += ` ${props.className}`;
-  if (outline) className = `btn btn-outline-${type}`;
   if (icon) className += ` btn-icon`;
 
   return (
