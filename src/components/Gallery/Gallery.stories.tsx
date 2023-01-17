@@ -34,10 +34,10 @@ export const Galeria = (): JSX.Element => {
                   <div className="carousel-caption">
                     <div className="row mb-4">
                       <div className="col">
-                        <small>Autor de la imagen.</small>
+                        <span className="text-xs">Autor de la imagen.</span>
                       </div>
                       <div className="col text-right">
-                        <small>Imagen 1/3</small>
+                        <span className="text-xs">Imagen 1/3</span>
                       </div>
                     </div>
                     <h5 className="h2">Título de la imagen 1.</h5>
@@ -53,10 +53,10 @@ export const Galeria = (): JSX.Element => {
                   <div className="carousel-caption">
                     <div className="row mb-4">
                       <div className="col">
-                        <small>Autor de la imagen.</small>
+                        <span className="text-xs">Autor de la imagen.</span>
                       </div>
                       <div className="col text-right">
-                        <small>Imagen 2/3</small>
+                        <span className="text-xs">Imagen 2/3</span>
                       </div>
                     </div>
                     <h5 className="h2">Título de la imagen 2.</h5>
@@ -72,10 +72,10 @@ export const Galeria = (): JSX.Element => {
                   <div className="carousel-caption">
                     <div className="row mb-4">
                       <div className="col">
-                        <small>Autor de la imagen.</small>
+                        <span className="text-xs">Autor de la imagen.</span>
                       </div>
                       <div className="col text-right">
-                        <small>Imagen 3/3</small>
+                        <span className="text-xs">Imagen 3/3</span>
                       </div>
                     </div>
                     <h5 className="h2">Título de la imagen 3.</h5>
@@ -150,10 +150,10 @@ export const Interactivo = (): JSX.Element => {
                   <div className="carousel-caption">
                     <div className="row mb-4">
                       <div className="col">
-                        <small>Autor de la imagen.</small>
+                        <span className="text-xs">Autor de la imagen.</span>
                       </div>
                       <div className="col text-right">
-                        <small>Imagen 1/3</small>
+                        <span className="text-xs">Imagen 1/3</span>
                       </div>
                     </div>
                     <h5 className="h2">Título de la imagen 1.</h5>
@@ -169,10 +169,10 @@ export const Interactivo = (): JSX.Element => {
                   <div className="carousel-caption">
                     <div className="row mb-4">
                       <div className="col">
-                        <small>Autor de la imagen.</small>
+                        <span className="text-xs">Autor de la imagen.</span>
                       </div>
                       <div className="col text-right">
-                        <small>Imagen 2/3</small>
+                        <span className="text-xs">Imagen 2/3</span>
                       </div>
                     </div>
                     <h5 className="h2">Título de la imagen 2.</h5>
@@ -188,10 +188,10 @@ export const Interactivo = (): JSX.Element => {
                   <div className="carousel-caption">
                     <div className="row mb-4">
                       <div className="col">
-                        <small>Autor de la imagen.</small>
+                        <span className="text-xs">Autor de la imagen.</span>
                       </div>
                       <div className="col text-right">
-                        <small>Imagen 3/3</small>
+                        <span className="text-xs">Imagen 3/3</span>
                       </div>
                     </div>
                     <h5 className="h2">Título de la imagen 3.</h5>
