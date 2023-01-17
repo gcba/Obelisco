@@ -1,10 +1,10 @@
 $icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(56, 72, 92);transform: ;msFilter:;"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>');
-$icon-ba: url('/header/logoBA.svg');
+$icon-institutional: url('/header/logoBA.svg');
 $inset: -0.15rem 0 0 -0.2rem;
-$inset-ba: 0.15rem 0 0 0;
-$padding-icon-ba: 4.05rem;
-$width-icon-ba: 6.972rem;
-$height-icon-ba: 3.75rem;
+$inset-institutional: 0.15rem 0 0 0;
+$padding-icon-institutional: 4.05rem;
+$width-icon-institutional: 6.972rem;
+$height-icon-institutional: 3.75rem;
 $status-size: 3.75rem;
 $status-padding-top: 3.55rem;
 $status-title-padding: 1rem;
@@ -15,20 +15,20 @@ $status-list-padding-left: 1.5rem;
 $status-list-item-margin-bottom: 0.75rem;
 $status-list-icon-left: -0.3rem;
 
-$status-types: ('success' , 'danger' , 'primary' , 'info' , 'ba');
+$status-types: ('success' , 'danger' , 'primary' , 'info' , 'institutional');
 
 $status-icons: map-merge($alert-icons, (
-  'ba': $icon-ba
+  'institutional': $icon-institutional
 ));
 
 @mixin status-icon($type) {
   &::before {
     background-image: map-get($status-icons, $type);
 
-    @if $type == 'ba' {
-      width: $width-icon-ba;
-      height: $height-icon-ba;
-      inset: $inset-ba;
+    @if $type == 'institutional' {
+      width: $width-icon-institutional;
+      height: $height-icon-institutional;
+      inset: $inset-institutional;
     }
   }
 }
@@ -51,8 +51,8 @@ $status-icons: map-merge($alert-icons, (
     &.status-#{$color} {
       @include status-icon($color);
 
-      @if $color == 'ba' {
-        padding-top: $padding-icon-ba;
+      @if $color == 'institutional' {
+        padding-top: $padding-icon-institutional;
       }
     }
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-type StatusMessageTypes = 'success' | 'danger' | 'primary' | 'info' | 'ba';
+type StatusMessageTypes = 'success' | 'danger' | 'primary' | 'info' | 'institutional';
 
 export interface StatusMessageProps {
   type: StatusMessageTypes;
@@ -29,7 +29,7 @@ export const StatusMessage = (props: React.PropsWithChildren<StatusMessageProps>
       </ul>
     )}
 
-    {props.type === 'ba' ? (
+    {props.type === 'institutional' ? (
       <button type="button" className="btn btn-outline-link">
         Ir al sitio web
       </button>

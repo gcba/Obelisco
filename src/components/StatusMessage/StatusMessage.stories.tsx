@@ -89,10 +89,10 @@ StatusDanger.story = {
 };
 
 export const StatusInstitutional = (): JSX.Element => (
-  <div className="status-container">
+  <div className="status-container-institutional">
     <StatusMessage
       title="Este es un mensaje institucional del Gobierno de la Ciudad de Buenos Aires"
-      type="ba"
+      type="institutional"
       text="En el cuerpo de este componente pueden ir enlaces o botones: <a href='#'>https://ejemplo.buenosaires.gob.ar</a>"
     />
   </div>
