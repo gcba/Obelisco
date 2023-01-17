@@ -1,0 +1,107 @@
+$icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(56, 72, 92);transform: ;msFilter:;"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg>');
+$icon-institutional: url('/header/logoBA.svg');
+$inset: -0.15rem 0 0 -0.2rem;
+$inset-institutional: 0.15rem 0 0 0;
+$padding-icon-institutional: 4.05rem;
+$width-icon-institutional: 6.972rem;
+$height-icon-institutional: 3.75rem;
+$status-size: 3.75rem;
+$status-padding-top: 3.55rem;
+$status-title-padding: 1rem;
+$status-title-font-weight: 600;
+$status-margin-bottom: 1rem;
+$status-list-margin-bottom: 2rem;
+$status-list-padding-left: 1.5rem;
+$status-list-item-margin-bottom: 0.75rem;
+$status-list-icon-left: -0.3rem;
+
+$status-types: ('success' , 'danger' , 'primary' , 'info' , 'institutional');
+
+$status-icons: map-merge($alert-icons, (
+  'institutional': $icon-institutional
+));
+
+@mixin status-icon($type) {
+  &::before {
+    background-image: map-get($status-icons, $type);
+
+    @if $type == 'institutional' {
+      width: $width-icon-institutional;
+      height: $height-icon-institutional;
+      inset: $inset-institutional;
+    }
+  }
+}
+
+.status {
+  position: relative;
+  padding-top: $status-padding-top;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: $status-size;
+    height: $status-size;
+    inset: $inset;
+  }
+
+  @each $color in $status-types {
+    &.status-#{$color} {
+      @include status-icon($color);
+
+      @if $color == 'institutional' {
+        padding-top: $padding-icon-institutional;
+      }
+    }
+  }
+
+  .status-title {
+    font-weight: $status-title-font-weight;
+    margin: $status-title-padding 0;
+  }
+
+  .status-text {
+    margin-bottom: $status-margin-bottom;
+  }
+
+  &:not(:has(.status-list)) .status-text {
+    margin-bottom: 2rem;
+}
+
+
+
+  .status-list {
+    list-style: none;
+    padding-left: $status-list-padding-left;
+    margin-bottom: $status-list-margin-bottom;
+
+    > li {
+      margin-bottom: $status-list-item-margin-bottom;
+
+      &::before {
+        content: $icon-check;
+        position: absolute;
+        left: $status-list-icon-left;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    > .btn {
+      width: 100%;
+    }
+  }
+
+  > .btn + .btn {
+    margin-left: 1rem;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+}
