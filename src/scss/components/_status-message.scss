@@ -66,6 +66,12 @@ $status-icons: map-merge($alert-icons, (
     margin-bottom: $status-margin-bottom;
   }
 
+  &:not(:has(.status-list)) .status-text {
+    margin-bottom: 2rem;
+}
+
+
+
   .status-list {
     list-style: none;
     padding-left: $status-list-padding-left;
@@ -81,15 +87,21 @@ $status-icons: map-merge($alert-icons, (
         vertical-align: middle;
       }
     }
+  }
 
-    @include media-breakpoint-down(sm) {
-      + .btn, .btn-secondary {
-        width: 100%;
-      }
+  @include media-breakpoint-down(sm) {
+    > .btn {
+      width: 100%;
     }
   }
 
   > .btn + .btn {
     margin-left: 1rem;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+      margin-top: 1rem;
+      width: 100%;
+    }
   }
 }

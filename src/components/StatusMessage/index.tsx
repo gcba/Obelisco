@@ -38,16 +38,16 @@ export const StatusMessage = (props: React.PropsWithChildren<StatusMessageProps>
         {props.isTwoButtons ? (
           <>
             <button type="button" className="btn btn-secondary">
-              Boton
+              Botón
             </button>
             <button type="button" className="btn btn-outline-secondary">
-              Boton
+              Botón
             </button>
           </>
         ) : (
           <>
             <button type="button" className="btn btn-secondary">
-              Boton
+              Botón
             </button>
           </>
         )}
