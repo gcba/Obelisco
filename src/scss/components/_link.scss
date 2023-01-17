@@ -61,9 +61,10 @@ a {
     &::before {
       content: $link-download-link;
       display: inline-block;
-      vertical-align: top;
+      vertical-align: sub;
       height: 1em;
       margin-right: spaceUnits(2);
+      margin-top: - spaceUnits(1);
     }
   }
 
