@@ -143,11 +143,41 @@ export const HorizontalCard = (): JSX.Element => {
           className="card-lg"
           href="#"
         />
+        <br />
+        <a className="card card-horizontal" href="#">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-body">
+            <h4 className="card-title">Título del acceso</h4>
+            <p className="card-text">Descripción del acceso</p>
+          </div>
+        </a>
+        <br />
+        <a className="card card-horizontal" href="#">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-body">
+            <h4 className="card-title">Título del acceso</h4>
+          </div>
+        </a>
+        <br />
+        <a className="card card-horizontal unbordered" href="#">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-body">
+            <h4 className="card-title">Título del acceso</h4>
+            <p className="card-text">Descripción del acceso</p>
+          </div>
+        </a>
+        <br />
+        <a className="card card-horizontal unbordered" href="#">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-body">
+            <h4 className="card-title">Título del acceso</h4>
+          </div>
+        </a>
       </div>
     </>
   );
 };
-HorizontalCard.story = { name: 'Contenedor con imagen horizontal' };
+HorizontalCard.story = { name: 'Contenedor con imagen o icono horizontal' };
 
 export const NewsCard = (): JSX.Element => {
   return (

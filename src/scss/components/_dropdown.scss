@@ -178,9 +178,10 @@ $animation-toggle: transform 0.2s ease-in-out;
     border: 0;
     border-radius: spaceUnits(2);
     box-shadow: 0 0 0 2px #e6ebf0 !important;
+    min-width: 15rem;
 
     @include media-breakpoint-up(md) {
-      max-width: 340px;
+      width: 340px;
     }
   
     .dropdown-item {
@@ -188,7 +189,8 @@ $animation-toggle: transform 0.2s ease-in-out;
       padding: $dropdown-item-padding;
       color: $body-color;
       white-space: normal;
-  
+      text-decoration: none;
+      
       &:hover {
         background-color: $white;
         border-radius: spaceUnits(2);
@@ -213,6 +215,7 @@ $animation-toggle: transform 0.2s ease-in-out;
         box-shadow: none;
   
       }
+      
     }
   }
 }
