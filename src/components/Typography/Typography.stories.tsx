@@ -15,7 +15,7 @@ export default {
 
 const demoText = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.';
 
-export const Títulos = (): JSX.Element => {
+export const Titulos = (): JSX.Element => {
   return (
     <>
       <h1>h1 - {demoText}</h1>
@@ -27,14 +27,27 @@ export const Títulos = (): JSX.Element => {
     </>
   );
 };
+Titulos.story = { name: 'Títulos' };
 
-export const Subtítulo = (): JSX.Element => {
+export const Subtitulo = (): JSX.Element => {
   return <p className="lead">{demoText}</p>;
 };
+Subtitulo.story = { name: 'Subtítulo' };
 
-export const Párrafo = (): JSX.Element => {
+export const Parrafo = (): JSX.Element => {
   return (
     <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias omnis similique, placeat accusamus porro
+      voluptates tempora provident dolorem, eius dolore facilis. Ducimus facilis suscipit quaerat amet consectetur
+      nobis, unde numquam?
+    </p>
+  );
+};
+Parrafo.story = { name: 'Párrafo' };
+
+export const TextoSecundario = (): JSX.Element => {
+  return (
+    <p className="text-xs">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias omnis similique, placeat accusamus porro
       voluptates tempora provident dolorem, eius dolore facilis. Ducimus facilis suscipit quaerat amet consectetur
       nobis, unde numquam?
