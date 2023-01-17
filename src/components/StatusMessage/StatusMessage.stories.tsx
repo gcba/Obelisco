@@ -8,7 +8,7 @@ import './status.stories.scss';
 
 // Configuración del general del componente
 export default {
-  title: 'Componentes | Mensajes de estado',
+  title: 'Componentes|Mensajes de estado',
   decorators: [withA11y]
 };
 
