@@ -14,12 +14,12 @@
 audio {
   background-color: $grisulado-10;
   height: 40px;
-  width: 340px;
+  width: 100%;
   border: 2px solid $grisulado-50;
   border-radius: 8px;
   
   &.audio-sm {
-    width: 292px;
+    max-width: 292px;
   }
 
   &.audio-event {
