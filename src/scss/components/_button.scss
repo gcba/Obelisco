@@ -1,13 +1,13 @@
 /* === Variable and mixins overides === */
 
 $btn-padding-y: spaceUnits(2);
-$btn-padding-x: 0.75rem;
+$btn-padding-x: spaceUnits(4);
 $btn-font-size: 1.125rem;
-$btn-line-height: 1.378;
+$btn-line-height: 1.11;
 $btn-focus-width: 0.125rem;
-$btn-font-weight: 600;
+$btn-font-weight: $font-weight-bold;
 
-$btn-border-width: 0;
+$btn-border-width: 0.125rem;
 
 $btn-box-shadow: none;
 $btn-focus-width: 4px;
@@ -21,14 +21,14 @@ $btn-font-size-sm: 1rem;
 $btn-line-height-sm: $btn-line-height;
 
 $btn-padding-y-lg: spaceUnits(3);
-$btn-padding-x-lg: spaceUnits(3);
+$btn-padding-x-lg: spaceUnits(5);
 $btn-font-size-lg: 1.125rem;
 $btn-line-height-lg: $btn-line-height;
 
 $btn-disabled-opacity: 1;
 
 $btn-disabled-bg: $grisulado-50;
-$btn-disabled-color: $grisulado-300 !important;
+$btn-disabled-color: $grisulado-300;
 $btn-border-radius: spaceUnits(2);
 $btn-border-radius-sm: spaceUnits(2);
 $btn-border-radius-lg: spaceUnits(2);
@@ -39,6 +39,13 @@ $link-decoration: none;
 $btn-link-disabled-color: $grisulado-300;
 
 $btn-font-family: $font-family-headings;
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'link': $ghost
+  )
+);
 
 /* === Custom variables and mixins === */
 
@@ -53,14 +60,15 @@ $btn-font-family: $font-family-headings;
     background-color: $btn-disabled-bg;
     color: $btn-disabled-color;
     pointer-events: none;
+    border-color: $btn-disabled-bg;
   }
 }
 
-
 @each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    color: color-yiq($value) !important;
-    text-decoration: none;
+  .btn-#{$color}, .btn-outline-#{$color} {
+    min-height: 40px;
+    color: color-yiq($value);
+    text-decoration: $link-decoration;
 
     @include hover() {
       background-color: theme-color-level($color, 1);
@@ -68,82 +76,139 @@ $btn-font-family: $font-family-headings;
       box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
     }
 
+    &:visited{
+      color: color-yiq($value);
+    }
+
     &:focus,
     &.focus {
       box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
-      text-decoration: none;
+      text-decoration: $link-decoration;
 
       &:not(:hover) {
         background-color: theme-color-level($color, 0);
+        border-color: theme-color-level($color, 0);
       }
     }
-
-    @include btn-disabled;
 
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
       background-color: theme-color-level($color, 1);
       box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
+      border-color: theme-color-level($color, 1);
 
       &:focus,
       &.focus {
         box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
-        text-decoration: none;
+        text-decoration: $link-decoration;
 
         &:not(:hover) {
           background-color: theme-color-level($color, 0);
+          border-color: theme-color-level($color, 0);
         }
+      }
+    }
+
+    @include btn-disabled;
+
+    @if $color == "link" {
+      color: $link-color;
+      font-weight: $btn-font-weight;
+      @include hover() {
+        background-color: $ghost-hover;
+        border-color: $ghost-hover;
+        color: $link-color;
+        text-decoration: $link-decoration;
+        box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
+      }
+      
+      &:visited{
+        color: $link-color;
+      }
+
+      &:focus,
+      &.focus {
+        box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+        color: $link-color;
+      }
+
+      &:not(:disabled):not(.disabled):active,
+      &:not(:disabled):not(.disabled).active,
+      .show > &.dropdown-toggle {
+        background-color: $ghost-hover;
+        box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
+        border-color: $ghost-hover;
+        color: $link-color;
+      }
+    }
+  }
+  
+  .btn-outline-#{$color}{
+    color: theme-color-level($color, 0);
+
+    &:visited{
+      color: theme-color-level($color, 0);
+    }
+    
+    @include hover(){
+      color: $white;
+    };
+
+    &:focus,
+    &.focus {
+      color: color-yiq($value);
+    }
+
+    @if $color == "primary" {
+      color: $grisulado-900;
+      &:visited, &:hover {
+        color: $grisulado-900;
+      }
+    }
+
+    @if $color == "link" {
+      background-color: transparent;
+      border-color: $link-color;
+      color: $link-color;
+      &:hover, &:focus, &.focus, &:visited {
+        color: $link-color;
       }
     }
   }
 }
 
-.btn-link {
-  font-weight: $btn-font-weight;
-  background-color: $ghost;
-  color: $blue;
-
-  @include btn-disabled;
-
-  @include hover() {
-    background-color: $ghost-hover;
-    color: $link-color;
-    text-decoration: $link-decoration;
-    box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
-  }
-
-  &:focus,
-  &.focus {
-    box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
-    text-decoration: none;
-  }
-
-  &:active,
-  &.active {
-    &:not(:hover) {
-      background-color: $ghost-hover;
-      box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
-    }
-  }
+a.btn {
+  text-decoration: $link-decoration;
 }
 
-a.btn {
-  text-decoration: none;
+//Botón con icono
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  i, span {
+    margin-right: .25rem;
+    font-size: 0.9375rem;
+  }
+  &.btn-lg {
+    i, span {
+      margin-right: .25rem;
+      font-size: $btn-font-size;
+    }
+  }
 }
 
 //
 // Button Sizes
 //
-
 .btn {
-  max-height: 40px;
-
   &-sm {
-    max-height: 30px;
+    min-height: 30px;
+    line-height: 1.125;
   }
 
   &-lg {
-    max-height: 48px;
+    min-height: 48px;
   }
 }

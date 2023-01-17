@@ -105,3 +105,37 @@ export const Expandible = (): JSX.Element => {
     </div>
   );
 };
+
+export const ConBordes = (): JSX.Element => {
+  return (
+    <div className="btn-wrapper">
+      {buttonTypes.map((type) => (
+        <Button key={type} type={type} outline={true}>
+          {type}
+        </Button>
+      ))}
+      <a className="btn btn-outline-primary" href="#" target="_blank">
+        enlace
+      </a>
+    </div>
+  );
+};
+
+export const ConIconos = (): JSX.Element => {
+  return (
+    <>
+      <div className="btn-wrapper">
+        {sizes.map((size) => (
+          <Button key={size} type="primary" size={size} icon="bxs-car">
+            Botón
+          </Button>
+        ))}
+        {sizes.map((size) => (
+          <Button key={size} type="primary" outline={true} size={size} icon="bxs-car">
+            Botón
+          </Button>
+        ))}
+      </div>
+    </>
+  );
+};
