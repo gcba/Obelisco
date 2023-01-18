@@ -139,4 +139,4 @@ export const BotonCheck = (): JSX.Element => {
     </div>
   );
 };
-BotonCheck.story = { name: 'Botón Checkbox' };
+BotonCheck.story = { name: 'Botón checkbox' };

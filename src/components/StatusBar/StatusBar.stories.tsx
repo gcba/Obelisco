@@ -1,3 +1,4 @@
+/*
 // Base
 import React from 'react';
 import './StatusBar.stories.scss';
@@ -10,6 +11,7 @@ export default {
   title: 'Componentes|Barra de estado',
   decorators: [withA11y]
 };
+
 
 export const Colapsado = (): JSX.Element => (
   <div className="progression-container">
@@ -80,3 +82,4 @@ export const ConDetalles = (): JSX.Element => (
 ConDetalles.story = {
   name: 'Con detalles'
 };
+*/
