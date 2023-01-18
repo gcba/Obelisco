@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes | Modal',
+  title: 'Componentes|Modal',
   decorators: [withA11y]
 };
 

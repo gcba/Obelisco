@@ -38,7 +38,7 @@ export const SoloBoton = (): JSX.Element => {
     </div>
   );
 };
-SoloBoton.story = { name: 'Solo Botón' };
+SoloBoton.story = { name: 'Solo botón' };
 
 export const ConEnlace = (): JSX.Element => {
   return (
@@ -67,6 +67,7 @@ export const ConEnlace = (): JSX.Element => {
     </div>
   );
 };
+ConEnlace.story = { name: 'Con enlace' };
 
 export const Completo = (): JSX.Element => {
   return (

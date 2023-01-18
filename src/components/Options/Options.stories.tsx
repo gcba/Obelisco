@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Componentes | Opciones',
+  title: 'Componentes|Opciones',
   decorators: [withA11y]
 };
 
@@ -95,7 +95,7 @@ export const OpcionesGrande = (): JSX.Element => (
     </fieldset>
   </form>
 );
-OpcionesGrande.story = { name: 'Opciones Grande' };
+OpcionesGrande.story = { name: 'Opciones grande' };
 
 export const OpcionesMediano = (): JSX.Element => (
   <form className="d-flex flex-row justify-content-start options-container">
@@ -182,7 +182,7 @@ export const OpcionesMediano = (): JSX.Element => (
     </fieldset>
   </form>
 );
-OpcionesMediano.story = { name: 'Opciones Mediano' };
+OpcionesMediano.story = { name: 'Opciones mediano' };
 
 export const OpcionesChico = (): JSX.Element => (
   <form className="d-flex flex-row justify-content-start options-container">
@@ -269,4 +269,4 @@ export const OpcionesChico = (): JSX.Element => (
     </fieldset>
   </form>
 );
-OpcionesChico.story = { name: 'Opciones Chico' };
+OpcionesChico.story = { name: 'Opciones chico' };

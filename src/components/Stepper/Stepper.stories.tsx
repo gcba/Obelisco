@@ -31,3 +31,7 @@ export const MultiplesPasos = (): JSX.Element => {
     </div>
   );
 };
+
+MultiplesPasos.story = {
+  name: 'Múltiples pasos'
+};

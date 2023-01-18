@@ -3,7 +3,6 @@ module.exports = {
   addons: [
     "@storybook/addon-a11y",
     "@whitespace/storybook-addon-html",
-    "storybook-addon-xd-designs",
     '@storybook/addon-links'
   ],
   webpackFinal: async (config) => {

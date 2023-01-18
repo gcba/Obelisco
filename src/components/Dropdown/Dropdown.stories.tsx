@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Componentes | Desplegables',
+  title: 'Componentes|Desplegables',
   decorators: [withA11y]
 };
 
@@ -57,6 +57,10 @@ export const DesplegableConIcono = (): JSX.Element => (
     </div>
   </div>
 );
+
+DesplegableConIcono.story = {
+  name: 'Desplegable con ícono'
+};
 
 export const Desplegable = (): JSX.Element => (
   <>
@@ -243,6 +247,10 @@ export const DesplegableConEnlaces = (): JSX.Element => (
   </>
 );
 
+DesplegableConEnlaces.story = {
+  name: 'Desplegable con enlaces'
+};
+
 export const Tamanos = (): JSX.Element => (
   <div className="dropdown-container">
     <div className="dropdown mb-3">
@@ -338,6 +346,10 @@ export const SoloIcono = (): JSX.Element => (
     </div>
   </div>
 );
+
+SoloIcono.story = {
+  name: 'Solo ícono'
+};
 
 export const Idioma = (): JSX.Element => (
   <div className="dropdown-container">

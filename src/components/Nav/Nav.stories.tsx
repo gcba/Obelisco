@@ -34,6 +34,10 @@ export const SimpleConIcono = (): JSX.Element => (
   </div>
 );
 
+SimpleConIcono.story = {
+  name: 'Simple con ícono'
+};
+
 const doubleLevel = [
   { name: 'Categorías', id: '0' },
   {
@@ -79,11 +83,19 @@ export const Con2Niveles = (): JSX.Element => (
   </div>
 );
 
+Con2Niveles.story = {
+  name: 'Con 2 niveles'
+};
+
 export const Con2NivelesConIcono = (): JSX.Element => (
   <div className="nav-container">
     <Nav items={doubleLevel} navSize="large" selected="1.2" hasIcon={true} />
   </div>
 );
+
+Con2NivelesConIcono.story = {
+  name: 'Con 2 niveles con ícono'
+};
 
 export const Con3Niveles = (): JSX.Element => (
   <div className="nav-container">
@@ -91,8 +103,16 @@ export const Con3Niveles = (): JSX.Element => (
   </div>
 );
 
+Con3Niveles.story = {
+  name: 'Con 3 niveles'
+};
+
 export const Con3NivelesConIcono = (): JSX.Element => (
   <div className="nav-container">
     <Nav items={tripleLevel} navSize="large" selected="1.2.2" hasIcon={true} />
   </div>
 );
+
+Con3NivelesConIcono.story = {
+  name: 'Con 3 niveles con ícono'
+};

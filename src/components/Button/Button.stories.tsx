@@ -4,7 +4,6 @@ import './Button.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
-import { withXD } from 'storybook-addon-xd-designs';
 
 // Components
 import { buttonTypes, sizes } from '../utils';
@@ -14,13 +13,7 @@ import { Button } from '.';
 export default {
   title: 'Componentes|Botón',
   component: Button,
-  decorators: [withA11y, withXD],
-  parameters: {
-    design: {
-      artboardUrl:
-        'https://xd.adobe.com/view/0623a13b-8fc0-407c-6a4d-c1c24dc2c5fa-7012/screen/d1dd8e3f-6a3b-4a7b-a59e-ba883ca7c684/-TOMOS-BOTONES'
-    }
-  }
+  decorators: [withA11y]
 };
 
 export const Colores = (): JSX.Element => {
@@ -51,6 +44,10 @@ export const ConFoco = (): JSX.Element => {
       </a>
     </div>
   );
+};
+
+ConFoco.story = {
+  name: 'Con foco'
 };
 
 export const Activos = (): JSX.Element => {
@@ -121,6 +118,10 @@ export const ConBordes = (): JSX.Element => {
   );
 };
 
+ConBordes.story = {
+  name: 'Con bordes'
+};
+
 export const ConIconos = (): JSX.Element => {
   return (
     <>
@@ -138,4 +139,8 @@ export const ConIconos = (): JSX.Element => {
       </div>
     </>
   );
+};
+
+ConIconos.story = {
+  name: 'Con íconos'
 };

@@ -26,6 +26,10 @@ export const Simple = (): JSX.Element => <NavHorizontal items={simpleItems} sele
 
 export const SimpleConIcono = (): JSX.Element => <NavHorizontal items={simpleItems} selected="2" hasIcon={true} />;
 
+SimpleConIcono.story = {
+  name: 'Simple con ícono'
+};
+
 const simpleItemsSizes: NavItem[] = [
   { name: 'Link', id: '1', hasBordered: true, type: 'large' },
   { name: 'Link', id: '2', hasBordered: true, type: 'default' },
@@ -45,6 +49,10 @@ const simpleItemsBorder = [
 
 export const SimpleConBorde = (): JSX.Element => <NavHorizontal items={simpleItemsBorder} selected="2" />;
 
+SimpleConBorde.story = {
+  name: 'Simple con borde'
+};
+
 const simpleItemsBorderIcon = [
   { name: 'Link', id: '1', hasBordered: true, hasIcon: true },
   { name: 'Active', id: '2', hasBordered: true },
@@ -56,4 +64,4 @@ export const SimpleConBordeEIcono = (): JSX.Element => (
   <NavHorizontal items={simpleItemsBorderIcon} selected="2" hasIcon={true} />
 );
 
-SimpleConBordeEIcono.story = { name: 'Simple Con Borde e Icono' };
+SimpleConBordeEIcono.story = { name: 'Simple con borde e ícono' };

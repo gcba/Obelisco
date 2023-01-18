@@ -29,7 +29,7 @@ export const HorizontalAccess = (): JSX.Element => (
   </>
 );
 
-HorizontalAccess.story = { name: 'Acceso Horizontal' };
+HorizontalAccess.story = { name: 'Acceso horizontal' };
 
 export const HorizontalAccessSmall = (): JSX.Element => (
   <>
@@ -51,5 +51,5 @@ export const HorizontalAccessSmall = (): JSX.Element => (
 );
 
 HorizontalAccessSmall.story = {
-  name: 'Acceso Horizontal Pequeño'
+  name: 'Acceso horizontal Pequeño'
 };

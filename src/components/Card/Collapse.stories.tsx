@@ -120,7 +120,7 @@ export const ConInformacion = (): JSX.Element => (
     </div>
   </div>
 );
-ConInformacion.story = { name: 'Con Información' };
+ConInformacion.story = { name: 'Con información' };
 
 export const ConIcono = (): JSX.Element => (
   <div id="accordion">
@@ -142,3 +142,5 @@ export const ConIcono = (): JSX.Element => (
     </div>
   </div>
 );
+
+ConIcono.story = { name: 'Con ícono' };

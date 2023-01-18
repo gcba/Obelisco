@@ -1,19 +1,19 @@
 // Base
 import React from 'react';
- 
+
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
- 
+
 // Components
 import { Table, TableCellContet } from '.';
- 
+
 // Config
 export default {
   title: 'Componentes|Tablas',
   component: Table,
   decorators: [withA11y]
 };
- 
+
 export const Normal = (): JSX.Element => {
   return (
     <Table
@@ -27,7 +27,7 @@ export const Normal = (): JSX.Element => {
     />
   );
 };
- 
+
 export const ConBordes = (): JSX.Element => {
   return (
     <Table
@@ -42,7 +42,11 @@ export const ConBordes = (): JSX.Element => {
     />
   );
 };
- 
+
+ConBordes.story = {
+  name: 'Con bordes'
+};
+
 export const AlineaciónHorizontal = (): JSX.Element => {
   return (
     <Table
@@ -57,7 +61,11 @@ export const AlineaciónHorizontal = (): JSX.Element => {
     />
   );
 };
- 
+
+AlineaciónHorizontal.story = {
+  name: 'Alineación horizontal'
+};
+
 export const AlineaciónVertical = (): JSX.Element => {
   return (
     <Table
@@ -71,7 +79,11 @@ export const AlineaciónVertical = (): JSX.Element => {
     />
   );
 };
- 
+
+AlineaciónVertical.story = {
+  name: 'Alineación vertical'
+};
+
 export const Intercalada = (): JSX.Element => {
   return (
     <Table
@@ -86,7 +98,7 @@ export const Intercalada = (): JSX.Element => {
     />
   );
 };
- 
+
 export const Resaltable = (): JSX.Element => {
   return (
     <Table
@@ -101,7 +113,7 @@ export const Resaltable = (): JSX.Element => {
     />
   );
 };
- 
+
 export const TodoJunto = (): JSX.Element => {
   return (
     <Table
@@ -118,7 +130,11 @@ export const TodoJunto = (): JSX.Element => {
     />
   );
 };
- 
+
+TodoJunto.story = {
+  name: 'Todo junto'
+};
+
 export const Seleccionable = (): JSX.Element => {
   return (
     <Table
@@ -133,7 +149,7 @@ export const Seleccionable = (): JSX.Element => {
     />
   );
 };
- 
+
 const SmallContent: JSX.Element = (
   <>
     <h5>Título</h5>
@@ -144,7 +160,7 @@ const SmallContent: JSX.Element = (
     </p>
   </>
 );
- 
+
 const rightAligned = (content: TableCellContet) => {
   return {
     content,

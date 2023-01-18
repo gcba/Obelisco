@@ -5,7 +5,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { PanelVertical } from '.';
 
 export default {
-  title: 'Componentes|Panel/Panel destacado grande vertical/Con Imagen',
+  title: 'Componentes|Panel/Panel destacado grande vertical/Con imagen',
   decorators: [withA11y]
 };
 

@@ -52,9 +52,7 @@ export const Descarga = (): JSX.Element => {
         as he was, for all he was so gifted. And when it come to fair and square jumping on a dead level, he could get
         over more ground at one straddle than any animal of his breed you ever see.
       </p>
-      <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <a className="btn btn-secondary btn-sm download-link" href="#" target="_blank" rel="noreferrer">
         Descargar
       </a>

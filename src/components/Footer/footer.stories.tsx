@@ -126,7 +126,7 @@ export const SoloTelefonos = (): JSX.Element => (
 );
 
 SoloTelefonos.story = {
-  name: 'Solo Teléfonos'
+  name: 'Solo teléfonos'
 };
 
 export const SoloRedes = (): JSX.Element => (
@@ -141,3 +141,7 @@ export const SoloRedes = (): JSX.Element => (
     </div>
   </footer>
 );
+
+SoloRedes.story = {
+  name: 'Solo redes'
+};

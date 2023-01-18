@@ -24,6 +24,10 @@ export const Multiple = (): JSX.Element => (
   </>
 );
 
+Multiple.story = {
+  name: 'Múltiple'
+};
+
 export const Colores = (): JSX.Element => (
   <>
     <Badge text="Etiqueta 1" className="badge-secondary" />

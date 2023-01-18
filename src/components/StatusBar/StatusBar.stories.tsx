@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Componentes | Barra de estado',
+  title: 'Componentes|Barra de estado',
   decorators: [withA11y]
 };
 
@@ -76,3 +76,7 @@ export const ConDetalles = (): JSX.Element => (
     <button className="progression-link">Menos detalles</button>
   </div>
 );
+
+ConDetalles.story = {
+  name: 'Con detalles'
+};

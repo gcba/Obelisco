@@ -50,4 +50,4 @@ export const PanelInformacion = (): JSX.Element => {
   );
 };
 
-PanelInformacion.story = { name: 'Panel de informacion' };
+PanelInformacion.story = { name: 'Panel de información' };

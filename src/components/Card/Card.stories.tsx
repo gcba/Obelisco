@@ -177,7 +177,7 @@ export const HorizontalCard = (): JSX.Element => {
     </>
   );
 };
-HorizontalCard.story = { name: 'Contenedor con imagen o icono horizontal' };
+HorizontalCard.story = { name: 'Contenedor con imagen o ícono horizontal' };
 
 export const NewsCard = (): JSX.Element => {
   return (

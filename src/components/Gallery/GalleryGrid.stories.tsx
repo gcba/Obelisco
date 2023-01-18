@@ -42,6 +42,10 @@ export const SieteImagenes = (): JSX.Element => {
   );
 };
 
+SieteImagenes.story = {
+  name: 'Siete imágenes'
+};
+
 export const SeisImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
@@ -69,6 +73,10 @@ export const SeisImagenes = (): JSX.Element => {
   );
 };
 
+SeisImagenes.story = {
+  name: 'Seis imágenes'
+};
+
 export const CincoImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
@@ -93,6 +101,10 @@ export const CincoImagenes = (): JSX.Element => {
   );
 };
 
+CincoImagenes.story = {
+  name: 'Cinco imágenes'
+};
+
 export const CuatroImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
@@ -114,6 +126,10 @@ export const CuatroImagenes = (): JSX.Element => {
   );
 };
 
+CuatroImagenes.story = {
+  name: 'Cuatro imágenes'
+};
+
 export const TresImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
@@ -132,6 +148,10 @@ export const TresImagenes = (): JSX.Element => {
   );
 };
 
+TresImagenes.story = {
+  name: 'Tres imágenes'
+};
+
 export const DosImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
@@ -145,6 +165,10 @@ export const DosImagenes = (): JSX.Element => {
       </div>
     </div>
   );
+};
+
+DosImagenes.story = {
+  name: 'Dos imágenes'
 };
 
 export const UnaImagen = (): JSX.Element => {

@@ -21,11 +21,13 @@ export const Info = (): JSX.Element => (
         <a href="https://www.npmjs.com/package/@gcba/obelisco">
           <img
             src="https://img.shields.io/npm/v/@gcba/obelisco?label=Obelisco%20en%20npm&amp;logo=npm"
-            alt="Versión de Obelisco en npm"></img>
+            alt="Versión de Obelisco en npm"
+          />
         </a>{' '}
         <img
           src="https://github.com/gcba/Obelisco/workflows/Deploy%20storybook/badge.svg?branch=master"
-          alt="Deploy storybook"></img>
+          alt="Deploy storybook"
+        />
       </p>
       <p>
         Obelisco es el nuevo sistema de diseño basado en componentes para los productos digitales de la ciudad de Buenos

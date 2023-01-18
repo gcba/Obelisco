@@ -30,7 +30,7 @@ export const VerticalAccess = (): JSX.Element => (
 );
 
 VerticalAccess.story = {
-  name: 'Acceso Vertical'
+  name: 'Acceso vertical'
 };
 
 export const VerticalAccessSmall = (): JSX.Element => (
@@ -53,5 +53,5 @@ export const VerticalAccessSmall = (): JSX.Element => (
 );
 
 VerticalAccessSmall.story = {
-  name: 'Acceso Vertical pequeño'
+  name: 'Acceso vertical pequeño'
 };

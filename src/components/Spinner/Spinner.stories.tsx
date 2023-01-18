@@ -17,6 +17,10 @@ export const SinTexto = (): JSX.Element => (
   </div>
 );
 
+SinTexto.story = {
+  name: 'Sin texto'
+};
+
 export const Texto = (): JSX.Element => (
   <div className="spinner">
     <h3>Estamos creando tu trámite</h3>
