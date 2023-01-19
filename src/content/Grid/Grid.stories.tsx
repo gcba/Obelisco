@@ -245,7 +245,7 @@ export const OrdenarClases = (): JSX.Element => {
             <div>Segundo, pero desordenado</div>
           </div>
           <div className="col-4 order-first">
-            <div>Primero pero ultimo</div>
+            <div>Primero pero último</div>
           </div>
         </div>
       </div>

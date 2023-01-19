@@ -1,6 +1,6 @@
 // Base
 import React from 'react';
-import './template.scss';
+import './Template.stories.scss';
 
 // Config
 export default {

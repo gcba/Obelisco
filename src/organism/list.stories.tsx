@@ -4,7 +4,7 @@ import './list.stories.scss';
 
 // Config
 export default {
-  title: 'Lista|Info'
+  title: 'Organismo|Info'
 };
 
 export const info = (): JSX.Element => (

@@ -13,22 +13,19 @@ addParameters({
   options: {
     storySort: (previous: Array<any>, next: Array<any>) => {
       return anysort(previous[1].kind, next[1].kind,  [
-        'Get Started|*',
+        'Comenzar|*',
         'Componentes|Accesos',
         'Componentes|Alerta',
         'Componentes|Audio',
-        'Componentes|Barra de estado',
         'Componentes|Barra de progreso',
         'Componentes|Botón',
-        'Componentes|Breadcrumb',
         'Componentes|Colapsable',
         'Componentes|Desplegables',
         'Componentes|Enlace',
         'Componentes|Etiqueta',
-        'Componentes|Footer',
         'Componentes|Galería',
-        'Componentes|Header/Con Buscador',
         'Componentes|Mensajes de estado',
+        'Componentes|Miga de pan',
         'Componentes|Modal',
         'Componentes|Navegación/Horizontal',
         'Componentes|Opciones',
@@ -42,7 +39,8 @@ addParameters({
         'Formulario|*',
         'Template|*',
         'Versión|*',
-        'Lista|*'
+        'Organismo|Header/Con buscador',
+        'Organismo|*'
       ]);
     }
   }

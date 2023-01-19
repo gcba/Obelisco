@@ -19,13 +19,13 @@ export default {
 export const Colores = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map((type) => (
-        <Button key={type} type={type}>
-          {type}
+      {buttonTypes.map((item) => (
+        <Button key={item.type} type={item.type}>
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-primary" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );
@@ -34,13 +34,13 @@ export const Colores = (): JSX.Element => {
 export const ConFoco = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map((type) => (
-        <Button key={type} type={type} className="focus">
-          {type}
+      {buttonTypes.map((item) => (
+        <Button key={item.type} type={item.type} className="focus">
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-primary focus" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );
@@ -53,13 +53,13 @@ ConFoco.story = {
 export const Activos = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map((type) => (
-        <Button key={type} type={type} className="active">
-          {type}
+      {buttonTypes.map((item) => (
+        <Button key={item.type} type={item.type} className="active">
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-primary active" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );
@@ -74,7 +74,7 @@ export const Tamanos = (): JSX.Element => {
         </Button>
       ))}
       <a className="btn btn-secondary" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );
@@ -106,13 +106,13 @@ export const Expandible = (): JSX.Element => {
 export const ConBordes = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map((type) => (
-        <Button key={type} type={type} outline={true}>
-          {type}
+      {buttonTypes.map((item) => (
+        <Button key={item.type} type={item.type} outline={true}>
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-outline-primary" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );

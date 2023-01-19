@@ -1,13 +1,13 @@
 // Base
 import React from 'react';
-import './get-started.scss';
+import './GetStarted.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Get Started|Inicio',
+  title: 'Comenzar|Inicio',
   decorators: [withA11y]
 };
 

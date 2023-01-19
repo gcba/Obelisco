@@ -1,10 +1,10 @@
 // Base
 import React from 'react';
-import './encabezado.stories.scss';
+import './Encabezado.stories.scss';
 
 // Config
 export default {
-  title: 'Lista|Encabezado'
+  title: 'Organismo|Encabezado'
 };
 
 export const Info = (): JSX.Element => (

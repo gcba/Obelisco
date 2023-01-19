@@ -4,7 +4,7 @@ import React from 'react';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 import { StatusMessage } from '.';
-import './status.stories.scss';
+import './StatusMessage.stories.scss';
 
 // Configuración del general del componente
 export default {
