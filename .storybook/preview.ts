@@ -38,9 +38,9 @@ addParameters({
         'Contenido|*',
         'Formulario|*',
         'Template|*',
-        'Versión|*',
         'Organismo|Header/Con buscador',
-        'Organismo|*'
+        'Organismo|*',
+        'Versión|*'
       ]);
     }
   }
