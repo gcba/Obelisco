@@ -220,7 +220,7 @@ export const AlineacionHorizontal = (): JSX.Element => {
   );
 };
 
-AlineacionHorizontal.story = { name: 'Alineación Horizontal' };
+AlineacionHorizontal.story = { name: 'Alineación horizontal' };
 
 export const OrdenarClases = (): JSX.Element => {
   return (
@@ -252,6 +252,8 @@ export const OrdenarClases = (): JSX.Element => {
     </div>
   );
 };
+
+OrdenarClases.story = { name: 'Ordenar clases' };
 
 export const Desplazamientos = (): JSX.Element => {
   return (

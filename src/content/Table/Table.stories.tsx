@@ -44,7 +44,9 @@ export const ConBordes = (): JSX.Element => {
   );
 };
 
-export const AlineaciónHorizontal = (): JSX.Element => {
+ConBordes.story = { name: 'Con bordes' };
+
+export const AlineacionHorizontal = (): JSX.Element => {
   return (
     <Table
       head={['#', 'Primero', rightAligned('Cantidad')]}
@@ -59,7 +61,9 @@ export const AlineaciónHorizontal = (): JSX.Element => {
   );
 };
 
-export const AlineaciónVertical = (): JSX.Element => {
+AlineacionHorizontal.story = { name: 'Alineación horizontal' };
+
+export const AlineacionVertical = (): JSX.Element => {
   return (
     <Table
       head={['#', 'Primero', rightAligned('Cantidad')]}
@@ -72,6 +76,8 @@ export const AlineaciónVertical = (): JSX.Element => {
     />
   );
 };
+
+AlineacionVertical.story = { name: 'Alineación vertical' };
 
 export const Intercalada = (): JSX.Element => {
   return (
@@ -119,6 +125,8 @@ export const TodoJunto = (): JSX.Element => {
     />
   );
 };
+
+TodoJunto.story = { name: 'Todo junto' };
 
 export const Seleccionable = (): JSX.Element => {
   return (

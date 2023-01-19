@@ -5,7 +5,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { PanelHorizontal } from '.';
 
 export default {
-  title: 'Componentes|Panel/Panel destacado grande horizontal/Con Video',
+  title: 'Componentes|Panel/Panel destacado grande horizontal/Con video',
   decorators: [withA11y]
 };
 

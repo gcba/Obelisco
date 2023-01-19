@@ -23,3 +23,7 @@ export const SubirUnArchivo = (): JSX.Element => {
     </div>
   );
 };
+
+SubirUnArchivo.story = {
+  name: 'Subir un archivo'
+};

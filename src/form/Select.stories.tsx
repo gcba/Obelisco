@@ -44,7 +44,7 @@ export const Deshabilitado = (): JSX.Element => {
   );
 };
 
-export const Validación = (): JSX.Element => {
+export const Validacion = (): JSX.Element => {
   return (
     <div className="form-wrapper">
       <div className="form-group">
@@ -58,4 +58,8 @@ export const Validación = (): JSX.Element => {
       </div>
     </div>
   );
+};
+
+Validacion.story = {
+  name: 'Validación'
 };

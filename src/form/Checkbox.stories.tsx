@@ -17,7 +17,7 @@ export const CasillaMultiple = (): JSX.Element => {
   return (
     <>
       <div className="form-group">
-        <label>Seleccioná una o varias opciónes *</label>
+        <label>Seleccioná una o varias opciones *</label>
         <span className="form-text">Texto de asistencia</span>
       </div>
       <div className="custom-control custom-checkbox">
@@ -97,8 +97,9 @@ export const TextoLargo = (): JSX.Element => {
     </div>
   );
 };
-TerminosYCondiciones.story = {
-  name: 'Términos y condiciones'
+
+TextoLargo.story = {
+  name: 'Texto largo'
 };
 
 export const Deshabilitado = (): JSX.Element => {

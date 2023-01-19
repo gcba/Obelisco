@@ -50,6 +50,8 @@ export const BloqueDeTexto = (): JSX.Element => {
   );
 };
 
+BloqueDeTexto.story = { name: 'Bloque de texto' };
+
 export const CasillaDeSeleccion = (): JSX.Element => {
   return (
     <div className="form-wrapper bg-light p-4">
@@ -68,3 +70,5 @@ export const CasillaDeSeleccion = (): JSX.Element => {
     </div>
   );
 };
+
+CasillaDeSeleccion.story = { name: 'Casilla de selección' };
