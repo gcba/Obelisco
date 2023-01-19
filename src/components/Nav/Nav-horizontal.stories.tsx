@@ -31,9 +31,9 @@ SimpleConIcono.story = {
 };
 
 const simpleItemsSizes: NavItem[] = [
-  { name: 'Link', id: '1', hasBordered: true, type: 'large' },
-  { name: 'Link', id: '2', hasBordered: true, type: 'default' },
-  { name: 'Link', id: '3', hasBordered: true, type: 'small' }
+  { name: 'Link', id: '1', hasBordered: true, type: 'Grande' },
+  { name: 'Link', id: '2', hasBordered: true, type: 'Default' },
+  { name: 'Link', id: '3', hasBordered: true, type: 'Chico' }
 ];
 
 export const Tamanos = (): JSX.Element => <NavHorizontal items={simpleItemsSizes} />;
