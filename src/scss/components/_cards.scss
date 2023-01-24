@@ -58,11 +58,12 @@ $panel-deck-card-mb: 1.5rem;
 $panel-deck-card-mr: 2rem;
 
 $panel-spacer-lg: 2rem;
-$panel-title-margin-vertical: 1.5rem 0 0.813rem 0;
-$panel-title-margin-horizontal: 2.5rem 0 0.813rem 0;
-$panel-title-margin-horizontal-sm: 1.5rem 0 0.813rem 0;
+$panel-title-margin-vertical: 2rem 0 0.813rem 0;
+$panel-title-margin-horizontal: .5rem 0 0.813rem 0;
+$panel-title-margin-horizontal-sm: 2rem 0 0.813rem 0;
 $panel-text-margin-bottom: 1.5rem;
-$panel-link-margin-left: 1rem;
+$panel-link-margin-right: 1rem;
+$panel-link-margin-bottom: .5rem;
 
 $accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
 $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
@@ -125,6 +126,27 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     &:nth-of-type(n + 2) {
       margin-top: $card-deck-margin-top;
+    }
+  }
+}
+
+@mixin card-link-panel {
+  .card-link {
+    margin: 0 $panel-link-margin-right $panel-link-margin-bottom 0;
+    + .card-link {
+      margin-right: 0;
+    }
+  }
+
+  .download-link, .download {
+    margin-bottom: $panel-link-margin-bottom;
+    display: inline-block;
+  }
+
+  @include media-breakpoint-down(xs) {
+    .card-link, .download-link {
+      width: 100%;
+      margin-right: 0;
     }
   }
 }
@@ -381,6 +403,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   &.panel-horizontal {
     flex-direction: row;
     width: 100%;
+    align-items: center;
 
     @include media-breakpoint-down(md) {
       flex-direction: column;
@@ -416,17 +439,16 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         @extend .h2;
         font-weight: 600;
         margin: $panel-title-margin-horizontal;
+        @include media-breakpoint-down(md) {
+          margin: $panel-title-margin-horizontal-sm;
+        }
       }
 
       .card-text {
         margin-bottom: $panel-text-margin-bottom;
       }
 
-      .card-link {
-        + .card-link {
-          margin-left: $panel-link-margin-left;
-        }
-      }
+      @include card-link-panel;
     }
   }
 
@@ -460,11 +482,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         margin-bottom: $panel-text-margin-bottom;
       }
 
-      .card-link {
-        + .card-link {
-          margin-left: $panel-link-margin-left;
-        }
-      }
+      @include card-link-panel;
     }
   }
 
@@ -478,17 +496,25 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     .panel-footer {
       display: flex;
       margin-top: spaceUnits(6);
+      .card-link {
+        margin: 0 $panel-link-margin-right 0 0;
+        + .card-link {
+          margin-right: 0;
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        flex-wrap: wrap;
+        .card-link, .download-link {
+          width: 100%;
+          margin: 0 0 $panel-link-margin-bottom 0;
+        }  
+      }
     }
 
     .card-body {
       .card-title {
         @extend .h3;
-      }
-
-      .card-link {
-        + .card-link {
-          margin-left: $panel-link-margin-left;
-        }
       }
     }
   }
