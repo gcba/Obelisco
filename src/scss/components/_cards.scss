@@ -568,6 +568,61 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   @include card-deck-1;
 }
 
+.card-deck.card-column {
+  .card{
+    max-width: calc(calc(100% / 4  ) - 30px);
+    @include media-breakpoint-down(md)  {
+      max-width: calc(calc(100% / 3  ) - 30px);
+    }
+    @include media-breakpoint-down(sm)  {
+      max-width: calc(calc(100% / 2  ) - 30px);
+    }
+    @include media-breakpoint-down(xs)  {
+      max-width: 100%;
+      &:nth-of-type(2) {
+        margin-top: 30px; 
+      }
+    }
+  }
+}
+.card-deck.max-cards-3.card-column {
+  .card{
+    max-width: calc(calc(100% / 3  ) - 30px);
+    @include media-breakpoint-down(sm)  {
+      max-width: calc(calc(100% / 2  ) - 30px);
+    }
+    @include media-breakpoint-down(xs)  {
+      max-width: 100%;
+    }
+  }
+}
+
+.card-deck.max-cards-2.card-column {
+  .card{
+    max-width: calc(calc(100% / 2  ) - 30px);
+    @include media-breakpoint-down(xs)  {
+      max-width: 100%;
+    }
+  }
+}
+.card-deck.max-cards-1.card-column {
+  .card{
+    max-width: calc(calc(100% / 3  ) - 30px);
+    &:nth-of-type(-n+3) {
+      margin-top: 0px; 
+    }
+    @include media-breakpoint-down(sm)  {
+      max-width: calc(calc(100% / 2  ) - 30px);
+      &:nth-of-type(-n+3) {
+        margin-top: 30px; 
+      }
+    }
+    @include media-breakpoint-down(xs)  {
+      max-width: 100%;
+    }
+  }
+}
+
 a.card,
 a.card:visited,
 button.card {
