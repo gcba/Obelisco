@@ -6,7 +6,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Componentes|Miga de pan',
+  title: 'Componentes|Migas de pan',
   decorators: [withA11y]
 };
 
@@ -106,7 +106,3 @@ export const Mobile = (): JSX.Element => (
     </nav>
   </div>
 );
-
-Mobile.story = {
-  name: 'Móvil'
-};

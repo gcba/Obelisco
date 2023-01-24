@@ -25,7 +25,7 @@ addParameters({
         'Componentes|Etiqueta',
         'Componentes|Galería',
         'Componentes|Mensajes de estado',
-        'Componentes|Miga de pan',
+        'Componentes|Migas de pan',
         'Componentes|Modal',
         'Componentes|Navegación/Horizontal',
         'Componentes|Opciones',
