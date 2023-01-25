@@ -102,7 +102,7 @@ export const BtnDownload = (): JSX.Element => {
     </div>
   );
 };
-BtnDownload.story = { name: 'Botón descarga' };
+BtnDownload.story = { name: 'Con botón de descarga' };
 
 export const BtnLink = (): JSX.Element => {
   return (
@@ -284,4 +284,4 @@ export const BtnLinkDownload = (): JSX.Element => {
     </div>
   );
 };
-BtnLinkDownload.story = { name: 'Enlace descarga' };
+BtnLinkDownload.story = { name: 'Con enlace de descarga' };

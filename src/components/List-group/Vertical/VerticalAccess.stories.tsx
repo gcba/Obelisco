@@ -53,5 +53,5 @@ export const VerticalAccessSmall = (): JSX.Element => (
 );
 
 VerticalAccessSmall.story = {
-  name: 'Acceso vertical pequeño'
+  name: 'Acceso vertical chico'
 };

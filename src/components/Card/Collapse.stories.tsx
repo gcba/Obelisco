@@ -94,7 +94,7 @@ export const SeleccionMultiple = (): JSX.Element => (
 );
 SeleccionMultiple.story = { name: 'Selección múltiple' };
 
-export const ConInformacion = (): JSX.Element => (
+export const SeleccionConInformacion = (): JSX.Element => (
   <div className="accordion-wrapper">
     <div className="accordion" id="accordionExample">
       <div className="card">
@@ -120,9 +120,9 @@ export const ConInformacion = (): JSX.Element => (
     </div>
   </div>
 );
-ConInformacion.story = { name: 'Con información' };
+SeleccionConInformacion.story = { name: 'Selección con información' };
 
-export const ConIcono = (): JSX.Element => (
+export const SeleccionConIcono = (): JSX.Element => (
   <div id="accordion">
     <div className="accordion-wrapper">
       <div className="accordion" id="accordionExample">
@@ -143,4 +143,4 @@ export const ConIcono = (): JSX.Element => (
   </div>
 );
 
-ConIcono.story = { name: 'Con ícono' };
+SeleccionConIcono.story = { name: 'Selección con ícono' };

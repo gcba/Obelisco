@@ -23,5 +23,5 @@ AccesoConIcono.story = {
 export const AccesoChicoConDescripcion = (): JSX.Element => <SmallAccessDescription />;
 
 AccesoChicoConDescripcion.story = {
-  name: 'Acceso con descripción pequeño'
+  name: 'Acceso con descripción chico'
 };

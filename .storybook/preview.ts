@@ -19,6 +19,7 @@ addParameters({
         'Componentes|Audio',
         'Componentes|Barra de progreso',
         'Componentes|Botón',
+        'Componentes|Cargando',
         'Componentes|Colapsable',
         'Componentes|Desplegables',
         'Componentes|Enlace',
@@ -32,13 +33,11 @@ addParameters({
         'Componentes|Paginación',
         'Componentes|Panel',
         'Componentes|Pasos de un formulario',
-        'Componentes|Spinner',
-        'Componentes|Tablas',
         'Componentes|Tarjetas',
         'Contenido|*',
         'Formulario|*',
         'Template|*',
-        'Organismo|Header/Con buscador',
+        'Organismo|Encabezado/Con buscador',
         'Organismo|*',
         'Versión|*'
       ]);

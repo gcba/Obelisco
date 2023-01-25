@@ -5,8 +5,7 @@ import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { Table, TableCellContet } from '../Table/index';
-//import { Button } from '../../components/Button';
+import { Table, TableCellContet } from '.';
 
 // Config
 export default {
@@ -44,9 +43,11 @@ export const ConBordes = (): JSX.Element => {
   );
 };
 
-ConBordes.story = { name: 'Con bordes' };
+ConBordes.story = {
+  name: 'Con bordes'
+};
 
-export const AlineacionHorizontal = (): JSX.Element => {
+export const AlineaciónHorizontal = (): JSX.Element => {
   return (
     <Table
       head={['#', 'Primero', rightAligned('Cantidad')]}
@@ -61,9 +62,11 @@ export const AlineacionHorizontal = (): JSX.Element => {
   );
 };
 
-AlineacionHorizontal.story = { name: 'Alineación horizontal' };
+AlineaciónHorizontal.story = {
+  name: 'Alineación horizontal'
+};
 
-export const AlineacionVertical = (): JSX.Element => {
+export const AlineaciónVertical = (): JSX.Element => {
   return (
     <Table
       head={['#', 'Primero', rightAligned('Cantidad')]}
@@ -77,7 +80,9 @@ export const AlineacionVertical = (): JSX.Element => {
   );
 };
 
-AlineacionVertical.story = { name: 'Alineación vertical' };
+AlineaciónVertical.story = {
+  name: 'Alineación vertical'
+};
 
 export const Intercalada = (): JSX.Element => {
   return (
@@ -126,7 +131,9 @@ export const TodoJunto = (): JSX.Element => {
   );
 };
 
-TodoJunto.story = { name: 'Todo junto' };
+TodoJunto.story = {
+  name: 'Todo junto'
+};
 
 export const Seleccionable = (): JSX.Element => {
   return (

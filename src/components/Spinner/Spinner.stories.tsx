@@ -7,21 +7,11 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Componentes|Spinner',
+  title: 'Componentes|Cargando',
   decorators: [withA11y]
 };
 
-export const SinTexto = (): JSX.Element => (
-  <div className="spinner-border text-info" role="status">
-    <span className="sr-only">Loading...</span>
-  </div>
-);
-
-SinTexto.story = {
-  name: 'Sin texto'
-};
-
-export const Texto = (): JSX.Element => (
+export const ConMensaje = (): JSX.Element => (
   <div className="spinner">
     <h3>Estamos creando tu trámite</h3>
     <p className="lead">Por favor esperá unos segundos...</p>
@@ -30,3 +20,17 @@ export const Texto = (): JSX.Element => (
     </div>
   </div>
 );
+
+ConMensaje.story = {
+  name: 'Con mensaje'
+};
+
+export const SinMensaje = (): JSX.Element => (
+  <div className="spinner-border text-info" role="status">
+    <span className="sr-only">Loading...</span>
+  </div>
+);
+
+SinMensaje.story = {
+  name: 'Sin mensaje'
+};

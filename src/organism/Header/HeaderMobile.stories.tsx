@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Organismo|Header/Mobile',
+  title: 'Organismo|Encabezado/Mobile',
   decorators: [withA11y]
 };
 

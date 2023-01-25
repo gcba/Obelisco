@@ -6,11 +6,11 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Components
 import { Table } from '.';
-import { Button } from '../Button';
+import { Button } from '../../components/Button';
 
 // Config
 export default {
-  title: 'Componentes|Tablas/Con acciones',
+  title: 'Contenido|Tablas/Con acciones',
   component: Table,
   decorators: [withA11y]
 };

@@ -6,7 +6,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Organismo|Footer',
+  title: 'Organismo|Pie de página',
   decorators: [withA11y]
 };
 

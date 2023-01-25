@@ -115,7 +115,7 @@ Galeria.story = {
   name: 'Galería'
 };
 
-export const Interactivo = (): JSX.Element => {
+export const Demo = (): JSX.Element => {
   return (
     <div className="container">
       <div className="row">
