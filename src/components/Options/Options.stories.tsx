@@ -102,7 +102,7 @@ export const OpcionesMediano = (): JSX.Element => (
     <fieldset className="dropdown show">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown dropdown-toggle"
+        className="btn btn-dropdown dropdown-toggle"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="true">
@@ -129,7 +129,7 @@ export const OpcionesMediano = (): JSX.Element => (
     <fieldset className="dropdown">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown dropdown-toggle"
+        className="btn btn-dropdown dropdown-toggle"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
@@ -156,7 +156,7 @@ export const OpcionesMediano = (): JSX.Element => (
     <fieldset className="dropdown">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown dropdown-toggle"
+        className="btn btn-dropdown dropdown-toggle"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">

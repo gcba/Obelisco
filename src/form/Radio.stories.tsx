@@ -104,5 +104,5 @@ export const BotonRadio = (): JSX.Element => {
   );
 };
 BotonRadio.story = {
-  name: 'Botón radio'
+  name: 'Casilla de selección única'
 };
