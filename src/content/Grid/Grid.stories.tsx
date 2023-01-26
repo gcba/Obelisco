@@ -9,7 +9,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Contenido|Grilla',
+  title: 'Estilos|Grilla',
   decorators: [withA11y]
 };
 

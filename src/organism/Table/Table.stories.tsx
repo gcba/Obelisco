@@ -9,7 +9,7 @@ import { Table, TableCellContet } from '.';
 
 // Config
 export default {
-  title: 'Contenido|Tablas',
+  title: 'Organismos|Tablas',
   component: Table,
   decorators: [withA11y]
 };

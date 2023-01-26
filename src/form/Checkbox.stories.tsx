@@ -125,19 +125,19 @@ export const BotonCheck = (): JSX.Element => {
     <div className="btn-wrapper">
       <input type="checkbox" className="btn-check" id="btn-check" autoComplete="off" />
       <label className="btn btn-chip btn-sm" htmlFor="btn-check">
-        Botón checkbox
+        Botón
       </label>
 
       <input type="checkbox" className="btn-check" id="btn-check2" autoComplete="off" />
       <label className="btn btn-chip btn-sm" htmlFor="btn-check2">
-        Botón checkbox
+        Botón
       </label>
 
       <input type="checkbox" className="btn-check" id="btn-check3" autoComplete="off" disabled />
       <label className="btn btn-chip btn-sm disabled" htmlFor="btn-check3">
-        Botón checkbox
+        Botón
       </label>
     </div>
   );
 };
-BotonCheck.story = { name: 'Casilla de selección mútiple' };
+BotonCheck.story = { name: 'Botón de selección mútiple' };

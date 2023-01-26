@@ -89,20 +89,20 @@ export const BotonRadio = (): JSX.Element => {
       <div className="btn-wrapper" data-toggle="buttons">
         <label className="btn btn-chip btn-sm">
           <input type="radio" name="options1" id="option1" className="btn-check"></input>
-          Botón Radio
+          Botón
         </label>
         <label className="btn btn-chip btn-sm active">
           <input type="radio" name="options2" id="option2" className="btn-check" checked></input>
-          Botón Radio
+          Botón
         </label>
         <label className="btn btn-chip btn-sm disabled ">
           <input type="radio" name="options3" id="option3" className="btn-check"></input>
-          Botón Radio
+          Botón
         </label>
       </div>
     </>
   );
 };
 BotonRadio.story = {
-  name: 'Casilla de selección única'
+  name: 'Botón de selección única'
 };

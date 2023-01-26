@@ -9,7 +9,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Contenido|Tipografía',
+  title: 'Estilos|Tipografía',
   decorators: [withA11y]
 };
 

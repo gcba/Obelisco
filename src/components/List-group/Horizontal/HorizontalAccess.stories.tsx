@@ -53,3 +53,123 @@ export const HorizontalAccessSmall = (): JSX.Element => (
 HorizontalAccessSmall.story = {
   name: 'Acceso horizontal chico'
 };
+
+export const HorizontalAccessDescription = (): JSX.Element => (
+  <div className="list-group list-group-row">
+    <a href="#" className="list-group-item">
+      <div className="access-content">
+        <span className="access-title">Acceso grande</span>
+        <p className="access-text">Descripción</p>
+      </div>
+    </a>
+    <a href="#" className="list-group-item hover">
+      <div className="access-content">
+        <span className="access-title">Acceso grande</span>
+        <p className="access-text">Descripción</p>
+      </div>
+    </a>
+    <a href="#" className="list-group-item focus">
+      <div className="access-content">
+        <span className="access-title">Acceso grande</span>
+        <p className="access-text">Descripción</p>
+      </div>
+    </a>
+  </div>
+);
+
+HorizontalAccessDescription.story = {
+  name: 'Acceso horizontal con descripción'
+};
+
+export const SmallHorizontalAccessDescription = (): JSX.Element => (
+  <div className="list-group list-group-row">
+    <a href="#" className="list-group-item item-sm">
+      <div className="access-content">
+        <span className="access-title">Acceso chico</span>
+        <p className="access-text">Descripción</p>
+      </div>
+    </a>
+    <a href="#" className="list-group-item item-sm hover">
+      <div className="access-content">
+        <span className="access-title">Acceso chico</span>
+        <p className="access-text">Descripción</p>
+      </div>
+    </a>
+    <a href="#" className="list-group-item item-sm focus">
+      <div className="access-content">
+        <span className="access-title">Acceso chico</span>
+        <p className="access-text">Descripción</p>
+      </div>
+    </a>
+  </div>
+);
+
+SmallHorizontalAccessDescription.story = {
+  name: 'Acceso horizontal chico con descripción'
+};
+
+export const HorizontalAccessWithIcon = (): JSX.Element => (
+  <div className="list-group list-group-row">
+    <a href="#" className="list-group-item">
+      <span className="access-title">
+        <i className="bx bx-sm align-middle mr-2 bxl-facebook-circle"></i>
+        Acceso grande
+      </span>
+    </a>
+    <a href="#" className="list-group-item">
+      <span className="access-title">
+        <i className="bx bx-sm align-middle mr-2 bxl-instagram"></i>
+        Acceso grande
+      </span>
+    </a>
+    <a href="#" className="list-group-item">
+      <span className="access-title">
+        <i className="bx bx-sm align-middle mr-2 bxl-twitter"></i>
+        Acceso grande
+      </span>
+    </a>
+    <a href="#" className="list-group-item">
+      <span className="access-title">
+        <i className="bx bx-sm align-middle mr-2 bxl-youtube"></i>
+        Acceso grande
+      </span>
+    </a>
+  </div>
+);
+
+HorizontalAccessWithIcon.story = {
+  name: 'Acceso horizontal con ícono'
+};
+
+export const SmallHorizontalAccessWithIcon = (): JSX.Element => (
+  <div className="list-group list-group-row">
+    <a href="#" className="list-group-item item-sm">
+      <span className="access-title">
+        <i className="bx bx-sm align-middle mr-2 bxl-facebook-circle"></i>
+        Acceso chico
+      </span>
+    </a>
+    <a href="#" className="list-group-item item-sm ">
+      <span className="access-title">
+        <i className="bx bx-sm align-middle mr-2 bxl-instagram"></i>
+        Acceso chico
+      </span>
+    </a>
+    <a href="#" className="list-group-item item-sm ">
+      <span className="access-title">
+        <i className="bx bx-sm align-middle mr-2 bxl-twitter"></i>
+        Acceso chico
+      </span>
+    </a>
+    <a href="#" className="list-group-item item-sm ">
+      <span className="access-title">
+        <i className="bx bx-sm align-middle mr-2 bxl-youtube"></i>
+        Acceso chico
+      </span>
+    </a>
+  </div>
+);
+
+SmallHorizontalAccessWithIcon.story = {
+  name: 'Acceso horizontal chico con ícono'
+};

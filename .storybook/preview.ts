@@ -34,11 +34,11 @@ addParameters({
         'Componentes|Panel',
         'Componentes|Pasos de un formulario',
         'Componentes|Tarjetas',
-        'Contenido|*',
+        'Estilos|*',
         'Formulario|*',
         'Plantilla|*',
-        'Organismo|Encabezado/Con buscador',
-        'Organismo|*',
+        'Organismos|Encabezado/Con buscador',
+        'Organismos|*',
         'Versión|*'
       ]);
     }

@@ -10,7 +10,7 @@ import { Button } from '../../components/Button';
 
 // Config
 export default {
-  title: 'Contenido|Tablas/Con acciones',
+  title: 'Organismos|Tablas/Con acciones',
   component: Table,
   decorators: [withA11y]
 };

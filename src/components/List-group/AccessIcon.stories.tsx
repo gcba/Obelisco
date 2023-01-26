@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const AccesIcon = (): JSX.Element => {
+export const AccessIcon = (): JSX.Element => {
   return (
     <>
       <div className="list-group-container">
@@ -76,61 +76,6 @@ export const AccesIcon = (): JSX.Element => {
               <span className="access-title">Lorem ipsum dolor sit amet</span>
             </a>
           </div>
-        </div>
-      </div>
-
-      <div className="list-group list-group-row">
-        <a href="#" className="list-group-item item-sm">
-          <span className="access-title">
-            <i className="bx bx-sm align-middle mr-2 bxl-facebook-circle"></i>
-            Acceso chico
-          </span>
-        </a>
-        <a href="#" className="list-group-item item-sm ">
-          <span className="access-title">
-            <i className="bx bx-sm align-middle mr-2 bxl-instagram"></i>
-            Acceso chico
-          </span>
-        </a>
-        <a href="#" className="list-group-item item-sm ">
-          <span className="access-title">
-            <i className="bx bx-sm align-middle mr-2 bxl-twitter"></i>
-            Acceso chico
-          </span>
-        </a>
-        <a href="#" className="list-group-item item-sm ">
-          <span className="access-title">
-            <i className="bx bx-sm align-middle mr-2 bxl-youtube"></i>
-            Acceso chico
-          </span>
-        </a>
-      </div>
-      <div className="list-group-container">
-        <div className="list-group">
-          <a href="#" className="list-group-item item-sm ">
-            <span className="access-title">
-              <i className="bx bx-sm align-middle mr-2 bxl-facebook-circle"></i>
-              Acceso chico
-            </span>
-          </a>
-          <a href="#" className="list-group-item item-sm ">
-            <span className="access-title">
-              <i className="bx bx-sm align-middle mr-2 bxl-instagram"></i>
-              Acceso chico
-            </span>
-          </a>
-          <a href="#" className="list-group-item item-sm ">
-            <span className="access-title">
-              <i className="bx bx-sm align-middle mr-2 bxl-twitter"></i>
-              Acceso chico
-            </span>
-          </a>
-          <a href="#" className="list-group-item item-sm ">
-            <span className="access-title">
-              <i className="bx bx-sm align-middle mr-2 bxl-youtube"></i>
-              Acceso chico
-            </span>
-          </a>
         </div>
       </div>
     </>
