@@ -16,16 +16,35 @@ export const buttonTypes: Array<ButtonTypeWithName> = [
 export type AlertType = Type | 'info';
 export const alertTypes: AlertType[] = ['primary', 'success', 'info', 'danger'];
 
-export type Size = 'Default' | 'Chico' | 'Grande';
-export const sizes: Size[] = ['Chico', 'Default', 'Grande'];
+export type Size = 'default' | 'small' | 'large';
+export const sizes: Size[] = ['small', 'default', 'large'];
 
-export const sizeToClass = (size: Size | 'Default'): string => {
+export interface SizesTypes {
+  size: Size;
+  name: string;
+}
+export const sizesButton: SizesTypes[] = [
+  {
+    size: 'small',
+    name: 'Chico'
+  },
+  {
+    size: 'default',
+    name: 'Mediano'
+  },
+  {
+    size: 'large',
+    name: 'Grande'
+  }
+];
+
+export const sizeToClass = (size: Size | 'default'): string => {
   switch (size) {
-    case 'Default':
+    case 'default':
       return '';
-    case 'Grande':
+    case 'large':
       return 'lg';
-    case 'Chico':
+    case 'small':
       return 'sm';
   }
 };

@@ -6,7 +6,7 @@ import './Button.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { buttonTypes, sizes } from '../utils';
+import { buttonTypes, sizes, sizesButton } from '../utils';
 import { Button } from '.';
 
 // Config
@@ -68,9 +68,9 @@ export const Activos = (): JSX.Element => {
 export const Tamanos = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {sizes.map((size) => (
-        <Button key={size} type="secondary" size={size}>
-          {size}
+      {sizesButton.map((item) => (
+        <Button key={item.size} type="secondary" size={item.size}>
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-secondary" href="#" target="_blank">
@@ -84,9 +84,9 @@ Tamanos.story = { name: 'Tamaños' };
 export const Deshabilitados = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {sizes.map((size) => (
-        <Button key={size} type="secondary" disabled={true} size={size}>
-          {size}
+      {sizesButton.map((item) => (
+        <Button key={item.size} type="secondary" disabled={true} size={item.size}>
+          {item.name}
         </Button>
       ))}
     </div>

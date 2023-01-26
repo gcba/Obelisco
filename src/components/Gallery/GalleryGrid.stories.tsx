@@ -182,3 +182,7 @@ export const UnaImagen = (): JSX.Element => {
     </div>
   );
 };
+
+UnaImagen.story = {
+  name: 'Una imagen'
+};

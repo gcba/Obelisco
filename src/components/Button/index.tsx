@@ -16,7 +16,7 @@ export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<But
 
   let className = `btn btn-${type}`;
   if (outline) className = `btn btn-outline-${type}`;
-  if (!!size && size !== 'Default') className += ` btn-${sizeToClass(size)}`;
+  if (!!size && size !== 'default') className += ` btn-${sizeToClass(size)}`;
   if (block) className += ` btn-block`;
   if (props.className) className += ` ${props.className}`;
   if (icon) className += ` btn-icon`;

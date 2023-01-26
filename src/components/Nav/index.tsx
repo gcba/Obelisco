@@ -138,8 +138,8 @@ const NavItemComponentHorizontal: React.FC<NavItemComponentProps> = (props: NavI
   const hasActiveChild = checkActiveChild(children, selected);
 
   const linkClassName = classnames('nav-link', {
-    'nav-link-sm': type === 'Chico',
-    'nav-link-lg': type === 'Grande',
+    'nav-link-sm': type === 'small',
+    'nav-link-lg': type === 'large',
     'border-link': hasBordered,
     'active-child': !disabled && hasActiveChild,
     active: !disabled && isActive,

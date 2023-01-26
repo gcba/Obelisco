@@ -36,7 +36,7 @@ addParameters({
         'Componentes|Tarjetas',
         'Contenido|*',
         'Formulario|*',
-        'Template|*',
+        'Plantilla|*',
         'Organismo|Encabezado/Con buscador',
         'Organismo|*',
         'Versión|*'

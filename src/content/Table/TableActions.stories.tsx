@@ -54,7 +54,7 @@ ConEnlaces.story = {
 // Utils
 
 const ActionButton: JSX.Element = (
-  <Button type="success" size="Chico">
+  <Button type="success" size="small">
     Acción
   </Button>
 );
