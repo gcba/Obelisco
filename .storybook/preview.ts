@@ -15,11 +15,13 @@ addParameters({
       return anysort(previous[1].kind, next[1].kind,  [
         'Comenzar|*',
         'Componentes|Accesos',
+        'Componentes|Accesos/Lista de accesos',
+        'Componentes|Accesos/Horizontal',
+        'Componentes|Accesos/Vertical',
         'Componentes|Alerta',
         'Componentes|Audio',
         'Componentes|Barra de progreso',
         'Componentes|Botón',
-        'Componentes|Cargando',
         'Componentes|Colapsable',
         'Componentes|Desplegables',
         'Componentes|Enlace',
@@ -33,11 +35,12 @@ addParameters({
         'Componentes|Paginación',
         'Componentes|Panel',
         'Componentes|Pasos de un formulario',
+        'Componentes|Spinner',
         'Componentes|Tarjetas',
         'Estilos|*',
         'Formulario|*',
         'Plantilla|*',
-        'Organismos|Encabezado/Con buscador',
+        'Organismos|Header (encabezado)/Con buscador',
         'Organismos|*',
         'Versión|*'
       ]);

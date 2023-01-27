@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Organismos|Encabezado/Con buscador',
+  title: 'Organismos|Header (encabezado)/Con buscador',
   decorators: [withA11y]
 };
 
