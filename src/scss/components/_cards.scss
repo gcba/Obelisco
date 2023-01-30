@@ -497,9 +497,9 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       display: flex;
       margin-top: spaceUnits(6);
       .card-link {
-        margin: 0 $panel-link-margin-right 0 0;
+        margin-right: $panel-link-margin-right;
         + .card-link {
-          margin-right: 0;
+          margin: 0;
         }
       }
 
@@ -507,7 +507,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         flex-wrap: wrap;
         .card-link, .download-link {
           width: 100%;
-          margin: 0 0 $panel-link-margin-bottom 0;
+          margin: 0 0 $panel-link-margin-bottom;
         }  
       }
     }
