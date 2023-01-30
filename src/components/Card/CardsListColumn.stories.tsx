@@ -10,7 +10,7 @@ import { Card } from '.';
 
 // Config
 export default {
-  title: 'Componentes|Tarjetas/Lista ancho completo',
+  title: 'Componentes|Tarjetas/Lista ancho por tarjeta',
   component: Card,
   decorators: [withA11y]
 };
@@ -23,7 +23,7 @@ const descriptionLg =
 export const CuatroColumnas = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="card-deck">
+      <div className="card-deck card-column">
         <Card title={title} description={descriptionSm} href="#" />
         <Card title={title} description={description} href="#" />
         <Card title={title} description={descriptionLg} href="#" />
@@ -35,13 +35,11 @@ export const CuatroColumnas = (): JSX.Element => {
     </div>
   );
 };
-
-CuatroColumnas.story = { name: 'Cuatro columnas' };
 
 export const TresColumnas = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="card-deck max-cards-3">
+      <div className="card-deck max-cards-3 card-column">
         <Card title={title} description={descriptionSm} href="#" />
         <Card title={title} description={description} href="#" />
         <Card title={title} description={descriptionLg} href="#" />
@@ -51,13 +49,11 @@ export const TresColumnas = (): JSX.Element => {
     </div>
   );
 };
-
-TresColumnas.story = { name: 'Tres columnas' };
 
 export const DosColumnas = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="card-deck max-cards-2">
+      <div className="card-deck max-cards-2 card-column">
         <Card title={title} description={descriptionSm} href="#" />
         <Card title={title} description={description} href="#" />
         <Card title={title} description={descriptionLg} href="#" />
@@ -65,19 +61,13 @@ export const DosColumnas = (): JSX.Element => {
     </div>
   );
 };
-
-DosColumnas.story = { name: 'Dos columnas' };
 
 export const UnaColumna = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="card-deck max-cards-1">
+      <div className="card-deck max-cards-1 card-column">
         <Card title={title} description={descriptionSm} href="#" />
-        <Card title={title} description={description} href="#" />
-        <Card title={title} description={descriptionLg} href="#" />
       </div>
     </div>
   );
 };
-
-UnaColumna.story = { name: 'Una columna' };
