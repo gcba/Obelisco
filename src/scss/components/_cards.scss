@@ -58,11 +58,12 @@ $panel-deck-card-mb: 1.5rem;
 $panel-deck-card-mr: 2rem;
 
 $panel-spacer-lg: 2rem;
-$panel-title-margin-vertical: 1.5rem 0 0.813rem 0;
-$panel-title-margin-horizontal: 2.5rem 0 0.813rem 0;
-$panel-title-margin-horizontal-sm: 1.5rem 0 0.813rem 0;
+$panel-title-margin-vertical: 2rem 0 0.813rem 0;
+$panel-title-margin-horizontal: 1rem 0 0.813rem 0;
+$panel-title-margin-horizontal-sm: 2rem 0 0.813rem 0;
 $panel-text-margin-bottom: 1.5rem;
-$panel-link-margin-left: 1rem;
+$panel-link-margin-right: 1rem;
+$panel-link-margin-bottom: 1rem;
 
 $accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
 $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
@@ -129,6 +130,27 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 
+@mixin card-link-panel {
+  .card-link {
+    margin: 0 $panel-link-margin-right $panel-link-margin-bottom 0;
+    + .card-link {
+      margin-right: 0;
+    }
+  }
+
+  .download-link, .download {
+    margin-bottom: $panel-link-margin-bottom;
+    display: inline-block;
+  }
+
+  @include media-breakpoint-down(xs) {
+    .card-link, .download-link {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
 /* === Bootstrap Import === */
 
 @import '~bootstrap/scss/card';
@@ -157,7 +179,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   .card-title {
     margin-bottom: 0;
     @extend .h4;
-    font-weight: 700;
+    font-weight: 600;
+    @include media-breakpoint-up(sm) {
+      font-weight: 700;
+    }
   }
 
   .card-subtitle {
@@ -381,6 +406,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   &.panel-horizontal {
     flex-direction: row;
     width: 100%;
+    align-items: center;
 
     @include media-breakpoint-down(md) {
       flex-direction: column;
@@ -416,17 +442,16 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         @extend .h2;
         font-weight: 600;
         margin: $panel-title-margin-horizontal;
+        @include media-breakpoint-down(md) {
+          margin: $panel-title-margin-horizontal-sm;
+        }
       }
 
       .card-text {
         margin-bottom: $panel-text-margin-bottom;
       }
 
-      .card-link {
-        + .card-link {
-          margin-left: $panel-link-margin-left;
-        }
-      }
+      @include card-link-panel;
     }
   }
 
@@ -460,11 +485,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         margin-bottom: $panel-text-margin-bottom;
       }
 
-      .card-link {
-        + .card-link {
-          margin-left: $panel-link-margin-left;
-        }
-      }
+      @include card-link-panel;
     }
   }
 
@@ -478,17 +499,25 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     .panel-footer {
       display: flex;
       margin-top: spaceUnits(6);
+      .card-link {
+        margin-right: $panel-link-margin-right;
+        + .card-link {
+          margin: 0;
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        flex-wrap: wrap;
+        .card-link, .download-link {
+          width: 100%;
+          margin: 0 0 $panel-link-margin-bottom;
+        }  
+      }
     }
 
     .card-body {
       .card-title {
         @extend .h3;
-      }
-
-      .card-link {
-        + .card-link {
-          margin-left: $panel-link-margin-left;
-        }
       }
     }
   }
@@ -566,6 +595,61 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 .card-deck.max-cards-1 {
   @include card-deck-1;
+}
+
+.card-deck.card-column {
+  .card{
+    max-width: calc(calc(100% / 4  ) - 30px);
+    @include media-breakpoint-down(md)  {
+      max-width: calc(calc(100% / 3  ) - 30px);
+    }
+    @include media-breakpoint-down(sm)  {
+      max-width: calc(calc(100% / 2  ) - 30px);
+    }
+    @include media-breakpoint-down(xs)  {
+      max-width: 100%;
+      &:nth-of-type(2) {
+        margin-top: 30px; 
+      }
+    }
+  }
+}
+.card-deck.max-cards-3.card-column {
+  .card{
+    max-width: calc(calc(100% / 3  ) - 30px);
+    @include media-breakpoint-down(sm)  {
+      max-width: calc(calc(100% / 2  ) - 30px);
+    }
+    @include media-breakpoint-down(xs)  {
+      max-width: 100%;
+    }
+  }
+}
+
+.card-deck.max-cards-2.card-column {
+  .card{
+    max-width: calc(calc(100% / 2  ) - 30px);
+    @include media-breakpoint-down(xs)  {
+      max-width: 100%;
+    }
+  }
+}
+.card-deck.max-cards-1.card-column {
+  .card{
+    max-width: calc(calc(100% / 3  ) - 30px);
+    &:nth-of-type(-n+3) {
+      margin-top: 0px; 
+    }
+    @include media-breakpoint-down(sm)  {
+      max-width: calc(calc(100% / 2  ) - 30px);
+      &:nth-of-type(-n+3) {
+        margin-top: 30px; 
+      }
+    }
+    @include media-breakpoint-down(xs)  {
+      max-width: 100%;
+    }
+  }
 }
 
 a.card,

@@ -69,7 +69,12 @@ $status-icons: map-merge(
   }
 
   &:not(:has(.status-list)) .status-text {
-    margin-bottom: 2rem;
+    margin-bottom: $status-margin-bottom;
+
+    &:not(:has(+ .status-text)),
+    + .status-text {
+      margin-bottom: 2rem;
+    }
   }
 
   .status-list {
@@ -89,7 +94,7 @@ $status-icons: map-merge(
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(xs) {
     > .btn {
       width: 100%;
     }
@@ -98,7 +103,7 @@ $status-icons: map-merge(
   > .btn + .btn {
     margin-left: 1rem;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       margin-left: 0;
       margin-top: 1rem;
       width: 100%;
