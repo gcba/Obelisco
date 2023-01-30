@@ -14,7 +14,7 @@ export const info = (): JSX.Element => (
       Las plantillas se crean en Obelisco como sus propios marcos extendidos, con sus componentes y complementos,
       documentación y herramientas de construcción. <br />
       Ir a la{' '}
-      <a className="access" href="https://gcba.github.io/obelisco-demo/index.html">
+      <a className="access" target="_blank" href="https://gcba.github.io/obelisco-demo/index.html" rel="noreferrer">
         web
       </a>
     </p>
