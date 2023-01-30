@@ -4,7 +4,7 @@ import './Template.stories.scss';
 
 // Config
 export default {
-  title: 'Plantilla|info'
+  title: 'Plantilla|Info'
 };
 
 export const info = (): JSX.Element => (

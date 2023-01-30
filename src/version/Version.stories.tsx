@@ -8,7 +8,7 @@ export default {
 };
 
 export const Info = (): JSX.Element => (
-  <div>
+  <>
     <h1>Versión Obelisco 1.45.2</h1>
     <p>
       Acceso al release:{' '}
@@ -20,7 +20,7 @@ export const Info = (): JSX.Element => (
         Github
       </a>
     </p>
-  </div>
+  </>
 );
 
 Info.story = {

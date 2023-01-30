@@ -54,33 +54,6 @@ HorizontalAccessSmall.story = {
   name: 'Acceso horizontal chico'
 };
 
-export const HorizontalAccessDescription = (): JSX.Element => (
-  <div className="list-group list-group-row">
-    <a href="#" className="list-group-item">
-      <div className="access-content">
-        <span className="access-title">Acceso grande</span>
-        <p className="access-text">Descripción</p>
-      </div>
-    </a>
-    <a href="#" className="list-group-item hover">
-      <div className="access-content">
-        <span className="access-title">Acceso grande</span>
-        <p className="access-text">Descripción</p>
-      </div>
-    </a>
-    <a href="#" className="list-group-item focus">
-      <div className="access-content">
-        <span className="access-title">Acceso grande</span>
-        <p className="access-text">Descripción</p>
-      </div>
-    </a>
-  </div>
-);
-
-HorizontalAccessDescription.story = {
-  name: 'Acceso horizontal con descripción'
-};
-
 export const SmallHorizontalAccessDescription = (): JSX.Element => (
   <div className="list-group list-group-row">
     <a href="#" className="list-group-item item-sm">
