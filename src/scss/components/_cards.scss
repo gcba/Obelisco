@@ -179,7 +179,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   .card-title {
     margin-bottom: 0;
     @extend .h4;
-    font-weight: 700;
+    font-weight: 600;
+    @include media-breakpoint-up(sm) {
+      font-weight: 700;
+    }
   }
 
   .card-subtitle {
