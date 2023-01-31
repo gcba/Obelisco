@@ -4,10 +4,10 @@ import './Template.stories.scss';
 
 // Config
 export default {
-  title: 'Plantilla|Info'
+  title: 'Plantillas|Plantilla'
 };
 
-export const info = (): JSX.Element => (
+export const Informacion = (): JSX.Element => (
   <>
     <h1>Plantillas GCBA</h1>
     <p className="lead">
@@ -20,3 +20,7 @@ export const info = (): JSX.Element => (
     </p>
   </>
 );
+
+Informacion.story = {
+  name: 'Información'
+};

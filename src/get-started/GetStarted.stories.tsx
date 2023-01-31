@@ -11,7 +11,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const Info = (): JSX.Element => (
+export const Instalacion = (): JSX.Element => (
   <div className="get-started-container">
     <div className="get-started">
       {/* OBELISCO */}
@@ -186,3 +186,7 @@ export const Info = (): JSX.Element => (
     </div>
   </div>
 );
+
+Instalacion.story = {
+  name: 'Instalación'
+};

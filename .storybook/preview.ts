@@ -6,7 +6,6 @@ import '../src/scss/obelisco.scss';
 import anysort from 'anysort';
 
 addDecorator(withHTML);
-
 // .storybook/preview.js
 
 addParameters({
@@ -36,10 +35,11 @@ addParameters({
         'Componentes|Panel',
         'Componentes|Pasos de un formulario',
         'Componentes|Spinner',
-        'Componentes|Tarjetas',
+        'Componentes|Tarjetas/Tipos',
         'Estilos|*',
         'Formulario|*',
-        'Plantilla|*',
+        'Plantillas|*',
+        'Organismos|Footer (pie de página)',
         'Organismos|Header (encabezado)/Con buscador',
         'Organismos|*',
         'Versión|*'
