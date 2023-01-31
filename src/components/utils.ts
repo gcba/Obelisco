@@ -10,7 +10,7 @@ export const buttonTypes: Array<ButtonTypeWithName> = [
   { type: 'secondary', name: 'Secundario' },
   { type: 'success', name: 'Éxito' },
   { type: 'danger', name: 'Error' },
-  { type: 'link', name: 'Enlace' }
+  { type: 'link', name: 'Fantasma' }
 ];
 
 export type AlertType = Type | 'info';

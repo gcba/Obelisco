@@ -82,32 +82,78 @@ SmallHorizontalAccessDescription.story = {
 };
 
 export const HorizontalAccessWithIcon = (): JSX.Element => (
-  <div className="list-group list-group-row">
-    <a href="#" className="list-group-item">
-      <span className="access-title">
-        <i className="bx bx-sm align-middle mr-2 bxl-facebook-circle"></i>
-        Acceso grande
-      </span>
-    </a>
-    <a href="#" className="list-group-item">
-      <span className="access-title">
-        <i className="bx bx-sm align-middle mr-2 bxl-instagram"></i>
-        Acceso grande
-      </span>
-    </a>
-    <a href="#" className="list-group-item">
-      <span className="access-title">
-        <i className="bx bx-sm align-middle mr-2 bxl-twitter"></i>
-        Acceso grande
-      </span>
-    </a>
-    <a href="#" className="list-group-item">
-      <span className="access-title">
-        <i className="bx bx-sm align-middle mr-2 bxl-youtube"></i>
-        Acceso grande
-      </span>
-    </a>
-  </div>
+  <>
+    <div className="list-group list-group-row">
+      <a href="#" className="list-group-item">
+        <span className="access-title">
+          <i className="bx bx-sm align-middle mr-2 bxl-facebook-circle"></i>
+          Acceso grande
+        </span>
+      </a>
+      <a href="#" className="list-group-item">
+        <span className="access-title">
+          <i className="bx bx-sm align-middle mr-2 bxl-instagram"></i>
+          Acceso grande
+        </span>
+      </a>
+      <a href="#" className="list-group-item">
+        <span className="access-title">
+          <i className="bx bx-sm align-middle mr-2 bxl-twitter"></i>
+          Acceso grande
+        </span>
+      </a>
+      <a href="#" className="list-group-item">
+        <span className="access-title">
+          <i className="bx bx-sm align-middle mr-2 bxl-youtube"></i>
+          Acceso grande
+        </span>
+      </a>
+    </div>
+    <div className="card-deck max-cards-2">
+      <div className="group-access" style={{ width: '324px' }}>
+        <div className="card-access">
+          <div className="card-access-body reverse">
+            <div>
+              <h3 className="card-access-title">Lorem ipsum dolor sit</h3>
+              <p className="card-access-text">Lorem ipsum dolor sit amet</p>
+            </div>
+            <i className="bx bxs-shield-x card-access-icon"></i>
+          </div>
+          <a href="#" className="list-group-item card-item">
+            <span className="access-title">Lorem ipsum dolor sit amet</span>
+          </a>
+        </div>
+      </div>
+      <div className="group-access" style={{ width: '324px' }}>
+        <div className="card-access">
+          <div className="card-access-body reverse">
+            <div>
+              <h3 className="card-access-title">Lorem ipsum dolor sit</h3>
+              <p className="card-access-text">Lorem ipsum dolor sit amet</p>
+            </div>
+            <i className="bx bxs-shield-x card-access-icon"></i>
+          </div>
+          <a href="#" className="list-group-item card-item">
+            <span className="access-title">Lorem ipsum dolor sit amet</span>
+          </a>
+        </div>
+      </div>
+      <div className="group-access" style={{ width: '324px' }}>
+        <div className="card-access">
+          <div className="card-access-body reverse">
+            <div>
+              <h3 className="card-access-title">Lorem ipsum dolor sit</h3>
+              <p className="card-access-text">Lorem ipsum dolor sit amet</p>
+            </div>
+            <i className="bx bxs-shield-x card-access-icon"></i>
+          </div>
+          <a href="#" className="list-group-item card-item">
+            <span className="access-title">Lorem ipsum dolor sit amet</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </>
 );
 
 HorizontalAccessWithIcon.story = {

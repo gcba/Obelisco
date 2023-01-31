@@ -13,7 +13,6 @@ addParameters({
     storySort: (previous: Array<any>, next: Array<any>) => {
       return anysort(previous[1].kind, next[1].kind,  [
         'Comenzar|*',
-        'Componentes|Accesos',
         'Componentes|Accesos/Lista de accesos',
         'Componentes|Accesos/Horizontal',
         'Componentes|Accesos/Vertical',
