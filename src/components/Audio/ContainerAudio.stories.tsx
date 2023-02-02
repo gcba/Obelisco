@@ -14,9 +14,9 @@ export const CompleteContainer = (): JSX.Element => {
     <div className="cards-container">
       <div className="card">
         <div className="card-body">
-          <h4 className="card-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</h4>
+          <h4 className="card-title">Título de contenedor</h4>
           <p className="card-text">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
           </p>
           <audio className="audio-sm" controls>
             <source
@@ -38,29 +38,13 @@ export const TitledContainer = (): JSX.Element => {
     <div className="cards-container">
       <div className="card">
         <div className="card-body">
-          <h4 className="card-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</h4>
+          <h4 className="card-title">Título de contenedor</h4>
           <audio className="audio-sm mt-3" controls>
             <source
               src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-61905/zapsplat_multimedia_alert_chime_short_musical_notification_cute_child_like_001_64918.mp3?_=1"
               type="audio/ogg"
             />
-            Your browser does not support the audio tag.
-          </audio>
-        </div>
-      </div>
-
-      <br />
-      <div className="card">
-        <div className="card-body">
-          <p className="card-text">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-          </p>
-          <audio className="audio-sm" controls>
-            <source
-              src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-61905/zapsplat_multimedia_alert_chime_short_musical_notification_cute_child_like_001_64918.mp3?_=1"
-              type="audio/ogg"
-            />
-            Your browser does not support the audio tag.
+            Tu navegador no soporta la etiqueta de audio.
           </audio>
         </div>
       </div>
@@ -80,7 +64,7 @@ export const ContainerAudio = (): JSX.Element => {
               src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-61905/zapsplat_multimedia_alert_chime_short_musical_notification_cute_child_like_001_64918.mp3?_=1"
               type="audio/ogg"
             />
-            Your browser does not support the audio tag.
+            Tu navegador no soporta la etiqueta de audio.
           </audio>
         </div>
       </div>
@@ -90,6 +74,7 @@ export const ContainerAudio = (): JSX.Element => {
 
 ContainerAudio.story = { name: 'Solo audio' };
 
+/*
 export const ContainerNews = (): JSX.Element => {
   return (
     <div className="cards-container">
@@ -100,7 +85,7 @@ export const ContainerNews = (): JSX.Element => {
             src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-61905/zapsplat_multimedia_alert_chime_short_musical_notification_cute_child_like_001_64918.mp3?_=1"
             type="audio/ogg"
           />
-          Your browser does not support the audio tag.
+          Tu navegador no soporta la etiqueta de audio.
         </audio>
         <div className="card-body">
           <div className="mb-2">
@@ -121,3 +106,4 @@ export const ContainerNews = (): JSX.Element => {
 };
 
 ContainerNews.story = { name: 'Noticias' };
+*/

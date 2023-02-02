@@ -11,7 +11,7 @@ import { Button } from '.';
 
 // Config
 export default {
-  title: 'Componentes|Botón',
+  title: 'Componentes|Botones',
   component: Button,
   decorators: [withA11y]
 };

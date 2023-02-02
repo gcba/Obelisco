@@ -10,8 +10,7 @@ export default {
 };
 
 const TITLE = 'Encabezado';
-const DESCRIPTION =
-  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nostrum quo animi dignissimos omnis dicta quia placeat, nesciunt quasi hic autem iure eum necessitatibus ea expedita quas. Rem, aspernatur repudiandae.';
+const DESCRIPTION = 'Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.';
 const BUTTONS_ARR = [
   {
     name: 'Botón',

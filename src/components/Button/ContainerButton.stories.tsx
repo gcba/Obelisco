@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Botón/En Caja',
+  title: 'Componentes|Botones/En Caja',
   decorators: [withA11y]
 };
 

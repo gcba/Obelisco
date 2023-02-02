@@ -17,9 +17,9 @@ export default {
 
 const simpleItems = [
   { name: 'Link', id: '1' },
-  { name: 'Active', id: '2' },
+  { name: 'Activo', id: '2' },
   { name: 'Link', id: '3' },
-  { name: 'Disabled', id: '4', disabled: true }
+  { name: 'Deshabilitado', id: '4', disabled: true }
 ];
 
 export const Simple = (): JSX.Element => (

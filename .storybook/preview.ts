@@ -19,7 +19,7 @@ addParameters({
         'Componentes|Alerta',
         'Componentes|Audio',
         'Componentes|Barra de progreso',
-        'Componentes|Botón',
+        'Componentes|Botones',
         'Componentes|Colapsable',
         'Componentes|Desplegables',
         'Componentes|Enlace',

@@ -154,9 +154,9 @@ const SmallContent: JSX.Element = (
   <>
     <h5>Título</h5>
     <p className="mb-0">
-      Lorem ipsum dolor sit amet,
+      Esto es un párrafo,
       <br />
-      repellendus ad est, laborum eum reiciendis quam.
+      esto es otro párrafo.
     </p>
   </>
 );

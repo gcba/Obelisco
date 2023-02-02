@@ -35,7 +35,7 @@ export const Instalacion = (): JSX.Element => (
       </p>
       {/* VER DOCUMENTACION */}
       <h3>
-        <a href="https://gcba.github.io/estandares/componentes/web//">Ver la documentación de componentes</a>.
+        <a href="https://gcba.github.io/estandares/componentes/web/">Ver la documentación de componentes</a>.
       </h3>
       <br />
 
@@ -52,9 +52,11 @@ export const Instalacion = (): JSX.Element => (
       {/* INSTALACION */}
       <h3>Instalación</h3>
       <p>Para instalarlo en un proyecto que ya usa npm, hay que ejecutar:</p>
-      <code>
-        <span>npm</span> install @gcba/obelisco
-      </code>
+      <pre className="code-box">
+        <code>
+          <span>npm</span> install @gcba/obelisco
+        </code>
+      </pre>
       <br />
       <br />
 
@@ -64,9 +66,11 @@ export const Instalacion = (): JSX.Element => (
         Si Obelisco ya está instalado en el proyecto y necesitás actualizarlo a la última versión, en el directorio del
         proyecto hay que ejecutar:
       </p>
-      <code>
-        <span>npm</span> update @gcba/obelisco
-      </code>
+      <pre className="code-box">
+        <code>
+          <span>npm</span> update @gcba/obelisco
+        </code>
+      </pre>
       <br />
       <br />
 
@@ -93,7 +97,9 @@ export const Instalacion = (): JSX.Element => (
         <code>/src/scss/obelisco.scss</code>.
       </p>
       <p>Para importar el css, podemos hacerlo de la siguiente forma:</p>
-      <code> &lt;link rel=&quot;stylesheet&quot; href=&quot;ruta/al/proyecto/dist/obelisco.css&quot;&gt; </code>
+      <pre className="code-box">
+        <code> &lt;link rel=&quot;stylesheet&quot; href=&quot;ruta/al/proyecto/dist/obelisco.css&quot;&gt; </code>
+      </pre>
       <br />
       <br />
 
@@ -103,14 +109,16 @@ export const Instalacion = (): JSX.Element => (
         Obelisco requiere las tipografías <strong>Nunito</strong> y <strong>Open sans</strong> disponibles en google
         fonts, para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
       </p>
-      <code>
-        &lt;link
-        href=&quot;https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap&quot;
-        rel=&quot;stylesheet&quot; /&gt;
-        <br />
-        &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap&quot;
-        rel=&quot;stylesheet&quot;&gt;&lt;/link&gt;
-      </code>
+      <pre className="code-box">
+        <code>
+          &lt;link
+          href=&quot;https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap&quot;
+          rel=&quot;stylesheet&quot; /&gt;
+          <br />
+          &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap&quot;
+          rel=&quot;stylesheet&quot;&gt;&lt;/link&gt;
+        </code>
+      </pre>
       <br />
       <br />
 
@@ -118,15 +126,19 @@ export const Instalacion = (): JSX.Element => (
       <h3>Iconografía</h3>
       <p>Obelisco utiliza la librería de Boxicons que se puede instalar de las siguientes maneras:</p>
       <p>Utilizando el paquete npm:</p>
-      <code>
-        npm <span>install</span> boxicons
-      </code>
+      <pre className="code-box">
+        <code>
+          npm <span>install</span> boxicons
+        </code>
+      </pre>
       <br />
       <br />
       <p>Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:</p>
-      <code>
-        &lt;link href=&quot;https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-      </code>
+      <pre className="code-box">
+        <code>
+          &lt;link href=&quot;https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+        </code>
+      </pre>
       <br />
       <br />
 
@@ -138,15 +150,17 @@ export const Instalacion = (): JSX.Element => (
         .
       </p>
       <p>Un ejemplo de cómo importalas es:</p>
-      <code>
-        &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
-        <br />
-        &lt;script
-        src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js&quot;&gt;&lt;/script&gt;
-        <br />
-        &lt;script
-        src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-      </code>
+      <pre className="code-box">
+        <code>
+          &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+          <br />
+          &lt;script
+          src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+          <br />
+          &lt;script
+          src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+        </code>
+      </pre>
       <br />
       <blockquote>
         <p>
