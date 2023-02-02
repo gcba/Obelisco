@@ -181,7 +181,7 @@ export const Instalacion = (): JSX.Element => (
       </p>
       <p>
         Para agilizar y hacer más transparente el proceso, cualquier persona puede{' '}
-        <a href="CONTRIBUTING.md">contribuir de varias formas</a>.
+        <a href="https://github.com/gcba/Obelisco/blob/master/CONTRIBUTING.md">contribuir de varias formas</a>.
       </p>
     </div>
   </div>
