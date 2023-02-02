@@ -124,7 +124,9 @@ export const Instalacion = (): JSX.Element => (
 
       {/* ICONOGRAFIA */}
       <h3>Iconografía</h3>
-      <p>Obelisco utiliza la librería de Boxicons que se puede instalar de las siguientes maneras:</p>
+      <p>
+        Obelisco utiliza las librerías de Boxicons y Material Icons que se pueden instalar de las siguientes maneras:
+      </p>
       <p>Utilizando el paquete npm:</p>
       <pre className="code-box">
         <code>
@@ -137,6 +139,9 @@ export const Instalacion = (): JSX.Element => (
       <pre className="code-box">
         <code>
           &lt;link href=&quot;https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+          <br />
+          &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;
+          rel=&quot;stylesheet&quot;&gt;
         </code>
       </pre>
       <br />

@@ -49,11 +49,12 @@ export const TextoSecundario = (): JSX.Element => {
 export const Transformaciones = (): JSX.Element => {
   return (
     <p>
-      Lorem ipsum dolor sit <strong>negrita</strong> consectetur adipisicing
-      <em>cursiva</em> elit. Molestias <small>pequeño</small> omnis
+      Nuestro sistema de <strong>estándares</strong> brinda un <em>conjunto de herramientas</em> y componentes
+      colaborativos
+      <br />y <small>accesibles</small> que define procesos para que los equipos internos y externos puedan trabajar
       <br />
-      similique <mark>remarcado</mark>, place<sup>at</sup> accusamus porro voluptat<sub>es</sub> tempora provident
-      dolorem <kbd>p</kbd>.
+      alineadamente. De esta forma, ayudamos a crear <mark>servicios</mark> consistent<sup>es</sup> para mejorar
+      <br /> la experiencia digit<sub>al</sub> de vecinos y vecina<kbd>s</kbd>.
     </p>
   );
 };

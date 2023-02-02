@@ -28,7 +28,7 @@ export const ListaDeSeleccion = (): JSX.Element => {
   return (
     <div className="form-wrapper bg-light p-4">
       <div className="form-group">
-        <label htmlFor="lista-de-seleccion">Example select</label>
+        <label htmlFor="lista-de-seleccion">Nombre del selector</label>
         <select className="custom-select" id="lista-de-seleccion">
           <option>1</option>
           <option>2</option>

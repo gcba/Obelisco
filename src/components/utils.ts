@@ -9,7 +9,7 @@ export const buttonTypes: Array<ButtonTypeWithName> = [
   { type: 'primary', name: 'Primario' },
   { type: 'secondary', name: 'Secundario' },
   { type: 'success', name: 'Éxito' },
-  { type: 'danger', name: 'Peligro' },
+  { type: 'danger', name: 'Error' },
   { type: 'link', name: 'Link' }
 ];
 
