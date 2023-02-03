@@ -142,7 +142,8 @@ export const Instalacion = (): JSX.Element => (
         <code>
           &lt;link href=&quot;https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
           <br />
-          &lt;link href=&quot;/path/to/material-icons/iconfont/material-icons.css&quot; rel=&quot;stylesheet&quot;&gt;
+          &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons+Round&quot;
+          rel=&quot;stylesheet&quot;&gt;
         </code>
       </pre>
       <br />

@@ -55,16 +55,18 @@ Obelisco requiere las tipografías **Nunito** y **Open sans** disponibles en goo
 
 ### Iconografía
 
-Obelisco utiliza la librería de Boxicons que se puede instalar de las siguientes maneras:
+Obelisco utiliza las librerías de Boxicons y Material Icons que se pueden instalar de las siguientes maneras:
 
 Utilizando el paquete npm:
 ```
 npm install boxicons
+npm install material-icons@latest
 ```
 
 Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
 ```
 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 ```
 
 ### Javascript
