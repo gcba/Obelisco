@@ -93,8 +93,8 @@ export const Instalacion = (): JSX.Element => (
       <h3>Estilos (css o sass)</h3>
       <p>
         Las hojas de estilos se pueden importar tanto en <strong>sass</strong> como en <strong>css</strong> ya
-        compilado. El archivo css está ubicado en <code>/dist/obelisco.css</code> y el archivo principal de sass en{' '}
-        <code>/src/scss/obelisco.scss</code>.
+        compilado. El archivo css está ubicado en <code className="code-sm">/dist/obelisco.css</code> y el archivo
+        principal de sass en <code className="code-sm">/src/scss/obelisco.scss</code>.
       </p>
       <p>Para importar el css, podemos hacerlo de la siguiente forma:</p>
       <pre className="code-box">
@@ -131,6 +131,8 @@ export const Instalacion = (): JSX.Element => (
       <pre className="code-box">
         <code>
           npm <span>install</span> boxicons
+          <br />
+          npm <span>install</span> material-icons@latest
         </code>
       </pre>
       <br />
@@ -140,8 +142,7 @@ export const Instalacion = (): JSX.Element => (
         <code>
           &lt;link href=&quot;https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
           <br />
-          &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;
-          rel=&quot;stylesheet&quot;&gt;
+          &lt;link href=&quot;/path/to/material-icons/iconfont/material-icons.css&quot; rel=&quot;stylesheet&quot;&gt;
         </code>
       </pre>
       <br />
