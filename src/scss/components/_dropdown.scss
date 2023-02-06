@@ -26,18 +26,20 @@ $animation-toggle: transform 0.2s ease-in-out;
           transition: $animation-toggle;
           height: 1.3em;
         }
-        
+
         &:focus {
           box-shadow: none;
+
           &.btn-dropdown-border {
             box-shadow: 0 0 0 2px #e6ebf0;
           }
-  
+
           background-color: $blue;
           color: $white;
 
           &:hover {
             color: $white;
+
             &.dropdown-toggle:after {
               content: $icon-chevron-down-white;
             }
@@ -56,7 +58,7 @@ $animation-toggle: transform 0.2s ease-in-out;
   .btn {
     &.dropdown-chevron {
       padding: 2px;
-    
+
       &:hover {
         background-color: transparent;
         border-radius: spaceUnits(2);
@@ -127,16 +129,15 @@ $animation-toggle: transform 0.2s ease-in-out;
         &.dropdown-toggle:after {
           content: $icon-chevron-down-white;
         }
-        
+
         &:hover {
           color: $white;
           text-decoration: none;
-          
+
           &.dropdown-toggle:after {
             content: $icon-chevron-down-white;
           }
         }
-
       }
 
       &.dropdown-toggle:after {
@@ -183,14 +184,14 @@ $animation-toggle: transform 0.2s ease-in-out;
     @include media-breakpoint-up(md) {
       width: 340px;
     }
-  
+
     .dropdown-item {
       border-radius: $border-radius;
       padding: $dropdown-item-padding;
       color: $body-color;
       white-space: normal;
       text-decoration: none;
-      
+
       &:hover {
         background-color: $white;
         border-radius: spaceUnits(2);
@@ -198,14 +199,14 @@ $animation-toggle: transform 0.2s ease-in-out;
         color: $blue;
         text-decoration: underline;
       }
-  
+
       &:focus {
         box-shadow: 0 0 0 0.2rem #005387;
         border-radius: spaceUnits(2);
         outline: 2px;
         color: $blue;
       }
-  
+
       &.active,
       &:active {
         color: $white;
@@ -213,13 +214,7 @@ $animation-toggle: transform 0.2s ease-in-out;
         border-radius: spaceUnits(2);
         text-decoration: none;
         box-shadow: none;
-  
       }
-      
     }
   }
 }
-
-
-
-

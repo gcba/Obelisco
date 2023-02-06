@@ -32,7 +32,7 @@ $divider-border: 0.125rem solid $grisulado-700;
   a {
     @extend .text-white;
     text-decoration: underline;
-    
+
     &:visited {
       @extend .text-white;
     }
@@ -54,15 +54,14 @@ $divider-border: 0.125rem solid $grisulado-700;
         margin-bottom: 0;
       }
 
-      
       .footer-content-img {
         display: flex;
         justify-content: space-between;
-        
+
         .img-vamos-ba {
           height: $footer-icon-height-vamos-ba;
-          
-            @include media-breakpoint-down(md) {
+
+          @include media-breakpoint-down(md) {
             height: $footer-icon-height-vamos-ba-sm;
           }
         }

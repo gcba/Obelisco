@@ -207,6 +207,7 @@ $form-validation-states: (
   &.is-valid {
     box-shadow: 0 0 0 $input-validation-focus-width $success;
   }
+
   &.is-invalid {
     box-shadow: 0 0 0 $input-validation-focus-width $danger;
   }
@@ -232,6 +233,7 @@ $form-validation-states: (
   vertical-align: middle;
   margin-right: spaceUnits(1);
 }
+
 .invalid-feedback::before {
   content: map-get($form-icons, 'invalid');
   vertical-align: middle;
@@ -257,6 +259,7 @@ $form-validation-states: (
       }
     }
   }
+
   &:not(:disabled):focus ~ .custom-control-label {
     &:before {
       box-shadow: 0 0 0 7px #005386;

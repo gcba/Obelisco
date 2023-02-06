@@ -32,8 +32,8 @@ $animation-toggle: transform 0.2s ease-in-out;
   .dropdown {
     &.show {
       .btn {
-
-        &.btn-dropdown, input:checked + .dropdown-item {
+        &.btn-dropdown,
+        input:checked + .dropdown-item {
           background-color: $blue;
           color: $white;
           text-decoration: none;
@@ -59,7 +59,6 @@ $animation-toggle: transform 0.2s ease-in-out;
         }
 
         &.btn-dropdown {
-
           &.dropdown-toggle:after {
             content: $icon-chevron-up-white;
             transform: rotate(180deg);
@@ -112,23 +111,23 @@ $animation-toggle: transform 0.2s ease-in-out;
 
     .dropdown-menu {
       padding: 0;
-      border-radius:$border-radius-lg;
+      border-radius: $border-radius-lg;
       box-shadow: $option-btn-box-shadow;
     }
-  
+
     input:focus + .dropdown-item {
       background-color: $white;
       color: $grisulado-900;
       box-shadow: $option-btn-focus-box-shadow;
       text-decoration: none;
     }
-  
+
     .dropdown-item {
       padding: $dropdown-item-padding-y $dropdown-item-padding-x;
       border-radius: $border-radius-lg;
       margin: 0;
       cursor: pointer;
-  
+
       &:hover {
         @include dropdown-hover;
       }

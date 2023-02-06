@@ -21,7 +21,6 @@ $progress-bg: $grisulado-100;
 /* === Custom styles === */
 .progression {
   @extend .list-unstyled, .flex-column;
-
   margin-bottom: 0;
 
   &-item {

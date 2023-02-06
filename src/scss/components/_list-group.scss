@@ -163,7 +163,8 @@ a.list-group-item {
       }
     }
 
-    &:focus, &.focus {
+    &:focus,
+    &.focus {
       box-shadow: $box-shadow-access-focus;
       color: $list-group-color;
 
@@ -173,7 +174,8 @@ a.list-group-item {
       }
 
       .access-content {
-        .access-text, .access-title {
+        .access-text,
+        .access-title {
           color: $list-group-color;
           text-decoration: $no-text-decoration;
         }
@@ -219,7 +221,6 @@ a.list-group-item {
 }
 
 .list-group {
-
   &.list-group-row {
     @include media-breakpoint-up(md) {
       flex-direction: row;

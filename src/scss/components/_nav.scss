@@ -48,7 +48,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     .nav-item {
       .nav-link {
         max-height: 40px;
-        
+
         &-lg {
           max-height: 48px;
           padding: $nav-link-padding-lg-y $nav-link-padding-lg-x;
@@ -64,7 +64,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   }
 
   &.flex-column {
-    gap: 0.250rem;
+    gap: 0.25rem;
     margin-top: 0.188rem;
 
     &:first-child {
@@ -131,16 +131,16 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     box-shadow: 0 0 0 2px $grisulado-50;
   }
 
-    i {
-      font-size: 20px;
-      vertical-align: middle;
-    }
+  i {
+    font-size: 20px;
+    vertical-align: middle;
+  }
 
   @include hover() {
     box-shadow: $input-btn-hover-box-shadow;
     color: $nav-link-hover-color;
     text-decoration: underline;
-    
+
     &:visited {
       color: $nav-link-hover-color;
     }
@@ -262,10 +262,12 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   .nav-link {
     padding-left: $nav-link-padding-x * 2;
   }
+
   .nav {
     .nav-link {
       padding-left: $nav-link-padding-x * 3;
     }
+
     .nav {
       .nav-link {
         padding-left: $nav-link-padding-x * 4;
