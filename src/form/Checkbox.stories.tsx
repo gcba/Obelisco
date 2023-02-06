@@ -79,29 +79,6 @@ TerminosYCondiciones.story = {
   name: 'Términos y condiciones'
 };
 
-export const TextoLargo = (): JSX.Element => {
-  return (
-    <div className="form-wrapper">
-      <div className="custom-control custom-checkbox">
-        <input
-          className="custom-control-input"
-          type="checkbox"
-          id="skills-copywrite-input"
-          name="skills"
-          value="copywrite"
-        />
-        <label className="custom-control-label" htmlFor="skills-copywrite-input">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit consequatur veritatis tenetur.
-        </label>
-      </div>
-    </div>
-  );
-};
-
-TextoLargo.story = {
-  name: 'Texto largo'
-};
-
 export const Deshabilitado = (): JSX.Element => {
   return (
     <div className="custom-control custom-checkbox">
