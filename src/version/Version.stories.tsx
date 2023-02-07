@@ -4,7 +4,8 @@ import './Version.stories.scss';
 
 // Config
 export default {
-  title: 'Versión|Releases'
+  title: 'Versión|Releases',
+  parameters: { options: { showPanel: false } }
 };
 
 export const Info = (): JSX.Element => (

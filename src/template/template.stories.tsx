@@ -4,7 +4,8 @@ import './Template.stories.scss';
 
 // Config
 export default {
-  title: 'Plantillas|Plantilla'
+  title: 'Plantillas|Plantilla',
+  parameters: { options: { showPanel: false } }
 };
 
 export const Informacion = (): JSX.Element => (
