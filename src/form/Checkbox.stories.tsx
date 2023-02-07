@@ -52,6 +52,18 @@ export const CasillaMultiple = (): JSX.Element => {
           Desarrollo
         </label>
       </div>
+      <div className="custom-control custom-checkbox">
+        <input
+          className="custom-control-input is-invalid"
+          type="checkbox"
+          id="skills-validation-input"
+          name="skills"
+          value="development"
+        />
+        <label className="custom-control-label" htmlFor="skills-validation-input">
+          Validacion
+        </label>
+      </div>
     </>
   );
 };

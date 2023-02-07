@@ -56,6 +56,18 @@ export const CasillaUnica = (): JSX.Element => {
           Redactor de contenidos
         </label>
       </div>
+      <div className="custom-control custom-radio">
+        <input
+          className="custom-control-input is-invalid"
+          type="radio"
+          name="profession"
+          id="validation-content"
+          value="content"
+        />
+        <label className="custom-control-label" htmlFor="validation-content">
+          Validación
+        </label>
+      </div>
     </>
   );
 };
