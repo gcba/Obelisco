@@ -95,14 +95,14 @@ export const OpcionesGrande = (): JSX.Element => (
     </fieldset>
   </form>
 );
-OpcionesGrande.story = { name: 'Opciones Grande' };
+OpcionesGrande.story = { name: 'Opciones grande' };
 
 export const OpcionesMediano = (): JSX.Element => (
   <form className="d-flex flex-row justify-content-start options-container">
     <fieldset className="dropdown show">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown dropdown-toggle"
+        className="btn btn-dropdown dropdown-toggle"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="true">
@@ -129,7 +129,7 @@ export const OpcionesMediano = (): JSX.Element => (
     <fieldset className="dropdown">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown dropdown-toggle"
+        className="btn btn-dropdown dropdown-toggle"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
@@ -156,7 +156,7 @@ export const OpcionesMediano = (): JSX.Element => (
     <fieldset className="dropdown">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown dropdown-toggle"
+        className="btn btn-dropdown dropdown-toggle"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
@@ -182,7 +182,7 @@ export const OpcionesMediano = (): JSX.Element => (
     </fieldset>
   </form>
 );
-OpcionesMediano.story = { name: 'Opciones Mediano' };
+OpcionesMediano.story = { name: 'Opciones mediano' };
 
 export const OpcionesChico = (): JSX.Element => (
   <form className="d-flex flex-row justify-content-start options-container">
@@ -269,4 +269,4 @@ export const OpcionesChico = (): JSX.Element => (
     </fieldset>
   </form>
 );
-OpcionesChico.story = { name: 'Opciones Chico' };
+OpcionesChico.story = { name: 'Opciones chico' };

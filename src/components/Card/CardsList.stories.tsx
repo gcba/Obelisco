@@ -36,6 +36,8 @@ export const CuatroColumnas = (): JSX.Element => {
   );
 };
 
+CuatroColumnas.story = { name: 'Cuatro columnas' };
+
 export const TresColumnas = (): JSX.Element => {
   return (
     <div className="container">
@@ -50,6 +52,8 @@ export const TresColumnas = (): JSX.Element => {
   );
 };
 
+TresColumnas.story = { name: 'Tres columnas' };
+
 export const DosColumnas = (): JSX.Element => {
   return (
     <div className="container">
@@ -62,6 +66,8 @@ export const DosColumnas = (): JSX.Element => {
   );
 };
 
+DosColumnas.story = { name: 'Dos columnas' };
+
 export const UnaColumna = (): JSX.Element => {
   return (
     <div className="container">
@@ -73,3 +79,5 @@ export const UnaColumna = (): JSX.Element => {
     </div>
   );
 };
+
+UnaColumna.story = { name: 'Una columna' };

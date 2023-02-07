@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Formulario/Checkbox',
+  title: 'Formulario|Checkbox',
   decorators: [withA11y]
 };
 
@@ -17,7 +17,7 @@ export const CasillaMultiple = (): JSX.Element => {
   return (
     <>
       <div className="form-group">
-        <label>Seleccioná una o varias opciónes *</label>
+        <label>Seleccioná una o varias opciones *</label>
         <span className="form-text">Texto de asistencia</span>
       </div>
       <div className="custom-control custom-checkbox">
@@ -79,28 +79,6 @@ TerminosYCondiciones.story = {
   name: 'Términos y condiciones'
 };
 
-export const TextoLargo = (): JSX.Element => {
-  return (
-    <div className="form-wrapper">
-      <div className="custom-control custom-checkbox">
-        <input
-          className="custom-control-input"
-          type="checkbox"
-          id="skills-copywrite-input"
-          name="skills"
-          value="copywrite"
-        />
-        <label className="custom-control-label" htmlFor="skills-copywrite-input">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit consequatur veritatis tenetur.
-        </label>
-      </div>
-    </div>
-  );
-};
-TerminosYCondiciones.story = {
-  name: 'Términos y condiciones'
-};
-
 export const Deshabilitado = (): JSX.Element => {
   return (
     <div className="custom-control custom-checkbox">
@@ -124,19 +102,19 @@ export const BotonCheck = (): JSX.Element => {
     <div className="btn-wrapper">
       <input type="checkbox" className="btn-check" id="btn-check" autoComplete="off" />
       <label className="btn btn-chip btn-sm" htmlFor="btn-check">
-        Checkbox button
+        Botón
       </label>
 
       <input type="checkbox" className="btn-check" id="btn-check2" autoComplete="off" />
       <label className="btn btn-chip btn-sm" htmlFor="btn-check2">
-        Checkbox button
+        Botón
       </label>
 
       <input type="checkbox" className="btn-check" id="btn-check3" autoComplete="off" disabled />
       <label className="btn btn-chip btn-sm disabled" htmlFor="btn-check3">
-        Checkbox button
+        Botón
       </label>
     </div>
   );
 };
-BotonCheck.story = { name: 'Botón Checkbox' };
+BotonCheck.story = { name: 'Botón de selección mútiple' };

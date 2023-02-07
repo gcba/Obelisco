@@ -5,13 +5,12 @@ import { withA11y } from '@storybook/addon-a11y';
 import { PanelHorizontal } from '.';
 
 export default {
-  title: 'Componentes|Panel/Panel destacado grande horizontal/Con Video',
+  title: 'Componentes|Panel/Panel destacado grande horizontal/Con video',
   decorators: [withA11y]
 };
 
 const TITLE = 'Encabezado';
-const DESCRIPTION =
-  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nostrum quo animi dignissimos omnis dicta quia placeat, nesciunt quasi hic autem iure eum necessitatibus ea expedita quas. Rem, aspernatur repudiandae.';
+const DESCRIPTION = 'Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.';
 const BUTTONS_ARR = [
   {
     name: 'Botón',

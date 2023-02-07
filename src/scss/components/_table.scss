@@ -45,6 +45,7 @@ $table-striped-order: even;
       &:first-of-type {
         border-top-left-radius: calc(#{$border-radius-container} - 1px);
       }
+
       &:last-of-type {
         border-top-right-radius: calc(#{$border-radius-container} - 1px);
       }
@@ -66,6 +67,7 @@ $table-striped-order: even;
         td:first-of-type {
           border-bottom-left-radius: calc(#{$border-radius-container} - 1px);
         }
+
         td:last-of-type {
           border-bottom-right-radius: calc(#{$border-radius-container} - 1px);
         }
@@ -77,6 +79,7 @@ $table-striped-order: even;
     thead th {
       border: none;
     }
+
     tr {
       td {
         border-left: none;

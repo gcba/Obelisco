@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Formulario/Lista de selección',
+  title: 'Formulario|Lista de selección',
   decorators: [withA11y]
 };
 
@@ -44,7 +44,7 @@ export const Deshabilitado = (): JSX.Element => {
   );
 };
 
-export const Validación = (): JSX.Element => {
+export const Validacion = (): JSX.Element => {
   return (
     <div className="form-wrapper">
       <div className="form-group">
@@ -58,4 +58,8 @@ export const Validación = (): JSX.Element => {
       </div>
     </div>
   );
+};
+
+Validacion.story = {
+  name: 'Validación'
 };

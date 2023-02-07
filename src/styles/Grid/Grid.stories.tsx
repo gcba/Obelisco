@@ -9,7 +9,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Grilla',
+  title: 'Estilos|Grilla',
   decorators: [withA11y]
 };
 
@@ -220,7 +220,7 @@ export const AlineacionHorizontal = (): JSX.Element => {
   );
 };
 
-AlineacionHorizontal.story = { name: 'Alineación Horizontal' };
+AlineacionHorizontal.story = { name: 'Alineación horizontal' };
 
 export const OrdenarClases = (): JSX.Element => {
   return (
@@ -245,13 +245,15 @@ export const OrdenarClases = (): JSX.Element => {
             <div>Segundo, pero desordenado</div>
           </div>
           <div className="col-4 order-first">
-            <div>Primero pero ultimo</div>
+            <div>Primero pero último</div>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+OrdenarClases.story = { name: 'Ordenar clases' };
 
 export const Desplazamientos = (): JSX.Element => {
   return (

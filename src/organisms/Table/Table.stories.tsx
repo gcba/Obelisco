@@ -9,7 +9,7 @@ import { Table, TableCellContet } from '.';
 
 // Config
 export default {
-  title: 'Componentes|Tablas',
+  title: 'Organismos|Tablas',
   component: Table,
   decorators: [withA11y]
 };
@@ -43,6 +43,10 @@ export const ConBordes = (): JSX.Element => {
   );
 };
 
+ConBordes.story = {
+  name: 'Con bordes'
+};
+
 export const AlineaciónHorizontal = (): JSX.Element => {
   return (
     <Table
@@ -58,6 +62,10 @@ export const AlineaciónHorizontal = (): JSX.Element => {
   );
 };
 
+AlineaciónHorizontal.story = {
+  name: 'Alineación horizontal'
+};
+
 export const AlineaciónVertical = (): JSX.Element => {
   return (
     <Table
@@ -70,6 +78,10 @@ export const AlineaciónVertical = (): JSX.Element => {
       bordered={true}
     />
   );
+};
+
+AlineaciónVertical.story = {
+  name: 'Alineación vertical'
 };
 
 export const Intercalada = (): JSX.Element => {
@@ -119,6 +131,10 @@ export const TodoJunto = (): JSX.Element => {
   );
 };
 
+TodoJunto.story = {
+  name: 'Todo junto'
+};
+
 export const Seleccionable = (): JSX.Element => {
   return (
     <Table
@@ -138,9 +154,9 @@ const SmallContent: JSX.Element = (
   <>
     <h5>Título</h5>
     <p className="mb-0">
-      Lorem ipsum dolor sit amet,
+      Esto es un párrafo,
       <br />
-      repellendus ad est, laborum eum reiciendis quam.
+      esto es otro párrafo.
     </p>
   </>
 );

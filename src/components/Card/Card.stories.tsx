@@ -48,13 +48,13 @@ export const TitleTextLink = (): JSX.Element => {
         <br />
         <br />
         <SimpleCard
-          title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"
+          title="Título de tarjeta"
+          description="Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima."
           href="#"
         />
         <br />
         <br />
-        <SimpleCard title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed" href="#" />
+        <SimpleCard title="Título de tarjeta" href="#" />
       </div>
     </>
   );
@@ -75,7 +75,7 @@ export const TitleText = (): JSX.Element => {
       <br />
       <Card title={title} description={description} href="#" />
       <br />
-      <Card title="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed" href="#" />
+      <Card title="Título de tarjeta" href="#" />
     </div>
   );
 };
@@ -111,7 +111,7 @@ export const HorizontalCard = (): JSX.Element => {
       <br />
       <div className="cards-container">
         <Card
-          title="Lorem ipsum dolor sit amet, consetetur"
+          title="Título de tarjeta"
           picture={{
             src: 'cards/paseobajo-wide.png',
             alt: 'descripción alternativa'
@@ -177,7 +177,7 @@ export const HorizontalCard = (): JSX.Element => {
     </>
   );
 };
-HorizontalCard.story = { name: 'Contenedor con imagen o icono horizontal' };
+HorizontalCard.story = { name: 'Contenedor con imagen o ícono horizontal' };
 
 export const NewsCard = (): JSX.Element => {
   return (
@@ -199,7 +199,7 @@ export const NewsCard = (): JSX.Element => {
 NewsCard.story = { name: 'Noticia' };
 
 export const SimpleEventCard = (): JSX.Element => {
-  const eventTitle = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed';
+  const eventTitle = 'Título de tarjeta';
   const eventSubtitle = 'Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.';
   const footer = (
     <>

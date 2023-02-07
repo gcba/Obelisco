@@ -26,6 +26,12 @@ module.exports = {
     }
   },
   rules: {
-    'no-console': 1
+    'no-console': 1,
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto'
+      }
+    ]
   }
 };

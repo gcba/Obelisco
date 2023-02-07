@@ -9,7 +9,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Formulario/Con fondo',
+  title: 'Formulario|Con fondo',
   decorators: [withA11y]
 };
 
@@ -28,7 +28,7 @@ export const ListaDeSeleccion = (): JSX.Element => {
   return (
     <div className="form-wrapper bg-light p-4">
       <div className="form-group">
-        <label htmlFor="lista-de-seleccion">Example select</label>
+        <label htmlFor="lista-de-seleccion">Nombre del selector</label>
         <select className="custom-select" id="lista-de-seleccion">
           <option>1</option>
           <option>2</option>
@@ -50,6 +50,8 @@ export const BloqueDeTexto = (): JSX.Element => {
   );
 };
 
+BloqueDeTexto.story = { name: 'Bloque de texto' };
+
 export const CasillaDeSeleccion = (): JSX.Element => {
   return (
     <div className="form-wrapper bg-light p-4">
@@ -68,3 +70,5 @@ export const CasillaDeSeleccion = (): JSX.Element => {
     </div>
   );
 };
+
+CasillaDeSeleccion.story = { name: 'Casilla de selección' };

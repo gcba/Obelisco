@@ -7,11 +7,11 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Botón/En Caja',
+  title: 'Componentes|Botones/En Caja',
   decorators: [withA11y]
 };
 
-export const SoloBoton = (): JSX.Element => {
+export const ConBoton = (): JSX.Element => {
   return (
     <div className="btn-container">
       <div className="card">
@@ -38,7 +38,7 @@ export const SoloBoton = (): JSX.Element => {
     </div>
   );
 };
-SoloBoton.story = { name: 'Solo Botón' };
+ConBoton.story = { name: 'Con botón' };
 
 export const ConEnlace = (): JSX.Element => {
   return (
@@ -67,6 +67,7 @@ export const ConEnlace = (): JSX.Element => {
     </div>
   );
 };
+ConEnlace.story = { name: 'Con enlace' };
 
 export const Completo = (): JSX.Element => {
   return (
@@ -82,4 +83,8 @@ export const Completo = (): JSX.Element => {
       </div>
     </div>
   );
+};
+
+Completo.story = {
+  name: 'Con título y bajada'
 };

@@ -27,8 +27,7 @@ export const BtnDownload = (): JSX.Element => {
         <div className="card-body">
           <h3 className="card-title">Lista de enlaces con imagen</h3>
           <p className="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit.
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
           </p>
         </div>
         <div className="list-link">
@@ -80,8 +79,7 @@ export const BtnDownload = (): JSX.Element => {
         <div className="card-body">
           <h3 className="card-title">Lista de enlaces</h3>
           <p className="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit.
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
           </p>
         </div>
         <div className="list-link">
@@ -102,7 +100,7 @@ export const BtnDownload = (): JSX.Element => {
     </div>
   );
 };
-BtnDownload.story = { name: 'Botón descarga' };
+BtnDownload.story = { name: 'Con botón de descarga' };
 
 export const BtnLink = (): JSX.Element => {
   return (
@@ -118,8 +116,7 @@ export const BtnLink = (): JSX.Element => {
         <div className="card-body">
           <h3 className="card-title">Lista de enlaces con imagen</h3>
           <p className="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit.
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
           </p>
         </div>
         <div className="list-link">
@@ -171,8 +168,7 @@ export const BtnLink = (): JSX.Element => {
         <div className="card-body">
           <h3 className="card-title">Lista de enlaces</h3>
           <p className="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit.
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
           </p>
         </div>
         <div className="list-link">
@@ -209,8 +205,7 @@ export const BtnLinkDownload = (): JSX.Element => {
         <div className="card-body">
           <h3 className="card-title">Lista de enlaces con imagen</h3>
           <p className="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit.
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
           </p>
         </div>
         <div className="list-link">
@@ -262,8 +257,7 @@ export const BtnLinkDownload = (): JSX.Element => {
         <div className="card-body">
           <h3 className="card-title">Lista de enlaces</h3>
           <p className="card-text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit.
+            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
           </p>
         </div>
         <div className="list-link">
@@ -284,4 +278,4 @@ export const BtnLinkDownload = (): JSX.Element => {
     </div>
   );
 };
-BtnLinkDownload.story = { name: 'Enlace descarga' };
+BtnLinkDownload.story = { name: 'Con enlace de descarga' };

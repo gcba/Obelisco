@@ -9,7 +9,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Formulario/Archivo',
+  title: 'Formulario|Archivo',
   decorators: [withA11y]
 };
 
@@ -22,4 +22,8 @@ export const SubirUnArchivo = (): JSX.Element => {
       </div>
     </div>
   );
+};
+
+SubirUnArchivo.story = {
+  name: 'Subir un archivo'
 };

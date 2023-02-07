@@ -79,9 +79,11 @@ $accordion-icon-user-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="ht
 $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 123, 199);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
 
 @mixin card-deck-4 {
-  .card, .group-access {
+  .card,
+  .group-access {
     flex: 1 0 19%;
     margin-top: 0;
+
     &:nth-of-type(n + 5) {
       margin-top: $card-deck-margin-top;
     }
@@ -89,9 +91,11 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 @mixin card-deck-3 {
-  .card, .group-access {
+  .card,
+  .group-access {
     flex: 1 0 25%;
     margin-top: 0;
+
     &:nth-of-type(n + 4) {
       margin-top: $card-deck-margin-top;
     }
@@ -99,9 +103,11 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 @mixin card-deck-2 {
-  .card, .group-access {
+  .card,
+  .group-access {
     flex: 1 0 35%;
     margin-top: 0;
+
     &:nth-of-type(n + 3) {
       margin-top: $card-deck-margin-top;
     }
@@ -112,6 +118,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   .card {
     flex: 1 0 35%;
     margin-top: 0;
+
     &:nth-of-type(n + 3) {
       margin-top: $panel-deck-mt;
     }
@@ -119,7 +126,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 @mixin card-deck-1 {
-  .card, .group-access {
+  .card,
+  .group-access {
     // Esto es necesario que siempre se vea de a 1 columna en todos los tamaños
     flex: 1 0 55% !important;
     margin-top: 0;
@@ -133,18 +141,21 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 @mixin card-link-panel {
   .card-link {
     margin: 0 $panel-link-margin-right $panel-link-margin-bottom 0;
+
     + .card-link {
       margin-right: 0;
     }
   }
 
-  .download-link, .download {
+  .download-link,
+  .download {
     margin-bottom: $panel-link-margin-bottom;
     display: inline-block;
   }
 
   @include media-breakpoint-down(xs) {
-    .card-link, .download-link {
+    .card-link,
+    .download-link {
       width: 100%;
       margin-right: 0;
     }
@@ -180,6 +191,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     margin-bottom: 0;
     @extend .h4;
     font-weight: 600;
+
     @include media-breakpoint-up(sm) {
       font-weight: 700;
     }
@@ -194,6 +206,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   .card-text {
     margin-top: $card-spacer / 2;
   }
+
   .card-text-panel {
     margin-top: $card-spacer / 4;
     margin-bottom: 0px;
@@ -442,6 +455,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         @extend .h2;
         font-weight: 600;
         margin: $panel-title-margin-horizontal;
+
         @include media-breakpoint-down(md) {
           margin: $panel-title-margin-horizontal-sm;
         }
@@ -499,8 +513,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     .panel-footer {
       display: flex;
       margin-top: spaceUnits(6);
+
       .card-link {
         margin-right: $panel-link-margin-right;
+
         + .card-link {
           margin: 0;
         }
@@ -508,10 +524,12 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
       @include media-breakpoint-down(xs) {
         flex-wrap: wrap;
-        .card-link, .download-link {
+
+        .card-link,
+        .download-link {
           width: 100%;
           margin: 0 0 $panel-link-margin-bottom;
-        }  
+        }
       }
     }
 
@@ -550,9 +568,11 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   .card {
     margin-bottom: $panel-deck-card-mb;
   }
+
   .card.card-horizontal.card-simple.card-horizontal {
     flex-direction: row;
   }
+
   @include media-breakpoint-up(sm) {
     display: flex;
     flex-flow: row wrap;
@@ -564,12 +584,15 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       margin-right: $panel-deck-card-mr;
       margin-bottom: 0px;
     }
+
     .card.card-horizontal.card-simple.card-horizontal {
       margin-bottom: 0px;
     }
+
     .card.card-horizontal .card-img-left-panel {
       margin-top: 0px;
     }
+
     @include panel-deck;
   }
 
@@ -598,55 +621,66 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.card-column {
-  .card{
-    max-width: calc(calc(100% / 4  ) - 30px);
-    @include media-breakpoint-down(md)  {
-      max-width: calc(calc(100% / 3  ) - 30px);
+  .card {
+    max-width: calc(calc(100% / 4) - 30px);
+
+    @include media-breakpoint-down(md) {
+      max-width: calc(calc(100% / 3) - 30px);
     }
-    @include media-breakpoint-down(sm)  {
-      max-width: calc(calc(100% / 2  ) - 30px);
+
+    @include media-breakpoint-down(sm) {
+      max-width: calc(calc(100% / 2) - 30px);
     }
-    @include media-breakpoint-down(xs)  {
+
+    @include media-breakpoint-down(xs) {
       max-width: 100%;
+
       &:nth-of-type(2) {
-        margin-top: 30px; 
+        margin-top: 30px;
       }
     }
   }
 }
 .card-deck.max-cards-3.card-column {
-  .card{
-    max-width: calc(calc(100% / 3  ) - 30px);
-    @include media-breakpoint-down(sm)  {
-      max-width: calc(calc(100% / 2  ) - 30px);
+  .card {
+    max-width: calc(calc(100% / 3) - 30px);
+
+    @include media-breakpoint-down(sm) {
+      max-width: calc(calc(100% / 2) - 30px);
     }
-    @include media-breakpoint-down(xs)  {
+
+    @include media-breakpoint-down(xs) {
       max-width: 100%;
     }
   }
 }
 
 .card-deck.max-cards-2.card-column {
-  .card{
-    max-width: calc(calc(100% / 2  ) - 30px);
-    @include media-breakpoint-down(xs)  {
+  .card {
+    max-width: calc(calc(100% / 2) - 30px);
+
+    @include media-breakpoint-down(xs) {
       max-width: 100%;
     }
   }
 }
 .card-deck.max-cards-1.card-column {
-  .card{
-    max-width: calc(calc(100% / 3  ) - 30px);
-    &:nth-of-type(-n+3) {
-      margin-top: 0px; 
+  .card {
+    max-width: calc(calc(100% / 3) - 30px);
+
+    &:nth-of-type(-n + 3) {
+      margin-top: 0px;
     }
-    @include media-breakpoint-down(sm)  {
-      max-width: calc(calc(100% / 2  ) - 30px);
-      &:nth-of-type(-n+3) {
-        margin-top: 30px; 
+
+    @include media-breakpoint-down(sm) {
+      max-width: calc(calc(100% / 2) - 30px);
+
+      &:nth-of-type(-n + 3) {
+        margin-top: 30px;
       }
     }
-    @include media-breakpoint-down(xs)  {
+
+    @include media-breakpoint-down(xs) {
       max-width: 100%;
     }
   }

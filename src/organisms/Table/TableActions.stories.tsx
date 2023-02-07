@@ -6,11 +6,11 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Components
 import { Table } from '.';
-import { Button } from '../Button';
+import { Button } from '../../components/Button';
 
 // Config
 export default {
-  title: 'Componentes|Tablas/Con Acciones',
+  title: 'Organismos|Tablas/Con acciones',
   component: Table,
   decorators: [withA11y]
 };
@@ -29,6 +29,10 @@ export const ConBotones = (): JSX.Element => {
   );
 };
 
+ConBotones.story = {
+  name: 'Con botones'
+};
+
 export const ConEnlaces = (): JSX.Element => {
   return (
     <Table
@@ -41,6 +45,10 @@ export const ConEnlaces = (): JSX.Element => {
       ]}
     />
   );
+};
+
+ConEnlaces.story = {
+  name: 'Con enlaces'
 };
 
 // Utils

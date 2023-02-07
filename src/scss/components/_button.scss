@@ -65,7 +65,8 @@ $theme-colors: map-merge(
 }
 
 @each $color, $value in $theme-colors {
-  .btn-#{$color}, .btn-outline-#{$color} {
+  .btn-#{$color},
+  .btn-outline-#{$color} {
     min-height: 40px;
     color: color-yiq($value);
     text-decoration: $link-decoration;
@@ -76,7 +77,7 @@ $theme-colors: map-merge(
       box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
     }
 
-    &:visited{
+    &:visited {
       color: color-yiq($value);
     }
 
@@ -112,9 +113,10 @@ $theme-colors: map-merge(
 
     @include btn-disabled;
 
-    @if $color == "link" {
+    @if $color == 'link' {
       color: $link-color;
       font-weight: $btn-font-weight;
+
       @include hover() {
         background-color: $ghost-hover;
         border-color: $ghost-hover;
@@ -122,8 +124,8 @@ $theme-colors: map-merge(
         text-decoration: $link-decoration;
         box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
       }
-      
-      &:visited{
+
+      &:visited {
         color: $link-color;
       }
 
@@ -143,35 +145,39 @@ $theme-colors: map-merge(
       }
     }
   }
-  
-  .btn-outline-#{$color}{
+
+  .btn-outline-#{$color} {
     color: theme-color-level($color, 0);
 
-    &:visited{
+    &:visited {
       color: theme-color-level($color, 0);
     }
-    
-    @include hover(){
+
+    @include hover() {
       color: $white;
-    };
+    }
 
     &:focus,
     &.focus {
       color: color-yiq($value);
     }
 
-    @if $color == "primary" {
+    @if $color == 'primary' {
       color: $grisulado-900;
-      &:visited, &:hover {
+      &:visited,
+      &:hover {
         color: $grisulado-900;
       }
     }
 
-    @if $color == "link" {
+    @if $color == 'link' {
       background-color: transparent;
       border-color: $link-color;
       color: $link-color;
-      &:hover, &:focus, &.focus, &:visited {
+      &:hover,
+      &:focus,
+      &.focus,
+      &:visited {
         color: $link-color;
       }
     }
@@ -182,18 +188,22 @@ a.btn {
   text-decoration: $link-decoration;
 }
 
-//Botón con icono
+//Botón con ícono
 .btn-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  i, span {
-    margin-right: .25rem;
+
+  i,
+  span {
+    margin-right: 0.25rem;
     font-size: 0.9375rem;
   }
+
   &.btn-lg {
-    i, span {
-      margin-right: .25rem;
+    i,
+    span {
+      margin-right: 0.25rem;
       font-size: $btn-font-size;
     }
   }

@@ -4,35 +4,28 @@ import './Button.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
-import { withXD } from 'storybook-addon-xd-designs';
 
 // Components
-import { buttonTypes, sizes } from '../utils';
+import { buttonTypes, sizes, sizesButton } from '../utils';
 import { Button } from '.';
 
 // Config
 export default {
-  title: 'Componentes|Botón',
+  title: 'Componentes|Botones',
   component: Button,
-  decorators: [withA11y, withXD],
-  parameters: {
-    design: {
-      artboardUrl:
-        'https://xd.adobe.com/view/0623a13b-8fc0-407c-6a4d-c1c24dc2c5fa-7012/screen/d1dd8e3f-6a3b-4a7b-a59e-ba883ca7c684/-TOMOS-BOTONES'
-    }
-  }
+  decorators: [withA11y]
 };
 
 export const Colores = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map((type) => (
-        <Button key={type} type={type}>
-          {type}
+      {buttonTypes.map((item) => (
+        <Button key={item.type} type={item.type}>
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-primary" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );
@@ -41,28 +34,32 @@ export const Colores = (): JSX.Element => {
 export const ConFoco = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map((type) => (
-        <Button key={type} type={type} className="focus">
-          {type}
+      {buttonTypes.map((item) => (
+        <Button key={item.type} type={item.type} className="focus">
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-primary focus" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );
 };
 
+ConFoco.story = {
+  name: 'Con foco'
+};
+
 export const Activos = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map((type) => (
-        <Button key={type} type={type} className="active">
-          {type}
+      {buttonTypes.map((item) => (
+        <Button key={item.type} type={item.type} className="active">
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-primary active" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );
@@ -71,13 +68,13 @@ export const Activos = (): JSX.Element => {
 export const Tamanos = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {sizes.map((size) => (
-        <Button key={size} type="secondary" size={size}>
-          {size}
+      {sizesButton.map((item) => (
+        <Button key={item.size} type="secondary" size={item.size}>
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-secondary" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );
@@ -87,9 +84,9 @@ Tamanos.story = { name: 'Tamaños' };
 export const Deshabilitados = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {sizes.map((size) => (
-        <Button key={size} type="secondary" disabled={true} size={size}>
-          {size}
+      {sizesButton.map((item) => (
+        <Button key={item.size} type="secondary" disabled={true} size={item.size}>
+          {item.name}
         </Button>
       ))}
     </div>
@@ -109,16 +106,20 @@ export const Expandible = (): JSX.Element => {
 export const ConBordes = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
-      {buttonTypes.map((type) => (
-        <Button key={type} type={type} outline={true}>
-          {type}
+      {buttonTypes.map((item) => (
+        <Button key={item.type} type={item.type} outline={true}>
+          {item.name}
         </Button>
       ))}
       <a className="btn btn-outline-primary" href="#" target="_blank">
-        enlace
+        Enlace
       </a>
     </div>
   );
+};
+
+ConBordes.story = {
+  name: 'Con bordes'
 };
 
 export const ConIconos = (): JSX.Element => {
@@ -138,4 +139,8 @@ export const ConIconos = (): JSX.Element => {
       </div>
     </>
   );
+};
+
+ConIconos.story = {
+  name: 'Con íconos'
 };

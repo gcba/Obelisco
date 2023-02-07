@@ -14,19 +14,23 @@ h1,
 .h1 {
   font-weight: $large-headings-font-weight;
 }
+
 h2,
 .h2 {
   font-weight: $headings-font-weight;
 }
+
 h4,
 .h4 {
   font-weight: $h4-font-weight-mobile;
 }
+
 h5,
 .h5 {
   font-family: $h5-font-family;
   font-weight: $h5-font-weight;
 }
+
 h6,
 .h6 {
   font-family: $h6-font-family;
@@ -60,6 +64,7 @@ blockquote {
     padding-left: spaceUnits(6);
     margin: spaceUnits(8) spaceUnits(22);
   }
+
   h4,
   .h4 {
     font-weight: $h4-font-weight;
@@ -67,6 +72,6 @@ blockquote {
 }
 
 // Small size: 11.7px
-.text-xs{
-  font-size: .7313rem;
+.text-xs {
+  font-size: 0.7313rem;
 }

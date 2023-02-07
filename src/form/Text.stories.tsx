@@ -9,7 +9,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Formulario/Texto',
+  title: 'Formulario|Texto',
   decorators: [withA11y]
 };
 

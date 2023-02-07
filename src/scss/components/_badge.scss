@@ -46,6 +46,7 @@ $badge-padding-y: 0;
   text-transform: uppercase;
   min-height: 22px;
   line-height: 1.6;
+
   + .badge {
     margin-left: $badge-separation;
   }

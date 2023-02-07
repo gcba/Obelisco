@@ -65,7 +65,8 @@ $modal-dialog-margin-y-sm-up: 3rem;
 
     .modal-footer {
       border-top: 0;
-      padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x $modal-inner-padding-bottom;
+      padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x
+        $modal-inner-padding-bottom;
       gap: spaceUnits(1);
 
       & > *:first-child {

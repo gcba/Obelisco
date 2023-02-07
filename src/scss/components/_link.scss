@@ -58,13 +58,14 @@ a {
 
   &.download-link {
     color: $white;
+
     &::before {
       content: $link-download-link;
       display: inline-block;
       vertical-align: sub;
       height: 1em;
       margin-right: spaceUnits(2);
-      margin-top: - spaceUnits(1);
+      margin-top: -spaceUnits(1);
     }
   }
 
@@ -81,9 +82,11 @@ a {
 
 .list-link {
   margin-top: 1.5rem;
+
   .list-link-item-title {
     margin-bottom: 0.5rem;
   }
+
   .card-link {
     display: table;
     margin: spaceUnits(2) 0;

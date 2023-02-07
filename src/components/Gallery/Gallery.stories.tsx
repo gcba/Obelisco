@@ -42,9 +42,9 @@ export const Galeria = (): JSX.Element => {
                     </div>
                     <h5 className="h2">Título de la imagen 1.</h5>
                     <p>
-                      Descripción o epígrafe de la imagen. Máximo de 2 líneas.
+                      Descripción o epígrafe de la imagen.
                       <br />
-                      Lorem impsum dolor sit amet, consetetir sadipscing elitr, sed diam nonumy eirmod
+                      Recomendamos en este espacio no utilizar más de 2 líneas, para generar una lectura óptima.
                     </p>
                   </div>
                 </div>
@@ -61,9 +61,9 @@ export const Galeria = (): JSX.Element => {
                     </div>
                     <h5 className="h2">Título de la imagen 2.</h5>
                     <p>
-                      Descripción o epígrafe de la imagen. Máximo de 2 líneas.
+                      Descripción o epígrafe de la imagen.
                       <br />
-                      Lorem impsum dolor sit amet, consetetir sadipscing elitr, sed diam nonumy eirmod
+                      Recomendamos en este espacio no utilizar más de 2 líneas, para generar una lectura óptima.
                     </p>
                   </div>
                 </div>
@@ -80,9 +80,9 @@ export const Galeria = (): JSX.Element => {
                     </div>
                     <h5 className="h2">Título de la imagen 3.</h5>
                     <p>
-                      Descripción o epígrafe de la imagen. Máximo de 2 líneas.
+                      Descripción o epígrafe de la imagen.
                       <br />
-                      Lorem impsum dolor sit amet, consetetir sadipscing elitr, sed diam nonumy eirmod
+                      Recomendamos en este espacio no utilizar más de 2 líneas, para generar una lectura óptima.
                     </p>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ Galeria.story = {
   name: 'Galería'
 };
 
-export const Interactivo = (): JSX.Element => {
+export const Demo = (): JSX.Element => {
   return (
     <div className="container">
       <div className="row">
@@ -158,9 +158,9 @@ export const Interactivo = (): JSX.Element => {
                     </div>
                     <h5 className="h2">Título de la imagen 1.</h5>
                     <p>
-                      Descripción o epígrafe de la imagen. Máximo de 2 líneas.
+                      Descripción o epígrafe de la imagen.
                       <br />
-                      Lorem impsum dolor sit amet, consetetir sadipscing elitr, sed diam nonumy eirmod
+                      Recomendamos en este espacio no utilizar más de 2 líneas, para generar una lectura óptima.
                     </p>
                   </div>
                 </div>
@@ -177,9 +177,9 @@ export const Interactivo = (): JSX.Element => {
                     </div>
                     <h5 className="h2">Título de la imagen 2.</h5>
                     <p>
-                      Descripción o epígrafe de la imagen. Máximo de 2 líneas.
+                      Descripción o epígrafe de la imagen.
                       <br />
-                      Lorem impsum dolor sit amet, consetetir sadipscing elitr, sed diam nonumy eirmod
+                      Recomendamos en este espacio no utilizar más de 2 líneas, para generar una lectura óptima.
                     </p>
                   </div>
                 </div>
@@ -196,9 +196,9 @@ export const Interactivo = (): JSX.Element => {
                     </div>
                     <h5 className="h2">Título de la imagen 3.</h5>
                     <p>
-                      Descripción o epígrafe de la imagen. Máximo de 2 líneas.
+                      Descripción o epígrafe de la imagen.
                       <br />
-                      Lorem impsum dolor sit amet, consetetir sadipscing elitr, sed diam nonumy eirmod
+                      Recomendamos en este espacio no utilizar más de 2 líneas, para generar una lectura óptima.
                     </p>
                   </div>
                 </div>

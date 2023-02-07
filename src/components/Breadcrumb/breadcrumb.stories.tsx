@@ -6,7 +6,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración del general del componente
 export default {
-  title: 'Componentes|Breadcrumb',
+  title: 'Componentes|Migas de pan',
   decorators: [withA11y]
 };
 
@@ -22,6 +22,10 @@ export const UnNivel = (): JSX.Element => (
   </div>
 );
 
+UnNivel.story = {
+  name: 'Un nivel'
+};
+
 export const DosNiveles = (): JSX.Element => (
   <div>
     <nav aria-label="breadcrumb">
@@ -36,6 +40,11 @@ export const DosNiveles = (): JSX.Element => (
     </nav>
   </div>
 );
+
+DosNiveles.story = {
+  name: 'Dos niveles'
+};
+
 export const TresNiveles = (): JSX.Element => (
   <div>
     <nav aria-label="breadcrumb">
@@ -53,6 +62,10 @@ export const TresNiveles = (): JSX.Element => (
     </nav>
   </div>
 );
+
+TresNiveles.story = {
+  name: 'Tres niveles'
+};
 
 export const CuatroNiveles = (): JSX.Element => (
   <div>
@@ -74,6 +87,10 @@ export const CuatroNiveles = (): JSX.Element => (
     </nav>
   </div>
 );
+
+CuatroNiveles.story = {
+  name: 'Cuatro niveles'
+};
 
 export const Mobile = (): JSX.Element => (
   <div>
