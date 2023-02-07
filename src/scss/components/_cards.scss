@@ -4,6 +4,7 @@ $card-border-radius: $border-radius-lg;
 $card-spacer: 1rem;
 $card-spacer-sm: 0.75rem;
 $card-spacer-lg: 1.5rem;
+$card-spacer-unbordered: 0 0 0 1rem;
 
 $card-subtitle-font-size: 1.1875rem;
 $card-subtitle-font-weight: 400;
@@ -413,6 +414,19 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         flex-direction: column;
         justify-content: center;
       }
+    }
+  }
+
+  &.card-horizontal.unbordered {
+    .card-body {
+      padding: $card-spacer-unbordered;
+      a {
+        display: block;
+        width: fit-content;
+      }
+    }
+    .card-icon-left {
+      margin: 0;
     }
   }
 
