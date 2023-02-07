@@ -646,7 +646,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.card-column {
-  .card {
+  .card, .group-access {
     max-width: calc(calc(100% / 4) - 30px);
 
     @include media-breakpoint-down(md) {
@@ -663,7 +663,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 .card-deck.max-cards-3.card-column {
-  .card {
+  .card, .group-access {
     max-width: calc(calc(100% / 3) - 30px);
 
     @include media-breakpoint-down(sm) {
@@ -677,7 +677,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.max-cards-2.card-column {
-  .card {
+  .card, .group-access {
     max-width: calc(calc(100% / 2) - 30px);
 
     @include media-breakpoint-down(xs) {
@@ -686,7 +686,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 .card-deck.max-cards-1.card-column {
-  .card {
+  .card, .group-access {
     max-width: calc(calc(100% / 3) - 30px);
 
     &:nth-of-type(-n + 3) {

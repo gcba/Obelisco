@@ -43,7 +43,8 @@ addParameters({
         'Organismos|*',
         'Versión|*'
       ]);
-    }
+    },
+    showPanel: true
   }
 });
 
