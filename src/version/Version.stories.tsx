@@ -10,13 +10,13 @@ export default {
 
 export const Info = (): JSX.Element => (
   <>
-    <h1>Versión Obelisco 1.46.0</h1>
+    <h1>Versión Obelisco 1.46.1</h1>
     <p>
       Acceso al release:{' '}
       <a
         className="access"
         target="_blank"
-        href="https://github.com/gcba/Obelisco/releases/tag/v1.46.0"
+        href="https://github.com/gcba/Obelisco/releases/tag/v1.46.1"
         rel="noreferrer">
         Github
       </a>
@@ -25,5 +25,5 @@ export const Info = (): JSX.Element => (
 );
 
 Info.story = {
-  name: '1.46.0'
+  name: '1.46.1'
 };
