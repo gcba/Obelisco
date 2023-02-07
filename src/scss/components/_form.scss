@@ -291,6 +291,7 @@ $form-validation-states: (
       margin: 5px;
       background-color: $custom-control-indicator-checked-color;
       border-radius: 100%;
+      left: spaceUnits(3.12);
     }
   }
 }
