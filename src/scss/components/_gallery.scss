@@ -43,20 +43,6 @@ $carousel-margin-bottom: spaceUnits(4);
     }
 
     &:nth-child(2) {
-      grid-area: 2 / 1 / 2 / 2;
-    }
-
-    &:nth-child(3) {
-      grid-area: 2 / 3 / 3 / 5;
-    }
-  }
-
-  @if $images == 3 {
-    &:nth-child(1) {
-      grid-area: 1 / 1 / 2 / 5;
-    }
-
-    &:nth-child(2) {
       grid-area: 2 / 1 / 2 / 3;
     }
 
