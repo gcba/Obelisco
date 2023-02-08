@@ -25,6 +25,7 @@ addParameters({
         'Componentes|Enlace',
         'Componentes|Etiqueta',
         'Componentes|Galería',
+        'Componentes|Listas',
         'Componentes|Mensajes de estado',
         'Componentes|Migas de pan',
         'Componentes|Modal',
