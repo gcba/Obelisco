@@ -1,7 +1,51 @@
+/* === Variable and mixins overides === */
+
+//Encabezado
 $list-header-padding: 1.5rem;
 $list-header-icon-size: 1.5rem;
 $list-header-icon-bg: 3rem;
 $list-header-margin: 1rem;
+
+//Información
+$list-border-bottom: 1px solid $grisulado-50;
+$list-information-gap-desktop: 1rem;
+$list-information-gap-mobile: .5rem;
+$list-information-text-margin-bottom: .125rem;
+$list-information-icon-padding: .75rem;
+
+$list-information-icon-size: 1rem;
+
+$list-bullets-gap: 1rem;
+$list-bullets-text-margin-bottom: .25rem;
+
+//Lista informativa
+$list-informative-icon-size: 1.5rem;
+$list-informative-icon-font-size: 1.0625rem;
+$list-informative-icon-padding: .218rem;
+
+//Pasos de trámite
+$list-steps-padding-left: 2.75rem;
+$list-steps-padding-bottom: 1rem;
+$list-steps-line-width: 0.125rem;
+$list-steps-circle-size: 1.25rem;
+$list-steps-circle-active-size: 1.25rem;
+$list-steps-font-color: $grisulado-900;
+$list-steps-font-color-information: $blue;
+$list-steps-font-color-success: $green;
+
+//Pasos de trámite-Accesos
+$list-steps-list-group-icon-size: 1.25rem;
+$list-steps-list-group-icon-margin-right: .625rem;
+$list-steps-list-group-icon-margin-bottom: .125rem;
+
+@mixin listInformation {
+  padding: $list-header-padding 0;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: $list-information-gap-mobile;
+  border-bottom: $list-border-bottom;
+}
 
 .list-header {
   display: flex;
@@ -74,5 +118,259 @@ $list-header-margin: 1rem;
 
   .list-header:has(.list-icon) {
     padding: $list-header-padding 0;
+  }
+}
+
+// Lista -Información - Variante 1
+.list-information {
+  @include listInformation();
+
+  .list-icon {
+    background-color: $grisulado-10;
+    padding: $list-information-icon-padding;
+    border-radius: .5rem;
+    width: $list-header-icon-bg;
+    height: $list-header-icon-bg;
+    font-size: $list-header-icon-size;
+  }
+
+  .list-body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-basis: 100%;
+    gap: $list-information-gap-mobile;
+    
+    .list-text {
+      width: 100%;
+      
+      p, .list-title {
+        margin-bottom: $list-information-text-margin-bottom;
+        h6 {
+          margin-right: .625rem;
+        }
+      }
+
+      :last-child {
+        margin-bottom: 0;
+      }
+
+      .list-text-icon {
+        color: $blue;
+        font-size: .833rem;
+        margin-right: .33rem;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    align-items: center;
+    gap: $list-information-gap-desktop;
+    .list-body {
+      flex-direction: row;
+      align-items: center;
+      gap: $list-information-gap-desktop;
+    }
+  }
+}
+
+// Lista -Información - Variante 2 Lista con buleteado
+.list-information-ul {
+  padding: $list-header-padding 0;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: $list-bullets-gap;
+  border-bottom: $list-border-bottom;
+  
+  .list-body {
+    flex-basis: 100%;
+
+    .list-text {
+      margin-bottom: $list-bullets-text-margin-bottom;
+    }
+
+    .list-items {
+      margin-bottom: 0;
+      padding-left: .4rem;
+
+      .list-item {
+        margin-bottom: $list-bullets-text-margin-bottom;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+
+        .list-item-icon {
+          font-size: .833rem;
+          margin-right: .625rem;
+        }
+      }
+    }
+  }
+}
+
+// Lista -Información - Variante 3
+.list-information-icon {
+  @include listInformation();
+
+  .list-icon {
+    width: $list-information-icon-size;
+    height: $list-information-icon-size;
+    font-size: $list-information-icon-size;
+    margin: .25rem 0;
+  }
+
+  .list-body {
+    .list-text {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Lista -Información - Variante 4
+.list-information-text {
+  padding: $list-header-padding 0;
+  border-bottom: $list-border-bottom;
+
+  .list-body {
+    .list-title {
+      margin-bottom: 0.25rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//Listas - Lista Informativa - Variantes 1, 2 y 3
+.list-informative {
+  margin-bottom: 0;
+  padding-left: 0;
+
+  li {
+    margin-bottom: $list-bullets-text-margin-bottom;
+    list-style-type: none;
+
+    &.list-text-icon {
+      display: flex;
+      align-items: start;
+
+      .list-icon, .list-icon-bullet {
+        font-size: $list-informative-icon-font-size;
+        padding: $list-informative-icon-padding;
+        margin-right: .5rem;
+        width: $list-informative-icon-size;
+        height: $list-informative-icon-size;        
+      }
+
+      .list-icon-bullet {
+        font-size: .5rem;
+        padding: .5rem;
+      }
+
+      h5{
+        margin-bottom: 0;
+      }
+    }
+    
+    &.list-text{
+      margin-left: 2rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//Pasos de trámite
+.list-steps {
+  @extend .list-unstyled, .flex-column;
+  margin-bottom: 0;
+
+  &-item {
+    color: $list-steps-font-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: $list-steps-padding-bottom;
+    padding-left: $list-steps-padding-left;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: $list-steps-font-color;
+      width: $list-steps-circle-size;
+      height: $list-steps-circle-size;
+      border-radius: 50%;
+      left: $list-steps-circle-size / 2;
+      top: $line-height-base / 2 - $font-size-base / 2;
+      left: 0;
+    }
+
+    &:not(:last-child):after {
+      content: '';
+      position: absolute;
+      background-color: $list-steps-font-color;
+      z-index: -1;
+      width: $list-steps-line-width;
+      height: 100%;
+      left: $list-steps-circle-active-size / 2 - $list-steps-line-width / 2;
+      top: $list-steps-circle-size / 2 + $font-size-base / 2;
+    }
+  }
+  &.list-steps-information {
+    .list-steps-item{
+      &:before {
+        background-color: $list-steps-font-color-information; 
+      }
+
+      &:not(:last-child):after {
+        background-color: $list-steps-font-color-information; 
+      }
+    }
+  }
+  &.list-steps-success {
+    .list-steps-item{
+      &:before {
+        background-color: $list-steps-font-color-success; 
+      }
+
+      &:not(:last-child):after {
+        background-color: $list-steps-font-color-success; 
+      }
+    }
+  }
+}
+
+//Pasos de trámite - Accesos
+.list-steps-list-group {
+  .list-group-item {
+    border-radius: 0;
+    box-shadow: 0 3px 2px -2px $grisulado-50;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    &:first-child, &:last-child {
+      border-radius: 0;
+    }
+
+    &:hover, &.hover, &:focus, &.focus {
+      border-radius: 0.5rem;
+    }
+
+    .access-title {
+      .access-title-icon {
+        margin-right: $list-steps-list-group-icon-margin-right;
+        margin-bottom: $list-steps-list-group-icon-margin-bottom;
+        width: $list-steps-list-group-icon-size;
+        height: $list-steps-list-group-icon-size;
+        font-size: $list-steps-list-group-icon-size;
+        vertical-align: middle;
+      }
+    }
   }
 }
