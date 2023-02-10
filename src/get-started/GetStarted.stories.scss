@@ -6,6 +6,12 @@
   .get-started {
     max-width: 75ch;
 
+    h2{
+      &:first-of-type{
+        font-size: 1.3125rem;
+      }
+    }
+
     .code-box {
       width: 100%;
       display: flex;
