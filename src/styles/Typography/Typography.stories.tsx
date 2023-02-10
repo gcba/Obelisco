@@ -46,6 +46,10 @@ export const TextoSecundario = (): JSX.Element => {
   return <p className="text-xs">Open Sans Regular 11.7px</p>;
 };
 
+TextoSecundario.story = {
+  name: 'Texto secundario'
+};
+
 export const Transformaciones = (): JSX.Element => {
   return (
     <p>
@@ -96,4 +100,8 @@ export const ListaOrdenada = (): JSX.Element => {
       <li>Esto es el texto de una lista ordenada</li>
     </ol>
   );
+};
+
+ListaOrdenada.story = {
+  name: 'Lista ordenada'
 };

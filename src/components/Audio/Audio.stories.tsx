@@ -77,6 +77,10 @@ export const ConContenedor = (): JSX.Element => {
   );
 };
 
+ConContenedor.story = {
+  name: 'Con contenedor'
+};
+
 /*
 export const ContainerNews = (): JSX.Element => {
   return (
