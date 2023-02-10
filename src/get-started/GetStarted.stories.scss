@@ -6,10 +6,8 @@
   .get-started {
     max-width: 75ch;
 
-    h2{
-      &:first-of-type{
-        font-size: 1.3125rem;
-      }
+    h2:first-of-type {
+      font-size: 1.3125rem;
     }
 
     .code-box {
@@ -20,7 +18,7 @@
       border-radius: 3px;
       padding: 1rem;
     }
-    
+
     .code-sm {
       padding: 0.2rem;
       background-color: #f5f5f5;
