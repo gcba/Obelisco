@@ -38,6 +38,21 @@ $list-steps-list-group-icon-size: 1.25rem;
 $list-steps-list-group-icon-margin-right: .625rem;
 $list-steps-list-group-icon-margin-bottom: .125rem;
 
+//Solicitud de boleta
+$list-ticket-padding: 1rem;
+
+//
+$icon-margin: 0.75rem;
+//Background icon
+$background-icon : #F3F6F9;
+
+//Iconos para medios de pago
+$payment-method: (
+  'visa':
+    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 87, 159, 1);transform: ;msFilter:;"><path d="M16.539 9.186a4.155 4.155 0 0 0-1.451-.251c-1.6 0-2.73.806-2.738 1.963-.01.85.803 1.329 1.418 1.613.631.292.842.476.84.737-.004.397-.504.577-.969.577-.639 0-.988-.089-1.525-.312l-.199-.093-.227 1.332c.389.162 1.09.301 1.814.313 1.701 0 2.813-.801 2.826-2.032.014-.679-.426-1.192-1.352-1.616-.563-.275-.912-.459-.912-.738 0-.247.299-.511.924-.511a2.95 2.95 0 0 1 1.213.229l.15.067.227-1.287-.039.009zm4.152-.143h-1.25c-.389 0-.682.107-.852.493l-2.404 5.446h1.701l.34-.893 2.076.002c.049.209.199.891.199.891h1.5l-1.31-5.939zm-10.642-.05h1.621l-1.014 5.942H9.037l1.012-5.944v.002zm-4.115 3.275.168.825 1.584-4.05h1.717l-2.551 5.931H5.139l-1.4-5.022a.339.339 0 0 0-.149-.199 6.948 6.948 0 0 0-1.592-.589l.022-.125h2.609c.354.014.639.125.734.503l.57 2.729v-.003zm12.757.606.646-1.662c-.008.018.133-.343.215-.566l.111.513.375 1.714H18.69v.001h.001z"></path></svg>'),
+);
+
+
 @mixin listInformation {
   padding: $list-header-padding 0;
   display: flex;
@@ -45,6 +60,11 @@ $list-steps-list-group-icon-margin-bottom: .125rem;
   justify-content: start;
   gap: $list-information-gap-mobile;
   border-bottom: $list-border-bottom;
+}
+
+@mixin list-cost-total {
+  display: flex;
+  justify-content: space-between;
 }
 
 .list-header {
@@ -220,12 +240,69 @@ $list-steps-list-group-icon-margin-bottom: .125rem;
     font-size: $list-information-icon-size;
     margin: .25rem 0;
   }
+  //.left icon se usa para centrar el icono de informacion en el componente pago de boleto y en el de lista de informacion de victoria
+  .list-icon.left-icon {
+    margin-right: 0.854rem;
+    align-self: center;
+  }
 
   .list-body {
     .list-text {
       margin-bottom: 0;
     }
+    //.total es para el compoente pago de boleto
+    .total { 
+      font-weight:$large-headings-font-weight;
+      margin: 0;
+    }
+    //payment-status es para componente que dice aprovado
+    .payment-status {
+      color: $green;
+    }
+    .small-cost {
+      font-weight: $large-headings-font-weight;
+      color: $green;
+    }
   }
+}
+.list-information-icon.procedure {
+  justify-content: space-between;
+  flex-wrap:wrap;
+
+  .text-xs {
+    margin-bottom: 0;
+  }
+
+  // Estilos para componente metodo de pago
+  .payment-method-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: $background-icon;
+    margin-right:$icon-margin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    .bx {
+      font-size: 24px;
+      color:''
+    }
+  }
+  // Estilos para componente metodo de pago
+  .custom-control {
+    display: flex;
+    align-items: center;
+  }
+
+  a.btn {
+    margin-left: 1.896rem;
+    align-self: center;
+  }
+}
+//Estilos para componente solicitud de boleta
+.list-information-icon.procedure.ticket {
+  padding: $list-ticket-padding 0;
 }
 
 // Lista -Información - Variante 4
@@ -371,6 +448,64 @@ $list-steps-list-group-icon-margin-bottom: .125rem;
         font-size: $list-steps-list-group-icon-size;
         vertical-align: middle;
       }
+    }
+  }
+}
+
+//Secion para componente puntiacion de scoring 
+.list-scoring {
+  display: flex;
+  justify-content: space-between;
+  .list-scoring-text {
+    h4 {
+      margin-bottom: 0.125rem;
+    }
+    p {
+      margin-bottom: 0.625rem;
+      span {
+        color:$red ;
+        font-weight: $large-headings-font-weight;
+      }
+    }
+  }
+  .list-scoring-button {
+    display: flex;
+    align-items: center;
+  }
+  @include media-breakpoint-down(sm) {
+    display: block;
+    .list-scoring-text {
+      h4 {
+        margin-bottom: 0.625rem;
+      }
+      p {
+        margin-bottom: 0.625rem;
+      }
+    }
+  }
+}
+//Seccion para componente lista de costos
+.ul-cost {
+  padding: 0;
+  .li-cost {
+    @include list-cost-total();
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0
+    }
+    small {
+      align-self: self-end;
+      white-space: pre-wrap;
+      margin-right: 0.8rem
+    }
+    p {
+      margin-bottom: 0
+    }
+  }
+  .total {
+    @include list-cost-total();
+    small, p {
+      font-weight:$large-headings-font-weight;
     }
   }
 }
