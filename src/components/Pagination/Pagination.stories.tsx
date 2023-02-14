@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 // Components
 import { Pagination } from '.';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Paginación',
   component: Pagination,

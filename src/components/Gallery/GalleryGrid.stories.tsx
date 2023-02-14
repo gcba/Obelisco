@@ -5,8 +5,7 @@ import './Gallery.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
+// Configuración general del componente
 export default {
   title: 'Componentes|Galería/Grillas',
   decorators: [withA11y]

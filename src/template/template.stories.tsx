@@ -2,7 +2,7 @@
 import React from 'react';
 import './Template.stories.scss';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Plantillas|Plantilla'
 };

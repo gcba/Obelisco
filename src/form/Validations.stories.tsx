@@ -5,9 +5,7 @@ import './Form.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Formulario|Validación',
   decorators: [withA11y]
@@ -25,6 +23,7 @@ export const Valido = (): JSX.Element => {
     </div>
   );
 };
+
 Valido.story = { name: 'Válido' };
 
 export const Invalido = (): JSX.Element => {
@@ -39,4 +38,5 @@ export const Invalido = (): JSX.Element => {
     </div>
   );
 };
+
 Invalido.story = { name: 'Inválido' };

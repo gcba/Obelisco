@@ -9,7 +9,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { buttonTypes, sizes, sizesButton } from '../utils';
 import { Button } from '.';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Botones',
   component: Button,
@@ -79,6 +79,7 @@ export const Tamanos = (): JSX.Element => {
     </div>
   );
 };
+
 Tamanos.story = { name: 'Tamaños' };
 
 export const Deshabilitados = (): JSX.Element => {

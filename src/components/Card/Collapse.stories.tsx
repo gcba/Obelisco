@@ -4,7 +4,7 @@ import React from 'react';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Configuración del general del componente
+// Configuración general del componente
 export default {
   title: 'Componentes|Colapsable',
   decorators: [withA11y]
@@ -51,6 +51,7 @@ export const SeleccionUnica = (): JSX.Element => (
     </div>
   </div>
 );
+
 SeleccionUnica.story = { name: 'Selección única' };
 
 export const SeleccionMultiple = (): JSX.Element => (
@@ -92,6 +93,7 @@ export const SeleccionMultiple = (): JSX.Element => (
     </div>
   </div>
 );
+
 SeleccionMultiple.story = { name: 'Selección múltiple' };
 
 export const SeleccionConInformacion = (): JSX.Element => (
@@ -120,6 +122,7 @@ export const SeleccionConInformacion = (): JSX.Element => (
     </div>
   </div>
 );
+
 SeleccionConInformacion.story = { name: 'Selección con información' };
 
 export const SeleccionConIcono = (): JSX.Element => (

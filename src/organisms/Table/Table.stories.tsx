@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 // Components
 import { Table, TableCellContet } from '.';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Organismos|Tablas',
   component: Table,

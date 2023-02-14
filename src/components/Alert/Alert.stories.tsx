@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 // Components
 import { alertTypes } from '../utils';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Alerta',
   decorators: [withA11y]
@@ -40,6 +40,7 @@ export const Titulo = (): JSX.Element => {
     </div>
   );
 };
+
 Titulo.story = {
   name: 'Destacado y texto'
 };

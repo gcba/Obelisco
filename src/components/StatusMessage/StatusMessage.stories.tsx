@@ -1,12 +1,14 @@
 // Base
 import React from 'react';
+import './StatusMessage.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
-import { StatusMessage } from '.';
-import './StatusMessage.stories.scss';
 
-// Configuración del general del componente
+// Components
+import { StatusMessage } from '.';
+
+// Configuración general del componente
 export default {
   title: 'Componentes|Mensajes de estado',
   decorators: [withA11y]
