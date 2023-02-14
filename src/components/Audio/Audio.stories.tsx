@@ -5,6 +5,7 @@ import './Audio.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
+// Configuración general del componente
 export default {
   title: 'Componentes|Audio',
   decorators: [withA11y]

@@ -1,17 +1,17 @@
 // Base
 import React from 'react';
 
-// Component
-import { Badge } from '.';
-
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Configuración del general del componente
+// Components
+import { Badge } from '.';
+
+// Configuración general del componente
 export default {
   title: 'Componentes|Etiqueta',
-  decorators: [withA11y],
-  component: Badge
+  component: Badge,
+  decorators: [withA11y]
 };
 
 export const Simple = (): JSX.Element => <Badge text="Etiqueta 1" className="badge-secondary" />;

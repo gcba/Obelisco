@@ -5,9 +5,7 @@ import './Form.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Formulario|Buscador',
   decorators: [withA11y]

@@ -5,9 +5,7 @@ import './Stepper.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Pasos de un formulario',
   decorators: [withA11y]

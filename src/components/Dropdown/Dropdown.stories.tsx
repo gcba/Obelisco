@@ -5,7 +5,7 @@ import './Dropdown.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Configuración del general del componente
+// Configuración general del componente
 export default {
   title: 'Componentes|Desplegables',
   decorators: [withA11y]
@@ -380,4 +380,5 @@ export const Tamanos = (): JSX.Element => (
     </div>
   </div>
 );
+
 Tamanos.story = { name: 'Tamaños' };

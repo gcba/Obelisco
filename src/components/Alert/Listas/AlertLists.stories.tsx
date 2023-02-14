@@ -5,7 +5,7 @@ import '../Alert.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Alerta/Listas',
   decorators: [withA11y]

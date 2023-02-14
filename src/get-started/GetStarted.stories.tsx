@@ -2,13 +2,9 @@
 import React from 'react';
 import './GetStarted.stories.scss';
 
-// Addons
-import { withA11y } from '@storybook/addon-a11y';
-
-// Configuración del general del componente
+// Configuración general del componente
 export default {
-  title: 'Comenzar|Inicio',
-  decorators: [withA11y]
+  title: 'Comenzar|Inicio'
 };
 
 export const Instalacion = (): JSX.Element => (

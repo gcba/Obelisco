@@ -1,12 +1,13 @@
 // Base
 import React from 'react';
 
-// Component
-import { PanelVertical } from '.';
-
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
+// Components
+import { PanelVertical } from '.';
+
+// Configuración general del componente
 export default {
   title: 'Componentes|Panel/Panel vertical/Con imagen',
   decorators: [withA11y]

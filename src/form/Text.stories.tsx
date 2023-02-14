@@ -5,9 +5,7 @@ import './Form.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Formulario|Texto',
   decorators: [withA11y]
@@ -34,6 +32,7 @@ export const Numero = (): JSX.Element => {
     </div>
   );
 };
+
 Numero.story = { name: 'Número' };
 
 export const CorreoElectronico = (): JSX.Element => {
@@ -56,6 +55,7 @@ export const CorreoElectronico = (): JSX.Element => {
     </div>
   );
 };
+
 CorreoElectronico.story = { name: 'Correo electrónico' };
 
 export const Fecha = (): JSX.Element => {
@@ -82,6 +82,7 @@ export const BloqueDeTexto = (): JSX.Element => {
     </div>
   );
 };
+
 BloqueDeTexto.story = { name: 'Bloque de texto' };
 
 export const Deshabilitado = (): JSX.Element => {

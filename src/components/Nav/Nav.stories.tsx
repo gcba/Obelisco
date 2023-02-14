@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 // Components
 import { Nav } from '.';
 
-// Configuración del general del componente
+// Configuración general del componente
 export default {
   title: 'Componentes|Navegación/Vertical',
   component: Nav,

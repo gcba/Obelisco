@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { Table } from '.';
 import { Button } from '../../components/Button';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Organismos|Tablas/Con acciones',
   component: Table,

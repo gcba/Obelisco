@@ -9,7 +9,7 @@ export interface BadgeProps {
 export const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
   const { text, href } = props;
 
-  let className = 'badge'; 
+  let className = 'badge';
   if (props.className) className += ` ${props.className}`;
 
   if (href) {

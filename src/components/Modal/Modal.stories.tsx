@@ -4,9 +4,7 @@ import React from 'react';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Modal',
   decorators: [withA11y]

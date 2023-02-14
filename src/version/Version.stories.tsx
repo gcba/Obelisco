@@ -2,7 +2,7 @@
 import React from 'react';
 import './Version.stories.scss';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Versión|Releases'
 };

@@ -5,7 +5,7 @@ import './Button.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Botones/En caja',
   decorators: [withA11y]
@@ -38,6 +38,7 @@ export const ConBoton = (): JSX.Element => {
     </div>
   );
 };
+
 ConBoton.story = { name: 'Con botón' };
 
 export const ConEnlace = (): JSX.Element => {
@@ -67,6 +68,7 @@ export const ConEnlace = (): JSX.Element => {
     </div>
   );
 };
+
 ConEnlace.story = { name: 'Con enlace' };
 
 export const Completo = (): JSX.Element => {

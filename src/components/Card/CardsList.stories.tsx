@@ -8,12 +8,13 @@ import { withA11y } from '@storybook/addon-a11y';
 // Components
 import { Card } from '.';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Tarjetas/Lista ancho completo',
   component: Card,
   decorators: [withA11y]
 };
+
 const title = 'Título de tarjeta';
 const descriptionSm = 'Recomendamos en este espacio no utilizar más de 3 líneas.';
 const description = 'Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.';

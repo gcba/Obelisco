@@ -5,7 +5,7 @@ import './Spinner.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Configuración del general del componente
+// Configuración general del componente
 export default {
   title: 'Componentes|Spinner',
   decorators: [withA11y]
