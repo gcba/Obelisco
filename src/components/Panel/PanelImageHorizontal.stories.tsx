@@ -1,11 +1,14 @@
-// Addons
+// Base
 import React from 'react';
 
-import { withA11y } from '@storybook/addon-a11y';
+// Component
 import { PanelHorizontal } from '.';
 
+// Addons
+import { withA11y } from '@storybook/addon-a11y';
+
 export default {
-  title: 'Componentes|Panel/Panel destacado grande horizontal/Con imagen',
+  title: 'Componentes|Panel/Panel horizontal/Con imagen',
   decorators: [withA11y]
 };
 

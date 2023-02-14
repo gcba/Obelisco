@@ -21,7 +21,7 @@ export const Desplegable = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <div className="dropdown-menu">
           <button className="dropdown-item" type="button">
@@ -42,7 +42,7 @@ export const Desplegable = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro (1)
+          Desplegable (1)
         </button>
         <div className="dropdown-menu">
           <button className="dropdown-item" type="button">
@@ -63,7 +63,7 @@ export const Desplegable = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro (1)
+          Desplegable (1)
         </button>
         <div className="dropdown-menu">
           <button className="dropdown-item" type="button">

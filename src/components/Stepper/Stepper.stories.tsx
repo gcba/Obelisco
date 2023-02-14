@@ -13,7 +13,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const MultiplesPasos = (): JSX.Element => {
+export const PasosDeUnFormulario = (): JSX.Element => {
   return (
     <div className="stepper-wrapper">
       <div className="stepper">
@@ -32,6 +32,6 @@ export const MultiplesPasos = (): JSX.Element => {
   );
 };
 
-MultiplesPasos.story = {
-  name: 'Múltiples pasos'
+PasosDeUnFormulario.story = {
+  name: 'Pasos de un formulario'
 };

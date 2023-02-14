@@ -1,10 +1,9 @@
 .get-started-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 
   .get-started {
     max-width: 75ch;
+    margin: auto;
 
     h2:first-of-type {
       font-size: 1.3125rem;
