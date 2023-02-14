@@ -33,7 +33,7 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/preset-typescript": "^3.0.0",
-    "@storybook/react": "^5.3.18",
+    "@storybook/react": "^6.5.16",
     "@storybook/theming": "^5.3.19",
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",
