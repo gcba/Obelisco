@@ -40,13 +40,6 @@ object-assign
  * Released under the MIT License.
  */
 
-/*!
- * normalize-path <https://github.com/jonschlinkert/normalize-path>
- *
- * Copyright (c) 2014-2018, Jon Schlinkert.
- * Released under the MIT License.
- */
-
 /*! axe v3.5.6
  * Copyright (c) 2021 Deque Systems, Inc.
  *
