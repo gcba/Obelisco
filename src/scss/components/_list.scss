@@ -43,6 +43,7 @@ $list-ticket-padding: 1rem;
 
 //
 $icon-margin: 0.75rem;
+$list-padding-procedure: 1rem;
 //Background icon
 $background-icon : #F3F6F9;
 
@@ -266,6 +267,7 @@ $payment-method: (
   }
 }
 .list-information-icon.procedure {
+  padding:$list-padding-procedure 0;
   justify-content: space-between;
   flex-wrap:wrap;
 
@@ -286,7 +288,6 @@ $payment-method: (
     align-self: center;
     .bx {
       font-size: 24px;
-      color:''
     }
   }
   // Estilos para componente metodo de pago

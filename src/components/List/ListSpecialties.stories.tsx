@@ -104,7 +104,7 @@ export const management = (): JSX.Element => {
             </div>
           </div>
           <a className="btn btn-primary btn-sm" href="#" target="_blank">
-            Pagar Boleto(BUI)
+            Pagar Boleto (BUI)
           </a>
         </div>
       </div>
