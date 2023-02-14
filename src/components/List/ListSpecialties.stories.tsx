@@ -135,7 +135,7 @@ function PaymentStatusDisplay({ status }: PaymentStatusDisplayProps) {
 }
 
 function formatCurrencyWithExponent(value: number): React.ReactElement {
-  const exponent = (value % 1).toFixed(2).substr(2);
+  const exponent = (value % 1).toFixed(2).slice(2);
   return (
     <React.Fragment>
       {Math.floor(value)}
@@ -189,9 +189,6 @@ export const ticketRequest = (): JSX.Element => {
       </div>
     </>
   );
-};
-PaymentStatusDisplay.propTypes = {
-  status: PropTypes.oneOf([PaymentStatus.APPROVED, PaymentStatus.PROCESSING, PaymentStatus.DECLINED]).isRequired
 };
 ticketRequest.story = { name: 'Solicitud de boleta' };
 
