@@ -95,7 +95,7 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <ul className="dropdown-menu">
           <li>
@@ -122,7 +122,7 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <ul className="dropdown-menu">
           <li>
@@ -149,7 +149,7 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <ul className="dropdown-menu">
           <li>
@@ -176,7 +176,7 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <ul className="dropdown-menu">
           <li>
