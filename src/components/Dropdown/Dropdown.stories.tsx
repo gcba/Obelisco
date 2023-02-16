@@ -384,7 +384,7 @@ export const Tamanos = (): JSX.Element => (
 Tamanos.story = { name: 'Tamaños' };
 
 export const DropdownList = (): JSX.Element => (
-  <div className="dropdown mb-3">
+  <div className="dropdown">
     <button
       type="button"
       className="btn btn-dropdown btn-dropdown-border dropdown-toggle"
@@ -395,7 +395,7 @@ export const DropdownList = (): JSX.Element => (
         <span className="material-icons-round">receipt</span>
         <div>
           <span>Infracción de tránsito: Exceso de velocidad</span>
-          <span>$10.000,00</span>
+          <span className="font-weight-bold">$10.000,00</span>
         </div>
       </div>
     </button>

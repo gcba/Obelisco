@@ -109,10 +109,6 @@ $animation-toggle: transform 0.2s ease-in-out;
               span {
                 white-space: break-spaces;
               }
-
-              > span + span {
-                font-weight: bold;
-              }
             }
           }
 
@@ -144,6 +140,8 @@ $animation-toggle: transform 0.2s ease-in-out;
             border-top-right-radius: 0;
             border-bottom-left-radius: 0.5rem;
             border-bottom-right-radius: 0.5rem;
+            top: auto !important;
+            transform: translate3d(0px, 3px, 0px) !important;
           }
         }
 
