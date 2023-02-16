@@ -55,6 +55,26 @@ export const TitleTextLink = (): JSX.Element => {
         <br />
         <br />
         <SimpleCard title="Título de tarjeta" href="#" />
+        <br />
+        <br />
+        <div className="card card-horizontal unbordered">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-body">
+            <h4 className="card-title">
+              <a href="#">Título de la tarjeta</a>
+            </h4>
+            <p className="card-text">Descripción de la tarjeta</p>
+          </div>
+        </div>
+        <br />
+        <div className="card card-horizontal unbordered">
+          <i className="bx bx-file card-icon-left"></i>
+          <div className="card-body">
+            <h4 className="card-title">
+              <a href="#">Título del acceso</a>
+            </h4>
+          </div>
+        </div>
       </div>
     </>
   );
@@ -161,20 +181,6 @@ export const HorizontalCard = (): JSX.Element => {
           </div>
         </a>
         <br />
-        <a className="card card-horizontal unbordered" href="#">
-          <i className="bx bx-file card-icon-left"></i>
-          <div className="card-body">
-            <h4 className="card-title">Título del acceso</h4>
-            <p className="card-text">Descripción del acceso</p>
-          </div>
-        </a>
-        <br />
-        <a className="card card-horizontal unbordered" href="#">
-          <i className="bx bx-file card-icon-left"></i>
-          <div className="card-body">
-            <h4 className="card-title">Título del acceso</h4>
-          </div>
-        </a>
       </div>
     </>
   );

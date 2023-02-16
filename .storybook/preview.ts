@@ -75,7 +75,8 @@ addParameters({
       }
     
       return 0;
-    }
+    },
+  showPanel: true
   }
 });
 

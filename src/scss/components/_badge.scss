@@ -44,12 +44,13 @@ $badge-padding-y: 0;
 .badge {
   text-decoration: none;
   text-transform: uppercase;
-  min-height: 22px;
   line-height: 1.6;
-
-  + .badge {
-    margin-left: $badge-separation;
-  }
+  min-height: 18px;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: $badge-separation;
 }
 
 @each $color, $value in $theme-colors {
