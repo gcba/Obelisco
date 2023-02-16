@@ -32,9 +32,9 @@ const theme = create({
   // inputTextColor: 'black',
   // inputBorderRadius: 4,
 
-  brandTitle: "Me van a cambiar, no te preocupes!",
-  brandUrl: "https://gcba.github.io/obelisco",
-  brandImage: "logo.svg",
+  brandTitle: "Obelisco",
+  brandUrl: "https://gcba.github.io/Obelisco",
+  brandImage: "logo.svg"
 });
 
 addons.setConfig({

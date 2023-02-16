@@ -1,11 +1,10 @@
-/* eslint-disable prettier/prettier */
 // Base
 import React from 'react';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Panel',
   decorators: [withA11y]

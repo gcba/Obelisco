@@ -2,7 +2,7 @@
 import React from 'react';
 import './GetStarted.stories.scss';
 
-// Configuración del general del componente
+// Configuración general del componente
 export default {
   title: 'Comenzar|Inicio',
   parameters: { options: { showPanel: false } }
@@ -31,9 +31,9 @@ export const Instalacion = (): JSX.Element => (
         Aires. Fue creado para reemplazar <a href="https://github.com/gcba/bastrap">BAstrap</a>.
       </p>
       {/* VER DOCUMENTACION */}
-      <h3>
+      <h2>
         <a href="https://gcba.github.io/estandares/componentes/web/">Ver la documentación de componentes</a>.
-      </h3>
+      </h2>
       <br />
 
       {/* COMO USARLO */}

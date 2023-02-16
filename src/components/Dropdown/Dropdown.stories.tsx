@@ -5,7 +5,7 @@ import './Dropdown.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Configuración del general del componente
+// Configuración general del componente
 export default {
   title: 'Componentes|Desplegables',
   decorators: [withA11y]
@@ -21,7 +21,7 @@ export const Desplegable = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <div className="dropdown-menu">
           <button className="dropdown-item" type="button">
@@ -42,7 +42,7 @@ export const Desplegable = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro (1)
+          Desplegable (1)
         </button>
         <div className="dropdown-menu">
           <button className="dropdown-item" type="button">
@@ -63,7 +63,7 @@ export const Desplegable = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro (1)
+          Desplegable (1)
         </button>
         <div className="dropdown-menu">
           <button className="dropdown-item" type="button">
@@ -95,7 +95,7 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <ul className="dropdown-menu">
           <li>
@@ -122,7 +122,7 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <ul className="dropdown-menu">
           <li>
@@ -149,7 +149,7 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <ul className="dropdown-menu">
           <li>
@@ -176,7 +176,7 @@ export const DesplegableConEnlaces = (): JSX.Element => (
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false">
-          Filtro
+          Desplegable
         </button>
         <ul className="dropdown-menu">
           <li>
@@ -380,4 +380,5 @@ export const Tamanos = (): JSX.Element => (
     </div>
   </div>
 );
+
 Tamanos.story = { name: 'Tamaños' };

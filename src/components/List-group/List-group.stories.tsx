@@ -1,15 +1,16 @@
 // Base
 import React from 'react';
+import './List-group.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
+// Components
 import { AccessList } from './AccessList.stories';
 import { AccessListCategory } from './AccessListCategory.stories';
-import './List-group.stories.scss';
 import { AccessListDescriptive } from './ListAccessDescriptive.stories';
 
-// Configuración del general del componente
+// Configuración general del componente
 export default {
   title: 'Componentes|Accesos/Lista de accesos',
   decorators: [withA11y]

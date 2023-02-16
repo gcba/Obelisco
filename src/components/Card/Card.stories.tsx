@@ -8,7 +8,7 @@ import { withA11y } from '@storybook/addon-a11y';
 // Components
 import { Card, SimpleCard } from '.';
 
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Tarjetas/Tipos',
   component: Card,
@@ -79,6 +79,7 @@ export const TitleTextLink = (): JSX.Element => {
     </>
   );
 };
+
 TitleTextLink.story = { name: 'Sin contenedor' };
 
 export const TitleText = (): JSX.Element => {
@@ -99,6 +100,7 @@ export const TitleText = (): JSX.Element => {
     </div>
   );
 };
+
 TitleText.story = { name: 'Con contenedor' };
 
 export const HorizontalCard = (): JSX.Element => {
@@ -183,6 +185,7 @@ export const HorizontalCard = (): JSX.Element => {
     </>
   );
 };
+
 HorizontalCard.story = { name: 'Contenedor con imagen o ícono horizontal' };
 
 export const NewsCard = (): JSX.Element => {
@@ -202,6 +205,7 @@ export const NewsCard = (): JSX.Element => {
     </div>
   );
 };
+
 NewsCard.story = { name: 'Noticia' };
 
 export const SimpleEventCard = (): JSX.Element => {
@@ -229,6 +233,7 @@ export const SimpleEventCard = (): JSX.Element => {
     </div>
   );
 };
+
 SimpleEventCard.story = { name: 'Evento simple' };
 
 export const EventCard = (): JSX.Element => {
@@ -250,4 +255,5 @@ export const EventCard = (): JSX.Element => {
     </div>
   );
 };
+
 EventCard.story = { name: 'Evento' };

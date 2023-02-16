@@ -5,9 +5,7 @@ import './Link.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Componentes|Enlace/Lista',
   decorators: [withA11y]
@@ -100,6 +98,7 @@ export const BtnDownload = (): JSX.Element => {
     </div>
   );
 };
+
 BtnDownload.story = { name: 'Con botón de descarga' };
 
 export const BtnLink = (): JSX.Element => {
@@ -189,6 +188,7 @@ export const BtnLink = (): JSX.Element => {
     </div>
   );
 };
+
 BtnLink.story = { name: 'Con enlace' };
 
 export const BtnLinkDownload = (): JSX.Element => {
@@ -278,4 +278,5 @@ export const BtnLinkDownload = (): JSX.Element => {
     </div>
   );
 };
+
 BtnLinkDownload.story = { name: 'Con enlace de descarga' };

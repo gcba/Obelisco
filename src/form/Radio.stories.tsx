@@ -4,9 +4,7 @@ import React from 'react';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Formulario|Radio',
   decorators: [withA11y]
@@ -71,6 +69,7 @@ export const CasillaUnica = (): JSX.Element => {
     </>
   );
 };
+
 CasillaUnica.story = {
   name: 'Casilla única'
 };
@@ -115,6 +114,7 @@ export const BotonRadio = (): JSX.Element => {
     </>
   );
 };
+
 BotonRadio.story = {
   name: 'Botón de selección única'
 };

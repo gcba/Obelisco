@@ -4,9 +4,7 @@ import React from 'react';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Formulario|Checkbox',
   decorators: [withA11y]
@@ -67,6 +65,7 @@ export const CasillaMultiple = (): JSX.Element => {
     </>
   );
 };
+
 CasillaMultiple.story = {
   name: 'Casilla múltiple'
 };
@@ -87,6 +86,7 @@ export const TerminosYCondiciones = (): JSX.Element => {
     </div>
   );
 };
+
 TerminosYCondiciones.story = {
   name: 'Términos y condiciones'
 };
@@ -129,4 +129,5 @@ export const BotonCheck = (): JSX.Element => {
     </div>
   );
 };
+
 BotonCheck.story = { name: 'Botón de selección mútiple' };

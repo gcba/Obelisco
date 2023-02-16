@@ -5,9 +5,7 @@ import './Typography.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Estilos|Tipografía',
   decorators: [withA11y]
@@ -25,11 +23,13 @@ export const Titulos = (): JSX.Element => {
     </>
   );
 };
+
 Titulos.story = { name: 'Títulos' };
 
 export const Subtitulo = (): JSX.Element => {
   return <p className="lead">Open Sans Regular 19px</p>;
 };
+
 Subtitulo.story = { name: 'Subtítulo' };
 
 export const Parrafo = (): JSX.Element => {
@@ -40,10 +40,15 @@ export const Parrafo = (): JSX.Element => {
     </>
   );
 };
+
 Parrafo.story = { name: 'Párrafo' };
 
 export const TextoSecundario = (): JSX.Element => {
   return <p className="text-xs">Open Sans Regular 11.7px</p>;
+};
+
+TextoSecundario.story = {
+  name: 'Texto secundario'
 };
 
 export const Transformaciones = (): JSX.Element => {
@@ -96,4 +101,8 @@ export const ListaOrdenada = (): JSX.Element => {
       <li>Esto es el texto de una lista ordenada</li>
     </ol>
   );
+};
+
+ListaOrdenada.story = {
+  name: 'Lista ordenada'
 };

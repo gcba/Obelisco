@@ -5,9 +5,7 @@ import './Grid.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Components
-
-// Config
+// Configuración general del componente
 export default {
   title: 'Estilos|Grilla',
   decorators: [withA11y]
