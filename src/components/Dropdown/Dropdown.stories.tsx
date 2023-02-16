@@ -382,3 +382,57 @@ export const Tamanos = (): JSX.Element => (
 );
 
 Tamanos.story = { name: 'Tamaños' };
+
+export const DropdownList = (): JSX.Element => (
+  <div className="dropdown mb-3">
+    <button
+      type="button"
+      className="btn btn-dropdown btn-dropdown-border dropdown-toggle"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false">
+      <div className="dropdown-body">
+        <span className="material-icons-round">receipt</span>
+        <div>
+          <span>Infracción de tránsito: Exceso de velocidad</span>
+          <span>$10.000,00</span>
+        </div>
+      </div>
+    </button>
+    <div className="dropdown-menu">
+      <div>
+        <h6>Titulo H6</h6>
+        <p>
+          Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
+          Extremo
+        </p>
+      </div>
+      <div>
+        <h6>Titulo H6</h6>
+        <p>
+          Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
+          Extremo
+        </p>
+      </div>
+      <div>
+        <h6>Titulo H6</h6>
+        <p>
+          Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
+          Extremo
+        </p>
+      </div>
+      <div>
+        <h6>Titulo H6</h6>
+        <p>
+          Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
+          Extremo
+        </p>
+      </div>
+      <button className="btn btn-sm btn-link" type="button">
+        Botón
+      </button>
+    </div>
+  </div>
+);
+
+DropdownList.story = { name: 'Desplegable lista' };
