@@ -1,0 +1,76 @@
+$list-steps-padding-left: 2.75rem;
+$list-steps-padding-bottom: 1rem;
+$list-steps-line-width: 0.125rem;
+$list-steps-circle-size: 1.25rem;
+$list-steps-circle-active-size: 1.25rem;
+$list-steps-font-color: $grisulado-900;
+$list-steps-font-color-information: $blue;
+$list-steps-font-color-success: $green;
+
+//Pasos de trámite-Accesos
+$list-steps-list-group-icon-size: 1.25rem;
+$list-steps-list-group-icon-margin-right: 0.625rem;
+$list-steps-list-group-icon-margin-bottom: 0.125rem;
+
+.list-steps {
+  @extend .list-unstyled, .flex-column;
+  margin-bottom: 0;
+
+  &-item {
+    color: $list-steps-font-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: $list-steps-padding-bottom;
+    padding-left: $list-steps-padding-left;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: $list-steps-font-color;
+      width: $list-steps-circle-size;
+      height: $list-steps-circle-size;
+      border-radius: 50%;
+      left: $list-steps-circle-size / 2;
+      top: $line-height-base / 2 - $font-size-base / 2;
+      left: 0;
+    }
+
+    &:not(:last-child):after {
+      content: '';
+      position: absolute;
+      background-color: $list-steps-font-color;
+      z-index: -1;
+      width: $list-steps-line-width;
+      height: calc(100% - 24px);
+      left: 0.594rem;
+      top: calc(50% + 38px);
+      transform: translate(0, calc(-50% - 24px));
+    }
+  }
+}
+
+.list-steps-information {
+  .list-steps-item {
+    &:before {
+      background-color: $list-steps-font-color-information;
+    }
+
+    &:not(:last-child):after {
+      background-color: $list-steps-font-color-information;
+    }
+  }
+}
+
+.list-steps-success {
+  .list-steps-item {
+    &:before {
+      background-color: $list-steps-font-color-success;
+    }
+
+    &:not(:last-child):after {
+      background-color: $list-steps-font-color-success;
+    }
+  }
+}

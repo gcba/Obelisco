@@ -37,6 +37,7 @@ const headers = [
   'Componentes|Panel/Panel horizontal/Con video',
   'Componentes|Panel/Panel vertical/Con imagen',
   'Componentes|Panel/Panel vertical/Con video',
+  'Componentes|Pasos de trámite',
   'Componentes|Pasos de un formulario',
   'Componentes|Spinner',
   'Componentes|Tarjetas/Tipos',
