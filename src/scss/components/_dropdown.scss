@@ -11,6 +11,13 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
 
 $animation-toggle: transform 0.2s ease-in-out;
 
+@mixin dropdown-toggle-border {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 /* === Bootstrap Import === */
 @import '~bootstrap/scss/dropdown';
 
@@ -100,7 +107,7 @@ $animation-toggle: transform 0.2s ease-in-out;
             justify-content: center;
             align-items: center;
             text-align: left;
-            gap: 1rem;
+            gap: 1.938rem;
 
             > div {
               display: grid;
@@ -113,10 +120,7 @@ $animation-toggle: transform 0.2s ease-in-out;
           }
 
           &[aria-expanded='true'] {
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            @include dropdown-toggle-border;
           }
 
           &:hover {
@@ -124,10 +128,7 @@ $animation-toggle: transform 0.2s ease-in-out;
           }
 
           &:active {
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            @include dropdown-toggle-border;
             box-shadow: 0 0 0 2px $blue;
           }
 
@@ -135,7 +136,6 @@ $animation-toggle: transform 0.2s ease-in-out;
             padding: 1.5rem;
             width: 100%;
             margin-top: 0;
-            box-shadow: 0 0 0 2px #e6ebf0 !important;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
             border-bottom-left-radius: 0.5rem;
