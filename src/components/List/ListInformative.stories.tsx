@@ -14,37 +14,73 @@ export default {
 export const ListaInformativa = (): JSX.Element => {
   return (
     <>
-      {/* Destacado y descripcion */}
       <div className="lists-wrapper">
-        <ul className="list-informative">
-          <li className="list-text-icon">
-            <span className="material-icons-round list-icon">check</span>
-            <h5>Esta es la información destacada de la lista</h5>
+        <ul className="list-informative-ul">
+          <li>Esta es la información de una línea de la lista</li>
+          <li>
+            <span className="material-icons-round">done</span>Esta es la información de una línea de la lista
           </li>
-          <li className="list-text">Esta es la información de una línea de la lista</li>
+          <li>
+            <span className="material-icons-round">close</span>Esta es la información de una línea de la lista
+          </li>
+          <li>Esta es la información de una línea de la lista</li>
+          <li>
+            <i className="bx bx-check"></i>Esta es la información de una línea de la lista
+          </li>
+          <li>
+            <i className="bx bx-x"></i>Esta es la información de una línea de la lista
+          </li>
+          <li>Esta es la información de una línea de la lista</li>
         </ul>
-      </div>
-      {/* Destacado y enlace */}
-      <div className="lists-wrapper">
-        <ul className="list-informative">
-          <li className="list-text-icon">
-            <span className="material-icons-round list-icon">check</span>
-            <span>
-              Esta es la información de una línea{' '}
-              <a className="" href="#" target="_blank" rel="noreferrer">
-                con enlace
-              </a>
-            </span>
+        <br />
+        <ol className="list-informative-ol">
+          <li>Esta es la información de una línea de la lista</li>
+          <li>
+            <span className="material-icons-round">done</span>Esta es la información de una línea de la lista
           </li>
+          <li>
+            <span className="material-icons-round">close</span>Esta es la información de una línea de la lista
+          </li>
+          <li>Esta es la información de una línea de la lista</li>
+          <li>
+            <i className="bx bx-check"></i>Esta es la información de una línea de la lista
+          </li>
+          <li>
+            <i className="bx bx-x"></i>Esta es la información de una línea de la lista
+          </li>
+          <li>Esta es la información de una línea de la lista</li>
+        </ol>
+        <br />
+        <ul className="list-informative-ul unstyled">
+          <li>Esta es la información de una línea de la lista</li>
+          <li>
+            <span className="material-icons-round">done</span>Esta es la información de una línea de la lista
+          </li>
+          <li>
+            <span className="material-icons-round">close</span>Esta es la información de una línea de la lista
+          </li>
+          <li>Esta es la información de una línea de la lista</li>
+          <li>
+            <i className="bx bx-check"></i>Esta es la información de una línea de la lista
+          </li>
+          <li>
+            <i className="bx bx-x"></i>Esta es la información de una línea de la lista
+          </li>
+          <li>Esta es la información de una línea de la lista</li>
         </ul>
-      </div>
-      {/* Bullet y descripcion */}
-      <div className="lists-wrapper">
-        <ul className="list-informative">
-          <li className="list-text-icon">
-            <span className="material-icons-round list-icon-bullet">circle</span>
-            <span>Tener DNI vigente con Domicilio en Ciudad Autónoma de Buenos Aires</span>
+        <br />
+        <ul className="list-informative-ul">
+          <li>Esta es la información de una línea de la lista</li>
+          <li>
+            Esta es la información de una línea de la lista
+            <small>Bajada con etiqueta small</small>
           </li>
+          <li>Esta es la información de una línea de la lista</li>
+          <li>
+            Esta es la información de una línea de la lista
+            <p>Bajada con etiqueta p</p>
+          </li>
+          <li>Esta es la información de una línea de la lista</li>
         </ul>
       </div>
     </>

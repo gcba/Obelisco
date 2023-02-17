@@ -1,4 +1,54 @@
 /* === Variable and mixins overides === */
+@mixin list-informative-style($position-left, $icon-margin-right) {
+  padding-left: $list-informative-padding-left;
+
+  li {
+    margin-bottom: $list-informative-margin;
+    padding-left: $list-informative-padding / 2;
+  }
+
+  li:last-child {
+    margin-bottom: 0px;
+  }
+
+  li:has(i) {
+    list-style: none;
+    display: flex;
+    position: relative;
+    left: -$position-left;
+
+    i {
+      font-size: $list-informative-icon-size;
+      margin-right: $icon-margin-right;
+    }
+  }
+
+  li:has(span) {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    left: -$position-left;
+
+    span {
+      font-size: $list-informative-icon-size;
+      margin-right: $icon-margin-right;
+    }
+  }
+
+  li:has(p) {
+    p {
+      margin-top: $list-informative-margin / 4;
+    }
+  }
+
+  li:has(small) {
+    small {
+      display: block;
+      margin-top: $list-informative-margin / 4;
+    }
+  }
+}
 
 //Encabezado
 $list-header-padding: 1.5rem;
@@ -19,9 +69,14 @@ $list-bullets-gap: 1rem;
 $list-bullets-text-margin-bottom: .25rem;
 
 //Lista informativa
+$list-informative-padding-left: 1.625rem;
 $list-informative-icon-size: 1.5rem;
-$list-informative-icon-font-size: 1.0625rem;
-$list-informative-icon-padding: .218rem;
+$list-informative-margin: 1rem;
+$list-informative-padding: 1rem;
+$list-informative-ul-margin: 0.625rem;
+$list-informative-ol-margin: 0.5rem;
+$list-informative-ul-position-left: 2.125rem;
+$list-informative-ol-position-left: 2rem;
 
 //Pasos de trámite
 $list-steps-padding-left: 2.75rem;
@@ -322,44 +377,16 @@ $payment-method: (
 }
 
 //Listas - Lista Informativa - Variantes 1, 2 y 3
-.list-informative {
-  margin-bottom: 0;
-  padding-left: 0;
+.list-informative-ul {
+  @include list-informative-style($list-informative-ul-position-left, $list-informative-ul-margin);
+}
 
-  li {
-    margin-bottom: $list-bullets-text-margin-bottom;
-    list-style-type: none;
+.list-informative-ol {
+  @include list-informative-style($list-informative-ol-position-left, $list-informative-ol-margin);
+}
 
-    &.list-text-icon {
-      display: flex;
-      align-items: start;
-
-      .list-icon, .list-icon-bullet {
-        font-size: $list-informative-icon-font-size;
-        padding: $list-informative-icon-padding;
-        margin-right: .5rem;
-        width: $list-informative-icon-size;
-        height: $list-informative-icon-size;        
-      }
-
-      .list-icon-bullet {
-        font-size: .5rem;
-        padding: .5rem;
-      }
-
-      h5{
-        margin-bottom: 0;
-      }
-    }
-    
-    &.list-text{
-      margin-left: 2rem;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+.unstyled {
+  list-style-type: none;
 }
 
 //Pasos de trámite
