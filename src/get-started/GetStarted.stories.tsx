@@ -4,7 +4,8 @@ import './GetStarted.stories.scss';
 
 // Configuración general del componente
 export default {
-  title: 'Comenzar|Inicio'
+  title: 'Comenzar|Inicio',
+  parameters: { options: { showPanel: false } }
 };
 
 export const Instalacion = (): JSX.Element => (

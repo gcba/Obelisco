@@ -4,6 +4,7 @@ $card-border-radius: $border-radius-lg;
 $card-spacer: 1rem;
 $card-spacer-sm: 0.75rem;
 $card-spacer-lg: 1.5rem;
+$card-spacer-unbordered: 0 0 0 1rem;
 
 $card-subtitle-font-size: 1.1875rem;
 $card-subtitle-font-weight: 400;
@@ -304,6 +305,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     .card-body {
       padding: 0;
+      a {
+        display: block;
+        width: fit-content;
+      }
     }
   }
 
@@ -413,6 +418,19 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         flex-direction: column;
         justify-content: center;
       }
+    }
+  }
+
+  &.card-horizontal.unbordered {
+    .card-body {
+      padding: $card-spacer-unbordered;
+      a {
+        display: block;
+        width: fit-content;
+      }
+    }
+    .card-icon-left {
+      margin: 0;
     }
   }
 
@@ -562,6 +580,13 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       margin-left: $card-deck-margin;
     }
   }
+  @include media-breakpoint-down(xs)  {
+    .card {
+      &:nth-of-type(2) {
+        margin-top: 30px; 
+      }
+    }
+  }
 }
 
 .panel-deck {
@@ -621,7 +646,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.card-column {
-  .card {
+  .card, .group-access {
     max-width: calc(calc(100% / 4) - 30px);
 
     @include media-breakpoint-down(md) {
@@ -634,15 +659,11 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     @include media-breakpoint-down(xs) {
       max-width: 100%;
-
-      &:nth-of-type(2) {
-        margin-top: 30px;
-      }
     }
   }
 }
 .card-deck.max-cards-3.card-column {
-  .card {
+  .card, .group-access {
     max-width: calc(calc(100% / 3) - 30px);
 
     @include media-breakpoint-down(sm) {
@@ -656,7 +677,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.max-cards-2.card-column {
-  .card {
+  .card, .group-access {
     max-width: calc(calc(100% / 2) - 30px);
 
     @include media-breakpoint-down(xs) {
@@ -665,7 +686,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 .card-deck.max-cards-1.card-column {
-  .card {
+  .card, .group-access {
     max-width: calc(calc(100% / 3) - 30px);
 
     &:nth-of-type(-n + 3) {

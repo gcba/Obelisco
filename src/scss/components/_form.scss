@@ -244,6 +244,21 @@ $form-validation-states: (
 
 .custom-control {
   padding-left: 0;
+  .custom-control-input.is-invalid {
+    ~ .custom-control-label {
+      color: inherit;
+    }
+    &:checked {
+      ~ .custom-control-label::before {
+        border-color:$custom-control-indicator-checked-color;
+      }
+    }
+  }
+  &.custom-checkbox {
+    .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
+      background: $custom-control-indicator-checked-color;
+    }
+  }
 }
 
 .custom-control-input {
@@ -291,6 +306,7 @@ $form-validation-states: (
       margin: 5px;
       background-color: $custom-control-indicator-checked-color;
       border-radius: 100%;
+      left: spaceUnits(3.12);
     }
   }
 }
