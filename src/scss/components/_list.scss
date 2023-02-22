@@ -5,47 +5,47 @@
   li {
     margin-bottom: $list-informative-margin;
     padding-left: $list-informative-padding / 2;
-  }
 
-  li:last-child {
-    margin-bottom: 0px;
-  }
-
-  li:has(i) {
-    list-style: none;
-    display: flex;
-    position: relative;
-    left: -$position-left;
-
-    i {
-      font-size: $list-informative-icon-size;
-      margin-right: $icon-margin-right;
+    &:last-child {
+      margin-bottom: 0px;
     }
-  }
 
-  li:has(span) {
-    list-style: none;
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    left: -$position-left;
+    &:has(i) {
+      list-style: none;
+      display: flex;
+      position: relative;
+      left: -$position-left;
 
-    span {
-      font-size: $list-informative-icon-size;
-      margin-right: $icon-margin-right;
+      i {
+        font-size: $list-informative-icon-size;
+        margin-right: $icon-margin-right;
+      }
     }
-  }
 
-  li:has(p) {
-    p {
-      margin-top: $list-informative-margin / 4;
+    &:has(span) {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      left: -$position-left;
+
+      span {
+        font-size: $list-informative-icon-size;
+        margin-right: $icon-margin-right;
+      }
     }
-  }
 
-  li:has(small) {
-    small {
-      display: block;
-      margin-top: $list-informative-margin / 4;
+    &:has(p) {
+      p {
+        margin-top: $list-informative-margin / 4;
+      }
+    }
+
+    &:has(small) {
+      small {
+        display: block;
+        margin-top: $list-informative-margin / 4;
+      }
     }
   }
 }
