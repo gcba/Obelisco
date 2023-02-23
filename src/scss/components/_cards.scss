@@ -750,11 +750,13 @@ button.card {
       line-height: 1.4;
       font-size: 18px;
       font-weight: 700;
+      display: flex;
+      justify-content: space-between;
 
       &:after {
         content: $accordion-icon-expanded-blue;
         height: spaceUnits(5);
-        float: right;
+        margin-left: auto;
       }
 
       &:focus,
@@ -780,7 +782,6 @@ button.card {
           background-color: $grisulado-10;
           color: $blue;
           box-shadow: $card-box-hover-shadow;
-          content: $accordion-icon-user-white;
 
           + * > .card-body {
             border-color: $card-header-bg;
@@ -799,6 +800,7 @@ button.card {
       }
 
       &.card-info {
+
         &:after {
           content: 'Ver menos';
           position: absolute;
