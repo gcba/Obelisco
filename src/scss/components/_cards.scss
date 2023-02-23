@@ -800,6 +800,8 @@ button.card {
       }
 
       &.card-info {
+        display: block;
+
         &:after {
           content: 'Ver menos';
           position: absolute;
