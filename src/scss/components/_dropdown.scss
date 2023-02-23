@@ -1,4 +1,4 @@
-/* === Variable and mixins overides === */
+/* === Custom variables and mixins === */
 
 $dropdown-box-shadow: 0 0 spaceUnits(3) transparentize($grisulado-100, 0.25);
 $dropdown-item-padding: spaceUnits(2) spaceUnits(2);
@@ -11,15 +11,15 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
 
 $animation-toggle: transform 0.2s ease-in-out;
 
+$dropdown-list-padding: 1.5rem;
+$dropdown-list-body-gap: 1.938rem;
+
 @mixin dropdown-toggle-border {
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
-$dropdown-list-padding: 1.5rem;
-$dropdown-list-body-gap: 1.938rem;
 
 /* === Bootstrap Import === */
 @import '~bootstrap/scss/dropdown';
