@@ -1,0 +1,77 @@
+/* === Variable and mixins overides === */
+
+$list-informative-padding-left: 1.625rem;
+$list-informative-icon-size: 1.5rem;
+$list-informative-margin: 1rem;
+$list-informative-padding: 1rem;
+$list-informative-ul-margin: 0.625rem;
+$list-informative-ol-margin: 0.5rem;
+$list-informative-ul-position-left: 2.125rem;
+$list-informative-ol-position-left: 2rem;
+
+/* === Custom variables and mixins === */
+
+@mixin list-informative-style($position-left, $icon-margin-right) {
+  padding-left: $list-informative-padding-left;
+
+  li {
+    margin-bottom: $list-informative-margin;
+    padding-left: $list-informative-padding / 2;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &:has(i) {
+      list-style: none;
+      display: flex;
+      position: relative;
+      left: -$position-left;
+
+      i {
+        font-size: $list-informative-icon-size;
+        margin-right: $icon-margin-right;
+      }
+    }
+
+    &:has(span) {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      left: -$position-left;
+
+      span {
+        font-size: $list-informative-icon-size;
+        margin-right: $icon-margin-right;
+      }
+    }
+
+    &:has(p) {
+      p {
+        margin-top: $list-informative-margin / 4;
+      }
+    }
+
+    &:has(small) {
+      small {
+        display: block;
+        margin-top: $list-informative-margin / 4;
+      }
+    }
+  }
+}
+
+/* === Custom styles === */
+
+.list-informative-ul {
+  @include list-informative-style($list-informative-ul-position-left, $list-informative-ul-margin);
+}
+
+.list-informative-ol {
+  @include list-informative-style($list-informative-ol-position-left, $list-informative-ol-margin);
+}
+
+.unstyled {
+  list-style-type: none;
+}
