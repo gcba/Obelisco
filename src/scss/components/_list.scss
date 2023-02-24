@@ -11,7 +11,31 @@ $list-informative-ol-position-left: 2rem;
 
 /* === Custom variables and mixins === */
 
-@mixin list-informative-style($position-left, $icon-margin-right) {
+@mixin list-informative-style-subtitle($tag) {
+  display: grid;
+  grid-template-columns: $list-informative-icon-size 100%;
+  grid-column-gap: $list-informative-ul-margin;
+  grid-area: 1 / 2 / 2 / 3;
+
+  #{$tag} {
+    margin-top: $list-informative-margin / 4;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
+
+@mixin list-informative-style-icon($tag, $position-left, $icon-margin-right) {
+  list-style: none;
+  display: flex;
+  position: relative;
+  left: -$position-left;
+
+  #{$tag} {
+    font-size: $list-informative-icon-size;
+    margin-right: $icon-margin-right;
+  }
+}
+
+@mixin list-informative-style() {
   padding-left: $list-informative-padding-left;
 
   li {
@@ -23,28 +47,11 @@ $list-informative-ol-position-left: 2rem;
     }
 
     &:has(i) {
-      list-style: none;
-      display: flex;
-      position: relative;
-      left: -$position-left;
-
-      i {
-        font-size: $list-informative-icon-size;
-        margin-right: $icon-margin-right;
-      }
+      @include list-informative-style-icon('i', $list-informative-ul-position-left, $list-informative-ul-margin);
     }
 
     &:has(span) {
-      list-style: none;
-      display: flex;
-      align-items: flex-start;
-      position: relative;
-      left: -$position-left;
-
-      span {
-        font-size: $list-informative-icon-size;
-        margin-right: $icon-margin-right;
-      }
+      @include list-informative-style-icon('span', $list-informative-ol-position-left, $list-informative-ol-margin );
     }
 
     &:has(p) {
@@ -59,17 +66,33 @@ $list-informative-ol-position-left: 2rem;
         margin-top: $list-informative-margin / 4;
       }
     }
+
+    &:has(i + small) {
+      @include list-informative-style-subtitle('small');
+    }
+
+    &:has(i + p) {
+      @include list-informative-style-subtitle('p');
+    }
+
+    &:has(span + small) {
+      @include list-informative-style-subtitle('small');
+    }
+
+    &:has(span + p) {
+      @include list-informative-style-subtitle('p');
+    }
   }
 }
 
 /* === Custom styles === */
 
 .list-informative-ul {
-  @include list-informative-style($list-informative-ul-position-left, $list-informative-ul-margin);
+  @include list-informative-style();
 }
 
 .list-informative-ol {
-  @include list-informative-style($list-informative-ol-position-left, $list-informative-ol-margin);
+  @include list-informative-style();
 }
 
 .unstyled {
