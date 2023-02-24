@@ -1,6 +1,7 @@
 /* === Variable and mixins overides === */
 
 $card-border-radius: $border-radius-lg;
+$card-spacer-xs: 0.25rem;
 $card-spacer: 1rem;
 $card-spacer-sm: 0.75rem;
 $card-spacer-lg: 1.5rem;
@@ -56,6 +57,7 @@ $card-panel-img-mt: 1.25rem;
 $card-panel-card-body-pl: 1rem;
 $panel-deck-card-mb: 1.5rem;
 $panel-deck-card-mr: 2rem;
+$panel-information: 5rem;
 
 $panel-spacer-lg: 2rem;
 $panel-title-margin-vertical: 2rem 0 0.813rem 0;
@@ -539,6 +541,33 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       }
     }
   }
+
+  &.panel-contact {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      width: $panel-information;
+      height: $panel-information;
+      border-radius: $card-border-radius;
+    }
+
+    .panel-body {
+      margin: 0 $card-spacer-sm 0 $card-spacer-sm;
+
+      h4 {
+        margin-bottom: $card-spacer-xs;
+      }
+
+      & > p {
+        margin-bottom: 2px;
+      }
+
+      & > p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .card-deck {
@@ -641,6 +670,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 }
+
 .card-deck.max-cards-3.card-column {
   .card {
     max-width: calc(calc(100% / 3) - 30px);
@@ -664,6 +694,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 }
+
 .card-deck.max-cards-1.card-column {
   .card {
     max-width: calc(calc(100% / 3) - 30px);
