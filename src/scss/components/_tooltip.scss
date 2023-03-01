@@ -86,8 +86,8 @@ $tooltip-border-radius: 0.5rem;
 
 [data-tooltip][data-flow="top-left"]::before,
 [data-tooltip][data-flow="top-left"]::after {
-  left: 40%;
-  transform: translate(-10%, -8px);
+  left: 50%;
+  transform: translate(-5%, -8px);
 }
 
 //TOP RIGHT 
@@ -103,8 +103,8 @@ $tooltip-border-radius: 0.5rem;
 
 [data-tooltip][data-flow="top-right"]::before,
 [data-tooltip][data-flow="top-right"]::after {
-  right: 40%;
-  transform: translate(10%, -8px);
+  right: 50%;
+  transform: translate(5%, -8px);
 }
 
 //BOTTOM 
@@ -137,8 +137,8 @@ $tooltip-border-radius: 0.5rem;
 
 [data-tooltip][data-flow="bottom-left"]::before,
 [data-tooltip][data-flow="bottom-left"]::after {
-  left: 40%;
-  transform: translate(-10%, 8px);
+  left: 50%;
+  transform: translate(-5%, 8px);
 }
 
 //BOTTOM RIGHT 
@@ -154,8 +154,8 @@ $tooltip-border-radius: 0.5rem;
 
 [data-tooltip][data-flow="bottom-right"]::before,
 [data-tooltip][data-flow="bottom-right"]::after {
-  right: 40%;
-  transform: translate(10%, 8px);
+  right: 50%;
+  transform: translate(5%, 8px);
 }
 
 //LEFT 
