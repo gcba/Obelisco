@@ -1,13 +1,15 @@
+/* === Custom variables and mixins === */
+
 $list-group-color: $grisulado-900;
 $list-group-color-hover: $blue;
 $list-group-border: 8px;
 
 $padding-card-access-body: 1.5rem;
 $padding-card-access-body-list: 1.5rem 1.5rem 0;
-$padding-access-option-item-sm: 10px 1.5rem;
+$padding-access-option-item-sm: 0.75rem 1.625rem;
 $padding-title-option: 1rem 1.5rem 0;
 $padding-title-option-first-child: 0.5rem 1.5rem 0;
-$font-size-icon-card: 2.5rem;
+$font-size-icon-card: 1.6669rem;
 $card-size: 64px;
 $font-title-option: 17px;
 
@@ -23,10 +25,9 @@ $no-text-decoration: none;
 $margin-clearfix: 1rem 1.5rem 0.8rem;
 $border-clearfix: 2px solid $grisulado-50;
 
-$list-gorup-padding-y: spaceUnits(6);
-$list-gorup-padding-x: spaceUnits(4);
+$list-group-padding-x: spaceUnits(4);
 
-$list-gorup-category-margin: spaceUnits(2);
+$list-group-category-margin: spaceUnits(2);
 
 $list-group-icon-arrow: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(56, 72, 92);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>');
 $list-group-icon-arrow-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>');
@@ -55,8 +56,19 @@ a.list-group-item {
   border: none;
   box-shadow: $box-shadow-access;
   border-radius: $list-group-border;
-  margin-bottom: 1rem;
-  padding: $list-gorup-padding-y $list-gorup-padding-x;
+  padding: 1.5rem;
+
+  .access-title {
+    .bx {
+      font-size: 1.25rem;
+    }
+  }
+
+  &:not(.item-sm) {
+    @include media-breakpoint-down(xs) {
+      padding: 1.125rem !important;
+    }
+  }
 
   &:visited {
     color: $list-group-color;
@@ -131,6 +143,43 @@ a.list-group-item {
     }
   }
 
+  &:active,
+  &.active {
+    box-shadow: $box-shadow-access-focus;
+    background-color: unset;
+
+    &:not(:focus) {
+      color: $list-group-color-hover;
+    }
+
+    &.list-group-item-logout {
+      box-shadow: $box-shadow-access-hover-danger;
+    }
+
+    .access-title {
+      text-decoration: underline;
+    }
+
+    .access-content {
+      width: 100%;
+
+      .access-title {
+        color: $list-group-color-hover;
+        text-decoration: underline;
+      }
+
+      .access-text {
+        color: $list-group-color-hover;
+        text-decoration: $no-text-decoration !important;
+      }
+    }
+
+    &:after {
+      content: $list-group-icon-arrow-hover;
+      @include float-height-icon;
+    }
+  }
+
   &:after {
     content: $list-group-icon-arrow;
     @include float-height-icon;
@@ -138,9 +187,21 @@ a.list-group-item {
 
   &.item-sm {
     color: $list-group-color;
-    padding: 1rem;
+    padding: 0.75rem 1.5rem;
     @include display-flex-between;
     align-items: flex-start;
+
+    &:has(i) {
+      padding: 0.75rem 1.625rem;
+
+      i {
+        margin-right: 0.875rem;
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding: 0.5rem 1.125rem !important;
+      }
+    }
 
     &:hover,
     &.hover {
@@ -180,6 +241,10 @@ a.list-group-item {
           text-decoration: $no-text-decoration;
         }
       }
+    }
+
+    .bx:has(+ .access-content) {
+      font-size: 1.25rem;
     }
 
     .access-content {
@@ -229,17 +294,17 @@ a.list-group-item {
 
     .list-group-item {
       width: 100%;
-
-      &:last-child {
-        margin-bottom: 1rem;
-      }
     }
   }
 
   .list-group-title,
   .list-group-category {
-    padding: $list-gorup-category-margin $list-gorup-padding-x;
+    padding: $list-group-category-margin $list-group-padding-x;
     margin: 0;
+  }
+
+  .no-shadow {
+    box-shadow: none;
   }
 }
 
@@ -285,8 +350,7 @@ a.list-group-item {
 
         &.descriptive {
           color: $blue;
-          font-size: 24px;
-          font-weight: 900;
+          font-weight: 600;
         }
       }
 
@@ -295,12 +359,21 @@ a.list-group-item {
         flex-direction: row-reverse;
         justify-content: flex-end;
       }
+
+      @include media-breakpoint-down(xs) {
+        padding: 1rem;
+      }
     }
 
     .container-access {
       .clearfix {
         margin: $margin-clearfix;
         border-top: $border-clearfix;
+
+        &.clearfix-category {
+          border-top: 4px solid #e6ebf0;
+          margin: 0.4375rem 1.5rem 0.25rem;
+        }
       }
 
       .access-option {
@@ -349,7 +422,7 @@ a.list-group-item {
     }
 
     .list-group-item {
-      padding: $list-gorup-padding-y;
+      padding: 1.625rem;
       margin-top: auto;
       width: 100%;
     }
@@ -363,7 +436,9 @@ a.list-group-item {
     margin-bottom: 0 !important;
     border-radius: $border-radius-card-item !important;
     @include display-flex-between;
+
+    i {
+      margin-right: 0.375rem;
+    }
   }
 }
-
-/* === Mobile styles === */
