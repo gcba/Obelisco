@@ -1,0 +1,198 @@
+/* === Variable and mixins overides === */
+
+/* === Custom variables and mixins === */
+
+/* === Custom styles === */
+
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+//TEXT
+[data-tooltip]:before,
+[data-tooltip]:after {
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 400;
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  display: none;
+  opacity: 0;
+}
+
+//ARROW
+[data-tooltip]:before {
+  content: "";
+  border: 8px solid transparent;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+//BOX
+[data-tooltip]:after {
+  content: attr(data-tooltip);
+  text-align: center;
+  min-width: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 16px;
+  border-radius: 8px;
+  background: #505e70;
+  color: #FFFFFF;
+  z-index: 99;
+}
+
+//SHOW TOOLTIP
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  display: block;
+  opacity: 1;
+}
+
+//TOP 
+[data-tooltip][data-flow="top"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #505e70;
+}
+
+[data-tooltip][data-flow="top"]::after {
+  bottom: calc(100% + 6px);
+}
+
+[data-tooltip][data-flow="top"]::before,
+[data-tooltip][data-flow="top"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, -4px);
+  transform: translate(-50%, -8px);
+}
+
+//BOTTOM 
+[data-tooltip][data-flow="bottom"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #505E70;
+}
+
+[data-tooltip][data-flow="bottom"]::after {
+  top: calc(100% + 6px);
+}
+
+[data-tooltip][data-flow="bottom"]::before,
+[data-tooltip][data-flow="bottom"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, 8px);
+  transform: translate(-50%, 8px);
+}
+
+//LEFT 
+[data-tooltip][data-flow="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #505E70;
+  left: calc(0em - 6px);
+  -webkit-transform: translate(-8px, -50%);
+  transform: translate(-8px, -50%);
+}
+
+[data-tooltip][data-flow="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  -webkit-transform: translate(-8px, -50%);
+  transform: translate(-8px, -50%);
+}
+
+//RIGHT 
+[data-tooltip][data-flow="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #505E70;
+  right: calc(0em - 6px);
+  -webkit-transform: translate(8px, -50%);
+  transform: translate(8px, -50%);
+}
+
+[data-tooltip][data-flow="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  -webkit-transform: translate(8px, -50%);
+  transform: translate(8px, -50%);
+}
+
+//TOP LEFT 
+[data-tooltip][data-flow="top-left"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #505e70;
+}
+
+[data-tooltip][data-flow="top-left"]::after {
+  bottom: calc(100% + 6px);
+}
+
+[data-tooltip][data-flow="top-left"]::before,
+[data-tooltip][data-flow="top-left"]::after {
+  left: 40%;
+  transform: translate(-10%, -8px);
+}
+
+//TOP RIGHT 
+[data-tooltip][data-flow="top-right"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #505e70;
+}
+
+[data-tooltip][data-flow="top-right"]::after {
+  bottom: calc(100% + 6px);
+}
+
+[data-tooltip][data-flow="top-right"]::before,
+[data-tooltip][data-flow="top-right"]::after {
+  right: 40%;
+  transform: translate(10%, -8px);
+}
+
+//BOTTOM LEFT 
+[data-tooltip][data-flow="bottom-left"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #505E70;
+}
+
+[data-tooltip][data-flow="bottom-left"]::after {
+  top: calc(100% + 6px);
+}
+
+[data-tooltip][data-flow="bottom-left"]::before,
+[data-tooltip][data-flow="bottom-left"]::after {
+  left: 40%;
+  -webkit-transform: translate(-50%, 8px);
+  transform: translate(-10%, 8px);
+}
+
+//BOTTOM RIGHT 
+[data-tooltip][data-flow="bottom-right"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #505E70;
+}
+
+[data-tooltip][data-flow="bottom-right"]::after {
+  top: calc(100% + 6px);
+}
+
+[data-tooltip][data-flow="bottom-right"]::before,
+[data-tooltip][data-flow="bottom-right"]::after {
+  right: 40%;
+  -webkit-transform: translate(-50%, 8px);
+  transform: translate(10%, 8px);
+}
+
+//TEXTO VACIO
+[data-tooltip=""]::after,
+[data-tooltip=""]::before {
+  display: none !important;
+}
