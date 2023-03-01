@@ -8,12 +8,44 @@ $tooltip-border-radius: 0.5rem;
 
 /* === Custom variables and mixins === */
 
+@mixin positionTootip ($positionY, $positionX, $translateY, $translateX, $borderPositionColor) {
+  &:before {
+    #{$positionY}: 100%;
+    #{border-#{$positionY}-width}: 0;
+    #{border-#{$borderPositionColor}-color}: $grisulado-700;
+  }
+  &:after {
+    #{$positionY}: calc(100% + 6px);
+  }
+  &:before,
+  &:after {
+    #{$positionX}: 50%;
+    transform: translate($translateX, $translateY);
+  }
+}
+
+@mixin positionTootipX ($positionTop, $positionX, $borderPositionColor, $translateY, $translateX) {
+  &:before {
+    top: $positionTop;
+    #{border-#{$positionX}-width}: 0;
+    #{border-#{$borderPositionColor}-color}: $grisulado-700;
+    #{$borderPositionColor}: calc(0em - 6px);
+    transform: translate($translateX, $translateY);
+  }
+  &:after {
+    top: 50%;
+    #{$positionX}: calc(100% + 5px);
+    transform: translate($translateX, $translateY);
+  }
+}
+
 /* === Custom styles === */
 
 //POINTER
 [data-tooltip] {
   position: relative;
   cursor: pointer;
+  display: inline-block;
 }
 
 //TEXT
@@ -32,7 +64,6 @@ $tooltip-border-radius: 0.5rem;
 [data-tooltip]:before {
   content: "";
   border: $tooltip-border solid transparent;
-  border-radius: $tooltip-border-radius ;
   z-index: 100;
 }
 
@@ -52,144 +83,57 @@ $tooltip-border-radius: 0.5rem;
 //SHOW TOOLTIP
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
-  display: block;
+  display: inline-block;
   opacity: 1;
-}
-
-//TOP 
-[data-tooltip][data-flow="top"]::before {
-  bottom: 100%;
-  border-bottom-width: 0;
-  border-top-color: $grisulado-700;
-}
-
-[data-tooltip][data-flow="top"]::after {
-  bottom: calc(100% + 6px);
-}
-
-[data-tooltip][data-flow="top"]::before,
-[data-tooltip][data-flow="top"]::after {
-  left: 50%;
-  transform: translate(-50%, -8px);
-}
-
-//TOP LEFT 
-[data-tooltip][data-flow="top-left"]::before {
-  bottom: 100%;
-  border-bottom-width: 0;
-  border-top-color: $grisulado-700;
-}
-
-[data-tooltip][data-flow="top-left"]::after {
-  bottom: calc(100% + 6px);
-}
-
-[data-tooltip][data-flow="top-left"]::before,
-[data-tooltip][data-flow="top-left"]::after {
-  left: 50%;
-  transform: translate(-5%, -8px);
-}
-
-//TOP RIGHT 
-[data-tooltip][data-flow="top-right"]::before {
-  bottom: 100%;
-  border-bottom-width: 0;
-  border-top-color: $grisulado-700;
-}
-
-[data-tooltip][data-flow="top-right"]::after {
-  bottom: calc(100% + 6px);
-}
-
-[data-tooltip][data-flow="top-right"]::before,
-[data-tooltip][data-flow="top-right"]::after {
-  right: 50%;
-  transform: translate(5%, -8px);
-}
-
-//BOTTOM 
-[data-tooltip][data-flow="bottom"]::before {
-  top: 100%;
-  border-top-width: 0;
-  border-bottom-color: $grisulado-700;
-}
-
-[data-tooltip][data-flow="bottom"]::after {
-  top: calc(100% + 6px);
-}
-
-[data-tooltip][data-flow="bottom"]::before,
-[data-tooltip][data-flow="bottom"]::after {
-  left: 50%;
-  transform: translate(-50%, 8px);
-}
-
-//BOTTOM LEFT 
-[data-tooltip][data-flow="bottom-left"]::before {
-  top: 100%;
-  border-top-width: 0;
-  border-bottom-color: $grisulado-700;
-}
-
-[data-tooltip][data-flow="bottom-left"]::after {
-  top: calc(100% + 6px);
-}
-
-[data-tooltip][data-flow="bottom-left"]::before,
-[data-tooltip][data-flow="bottom-left"]::after {
-  left: 50%;
-  transform: translate(-5%, 8px);
-}
-
-//BOTTOM RIGHT 
-[data-tooltip][data-flow="bottom-right"]::before {
-  top: 100%;
-  border-top-width: 0;
-  border-bottom-color: $grisulado-700;
-}
-
-[data-tooltip][data-flow="bottom-right"]::after {
-  top: calc(100% + 6px);
-}
-
-[data-tooltip][data-flow="bottom-right"]::before,
-[data-tooltip][data-flow="bottom-right"]::after {
-  right: 50%;
-  transform: translate(5%, 8px);
-}
-
-//LEFT 
-[data-tooltip][data-flow="left"]::before {
-  top: 50%;
-  border-right-width: 0;
-  border-left-color: $grisulado-700;
-  left: calc(0em - 6px);
-  transform: translate(-8px, -50%);
-}
-
-[data-tooltip][data-flow="left"]::after {
-  top: 50%;
-  right: calc(100% + 5px);
-  transform: translate(-8px, -50%);
-}
-
-//RIGHT 
-[data-tooltip][data-flow="right"]::before {
-  top: 50%;
-  border-left-width: 0;
-  border-right-color: $grisulado-700;
-  right: calc(0em - 6px);
-  transform: translate(8px, -50%);
-}
-
-[data-tooltip][data-flow="right"]::after {
-  top: 50%;
-  left: calc(100% + 5px);
-  transform: translate(8px, -50%);
 }
 
 //VOID
 [data-tooltip=""]::after,
 [data-tooltip=""]::before {
   display: none !important;
+}
+
+//-------------------DIRECTIONS-----------------
+//TOP 
+[data-tooltip][data-flow="top"] {
+  @include positionTootip(bottom, left, -8px, -50%, top);
+}
+
+[data-tooltip][data-flow="top"]:not(.btn) {
+  @include positionTootip(bottom, left, -4px, -50%, top);
+}
+
+//TOP RIGHT 
+[data-tooltip][data-flow="top-right"] {
+  @include positionTootip(bottom, left, -8px, -5%, top);
+}
+
+//TOP LEFT 
+[data-tooltip][data-flow="top-left"] {
+  @include positionTootip(bottom, right, -8px, 5%, top);
+}
+
+//BOTTOM 
+[data-tooltip][data-flow="bottom"] {
+  @include positionTootip(top, left, 8px, -50%, bottom);
+}
+
+//BOTTOM RIGHT 
+[data-tooltip][data-flow="bottom-right"] {
+  @include positionTootip(top, left, 8px, -5%, bottom);
+}
+
+//BOTTOM LEFT 
+[data-tooltip][data-flow="bottom-left"] {
+  @include positionTootip(top, right, 8px, 5%, bottom);
+}
+
+//LEFT
+[data-tooltip][data-flow="left"] {
+  @include positionTootipX(50%, right, left, -50%, -8px);
+}
+
+//RIGHT 
+[data-tooltip][data-flow="right"] {
+  @include positionTootipX(50%, left, right, -50%, 8px);
 }

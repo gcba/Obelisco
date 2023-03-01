@@ -14,6 +14,18 @@ export default {
 export const Tooltip = (): JSX.Element => {
   return (
     <div className="tooltip-container">
+      <div data-tooltip="Esta es la descripción de un tooltip" data-flow="top">
+        <span className="material-icons-round">info</span>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div data-tooltip="Esta es la descripción de un tooltip" data-flow="top">
+        <i className="bx bxs-car"></i>
+      </div>
+      <br />
+      <br />
+      <br />
       <button
         type="button"
         className="btn btn-link"
@@ -94,15 +106,19 @@ export const Tooltip = (): JSX.Element => {
       <br />
       <br />
       <br />
+      <br />
+      <br />
       <p>
-        Lorem{' '}
+        Lorem ipsum dolor, sit amet consectetur{' '}
         <a href="" data-tooltip="Esta es la descripción de un tooltip" data-flow="top">
           LINK
         </a>{' '}
-        ipsum dolor, sit amet consectetur adipisicing elit. Debitis molestiae suscipit laudantium nisi
-        corruptipraesentium perspiciatis obcaecati consectetur, est illum dolorum aperiam sint deleniti molestias fugit
-        esse excepturi. Laboriosam, sint.
+        elit. Debitis molestiae suscipit laudantium nisi corruptipraesentium perspiciatis obcaecati consectetur, est
+        illum dolorum aperiam sint deleniti molestias fugit esse excepturi. Laboriosam, sint.
       </p>
+      <br />
+      <br />
+      <br />
     </div>
   );
 };
