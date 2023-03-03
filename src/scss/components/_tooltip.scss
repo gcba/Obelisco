@@ -22,7 +22,7 @@ $tooltip-border-radius: 0.5rem;
     #{$positionX}: calc( 50% - 8px);
     transform: translate($translateX, $translateY);
   }
-  &::before{
+  &:before{
     transform: rotate(45deg);
     background-color: $grisulado-700;
     border-radius: 2px;
@@ -45,7 +45,7 @@ $tooltip-border-radius: 0.5rem;
     #{$positionX}: calc(100% + 5px);
     transform: translate($translateX, $translateY);
   }
-  &::before{
+  &:before{
     transform: rotate(45deg);
     background-color: $grisulado-700;
     border-radius: 2px;
@@ -53,6 +53,190 @@ $tooltip-border-radius: 0.5rem;
     height: 16px;
     #{$arrowX}: $arrowXValue;
     #{$arrowY}: $arrowYValue;
+  }
+}
+
+@mixin tooltip ($tag: '') {
+
+  //-------------------DIRECTIONS-----------------
+  //TOP 
+  #{$tag}[data-tooltip][data-flow="top"] {
+    @if $tag =='a' {
+      @include positionTootip(bottom, left, -6px, -50%, top, top, -22px);
+    }
+
+    @else if $tag =='div' {
+      @include positionTootip(bottom, left, -10px, -50%, top, top, -26px);
+    }
+
+    @else {
+      @include positionTootip(bottom, left, -12px, -50%, top, top, -28px);
+    }
+  }
+
+  //TOP RIGHT 
+  #{$tag}[data-tooltip][data-flow="top-right"] {
+    @if $tag =='a' {
+      @include positionTootip(bottom, left, -6px, -5%, top, top, -22px);
+    }
+
+    @else if $tag =='div' {
+      @include positionTootip(bottom, left, -10px, -5%, top, top, -26px);
+    }
+
+    @else {
+      @include positionTootip(bottom, left, -12px, -5%, top, top, -28px);
+    }
+  }
+
+  //TOP LEFT 
+  #{$tag}[data-tooltip][data-flow="top-left"] {
+    @if $tag =='a' {
+      @include positionTootip(bottom, right, -6px, 5%, top, top, -22px);
+    }
+
+    @else if $tag =='div' {
+      @include positionTootip(bottom, right, -10px, 5%, top, top, -26px);
+    }
+
+    @else {
+      @include positionTootip(bottom, right, -12px, 5%, top, top, -28px);
+    }
+  }
+
+  //BOTTOM 
+  #{$tag}[data-tooltip][data-flow="bottom"] {
+    @if $tag =='a' {
+      @include positionTootip(top, left, 8px, -50%, top, top, 32px);
+    }
+
+    @else if $tag =='div' {
+      @include positionTootip(top, left, 14px, -50%, bottom, top, 60px);
+    }
+
+    @else {
+      @include positionTootip(top, left, 14px, -50%, bottom, top, 50px);
+    }
+  }
+
+  //BOTTOM RIGHT 
+  #{$tag}[data-tooltip][data-flow="bottom-right"] {
+    @if $tag =='a' {
+      @include positionTootip(top, left, 8px, -5%, bottom, top, 32px);
+    }
+
+    @else if $tag =='div' {
+      @include positionTootip(top, left, 14px, -5%, bottom, top, 60px);
+    }
+
+    @else {
+      @include positionTootip(top, left, 14px, -5%, bottom, top, 50px);
+    }
+  }
+
+  //BOTTOM LEFT 
+  #{$tag}[data-tooltip][data-flow="bottom-left"] {
+    @if $tag =='a' {
+      @include positionTootip(top, right, 8px, 5%, bottom, top, 32px);
+    }
+
+    @else if $tag =='div' {
+      @include positionTootip(top, right, 14px, 5%, bottom, top, 60px);
+    }
+
+    @else {
+      @include positionTootip(top, right, 14px, 5%, bottom, top, 50px);
+    }
+  }
+
+  //LEFT
+  #{$tag}[data-tooltip][data-flow="left"] {
+    @if $tag =='a' {
+      @include positionTootipX(50%, right, left, -50%, -12px, left, top, -28px, calc(50% - 8px));
+    }
+
+    @else if $tag =='div' {
+      @include positionTootipX(50%, right, left, -50%, -14px, left, top, -28px, calc(50% - 8px));
+    }
+
+    @else {
+      @include positionTootipX(50%, right, left, -50%, -14px, left, top, -28px, calc(50% - 8px));
+    }
+  }
+
+  //LEFT-TOP
+  #{$tag}[data-tooltip][data-flow="left-top"] {
+    @if $tag =='a' {
+      @include positionTootipX(40%, right, left, calc(-100% + 32px), -12px, left, top, -28px, calc(50% - 8px));
+    }
+
+    @else if $tag =='div' {
+      @include positionTootipX(40%, right, left, calc(-100% + 32px), -14px, left, top, -28px, calc(50% - 8px));
+    }
+
+    @else {
+      @include positionTootipX(40%, right, left, calc(-100% + 32px), -14px, left, top, -28px, calc(50% - 8px));
+    }
+  }
+
+  //LEFT-BOTTOM
+  #{$tag}[data-tooltip][data-flow="left-bottom"] {
+    @if $tag =='a' {
+      @include positionTootipX(60%, right, left, calc(0% - 32px), -12px, left, top, -28px, calc(50% - 8px));
+    }
+
+    @else if $tag =='div' {
+      @include positionTootipX(60%, right, left, calc(0% - 32px), -14px, left, top, -28px, calc(50% - 8px));
+    }
+
+    @else {
+      @include positionTootipX(60%, right, left, calc(0% - 32px), -14px, left, top, -28px, calc(50% - 8px));
+    }
+  }
+
+  //RIGHT 
+  #{$tag}[data-tooltip][data-flow="right"] {
+    @if $tag =='a' {
+      @include positionTootipX(50%, left, right, -50%, 14px, right, top, -28px, calc(50% - 8px));
+    }
+
+    @else if $tag =='div' {
+      @include positionTootipX(50%, left, right, -50%, 14px, right, top, -28px, calc(50% - 8px));
+    }
+
+    @else {
+      @include positionTootipX(50%, left, right, -50%, 14px, right, top, -28px, calc(50% - 8px));
+    }
+  }
+
+  //RIGHT-TOP
+  #{$tag}[data-tooltip][data-flow="right-top"] {
+    @if $tag =='a' {
+      @include positionTootipX(40%, left, right, calc(-100% + 32px), 14px, right, top, -28px, calc(50% - 8px));
+    }
+
+    @else if $tag =='div' {
+      @include positionTootipX(40%, left, right, calc(-100% + 32px), 14px, right, top, -28px, calc(50% - 8px));
+    }
+
+    @else {
+      @include positionTootipX(40%, left, right, calc(-100% + 32px), 14px, right, top, -28px, calc(50% - 8px));
+    }
+  }
+
+  //RIGHT-BOTTOM
+  #{$tag}[data-tooltip][data-flow="right-bottom"] {
+    @if $tag =='a' {
+      @include positionTootipX(60%, left, right, calc(0% - 32px), 14px, right, top, -28px, calc(50% - 8px));
+    }
+
+    @else if $tag =='div' {
+      @include positionTootipX(60%, left, right, calc(0% - 32px), 14px, right, top, -28px, calc(50% - 8px));
+    }
+
+    @else {
+      @include positionTootipX(60%, left, right, calc(0% - 32px), 14px, right, top, -28px, calc(50% - 8px));
+    }
   }
 }
 
@@ -100,7 +284,7 @@ $tooltip-border-radius: 0.5rem;
 //SHOW TOOLTIP
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
-  display: inline-block;
+  display: block;
   opacity: 1;
 }
 
@@ -110,167 +294,16 @@ $tooltip-border-radius: 0.5rem;
   display: none !important;
 }
 
-//-------------------DIRECTIONS-----------------
-@mixin tooltip ($tag: '') {
-
-  //TOP 
-  #{$tag}[data-tooltip][data-flow="top"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootip(bottom, left, -8px, -50%, top, top, -24px);
-    }
-  }
-
-  //TOP RIGHT 
-  #{$tag}[data-tooltip][data-flow="top-right"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootip(bottom, left, -8px, -5%, top, top, -24px);
-    }
-  }
-
-  //TOP LEFT 
-  #{$tag}[data-tooltip][data-flow="top-left"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootip(bottom, right, -8px, 5%, top, top, -24px);
-    }
-  }
-
-  //BOTTOM 
-  #{$tag}[data-tooltip][data-flow="bottom"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootip(top, left, 8px, -50%, bottom, top, 46px);
-    }
-  }
-
-  //BOTTOM RIGHT 
-  #{$tag}[data-tooltip][data-flow="bottom-right"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootip(top, left, 8px, -5%, bottom, top, 46px);
-    }
-  }
-
-  //BOTTOM LEFT 
-  #{$tag}[data-tooltip][data-flow="bottom-left"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootip(top, right, 8px, 5%, bottom, top, 46px);
-    }
-  }
-
-  //LEFT
-  #{$tag}[data-tooltip][data-flow="left"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootipX(50%, right, left, -50%, -8px, left, top, -24px, calc(50% - 8px));
-    }
-  }
-
-  //LEFT-TOP
-  [data-tooltip][data-flow="left-top"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootipX(40%, right, left, calc(-100% + 32px), -8px, left, top, -24px, calc(50% - 8px));
-    }
-  }
-
-  //LEFT-BOTTOM
-  [data-tooltip][data-flow="left-bottom"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootipX(60%, right, left, calc(0% - 32px), -8px, left, top, -24px, calc(50% - 8px));
-    }
-  }
-
-  //RIGHT 
-  #{$tag}[data-tooltip][data-flow="right"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootipX(50%, left, right, -50%, 8px, right, top, -24px, calc(50% - 8px));
-    }
-  }
-
-  //RIGHT-TOP
-  [data-tooltip][data-flow="right-top"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootipX(40%, left, right, calc(-100% + 32px), 8px, right, top, -24px, calc(50% - 8px));
-    }
-  }
-
-  //RIGHT-BOTTOM
-  [data-tooltip][data-flow="right-bottom"] {
-    @if $tag =='a' {}
-
-    @else if $tag =='span' {}
-
-    @else if $tag =='i' {}
-
-    @else {
-      @include positionTootipX(60%, left, right, calc(0% - 32px), 8px, right, top, -24px, calc(50% - 8px));
-    }
-  }
+.icon-box {
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @include tooltip();
 @include tooltip(a);
-@include tooltip(span);
-@include tooltip(i);
+@include tooltip(div);
