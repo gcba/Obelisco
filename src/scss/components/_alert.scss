@@ -17,6 +17,8 @@ $alert-text-distance: spaceUnits(2);
 
 // Íconos para cada tipo de alerta
 
+$close-icon: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1)'><path d='m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z'></path></svg>");
+
 $alert-icons: (
   'success':
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(38, 135, 74, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>'),
@@ -66,22 +68,6 @@ $theme-colors: map-merge(
   counter-reset: section;
   padding-left: $alert-padding-y + $alert-padding-left;
 
-  &::before {
-    content: '';
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: $alert-icon-size;
-    height: $alert-icon-size;
-    inset: $alert-icon-position-top 0 0 $alert-icon-position-left;
-  }
-
-  @each $color, $value in $theme-colors {
-    &.alert-#{$color} {
-      @include alert-icon($color);
-    }
-  }
-
   p,
   ol {
     margin-bottom: $alert-text-distance;
@@ -104,6 +90,10 @@ $theme-colors: map-merge(
         counter-increment: section;
         content: counter(section) '. ';
       }
+
+      span {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -116,6 +106,40 @@ $theme-colors: map-merge(
 
     &:visited {
       color: $blue;
+    }
+  }
+
+  &:not(.alert-dismissible) {
+    &::before {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: $alert-icon-size;
+      height: $alert-icon-size;
+      inset: $alert-icon-position-top 0 0 $alert-icon-position-left;
+    }
+
+    @each $color, $value in $theme-colors {
+      &.alert-#{$color} {
+        @include alert-icon($color);
+      }
+    }
+  }
+
+  &.alert-dismissible {
+    padding-left: 1.5rem;
+    padding-right: $alert-padding-y + $alert-padding-left;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .close {
+      margin: 1.4rem;
+      padding: 0.39rem;
+      background: transparent $close-icon center/1.5rem auto no-repeat;
+      opacity: 0.75;
     }
   }
 }
