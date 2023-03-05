@@ -34,13 +34,13 @@ $calc-left-and-right-y: calc(50% - 8px);
 
 /* === Custom variables and mixins === */
 
-@mixin tooltipY($positionX, $positionY, $translateX, $translateY, $arrowX, $arrowValue) {
+@mixin tooltipY($positionX, $positionY, $translateX, $translateY, $arrowX, $arrowValue, $x: calc(50% - 8px), $y: calc(100%)) {
 
   //Box
   &:before,
   &:after {
-    #{$positionX}: calc(50% - 8px);
-    #{$positionY}: calc(100%);
+    #{$positionX}: $x;
+    #{$positionY}: $y;
     transform: translate($translateX, $translateY);
   }
 
@@ -55,12 +55,12 @@ $calc-left-and-right-y: calc(50% - 8px);
   }
 }
 
-@mixin tooltipX($positionX, $translateX, $translateY, $arrowX, $arrowY, $arrowXValue, $arrowYValue) {
+@mixin tooltipX($positionX, $translateX, $translateY, $arrowX, $arrowY, $arrowXValue, $arrowYValue, $x: calc(100%)) {
 
   //Box
   &:after {
     top: 50%;
-    #{$positionX}: calc(100%);
+    #{$positionX}: $x;
     transform: translate($translateX, $translateY);
   }
 
@@ -211,10 +211,12 @@ $calc-left-and-right-y: calc(50% - 8px);
 
   & i {
     font-size: $tooltip-icon-size;
+    height: 20px;
   }
 
   & span {
     font-size: $tooltip-icon-size;
+    height: 20px;
   }
 }
 
@@ -258,27 +260,27 @@ $calc-left-and-right-y: calc(50% - 8px);
 
   //LEFT-TOP
   [data-tooltip][data-flow='left-top'] {
-    @include tooltipY(left, top, -5%, calc(-150%), top, calc(0% - 32px));
+    @include tooltipX(left, $calc-right, calc(-50%), left, top, calc(100% + 16px), calc(50% - 8px));
   }
 
   //LEFT-BOTTOM
   [data-tooltip][data-flow='left-bottom'] {
-    @include tooltipY(left, top, -5%, $calc-bottom, top, $calc-top-and-bottom);
+    @include tooltipX(left, $calc-right, calc(-50%), left, top, calc(100% + 16px), calc(50% - 8px));
   }
 
   //RIGHT
   [data-tooltip][data-flow='right'] {
-    @include tooltipX(right, calc(-150% + 32px), calc(-50%), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
+    @include tooltipX(left, calc(-100%), calc(-50%), left, top, calc(0% - 24px), calc(50% - 8px), calc(0% - 16px));
   }
 
   //RIGHT-TOP
   [data-tooltip][data-flow='right-top'] {
-    @include tooltipY(left, top, calc(-100% + 32px), calc(-150%), top, calc(0% - 32px));
+    @include tooltipX(left, calc(-100%), calc(-50%), left, top, calc(0% - 24px), calc(50% - 8px), calc(0% - 16px));
   }
 
   //RIGHT-BOTTOM
   [data-tooltip][data-flow='right-bottom'] {
-    @include tooltipY(left, top, calc(-100% + 32px), $calc-bottom, top, $calc-top-and-bottom);
+    @include tooltipX(left, calc(-100%), calc(-50%), left, top, calc(0% - 24px), calc(50% - 8px), calc(0% - 16px));
   }
 }
 
