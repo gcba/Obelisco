@@ -2,12 +2,94 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 4rem 0;
+  padding: 5rem 0 2rem 0;
 
   .tooltip-row {
+    width: 100%;
     display: flex;
-    gap: 10px;
     margin-bottom: 2rem;
+  }
+
+  .center {
+    justify-content: center;
+
+    &>*:nth-child(2) {
+      margin: 0 8px;
+    }
+  }
+
+  .left {
+    justify-content: center;
+
+    &>*:nth-child(2) {
+      margin: 0 8px;
+    }
+  }
+
+  .right {
+    justify-content: center;
+
+    &>*:nth-child(2) {
+      margin: 0 8px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tooltip-container {
+    .center {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      &>* {
+        margin-bottom: 1rem;
+      }
+
+      &>*:nth-child(1) {
+        align-self: flex-start;
+      }
+
+      &>*:nth-child(2) {
+        align-self: center;
+        margin: 0 0 1rem 0;
+      }
+
+      &>*:nth-child(3) {
+        align-self: flex-end;
+      }
+    }
+
+    .left {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      &>* {
+        align-self: flex-start;
+        margin-bottom: 1rem;
+        margin-left: 0px;
+      }
+
+      &>*:nth-child(2) {
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    .right {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      &>* {
+        align-self: flex-end;
+        margin-bottom: 1rem;
+        margin-right: 0px;
+      }
+
+      &>*:nth-child(2) {
+        margin: 0 0 1rem 0;
+      }
+    }
   }
 }
