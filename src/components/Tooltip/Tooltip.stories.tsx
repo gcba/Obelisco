@@ -98,7 +98,7 @@ export const Tooltip = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="divider"></div>
+      <hr />
 
       <div className="tooltip-row center">
         <div className="tooltip" data-tooltip="Esta es la descripción de un tooltip" data-flow="top-left">
@@ -160,7 +160,7 @@ export const Tooltip = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="divider"></div>
+      <hr />
 
       <div className="tooltip-row center">
         <div className="tooltip" data-tooltip="Esta es la descripción de un tooltip" data-flow="top-left">
@@ -222,7 +222,7 @@ export const Tooltip = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="divider"></div>
+      <hr />
 
       <div className="tooltip-row center">
         <div className="tooltip" data-tooltip="Esta es la descripción de un tooltip" data-flow="top-left">
@@ -284,7 +284,7 @@ export const Tooltip = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="divider"></div>
+      <hr />
 
       <div className="tooltip-row center">
         <div

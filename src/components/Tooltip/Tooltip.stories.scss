@@ -1,3 +1,5 @@
+@import '../../scss/obelisco.scss';
+
 .tooltip-container {
   width: 100%;
   display: flex;
@@ -10,22 +12,8 @@
     margin-bottom: 2rem;
   }
 
-  .center {
-    justify-content: center;
-
-    &>*:nth-child(2) {
-      margin: 0 8px;
-    }
-  }
-
-  .left {
-    justify-content: center;
-
-    &>*:nth-child(2) {
-      margin: 0 8px;
-    }
-  }
-
+  .center,
+  .left,
   .right {
     justify-content: center;
 
@@ -35,24 +23,35 @@
   }
 }
 
-@media (max-width: 768px) {
+@include media-breakpoint-down(md) {
   .tooltip-container {
-    .center {
+    $flex-direction: column;
+    $margin-bottom: 1rem;
+
+    .center,
+    .left,
+    .right {
       width: 100%;
-      flex-direction: column;
+      flex-direction: $flex-direction;
       align-items: center;
 
       &>* {
-        margin-bottom: 1rem;
+        margin-bottom: $margin-bottom;
       }
 
+      &>*:nth-child(2) {
+        margin: 0 0 $margin-bottom 0;
+      }
+    }
+
+    .center {
       &>*:nth-child(1) {
         align-self: flex-start;
       }
 
       &>*:nth-child(2) {
         align-self: center;
-        margin: 0 0 1rem 0;
+        margin: 0 0 $margin-bottom 0;
       }
 
       &>*:nth-child(3) {
@@ -61,34 +60,16 @@
     }
 
     .left {
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-
       &>* {
         align-self: flex-start;
-        margin-bottom: 1rem;
-        margin-left: 0px;
-      }
-
-      &>*:nth-child(2) {
-        margin: 0 0 1rem 0;
+        margin-left: 0;
       }
     }
 
     .right {
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-
       &>* {
         align-self: flex-end;
-        margin-bottom: 1rem;
-        margin-right: 0px;
-      }
-
-      &>*:nth-child(2) {
-        margin: 0 0 1rem 0;
+        margin-right: 0;
       }
     }
   }
