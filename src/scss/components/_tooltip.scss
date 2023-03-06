@@ -32,7 +32,7 @@ $calc-right: calc(0% + 22px);
 $calc-left-and-right-x: calc(0% - 32px);
 $calc-left-and-right-y: calc(50% - 8px);
 $calc-left-x: calc(100% + 16px);
-$calc-right-x: calc(0% - 24px);
+$calc-right-x: calc(0% - 30px);
 
 /* === Custom variables and mixins === */
 
@@ -261,17 +261,17 @@ $calc-right-x: calc(0% - 24px);
 
   //RIGHT
   [data-tooltip][data-flow='right'] {
-    @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 16px));
+    @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
   }
 
   //RIGHT-TOP
   [data-tooltip][data-flow='right-top'] {
-    @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 16px));
+    @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
   }
 
   //RIGHT-BOTTOM
   [data-tooltip][data-flow='right-bottom'] {
-    @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 16px));
+    @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
   }
 }
 
