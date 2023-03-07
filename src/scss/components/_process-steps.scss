@@ -1,14 +1,12 @@
+/* === Custom variables and mixins === */
+
 $list-steps-padding-left: 1.875rem;
 $list-steps-padding-bottom: 1rem;
 $list-steps-line-width: 0.125rem;
 $list-steps-circle-size: 1.25rem;
-$list-steps-circle-active-size: 1.25rem;
 $list-steps-font-color: $grisulado-900;
 
-//Pasos de trámite-Accesos
-$list-steps-list-group-icon-size: 1.25rem;
-$list-steps-list-group-icon-margin-right: 0.625rem;
-$list-steps-list-group-icon-margin-bottom: 0.125rem;
+/* === Custom styles === */
 
 .list-steps {
   @extend .list-unstyled, .flex-column;
