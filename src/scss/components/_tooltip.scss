@@ -6,7 +6,8 @@ $tooltip-font-weight: 400;
 $tooltip-padding: 1rem;
 $tooltip-border: 0.5rem;
 $tooltip-border-radius: 0.5rem;
-$tooltip-width: 18rem;
+$tooltip-max-width: 18rem;
+$tooltip-min-width: 10rem;
 
 //ARROW
 $tooltip-arrow: 1rem;
@@ -36,12 +37,12 @@ $calc-right-x: calc(0% - 30px);
 
 /* === Custom variables and mixins === */
 
-@mixin tooltipY($positionX, $positionY, $translateX, $translateY, $arrowX, $arrowValue) {
+@mixin tooltipY($positionX, $positionY, $translateX, $translateY, $arrowX, $arrowValue, $positionXValue: calc(50% - 8px)) {
 
   //Box
   &:before,
   &:after {
-    #{$positionX}: calc(50% - 8px);
+    #{$positionX}: $positionXValue;
     #{$positionY}: calc(100%);
     transform: translate($translateX, $translateY);
   }
@@ -57,7 +58,29 @@ $calc-right-x: calc(0% - 30px);
   }
 }
 
-@mixin tooltipX($positionX, $translateX, $translateY, $arrowX, $arrowY, $arrowXValue, $arrowYValue, $x: calc(100%)) {
+@mixin tooltipYAlign($positionX, $positionY, $translateX, $translateY, $arrowX, $arrowValue, $positionXValue: calc(50% - 8px), $arrowY: '', $arrowValueY: '') {
+
+  //Box
+  &:before,
+  &:after {
+    #{$positionX}: $positionXValue;
+    #{$positionY}: calc(100%);
+    transform: translate($translateX, $translateY);
+  }
+
+  //Arrow
+  &:before {
+    transform: rotate($tooltip-arrow-rotate);
+    background-color: $grisulado-700;
+    border-radius: $tooltip-arrow-border-radius;
+    width: $tooltip-arrow;
+    height: $tooltip-arrow;
+    #{$arrowX}: $arrowValue;
+    #{$arrowY}: $arrowValueY;
+  }
+}
+
+@mixin tooltipX($positionX, $translateX, $translateY, $arrowX, $arrowY, $arrowXValue, $arrowYValue, $x: calc(100%), $y: 50%) {
 
   //Box
   &:after {
@@ -133,6 +156,7 @@ $calc-right-x: calc(0% - 30px);
 [data-tooltip]:after {
   content: attr(data-tooltip);
   text-align: left;
+  // text-align: center;
   overflow: hidden;
   padding: $tooltip-padding;
   border-radius: $tooltip-border-radius;
@@ -140,7 +164,8 @@ $calc-right-x: calc(0% - 30px);
   color: $white;
   z-index: 99;
   width: max-content;
-  max-width: $tooltip-width;
+  max-width: $tooltip-max-width;
+  // min-width: $tooltip-min-width;
 }
 
 //SHOW TOOLTIP
@@ -164,12 +189,13 @@ $calc-right-x: calc(0% - 30px);
 
 //TOP RIGHT
 [data-tooltip][data-flow='top-right'] {
-  @include tooltipY(left, bottom, -5%, $calc-top, bottom, $calc-top-and-bottom);
+  // @include tooltipYAlign(left, bottom, 0%, calc(0% - 16px), bottom, calc(100% + 10px), calc(0%), left, calc(50% - 8px));
+  @include tooltipY(left, bottom, -1rem, $calc-top, bottom, $calc-top-and-bottom);
 }
 
 //TOP LEFT
 [data-tooltip][data-flow='top-left'] {
-  @include tooltipY(right, bottom, 5%, $calc-top, bottom, $calc-top-and-bottom);
+  @include tooltipY(right, bottom, 1rem, $calc-top, bottom, $calc-top-and-bottom);
 }
 
 //BOTTOM
@@ -179,12 +205,12 @@ $calc-right-x: calc(0% - 30px);
 
 //BOTTOM RIGHT
 [data-tooltip][data-flow='bottom-right'] {
-  @include tooltipY(left, top, -5%, $calc-bottom, top, $calc-top-and-bottom);
+  @include tooltipY(left, top, -1rem, $calc-bottom, top, $calc-top-and-bottom);
 }
 
 //BOTTOM LEFT
 [data-tooltip][data-flow='bottom-left'] {
-  @include tooltipY(right, top, 5%, $calc-bottom, top, $calc-top-and-bottom);
+  @include tooltipY(right, top, 1rem, $calc-bottom, top, $calc-top-and-bottom);
 }
 
 //LEFT
@@ -194,12 +220,12 @@ $calc-right-x: calc(0% - 30px);
 
 //LEFT-TOP
 [data-tooltip][data-flow='left-top'] {
-  @include tooltipX(right, $calc-left, calc(-100% + 24px), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  @include tooltipX(right, $calc-left, calc(-100% + 1.5rem), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
 }
 
 //LEFT-BOTTOM
 [data-tooltip][data-flow='left-bottom'] {
-  @include tooltipX(right, $calc-left, calc(-24px), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  @include tooltipX(right, $calc-left, calc(0% - 1.5rem), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
 }
 
 //RIGHT
@@ -209,70 +235,70 @@ $calc-right-x: calc(0% - 30px);
 
 //RIGHT-TOP
 [data-tooltip][data-flow='right-top'] {
-  @include tooltipX(left, $calc-right, calc(-100% + 24px), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  @include tooltipX(left, $calc-right, calc(-100% + 1.5rem), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
 }
 
 //RIGHT-BOTTOM
 [data-tooltip][data-flow='right-bottom'] {
-  @include tooltipX(left, $calc-right, calc(-24px), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  @include tooltipX(left, $calc-right, calc(0% - 1.5rem), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
 }
 
 @include media-breakpoint-down(md) {
-  
+
   //BOX
   [data-tooltip]:after {
     max-width: 14rem;
   }
 
-  //TOP RIGHT
-  [data-tooltip][data-flow='top-right'] {
-    @include tooltipY(right, bottom, calc(-100% + 32px), $calc-top, bottom, $calc-top-and-bottom);
-  }
+  // //TOP RIGHT
+  // [data-tooltip][data-flow='top-right'] {
+  //   @include tooltipY(right, bottom, calc(-100% + 32px), $calc-top, bottom, $calc-top-and-bottom);
+  // }
 
-  //TOP LEFT
-  [data-tooltip][data-flow='top-left'] {
-    @include tooltipY(left, bottom, -5%, $calc-top, bottom, $calc-top-and-bottom);
-  }
+  // //TOP LEFT
+  // [data-tooltip][data-flow='top-left'] {
+  //   @include tooltipY(left, bottom, -5%, $calc-top, bottom, $calc-top-and-bottom);
+  // }
 
-  //BOTTOM RIGHT
-  [data-tooltip][data-flow='bottom-right'] {
-    @include tooltipY(right, top, calc(-100% + 32px), $calc-bottom, top, $calc-top-and-bottom);
-  }
+  // //BOTTOM RIGHT
+  // [data-tooltip][data-flow='bottom-right'] {
+  //   @include tooltipY(right, top, calc(-100% + 32px), $calc-bottom, top, $calc-top-and-bottom);
+  // }
 
-  //BOTTOM LEFT
-  [data-tooltip][data-flow='bottom-left'] {
-    @include tooltipY(left, top, -5%, $calc-bottom, top, $calc-top-and-bottom);
-  }
+//   //BOTTOM LEFT
+//   [data-tooltip][data-flow='bottom-left'] {
+//     @include tooltipY(left, top, -5%, $calc-bottom, top, $calc-top-and-bottom);
+//   }
 
-  //LEFT
-  [data-tooltip][data-flow='left'] {
-    @include tooltipX(left, $calc-right, calc(-50%), left, top, $calc-left-x, $calc-left-and-right-y);
-  }
+//   //LEFT
+//   [data-tooltip][data-flow='left'] {
+//     @include tooltipX(left, $calc-right, calc(-50%), left, top, $calc-left-x, $calc-left-and-right-y);
+//   }
 
-  //LEFT-TOP
-  [data-tooltip][data-flow='left-top'] {
-    @include tooltipX(left, $calc-right, calc(-50%), left, top, $calc-left-x, $calc-left-and-right-y);
-  }
+//   //LEFT-TOP
+//   [data-tooltip][data-flow='left-top'] {
+//     @include tooltipX(left, $calc-right, calc(-50%), left, top, $calc-left-x, $calc-left-and-right-y);
+//   }
 
-  //LEFT-BOTTOM
-  [data-tooltip][data-flow='left-bottom'] {
-    @include tooltipX(left, $calc-right, calc(-50%), left, top, $calc-left-x, $calc-left-and-right-y);
-  }
+//   //LEFT-BOTTOM
+//   [data-tooltip][data-flow='left-bottom'] {
+//     @include tooltipX(left, $calc-right, calc(-50%), left, top, $calc-left-x, $calc-left-and-right-y);
+//   }
 
-  //RIGHT
-  [data-tooltip][data-flow='right'] {
-    @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
-  }
+//   //RIGHT
+//   [data-tooltip][data-flow='right'] {
+//     @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
+//   }
 
-  //RIGHT-TOP
-  [data-tooltip][data-flow='right-top'] {
-    @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
-  }
+//   //RIGHT-TOP
+//   [data-tooltip][data-flow='right-top'] {
+//     @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
+//   }
 
-  //RIGHT-BOTTOM
-  [data-tooltip][data-flow='right-bottom'] {
-    @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
-  }
+//   //RIGHT-BOTTOM
+//   [data-tooltip][data-flow='right-bottom'] {
+//     @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
+//   }
 }
 
 hr {
