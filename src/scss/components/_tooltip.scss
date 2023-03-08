@@ -7,7 +7,7 @@ $tooltip-padding: 1rem;
 $tooltip-border: 0.5rem;
 $tooltip-border-radius: 0.5rem;
 $tooltip-max-width: 18rem;
-$tooltip-min-width: 10rem;
+$tooltip-max-width-mobile: 10rem;
 
 //ARROW
 $tooltip-arrow: 1rem;
@@ -18,9 +18,9 @@ $tooltip-arrow-rotate: 45deg;
 $tooltip-icon-size: 1.25rem;
 
 //ICON-BOX
-$tooltip-icon-box-size: 3.25rem;
+$tooltip-icon-box-size: 3rem;
 $tooltip-icon-box-border-radius: 0.5rem;
-$tooltip-icon-box-padding: 1rem;
+$tooltip-icon-box-padding: 0.875rem;
 
 //CALCS TOP & BOTTOM
 $calc-top: calc(0% - 16px);
@@ -37,12 +37,12 @@ $calc-right-x: calc(0% - 30px);
 
 /* === Custom variables and mixins === */
 
-@mixin tooltipY($positionX, $positionY, $translateX, $translateY, $arrowX, $arrowValue, $positionXValue: calc(50% - 8px)) {
+@mixin tooltipY($positionX, $positionY, $translateX, $translateY, $arrowX, $arrowValue) {
 
   //Box
   &:before,
   &:after {
-    #{$positionX}: $positionXValue;
+    #{$positionX}: calc(50% - 8px);
     #{$positionY}: calc(100%);
     transform: translate($translateX, $translateY);
   }
@@ -58,34 +58,12 @@ $calc-right-x: calc(0% - 30px);
   }
 }
 
-@mixin tooltipYAlign($positionX, $positionY, $translateX, $translateY, $arrowX, $arrowValue, $positionXValue: calc(50% - 8px), $arrowY: '', $arrowValueY: '') {
-
-  //Box
-  &:before,
-  &:after {
-    #{$positionX}: $positionXValue;
-    #{$positionY}: calc(100%);
-    transform: translate($translateX, $translateY);
-  }
-
-  //Arrow
-  &:before {
-    transform: rotate($tooltip-arrow-rotate);
-    background-color: $grisulado-700;
-    border-radius: $tooltip-arrow-border-radius;
-    width: $tooltip-arrow;
-    height: $tooltip-arrow;
-    #{$arrowX}: $arrowValue;
-    #{$arrowY}: $arrowValueY;
-  }
-}
-
-@mixin tooltipX($positionX, $translateX, $translateY, $arrowX, $arrowY, $arrowXValue, $arrowYValue, $x: calc(100%), $y: 50%) {
+@mixin tooltipX($positionX, $translateX, $translateY, $arrowX, $arrowY, $arrowXValue, $arrowYValue) {
 
   //Box
   &:after {
     top: 50%;
-    #{$positionX}: $x;
+    #{$positionX}: calc(100%);
     transform: translate($translateX, $translateY);
   }
 
@@ -103,28 +81,16 @@ $calc-right-x: calc(0% - 30px);
 
 /* === Custom styles === */
 
-//TOOLTIP CONTAINER
-.tooltip {
-  height: max-content;
-
-  & i {
-    font-size: $tooltip-icon-size;
-    height: $tooltip-icon-size;
-  }
-
-  & span {
-    font-size: $tooltip-icon-size;
-    height: $tooltip-icon-size;
-  }
-}
-
 //ICON BOX
 .icon-box {
-  border-radius: $tooltip-icon-box-border-radius;
+  max-height: $tooltip-icon-box-size;
+  max-width: $tooltip-icon-box-size;
   padding: $tooltip-icon-box-padding;
-  min-width: $tooltip-icon-box-size;
-  min-height: $tooltip-icon-box-size;
-  height: $tooltip-icon-box-size;
+  border-radius: $tooltip-icon-box-border-radius;
+
+  &>* {
+    font-size: $tooltip-icon-size;
+  }
 }
 
 //POINTER
@@ -132,6 +98,7 @@ $calc-right-x: calc(0% - 30px);
   position: relative;
   cursor: pointer;
   display: inline-block;
+  height: max-content;
 }
 
 //TEXT
@@ -156,7 +123,6 @@ $calc-right-x: calc(0% - 30px);
 [data-tooltip]:after {
   content: attr(data-tooltip);
   text-align: left;
-  // text-align: center;
   overflow: hidden;
   padding: $tooltip-padding;
   border-radius: $tooltip-border-radius;
@@ -165,7 +131,6 @@ $calc-right-x: calc(0% - 30px);
   z-index: 99;
   width: max-content;
   max-width: $tooltip-max-width;
-  // min-width: $tooltip-min-width;
 }
 
 //SHOW TOOLTIP
@@ -184,12 +149,11 @@ $calc-right-x: calc(0% - 30px);
 //-------------------DIRECTIONS-----------------
 //TOP
 [data-tooltip][data-flow='top'] {
-  @include tooltipY(left, bottom, -50%, $calc-top, bottom, $calc-top-and-bottom);
+  @include tooltipY(left, bottom, calc(-50% + 8px), $calc-top, bottom, $calc-top-and-bottom);
 }
 
 //TOP RIGHT
 [data-tooltip][data-flow='top-right'] {
-  // @include tooltipYAlign(left, bottom, 0%, calc(0% - 16px), bottom, calc(100% + 10px), calc(0%), left, calc(50% - 8px));
   @include tooltipY(left, bottom, -1rem, $calc-top, bottom, $calc-top-and-bottom);
 }
 
@@ -200,7 +164,7 @@ $calc-right-x: calc(0% - 30px);
 
 //BOTTOM
 [data-tooltip][data-flow='bottom'] {
-  @include tooltipY(left, top, -50%, $calc-bottom, top, $calc-top-and-bottom);
+  @include tooltipY(left, top, calc(-50% + 8px), $calc-bottom, top, $calc-top-and-bottom);
 }
 
 //BOTTOM RIGHT
@@ -247,62 +211,6 @@ $calc-right-x: calc(0% - 30px);
 
   //BOX
   [data-tooltip]:after {
-    max-width: 14rem;
+    max-width: $tooltip-max-width-mobile;
   }
-
-  // //TOP RIGHT
-  // [data-tooltip][data-flow='top-right'] {
-  //   @include tooltipY(right, bottom, calc(-100% + 32px), $calc-top, bottom, $calc-top-and-bottom);
-  // }
-
-  // //TOP LEFT
-  // [data-tooltip][data-flow='top-left'] {
-  //   @include tooltipY(left, bottom, -5%, $calc-top, bottom, $calc-top-and-bottom);
-  // }
-
-  // //BOTTOM RIGHT
-  // [data-tooltip][data-flow='bottom-right'] {
-  //   @include tooltipY(right, top, calc(-100% + 32px), $calc-bottom, top, $calc-top-and-bottom);
-  // }
-
-//   //BOTTOM LEFT
-//   [data-tooltip][data-flow='bottom-left'] {
-//     @include tooltipY(left, top, -5%, $calc-bottom, top, $calc-top-and-bottom);
-//   }
-
-//   //LEFT
-//   [data-tooltip][data-flow='left'] {
-//     @include tooltipX(left, $calc-right, calc(-50%), left, top, $calc-left-x, $calc-left-and-right-y);
-//   }
-
-//   //LEFT-TOP
-//   [data-tooltip][data-flow='left-top'] {
-//     @include tooltipX(left, $calc-right, calc(-50%), left, top, $calc-left-x, $calc-left-and-right-y);
-//   }
-
-//   //LEFT-BOTTOM
-//   [data-tooltip][data-flow='left-bottom'] {
-//     @include tooltipX(left, $calc-right, calc(-50%), left, top, $calc-left-x, $calc-left-and-right-y);
-//   }
-
-//   //RIGHT
-//   [data-tooltip][data-flow='right'] {
-//     @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
-//   }
-
-//   //RIGHT-TOP
-//   [data-tooltip][data-flow='right-top'] {
-//     @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
-//   }
-
-//   //RIGHT-BOTTOM
-//   [data-tooltip][data-flow='right-bottom'] {
-//     @include tooltipX(left, calc(-100%), calc(-50%), left, top, $calc-right-x, $calc-left-and-right-y, calc(0% - 22px));
-//   }
-}
-
-hr {
-  height: 2px;
-  width: 100%;
-  background-color: grey;
 }
