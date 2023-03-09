@@ -1,6 +1,8 @@
 /* === Variable and mixins overides === */
 
 $nav-link-font-weight: 400;
+$nav-link-simple-font-weight: 700;
+$nav-link-simple-active-font-weight: $nav-link-simple-font-weight;
 $nav-link-active-font-weight: $nav-link-font-weight;
 $nav-link-line-heght: 1.378;
 
@@ -23,6 +25,7 @@ $nav-link-hover-bg: $grisulado-50;
 
 $nav-pills-link-active-bg: $blue;
 $nav-link-hover-color: $blue;
+$nav-link-border-active: $blue;
 
 $nav-focus-width: 0.25rem;
 $input-btn-focus-box-shadow: 0 0 0 $nav-focus-width theme-color-level('info', 3);
@@ -43,8 +46,9 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
 .nav {
   &.flex-row {
-    gap: 0.625rem;
-
+    &:not(.tabs-simple) {
+      gap: 0.625rem;
+    }
     .nav-item {
       .nav-link {
         max-height: 40px;
@@ -58,6 +62,12 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
           max-height: 30px;
           padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
           font-size: 1rem;
+          .nav-icon {
+            i,
+            span {
+              font-size: 1rem;
+            }
+          }
         }
       }
     }
@@ -70,6 +80,12 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     &:first-child {
       margin-top: 0;
     }
+    .nav .nav-item .nav-link .nav-icon {
+      i,
+      .material-icons-round {
+        display: none;
+      }
+    }
   }
 }
 
@@ -78,10 +94,6 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     &:first-child {
       .nav-link {
         .nav-icon {
-          display: flex;
-          align-items: center;
-          gap: 0.625rem;
-
           i {
             font-size: $nav-icon-font-size;
             display: inline;
@@ -107,9 +119,9 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       }
 
       .nav-icon {
-        i {
-          display: none;
-        }
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
       }
     }
   }
@@ -248,6 +260,122 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       }
     }
   }
+  &.tabs-simple {
+    display: flex;
+    flex-wrap: nowrap;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+
+      .nav-link {
+        display: flex;
+        justify-content: center;
+        background: transparent;
+        transition: font-weight 0.2s ease;
+        span,
+        i {
+          font-size: 1.25rem;
+          text-decoration: none;
+          padding-left: $nav-link-padding-lg-y;
+        }
+        &.active,
+        &:active {
+          font-weight: $nav-link-font-weight;
+          text-shadow: 0px -1px 0px rgba(56, 72, 92, 1);
+          background-color: transparent;
+          box-shadow: 0px 4px 0px 0px $nav-link-border-active;
+          border-radius: 0;
+          color: inherit;
+          &:hover {
+            box-shadow: 0px 4px 0px 0px $nav-link-border-active;
+          }
+        }
+        &:hover {
+          box-shadow: none;
+        }
+        &.disabled {
+          color: $nav-link-disabled-color;
+        }
+        .nav-icon {
+          gap: 0;
+        }
+      }
+    }
+    &.full-width {
+      .nav-item {
+        width: 100%;
+        .nav-link {
+          width: 100%;
+        }
+      }
+    }
+    &.nav-box {
+      border: none;
+      padding: 0;
+      .nav-item {
+        .nav-link {
+          background-color: $grisulado-50;
+          border-radius: 8px 8px 0px 0px;
+          border: none;
+          &.active,
+          &:active {
+            background-color: $grisulado-10;
+            color: $grisulado-900;
+            box-shadow: none;
+          }
+        }
+      }
+      &-bg {
+        @extend .nav-box;
+        .nav-item {
+          .nav-link {
+            &.active,
+            &:active {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabs-slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 2.5rem 0 2rem;
+  .nav {
+    width: fit-content;
+    overflow-x: hidden;
+    min-height: 3.125rem;
+    transition: transform 0.5s ease-in-out;
+    margin-left: 0.625rem;
+  }
+  .right-left {
+    width: 2.5rem;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    > span {
+      font-size: 16px;
+    }
+    &:nth-of-type(1) {
+      left: 0;
+    }
+    &:nth-of-type(2) {
+      right: 0;
+    }
+  }
+  @extend .tabs-simple;
 }
 
 .nav.nav-lg {

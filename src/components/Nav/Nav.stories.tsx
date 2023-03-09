@@ -10,7 +10,7 @@ import { Nav } from '.';
 
 // Configuración general del componente
 export default {
-  title: 'Componentes|Navegación/Vertical',
+  title: 'Componentes|Navegación y pestañas/Vertical',
   component: Nav,
   decorators: [withA11y]
 };

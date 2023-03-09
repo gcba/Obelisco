@@ -10,7 +10,7 @@ import { NavHorizontal, NavItem } from '.';
 
 // Configuración general del componente
 export default {
-  title: 'Componentes|Navegación/Horizontal',
+  title: 'Componentes|Navegación y pestañas/Horizontal',
   component: NavHorizontal,
   decorators: [withA11y]
 };
