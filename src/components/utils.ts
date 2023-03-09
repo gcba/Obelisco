@@ -48,3 +48,32 @@ export const sizeToClass = (size: Size | 'default'): string => {
       return 'sm';
   }
 };
+
+export interface FlowDirection {
+  flow: string;
+  icon: string;
+}
+
+export const flowTop: FlowDirection[] = [
+  { flow: 'top-right', icon: 'turn_right' },
+  { flow: 'top', icon: 'arrow_upward' },
+  { flow: 'top-left', icon: 'turn_left' }
+];
+
+export const flowLeft: FlowDirection[] = [
+  { flow: 'right-bottom', icon: 'south_east' },
+  { flow: 'right', icon: 'arrow_forward' },
+  { flow: 'right-top', icon: 'north_east' }
+];
+
+export const flowRight: FlowDirection[] = [
+  { flow: 'left-bottom', icon: 'south_west' },
+  { flow: 'left', icon: 'keyboard_backspace' },
+  { flow: 'left-top', icon: 'north_west' }
+];
+
+export const flowBottom: FlowDirection[] = [
+  { flow: 'bottom-right', icon: 'subdirectory_arrow_right' },
+  { flow: 'bottom', icon: 'arrow_downward' },
+  { flow: 'bottom-left', icon: 'subdirectory_arrow_left' }
+];

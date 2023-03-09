@@ -1,5 +1,3 @@
-@import '../../scss/obelisco.scss';
-
 .tooltip-container {
   width: 100%;
   display: flex;
@@ -26,24 +24,21 @@
   }
 }
 
-@include media-breakpoint-down(md) {
+@media screen and (max-width: 975.98px) {
   .tooltip-container {
     padding: 8rem 0;
 
     .tooltip-row {
-
       &:has(.tooltip-column) {
         flex-direction: row;
       }
 
       .left {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
       }
 
       .right {
-        display: flex;
         flex-direction: column;
         align-items: flex-end;
       }
