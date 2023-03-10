@@ -143,75 +143,75 @@ $calc-right-x: calc(0% - 30px);
     display: none !important;
   }
 
-  //WITHOUT DATAFLOW
-  [data-tooltip]:not([data-flow])[data-tooltip]:after,
-  [data-tooltip]:not([data-flow])[data-tooltip]:before {
+  //WITHOUT DATADIRECTION
+  [data-tooltip]:not([data-direction])[data-tooltip]:after,
+  [data-tooltip]:not([data-direction])[data-tooltip]:before {
     display: none;
   }
 
   //-------------------DIRECTIONS-----------------
   //DEFAULT
-  &[data-flow=''] {
+  &[data-direction=''] {
     @include tooltipY(left, bottom, calc(-50% + 8px), $calc-top, bottom, $calc-top-and-bottom);
   }
 
   //TOP
-  &[data-flow='top'] {
+  &[data-direction='top'] {
     @include tooltipY(left, bottom, calc(-50% + 8px), $calc-top, bottom, $calc-top-and-bottom);
   }
 
   //TOP RIGHT
-  &[data-flow='top-right'] {
+  &[data-direction='top-right'] {
     @include tooltipY(left, bottom, -1rem, $calc-top, bottom, $calc-top-and-bottom);
   }
 
   //TOP LEFT
-  &[data-flow='top-left'] {
+  &[data-direction='top-left'] {
     @include tooltipY(right, bottom, 1rem, $calc-top, bottom, $calc-top-and-bottom);
   }
 
   //BOTTOM
-  &[data-flow='bottom'] {
+  &[data-direction='bottom'] {
     @include tooltipY(left, top, calc(-50% + 8px), $calc-bottom, top, $calc-top-and-bottom);
   }
 
   //BOTTOM RIGHT
-  &[data-flow='bottom-right'] {
+  &[data-direction='bottom-right'] {
     @include tooltipY(left, top, -1rem, $calc-bottom, top, $calc-top-and-bottom);
   }
 
   //BOTTOM LEFT
-  &[data-flow='bottom-left'] {
+  &[data-direction='bottom-left'] {
     @include tooltipY(right, top, 1rem, $calc-bottom, top, $calc-top-and-bottom);
   }
 
   //LEFT
-  &[data-flow='left'] {
+  &[data-direction='left'] {
     @include tooltipX(right, $calc-left, calc(-50%), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
   }
 
   //LEFT-TOP
-  &[data-flow='left-top'] {
+  &[data-direction='left-top'] {
     @include tooltipX(right, $calc-left, calc(-100% + 1.5rem), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
   }
 
   //LEFT-BOTTOM
-  &[data-flow='left-bottom'] {
+  &[data-direction='left-bottom'] {
     @include tooltipX(right, $calc-left, calc(0% - 1.5rem), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
   }
 
   //RIGHT
-  &[data-flow='right'] {
+  &[data-direction='right'] {
     @include tooltipX(left, $calc-right, calc(-50%), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
   }
 
   //RIGHT-TOP
-  &[data-flow='right-top'] {
+  &[data-direction='right-top'] {
     @include tooltipX(left, $calc-right, calc(-100% + 1.5rem), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
   }
 
   //RIGHT-BOTTOM
-  &[data-flow='right-bottom'] {
+  &[data-direction='right-bottom'] {
     @include tooltipX(left, $calc-right, calc(0% - 1.5rem), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
   }
 }

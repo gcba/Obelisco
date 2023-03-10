@@ -49,7 +49,7 @@ export const sizeToClass = (size: Size | 'default'): string => {
   }
 };
 
-export type DataFlow =
+export type DataDirection =
   | 'top-right'
   | 'top'
   | 'top-left'
@@ -63,32 +63,32 @@ export type DataFlow =
   | 'bottom'
   | 'bottom-left';
 
-export interface FlowDirection {
-  flow: DataFlow;
+export interface Direction {
+  direction: DataDirection;
   icon: string;
   position: string;
 }
 
-export const flowTop: FlowDirection[] = [
-  { flow: 'top-right', icon: 'turn_right', position: 'arriba-derecha' },
-  { flow: 'top', icon: 'arrow_upward', position: 'arriba' },
-  { flow: 'top-left', icon: 'turn_left', position: 'arriba-izquierda' }
+export const directionTop: Direction[] = [
+  { direction: 'top-right', icon: 'turn_right', position: 'arriba-derecha' },
+  { direction: 'top', icon: 'arrow_upward', position: 'arriba' },
+  { direction: 'top-left', icon: 'turn_left', position: 'arriba-izquierda' }
 ];
 
-export const flowLeft: FlowDirection[] = [
-  { flow: 'right-bottom', icon: 'south_east', position: 'derecha-abajo' },
-  { flow: 'right', icon: 'arrow_forward', position: 'derecha' },
-  { flow: 'right-top', icon: 'north_east', position: 'derecha-arriba' }
+export const directionLeft: Direction[] = [
+  { direction: 'right-bottom', icon: 'south_east', position: 'derecha-abajo' },
+  { direction: 'right', icon: 'arrow_forward', position: 'derecha' },
+  { direction: 'right-top', icon: 'north_east', position: 'derecha-arriba' }
 ];
 
-export const flowRight: FlowDirection[] = [
-  { flow: 'left-bottom', icon: 'south_west', position: 'izquierda-abajo' },
-  { flow: 'left', icon: 'keyboard_backspace', position: 'izquierda' },
-  { flow: 'left-top', icon: 'north_west', position: 'izquierda-arriba' }
+export const directionRight: Direction[] = [
+  { direction: 'left-bottom', icon: 'south_west', position: 'izquierda-abajo' },
+  { direction: 'left', icon: 'keyboard_backspace', position: 'izquierda' },
+  { direction: 'left-top', icon: 'north_west', position: 'izquierda-arriba' }
 ];
 
-export const flowBottom: FlowDirection[] = [
-  { flow: 'bottom-right', icon: 'subdirectory_arrow_right', position: 'abajo-derecha' },
-  { flow: 'bottom', icon: 'arrow_downward', position: 'abajo' },
-  { flow: 'bottom-left', icon: 'subdirectory_arrow_left', position: 'abajo-izquierda' }
+export const directionBottom: Direction[] = [
+  { direction: 'bottom-right', icon: 'subdirectory_arrow_right', position: 'abajo-derecha' },
+  { direction: 'bottom', icon: 'arrow_downward', position: 'abajo' },
+  { direction: 'bottom-left', icon: 'subdirectory_arrow_left', position: 'abajo-izquierda' }
 ];

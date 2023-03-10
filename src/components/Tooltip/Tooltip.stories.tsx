@@ -6,9 +6,9 @@ import './Tooltip.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { TooltipButtom, TooltipIcon } from '.';
+import { TooltipContainer } from '.';
 import { Button } from '../Button/index';
-import { flowBottom, flowLeft, flowRight, flowTop } from '../utils';
+import { directionBottom, directionLeft, directionRight, directionTop } from '../utils';
 
 // Configuración general del componente
 export default {
@@ -20,33 +20,45 @@ export const Tooltip = (): JSX.Element => {
   return (
     <div className="tooltip-container">
       <div className="tooltip-row">
-        {flowTop.map(({ flow, icon, position }, index) => (
-          <TooltipButtom key={index} flow={flow} text={`Esta es la descripción de un tooltip "${position}".`}>
+        {directionTop.map(({ direction, icon, position }, index) => (
+          <TooltipContainer
+            key={index}
+            direction={direction}
+            text={`Esta es la descripción de un tooltip "${position}".`}>
             <Button type="link" iconMaterial={icon}></Button>
-          </TooltipButtom>
+          </TooltipContainer>
         ))}
       </div>
       <div className="tooltip-row">
         <div className="tooltip-column left">
-          {flowLeft.map(({ flow, icon, position }, index) => (
-            <TooltipButtom key={index} flow={flow} text={`Esta es la descripción de un tooltip "${position}".`}>
+          {directionLeft.map(({ direction, icon, position }, index) => (
+            <TooltipContainer
+              key={index}
+              direction={direction}
+              text={`Esta es la descripción de un tooltip "${position}".`}>
               <Button type="link" iconMaterial={icon}></Button>
-            </TooltipButtom>
+            </TooltipContainer>
           ))}
         </div>
         <div className="tooltip-column right">
-          {flowRight.map(({ flow, icon, position }, index) => (
-            <TooltipButtom key={index} flow={flow} text={`Esta es la descripción de un tooltip "${position}".`}>
+          {directionRight.map(({ direction, icon, position }, index) => (
+            <TooltipContainer
+              key={index}
+              direction={direction}
+              text={`Esta es la descripción de un tooltip "${position}".`}>
               <Button type="link" iconMaterial={icon}></Button>
-            </TooltipButtom>
+            </TooltipContainer>
           ))}
         </div>
       </div>
       <div className="tooltip-row">
-        {flowBottom.map(({ flow, icon, position }, index) => (
-          <TooltipButtom key={index} flow={flow} text={`Esta es la descripción de un tooltip "${position}".`}>
+        {directionBottom.map(({ direction, icon, position }, index) => (
+          <TooltipContainer
+            key={index}
+            direction={direction}
+            text={`Esta es la descripción de un tooltip "${position}".`}>
             <Button type="link" iconMaterial={icon}></Button>
-          </TooltipButtom>
+          </TooltipContainer>
         ))}
       </div>
 
@@ -54,41 +66,49 @@ export const Tooltip = (): JSX.Element => {
       <br />
 
       <div className="tooltip-row">
-        {flowTop.map(({ flow, position }, index) => (
-          <TooltipIcon key={index} flow={flow} text={`Esta es la descripción de un tooltip "${position}".`} box={true}>
+        {directionTop.map(({ direction, position }, index) => (
+          <TooltipContainer
+            key={index}
+            direction={direction}
+            text={`Esta es la descripción de un tooltip "${position}".`}
+            iconBox={true}>
             <span className="material-icons-round">help</span>
-          </TooltipIcon>
+          </TooltipContainer>
         ))}
       </div>
       <div className="tooltip-row">
         <div className="tooltip-column left">
-          {flowLeft.map(({ flow, position }, index) => (
-            <TooltipIcon
+          {directionLeft.map(({ direction, position }, index) => (
+            <TooltipContainer
               key={index}
-              flow={flow}
+              direction={direction}
               text={`Esta es la descripción de un tooltip "${position}".`}
-              box={true}>
+              iconBox={true}>
               <span className="material-icons-round">help</span>
-            </TooltipIcon>
+            </TooltipContainer>
           ))}
         </div>
         <div className="tooltip-column right">
-          {flowRight.map(({ flow, position }, index) => (
-            <TooltipIcon
+          {directionRight.map(({ direction, position }, index) => (
+            <TooltipContainer
               key={index}
-              flow={flow}
+              direction={direction}
               text={`Esta es la descripción de un tooltip "${position}".`}
-              box={true}>
+              iconBox={true}>
               <span className="material-icons-round">help</span>
-            </TooltipIcon>
+            </TooltipContainer>
           ))}
         </div>
       </div>
       <div className="tooltip-row">
-        {flowBottom.map(({ flow, position }, index) => (
-          <TooltipIcon key={index} flow={flow} text={`Esta es la descripción de un tooltip "${position}".`} box={true}>
+        {directionBottom.map(({ direction, position }, index) => (
+          <TooltipContainer
+            key={index}
+            direction={direction}
+            text={`Esta es la descripción de un tooltip "${position}".`}
+            iconBox={true}>
             <span className="material-icons-round">help</span>
-          </TooltipIcon>
+          </TooltipContainer>
         ))}
       </div>
     </div>
