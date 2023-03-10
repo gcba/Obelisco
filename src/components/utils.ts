@@ -49,31 +49,46 @@ export const sizeToClass = (size: Size | 'default'): string => {
   }
 };
 
+export type DataFlow =
+  | 'top-right'
+  | 'top'
+  | 'top-left'
+  | 'right-bottom'
+  | 'right'
+  | 'right-top'
+  | 'left-bottom'
+  | 'left'
+  | 'left-top'
+  | 'bottom-right'
+  | 'bottom'
+  | 'bottom-left';
+
 export interface FlowDirection {
-  flow: string;
+  flow: DataFlow;
   icon: string;
+  position: string;
 }
 
 export const flowTop: FlowDirection[] = [
-  { flow: 'top-right', icon: 'turn_right' },
-  { flow: 'top', icon: 'arrow_upward' },
-  { flow: 'top-left', icon: 'turn_left' }
+  { flow: 'top-right', icon: 'turn_right', position: 'arriba-derecha' },
+  { flow: 'top', icon: 'arrow_upward', position: 'arriba' },
+  { flow: 'top-left', icon: 'turn_left', position: 'arriba-izquierda' }
 ];
 
 export const flowLeft: FlowDirection[] = [
-  { flow: 'right-bottom', icon: 'south_east' },
-  { flow: 'right', icon: 'arrow_forward' },
-  { flow: 'right-top', icon: 'north_east' }
+  { flow: 'right-bottom', icon: 'south_east', position: 'derecha-abajo' },
+  { flow: 'right', icon: 'arrow_forward', position: 'derecha' },
+  { flow: 'right-top', icon: 'north_east', position: 'derecha-arriba' }
 ];
 
 export const flowRight: FlowDirection[] = [
-  { flow: 'left-bottom', icon: 'south_west' },
-  { flow: 'left', icon: 'keyboard_backspace' },
-  { flow: 'left-top', icon: 'north_west' }
+  { flow: 'left-bottom', icon: 'south_west', position: 'izquierda-abajo' },
+  { flow: 'left', icon: 'keyboard_backspace', position: 'izquierda' },
+  { flow: 'left-top', icon: 'north_west', position: 'izquierda-arriba' }
 ];
 
 export const flowBottom: FlowDirection[] = [
-  { flow: 'bottom-right', icon: 'subdirectory_arrow_right' },
-  { flow: 'bottom', icon: 'arrow_downward' },
-  { flow: 'bottom-left', icon: 'subdirectory_arrow_left' }
+  { flow: 'bottom-right', icon: 'subdirectory_arrow_right', position: 'abajo-derecha' },
+  { flow: 'bottom', icon: 'arrow_downward', position: 'abajo' },
+  { flow: 'bottom-left', icon: 'subdirectory_arrow_left', position: 'abajo-izquierda' }
 ];

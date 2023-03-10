@@ -137,13 +137,24 @@ $calc-right-x: calc(0% - 30px);
     opacity: 1;
   }
 
-  //VOID
-  [data-tooltip='']::after,
-  [data-tooltip='']::before {
+  //VOID DATATOOLTIP
+  [data-tooltip='']:after,
+  [data-tooltip='']:before {
     display: none !important;
   }
 
+  //WITHOUT DATAFLOW
+  [data-tooltip]:not([data-flow])[data-tooltip]:after,
+  [data-tooltip]:not([data-flow])[data-tooltip]:before {
+    display: none;
+  }
+
   //-------------------DIRECTIONS-----------------
+  //DEFAULT
+  &[data-flow=''] {
+    @include tooltipY(left, bottom, calc(-50% + 8px), $calc-top, bottom, $calc-top-and-bottom);
+  }
+
   //TOP
   &[data-flow='top'] {
     @include tooltipY(left, bottom, calc(-50% + 8px), $calc-top, bottom, $calc-top-and-bottom);
