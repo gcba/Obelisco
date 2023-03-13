@@ -15,25 +15,25 @@ export const Horizontal = (): JSX.Element => (
   <div className="list-group list-group-row">
     <a href="#" className="list-group-item item-sm">
       <span className="access-title">
-        <i className="bx align-middle bxs-info-circle"></i>
+        <i className="bx bxs-info-circle"></i>
         Acceso
       </span>
     </a>
     <a href="#" className="list-group-item item-sm">
       <span className="access-title">
-        <i className="bx align-middle bxs-info-circle"></i>
+        <i className="bx bxs-info-circle"></i>
         Acceso
       </span>
     </a>
     <a href="#" className="list-group-item item-sm">
       <span className="access-title">
-        <i className="bx align-middle bxs-info-circle"></i>
+        <i className="bx bxs-info-circle"></i>
         Acceso
       </span>
     </a>
     <a href="#" className="list-group-item item-sm">
       <span className="access-title">
-        <i className="bx align-middle bxs-info-circle"></i>
+        <i className="bx bxs-info-circle"></i>
         Acceso
       </span>
     </a>
@@ -45,25 +45,25 @@ export const Vertical = (): JSX.Element => (
     <div className="list-group">
       <a href="#" className="list-group-item item-sm">
         <span className="access-title">
-          <i className="bx align-middle bxs-info-circle"></i>
+          <i className="bx bxs-info-circle"></i>
           Acceso
         </span>
       </a>
       <a href="#" className="list-group-item item-sm">
         <span className="access-title">
-          <i className="bx align-middle bxs-info-circle"></i>
+          <i className="bx bxs-info-circle"></i>
           Acceso
         </span>
       </a>
       <a href="#" className="list-group-item item-sm">
         <span className="access-title">
-          <i className="bx align-middle bxs-info-circle"></i>
+          <i className="bx bxs-info-circle"></i>
           Acceso
         </span>
       </a>
       <a href="#" className="list-group-item item-sm">
         <span className="access-title">
-          <i className="bx align-middle bxs-info-circle"></i>
+          <i className="bx bxs-info-circle"></i>
           Acceso
         </span>
       </a>

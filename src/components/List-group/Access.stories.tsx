@@ -73,28 +73,28 @@ export const AccesosConIcono = (): JSX.Element => (
   <div className="list-group-container">
     <div className="list-group">
       <a href="#" className="list-group-item item-sm">
-        <i className="bx bxs-info-circle align-self-center"></i>
+        <i className="bx bxs-info-circle"></i>
         <div className="access-content">
           <span className="access-title">Acceso</span>
           <p className="access-text">Descripción (Opcional)</p>
         </div>
       </a>
       <a href="#" className="list-group-item item-sm hover">
-        <i className="bx bxs-info-circle align-self-center"></i>
+        <i className="bx bxs-info-circle"></i>
         <div className="access-content">
           <span className="access-title">Acceso</span>
           <p className="access-text">Descripción (Opcional)</p>
         </div>
       </a>
       <a href="#" className="list-group-item item-sm active">
-        <i className="bx bxs-info-circle align-self-center"></i>
+        <i className="bx bxs-info-circle"></i>
         <div className="access-content">
           <span className="access-title">Acceso</span>
           <p className="access-text">Descripción (Opcional)</p>
         </div>
       </a>
       <a href="#" className="list-group-item item-sm focus">
-        <i className="bx bxs-info-circle align-self-center"></i>
+        <i className="bx bxs-info-circle"></i>
         <div className="access-content">
           <span className="access-title">Acceso</span>
           <p className="access-text">Descripción (Opcional)</p>

@@ -59,8 +59,9 @@ a.list-group-item {
   padding: 1.5rem;
 
   .access-title {
-    .bx {
+    i, span {
       font-size: 1.25rem;
+      vertical-align: middle;
     }
   }
 
@@ -191,11 +192,12 @@ a.list-group-item {
     @include display-flex-between;
     align-items: flex-start;
 
-    &:has(i) {
+    &:has(i, span) {
       padding: 0.75rem 1.625rem;
 
-      i {
+      i, span {
         margin-right: 0.875rem;
+        align-self: center;
       }
 
       @include media-breakpoint-down(xs) {
@@ -243,7 +245,7 @@ a.list-group-item {
       }
     }
 
-    .bx:has(+ .access-content) {
+    i, span:has(+ .access-content) {
       font-size: 1.25rem;
     }
 
@@ -322,6 +324,8 @@ a.list-group-item {
 
     .card-access-body {
       padding: $padding-card-access-body;
+      align-items: center;
+      gap: 12px;
       @include display-flex-between;
 
       &.p-list {
@@ -355,9 +359,7 @@ a.list-group-item {
       }
 
       &.reverse {
-        gap: 15px;
         flex-direction: row-reverse;
-        justify-content: flex-end;
       }
 
       @include media-breakpoint-down(xs) {
