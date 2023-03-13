@@ -3,13 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Components
 import { Nav, NavItem } from '.';
-import {
-  NavHorizontalSliderBg,
-  NavHorizontalSliderBox,
-  NavTabsContainer,
-  NavTabsContainerBg,
-  NavTabsWidthContainer
-} from './tabs';
+import { NavTabsSliderBg, NavTabsSliderBox, NavTabsContainer, NavTabsContainerBg, NavTabsWidthContainer } from './tabs';
 
 // Configuración general del componente
 export default {
@@ -17,6 +11,34 @@ export default {
   title: 'Componentes|Navegación y pestañas/Pestañas con contenedor',
   decorators: [withA11y]
 };
+
+const simpleItems: NavItem[] = [
+  { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña predeterminada', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña predeterminada', id: '3', iconTabs: '<span class="material-icons-round">home</span>' },
+  {
+    name: 'Pestaña predeterminada',
+    id: '4',
+    disabled: true,
+    iconTabs: '<span class="material-icons-round">home</span>'
+  }
+];
+
+const sizeItems: NavItem[] = [
+  { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>', type: 'large' },
+  {
+    name: 'Pestaña predeterminada',
+    id: '2',
+    iconTabs: '<span class="material-icons-round">home</span>',
+    type: 'default'
+  },
+  {
+    name: 'Pestaña predeterminada',
+    id: '3',
+    iconTabs: '<span class="material-icons-round">home</span>',
+    type: 'small'
+  }
+];
 
 const sliderItems: NavItem[] = [
   { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>' },
@@ -31,18 +53,6 @@ const sliderItems: NavItem[] = [
   {
     name: 'Pestaña deshabilitada',
     id: '10',
-    disabled: true,
-    iconTabs: '<span class="material-icons-round">home</span>'
-  }
-];
-
-const simpleItems: NavItem[] = [
-  { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '3', iconTabs: '<span class="material-icons-round">home</span>' },
-  {
-    name: 'Pestaña predeterminada',
-    id: '4',
     disabled: true,
     iconTabs: '<span class="material-icons-round">home</span>'
   }
@@ -63,11 +73,12 @@ const ItemsFullWidth: NavItem[] = [
 export const ContainerTabs = (): JSX.Element => {
   return <NavTabsContainer items={simpleItems} selected="1" hasIcon={false} />;
 };
+
 ContainerTabs.story = {
   name: 'Ancho variable'
 };
 
-export const SimpleAncho = (): JSX.Element => {
+export const ContainerTabWidth = (): JSX.Element => {
   return (
     <>
       <NavTabsWidthContainer items={ItemsFullWidth} selected="1" hasIcon={true} />
@@ -75,8 +86,16 @@ export const SimpleAncho = (): JSX.Element => {
   );
 };
 
-SimpleAncho.story = {
+ContainerTabWidth.story = {
   name: 'Ancho fijo'
+};
+
+export const ContainerSizeTabs = (): JSX.Element => {
+  return <NavTabsContainer items={sizeItems} selected="1" hasIcon={false} />;
+};
+
+ContainerSizeTabs.story = {
+  name: 'Tamaños'
 };
 
 export const ContainerTabsBg = (): JSX.Element => {
@@ -86,6 +105,7 @@ export const ContainerTabsBg = (): JSX.Element => {
     </div>
   );
 };
+
 ContainerTabsBg.story = {
   name: 'Con fondo'
 };
@@ -93,28 +113,31 @@ ContainerTabsBg.story = {
 export const ContainerTabsIcon = (): JSX.Element => {
   return <NavTabsContainer items={simpleItems} selected="1" hasIcon={true} />;
 };
+
 ContainerTabsIcon.story = {
   name: 'Con icono'
 };
 
-export const SliderTabs = (): JSX.Element => {
+export const ContainerSliderTabs = (): JSX.Element => {
   return (
     <>
-      <NavHorizontalSliderBox items={sliderItems} selected="1" hasIcon={true} />
+      <NavTabsSliderBox items={sliderItems} selected="1" hasIcon={true} />
     </>
   );
 };
-SliderTabs.story = {
+
+ContainerSliderTabs.story = {
   name: 'Desplazable'
 };
 
-export const SliderTabBg = (): JSX.Element => {
+export const ContainerSliderTabBg = (): JSX.Element => {
   return (
     <div className="wrapper-bg">
-      <NavHorizontalSliderBg items={sliderItems} selected="1" hasIcon={true} />
+      <NavTabsSliderBg items={sliderItems} selected="1" hasIcon={true} />
     </div>
   );
 };
-SliderTabBg.story = {
+
+ContainerSliderTabBg.story = {
   name: 'Desplazable con fondo'
 };

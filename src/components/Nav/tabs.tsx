@@ -50,7 +50,21 @@ const NavItemComponentSlider: React.FC<NavItemComponentProps> = (props: NavItemC
 };
 
 const NavItemComponentTabs: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
-  const { name, id, href, children, level, disabled, selected, hasBordered, type, hasIcon, onSelect, iconTabs } = props;
+  const {
+    name,
+    id,
+    href,
+    children,
+    level,
+    disabled,
+    selected,
+    hasBordered,
+    type,
+    hasIcon,
+    onSelect,
+    iconTabs,
+    isFullWidth
+  } = props;
 
   const isActive = selected && id === selected;
   const hasActiveChild = checkActiveChild(children, selected);
@@ -60,12 +74,17 @@ const NavItemComponentTabs: React.FC<NavItemComponentProps> = (props: NavItemCom
     'nav-link-lg': type === 'large',
     'border-link': hasBordered,
     'active-child': !disabled && hasActiveChild,
+    'w-100': isFullWidth,
     active: !disabled && isActive,
     disabled: disabled
   });
 
+  const liClassName = classnames('nav-item', {
+    'w-100': isFullWidth
+  });
+
   return (
-    <li className="nav-item">
+    <li className={liClassName}>
       <a
         className={linkClassName}
         href={href || '#'}
@@ -96,7 +115,7 @@ const NavItemComponentTabs: React.FC<NavItemComponentProps> = (props: NavItemCom
   );
 };
 
-const listClasses = 'nav nav-pills flex-row tabs-simple';
+const listClasses = 'nav nav-pills flex-row tabs';
 
 export const NavTabs: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
@@ -126,7 +145,7 @@ export const NavTabs: React.FC<NavProps> = (props: React.PropsWithChildren<NavPr
     </>
   );
 };
-const listClassesTabs = 'nav nav-pills flex-row tabs-simple';
+const listClassesTabs = 'nav nav-pills flex-row tabs';
 
 export const NavTabsWidth: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
@@ -149,6 +168,7 @@ export const NavTabsWidth: React.FC<NavProps> = (props: React.PropsWithChildren<
               selected={selected}
               hasIcon={hasIcon}
               type={item.type}
+              isFullWidth={true}
             />
           ))}
         </ul>
@@ -156,9 +176,9 @@ export const NavTabsWidth: React.FC<NavProps> = (props: React.PropsWithChildren<
     </>
   );
 };
-const listClassesTabsFullWidth = 'nav nav-pills tabs-simple full-width';
+const listClassesTabsFullWidth = 'nav nav-pills flex-row tabs';
 
-export const NavHorizontalSlider: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
+export const NavTabsSlider: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
 
   const mainListClasses = classnames(listClassesSlider, {
@@ -239,7 +259,7 @@ export const NavHorizontalSlider: React.FC<NavProps> = (props: React.PropsWithCh
     </>
   );
 };
-const listClassesSlider = 'nav nav-pills flex-row tabs-simple';
+const listClassesSlider = 'nav nav-pills flex-row tabs';
 
 export const NavTabsContainer: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
@@ -269,12 +289,43 @@ export const NavTabsContainer: React.FC<NavProps> = (props: React.PropsWithChild
     </>
   );
 };
-const listClassesTabsContainer = 'nav nav-pills tabs-simple nav-box';
+const listClassesTabsContainer = 'nav nav-pills flex-row tabs nav-box';
 
 export const NavTabsWidthContainer: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
 
   const mainListClasses = classnames(listClassesTabsFullWidthContainer, {
+    'nav-lg': navSize === 'large'
+  });
+
+  const tabsBoxRef = useRef<HTMLUListElement>(null);
+
+  return (
+    <>
+      <nav>
+        <ul className={mainListClasses} ref={tabsBoxRef}>
+          {items.map((item) => (
+            <NavItemComponentTabs
+              {...item}
+              key={item.id}
+              level={0}
+              selected={selected}
+              hasIcon={hasIcon}
+              type={item.type}
+              isFullWidth={true}
+            />
+          ))}
+        </ul>
+      </nav>
+    </>
+  );
+};
+const listClassesTabsFullWidthContainer = 'nav nav-pills flex-row tabs nav-box';
+
+export const NavTabsContainerBg: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
+  const { items, selected, navSize, hasIcon } = props;
+
+  const mainListClasses = classnames(listClassesTabsContainerBg, {
     'nav-lg': navSize === 'large'
   });
 
@@ -299,9 +350,9 @@ export const NavTabsWidthContainer: React.FC<NavProps> = (props: React.PropsWith
     </>
   );
 };
-const listClassesTabsFullWidthContainer = 'nav nav-pills tabs-simple full-width nav-box';
+const listClassesTabsContainerBg = 'nav nav-pills tabs flex-row nav-box-bg';
 
-export const NavHorizontalSliderBox: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
+export const NavTabsSliderBox: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
 
   const mainListClasses = classnames(listClassesSliderBox, {
@@ -382,9 +433,9 @@ export const NavHorizontalSliderBox: React.FC<NavProps> = (props: React.PropsWit
     </>
   );
 };
-const listClassesSliderBox = 'nav nav-pills flex-row tabs-simple nav-box';
+const listClassesSliderBox = 'nav nav-pills flex-row tabs nav-box';
 
-export const NavHorizontalSliderBg: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
+export const NavTabsSliderBg: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
 
   const mainListClasses = classnames(listClassesSliderBg, {
@@ -465,34 +516,4 @@ export const NavHorizontalSliderBg: React.FC<NavProps> = (props: React.PropsWith
     </>
   );
 };
-const listClassesSliderBg = 'nav nav-pills flex-row tabs-simple nav-box-bg';
-
-export const NavTabsContainerBg: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
-  const { items, selected, navSize, hasIcon } = props;
-
-  const mainListClasses = classnames(listClassesTabsContainerBg, {
-    'nav-lg': navSize === 'large'
-  });
-
-  const tabsBoxRef = useRef<HTMLUListElement>(null);
-
-  return (
-    <>
-      <nav>
-        <ul className={mainListClasses} ref={tabsBoxRef}>
-          {items.map((item) => (
-            <NavItemComponentTabs
-              {...item}
-              key={item.id}
-              level={0}
-              selected={selected}
-              hasIcon={hasIcon}
-              type={item.type}
-            />
-          ))}
-        </ul>
-      </nav>
-    </>
-  );
-};
-const listClassesTabsContainerBg = 'nav nav-pills tabs-simple nav-box-bg';
+const listClassesSliderBg = 'nav nav-pills flex-row tabs nav-box-bg';

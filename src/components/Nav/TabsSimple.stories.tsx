@@ -3,7 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Components
 import { Nav, NavItem } from '.';
-import { NavHorizontalSlider, NavTabs, NavTabsWidth } from './tabs';
+import { NavTabsSlider, NavTabs, NavTabsWidth } from './tabs';
 
 // Configuración general del componente
 export default {
@@ -20,6 +20,22 @@ const simpleItems: NavItem[] = [
     id: '4',
     disabled: true,
     iconTabs: '<span class="material-icons-round">home</span>'
+  }
+];
+
+const sizeItems: NavItem[] = [
+  { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>', type: 'large' },
+  {
+    name: 'Pestaña predeterminada',
+    id: '2',
+    iconTabs: '<span class="material-icons-round">home</span>',
+    type: 'default'
+  },
+  {
+    name: 'Pestaña predeterminada',
+    id: '3',
+    iconTabs: '<span class="material-icons-round">home</span>',
+    type: 'small'
   }
 ];
 
@@ -52,6 +68,7 @@ const sliderItems: NavItem[] = [
     iconTabs: '<span class="material-icons-round">home</span>'
   }
 ];
+
 export const Simple = (): JSX.Element => {
   return (
     <>
@@ -63,7 +80,7 @@ Simple.story = {
   name: 'Ancho variable'
 };
 
-export const SimpleAncho = (): JSX.Element => {
+export const SimpleWidth = (): JSX.Element => {
   return (
     <>
       <NavTabsWidth items={ItemsFullWidth} selected="1" hasIcon={false} />
@@ -71,8 +88,20 @@ export const SimpleAncho = (): JSX.Element => {
   );
 };
 
-SimpleAncho.story = {
+SimpleWidth.story = {
   name: 'Ancho fijo'
+};
+
+export const SimpleSizes = (): JSX.Element => {
+  return (
+    <>
+      <NavTabs items={sizeItems} selected="1" hasIcon={true} />
+    </>
+  );
+};
+
+SimpleSizes.story = {
+  name: 'Tamaños'
 };
 
 export const SimpleIcon = (): JSX.Element => {
@@ -82,6 +111,7 @@ export const SimpleIcon = (): JSX.Element => {
     </>
   );
 };
+
 SimpleIcon.story = {
   name: 'Con icono'
 };
@@ -89,10 +119,11 @@ SimpleIcon.story = {
 export const SliderTab = (): JSX.Element => {
   return (
     <>
-      <NavHorizontalSlider items={sliderItems} selected="1" hasIcon={true} />
+      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} />
     </>
   );
 };
+
 SliderTab.story = {
   name: 'Desplazable'
 };

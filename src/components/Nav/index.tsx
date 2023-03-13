@@ -77,6 +77,7 @@ export interface NavItemComponentProps extends NavItem {
   hasBordered?: boolean;
   type?: Size;
   hasIcon?: boolean;
+  isFullWidth?: boolean;
   onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
