@@ -34,7 +34,7 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
 
 /* === Bootstrap Import === */
 
-@import '~bootstrap/scss/pagination';
+@import 'node_modules/bootstrap/scss/pagination';
 
 /* === Custom styles === */
 
@@ -144,7 +144,7 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
     .page-previous-icon {
       content: $pagination-icon-left-hover;
     }
-    
+
     .page-next-icon {
       content: $pagination-icon-right-hover;
     }

@@ -3,7 +3,7 @@ $spinner-width: 3.75rem;
 $spinner-height: 3.75rem;
 
 /* === Bootstrap Import === */
-@import '~bootstrap/scss/spinners';
+@import 'node_modules/bootstrap/scss/spinners';
 
 /* === Custom styles === */
 .spinner {
