@@ -14,7 +14,7 @@ $nav-icon-font-size: 1.25rem;
 $nav-link-padding-sm-y: 0.25rem;
 $nav-link-padding-sm-x: 0.5rem;
 $nav-link-padding-y: 0.5rem;
-$nav-link-padding-x: 0.75rem;
+$nav-link-padding-x: 1.125rem;
 $nav-link-padding-lg-y: 0.75rem;
 $nav-link-padding-lg-x: 0.75rem;
 $nav-mobile-inner-padding-y: 0.75rem;
@@ -376,17 +376,18 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
 .nav .nav {
   .nav-link {
-    padding-left: $nav-link-padding-x * 2;
+    padding-left: $nav-link-padding-x * 2.4444;
   }
 
   .nav {
     .nav-link {
-      padding-left: $nav-link-padding-x * 3;
+      padding-left: $nav-link-padding-x * 4;
     }
 
     .nav {
       .nav-link {
-        padding-left: $nav-link-padding-x * 4;
+        padding-left: $nav-link-padding-x * 4.5;
+        background-color: pink !important;
       }
     }
   }
