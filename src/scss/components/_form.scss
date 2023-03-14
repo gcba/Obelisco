@@ -73,8 +73,8 @@ $form-validation-states: (
 
 /* === Bootstrap Import === */
 
-@import '~bootstrap/scss/forms';
-@import '~bootstrap/scss/custom-forms';
+@import 'node_modules/bootstrap/scss/forms';
+@import 'node_modules/bootstrap/scss/custom-forms';
 
 /* === Custom styles === */
 
