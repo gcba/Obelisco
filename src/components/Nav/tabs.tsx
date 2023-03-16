@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import classnames from 'classnames';
 import { checkActiveChild, NavItemComponent, NavItemComponentProps, NavProps } from '.';
 
@@ -181,6 +181,10 @@ const listClassesTabsFullWidth = 'nav nav-pills flex-row tabs';
 export const NavTabsSlider: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
 
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const mainListClasses = classnames(listClassesSlider, {
     'nav-lg': navSize === 'large'
   });
@@ -231,10 +235,64 @@ export const NavTabsSlider: React.FC<NavProps> = (props: React.PropsWithChildren
     }
   };
 
+  const handleMouseDown = (event: React.MouseEvent<HTMLUListElement>) => {
+    setIsDragging(true);
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    setStartX(event.pageX - tabsBox.offsetLeft);
+    setScrollLeft(tabsBox.scrollLeft);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLUListElement>) => {
+    if (!isDragging) return;
+    event.preventDefault();
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    const x = event.pageX - tabsBox.offsetLeft;
+    const walk = (x - startX) * 1.2; // Velocidad de desplazamiento ajustable
+    tabsBox.scrollLeft = scrollLeft - walk;
+    handleIcons(tabsBox.scrollLeft);
+  };
+
+  const handleTouchStart = (event: React.TouchEvent<HTMLUListElement>) => {
+    setIsDragging(true);
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    setStartX(event.touches[0].pageX - tabsBox.offsetLeft);
+    setScrollLeft(tabsBox.scrollLeft);
+  };
+
+  const handleTouchMove = (event: React.TouchEvent<HTMLUListElement>) => {
+    if (!isDragging) return;
+    event.preventDefault();
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    const x = event.touches[0].pageX - tabsBox.offsetLeft;
+    const walk = (x - startX) * 1.2; // Velocidad de desplazamiento ajustable
+    tabsBox.scrollLeft = scrollLeft - walk;
+    handleIcons(tabsBox.scrollLeft);
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   return (
     <>
       <nav className="tabs-slider">
-        <ul className={mainListClasses} ref={tabsBoxRef}>
+        <ul
+          className={mainListClasses}
+          ref={tabsBoxRef}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}>
           {items.map((item) => (
             <NavItemComponentSlider
               {...item}
@@ -355,6 +413,10 @@ const listClassesTabsContainerBg = 'nav nav-pills tabs flex-row nav-box-bg';
 export const NavTabsSliderBox: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
 
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const mainListClasses = classnames(listClassesSliderBox, {
     'nav-lg': navSize === 'large'
   });
@@ -405,10 +467,64 @@ export const NavTabsSliderBox: React.FC<NavProps> = (props: React.PropsWithChild
     }
   };
 
+  const handleMouseDown = (event: React.MouseEvent<HTMLUListElement>) => {
+    setIsDragging(true);
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    setStartX(event.pageX - tabsBox.offsetLeft);
+    setScrollLeft(tabsBox.scrollLeft);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLUListElement>) => {
+    if (!isDragging) return;
+    event.preventDefault();
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    const x = event.pageX - tabsBox.offsetLeft;
+    const walk = (x - startX) * 1.2; // Velocidad de desplazamiento ajustable
+    tabsBox.scrollLeft = scrollLeft - walk;
+    handleIcons(tabsBox.scrollLeft);
+  };
+
+  const handleTouchStart = (event: React.TouchEvent<HTMLUListElement>) => {
+    setIsDragging(true);
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    setStartX(event.touches[0].pageX - tabsBox.offsetLeft);
+    setScrollLeft(tabsBox.scrollLeft);
+  };
+
+  const handleTouchMove = (event: React.TouchEvent<HTMLUListElement>) => {
+    if (!isDragging) return;
+    event.preventDefault();
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    const x = event.touches[0].pageX - tabsBox.offsetLeft;
+    const walk = (x - startX) * 1.2; // Velocidad de desplazamiento ajustable
+    tabsBox.scrollLeft = scrollLeft - walk;
+    handleIcons(tabsBox.scrollLeft);
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   return (
     <>
       <nav className="tabs-slider">
-        <ul className={mainListClasses} ref={tabsBoxRef}>
+        <ul
+          className={mainListClasses}
+          ref={tabsBoxRef}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}>
           {items.map((item) => (
             <NavItemComponentSlider
               {...item}
@@ -437,6 +553,10 @@ const listClassesSliderBox = 'nav nav-pills flex-row tabs nav-box';
 
 export const NavTabsSliderBg: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
   const { items, selected, navSize, hasIcon } = props;
+
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const mainListClasses = classnames(listClassesSliderBg, {
     'nav-lg': navSize === 'large'
@@ -488,10 +608,64 @@ export const NavTabsSliderBg: React.FC<NavProps> = (props: React.PropsWithChildr
     }
   };
 
+  const handleMouseDown = (event: React.MouseEvent<HTMLUListElement>) => {
+    setIsDragging(true);
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    setStartX(event.pageX - tabsBox.offsetLeft);
+    setScrollLeft(tabsBox.scrollLeft);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLUListElement>) => {
+    if (!isDragging) return;
+    event.preventDefault();
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    const x = event.pageX - tabsBox.offsetLeft;
+    const walk = (x - startX) * 1.2; // Velocidad de desplazamiento ajustable
+    tabsBox.scrollLeft = scrollLeft - walk;
+    handleIcons(tabsBox.scrollLeft);
+  };
+
+  const handleTouchStart = (event: React.TouchEvent<HTMLUListElement>) => {
+    setIsDragging(true);
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    setStartX(event.touches[0].pageX - tabsBox.offsetLeft);
+    setScrollLeft(tabsBox.scrollLeft);
+  };
+
+  const handleTouchMove = (event: React.TouchEvent<HTMLUListElement>) => {
+    if (!isDragging) return;
+    event.preventDefault();
+    const tabsBox = tabsBoxRef.current;
+    if (!tabsBox) return;
+    const x = event.touches[0].pageX - tabsBox.offsetLeft;
+    const walk = (x - startX) * 1.2; // Velocidad de desplazamiento ajustable
+    tabsBox.scrollLeft = scrollLeft - walk;
+    handleIcons(tabsBox.scrollLeft);
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   return (
     <>
       <nav className="tabs-slider">
-        <ul className={mainListClasses} ref={tabsBoxRef}>
+        <ul
+          className={mainListClasses}
+          ref={tabsBoxRef}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}>
           {items.map((item) => (
             <NavItemComponentSlider
               {...item}
