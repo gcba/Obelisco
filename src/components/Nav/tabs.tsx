@@ -281,6 +281,10 @@ export const NavTabsSlider: React.FC<NavProps> = (props: React.PropsWithChildren
     setIsDragging(false);
   };
 
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
   return (
     <>
       <nav className="tabs-slider">
@@ -292,7 +296,8 @@ export const NavTabsSlider: React.FC<NavProps> = (props: React.PropsWithChildren
           onMouseMove={handleMouseMove}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}>
+          onTouchEnd={handleTouchEnd}
+          onMouseLeave={handleMouseLeave}>
           {items.map((item) => (
             <NavItemComponentSlider
               {...item}
@@ -513,6 +518,10 @@ export const NavTabsSliderBox: React.FC<NavProps> = (props: React.PropsWithChild
     setIsDragging(false);
   };
 
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
   return (
     <>
       <nav className="tabs-slider">
@@ -524,7 +533,8 @@ export const NavTabsSliderBox: React.FC<NavProps> = (props: React.PropsWithChild
           onMouseMove={handleMouseMove}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}>
+          onTouchEnd={handleTouchEnd}
+          onMouseLeave={handleMouseLeave}>
           {items.map((item) => (
             <NavItemComponentSlider
               {...item}
@@ -654,6 +664,10 @@ export const NavTabsSliderBg: React.FC<NavProps> = (props: React.PropsWithChildr
     setIsDragging(false);
   };
 
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
   return (
     <>
       <nav className="tabs-slider">
@@ -665,7 +679,8 @@ export const NavTabsSliderBg: React.FC<NavProps> = (props: React.PropsWithChildr
           onMouseMove={handleMouseMove}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}>
+          onTouchEnd={handleTouchEnd}
+          onMouseLeave={handleMouseLeave}>
           {items.map((item) => (
             <NavItemComponentSlider
               {...item}
