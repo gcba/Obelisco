@@ -59,7 +59,7 @@ a.list-group-item {
   padding: 1.5rem;
 
   .access-title {
-    i, span {
+    i, .material-icons-round {
       font-size: 1.25rem;
       vertical-align: middle;
     }
@@ -192,10 +192,10 @@ a.list-group-item {
     @include display-flex-between;
     align-items: flex-start;
 
-    &:has(i, span) {
+    &:has(i, .material-icons-round ) {
       padding: 0.75rem 1.625rem;
 
-      i, span {
+      i, .material-icons-round  {
         margin-right: 0.875rem;
         align-self: center;
       }
@@ -245,7 +245,7 @@ a.list-group-item {
       }
     }
 
-    i, span:has(+ .access-content) {
+    i, .material-icons-round :has(+ .access-content) {
       font-size: 1.25rem;
     }
 
