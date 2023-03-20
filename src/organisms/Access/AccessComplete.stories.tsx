@@ -16,13 +16,12 @@ export const Simple = (): JSX.Element => (
     <div className="list-group">
       <div className="group-access">
         <div className="card-access">
-          <div className="card-access-body reverse">
+          <div className="card-access-body">
             <span className="card-access-icon descriptive">Nº</span>
             <div>
               <h3 className="card-access-title">Título del acceso</h3>
               <p className="mb-0">Descripción del acceso</p>
             </div>
-            <i className="bx bxs-info-circle card-access-icon"></i>
           </div>
           <a href="#" className="list-group-item card-item">
             <span className="access-title">
@@ -47,7 +46,6 @@ export const ConListaDeAccesos = (): JSX.Element => (
               <h3 className="card-access-title">Título del acceso</h3>
               <p className="mb-0">Descripción del acceso</p>
             </div>
-            <i className="bx bxs-info-circle card-access-icon"></i>
           </div>
           <div className="container-access">
             <hr className="clearfix mt-0" />
@@ -103,7 +101,6 @@ export const ConCategorias = (): JSX.Element => (
               <h3 className="card-access-title">Título del acceso</h3>
               <p className="mb-0">Descripción del acceso</p>
             </div>
-            <i className="bx bxs-info-circle card-access-icon"></i>
           </div>
           <div className="container-access">
             <hr className="clearfix mt-0" />

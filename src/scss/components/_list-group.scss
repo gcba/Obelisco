@@ -323,10 +323,10 @@ a.list-group-item {
     padding-bottom: 0;
 
     .card-access-body {
-      padding: $padding-card-access-body;
+      display:flex;
       align-items: center;
       gap: 12px;
-      @include display-flex-between;
+      padding: $padding-card-access-body;
 
       &.p-list {
         padding: $padding-card-access-body-list;
@@ -360,6 +360,7 @@ a.list-group-item {
 
       &.reverse {
         flex-direction: row-reverse;
+        justify-content: space-between;
       }
 
       @include media-breakpoint-down(xs) {
@@ -439,7 +440,7 @@ a.list-group-item {
     border-radius: $border-radius-card-item !important;
     @include display-flex-between;
 
-    i {
+    i, .material-icons-round {
       margin-right: 0.375rem;
     }
   }
