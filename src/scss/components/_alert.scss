@@ -68,6 +68,26 @@ $theme-colors: map-merge(
   counter-reset: section;
   padding-left: $alert-padding-y + $alert-padding-left;
 
+  &:not(:has(ol, ul)) {
+    display: flex;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: $alert-icon-size;
+    height: $alert-icon-size;
+    inset: $alert-icon-position-top 0 0 $alert-icon-position-left;
+  }
+
+  @each $color, $value in $theme-colors {
+    &.alert-#{$color} {
+      @include alert-icon($color);
+    }
+  }
+
   p,
   ol {
     margin-bottom: $alert-text-distance;
@@ -80,7 +100,10 @@ $theme-colors: map-merge(
 
     &.list-links {
       color: $blue;
-      text-decoration: underline;
+
+      span {
+        text-decoration: underline;
+      }
     }
 
     li {
@@ -109,36 +132,13 @@ $theme-colors: map-merge(
     }
   }
 
-  &:not(.alert-dismissible) {
-    &::before {
-      content: '';
-      position: absolute;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: $alert-icon-size;
-      height: $alert-icon-size;
-      inset: $alert-icon-position-top 0 0 $alert-icon-position-left;
-    }
-
-    @each $color, $value in $theme-colors {
-      &.alert-#{$color} {
-        @include alert-icon($color);
-      }
-    }
-  }
-
   &.alert-dismissible {
-    padding-left: 1.5rem;
-    padding-right: $alert-padding-y + $alert-padding-left;
-
     p {
       margin-bottom: 0;
     }
 
     .close {
-      margin: 1.4rem;
-      padding: 0.39rem;
-      background: transparent $close-icon center/1.5rem auto no-repeat;
+      color: $black;
       opacity: 0.75;
     }
   }
