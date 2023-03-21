@@ -113,10 +113,6 @@ $theme-colors: map-merge(
         counter-increment: section;
         content: counter(section) '. ';
       }
-
-      span {
-        text-decoration: underline;
-      }
     }
   }
 
@@ -140,6 +136,8 @@ $theme-colors: map-merge(
     .close {
       color: $black;
       opacity: 0.75;
+      padding: 0;
+      margin: $alert-padding-y $alert-padding-x;
     }
   }
 }
