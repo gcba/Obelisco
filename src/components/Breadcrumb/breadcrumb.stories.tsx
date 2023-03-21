@@ -10,7 +10,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const MigasDePan = (): JSX.Element => (
+export const Breadcrumb = (): JSX.Element => (
   <nav aria-label="breadcrumb">
     <ol className="breadcrumb">
       <li className="breadcrumb-item">
@@ -29,6 +29,6 @@ export const MigasDePan = (): JSX.Element => (
   </nav>
 );
 
-MigasDePan.story = {
+Breadcrumb.story = {
   name: 'Migas de pan'
 };
