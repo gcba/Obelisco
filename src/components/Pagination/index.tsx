@@ -37,11 +37,11 @@ export const Pagination: React.FC<PaginationProps> = (props: PaginationProps) =>
   const lastIndex = pages.length - 1;
 
   if (pages.length > 2) {
-    if (current < 2) {
-      pagesToShow = pagesToShow.slice(0, 2);
+    if (current < 4) {
+      pagesToShow = pagesToShow.slice(0, 5);
       isShowTopTrimmer = true;
-    } else if (current > lastIndex - 2) {
-      pagesToShow = pagesToShow.slice(lastIndex - 1);
+    } else if (current > lastIndex - 4) {
+      pagesToShow = pagesToShow.slice(lastIndex - 4);
       isShowTopTrimmer = false;
       isShowBottomTrimmer = true;
     } else {
