@@ -19,11 +19,23 @@ export interface NavProps {
   navSize?: 'default' | 'large';
   onClick?: (id: string) => void;
   hasIcon?: boolean;
-  onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
-  classUl: string;
-  withButton?: boolean;
 }
 
+export interface NavItemComponentProps extends NavItem {
+  level: number;
+  selected?: string;
+  onClick?: (id: string) => void;
+  hasBordered?: boolean;
+  type?: Size;
+  hasIcon?: boolean;
+  onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+}
+
+export interface TabsProps extends NavProps {
+  classUl?: string;
+  isWithButton?: boolean;
+  onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+}
 const listClasses = 'nav flex-column nav-pills';
 
 export const Nav: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
@@ -71,16 +83,6 @@ export const NavHorizontal: React.FC<NavProps> = (props: React.PropsWithChildren
     </nav>
   );
 };
-
-export interface NavItemComponentProps extends NavItem {
-  level: number;
-  selected?: string;
-  onClick?: (id: string) => void;
-  hasBordered?: boolean;
-  type?: Size;
-  hasIcon?: boolean;
-  onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
-}
 
 export const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
   const { name, id, href, children, level, disabled, selected, hasIcon } = props;

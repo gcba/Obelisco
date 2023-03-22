@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import classnames from 'classnames';
-import { checkActiveChild, NavItemComponent, NavItemComponentProps, NavProps } from '.';
+import { checkActiveChild, NavItemComponent, NavItemComponentProps, TabsProps } from '.';
 
 const NavItemComponentSlider: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
   const { name, id, href, children, level, disabled, selected, hasBordered, type, hasIcon, onSelect, iconTabs } = props;
@@ -51,8 +51,8 @@ const NavItemComponentSlider: React.FC<NavItemComponentProps> = (props: NavItemC
 
 const listClasses = 'nav nav-pills flex-row tabs';
 
-export const NavTabsSlider: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
-  const { items, selected, navSize, hasIcon, classUl, withButton = true } = props;
+export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildren<TabsProps>) => {
+  const { items, selected, navSize, hasIcon, classUl, isWithButton = true } = props;
 
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -168,7 +168,7 @@ export const NavTabsSlider: React.FC<NavProps> = (props: React.PropsWithChildren
 
   return (
     <>
-      <nav className={`tabs-slider${!withButton ? ' px-0' : ''}`}>
+      <nav className={`tabs-slider${!isWithButton ? ' px-0' : ''}`}>
         <ul
           className={mainListClasses}
           ref={tabsBoxRef}
@@ -191,7 +191,7 @@ export const NavTabsSlider: React.FC<NavProps> = (props: React.PropsWithChildren
             />
           ))}
         </ul>
-        {withButton && (
+        {isWithButton && (
           <div className="icons-container">
             <div className="right-left icon" onClick={handleIconClick} id="left">
               <span className="material-icons-round">arrow_back_ios</span>

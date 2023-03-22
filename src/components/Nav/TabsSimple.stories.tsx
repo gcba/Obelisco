@@ -65,7 +65,7 @@ export const Simple = (): JSX.Element => {
         selected="1"
         hasIcon={false}
         classUl="nav nav-pills flex-row tabs pb-1"
-        withButton={false}
+        isWithButton={false}
       />
     </>
   );
@@ -82,7 +82,7 @@ export const SimpleWidth = (): JSX.Element => {
         selected="1"
         hasIcon={false}
         classUl="nav nav-pills flex-row tabs fixedWidth pb-1"
-        withButton={false}
+        isWithButton={false}
       />
     </>
   );
@@ -100,7 +100,7 @@ export const SimpleSizes = (): JSX.Element => {
         selected="1"
         hasIcon={false}
         classUl="nav nav-pills flex-row tabs pb-1"
-        withButton={false}
+        isWithButton={false}
       />
     </>
   );
@@ -118,7 +118,7 @@ export const SimpleIcon = (): JSX.Element => {
         selected="1"
         hasIcon={true}
         classUl="nav nav-pills flex-row tabs pb-1"
-        withButton={false}
+        isWithButton={false}
       />
     </>
   );

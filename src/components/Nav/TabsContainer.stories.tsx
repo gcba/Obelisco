@@ -65,7 +65,7 @@ export const ContainerTabs = (): JSX.Element => {
       selected="1"
       hasIcon={false}
       classUl="nav nav-pills flex-row tabs nav-box"
-      withButton={false}
+      isWithButton={false}
     />
   );
 };
@@ -82,7 +82,7 @@ export const ContainerTabWidth = (): JSX.Element => {
         selected="1"
         hasIcon={false}
         classUl="nav nav-pills flex-row tabs nav-box fixedWidth pb-1"
-        withButton={false}
+        isWithButton={false}
       />
     </>
   );
@@ -99,7 +99,7 @@ export const ContainerSizeTabs = (): JSX.Element => {
       selected="1"
       hasIcon={false}
       classUl="nav nav-pills flex-row tabs nav-box"
-      withButton={false}
+      isWithButton={false}
     />
   );
 };
@@ -116,7 +116,7 @@ export const ContainerTabsBg = (): JSX.Element => {
         selected="1"
         hasIcon={false}
         classUl="nav nav-pills tabs flex-row nav-box-bg"
-        withButton={false}
+        isWithButton={false}
       />
     </div>
   );
@@ -133,7 +133,7 @@ export const ContainerTabsIcon = (): JSX.Element => {
       selected="1"
       hasIcon={true}
       classUl="nav nav-pills tabs flex-row nav-box-bg"
-      withButton={false}
+      isWithButton={false}
     />
   );
 };
