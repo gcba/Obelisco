@@ -10,4 +10,7 @@
 .wrapper-bg {
   background-color: #f3f6f9;
   padding:2.5rem ;
+  @media only screen and (max-width: 768px) {
+    padding:2.5rem 0 ;
+  }
 }

@@ -20,6 +20,8 @@ export interface NavProps {
   onClick?: (id: string) => void;
   hasIcon?: boolean;
   onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+  classUl: string;
+  withButton?: boolean;
 }
 
 const listClasses = 'nav flex-column nav-pills';
@@ -77,7 +79,6 @@ export interface NavItemComponentProps extends NavItem {
   hasBordered?: boolean;
   type?: Size;
   hasIcon?: boolean;
-  isFullWidth?: boolean;
   onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 

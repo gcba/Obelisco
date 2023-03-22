@@ -27,6 +27,8 @@ $nav-pills-link-active-bg: $blue;
 $nav-link-hover-color: $blue;
 $nav-link-border-active: $blue;
 
+$nav-link-fixed-width: 15.625rem;
+
 $nav-focus-width: 0.25rem;
 $input-btn-focus-box-shadow: 0 0 0 $nav-focus-width theme-color-level('info', 3);
 $input-btn-hover-box-shadow: 0 0 0 $nav-focus-width/2 $blue;
@@ -293,7 +295,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
             }
           }
           &:focus {
-            @include border-radius($border-radius * 2);;
+            @include border-radius($border-radius * 2);
           }
         }
         &:focus {
@@ -308,7 +310,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         }
       }
     }
-    .nav-item[draggable="true"] {
+    .nav-item[draggable='true'] {
       cursor: move;
     }
     &.nav-box {
@@ -351,17 +353,24 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   .nav {
     width: fit-content;
     overflow-x: hidden;
-    min-height: 3.125rem;
-    transition: transform 0.5s ease-in-out;
     margin-left: 0.625rem;
+    &.fixedWidth {
+      .nav-item > .nav-link {
+        width: auto;
+        min-width: $nav-link-fixed-width;
+        @include media-breakpoint-down(md) {
+          min-width: auto;
+        }
+      }
+    }
   }
   .right-left {
     width: 2.5rem;
-    height: 80%;
+    height: 100%;
     background: transparent;
     position: absolute;
     top: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -373,6 +382,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     }
     &:nth-of-type(2) {
       right: 0;
+      display: flex;
     }
   }
   @extend .tabs;

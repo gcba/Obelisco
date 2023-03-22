@@ -3,7 +3,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Components
 import { Nav, NavItem } from '.';
-import { NavTabsSlider, NavTabs, NavTabsWidth } from './tabs';
+import { NavTabsSlider } from './tabs';
 
 // Configuración general del componente
 export default {
@@ -39,18 +39,6 @@ const sizeItems: NavItem[] = [
   }
 ];
 
-const ItemsFullWidth: NavItem[] = [
-  { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '3', iconTabs: '<span class="material-icons-round">home</span>' },
-  {
-    name: 'Pestaña predeterminada',
-    id: '4',
-    disabled: true,
-    iconTabs: '<span class="material-icons-round">home</span>'
-  }
-];
-
 const sliderItems: NavItem[] = [
   { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>' },
   { name: 'Pestaña predeterminada', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
@@ -72,7 +60,13 @@ const sliderItems: NavItem[] = [
 export const Simple = (): JSX.Element => {
   return (
     <>
-      <NavTabs items={simpleItems} selected="1" hasIcon={false} />
+      <NavTabsSlider
+        items={simpleItems}
+        selected="1"
+        hasIcon={false}
+        classUl="nav nav-pills flex-row tabs pb-1"
+        withButton={false}
+      />
     </>
   );
 };
@@ -83,7 +77,13 @@ Simple.story = {
 export const SimpleWidth = (): JSX.Element => {
   return (
     <>
-      <NavTabsWidth items={ItemsFullWidth} selected="1" hasIcon={false} />
+      <NavTabsSlider
+        items={simpleItems}
+        selected="1"
+        hasIcon={false}
+        classUl="nav nav-pills flex-row tabs fixedWidth pb-1"
+        withButton={false}
+      />
     </>
   );
 };
@@ -95,7 +95,13 @@ SimpleWidth.story = {
 export const SimpleSizes = (): JSX.Element => {
   return (
     <>
-      <NavTabs items={sizeItems} selected="1" hasIcon={true} />
+      <NavTabsSlider
+        items={sizeItems}
+        selected="1"
+        hasIcon={false}
+        classUl="nav nav-pills flex-row tabs pb-1"
+        withButton={false}
+      />
     </>
   );
 };
@@ -107,7 +113,13 @@ SimpleSizes.story = {
 export const SimpleIcon = (): JSX.Element => {
   return (
     <>
-      <NavTabs items={simpleItems} selected="1" hasIcon={true} />
+      <NavTabsSlider
+        items={simpleItems}
+        selected="1"
+        hasIcon={true}
+        classUl="nav nav-pills flex-row tabs pb-1"
+        withButton={false}
+      />
     </>
   );
 };
@@ -119,7 +131,7 @@ SimpleIcon.story = {
 export const SliderTab = (): JSX.Element => {
   return (
     <>
-      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} />
+      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills flex-row tabs pb-1" />
     </>
   );
 };
