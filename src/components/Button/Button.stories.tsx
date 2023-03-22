@@ -145,3 +145,103 @@ export const ConIconos = (): JSX.Element => {
 ConIconos.story = {
   name: 'Con íconos'
 };
+
+export const ButtonWithSpinner = (): JSX.Element => (
+  <>
+    <div className="btn-wrapper">
+      <button className="btn btn-link btn-icon btn-sm">
+        Botón
+        <div className="spinner-border spinner-border-sm text-info" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-link btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-info" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-link btn-icon btn-lg">
+        Botón
+        <div className="spinner-border spinner-border-sm text-info" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+    </div>
+    <div className="btn-wrapper">
+      <button className="btn btn-outline-link btn-icon btn-sm">
+        Botón
+        <div className="spinner-border spinner-border-sm text-info" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-outline-link btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-info" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-outline-link btn-icon btn-lg">
+        Botón
+        <div className="spinner-border spinner-border-sm text-info" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+    </div>
+    <div className="btn-wrapper">
+      <button className="btn btn-outline-primary btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-secondary" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-outline-secondary btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-secondary" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-outline-success btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-success" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-outline-danger btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-danger" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+    </div>
+    <div className="btn-wrapper">
+      <button className="btn btn-primary btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-secondary" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-secondary btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-secondary" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-success btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-success" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+      <button className="btn btn-danger btn-icon">
+        Botón
+        <div className="spinner-border spinner-border-sm text-danger" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </button>
+    </div>
+  </>
+);
+ButtonWithSpinner.story = {
+  name: 'Con spinner'
+};

@@ -11,26 +11,45 @@ export default {
   decorators: [withA11y]
 };
 
-export const ConMensaje = (): JSX.Element => (
-  <div className="spinner">
-    <h3>Estamos creando tu trámite</h3>
-    <p className="lead">Por favor esperá unos segundos...</p>
+export const SpinnerDefault = (): JSX.Element => (
+  <div className="spinner-wrapper">
     <div className="spinner-border text-info" role="status">
       <span className="sr-only">Loading...</span>
     </div>
   </div>
 );
 
-ConMensaje.story = {
-  name: 'Con mensaje'
+SpinnerDefault.story = {
+  name: 'Predeterminado'
 };
 
-export const SinMensaje = (): JSX.Element => (
-  <div className="spinner-border text-info" role="status">
-    <span className="sr-only">Loading...</span>
+export const SpinnerSizes = (): JSX.Element => (
+  <div className="spinner-wrapper">
+    <div className="spinner-border spinner-border-sm text-info" role="status">
+      <span className="sr-only">Loading...</span>
+    </div>
+    <div className="spinner-border text-info" role="status">
+      <span className="sr-only">Loading...</span>
+    </div>
+    <div className="spinner-border spinner-border-lg text-info" role="status">
+      <span className="sr-only">Loading...</span>
+    </div>
   </div>
 );
 
-SinMensaje.story = {
-  name: 'Sin mensaje'
+SpinnerSizes.story = {
+  name: 'Tamaños'
+};
+
+export const SpinnerBlock = (): JSX.Element => (
+  <div className="spinner-wrapper">
+    <div className="spinner-size">
+      <div className="spinner-block text-info" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+);
+SpinnerBlock.story = {
+  name: 'Expandible'
 };
