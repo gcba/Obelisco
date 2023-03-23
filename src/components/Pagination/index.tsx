@@ -109,7 +109,7 @@ export const PaginationItem: React.FC<PaginationItemProps> = (props: React.Props
 
   if (props.isHidden) {
     return (
-      <li className="page-item" style={{ display: 'none' }}>
+      <li className="page-item" style={{ opacity: 0 }}>
         <span className="page-link">{props.children}</span>
       </li>
     );

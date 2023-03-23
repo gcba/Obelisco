@@ -15,12 +15,10 @@ $pagination-padding-x: spaceUnits(3);
 $pagination-margin-x: 0.2rem;
 $pagination-border-width: 0;
 
-$pagination-hover-bg: transparent;
 $pagination-disabled-bg: transparent;
 
 /* === Custom variables and mixins === */
 
-$pagination-icon-size: spaceUnits(5);
 $pagination-size: 40px;
 
 $pagination-padding-y-icon: spaceUnits(1);
@@ -33,7 +31,7 @@ $pagination-icon-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.o
 $pagination-icon-right-active: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
 $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M14.71 6.71c-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"></path></svg>');
 
-@mixin pagination-states ($text-decoration, $box-shadow, $bg-color, $color, $icon-left, $icon-right) {
+@mixin pagination-states($text-decoration, $box-shadow, $bg-color, $color, $icon-left, $icon-right) {
   text-decoration: $text-decoration;
   box-shadow: $box-shadow;
   background-color: $bg-color;
@@ -69,6 +67,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
       pointer-events: none;
       .page-link {
         box-shadow: none;
+        background-color: transparent;
       }
     }
 
@@ -108,7 +107,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
       &:has(.page-next-icon) {
         padding-right: $pagination-padding-y-icon;
       }
-      
+
       &:has(.page-previous-icon, .page-next-icon):not(:has(.page-next-text, .page-previous-text)) {
         padding-left: $pagination-padding-y-icon-only;
         padding-right: $pagination-padding-y-icon-only;
@@ -118,30 +117,54 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
         color: $pagination-color;
       }
 
-      &:hover,
-      &.hover {
-        @include pagination-states(underline, $pagination-hover-box-shadow, $pagination-bg, $pagination-hover-color, $pagination-icon-left-hover, $pagination-icon-right-hover);
-      }
-
       &:focus,
       &.focus {
-        @include pagination-states(none, $pagination-focus-box-shadow, $pagination-bg, $pagination-color, $pagination-icon-left, $pagination-icon-right);
+        @include pagination-states(
+          none,
+          $pagination-focus-box-shadow,
+          $pagination-bg,
+          $pagination-color,
+          $pagination-icon-left,
+          $pagination-icon-right
+        );
+      }
 
-        &:hover,
-        &.hover {
-          @include pagination-states(underline, $pagination-focus-box-shadow, $pagination-bg, $pagination-hover-color, $pagination-icon-left-hover, $pagination-icon-right-hover);
-        }
+      &:hover,
+      &.hover {
+        @include pagination-states(
+          underline,
+          $pagination-hover-box-shadow,
+          $pagination-bg,
+          $pagination-hover-color,
+          $pagination-icon-left-hover,
+          $pagination-icon-right-hover
+        );
       }
     }
 
     &:active,
     &.active {
-      .page-link, .page-link:visited {
-        @include pagination-states(none, $pagination-box-shadow, $pagination-active-bg, $pagination-active-color, $pagination-icon-left-active, $pagination-icon-right-active);
-        
+      .page-link,
+      .page-link:visited {
+        @include pagination-states(
+          none,
+          $pagination-box-shadow,
+          $pagination-active-bg,
+          $pagination-active-color,
+          $pagination-icon-left-active,
+          $pagination-icon-right-active
+        );
+
         &:hover,
         &.hover {
-          @include pagination-states(none, $pagination-box-shadow, $pagination-active-bg, $pagination-active-color, $pagination-icon-left-active, $pagination-icon-right-active);
+          @include pagination-states(
+            none,
+            $pagination-box-shadow,
+            $pagination-active-bg,
+            $pagination-active-color,
+            $pagination-icon-left-active,
+            $pagination-icon-right-active
+          );
         }
       }
     }
@@ -154,13 +177,12 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
       .page-previous-icon {
         content: $pagination-icon-left-hover;
       }
-      
+
       .page-next-icon {
         content: $pagination-icon-right-hover;
       }
     }
   }
-
   .page-navigation {
     padding-top: spaceUnits(6);
     padding-bottom: spaceUnits(4);
@@ -175,16 +197,13 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
     .page-item {
       .page-link {
         margin: 0;
-        min-width: 30px;
-        height: 35px;
-        padding: .25rem .5rem;
+        padding: 0.25rem 0.5rem;
 
-        
         .page-previous-text,
         .page-next-text {
           @include sr-only;
         }
-        
+
         &:has(.page-previous-icon, .page-next-icon) {
           padding-left: $pagination-padding-y-icon;
           padding-right: $pagination-padding-y-icon;
