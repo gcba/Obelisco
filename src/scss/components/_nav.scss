@@ -47,11 +47,15 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 /* === Custom styles === */
 
 .nav {
+
   &.flex-row {
+
     &:not(.tabs) {
       gap: 0.625rem;
     }
+
     .nav-item {
+
       .nav-link {
         max-height: 40px;
 
@@ -134,6 +138,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   font-weight: $nav-link-font-weight;
   line-height: $nav-link-line-heght;
   font-family: $font-family-headings;
+
   @include border-radius($border-radius * 2);
 
   &:visited {
@@ -261,6 +266,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       }
     }
   }
+
   &.tabs {
     display: flex;
     flex-wrap: nowrap;
@@ -268,6 +274,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
     .nav-item {
       white-space: nowrap;
+
       button {
         border: none;
       }
@@ -280,6 +287,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
           font-size: 1.25rem;
           text-decoration: none;
         }
+
         &.active,
         &:active {
           //font-weight: $nav-link-font-weight;
@@ -288,39 +296,49 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
           background-color: transparent;
           box-shadow: 0px 4px 0px 0px $nav-link-border-active;
           border-radius: 0;
+
           &:hover {
             box-shadow: 0px 4px 0px 0px $nav-link-border-active;
+
             &:focus {
               border-radius: 0;
             }
           }
+
           &:focus {
             @include border-radius($border-radius * 2);
           }
         }
+
         &:focus {
           box-shadow: $input-btn-focus-box-shadow inset;
         }
+
         &:hover {
           box-shadow: none;
         }
+
         .nav-icon {
           justify-content: center;
           gap: $nav-link-padding-lg-y; //este define pestañas
         }
       }
     }
+
     .nav-item[draggable='true'] {
       cursor: move;
     }
+
     &.nav-box {
       border: none;
       padding: 0;
+
       .nav-item {
         .nav-link {
           background-color: $grisulado-50;
           border-radius: 8px 8px 0px 0px;
           border: none;
+
           &.active,
           &:active {
             background-color: $grisulado-10;
@@ -329,6 +347,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
           }
         }
       }
+
       &-bg {
         @extend .nav-box;
         .nav-item {
@@ -350,10 +369,12 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   align-items: center;
   position: relative;
   padding: 0 2.5rem 0 2rem;
+
   .nav {
     width: fit-content;
     overflow-x: hidden;
     margin-left: 0.625rem;
+
     &.fixedWidth {
       .nav-item > .nav-link {
         width: auto;
@@ -374,17 +395,21 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
     > span {
       font-size: 16px;
     }
+
     &:nth-of-type(1) {
       left: 0;
     }
+
     &:nth-of-type(2) {
       right: 0;
       display: flex;
     }
   }
+
   @extend .tabs;
 }
 

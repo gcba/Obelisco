@@ -2,8 +2,8 @@ import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { Nav, NavItem } from '.';
-import { NavTabsSlider } from './tabs';
+import { Nav } from '.';
+import { NavTabsSlider, TabsItem } from './tabs';
 
 // Configuración general del componente
 export default {
@@ -12,7 +12,7 @@ export default {
   decorators: [withA11y]
 };
 
-const simpleItems: NavItem[] = [
+const simpleItems: TabsItem[] = [
   { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>' },
   { name: 'Pestaña predeterminada', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
   { name: 'Pestaña predeterminada', id: '3', iconTabs: '<span class="material-icons-round">home</span>' },
@@ -24,7 +24,7 @@ const simpleItems: NavItem[] = [
   }
 ];
 
-const sizeItems: NavItem[] = [
+const sizeItems: TabsItem[] = [
   { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>', type: 'large' },
   {
     name: 'Pestaña predeterminada',
@@ -40,7 +40,7 @@ const sizeItems: NavItem[] = [
   }
 ];
 
-const sliderItems: NavItem[] = [
+const sliderItems: TabsItem[] = [
   { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>' },
   { name: 'Pestaña predeterminada', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
   { name: 'Pestaña predeterminada', id: '3', iconTabs: '<span class="material-icons-round">home</span>' },
@@ -132,7 +132,7 @@ export const ContainerTabsIcon = (): JSX.Element => {
       items={simpleItems}
       selected="1"
       hasIcon={true}
-      classUl="nav nav-pills tabs flex-row nav-box-bg"
+      classUl="nav nav-pills tabs flex-row nav-box"
       isWithButton={false}
     />
   );

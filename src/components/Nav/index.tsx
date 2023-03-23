@@ -10,7 +10,6 @@ export interface NavItem {
   disabled?: boolean;
   children?: NavItem[];
   hasBordered?: boolean;
-  iconTabs?: string;
 }
 
 export interface NavProps {
@@ -31,11 +30,6 @@ export interface NavItemComponentProps extends NavItem {
   onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-export interface TabsProps extends NavProps {
-  classUl?: string;
-  isWithButton?: boolean;
-  onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
-}
 const listClasses = 'nav flex-column nav-pills';
 
 export const Nav: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {

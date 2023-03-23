@@ -1,8 +1,21 @@
 import React, { useRef, useState } from 'react';
 import classnames from 'classnames';
-import { checkActiveChild, NavItemComponent, NavItemComponentProps, TabsProps } from '.';
+import { checkActiveChild, NavItem, NavItemComponent, NavItemComponentProps, NavProps } from '.';
 
-const NavItemComponentSlider: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
+export interface TabsItem extends NavItem {
+  iconTabs: string;
+}
+
+export interface TabsProps extends NavProps {
+  items: TabsItem[];
+  classUl: string;
+  isWithButton?: boolean;
+  onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+}
+
+export interface TabsComponentsProps extends NavItemComponentProps, TabsItem {}
+
+const NavItemComponentSlider: React.FC<TabsComponentsProps> = (props: TabsComponentsProps) => {
   const { name, id, href, children, level, disabled, selected, hasBordered, type, hasIcon, onSelect, iconTabs } = props;
 
   const isActive = selected && id === selected;
@@ -123,10 +136,6 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
     setScrollLeft(tabsBox.scrollLeft);
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
   const handleMouseMove = (event: React.MouseEvent<HTMLUListElement>) => {
     if (!isDragging) return;
     event.preventDefault();
@@ -158,17 +167,15 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
     handleIcons(tabsBox.scrollLeft);
   };
 
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
+  const handleTouchEnd = () => setIsDragging(false);
 
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
+  const handleMouseLeave = () => setIsDragging(false);
+
+  const handleMouseUp = () => setIsDragging(false);
 
   return (
     <>
-      <nav className={`tabs-slider${!isWithButton ? ' px-0' : ''}`}>
+      <nav className={`tabs-slider ${!isWithButton ? 'px-0' : ''}`}>
         <ul
           className={mainListClasses}
           ref={tabsBoxRef}
