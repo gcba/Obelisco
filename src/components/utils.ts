@@ -13,8 +13,51 @@ export const buttonTypes: Array<ButtonTypeWithName> = [
   { type: 'link', name: 'Link' }
 ];
 
-export type AlertType = Type | 'info';
-export const alertTypes: AlertType[] = ['primary', 'success', 'info', 'danger'];
+// export type AlertType = Type | 'info';
+export const alertTypes = [
+  { type: 'primary', text: 'Esta es la descripción de una alerta de advertencia.' },
+  { type: 'danger', text: 'Esta es la descripción de una alerta de advertencia.' },
+  { type: 'info', text: 'Esta es la descripción de una alerta de información.' },
+  { type: 'success', text: 'Esta es la descripción de una alerta de éxito.' }
+];
+
+export const alertHighlight = [
+  {
+    type: 'info',
+    text: '<strong>Este es un destacado de una alerta de información.</strong> Esta es la descripción de una alerta de información que continua al texto destacado.'
+  },
+  {
+    type: 'primary',
+    text: '<strong>Este es un destacado de una alerta de advertencia.</strong> Esta es la descripción de una alerta de advertencia que continua al texto destacado.'
+  },
+  {
+    type: 'success',
+    text: '<strong>Este es un destacado de una alerta de éxito.</strong> Esta es la descripción de una alerta de éxito que continua al texto destacado.'
+  },
+  {
+    type: 'danger',
+    text: '<strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que continua al texto destacado.'
+  }
+];
+
+export const alertLink = [
+  {
+    type: 'info',
+    text: '<strong>Este es un destacado de una alerta de información.</strong> Esta es la descripción de una alerta de información que continua al texto destacado, incluso con <a href="#">enlace</a>.'
+  },
+  {
+    type: 'primary',
+    text: '<strong>Este es un destacado de una alerta de advertencia.</strong> Esta es la descripción de una alerta de advertencia que continua al texto destacado, incluso con <a href="#">enlace</a>.'
+  },
+  {
+    type: 'success',
+    text: '<strong>Este es un destacado de una alerta de éxito.</strong> Esta es la descripción de una alerta de éxito que continua al texto destacado, incluso con <a href="#">enlace</a>.'
+  },
+  {
+    type: 'danger',
+    text: '<strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que continua al texto destacado, incluso con <a href="#">enlace</a>.'
+  }
+];
 
 export type Size = 'default' | 'small' | 'large';
 export const sizes: Size[] = ['small', 'default', 'large'];
