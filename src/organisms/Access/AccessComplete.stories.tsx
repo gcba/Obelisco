@@ -16,12 +16,12 @@ export const Simple = (): JSX.Element => (
     <div className="list-group">
       <div className="group-access">
         <div className="card-access">
-          <div className="card-access-body">
-            <span className="card-access-icon descriptive">Nº</span>
+          <div className="card-access-body reverse">
             <div>
               <h3 className="card-access-title">Título del acceso</h3>
               <p className="mb-0">Descripción del acceso</p>
             </div>
+            <span className="card-access-icon descriptive">Nº</span>
           </div>
           <a href="#" className="list-group-item card-item">
             <span className="access-title">
@@ -40,12 +40,12 @@ export const ConListaDeAccesos = (): JSX.Element => (
     <div className="list-group">
       <div className="group-access">
         <div className="card-access">
-          <div className="card-access-body reverse">
-            <span className="card-access-icon descriptive">Nº</span>
+          <div className="card-access-body">
             <div>
               <h3 className="card-access-title">Título del acceso</h3>
               <p className="mb-0">Descripción del acceso</p>
             </div>
+            <span className="card-access-icon descriptive">Nº</span>
           </div>
           <div className="container-access">
             <hr className="clearfix mt-0" />
@@ -95,12 +95,12 @@ export const ConCategorias = (): JSX.Element => (
     <div className="list-group">
       <div className="group-access">
         <div className="card-access">
-          <div className="card-access-body reverse">
-            <span className="card-access-icon descriptive">Nº</span>
+          <div className="card-access-body">
             <div>
               <h3 className="card-access-title">Título del acceso</h3>
               <p className="mb-0">Descripción del acceso</p>
             </div>
+            <span className="card-access-icon descriptive">Nº</span>
           </div>
           <div className="container-access">
             <hr className="clearfix mt-0" />

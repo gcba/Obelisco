@@ -29,8 +29,8 @@ $list-group-padding-x: spaceUnits(4);
 
 $list-group-category-margin: spaceUnits(2);
 
-$list-group-icon-arrow: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(56, 72, 92);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>');
-$list-group-icon-arrow-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>');
+$list-group-icon-arrow: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(56, 72, 92);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
+$list-group-icon-arrow-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
 $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" style="fill: rgba(201, 59, 59, 1);msFilter:;"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><g><path d="M5,5h6c0.55,0,1-0.45,1-1v0c0-0.55-0.45-1-1-1H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h6c0.55,0,1-0.45,1-1v0 c0-0.55-0.45-1-1-1H5V5z"/><path d="M20.65,11.65l-2.79-2.79C17.54,8.54,17,8.76,17,9.21V11h-7c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h7v1.79 c0,0.45,0.54,0.67,0.85,0.35l2.79-2.79C20.84,12.16,20.84,11.84,20.65,11.65z"/></g></g></svg>');
 
 @mixin display-flex-between {
@@ -57,6 +57,7 @@ a.list-group-item {
   box-shadow: $box-shadow-access;
   border-radius: $list-group-border;
   padding: 1.5rem;
+  @include display-flex-between;
 
   .access-title {
     i, .material-icons-round {
@@ -189,8 +190,6 @@ a.list-group-item {
   &.item-sm {
     color: $list-group-color;
     padding: 0.75rem 1.5rem;
-    @include display-flex-between;
-    align-items: flex-start;
 
     &:has(i, .material-icons-round ) {
       padding: 0.75rem 1.625rem;
@@ -201,7 +200,7 @@ a.list-group-item {
       }
 
       @include media-breakpoint-down(xs) {
-        padding: 0.5rem 1.125rem !important;
+        padding: 1rem 1.125rem !important;
       }
     }
 
@@ -313,7 +312,6 @@ a.list-group-item {
 .group-access {
   display: grid;
   margin-bottom: 1rem;
-  max-width: 712px;
 
   .card-access {
     display: grid;
@@ -324,9 +322,12 @@ a.list-group-item {
 
     .card-access-body {
       display:flex;
-      align-items: center;
       gap: 12px;
       padding: $padding-card-access-body;
+
+      &:not(.reverse) {
+        justify-content: space-between;
+      }
 
       &.p-list {
         padding: $padding-card-access-body-list;
@@ -360,7 +361,7 @@ a.list-group-item {
 
       &.reverse {
         flex-direction: row-reverse;
-        justify-content: space-between;
+        justify-content: flex-end;
       }
 
       @include media-breakpoint-down(xs) {
