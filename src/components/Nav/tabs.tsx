@@ -116,7 +116,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
     if (scrollLeft == tabsBoxRef?.current?.scrollLeft) {
       const activeTab = tabsBox.querySelector('.active');
       if (activeTab) {
-        const duration = 500;
+        const duration = 1;
         setTimeout(() => {
           activeTab.classList.remove('active');
           tab.classList.add('active');
