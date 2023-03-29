@@ -114,7 +114,7 @@ export const ListLinks: React.FC<ListLinksProps> = ({ type, text, textLink, isLi
   const links = [1, 2, 3, 4, 5].map((_, i) => <Link key={i} text={textLink} index={i + 1} isLink={isListLinks} />);
 
   return (
-    <div className={`alert alert-${type} fade show`} role="alert">
+    <div className={`alert alert-${type}`} role="alert">
       <p dangerouslySetInnerHTML={{ __html: text }}></p>
       <ol className={linkClass}>{links}</ol>
     </div>
