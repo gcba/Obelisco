@@ -5,6 +5,9 @@ import './List-group.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
+// Components
+import { AccesoDescripcionComponent, AccesosBordeComponent, AccesoIconoComponent, AccessTypes } from '.';
+
 // Configuración general del componente
 export default {
   title: 'Componentes|Accesos',
@@ -490,56 +493,26 @@ export const testeoVertical = (): JSX.Element => (
   </>
 );
 
-export const AccesoGrandeBorde = (): JSX.Element => (
+export const AccesosConBorde = (): JSX.Element => (
   <div className="list-group-container">
     <div className="list-group">
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">Acceso</span>
-      </a>
-      <a href="#" className="list-group-item item-sm hover">
-        <span className="access-title">Acceso</span>
-      </a>
-      <a href="#" className="list-group-item item-sm active">
-        <span className="access-title">Acceso</span>
-      </a>
-      <a href="#" className="list-group-item item-sm focus">
-        <span className="access-title">Acceso</span>
-      </a>
+      {AccessTypes.map((item, index) => (
+        <AccesosBordeComponent key={index} type={item.type} />
+      ))}
     </div>
   </div>
 );
 
-AccesoGrandeBorde.story = {
+AccesosConBorde.story = {
   name: 'Accesos con borde'
 };
 
 export const AccesoConDescripcion = (): JSX.Element => (
   <div className="list-group-container">
     <div className="list-group">
-      <a href="#" className="list-group-item item-sm">
-        <div className="access-content">
-          <span className="access-title">Acceso</span>
-          <p className="access-text">Descripción (Opcional)</p>
-        </div>
-      </a>
-      <a href="#" className="list-group-item item-sm hover">
-        <div className="access-content">
-          <span className="access-title">Acceso</span>
-          <p className="access-text">Descripción (Opcional)</p>
-        </div>
-      </a>
-      <a href="#" className="list-group-item item-sm active">
-        <div className="access-content">
-          <span className="access-title">Acceso</span>
-          <p className="access-text">Descripción (Opcional)</p>
-        </div>
-      </a>
-      <a href="#" className="list-group-item item-sm focus">
-        <div className="access-content">
-          <span className="access-title">Acceso</span>
-          <p className="access-text">Descripción (Opcional)</p>
-        </div>
-      </a>
+      {AccessTypes.map((item, index) => (
+        <AccesoDescripcionComponent key={index} type={item.type} />
+      ))}
     </div>
   </div>
 );
@@ -551,34 +524,9 @@ AccesoConDescripcion.story = {
 export const AccesosConIcono = (): JSX.Element => (
   <div className="list-group-container">
     <div className="list-group">
-      <a href="#" className="list-group-item item-sm">
-        <i className="bx bxs-info-circle"></i>
-        <div className="access-content">
-          <span className="access-title">Acceso</span>
-          <p className="access-text">Descripción (Opcional)</p>
-        </div>
-      </a>
-      <a href="#" className="list-group-item item-sm hover">
-        <i className="bx bxs-info-circle"></i>
-        <div className="access-content">
-          <span className="access-title">Acceso</span>
-          <p className="access-text">Descripción (Opcional)</p>
-        </div>
-      </a>
-      <a href="#" className="list-group-item item-sm active">
-        <i className="bx bxs-info-circle"></i>
-        <div className="access-content">
-          <span className="access-title">Acceso</span>
-          <p className="access-text">Descripción (Opcional)</p>
-        </div>
-      </a>
-      <a href="#" className="list-group-item item-sm focus">
-        <i className="bx bxs-info-circle"></i>
-        <div className="access-content">
-          <span className="access-title">Acceso</span>
-          <p className="access-text">Descripción (Opcional)</p>
-        </div>
-      </a>
+      {AccessTypes.map((item, index) => (
+        <AccesoIconoComponent key={index} type={item.type} />
+      ))}
     </div>
   </div>
 );
