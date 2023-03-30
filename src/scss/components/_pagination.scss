@@ -12,7 +12,6 @@ $pagination-hover-box-shadow: 0 0 0 0.125rem $blue;
 
 $pagination-padding-y: spaceUnits(1);
 $pagination-padding-x: spaceUnits(3);
-$pagination-margin-x: 0.2rem;
 $pagination-border-width: 0;
 
 $pagination-disabled-bg: transparent;
@@ -21,8 +20,8 @@ $pagination-disabled-bg: transparent;
 
 $pagination-size: 40px;
 
-$pagination-padding-y-icon: spaceUnits(1);
-$pagination-padding-y-icon-only: spaceUnits(2);
+$pagination-padding-sm-y-icon: spaceUnits(1);
+$pagination-padding-y-icon: spaceUnits(2);
 
 $pagination-icon-left-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M14.71 6.71c-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"></path></svg>');
 $pagination-icon-right-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
@@ -58,7 +57,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
 /* === Custom styles === */
 
 .pagination {
-  gap: 0.25rem;
+  gap: .5rem;
 
   .page-item {
     display: inline-block;
@@ -76,7 +75,6 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
       justify-content: center;
       align-items: center;
       border-radius: $border-radius * 2;
-      margin: 0 $pagination-margin-x;
       box-shadow: $pagination-box-shadow;
       height: $pagination-size;
       min-width: 35px;
@@ -101,16 +99,16 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
       }
 
       &:has(.page-previous-icon) {
-        padding-left: $pagination-padding-y-icon;
+        padding-left: $pagination-padding-sm-y-icon;
       }
 
       &:has(.page-next-icon) {
-        padding-right: $pagination-padding-y-icon;
+        padding-right: $pagination-padding-sm-y-icon;
       }
 
       &:has(.page-previous-icon, .page-next-icon):not(:has(.page-next-text, .page-previous-text)) {
-        padding-left: $pagination-padding-y-icon-only;
-        padding-right: $pagination-padding-y-icon-only;
+        padding-left: $pagination-padding-y-icon;
+        padding-right: $pagination-padding-y-icon;
       }
 
       &:visited {
@@ -196,8 +194,9 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
   .pagination {
     .page-item {
       .page-link {
-        margin: 0;
-        padding: 0.25rem 0.5rem;
+        min-width: 2rem;
+        width: 2rem;
+        height: 2rem;
 
         .page-previous-text,
         .page-next-text {
@@ -205,8 +204,8 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
         }
 
         &:has(.page-previous-icon, .page-next-icon) {
-          padding-left: $pagination-padding-y-icon;
-          padding-right: $pagination-padding-y-icon;
+          padding-left: $pagination-padding-sm-y-icon;
+          padding-right: $pagination-padding-sm-y-icon;
         }
       }
     }
