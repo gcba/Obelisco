@@ -16,7 +16,7 @@ export default {
 
 export const Initial = (): JSX.Element => (
   <div className="pagination-wrapper">
-    <Pagination pages={10} default={0} ariaLabel="Ejemplo de paginado numerado inicial" />
+    <Pagination pages={10} ariaLabel="Ejemplo de paginado numerado inicial" />
   </div>
 );
 Initial.story = { name: 'Inicial' };

@@ -35,4 +35,5 @@ export const Descriptive = (): JSX.Element => (
     </div>
   </>
 );
+
 Descriptive.story = { name: 'Descriptivo' };
