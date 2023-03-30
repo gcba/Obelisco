@@ -281,7 +281,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
       .nav-link {
         background: transparent;
-        //transition: font-weight 0.2s ease;
+        transition: font-weight 0.2s ease;
         span,
         i {
           font-size: 1.25rem;
@@ -290,9 +290,8 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
         &.active,
         &:active {
-          //font-weight: $nav-link-simple-font-weight;
+          font-weight: $nav-link-simple-font-weight;
           color: $grisulado-900;
-          text-shadow: 0px -1px 0px rgba(56, 72, 92, 1);
           background-color: transparent;
           box-shadow: 0px 4px 0px 0px $nav-link-border-active;
           border-radius: 0;
