@@ -1,20 +1,20 @@
 import * as React from 'react';
 
-export type AccesoEstado = '' | 'hover' | 'active' | 'focus';
+export type AccessState = '' | 'hover' | 'active' | 'focus';
 
-export interface AccesoEstadoInterface {
-  type: AccesoEstado;
+export interface AccessStateInterface {
+  type: AccessState;
 }
 
-export const AccessTypes: Array<AccesoEstadoInterface> = [
+export const AccessTypes: Array<AccessStateInterface> = [
   { type: '' },
   { type: 'hover' },
   { type: 'active' },
   { type: 'focus' }
 ];
 
-export const AccesosBordeComponent: React.FC<AccesoEstadoInterface> = (
-  props: React.PropsWithChildren<AccesoEstadoInterface>
+export const AccesosBordeComponent: React.FC<AccessStateInterface> = (
+  props: React.PropsWithChildren<AccessStateInterface>
 ) => {
   const { type } = props;
   const className = `list-group-item item-sm ${type}`.trim();
@@ -25,8 +25,8 @@ export const AccesosBordeComponent: React.FC<AccesoEstadoInterface> = (
   );
 };
 
-export const AccesoDescripcionComponent: React.FC<AccesoEstadoInterface> = (
-  props: React.PropsWithChildren<AccesoEstadoInterface>
+export const AccesoDescripcionComponent: React.FC<AccessStateInterface> = (
+  props: React.PropsWithChildren<AccessStateInterface>
 ) => {
   const { type } = props;
   const className = `list-group-item item-sm ${type}`.trim();
@@ -40,8 +40,8 @@ export const AccesoDescripcionComponent: React.FC<AccesoEstadoInterface> = (
   );
 };
 
-export const AccesoIconoComponent: React.FC<AccesoEstadoInterface> = (
-  props: React.PropsWithChildren<AccesoEstadoInterface>
+export const AccesoIconoComponent: React.FC<AccessStateInterface> = (
+  props: React.PropsWithChildren<AccessStateInterface>
 ) => {
   const { type } = props;
   const className = `list-group-item item-sm ${type}`.trim();
