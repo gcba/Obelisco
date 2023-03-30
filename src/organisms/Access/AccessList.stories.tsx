@@ -3,12 +3,12 @@ import React from 'react';
 import './Access.stories.scss';
 
 // Addons
-import { withA11Y } from '@storybook/addon-a11y';
+import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración general del componente
 export default {
   title: 'Organismos|Acceso/Lista de accesos',
-  decorators: [withA11Y]
+  decorators: [withA11y]
 };
 
 export const Horizontal = (): JSX.Element => (

@@ -9,7 +9,7 @@ $padding-card-access-body-list: 1.5rem 1.5rem 0;
 $padding-access-option-item-sm: 0.75rem 1.5rem;
 $padding-title-option: 1rem 1.5rem 0;
 $padding-title-option-first-child: 0.5rem 1.5rem 0;
-$font-size-icon-card: 1.6669rem;
+$font-size-icon-card: 1.722rem;
 $card-size: 64px;
 $font-title-option: 17px;
 
@@ -70,6 +70,12 @@ a.list-group-item {
     vertical-align: middle;
   }
 
+  &:not(.access-content) {
+    > .access-title {
+      width: 100%;
+    }
+  }
+
   .access-content {
     width: 100%;
 
@@ -78,10 +84,6 @@ a.list-group-item {
       margin: 0;
       text-decoration: $no-text-decoration;
     }
-  }
-
-  .access-title {
-    width: 100%;
   }
 
   &:visited {
@@ -150,6 +152,14 @@ a.list-group-item {
         @include float-height-icon;
       }
 
+      .access-content {
+        .access-title,
+        .access-text {
+          color: $list-group-color;
+          text-decoration: $no-text-decoration;
+        }
+      }
+
       .access-title {
         text-decoration: $no-text-decoration;
       }
@@ -202,8 +212,6 @@ a.list-group-item {
     padding: 0.75rem 1.5rem;
 
     &:has(i, .material-icons-round) {
-      padding: 0.75rem 1.5rem;
-
       @include media-breakpoint-down(xs) {
         padding: 0.5rem 1.125rem !important;
       }
@@ -405,15 +413,15 @@ a.list-group-item {
           }
         }
 
-        &:has(.title-option){
-          .item-sm{
+        &:has(.title-option) {
+          .item-sm {
             padding: 0.75rem 1.5rem !important;
           }
 
           .title-option {
             padding: $padding-title-option;
             font-size: $font-title-option;
-  
+
             &:first-child {
               padding: $padding-title-option-first-child;
             }
@@ -430,7 +438,6 @@ a.list-group-item {
   }
 
   .card-item {
-    border-top: $box-shadow-access;
     border-right: 0;
     border-left: 0;
     border-bottom: 0;
