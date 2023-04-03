@@ -4,6 +4,7 @@ import './Dropdown.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+import { Dropdown } from '.';
 
 // Configuración general del componente
 export default {
@@ -11,191 +12,26 @@ export default {
   decorators: [withA11y]
 };
 
-export const Desplegable = (): JSX.Element => (
+export const DropdownButton = (): JSX.Element => (
   <>
     <div className="dropdown-container">
-      <div className="dropdown mb-3">
-        <button
-          type="button"
-          className="btn btn-dropdown btn-dropdown-sm dropdown-toggle"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Desplegable
-        </button>
-        <div className="dropdown-menu">
-          <button className="dropdown-item" type="button">
-            Opción 1
-          </button>
-          <button className="dropdown-item" type="button">
-            Opción 2
-          </button>
-          <button className="dropdown-item" type="button">
-            Opción 3
-          </button>
-        </div>
-      </div>
-      <div className="dropdown mb-3">
-        <button
-          type="button"
-          className="btn btn-dropdown btn-dropdown-sm dropdown-toggle active"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Desplegable (1)
-        </button>
-        <div className="dropdown-menu">
-          <button className="dropdown-item" type="button">
-            Opción 1
-          </button>
-          <button className="dropdown-item" type="button">
-            Opción 2
-          </button>
-          <button className="dropdown-item" type="button">
-            Opción 3
-          </button>
-        </div>
-      </div>
-      <div className="dropdown mb-3">
-        <button
-          type="button"
-          className="btn btn-dropdown btn-dropdown-border btn-dropdown-sm dropdown-toggle"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Desplegable (1)
-        </button>
-        <div className="dropdown-menu">
-          <button className="dropdown-item" type="button">
-            Opción 1
-          </button>
-          <button className="dropdown-item" type="button">
-            Opción 2
-          </button>
-          <button className="dropdown-item" type="button">
-            Opción 3
-          </button>
-        </div>
-      </div>
+      <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} size="small" isToggle>
+        Desplegable
+      </Dropdown>
     </div>
   </>
 );
 
-Desplegable.story = {
+DropdownButton.story = {
   name: 'Desplegable botón'
 };
 
 export const DesplegableConEnlaces = (): JSX.Element => (
   <>
     <div className="dropdown-container">
-      <div className="dropdown mb-3">
-        <button
-          type="button"
-          className="btn btn-dropdown btn-dropdown-border btn-dropdown-sm dropdown-toggle"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Desplegable
-        </button>
-        <ul className="dropdown-menu">
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 1
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 2
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 3
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className="dropdown mb-3">
-        <button
-          type="button"
-          className="btn btn-dropdown btn-dropdown-border dropdown-toggle"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Desplegable
-        </button>
-        <ul className="dropdown-menu">
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 1
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 2
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 3
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className="dropdown mb-3">
-        <button
-          type="button"
-          className="btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Desplegable
-        </button>
-        <ul className="dropdown-menu">
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 1
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 2
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 3
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className="dropdown mb-3">
-        <button
-          type="button"
-          className="btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle active"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false">
-          Desplegable
-        </button>
-        <ul className="dropdown-menu">
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 1
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 2
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Opción 3
-            </a>
-          </li>
-        </ul>
-      </div>
+      <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} isLink isBorder isToggle>
+        Desplegable
+      </Dropdown>
     </div>
   </>
 );
@@ -206,48 +42,12 @@ DesplegableConEnlaces.story = {
 
 export const DesplegableConIcono = (): JSX.Element => (
   <div className="dropdown-container">
-    <div className="dropdown mb-3">
-      <button
-        type="button"
-        className="btn btn-dropdown btn-dropdown-lg"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        Mi perfil<span className="dropdown-user-icon"></span>
-      </button>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </div>
-    <div className="dropdown">
-      <button
-        type="button"
-        className="btn btn-dropdown btn-dropdown-border"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        Mi perfil<span className="dropdown-user-icon"></span>
-      </button>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </div>
+    <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} isBorder icon='<span class="dropdown-user-icon"></span>'>
+      Mi perfil
+    </Dropdown>
+    <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} icon='<i class="bx bxs-user-circle"></i>'>
+      Mi perfil
+    </Dropdown>
   </div>
 );
 
@@ -257,28 +57,9 @@ DesplegableConIcono.story = {
 
 export const SoloIcono = (): JSX.Element => (
   <div className="dropdown-container">
-    <div className="dropdown">
-      <button
-        type="button"
-        className="btn btn-dropdown"
-        aria-label="Dropdown"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        <span className="dropdown-user-icon ml-0">&nbsp;</span>
-      </button>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </div>
+    <Dropdown
+      items={['Opción 1', 'Opción 2', 'Opción 3']}
+      icon='<span class="dropdown-user-icon ml-0">&nbsp;</span>'></Dropdown>
   </div>
 );
 
@@ -288,24 +69,9 @@ SoloIcono.story = {
 
 export const Idioma = (): JSX.Element => (
   <div className="dropdown-container">
-    <div className="dropdown">
-      <button
-        type="button"
-        className="btn btn-dropdown"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        ES <span className="dropdown-language-icon"></span>
-      </button>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Inglés
-        </button>
-        <button className="dropdown-item" type="button">
-          Español
-        </button>
-      </div>
-    </div>
+    <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} icon='<span class="dropdown-language-icon"></span>'>
+      ES
+    </Dropdown>
   </div>
 );
 
@@ -315,124 +81,68 @@ Idioma.story = {
 
 export const Tamanos = (): JSX.Element => (
   <div className="dropdown-container">
-    <div className="dropdown mb-3">
-      <button
-        type="button"
-        className="btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        Filtro (1)
-      </button>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </div>
-    <div className="dropdown mb-3">
-      <button
-        type="button"
-        className="btn btn-dropdown btn-dropdown-border dropdown-toggle"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        Filtro (1)
-      </button>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </div>
-    <div className="dropdown mb-3">
-      <button
-        type="button"
-        className="btn btn-dropdown btn-dropdown-border btn-dropdown-sm dropdown-toggle"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        Filtro (1)
-      </button>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </div>
+    <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} isToggle isBorder size="small">
+      Filtro
+    </Dropdown>
+    <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} isToggle isBorder>
+      Filtro
+    </Dropdown>
+    <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} isToggle isBorder size="large">
+      Filtro
+    </Dropdown>
   </div>
 );
 
 Tamanos.story = { name: 'Tamaños' };
 
+const DropMenu = (): JSX.Element => (
+  <div className="dropdown-menu" key="menu">
+    <div>
+      <h6>Titulo H6</h6>
+      <p>
+        Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
+        Extremo
+      </p>
+    </div>
+    <div>
+      <h6>Titulo H6</h6>
+      <p>
+        Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
+        Extremo
+      </p>
+    </div>
+    <div>
+      <h6>Titulo H6</h6>
+      <p>
+        Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
+        Extremo
+      </p>
+    </div>
+    <div>
+      <h6>Titulo H6</h6>
+      <p>
+        Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
+        Extremo
+      </p>
+    </div>
+    <button className="btn btn-sm btn-link" type="button">
+      Botón
+    </button>
+  </div>
+);
+
 export const DropdownList = (): JSX.Element => (
-  <div className="dropdown-container-2">
+  <div className="dropdown-list-container">
     <div className="dropdown">
-      <button
-        type="button"
-        className="btn btn-dropdown btn-dropdown-border dropdown-toggle"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        <div className="dropdown-body">
+      <Dropdown items={[]} isToggle isBorder isList customMenu={<DropMenu />}>
+        <div className="dropdown-body" key="body">
           <span className="material-icons-round">receipt</span>
-          <div>
+          <p>
             <span>Infracción de tránsito: Exceso de velocidad</span>
             <span className="font-weight-bold">$10.000,00</span>
-          </div>
-        </div>
-      </button>
-      <div className="dropdown-menu">
-        <div>
-          <h6>Titulo H6</h6>
-          <p>
-            Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
-            Extremo
           </p>
         </div>
-        <div>
-          <h6>Titulo H6</h6>
-          <p>
-            Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
-            Extremo
-          </p>
-        </div>
-        <div>
-          <h6>Titulo H6</h6>
-          <p>
-            Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
-            Extremo
-          </p>
-        </div>
-        <div>
-          <h6>Titulo H6</h6>
-          <p>
-            Información importante Para el examen práctico te brindaremos un turno en otra fecha en la Pista de Parque
-            Extremo
-          </p>
-        </div>
-        <button className="btn btn-sm btn-link" type="button">
-          Botón
-        </button>
-      </div>
+      </Dropdown>
     </div>
   </div>
 );

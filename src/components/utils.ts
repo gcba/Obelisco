@@ -38,13 +38,13 @@ export const sizesButton: SizesTypes[] = [
   }
 ];
 
-export const sizeToClass = (size: Size | 'default'): string => {
+export const sizeToClass = (size: Size): string => {
   switch (size) {
-    case 'default':
-      return '';
     case 'large':
       return 'lg';
     case 'small':
       return 'sm';
+    default:
+      return '';
   }
 };

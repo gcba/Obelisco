@@ -112,9 +112,10 @@ $dropdown-list-body-gap: 1.938rem;
             text-align: left;
             gap: $dropdown-list-body-gap;
 
-            > div {
+            > p {
               display: grid;
               gap: 0.5rem;
+              margin-bottom: 0;
 
               span {
                 white-space: break-spaces;
