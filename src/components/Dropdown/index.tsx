@@ -65,18 +65,20 @@ export const Dropdown: React.FC<DropdownProps> = ({
           ))}
         </div>
       ) : (
-        <ul className="dropdown-menu">
-          {items.map((item, index) => (
-            <li key={index}>
-              <a
-                className={`dropdown-item ${selected.includes(item) ? 'active' : ''}`}
-                href="#"
-                onClick={(e) => selectOption(item, e)}>
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
+        items.length > 0 && (
+          <ul className="dropdown-menu">
+            {items.map((item, index) => (
+              <li key={index}>
+                <a
+                  className={`dropdown-item ${selected.includes(item) ? 'active' : ''}`}
+                  href="#"
+                  onClick={(e) => selectOption(item, e)}>
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
       )}
     </div>
   );
