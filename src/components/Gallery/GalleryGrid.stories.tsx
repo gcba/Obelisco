@@ -4,6 +4,7 @@ import './Gallery.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+import { GridImage } from './index';
 
 // Configuración general del componente
 export default {
@@ -11,35 +12,13 @@ export default {
   decorators: [withA11y]
 };
 
-export const SieteImagenes = (): JSX.Element => {
-  return (
+export const SieteImagenes = (): JSX.Element => (
+  <>
     <div className="gallery-grid-container">
-      <div className="gallery-grid gallery-max-7">
-        <div className="gallery-grid-item">
-          <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/2.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/4.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/5.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/4.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-      </div>
+      <GridImage />
     </div>
-  );
-};
+  </>
+);
 
 SieteImagenes.story = {
   name: 'Siete imágenes'
@@ -48,26 +27,7 @@ SieteImagenes.story = {
 export const SeisImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
-      <div className="gallery-grid gallery-max-6">
-        <div className="gallery-grid-item">
-          <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/2.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/4.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/5.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-      </div>
+      <GridImage total={6} />
     </div>
   );
 };
@@ -79,23 +39,7 @@ SeisImagenes.story = {
 export const CincoImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
-      <div className="gallery-grid gallery-max-5">
-        <div className="gallery-grid-item">
-          <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/2.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/4.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/5.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-      </div>
+      <GridImage total={5} />
     </div>
   );
 };
@@ -107,20 +51,7 @@ CincoImagenes.story = {
 export const CuatroImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
-      <div className="gallery-grid gallery-max-4">
-        <div className="gallery-grid-item">
-          <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/2.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/4.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-      </div>
+      <GridImage total={4} />
     </div>
   );
 };
@@ -132,17 +63,7 @@ CuatroImagenes.story = {
 export const TresImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
-      <div className="gallery-grid gallery-max-3">
-        <div className="gallery-grid-item">
-          <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/2.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/3.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-      </div>
+      <GridImage total={3} />
     </div>
   );
 };
@@ -154,14 +75,7 @@ TresImagenes.story = {
 export const DosImagenes = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
-      <div className="gallery-grid gallery-max-2">
-        <div className="gallery-grid-item">
-          <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-        <div className="gallery-grid-item">
-          <img src="gallery/2.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-      </div>
+      <GridImage total={2} />
     </div>
   );
 };
@@ -173,11 +87,7 @@ DosImagenes.story = {
 export const UnaImagen = (): JSX.Element => {
   return (
     <div className="gallery-grid-container">
-      <div className="gallery-grid gallery-max-1">
-        <div className="gallery-grid-item">
-          <img src="gallery/1.jpg" alt="Texto alternativo de la imagen" />
-        </div>
-      </div>
+      <GridImage total={1} />
     </div>
   );
 };
