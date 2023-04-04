@@ -63,7 +63,7 @@ export const AccessListComponent = (): JSX.Element => {
               <hr className="clearfix my-0 mt-2" />
             </div>
           </div>
-          <a href="#" className="list-group-item card-item no-shadow">
+          <a href="#" className="list-group-item card-item">
             <span className="access-title">
               <i className="bx bxs-info-circle"></i>
               Acceso grande
@@ -120,7 +120,7 @@ export const CategoriesComponent = (): JSX.Element => {
               <hr className="clearfix my-0 mt-2" />
             </div>
           </div>
-          <a href="#" className="list-group-item card-item no-shadow">
+          <a href="#" className="list-group-item card-item">
             <span className="access-title">
               <i className="bx bxs-info-circle"></i>
               Acceso grande

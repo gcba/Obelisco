@@ -365,6 +365,14 @@ a.list-group-item {
       }
     }
 
+    &:has(.container-access) {
+      .card-item {
+        &:not(:hover) {
+          @extend .shadow-none;
+        }
+      }
+    }
+
     .container-access {
       .clearfix {
         margin: $margin-clearfix;
