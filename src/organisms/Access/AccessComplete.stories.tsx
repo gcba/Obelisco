@@ -1,12 +1,12 @@
 // Base
 import React from 'react';
-import './Access.stories.scss';
+import '../../components/List-group/List-group.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { SimpleComponent, ListaDeAccesosComponent, CategoriasComponent } from '.';
+import { SimpleComponent, AccessListComponent, CategoriesComponent } from '.';
 
 // Configuración general del componente
 export default {
@@ -20,22 +20,22 @@ export const Simple = (): JSX.Element => (
   </div>
 );
 
-export const ConListaDeAccesos = (): JSX.Element => (
+export const AccessList = (): JSX.Element => (
   <div className="list-group-container">
-    <ListaDeAccesosComponent />
+    <AccessListComponent />
   </div>
 );
 
-ConListaDeAccesos.story = {
+AccessList.story = {
   name: 'Con lista de accesos'
 };
 
-export const ConCategorias = (): JSX.Element => (
+export const Categories = (): JSX.Element => (
   <div className="list-group-container">
-    <CategoriasComponent />
+    <CategoriesComponent />
   </div>
 );
 
-ConCategorias.story = {
+Categories.story = {
   name: 'Con categorías'
 };

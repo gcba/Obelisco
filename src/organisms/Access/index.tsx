@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 export const SimpleComponent = (): JSX.Element => {
   return (
@@ -24,7 +24,7 @@ export const SimpleComponent = (): JSX.Element => {
   );
 };
 
-export const ListaDeAccesosComponent = (): JSX.Element => {
+export const AccessListComponent = (): JSX.Element => {
   return (
     <div className="list-group">
       <div className="group-access">
@@ -75,7 +75,7 @@ export const ListaDeAccesosComponent = (): JSX.Element => {
   );
 };
 
-export const CategoriasComponent = (): JSX.Element => {
+export const CategoriesComponent = (): JSX.Element => {
   return (
     <div className="list-group">
       <div className="group-access">
@@ -128,68 +128,6 @@ export const CategoriasComponent = (): JSX.Element => {
           </a>
         </div>
       </div>
-    </div>
-  );
-};
-
-export const ListaAccesoHorizontal = (): JSX.Element => {
-  return (
-    <div className="list-group list-group-row">
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">
-          <i className="bx bxs-info-circle"></i>
-          Acceso
-        </span>
-      </a>
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">
-          <i className="bx bxs-info-circle"></i>
-          Acceso
-        </span>
-      </a>
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">
-          <i className="bx bxs-info-circle"></i>
-          Acceso
-        </span>
-      </a>
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">
-          <i className="bx bxs-info-circle"></i>
-          Acceso
-        </span>
-      </a>
-    </div>
-  );
-};
-
-export const ListaAccesoVertical = (): JSX.Element => {
-  return (
-    <div className="list-group">
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">
-          <i className="bx bxs-info-circle"></i>
-          Acceso
-        </span>
-      </a>
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">
-          <i className="bx bxs-info-circle"></i>
-          Acceso
-        </span>
-      </a>
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">
-          <i className="bx bxs-info-circle"></i>
-          Acceso
-        </span>
-      </a>
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">
-          <i className="bx bxs-info-circle"></i>
-          Acceso
-        </span>
-      </a>
     </div>
   );
 };

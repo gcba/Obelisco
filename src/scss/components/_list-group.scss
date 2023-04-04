@@ -372,7 +372,7 @@ a.list-group-item {
 
         &.clearfix-category {
           border-top: 4px solid #e6ebf0;
-          margin: 0.4375rem 1.5rem 0.25rem;
+          margin: 0.1875rem 1.5rem 0.25rem;
         }
       }
 
@@ -389,27 +389,19 @@ a.list-group-item {
             margin-bottom: 13px;
           }
 
+          &:active,
+          &.active {
+            box-shadow: $box-shadow-access-focus;
+          }
+
           &:hover,
           &.hover {
             box-shadow: $box-shadow-access-hover;
-            color: $list-group-color-hover;
-
-            &:after {
-              content: $list-group-icon-arrow-hover;
-              @include float-height-icon;
-            }
           }
 
           &:focus,
           &.focus {
             box-shadow: $box-shadow-access-focus;
-            background: $white;
-            text-decoration: $no-text-decoration;
-
-            &:after {
-              content: $list-group-icon-arrow;
-              @include float-height-icon;
-            }
           }
         }
 

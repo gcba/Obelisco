@@ -6,7 +6,7 @@ import './List-group.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { AccesoDescripcionComponent, AccesosBordeComponent, AccesoIconoComponent, AccessTypes } from '.';
+import { AccessDescriptionComponent, AccessBorderComponent, AccessIconComponent, AccessTypes } from '.';
 
 // Configuración general del componente
 export default {
@@ -14,49 +14,49 @@ export default {
   decorators: [withA11y]
 };
 
-export const AccesosConBorde = (): JSX.Element => (
+export const AccessBorder = (): JSX.Element => (
   <div className="list-group-container">
     <div className="list-group">
       {AccessTypes.map((item, index) => (
-        <AccesosBordeComponent key={index} type={item.type} />
+        <AccessBorderComponent key={index} type={item.type} />
       ))}
     </div>
   </div>
 );
 
-AccesosConBorde.story = {
+AccessBorder.story = {
   name: 'Accesos con borde'
 };
 
-export const AccesoConDescripcion = (): JSX.Element => (
+export const AccessDescription = (): JSX.Element => (
   <div className="list-group-container">
     <div className="list-group">
       {AccessTypes.map((item, index) => (
-        <AccesoDescripcionComponent key={index} type={item.type} />
+        <AccessDescriptionComponent key={index} type={item.type} />
       ))}
     </div>
   </div>
 );
 
-AccesoConDescripcion.story = {
+AccessDescription.story = {
   name: 'Accesos con descripción'
 };
 
-export const AccesosConIcono = (): JSX.Element => (
+export const AccessIcon = (): JSX.Element => (
   <div className="list-group-container">
     <div className="list-group">
       {AccessTypes.map((item, index) => (
-        <AccesoIconoComponent key={index} type={item.type} />
+        <AccessIconComponent key={index} type={item.type} />
       ))}
     </div>
   </div>
 );
 
-AccesosConIcono.story = {
+AccessIcon.story = {
   name: 'Accesos con ícono'
 };
 
-export const AccesosTamanos = (): JSX.Element => (
+export const AccessSizes = (): JSX.Element => (
   <div className="list-group-container-sizes">
     <div className="list-group">
       <a href="#" className="list-group-item">
@@ -69,6 +69,6 @@ export const AccesosTamanos = (): JSX.Element => (
   </div>
 );
 
-AccesosTamanos.story = {
+AccessSizes.story = {
   name: 'Tamaños de accesos'
 };

@@ -1,23 +1,23 @@
 // Base
 import React from 'react';
-import './Access.stories.scss';
+import './List-group.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { ListaAccesoHorizontal, ListaAccesoVertical } from '.';
+import { AccessListHorizontal, AccessListVertical } from '.';
 
 // Configuración general del componente
 export default {
-  title: 'Organismos|Acceso/Lista de accesos',
+  title: 'Componentes|Accesos/Lista de accesos',
   decorators: [withA11y]
 };
 
-export const Horizontal = (): JSX.Element => <ListaAccesoHorizontal />;
+export const Horizontal = (): JSX.Element => <AccessListHorizontal />;
 
 export const Vertical = (): JSX.Element => (
   <div className="list-group-container">
-    <ListaAccesoVertical />
+    <AccessListVertical />
   </div>
 );
