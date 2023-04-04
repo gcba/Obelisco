@@ -60,7 +60,7 @@ $theme-colors: map-merge(
     'primary': $orange
   )
 );
-@import '~bootstrap/scss/alert';
+@import 'node_modules/bootstrap/scss/alert';
 
 /* === Custom styles === */
 
