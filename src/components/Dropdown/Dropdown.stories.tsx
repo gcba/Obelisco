@@ -26,7 +26,7 @@ DropdownButton.story = {
   name: 'Desplegable botón'
 };
 
-export const DesplegableConEnlaces = (): JSX.Element => (
+export const DropdownLink = (): JSX.Element => (
   <>
     <div className="dropdown-container">
       <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} isLink isBorder isToggle>
@@ -36,11 +36,11 @@ export const DesplegableConEnlaces = (): JSX.Element => (
   </>
 );
 
-DesplegableConEnlaces.story = {
+DropdownLink.story = {
   name: 'Desplegable enlace'
 };
 
-export const DesplegableConIcono = (): JSX.Element => (
+export const DropdownIcon = (): JSX.Element => (
   <div className="dropdown-container">
     <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} isBorder icon='<span class="dropdown-user-icon"></span>'>
       Mi perfil
@@ -51,11 +51,11 @@ export const DesplegableConIcono = (): JSX.Element => (
   </div>
 );
 
-DesplegableConIcono.story = {
+DropdownIcon.story = {
   name: 'Desplegable con ícono'
 };
 
-export const SoloIcono = (): JSX.Element => (
+export const DropdownOnlyIcon = (): JSX.Element => (
   <div className="dropdown-container">
     <Dropdown
       items={['Opción 1', 'Opción 2', 'Opción 3']}
@@ -63,23 +63,23 @@ export const SoloIcono = (): JSX.Element => (
   </div>
 );
 
-SoloIcono.story = {
+DropdownOnlyIcon.story = {
   name: 'Desplegable solo ícono'
 };
 
-export const Idioma = (): JSX.Element => (
+export const Language = (): JSX.Element => (
   <div className="dropdown-container">
-    <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} icon='<span class="dropdown-language-icon"></span>'>
+    <Dropdown items={['Español', 'English', 'Portugues']} icon='<span class="dropdown-language-icon"></span>'>
       ES
     </Dropdown>
   </div>
 );
 
-Idioma.story = {
+Language.story = {
   name: 'Desplegable idioma'
 };
 
-export const Tamanos = (): JSX.Element => (
+export const DropdownSizes = (): JSX.Element => (
   <div className="dropdown-container">
     <Dropdown items={['Opción 1', 'Opción 2', 'Opción 3']} isToggle isBorder size="small">
       Filtro
@@ -93,7 +93,7 @@ export const Tamanos = (): JSX.Element => (
   </div>
 );
 
-Tamanos.story = { name: 'Tamaños' };
+DropdownSizes.story = { name: 'Tamaños' };
 
 const DropMenu = (): JSX.Element => (
   <div className="dropdown-menu" key="menu">

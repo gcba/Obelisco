@@ -27,17 +27,29 @@ export const Dropdown: React.FC<DropdownProps> = ({
   isList,
   customMenu
 }): JSX.Element => {
-  const [selected, setSelected] = React.useState<string>('');
+  const [selected, setSelected] = React.useState<string[]>([]);
 
   const selectOption = (option: string, e: EventDropdown): void => {
     e.preventDefault();
-    setSelected(option);
+
+    if (selected.includes(option)) {
+      setSelected(selected.filter((item) => item !== option));
+      return;
+    }
+
+    setSelected([...selected, option]);
   };
 
   return (
     <div className="dropdown mb-3">
-      <ButtonDropdown isToggle={isToggle} size={size} isBorder={isBorder} icon={icon} isList={isList}>
-        {selected !== '' ? `${selected}` : children}
+      <ButtonDropdown
+        isToggle={isToggle}
+        size={size}
+        isBorder={isBorder}
+        icon={icon}
+        isList={isList}
+        isActive={selected.length > 0}>
+        {selected.length > 0 ? `${children ?? ''} (${selected.length})` : children}
       </ButtonDropdown>
       {customMenu}
       {!isLink && items.length > 0 ? (
@@ -45,7 +57,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           {items.map((item, index) => (
             <button
               key={index}
-              className={`dropdown-item ${selected === item ? 'active' : ''}`}
+              className={`dropdown-item ${selected.includes(item) ? 'active' : ''}`}
               type="button"
               onClick={(e) => selectOption(item, e)}>
               {item}
@@ -57,7 +69,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           {items.map((item, index) => (
             <li key={index}>
               <a
-                className={`dropdown-item ${selected === item ? 'active' : ''}`}
+                className={`dropdown-item ${selected.includes(item) ? 'active' : ''}`}
                 href="#"
                 onClick={(e) => selectOption(item, e)}>
                 {item}

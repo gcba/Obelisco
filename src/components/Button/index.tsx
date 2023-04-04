@@ -9,11 +9,11 @@ export interface ButtonProps {
   disabled?: boolean;
   className?: string;
   outline?: boolean;
-  icon?: string;
+  isIcon?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<ButtonProps>) => {
-  const { type, size = 'default', block, disabled, children, outline, icon } = props;
+  const { type, size = 'default', block, disabled, children, outline, isIcon } = props;
 
   const btnClass = classNames({
     [`btn-${type}`]: !outline,
@@ -21,13 +21,12 @@ export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<But
     [`btn-${sizeToClass(size)}`]: size,
     'btn-block': block,
     [`${props.className}`]: props.className,
-    'btn-icon': icon
+    'btn-icon': isIcon
   });
 
   return (
     <>
       <button type="button" className={`btn ${btnClass}`} disabled={disabled}>
-        {icon && <i className={`bx ${icon}`}></i>}
         {children}
       </button>
     </>
@@ -44,14 +43,16 @@ export interface ButtonDropdownProps {
   isBorder?: boolean;
   icon?: React.ReactNode;
   isList?: boolean;
+  isActive?: boolean;
 }
 
 export const ButtonDropdown: React.FC<ButtonDropdownProps> = (props: React.PropsWithChildren<ButtonDropdownProps>) => {
-  const { disabled, children, isToggle, size = 'default', isBorder, icon, isList } = props;
+  const { disabled, children, isToggle, size = 'default', isBorder, icon, isList, isActive } = props;
 
   let btnDropdownClass = classNames({
     'dropdown-toggle': isToggle,
-    'btn-dropdown-border': isBorder
+    'btn-dropdown-border': isBorder,
+    active: isActive
   });
 
   if (size !== 'default') {
