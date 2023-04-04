@@ -4,6 +4,7 @@ import './ProgressBar.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+import { ProgressBar } from '.';
 
 // Configuración general del componente
 export default {
@@ -11,62 +12,22 @@ export default {
   decorators: [withA11y]
 };
 
-export const WithSteps = (): JSX.Element => (
+export const simple = (): JSX.Element => (
   <>
-    <div className="progression-container">
-      <p className="steps">1 de 8 pasos</p>
-      <div className="progress">
-        <div
-          className="progress-bar bg-info"
-          role="progressbar"
-          style={{ width: '12.5%' }}
-          aria-valuenow={0}
-          aria-valuemin={0}
-          aria-valuemax={80}></div>
-      </div>
-    </div>
-    <div className="progression-container">
-      <p className="steps">1 de 8 pasos</p>
-      <div className="progress">
-        <div
-          className="progress-bar bg-success"
-          role="progressbar"
-          style={{ width: '12.5%' }}
-          aria-valuenow={0}
-          aria-valuemin={0}
-          aria-valuemax={80}></div>
-      </div>
-    </div>
+    <ProgressBar type="info" width={25}></ProgressBar>
+    <ProgressBar type="info" width={50}></ProgressBar>
+    <ProgressBar type="info" width={100}></ProgressBar>
   </>
 );
 
-WithSteps.story = { name: 'Con pasos' };
+simple.story = { name: 'Simple' };
 
-export const WithoutSteps = (): JSX.Element => (
+export const WithoutDescription = (): JSX.Element => (
   <>
-    <div className="progression-container">
-      <div className="progress">
-        <div
-          className="progress-bar bg-info"
-          role="progressbar"
-          style={{ width: '12.5%' }}
-          aria-valuenow={0}
-          aria-valuemin={0}
-          aria-valuemax={80}></div>
-      </div>
-    </div>
-    <div className="progression-container">
-      <div className="progress">
-        <div
-          className="progress-bar bg-success"
-          role="progressbar"
-          style={{ width: '12.5%' }}
-          aria-valuenow={0}
-          aria-valuemin={0}
-          aria-valuemax={80}></div>
-      </div>
-    </div>
+    <ProgressBar type="success" width={25} description="Descripción"></ProgressBar>
+    <ProgressBar type="success" width={50} description="Descripción"></ProgressBar>
+    <ProgressBar type="success" width={100} description="Descripción"></ProgressBar>
   </>
 );
 
-WithoutSteps.story = { name: 'Sin pasos' };
+WithoutDescription.story = { name: 'Con descripción' };
