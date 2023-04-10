@@ -9,7 +9,7 @@ $padding-card-access-body-list: 1.5rem 1.5rem 0;
 $padding-access-option-item-sm: 0.75rem 1.5rem;
 $padding-title-option: 1rem 1.5rem 0;
 $padding-title-option-first-child: 0.5rem 1.5rem 0;
-$font-size-icon-card: 1.722rem;
+$font-size-icon-card: 1.65625rem;
 $card-size: 64px;
 $font-title-option: 17px;
 
@@ -348,10 +348,14 @@ a.list-group-item {
         border-radius: $list-group-border;
         text-align: center;
         line-height: $card-size;
+        display:flex;
+        justify-content: center;
+        align-items: center;
 
         &.descriptive {
           color: $blue;
           font-weight: 600;
+          font-size: 1.806rem;
         }
       }
 
