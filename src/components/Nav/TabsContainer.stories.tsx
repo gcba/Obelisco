@@ -14,10 +14,10 @@ export default {
 
 const simpleItems: TabsItem[] = [
   { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '3', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 2', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 3', id: '3', iconTabs: '<span class="material-icons-round">home</span>' },
   {
-    name: 'Pestaña predeterminada',
+    name: 'Pestaña deshabilitada',
     id: '4',
     disabled: true,
     iconTabs: '<span class="material-icons-round">home</span>'
@@ -25,15 +25,15 @@ const simpleItems: TabsItem[] = [
 ];
 
 const sizeItems: TabsItem[] = [
-  { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>', type: 'large' },
   {
-    name: 'Pestaña predeterminada',
-    id: '2',
+    name: 'Pestaña grande',
+    id: '1',
     iconTabs: '<span class="material-icons-round">home</span>',
-    type: 'default'
+    type: 'large'
   },
+  { name: 'Pestaña mediana', id: '2', iconTabs: '<span class="material-icons-round">home</span>', type: 'default' },
   {
-    name: 'Pestaña predeterminada',
+    name: 'Pestaña chica',
     id: '3',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'small'
@@ -42,14 +42,14 @@ const sizeItems: TabsItem[] = [
 
 const sliderItems: TabsItem[] = [
   { name: 'Pestaña activa', id: '1', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '3', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '4', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '5', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '6', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '7', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '8', iconTabs: '<span class="material-icons-round">home</span>' },
-  { name: 'Pestaña predeterminada', id: '9', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 2', id: '2', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 3', id: '3', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 4', id: '4', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 5', id: '5', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 6', id: '6', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 7', id: '7', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 8', id: '8', iconTabs: '<span class="material-icons-round">home</span>' },
+  { name: 'Pestaña 9', id: '9', iconTabs: '<span class="material-icons-round">home</span>' },
   {
     name: 'Pestaña deshabilitada',
     id: '10',
@@ -139,7 +139,7 @@ export const ContainerTabsIcon = (): JSX.Element => {
 };
 
 ContainerTabsIcon.story = {
-  name: 'Con icono'
+  name: 'Con ícono'
 };
 
 export const ContainerSliderTabs = (): JSX.Element => {

@@ -55,7 +55,6 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     }
 
     .nav-item {
-
       .nav-link {
         max-height: 40px;
 
@@ -66,6 +65,27 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
         &-sm {
           max-height: 30px;
+          padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
+          font-size: 1rem;
+          .nav-icon {
+            i,
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    &.tabs {
+      .nav-item > .nav-link {
+        padding: $nav-link-padding-y $nav-link-padding-lg-x;
+  
+        &-lg {
+          padding: $nav-link-padding-lg-y $nav-link-padding-lg-x;
+        }
+  
+        &-sm {
           padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
           font-size: 1rem;
           .nav-icon {
