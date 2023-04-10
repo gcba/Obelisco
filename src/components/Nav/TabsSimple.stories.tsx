@@ -23,16 +23,48 @@ const simpleItems: TabsItem[] = [
   }
 ];
 
-const sizeItems: TabsItem[] = [
+const sizeLgItems: TabsItem[] = [
   {
     name: 'Pestaña grande',
     id: '1',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'large'
   },
-  { name: 'Pestaña mediana', id: '2', iconTabs: '<span class="material-icons-round">home</span>', type: 'default' },
+  { name: 'Pestaña 2', id: '2', iconTabs: '<span class="material-icons-round">home</span>', type: 'large' },
+  {
+    name: 'Pestaña 3',
+    id: '3',
+    iconTabs: '<span class="material-icons-round">home</span>',
+    type: 'large'
+  }
+];
+
+const sizeItems: TabsItem[] = [
+  {
+    name: 'Pestaña mediana',
+    id: '1',
+    iconTabs: '<span class="material-icons-round">home</span>',
+    type: 'default'
+  },
+  { name: 'Pestaña 2', id: '2', iconTabs: '<span class="material-icons-round">home</span>', type: 'default' },
+  {
+    name: 'Pestaña 3',
+    id: '3',
+    iconTabs: '<span class="material-icons-round">home</span>',
+    type: 'default'
+  }
+];
+
+const sizeSmItems: TabsItem[] = [
   {
     name: 'Pestaña chica',
+    id: '1',
+    iconTabs: '<span class="material-icons-round">home</span>',
+    type: 'small'
+  },
+  { name: 'Pestaña 2', id: '2', iconTabs: '<span class="material-icons-round">home</span>', type: 'small' },
+  {
+    name: 'Pestaña 3',
     id: '3',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'small'
@@ -96,7 +128,27 @@ export const SimpleSizes = (): JSX.Element => {
   return (
     <>
       <NavTabsSlider
+        items={sizeLgItems}
+        selected="1"
+        hasIcon={false}
+        classUl="nav nav-pills flex-row tabs pb-1"
+        isWithButton={false}
+      />
+
+      <br />
+
+      <NavTabsSlider
         items={sizeItems}
+        selected="1"
+        hasIcon={false}
+        classUl="nav nav-pills flex-row tabs pb-1"
+        isWithButton={false}
+      />
+
+      <br />
+
+      <NavTabsSlider
+        items={sizeSmItems}
         selected="1"
         hasIcon={false}
         classUl="nav nav-pills flex-row tabs pb-1"
