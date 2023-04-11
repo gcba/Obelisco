@@ -94,7 +94,7 @@ export const ContainerTabs = (): JSX.Element => {
       items={simpleItems}
       selected="1"
       hasIcon={false}
-      classUl="nav nav-pills flex-row tabs nav-box"
+      classUl="nav nav-pills tabs nav-box"
       isWithButton={false}
     />
   );
@@ -111,7 +111,7 @@ export const ContainerTabWidth = (): JSX.Element => {
         items={simpleItems}
         selected="1"
         hasIcon={false}
-        classUl="nav nav-pills flex-row tabs nav-box fixedWidth pb-1"
+        classUl="nav nav-pills tabs nav-box fixedWidth"
         isWithButton={false}
       />
     </>
@@ -129,7 +129,7 @@ export const ContainerSizeTabs = (): JSX.Element => {
         items={sizeLgItems}
         selected="1"
         hasIcon={false}
-        classUl="nav nav-pills flex-row tabs nav-box"
+        classUl="nav nav-pills tabs nav-box"
         isWithButton={false}
       />
 
@@ -139,7 +139,7 @@ export const ContainerSizeTabs = (): JSX.Element => {
         items={sizeItems}
         selected="1"
         hasIcon={false}
-        classUl="nav nav-pills flex-row tabs nav-box"
+        classUl="nav nav-pills tabs nav-box"
         isWithButton={false}
       />
 
@@ -149,7 +149,7 @@ export const ContainerSizeTabs = (): JSX.Element => {
         items={sizeSmItems}
         selected="1"
         hasIcon={false}
-        classUl="nav nav-pills flex-row tabs nav-box"
+        classUl="nav nav-pills tabs nav-box"
         isWithButton={false}
       />
     </>
@@ -167,7 +167,7 @@ export const ContainerTabsBg = (): JSX.Element => {
         items={simpleItems}
         selected="1"
         hasIcon={false}
-        classUl="nav nav-pills tabs flex-row nav-box-bg"
+        classUl="nav nav-pills tabs nav-box-bg"
         isWithButton={false}
       />
     </div>
@@ -184,7 +184,7 @@ export const ContainerTabsIcon = (): JSX.Element => {
       items={simpleItems}
       selected="1"
       hasIcon={true}
-      classUl="nav nav-pills tabs flex-row nav-box"
+      classUl="nav nav-pills tabs nav-box"
       isWithButton={false}
     />
   );
@@ -197,7 +197,7 @@ ContainerTabsIcon.story = {
 export const ContainerSliderTabs = (): JSX.Element => {
   return (
     <>
-      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills flex-row tabs nav-box" />
+      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills tabs nav-box" />
     </>
   );
 };
@@ -209,7 +209,7 @@ ContainerSliderTabs.story = {
 export const ContainerSliderTabBg = (): JSX.Element => {
   return (
     <div className="wrapper-bg">
-      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills flex-row tabs nav-box-bg" />
+      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills tabs nav-box-bg" />
     </div>
   );
 };

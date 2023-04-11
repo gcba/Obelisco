@@ -62,7 +62,7 @@ const NavItemComponentSlider: React.FC<TabsComponentsProps> = (props: TabsCompon
   );
 };
 
-const listClasses = 'nav nav-pills flex-row tabs';
+const listClasses = 'nav nav-pills tabs';
 
 export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildren<TabsProps>) => {
   const { items, selected, navSize, hasIcon, classUl, isWithButton = true } = props;

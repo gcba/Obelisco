@@ -96,7 +96,7 @@ export const Simple = (): JSX.Element => {
         items={simpleItems}
         selected="1"
         hasIcon={false}
-        classUl="nav nav-pills flex-row tabs pb-1"
+        classUl="nav nav-pills tabs"
         isWithButton={false}
       />
     </>
@@ -113,7 +113,7 @@ export const SimpleWidth = (): JSX.Element => {
         items={simpleItems}
         selected="1"
         hasIcon={false}
-        classUl="nav nav-pills flex-row tabs fixedWidth pb-1"
+        classUl="nav nav-pills tabs fixedWidth"
         isWithButton={false}
       />
     </>
@@ -131,19 +131,13 @@ export const SimpleSizes = (): JSX.Element => {
         items={sizeLgItems}
         selected="1"
         hasIcon={false}
-        classUl="nav nav-pills flex-row tabs pb-1"
+        classUl="nav nav-pills tabs"
         isWithButton={false}
       />
 
       <br />
 
-      <NavTabsSlider
-        items={sizeItems}
-        selected="1"
-        hasIcon={false}
-        classUl="nav nav-pills flex-row tabs pb-1"
-        isWithButton={false}
-      />
+      <NavTabsSlider items={sizeItems} selected="1" hasIcon={false} classUl="nav nav-pills tabs" isWithButton={false} />
 
       <br />
 
@@ -151,7 +145,7 @@ export const SimpleSizes = (): JSX.Element => {
         items={sizeSmItems}
         selected="1"
         hasIcon={false}
-        classUl="nav nav-pills flex-row tabs pb-1"
+        classUl="nav nav-pills tabs"
         isWithButton={false}
       />
     </>
@@ -169,7 +163,7 @@ export const SimpleIcon = (): JSX.Element => {
         items={simpleItems}
         selected="1"
         hasIcon={true}
-        classUl="nav nav-pills flex-row tabs pb-1"
+        classUl="nav nav-pills tabs"
         isWithButton={false}
       />
     </>
@@ -183,7 +177,7 @@ SimpleIcon.story = {
 export const SliderTab = (): JSX.Element => {
   return (
     <>
-      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills flex-row tabs pb-1" />
+      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills tabs" />
     </>
   );
 };

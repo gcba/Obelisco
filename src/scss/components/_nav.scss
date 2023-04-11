@@ -47,9 +47,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 /* === Custom styles === */
 
 .nav {
-
   &.flex-row {
-
     &:not(.tabs) {
       gap: 0.625rem;
     }
@@ -80,11 +78,11 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     &.tabs {
       .nav-item > .nav-link {
         padding: $nav-link-padding-y $nav-link-padding-lg-x;
-  
+
         &-lg {
           padding: $nav-link-padding-lg-y $nav-link-padding-lg-x;
         }
-  
+
         &-sm {
           padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
           font-size: 1rem;
@@ -289,8 +287,10 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
   &.tabs {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     text-align: center;
+    padding-bottom: 0.25rem;
 
     .nav-item {
       white-space: nowrap;
