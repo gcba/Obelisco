@@ -6,7 +6,14 @@ import './List-group.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { AccessDescriptionComponent, AccessBorderComponent, AccessIconComponent, AccessTypes } from '.';
+import {
+  AccessDescriptionComponent,
+  AccessBorderComponent,
+  AccessIconComponent,
+  AccessTypes,
+  AccessListVertical,
+  AccessListHorizontal
+} from '.';
 
 // Configuración general del componente
 export default {
@@ -72,3 +79,11 @@ export const AccessSizes = (): JSX.Element => (
 AccessSizes.story = {
   name: 'Tamaños de accesos'
 };
+
+export const Horizontal = (): JSX.Element => <AccessListHorizontal />;
+
+export const Vertical = (): JSX.Element => (
+  <div className="list-group-container">
+    <AccessListVertical />
+  </div>
+);

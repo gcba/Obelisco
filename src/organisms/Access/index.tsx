@@ -36,8 +36,8 @@ export const AccessListComponent = (): JSX.Element => {
             </div>
             <span className="card-access-icon descriptive">Nº</span>
           </div>
+          <hr className="clearfix mt-0" />
           <div className="container-access">
-            <hr className="clearfix mt-0" />
             <div className="access-option">
               <a href="#" className="list-group-item item-sm">
                 <i className="bx bxs-info-circle"></i>
@@ -60,9 +60,9 @@ export const AccessListComponent = (): JSX.Element => {
                   <p className="access-text">Descripción (Opcional)</p>
                 </div>
               </a>
-              <hr className="clearfix my-0 mt-2" />
             </div>
           </div>
+          <hr className="clearfix my-0 mt-2" />
           <a href="#" className="list-group-item card-item">
             <span className="access-title">
               <i className="bx bxs-info-circle"></i>
@@ -87,10 +87,10 @@ export const CategoriesComponent = (): JSX.Element => {
             </div>
             <span className="card-access-icon descriptive">Nº</span>
           </div>
+          <hr className="clearfix mt-0" />
           <div className="container-access">
-            <hr className="clearfix mt-0" />
             <div className="access-option">
-              <h2 className="title-option font-weight-bold">Categoría 1</h2>
+              <h2 className="title-option">Categoría 1</h2>
               <a href="#" className="list-group-item item-sm">
                 <span className="access-title">
                   <i className="bx bxs-info-circle"></i>
@@ -103,8 +103,8 @@ export const CategoriesComponent = (): JSX.Element => {
                   Acceso chico
                 </span>
               </a>
-              <hr className="clearfix clearfix-category" />
-              <h2 className="title-option font-weight-bold">Categoría 2</h2>
+              <hr className="clearfix" />
+              <h2 className="title-option">Categoría 2</h2>
               <a href="#" className="list-group-item item-sm">
                 <span className="access-title">
                   <i className="bx bxs-info-circle"></i>
@@ -117,9 +117,9 @@ export const CategoriesComponent = (): JSX.Element => {
                   Acceso chico
                 </span>
               </a>
-              <hr className="clearfix my-0 mt-2" />
             </div>
           </div>
+          <hr className="clearfix my-0 mt-2" />
           <a href="#" className="list-group-item card-item">
             <span className="access-title">
               <i className="bx bxs-info-circle"></i>

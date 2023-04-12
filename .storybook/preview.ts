@@ -10,7 +10,6 @@ addDecorator(withHTML);
 const headers = [
   'Comenzar|Inicio',
   'Componentes|Accesos',
-  'Componentes|Accesos/Lista de accesos',
   'Componentes|Alerta',
   'Componentes|Alerta/Listas',
   'Componentes|Audio',
