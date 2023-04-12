@@ -301,7 +301,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
       .nav-link {
         background: transparent;
-        transition: font-weight 0.2s ease;
+        transition: font-weight 0.4s ease-in-out;
         span,
         i {
           font-size: 1.25rem;
