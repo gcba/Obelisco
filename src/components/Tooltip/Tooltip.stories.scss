@@ -1,0 +1,47 @@
+.tooltip-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+
+  .tooltip-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 1rem;
+
+    &:has(.tooltip-column) {
+      flex-direction: column;
+    }
+
+    .tooltip-column {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 975.98px) {
+  .tooltip-container {
+    padding: 10rem 0;
+
+    .tooltip-row {
+      &:has(.tooltip-column) {
+        flex-direction: row;
+      }
+
+      .left {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .right {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
+}

@@ -11,7 +11,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const Titulos = (): JSX.Element => {
+export const Headings = (): JSX.Element => {
   return (
     <>
       <h1>H1 - Nunito Bold 37px</h1>
@@ -24,15 +24,15 @@ export const Titulos = (): JSX.Element => {
   );
 };
 
-Titulos.story = { name: 'Títulos' };
+Headings.story = { name: 'Títulos' };
 
-export const Subtitulo = (): JSX.Element => {
+export const Subtitle = (): JSX.Element => {
   return <p className="lead">Open Sans Regular 19px</p>;
 };
 
-Subtitulo.story = { name: 'Subtítulo' };
+Subtitle.story = { name: 'Subtítulo' };
 
-export const Parrafo = (): JSX.Element => {
+export const Text = (): JSX.Element => {
   return (
     <>
       <p>Open Sans Regular 16px</p>
@@ -41,17 +41,17 @@ export const Parrafo = (): JSX.Element => {
   );
 };
 
-Parrafo.story = { name: 'Párrafo' };
+Text.story = { name: 'Párrafo' };
 
-export const TextoSecundario = (): JSX.Element => {
+export const Epigraph = (): JSX.Element => {
   return <p className="text-xs">Open Sans Regular 11.7px</p>;
 };
 
-TextoSecundario.story = {
-  name: 'Texto secundario'
+Epigraph.story = {
+  name: 'Epígrafe'
 };
 
-export const Transformaciones = (): JSX.Element => {
+export const Transformations = (): JSX.Element => {
   return (
     <p>
       Nuestro sistema de <strong>estándares</strong> brinda un <em>conjunto de herramientas</em> y componentes
@@ -63,8 +63,11 @@ export const Transformaciones = (): JSX.Element => {
     </p>
   );
 };
+Transformations.story = {
+  name: 'Transformaciones'
+};
 
-export const Citas = (): JSX.Element => {
+export const Quote = (): JSX.Element => {
   return (
     <div className="bloquote-wrapper">
       <blockquote>
@@ -82,8 +85,11 @@ export const Citas = (): JSX.Element => {
     </div>
   );
 };
+Quote.story = {
+  name: 'Citas'
+};
 
-export const Lista = (): JSX.Element => {
+export const List = (): JSX.Element => {
   return (
     <ul>
       <li>Esto es el texto de una lista</li>
@@ -92,8 +98,11 @@ export const Lista = (): JSX.Element => {
     </ul>
   );
 };
+List.story = {
+  name: 'Listas'
+};
 
-export const ListaOrdenada = (): JSX.Element => {
+export const OrderList = (): JSX.Element => {
   return (
     <ol>
       <li>Esto es el texto de una lista ordenada</li>
@@ -103,6 +112,6 @@ export const ListaOrdenada = (): JSX.Element => {
   );
 };
 
-ListaOrdenada.story = {
+OrderList.story = {
   name: 'Lista ordenada'
 };

@@ -1,0 +1,224 @@
+/* === Variable and mixins overides === */
+
+//BOX
+$tooltip-font-size: 1rem;
+$tooltip-font-weight: 400;
+$tooltip-padding: 1rem;
+$tooltip-border: 0.5rem;
+$tooltip-border-radius: 0.5rem;
+$tooltip-max-width: 18rem;
+$tooltip-max-width-mobile: 10rem;
+
+//ARROW
+$tooltip-arrow: 1rem;
+$tooltip-arrow-border-radius: 0.125rem;
+$tooltip-arrow-rotate: 45deg;
+
+//ICON
+$tooltip-icon-size: 1.25rem;
+
+//ICON-BOX
+$tooltip-icon-box-size: 3rem;
+$tooltip-icon-box-border-radius: 0.5rem;
+$tooltip-icon-box-padding: 0.875rem;
+
+//CALCS TOP & BOTTOM
+$calc-top: calc(0% - 16px);
+$calc-bottom: calc(0% + 16px);
+$calc-top-and-bottom: calc(100% + 10px);
+
+//CALCS LEFT & RGHT
+$calc-left: calc(0% - 18px);
+$calc-right: calc(0% + 18px);
+$calc-left-and-right-x: calc(0% - 28px);
+$calc-left-and-right-y: calc(50% - 8px);
+$calc-left-x: calc(100% + 16px);
+$calc-right-x: calc(0% - 30px);
+
+/* === Custom variables and mixins === */
+
+@mixin tooltipY($positionX, $positionY, $translateX, $translateY, $arrowY, $arrowValue) {
+  //Box
+  &:after {
+    #{$positionX}: calc(50% - 8px);
+    #{$positionY}: calc(100%);
+    transform: translate($translateX, $translateY);
+  }
+
+  //Arrow
+  &:before {
+    transform: rotate($tooltip-arrow-rotate);
+    background-color: $grisulado-700;
+    border-radius: $tooltip-arrow-border-radius;
+    width: $tooltip-arrow;
+    height: $tooltip-arrow;
+    #{$arrowY}: $arrowValue;
+    #{$positionX}: calc(50% - 8px);
+  }
+}
+
+@mixin tooltipX($positionX, $translateX, $translateY, $arrowX, $arrowY, $arrowXValue, $arrowYValue) {
+  //Box
+  &:after {
+    top: 50%;
+    #{$positionX}: calc(100%);
+    transform: translate($translateX, $translateY);
+  }
+
+  //Arrow
+  &:before {
+    transform: rotate($tooltip-arrow-rotate);
+    background-color: $grisulado-700;
+    border-radius: 2px;
+    width: $tooltip-arrow;
+    height: $tooltip-arrow;
+    #{$arrowX}: $arrowXValue;
+    #{$arrowY}: $arrowYValue;
+  }
+}
+
+/* === Custom styles === */
+
+//ICON BOX
+.icon-box {
+  max-height: $tooltip-icon-box-size;
+  max-width: $tooltip-icon-box-size;
+  padding: $tooltip-icon-box-padding;
+  border-radius: $tooltip-icon-box-border-radius;
+
+  &>* {
+    font-size: $tooltip-icon-size;
+  }
+}
+
+//POINTER
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  height: max-content;
+
+  //TEXT
+  &:before,
+  &:after {
+    font-size: $tooltip-font-size;
+    font-weight: $tooltip-font-weight;
+    pointer-events: none;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+    opacity: 0;
+  }
+
+  //ARROW
+  &:before {
+    content: '';
+    z-index: 100;
+  }
+
+  //BOX
+  &:after {
+    content: attr(data-tooltip);
+    text-align: left;
+    overflow: hidden;
+    padding: $tooltip-padding;
+    border-radius: $tooltip-border-radius;
+    background: $grisulado-700;
+    color: $white;
+    z-index: 99;
+    width: max-content;
+    max-width: $tooltip-max-width;
+  }
+
+  //SHOW TOOLTIP
+  &:hover:before,
+  &:hover:after {
+    display: block;
+    opacity: 1;
+  }
+
+  //VOID DATATOOLTIP
+  [data-tooltip='']:after,
+  [data-tooltip='']:before {
+    display: none !important;
+  }
+
+  //WITHOUT DATADIRECTION
+  [data-tooltip]:not([data-direction])[data-tooltip]:after,
+  [data-tooltip]:not([data-direction])[data-tooltip]:before {
+    display: none;
+  }
+
+  //-------------------DIRECTIONS-----------------
+  //DEFAULT
+  &[data-direction=''] {
+    @include tooltipY(left, bottom, calc(-50% + 8px), $calc-top, bottom, $calc-top-and-bottom);
+  }
+
+  //TOP
+  &[data-direction='top'] {
+    @include tooltipY(left, bottom, calc(-50% + 8px), $calc-top, bottom, $calc-top-and-bottom);
+  }
+
+  //TOP RIGHT
+  &[data-direction='top-right'] {
+    @include tooltipY(left, bottom, -1rem, $calc-top, bottom, $calc-top-and-bottom);
+  }
+
+  //TOP LEFT
+  &[data-direction='top-left'] {
+    @include tooltipY(right, bottom, 1rem, $calc-top, bottom, $calc-top-and-bottom);
+  }
+
+  //BOTTOM
+  &[data-direction='bottom'] {
+    @include tooltipY(left, top, calc(-50% + 8px), $calc-bottom, top, $calc-top-and-bottom);
+  }
+
+  //BOTTOM RIGHT
+  &[data-direction='bottom-right'] {
+    @include tooltipY(left, top, -1rem, $calc-bottom, top, $calc-top-and-bottom);
+  }
+
+  //BOTTOM LEFT
+  &[data-direction='bottom-left'] {
+    @include tooltipY(right, top, 1rem, $calc-bottom, top, $calc-top-and-bottom);
+  }
+
+  //LEFT
+  &[data-direction='left'] {
+    @include tooltipX(right, $calc-left, calc(-50%), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  }
+
+  //LEFT-TOP
+  &[data-direction='left-top'] {
+    @include tooltipX(right, $calc-left, calc(-100% + 1.5rem), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  }
+
+  //LEFT-BOTTOM
+  &[data-direction='left-bottom'] {
+    @include tooltipX(right, $calc-left, calc(0% - 1.5rem), left, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  }
+
+  //RIGHT
+  &[data-direction='right'] {
+    @include tooltipX(left, $calc-right, calc(-50%), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  }
+
+  //RIGHT-TOP
+  &[data-direction='right-top'] {
+    @include tooltipX(left, $calc-right, calc(-100% + 1.5rem), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  }
+
+  //RIGHT-BOTTOM
+  &[data-direction='right-bottom'] {
+    @include tooltipX(left, $calc-right, calc(0% - 1.5rem), right, top, $calc-left-and-right-x, $calc-left-and-right-y);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  //BOX
+  [data-tooltip]:after {
+    max-width: $tooltip-max-width-mobile;
+  }
+}

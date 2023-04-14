@@ -10,31 +10,12 @@ import { Pagination } from '.';
 
 // Configuración general del componente
 export default {
-  title: 'Componentes|Paginación',
+  title: 'Componentes|Paginado',
   component: Pagination,
   decorators: [withA11y]
 };
 
-export const Paginacion = (): JSX.Element => {
-  return (
-    <div>
-      <div className="mt-5">
-        <Pagination pages={56} default={0} ariaLabel="Primer ejemplo de paginación simple" />
-      </div>
-
-      <div className="mt-5">
-        <Pagination pages={56} default={1} ariaLabel="Segundo ejemplo de paginación simple" />
-      </div>
-      <div className="mt-5">
-        <Pagination pages={56} default={55} ariaLabel="Tercer ejemplo de paginación simple" />
-      </div>
-    </div>
-  );
-};
-
-Paginacion.story = { name: 'Paginación' };
-
-export const NavegacionDePagina = (): JSX.Element => (
+export const Descriptive = (): JSX.Element => (
   <>
     <div className="pagination">
       <div className="page-navigation">
@@ -55,6 +36,4 @@ export const NavegacionDePagina = (): JSX.Element => (
   </>
 );
 
-NavegacionDePagina.story = {
-  name: 'Navegación de página'
-};
+Descriptive.story = { name: 'Descriptivo' };
