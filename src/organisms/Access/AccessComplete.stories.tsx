@@ -6,7 +6,7 @@ import '../../components/List-group/List-group.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { SimpleComponent, AccessListComponent, CategoriesComponent } from '.';
+import { AccessOrganisms, AccessInfo, CategoryList } from '.';
 
 // Configuración general del componente
 export default {
@@ -14,15 +14,41 @@ export default {
   decorators: [withA11y]
 };
 
+const accessList: AccessInfo[] = [
+  {
+    title: 'Acceso',
+    description: 'Descripción (Opcional)'
+  },
+  {
+    title: 'Acceso',
+    description: 'Descripción (Opcional)'
+  },
+  {
+    title: 'Acceso',
+    description: 'Descripción (Opcional)'
+  }
+];
+
+const accessCategory: CategoryList[] = [
+  {
+    title: 'Categoría 1',
+    items: ['Acceso chico', 'Acceso chico']
+  },
+  {
+    title: 'Categoría 2',
+    items: ['Acceso chico', 'Acceso chico']
+  }
+];
+
 export const Simple = (): JSX.Element => (
   <div className="list-group-container">
-    <SimpleComponent />
+    <AccessOrganisms simpleComponent={true} />
   </div>
 );
 
 export const AccessList = (): JSX.Element => (
   <div className="list-group-container">
-    <AccessListComponent />
+    <AccessOrganisms accessList={accessList} />
   </div>
 );
 
@@ -32,7 +58,7 @@ AccessList.story = {
 
 export const Categories = (): JSX.Element => (
   <div className="list-group-container">
-    <CategoriesComponent />
+    <AccessOrganisms categoryList={accessCategory} />
   </div>
 );
 

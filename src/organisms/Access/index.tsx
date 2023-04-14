@@ -1,124 +1,75 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
-export const SimpleComponent = (): JSX.Element => {
+interface AccessOrganismsType {
+  accessList?: AccessInfo[];
+  categoryList?: CategoryList[];
+  simpleComponent?: boolean;
+}
+
+export interface AccessInfo {
+  title: string;
+  description: string;
+}
+export interface CategoryList {
+  title: string;
+  items: string[];
+}
+
+export const AccessOrganisms: React.FC<AccessOrganismsType> = (props: PropsWithChildren<AccessOrganismsType>) => {
+  const { accessList, categoryList, simpleComponent } = props;
   return (
     <div className="list-group">
       <div className="group-access">
         <div className="card-access">
-          <div className="card-access-body reverse">
+          <div className={`card-access-body${simpleComponent ? ' reverse' : ''}`}>
             <div>
               <h4 className="mb-1">Título del acceso</h4>
               <p className="mb-0">Descripción del acceso</p>
             </div>
             <span className="card-access-icon descriptive">Nº</span>
           </div>
-          <a href="#" className="list-group-item card-item">
-            <span className="access-title">
-              <i className="bx bxs-info-circle"></i>
-              Acceso grande
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export const AccessListComponent = (): JSX.Element => {
-  return (
-    <div className="list-group">
-      <div className="group-access">
-        <div className="card-access">
-          <div className="card-access-body">
-            <div>
-              <h4 className="mb-1">Título del acceso</h4>
-              <p className="mb-0">Descripción del acceso</p>
-            </div>
-            <span className="card-access-icon descriptive">Nº</span>
-          </div>
-          <hr className="clearfix" />
-          <div className="container-access">
-            <div className="access-option">
-              <a href="#" className="list-group-item item-sm">
-                <i className="bx bxs-info-circle"></i>
-                <div className="access-content">
-                  <span className="access-title">Acceso</span>
-                  <p className="access-text">Descripción (Opcional)</p>
+          {accessList && (
+            <>
+              <hr className="clearfix" />
+              <div className="container-access">
+                <div className="access-option">
+                  {accessList.map((item, index) => (
+                    <a key={index} href="#" className="list-group-item item-sm">
+                      <i className="bx bxs-info-circle"></i>
+                      <div className="access-content">
+                        <span className="access-title">{item.title}</span>
+                        <p className="access-text">{item.description}</p>
+                      </div>
+                    </a>
+                  ))}
                 </div>
-              </a>
-              <a href="#" className="list-group-item item-sm">
-                <i className="bx bxs-info-circle"></i>
-                <div className="access-content">
-                  <span className="access-title">Acceso</span>
-                  <p className="access-text">Descripción (Opcional)</p>
+              </div>
+              <hr className="clearfix" />
+            </>
+          )}
+          {categoryList && (
+            <>
+              <hr className="clearfix" />
+              <div className="container-access">
+                <div className="access-option">
+                  {categoryList.map((category: CategoryList, index: number) => (
+                    <React.Fragment key={index}>
+                      <h6 className="title-option">{category.title}</h6>
+                      {category.items.map((item: string, index: number) => (
+                        <a key={index} href="#" className="list-group-item item-sm">
+                          <span className="access-title">
+                            <i className="bx bxs-info-circle"></i>
+                            {item}
+                          </span>
+                        </a>
+                      ))}
+                    </React.Fragment>
+                  ))}
                 </div>
-              </a>
-              <a href="#" className="list-group-item item-sm">
-                <i className="bx bxs-info-circle"></i>
-                <div className="access-content">
-                  <span className="access-title">Acceso</span>
-                  <p className="access-text">Descripción (Opcional)</p>
-                </div>
-              </a>
-            </div>
-          </div>
-          <hr className="clearfix" />
-          <a href="#" className="list-group-item card-item">
-            <span className="access-title">
-              <i className="bx bxs-info-circle"></i>
-              Acceso grande
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export const CategoriesComponent = (): JSX.Element => {
-  return (
-    <div className="list-group">
-      <div className="group-access">
-        <div className="card-access">
-          <div className="card-access-body">
-            <div>
-              <h4 className="mb-1">Título del acceso</h4>
-              <p className="mb-0">Descripción del acceso</p>
-            </div>
-            <span className="card-access-icon descriptive">Nº</span>
-          </div>
-          <hr className="clearfix" />
-          <div className="container-access">
-            <div className="access-option">
-              <h6 className="title-option">Categoría 1</h6>
-              <a href="#" className="list-group-item item-sm">
-                <span className="access-title">
-                  <i className="bx bxs-info-circle"></i>
-                  Acceso chico
-                </span>
-              </a>
-              <a href="#" className="list-group-item item-sm">
-                <span className="access-title">
-                  <i className="bx bxs-info-circle"></i>
-                  Acceso chico
-                </span>
-              </a>
-              <h6 className="title-option">Categoría 2</h6>
-              <a href="#" className="list-group-item item-sm">
-                <span className="access-title">
-                  <i className="bx bxs-info-circle"></i>
-                  Acceso chico
-                </span>
-              </a>
-              <a href="#" className="list-group-item item-sm">
-                <span className="access-title">
-                  <i className="bx bxs-info-circle"></i>
-                  Acceso chico
-                </span>
-              </a>
-            </div>
-          </div>
-          <hr className="clearfix" />
+              </div>
+              <hr className="clearfix" />
+            </>
+          )}
           <a href="#" className="list-group-item card-item">
             <span className="access-title">
               <i className="bx bxs-info-circle"></i>
