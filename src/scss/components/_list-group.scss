@@ -3,15 +3,17 @@
 $list-group-color: $grisulado-900;
 $list-group-color-hover: $blue;
 $list-group-border: 8px;
+$list-group-padding: 1.5rem;
+$list-group-padding-mobile: 1rem;
 
 $padding-card-access-body: 1.5rem;
 $padding-card-access-body-list: 1.5rem 1.5rem 0;
-$padding-access-option-item-sm: 0.75rem 1.5rem;
-$padding-title-option: 0.75rem 1.5rem 0;
+$padding-list-group-item-sm: 0.75rem 1.5rem;
+$padding-list-group-item-sm-mobile: 0.5rem 1rem;
+$padding-title-option: 0.75rem 1.5rem;
 $padding-title-option-first-child: 0.75rem 1.5rem 0;
 $font-size-icon-card: 1.65625rem;
 $card-size: 64px;
-$font-title-option: 17px;
 
 $box-shadow-access: 0 0 0 2px $grisulado-50;
 $box-shadow-access-hover: 0 0 0 2px $blue;
@@ -22,7 +24,7 @@ $box-shadow-access-focus: 0 0 0 4px theme-color-level('info', 3);
 
 $no-text-decoration: none;
 
-$margin-clearfix: 1rem 1.5rem 0.25rem;
+$margin-clearfix: 0 1.5rem;
 $border-clearfix: 2px solid $grisulado-50;
 
 $list-group-padding-x: spaceUnits(4);
@@ -56,10 +58,10 @@ a.list-group-item {
   border: none;
   box-shadow: $box-shadow-access;
   border-radius: $list-group-border;
-  padding: 1.5rem;
+  padding: $list-group-padding;
   display: flex;
   @include media-breakpoint-down(xs) {
-    padding: 1rem !important;
+    padding: $list-group-padding-mobile;
   }
 
   i,
@@ -97,6 +99,9 @@ a.list-group-item {
   &:last-child {
     margin-bottom: 0px;
     border-radius: $list-group-border;
+    &:is(.card-item) {
+      border-radius: $border-radius-card-item;
+    }
   }
 
   &:hover,
@@ -116,13 +121,7 @@ a.list-group-item {
       width: 100%;
 
       .access-title {
-        color: $list-group-color-hover;
         text-decoration: underline;
-      }
-
-      .access-text {
-        color: $list-group-color-hover;
-        text-decoration: $no-text-decoration !important;
       }
     }
 
@@ -165,6 +164,10 @@ a.list-group-item {
       }
     }
   }
+  
+  &:focus-visible {
+    outline: none;
+  }
 
   &:active,
   &.active {
@@ -187,13 +190,7 @@ a.list-group-item {
       width: 100%;
 
       .access-title {
-        color: $list-group-color-hover;
         text-decoration: underline;
-      }
-
-      .access-text {
-        color: $list-group-color-hover;
-        text-decoration: $no-text-decoration !important;
       }
     }
 
@@ -209,12 +206,9 @@ a.list-group-item {
 
   &.item-sm {
     color: $list-group-color;
-    padding: 0.75rem 1.5rem;
-
-    &:has(i, .material-icons-round) {
-      @include media-breakpoint-down(xs) {
-        padding: 0.5rem 1.125rem !important;
-      }
+    padding: $padding-list-group-item-sm;
+    @include media-breakpoint-down(xs) {
+      padding: $padding-list-group-item-sm-mobile;
     }
 
     &:hover,
@@ -321,9 +315,22 @@ a.list-group-item {
       border-top: $border-clearfix;
     }
 
+    &:has(.container-access):not(:has(.title-option)) {
+      .container-access {
+        padding: 0.625rem 0;
+        @include media-breakpoint-down(xs) {
+          padding: 0.5rem 0;
+        }
+        .list-group-item:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
     .card-access-body {
       display: flex;
-      gap: 12px;
+      align-items: center;
+      gap: 0.75rem;
       padding: $padding-card-access-body;
 
       &:not(.reverse) {
@@ -335,13 +342,11 @@ a.list-group-item {
       }
 
       .card-access-title {
-        font-size: 19px;
-        font-weight: 700;
-        margin-top: 0.5rem;
+        @extend .h4;
+        margin-bottom: 0.25rem;
       }
 
       .card-access-text {
-        font-size: 13px;
         margin: 0;
       }
 
@@ -386,15 +391,7 @@ a.list-group-item {
       .access-option {
         .item-sm {
           box-shadow: none;
-          padding: $padding-access-option-item-sm;
           margin-bottom: 5px;
-          @include media-breakpoint-down(xs) {
-            padding: 1rem !important;
-          }
-
-          &:last-child {
-            margin-bottom: 13px;
-          }
 
           &:active,
           &.active {
@@ -411,29 +408,12 @@ a.list-group-item {
             box-shadow: $box-shadow-access-focus;
           }
         }
-
-        &:has(.title-option) {
-          .item-sm {
-            padding: 0.75rem 1.5rem !important;
-          }
-
-          .title-option {
-            padding: $padding-title-option;
-            font-size: $font-title-option;
-            font-weight: $font-weight-bold;
-          }
-        }
-
-        .clearfix {
-          margin-top: 0.375rem;
+        .title-option {
+          padding: $padding-title-option;
+          @extend .h6;
+          margin-bottom: 0;
         }
       }
-    }
-
-    .list-group-item {
-      padding: 1.5rem;
-      margin-top: auto;
-      width: 100%;
     }
   }
 
@@ -441,8 +421,6 @@ a.list-group-item {
     border-right: 0;
     border-left: 0;
     border-bottom: 0;
-    margin-bottom: 0 !important;
-    border-radius: $border-radius-card-item !important;
     @include display-flex-between;
 
     i,
