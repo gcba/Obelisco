@@ -22,11 +22,7 @@ export const Info = (): JSX.Element => {
       <h1>Versión Obelisco {version}</h1>
       <p>
         Acceso al release:{' '}
-        <a
-          className="access"
-          target="_blank"
-          href="https://github.com/gcba/Obelisco/releases/tag/latest"
-          rel="noreferrer">
+        <a className="access" target="_blank" href="https://github.com/gcba/Obelisco/releases/latest" rel="noreferrer">
           Github
         </a>
       </p>
