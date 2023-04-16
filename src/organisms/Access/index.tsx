@@ -54,7 +54,7 @@ export const AccessOrganisms: React.FC<AccessOrganismsType> = (props: PropsWithC
                 <div className="access-option">
                   {categoryList.map((category: CategoryList, index: number) => (
                     <React.Fragment key={index}>
-                      <h6 className="title-option">{category.title}</h6>
+                      <h5 className="title-option">{category.title}</h5>
                       {category.items.map((item: string, index: number) => (
                         <a key={index} href="#" className="list-group-item item-sm">
                           <span className="access-title">

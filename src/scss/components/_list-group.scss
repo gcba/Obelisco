@@ -164,7 +164,7 @@ a.list-group-item {
       }
     }
   }
-  
+
   &:focus-visible {
     outline: none;
   }
@@ -317,12 +317,14 @@ a.list-group-item {
 
     &:has(.container-access):not(:has(.title-option)) {
       .container-access {
-        padding: 0.625rem 0;
-        @include media-breakpoint-down(xs) {
-          padding: 0.5rem 0;
-        }
-        .list-group-item:last-child {
-          margin-bottom: 0;
+        .access-option {
+          padding: 0.625rem 0;
+          @include media-breakpoint-down(xs) {
+            padding: 0.5rem 0;
+          }
+          .list-group-item:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -333,12 +335,18 @@ a.list-group-item {
       gap: 0.75rem;
       padding: $padding-card-access-body;
 
-      &:not(.reverse) {
-        justify-content: space-between;
+      &:not(.p-list) {
+        &:has(~ .container-access) {
+          ~ .card-item {
+            &:not(:hover) {
+              @extend .shadow-none;
+            }
+          }
+        }
       }
 
-      &.p-list {
-        padding: $padding-card-access-body-list;
+      &:not(.reverse) {
+        justify-content: space-between;
       }
 
       .card-access-title {
@@ -379,19 +387,15 @@ a.list-group-item {
       }
     }
 
-    &:has(.container-access) {
-      .card-item {
-        &:not(:hover) {
-          @extend .shadow-none;
-        }
-      }
-    }
-
     .container-access {
       .access-option {
         .item-sm {
           box-shadow: none;
           margin-bottom: 5px;
+
+          &:last-child {
+            margin-bottom: 2px;
+          }
 
           &:active,
           &.active {
