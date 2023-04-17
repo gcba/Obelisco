@@ -7,7 +7,6 @@ $list-group-padding: 1.5rem;
 $list-group-padding-mobile: 1rem;
 
 $padding-card-access-body: 1.5rem;
-$padding-card-access-body-list: 1.5rem 1.5rem 0;
 $padding-list-group-item-sm: 0.75rem 1.5rem;
 $padding-list-group-item-sm-mobile: 0.5rem 1rem;
 $padding-title-option: 0.75rem 1.5rem;
@@ -392,10 +391,6 @@ a.list-group-item {
         .item-sm {
           box-shadow: none;
           margin-bottom: 5px;
-
-          &:last-child {
-            margin-bottom: 2px;
-          }
 
           &:active,
           &.active {
