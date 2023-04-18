@@ -1,9 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 
 export interface ProgressBarProps {
   type: string;
   width: number;
-  withDescription?: boolean;
   description?: string;
 }
 
@@ -20,9 +19,9 @@ export const ProgressBar: React.FC<ProgressBarProps> = (props: React.PropsWithCh
           className={className}
           role="progressbar"
           style={{ width: `${width}%` }}
-          aria-valuenow={0}
+          aria-valuenow={width}
           aria-valuemin={0}
-          aria-valuemax={width}></div>
+          aria-valuemax={100}></div>
       </div>
     </div>
   );
