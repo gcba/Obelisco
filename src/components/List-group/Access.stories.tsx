@@ -12,7 +12,9 @@ import {
   AccessIconComponent,
   AccessTypes,
   AccessListVertical,
-  AccessListHorizontal
+  AccessListHorizontal,
+  AccessSizesComponent,
+  AccessSizes
 } from '.';
 
 // Configuración general del componente
@@ -32,7 +34,7 @@ export const AccessBorder = (): JSX.Element => (
 );
 
 AccessBorder.story = {
-  name: 'Accesos con borde'
+  name: 'Con borde'
 };
 
 export const AccessDescription = (): JSX.Element => (
@@ -46,7 +48,7 @@ export const AccessDescription = (): JSX.Element => (
 );
 
 AccessDescription.story = {
-  name: 'Accesos con descripción'
+  name: 'Con descripción'
 };
 
 export const AccessIcon = (): JSX.Element => (
@@ -60,24 +62,21 @@ export const AccessIcon = (): JSX.Element => (
 );
 
 AccessIcon.story = {
-  name: 'Accesos con ícono'
+  name: 'Con ícono'
 };
 
-export const AccessSizes = (): JSX.Element => (
+export const AccessSizesStory = (): JSX.Element => (
   <div className="list-group-container-sizes">
     <div className="list-group">
-      <a href="#" className="list-group-item">
-        <span className="access-title">Acceso grande</span>
-      </a>
-      <a href="#" className="list-group-item item-sm">
-        <span className="access-title">Acceso chico</span>
-      </a>
+      {AccessSizes.map((item, index) => (
+        <AccessSizesComponent key={index} type={item.type} name={item.name} />
+      ))}
     </div>
   </div>
 );
 
-AccessSizes.story = {
-  name: 'Tamaños de accesos'
+AccessSizesStory.story = {
+  name: 'Tamaños'
 };
 
 export const Horizontal = (): JSX.Element => <AccessListHorizontal />;

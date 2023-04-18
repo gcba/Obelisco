@@ -51,7 +51,7 @@ const headers = [
   'Formulario|Texto',
   'Formulario|Validación',
   'Plantillas|Plantilla',
-  'Organismos|Acceso/Acceso completo',
+  'Organismos|Accesos',
   'Organismos|Footer (pie de página)',
   'Organismos|Header (encabezado)/Con buscador',
   'Organismos|Header (encabezado)/Sin buscador',

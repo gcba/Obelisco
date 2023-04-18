@@ -10,7 +10,7 @@ import { AccessOrganisms, AccessInfo, CategoryList } from '.';
 
 // Configuración general del componente
 export default {
-  title: 'Organismos|Acceso/Acceso completo',
+  title: 'Organismos|Accesos',
   decorators: [withA11y]
 };
 

@@ -11,7 +11,7 @@ $padding-list-group-item-sm: 0.75rem 1.5rem;
 $padding-list-group-item-sm-mobile: 0.5rem 1rem;
 $padding-title-option: 0.75rem 1.5rem;
 $padding-title-option-first-child: 0.75rem 1.5rem 0;
-$font-size-icon-card: 1.65625rem;
+$font-size-icon-card: 2rem;
 $card-size: 64px;
 
 $box-shadow-access: 0 0 0 2px $grisulado-50;
@@ -314,20 +314,6 @@ a.list-group-item {
       border-top: $border-clearfix;
     }
 
-    &:has(.container-access):not(:has(.title-option)) {
-      .container-access {
-        .access-option {
-          padding: 0.625rem 0;
-          @include media-breakpoint-down(xs) {
-            padding: 0.5rem 0;
-          }
-          .list-group-item:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-
     .card-access-body {
       display: flex;
       align-items: center;
@@ -388,6 +374,16 @@ a.list-group-item {
 
     .container-access {
       .access-option {
+        padding: 0.625rem 0;
+
+        @include media-breakpoint-down(xs) {
+          padding: 0.5rem 0;
+        }
+
+        .list-group-item:last-child {
+          margin-bottom: 0;
+        }
+
         .item-sm {
           box-shadow: none;
           margin-bottom: 5px;
@@ -409,7 +405,7 @@ a.list-group-item {
         }
         .title-option {
           padding: $padding-title-option;
-          @extend .h6;
+          @extend .h5;
           margin-bottom: 0;
         }
       }
@@ -421,10 +417,5 @@ a.list-group-item {
     border-left: 0;
     border-bottom: 0;
     @include display-flex-between;
-
-    i,
-    .material-icons-round {
-      margin-right: 0.25rem;
-    }
   }
 }
