@@ -193,17 +193,16 @@ a.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: .25rem;
 
   i,
   span {
-    margin-right: 0.25rem;
     font-size: 0.9375rem;
   }
 
   &.btn-lg {
     i,
     span {
-      margin-right: 0.25rem;
       font-size: $btn-font-size;
     }
   }

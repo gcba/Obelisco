@@ -1,8 +1,8 @@
 import { addDecorator, addParameters } from '@storybook/react';
 import { withHTML } from '@whitespace/storybook-addon-html/react';
 // import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
-import './preview.scss';
 import '../src/scss/obelisco.scss';
+import './preview.scss';
 
 addDecorator(withHTML);
 // .storybook/preview.js
@@ -28,10 +28,13 @@ const headers = [
   'Componentes|Mensajes de estado',
   'Componentes|Migas de pan',
   'Componentes|Modal',
-  'Componentes|Navegación/Horizontal',
-  'Componentes|Navegación/Vertical',
+  'Componentes|Navegación y pestañas/Navegación horizontal',
+  'Componentes|Navegación y pestañas/Navegación vertical',
+  'Componentes|Navegación y pestañas/Pestañas simple',
+  'Componentes|Navegación y pestañas/Pestañas con contenedor',
   'Componentes|Opciones',
-  'Componentes|Paginación',
+  'Componentes|Paginado/Numerado',
+  'Componentes|Paginado',
   'Componentes|Panel',
   'Componentes|Panel/Panel horizontal/Con imagen',
   'Componentes|Panel/Panel horizontal/Con video',
@@ -42,6 +45,7 @@ const headers = [
   'Componentes|Tarjetas/Tipos',
   'Componentes|Tarjetas/Lista ancho completo',
   'Componentes|Tarjetas/Lista ancho por tarjeta',
+  'Componentes|Tooltip',
   'Estilos|Grilla',
   'Estilos|Tipografía',
   'Formulario|Archivo',

@@ -8,22 +8,24 @@ export interface ButtonProps {
   disabled?: boolean;
   className?: string;
   outline?: boolean;
-  icon?: string;
+  iconBx?: string;
+  iconMaterial?: string;
 }
 
 export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<ButtonProps>) => {
-  const { type, size, block, disabled, children, outline, icon } = props;
+  const { type, size, block, disabled, children, outline, iconBx, iconMaterial } = props;
 
   let className = `btn btn-${type}`;
   if (outline) className = `btn btn-outline-${type}`;
   if (!!size && size !== 'default') className += ` btn-${sizeToClass(size)}`;
   if (block) className += ` btn-block`;
   if (props.className) className += ` ${props.className}`;
-  if (icon) className += ` btn-icon`;
+  if (iconBx || iconMaterial) className += ` btn-icon`;
 
   return (
     <button type="button" className={className} disabled={disabled}>
-      {icon && <i className={`bx ${icon}`}></i>}
+      {iconBx && <i className={`bx ${iconBx}`}></i>}
+      {iconMaterial && <span className="material-icons-round">{`${iconMaterial}`}</span>}
       {children}
     </button>
   );
