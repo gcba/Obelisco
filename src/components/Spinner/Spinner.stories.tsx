@@ -11,31 +11,31 @@ export default {
   decorators: [withA11y]
 };
 
-export const SpinnerDefault = (): JSX.Element => (
+// Components
+import { spinnerTypes, sizes } from '../utils';
+import { Spinner } from '.';
+
+export const SpinnerTypes = (): JSX.Element => (
   <div className="spinner-wrapper">
-    <div className="spinner-border text-info" role="status">
-      <span className="sr-only">Loading...</span>
-    </div>
+    {spinnerTypes.map((type) => (
+      <Spinner key={type} type={type}></Spinner>
+    ))}
   </div>
 );
 
-SpinnerDefault.story = {
-  name: 'Predeterminado'
+SpinnerTypes.story = {
+  name: 'Tipos'
 };
 
-export const SpinnerSizes = (): JSX.Element => (
-  <div className="spinner-wrapper">
-    <div className="spinner-border spinner-border-sm text-info" role="status">
-      <span className="sr-only">Loading...</span>
+export const SpinnerSizes = (): JSX.Element => {
+  return (
+    <div className="spinner-wrapper">
+      {sizes.map((item) => (
+        <Spinner key={item} type="info" size={item}></Spinner>
+      ))}
     </div>
-    <div className="spinner-border text-info" role="status">
-      <span className="sr-only">Loading...</span>
-    </div>
-    <div className="spinner-border spinner-border-lg text-info" role="status">
-      <span className="sr-only">Loading...</span>
-    </div>
-  </div>
-);
+  );
+};
 
 SpinnerSizes.story = {
   name: 'Tamaños'
@@ -43,13 +43,10 @@ SpinnerSizes.story = {
 
 export const SpinnerBlock = (): JSX.Element => (
   <div className="spinner-wrapper">
-    <div className="spinner-size">
-      <div className="spinner-block text-info" role="status">
-        <span className="sr-only">Loading...</span>
-      </div>
-    </div>
+    <Spinner type="info" block={true}></Spinner>
   </div>
 );
+
 SpinnerBlock.story = {
   name: 'Expandible'
 };

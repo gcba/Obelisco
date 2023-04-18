@@ -92,3 +92,27 @@ export const directionBottom: Direction[] = [
   { direction: 'bottom', icon: 'arrow_downward', position: 'abajo' },
   { direction: 'bottom-left', icon: 'subdirectory_arrow_left', position: 'abajo-izquierda' }
 ];
+
+export type SpinnerType = Type | 'secondary' | 'info' | 'light' | 'dark';
+export const spinnerTypes: SpinnerType[] = ['primary', 'secondary', 'success', 'danger', 'info', 'light', 'dark'];
+
+export interface ButtonTypeWithSpinner {
+  type: Type | 'secondary' | 'link';
+  spinner: SpinnerType;
+}
+
+export const buttonSpinnerTypes: Array<ButtonTypeWithSpinner> = [
+  { type: 'primary', spinner: 'dark' },
+  { type: 'secondary', spinner: 'light' },
+  { type: 'success', spinner: 'light' },
+  { type: 'danger', spinner: 'light' },
+  { type: 'link', spinner: 'info' }
+];
+
+export const buttonOutlineSpinnerTypes: Array<ButtonTypeWithSpinner> = [
+  { type: 'primary', spinner: 'dark' },
+  { type: 'secondary', spinner: 'secondary' },
+  { type: 'success', spinner: 'success' },
+  { type: 'danger', spinner: 'danger' },
+  { type: 'link', spinner: 'info' }
+];

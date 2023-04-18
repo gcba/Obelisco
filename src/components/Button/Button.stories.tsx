@@ -6,7 +6,7 @@ import './Button.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { buttonTypes, sizes, sizesButton } from '../utils';
+import { buttonTypes, sizes, sizesButton, buttonSpinnerTypes, buttonOutlineSpinnerTypes } from '../utils';
 import { Button } from '.';
 
 // Configuración general del componente
@@ -16,7 +16,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const Colores = (): JSX.Element => {
+export const ButtonSolid = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
       {buttonTypes.map((item) => (
@@ -30,8 +30,9 @@ export const Colores = (): JSX.Element => {
     </div>
   );
 };
+ButtonSolid.story = { name: 'Colores' };
 
-export const ConFoco = (): JSX.Element => {
+export const ButtonFocus = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
       {buttonTypes.map((item) => (
@@ -45,12 +46,9 @@ export const ConFoco = (): JSX.Element => {
     </div>
   );
 };
+ButtonFocus.story = { name: 'Con foco' };
 
-ConFoco.story = {
-  name: 'Con foco'
-};
-
-export const Activos = (): JSX.Element => {
+export const ButtonActive = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
       {buttonTypes.map((item) => (
@@ -64,8 +62,9 @@ export const Activos = (): JSX.Element => {
     </div>
   );
 };
+ButtonActive.story = { name: 'Activos' };
 
-export const Tamanos = (): JSX.Element => {
+export const ButtonSizes = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
       {sizesButton.map((item) => (
@@ -79,10 +78,9 @@ export const Tamanos = (): JSX.Element => {
     </div>
   );
 };
+ButtonSizes.story = { name: 'Tamaños' };
 
-Tamanos.story = { name: 'Tamaños' };
-
-export const Deshabilitados = (): JSX.Element => {
+export const ButtonDisabled = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
       {sizesButton.map((item) => (
@@ -93,8 +91,9 @@ export const Deshabilitados = (): JSX.Element => {
     </div>
   );
 };
+ButtonDisabled.story = { name: 'Deshabilitados' };
 
-export const Expandible = (): JSX.Element => {
+export const ButtonBlock = (): JSX.Element => {
   return (
     <div className="btn-block-wrapper">
       <Button type="secondary" block={true}>
@@ -103,8 +102,9 @@ export const Expandible = (): JSX.Element => {
     </div>
   );
 };
+ButtonBlock.story = { name: 'Expandible' };
 
-export const ConBordes = (): JSX.Element => {
+export const ButtonOutline = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
       {buttonTypes.map((item) => (
@@ -118,12 +118,9 @@ export const ConBordes = (): JSX.Element => {
     </div>
   );
 };
+ButtonOutline.story = { name: 'Con bordes' };
 
-ConBordes.story = {
-  name: 'Con bordes'
-};
-
-export const ConIconos = (): JSX.Element => {
+export const ButtonWithIcon = (): JSX.Element => {
   return (
     <>
       <div className="btn-wrapper">
@@ -141,107 +138,24 @@ export const ConIconos = (): JSX.Element => {
     </>
   );
 };
-
-ConIconos.story = {
-  name: 'Con íconos'
-};
+ButtonWithIcon.story = { name: 'Con ícono' };
 
 export const ButtonWithSpinner = (): JSX.Element => (
   <>
     <div className="btn-wrapper">
-      <button className="btn btn-link btn-icon btn-sm">
-        Botón
-        <div className="spinner-border spinner-border-sm text-info" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-link btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-info" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-link btn-icon btn-lg">
-        Botón
-        <div className="spinner-border spinner-border-sm text-info" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
+      {buttonSpinnerTypes.map((item) => (
+        <Button key={item.type} type={item.type} spinner={item.spinner}>
+          Botón
+        </Button>
+      ))}
     </div>
     <div className="btn-wrapper">
-      <button className="btn btn-outline-link btn-icon btn-sm">
-        Botón
-        <div className="spinner-border spinner-border-sm text-info" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-outline-link btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-info" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-outline-link btn-icon btn-lg">
-        Botón
-        <div className="spinner-border spinner-border-sm text-info" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-    </div>
-    <div className="btn-wrapper">
-      <button className="btn btn-outline-primary btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-secondary" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-outline-secondary btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-secondary" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-outline-success btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-success" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-outline-danger btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-danger" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-    </div>
-    <div className="btn-wrapper">
-      <button className="btn btn-primary btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-secondary" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-secondary btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-secondary" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-success btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-success" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
-      <button className="btn btn-danger btn-icon">
-        Botón
-        <div className="spinner-border spinner-border-sm text-danger" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </button>
+      {buttonOutlineSpinnerTypes.map((item) => (
+        <Button key={item.type} type={item.type} outline={true} spinner={item.spinner}>
+          Botón
+        </Button>
+      ))}
     </div>
   </>
 );
-ButtonWithSpinner.story = {
-  name: 'Con spinner'
-};
+ButtonWithSpinner.story = { name: 'Con spinner' };

@@ -4,10 +4,10 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-  }
-  
-  &-size {
-    width: 6rem;
-    height: 6rem;
+
+    &:has(.spinner-block) {
+      width: 2.5rem;
+      margin: auto;
+    }
   }
 }
