@@ -22,7 +22,7 @@ export const simple = (): JSX.Element => (
 
 simple.story = { name: 'Simple' };
 
-export const WithoutDescription = (): JSX.Element => (
+export const withDescription = (): JSX.Element => (
   <>
     <ProgressBar type="success" width={25} description="Descripción"></ProgressBar>
     <ProgressBar type="success" width={50} description="Descripción"></ProgressBar>
@@ -30,4 +30,4 @@ export const WithoutDescription = (): JSX.Element => (
   </>
 );
 
-WithoutDescription.story = { name: 'Con descripción' };
+withDescription.story = { name: 'Con descripción' };
