@@ -12,7 +12,7 @@ $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org
 $animation-toggle: transform 0.2s ease-in-out;
 
 /* === Bootstrap Import === */
-@import '~bootstrap/scss/dropdown';
+@import 'node_modules/bootstrap/scss/dropdown';
 
 /* === Custom styles === */
 

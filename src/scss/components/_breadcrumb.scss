@@ -1,42 +1,51 @@
 /* === Variable and mixins overides === */
 
-$breadcrumb-divider: url('data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE2IDE2Ij4KPHBhdGggZmlsbD0iIzM4NDg1QyIgZD0iTTUuNSwxNS4xTDEyLjYsOEw1LjUsMC45TDMuNCwzLjFMOC4zLDhsLTQuOSw0LjlMNS41LDE1LjF6Ii8+Cjwvc3ZnPgo=');
-$breadcrimb-divider-width: 1.5rem;
+$breadcrumb-divider: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(56, 72, 92);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
+$breadcrumb-divider-width: 1.5rem;
+$breadcrumb-divider-height: 1.5rem;
+$breadcrumb-divider-margin-right: .25rem;
+$breadcrumb-divider-padding-right: 0;
 $breadcrumb-bg: transparent;
-$breadcrumb-item-padding: 0.75rem;
+$breadcrumb-item-padding-right: 0.5rem;
 $breadcrumb-padding-x: 0;
 
 /* === Custom variables and mixins === */
 
 /* === Bootstrap Import === */
 
-@import '~bootstrap/scss/breadcrumb';
+@import 'node_modules/bootstrap/scss/breadcrumb';
 
 /* === Custom styles === */
 
 .breadcrumb .breadcrumb-item {
+  &:not(:last-child) {
+    padding-right: $breadcrumb-item-padding-right;
+  }
+
   a {
     max-width: 16rem;
-    display: inline-block;
+    display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   &:before {
-    width: $breadcrimb-divider-width;
+    width: $breadcrumb-divider-width;
+    height: $breadcrumb-divider-height;
+    margin-right: $breadcrumb-divider-margin-right;
+    padding-right: $breadcrumb-divider-padding-right;
+  }
+  
+  &+.breadcrumb-item {
+    padding-left: 0;
   }
 }
 
 @include media-breakpoint-down(md) {
   .breadcrumb {
-    .breadcrumb-item:last-child {
-      padding-left: 0;
-
-      &:before {
-        margin-right: $breadcrumb-item-padding;
-        transform: rotate(0.5turn);
-      }
+    .breadcrumb-item:last-child:before {
+      transform: rotate(0.5turn);
     }
 
     .breadcrumb-item:not(:last-child) {

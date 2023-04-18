@@ -1,6 +1,8 @@
 /* === Variable and mixins overides === */
 
 $nav-link-font-weight: 400;
+$nav-link-simple-font-weight: 700;
+$nav-link-simple-active-font-weight: $nav-link-simple-font-weight;
 $nav-link-active-font-weight: $nav-link-font-weight;
 $nav-link-line-heght: 1.378;
 
@@ -11,18 +13,21 @@ $nav-icon-font-size: 1.25rem;
 
 $nav-link-padding-sm-y: 0.25rem;
 $nav-link-padding-sm-x: 0.5rem;
-$nav-link-padding-y: 0.5rem;
+$nav-link-vertical-padding-x: 1.125rem;
 $nav-link-padding-x: 0.75rem;
+$nav-link-padding-y: 0.5rem;
 $nav-link-padding-lg-y: 0.75rem;
-$nav-link-padding-lg-x: 0.75rem;
 $nav-mobile-inner-padding-y: 0.75rem;
 $nav-mobile-bg: $grisulado-10;
 
-$nav-link-disabled-color: $grisulado-300;
+$nav-link-disabled-color: $grisulado-300 !important;
 $nav-link-hover-bg: $grisulado-50;
 
 $nav-pills-link-active-bg: $blue;
 $nav-link-hover-color: $blue;
+$nav-link-border-active: $blue;
+
+$nav-link-fixed-width: 15.625rem;
 
 $nav-focus-width: 0.25rem;
 $input-btn-focus-box-shadow: 0 0 0 $nav-focus-width theme-color-level('info', 3);
@@ -37,27 +42,54 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
 /* === Bootstrap Import === */
 
-@import '~bootstrap/scss/nav';
+@import 'node_modules/bootstrap/scss/nav';
 
 /* === Custom styles === */
 
 .nav {
-  &.flex-row {
+  &:not(.tabs) {
     gap: 0.625rem;
+  }
 
-    .nav-item {
-      .nav-link {
-        max-height: 40px;
+  .nav-item {
+    .nav-link {
+      max-height: 40px;
+      padding: $nav-link-padding-y $nav-link-padding-x;
 
+      &-lg {
+        max-height: 48px;
+        padding: $nav-link-padding-lg-y $nav-link-padding-x;
+      }
+
+      &-sm {
+        max-height: 30px;
+        padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
+        font-size: 1rem;
+        .nav-icon {
+          i,
+          span {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    
+
+    &.tabs {
+      .nav-item > .nav-link {
         &-lg {
-          max-height: 48px;
-          padding: $nav-link-padding-lg-y $nav-link-padding-lg-x;
+          padding: $nav-link-padding-lg-y $nav-link-padding-x;
         }
 
         &-sm {
-          max-height: 30px;
           padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
           font-size: 1rem;
+          .nav-icon {
+            i,
+            span {
+              font-size: 1rem;
+            }
+          }
         }
       }
     }
@@ -70,22 +102,26 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     &:first-child {
       margin-top: 0;
     }
+    .nav-item > .nav-link {
+      max-height: fit-content;
+    }
+    .nav .nav-item .nav-link .nav-icon {
+      i,
+      .material-icons-round {
+        display: none;
+      }
+    }
   }
 }
 
 .nav-pills {
   .nav-item {
-    &:first-child {
-      .nav-link {
-        .nav-icon {
-          display: flex;
-          align-items: center;
-          gap: 0.625rem;
-
-          i {
-            font-size: $nav-icon-font-size;
-            display: inline;
-          }
+    .nav-link {
+      .nav-icon {
+        i,
+        .material-icons-round {
+          font-size: $nav-icon-font-size;
+          display: inline;
         }
       }
     }
@@ -107,9 +143,9 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       }
 
       .nav-icon {
-        i {
-          display: none;
-        }
+        display: flex;
+        align-items: center;
+        gap: 0.25rem; //Este gap define el espaciado en navegación vertical y horizontal
       }
     }
   }
@@ -121,6 +157,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   font-weight: $nav-link-font-weight;
   line-height: $nav-link-line-heght;
   font-family: $font-family-headings;
+
   @include border-radius($border-radius * 2);
 
   &:visited {
@@ -248,6 +285,152 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       }
     }
   }
+
+  &.tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding-bottom: 0.25rem;
+
+    .nav-item {
+      white-space: nowrap;
+
+      button {
+        border: none;
+      }
+
+      .nav-link {
+        background: transparent;
+        transition: font-weight 0.4s ease-in-out;
+        span,
+        i {
+          font-size: 1.25rem;
+          text-decoration: none;
+        }
+
+        &.active,
+        &:active {
+          font-weight: $nav-link-simple-font-weight;
+          color: $grisulado-900;
+          background-color: transparent;
+          box-shadow: 0px 4px 0px 0px $nav-link-border-active;
+          border-radius: 0;
+
+          &:hover {
+            box-shadow: 0px 4px 0px 0px $nav-link-border-active;
+
+            &:focus {
+              border-radius: 0;
+            }
+          }
+
+          &:focus {
+            @include border-radius($border-radius * 2);
+          }
+        }
+
+        &:focus {
+          box-shadow: $input-btn-focus-box-shadow inset;
+        }
+
+        &:hover {
+          box-shadow: none;
+        }
+
+        .nav-icon {
+          justify-content: center;
+          gap: 0.625rem; //Este gap define el espaciado en pestañas
+        }
+      }
+    }
+
+    .nav-item[draggable='true'] {
+      cursor: move;
+    }
+
+    &.nav-box {
+      border: none;
+      padding: 0;
+
+      .nav-item {
+        .nav-link {
+          background-color: $grisulado-50;
+          border-radius: 8px 8px 0px 0px;
+          border: none;
+
+          &.active,
+          &:active {
+            background-color: $grisulado-10;
+            color: $grisulado-900;
+            box-shadow: none;
+          }
+        }
+      }
+
+      &-bg {
+        @extend .nav-box;
+        .nav-item {
+          .nav-link {
+            &.active,
+            &:active {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabs-slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 2.5rem 0 2rem;
+
+  .nav {
+    width: fit-content;
+    overflow-x: hidden;
+    margin-left: 0.625rem;
+
+    &.fixedWidth {
+      .nav-item > .nav-link {
+        width: auto;
+        min-width: $nav-link-fixed-width;
+        @include media-breakpoint-down(md) {
+          min-width: auto;
+        }
+      }
+    }
+  }
+  .right-left {
+    width: 2.5rem;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    > span {
+      font-size: 16px;
+    }
+
+    &:nth-of-type(1) {
+      left: 0;
+    }
+
+    &:nth-of-type(2) {
+      right: 0;
+      display: flex;
+    }
+  }
+
+  @extend .tabs;
 }
 
 .nav.nav-lg {
@@ -260,17 +443,17 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
 .nav .nav {
   .nav-link {
-    padding-left: $nav-link-padding-x * 2;
+    padding-left: $nav-link-vertical-padding-x * 2.4444;
   }
 
   .nav {
     .nav-link {
-      padding-left: $nav-link-padding-x * 3;
+      padding-left: $nav-link-vertical-padding-x * 4;
     }
 
     .nav {
       .nav-link {
-        padding-left: $nav-link-padding-x * 4;
+        padding-left: $nav-link-vertical-padding-x * 4.5;
       }
     }
   }
@@ -305,7 +488,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   background-color: $nav-mobile-bg;
 
   .nav-link {
-    padding: $nav-link-padding-y $nav-link-padding-x + $nav-link-padding-x/4;
+    padding: $nav-link-padding-y $nav-link-vertical-padding-x + $nav-link-vertical-padding-x/4;
     border-radius: 0;
   }
 }
@@ -318,7 +501,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     background-color: transparent;
 
     .nav-link {
-      padding: $nav-link-padding-y $nav-link-padding-x;
+      padding: $nav-link-padding-y $nav-link-vertical-padding-x;
       @include border-radius($border-radius);
     }
 
