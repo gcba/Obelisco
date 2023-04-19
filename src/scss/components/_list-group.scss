@@ -24,6 +24,7 @@ $box-shadow-access-focus: 0 0 0 4px theme-color-level('info', 3);
 $no-text-decoration: none;
 
 $margin-clearfix: 0 1.5rem;
+$margin-clearfix-mobile: 0 1rem;
 $border-clearfix: 2px solid $grisulado-50;
 
 $list-group-padding-x: spaceUnits(4);
@@ -314,6 +315,14 @@ a.list-group-item {
       border-top: $border-clearfix;
     }
 
+    &:not(:has(.title-option)) {
+      .clearfix {
+        @include media-breakpoint-down(xs) {
+          margin: $margin-clearfix-mobile;
+        }
+      }
+    }
+
     .card-access-body {
       display: flex;
       align-items: center;
@@ -359,6 +368,7 @@ a.list-group-item {
           color: $blue;
           font-weight: 600;
           font-size: 1.806rem;
+          font-family: $font-family-headings;
         }
       }
 
