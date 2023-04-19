@@ -60,6 +60,7 @@ a.list-group-item {
   border-radius: $list-group-border;
   padding: $list-group-padding;
   display: flex;
+  backface-visibility: hidden;
   @include media-breakpoint-down(xs) {
     padding: $list-group-padding-mobile;
   }
@@ -108,6 +109,7 @@ a.list-group-item {
   &.hover {
     box-shadow: $box-shadow-access-hover;
     color: $list-group-color-hover;
+    backface-visibility: visible;
 
     &.list-group-item-logout {
       box-shadow: $box-shadow-access-hover-danger;
@@ -313,13 +315,8 @@ a.list-group-item {
     .clearfix {
       margin: $margin-clearfix;
       border-top: $border-clearfix;
-    }
-
-    &:not(:has(.title-option)) {
-      .clearfix {
-        @include media-breakpoint-down(xs) {
-          margin: $margin-clearfix-mobile;
-        }
+      @include media-breakpoint-down(xs) {
+        margin: $margin-clearfix-mobile;
       }
     }
 
