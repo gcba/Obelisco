@@ -13,8 +13,7 @@ $card-cap-color: $text-muted;
 $card-cap-bg: inherit;
 $card-active-color: $white;
 $card-header-bg: $grisulado-10;
-$card-header-padding-y: 0.75rem;
-$card-header-padding-x: 1.5rem;
+$card-header-padding: 0.75rem 1.813rem 0.75rem 1.5rem;
 $card-bg-info: #005387;
 
 $card-border-width: 0;
@@ -46,8 +45,8 @@ $card-text-decoration: none;
 $card-font-weight: 600;
 
 $collapse-border-width: 2px;
-$collapse-info-title-size: 1.3125rem;
-$collapse-info-subtitle-size: 0.825rem;
+$collapse-info-title-size: 1.125rem;
+$collapse-info-subtitle-size: 1rem;
 
 $accordion-margin: 0.75rem;
 
@@ -761,7 +760,7 @@ button.card {
       background-color: $blue;
       border-width: 0;
       text-align: left;
-      padding: $card-header-padding-y $card-header-padding-x;
+      padding: $card-header-padding;
       transition: background-color 0.2s;
       border-radius: $border-radius $border-radius 0 0;
       position: relative;
@@ -771,11 +770,13 @@ button.card {
       line-height: 1.4;
       font-size: 18px;
       font-weight: 700;
+      display: flex;
+      justify-content: space-between;
 
       &:after {
         content: $accordion-icon-expanded-blue;
         height: spaceUnits(5);
-        float: right;
+        margin-left: auto;
       }
 
       &:focus,
@@ -795,13 +796,13 @@ button.card {
         border-radius: $border-radius-lg;
         background-color: $card-header-bg;
         color: $grisulado-900;
+        position: relative;
 
         &:hover,
         &.hover {
           background-color: $grisulado-10;
           color: $blue;
           box-shadow: $card-box-hover-shadow;
-          content: $accordion-icon-user-white;
 
           + * > .card-body {
             border-color: $card-header-bg;
@@ -810,31 +811,30 @@ button.card {
           &:after {
             content: $accordion-icon-collapsed-blue;
             height: spaceUnits(6);
-            float: right;
+            display: inline-block;
+            vertical-align: middle;
           }
         }
 
         &:after {
           content: $accordion-icon-collapsed;
+          display: inline-block;
+          vertical-align: middle;
         }
       }
 
       &.card-info {
+        display: block;
+
         &:after {
-          content: 'Ver menos';
-          position: absolute;
-          top: 50%;
-          right: $card-header-padding-x;
           transform: translateY(-50%);
-          text-decoration: underline;
-          font-weight: $card-font-weight;
         }
 
         &.collapsed {
           border-radius: $card-border-radius;
 
           &:after {
-            content: 'Ver detalle';
+            transform: translateY(-50%);
           }
         }
       }
@@ -842,19 +842,74 @@ button.card {
 
     .collpase-subtitle {
       text-transform: uppercase;
-      font-weight: $card-font-weight;
+      font-weight: $card-subtitle-font-weight;
       font-size: $collapse-info-title-size;
     }
 
     .collpase-title {
-      font-weight: $card-subtitle-font-weight;
+      font-weight: $card-font-weight;
       font-size: $collapse-info-subtitle-size;
     }
 
     .card-body {
-      padding-top: 1rem;
+      padding: 1rem 1.5rem;
       border: $collapse-border-width solid $card-header-bg;
       @include border-bottom-radius($card-border-radius);
+
+      .card-details {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.813rem;
+
+        .card-details-content {
+          display: grid;
+          grid-column-gap: 1rem;
+
+          > h4 {
+            margin-bottom: 0;
+          }
+
+        }
+
+        i, .material-icons-round {
+          margin: auto 0;
+          font-size: 1.5rem;
+        }
+
+        .form-radio {
+          margin-left: auto;
+          width: 20px;
+          height: 20px;
+          appearance: none;
+          background-color: $white;
+          font: inherit;
+          color: currentColor;
+          border: 0.15em solid currentColor;
+          border-radius: 50%;
+          transform: translateY(-0.075em);
+          display: grid;
+          place-content: center;
+        }
+
+        .form-radio:checked {
+          border: 0.15em solid $info;
+        }
+
+        .form-radio::before {
+          content: "";
+          width: 0.65em;
+          height: 0.65em;
+          border-radius: 50%;
+          transform: scale(0);
+          transition: 120ms transform ease-in-out;
+          box-shadow: inset 1em 1em $info;
+        }
+
+        .form-radio:checked::before {
+          transform: scale(1);
+        }
+      }
     }
   }
 }

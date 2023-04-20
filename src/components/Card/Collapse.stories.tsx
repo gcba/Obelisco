@@ -10,40 +10,40 @@ export default {
   decorators: [withA11y]
 };
 
-export const SeleccionUnica = (): JSX.Element => (
+export const UniqueSelection = (): JSX.Element => (
   <div id="accordion">
     <div className="accordion-wrapper">
       <div className="accordion" id="accordionExample">
         <div className="card">
           <button className="card-header collapsed card-link" data-toggle="collapse" data-target="#collapseOne">
-            Colapsable
+            Título
           </button>
           <div id="collapseOne" className="collapse" data-parent="#accordion">
             <div className="card-body">
-              Este es el área descriptiva de un colapsable de selección única. Una vez que se accione sobre el área de
-              títulos, se abrirá el componente mostrando el área descriptiva.
+              Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra
+              dentro de un colapsable.
             </div>
           </div>
         </div>
         <div className="card">
           <button className="card-header collapsed card-link" data-toggle="collapse" data-target="#collapseTwo">
-            Colapsable
+            Título
           </button>
           <div id="collapseTwo" className="collapse" data-parent="#accordion">
             <div className="card-body">
-              Este es el área descriptiva de un colapsable de selección única. Una vez que se accione sobre el área de
-              títulos, se abrirá el componente mostrando el área descriptiva.
+              Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra
+              dentro de un colapsable.
             </div>
           </div>
         </div>
         <div className="card">
           <button className="card-header collapsed card-link" data-toggle="collapse" data-target="#collapseThree">
-            Colapsable
+            Título
           </button>
           <div id="collapseThree" className="collapse" data-parent="#accordion">
             <div className="card-body">
-              Este es el área descriptiva de un colapsable de selección única. Una vez que se accione sobre el área de
-              títulos, se abrirá el componente mostrando el área descriptiva.
+              Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra
+              dentro de un colapsable.
             </div>
           </div>
         </div>
@@ -52,41 +52,41 @@ export const SeleccionUnica = (): JSX.Element => (
   </div>
 );
 
-SeleccionUnica.story = { name: 'Selección única' };
+UniqueSelection.story = { name: 'Selección única' };
 
-export const SeleccionMultiple = (): JSX.Element => (
+export const MultipleSelection = (): JSX.Element => (
   <div className="accordion-wrapper">
     <div className="accordion" id="accordionExample">
       <div className="card">
         <button className="card-header collapsed card-link" data-toggle="collapse" data-target="#collapseFour">
-          Colapsable
+          Título
         </button>
         <div id="collapseFour" className="collapse" data-parent="#accordion">
           <div className="card-body">
-            Este es el área descriptiva de un colapsable de selección única. Una vez que se accione sobre el área de
-            títulos, se abrirá el componente mostrando el área descriptiva.
+            Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra
+            dentro de un colapsable.
           </div>
         </div>
       </div>
       <div className="card">
         <button className="card-header collapsed card-link" data-toggle="collapse" data-target="#collapseFive">
-          Colapsable
+          Título
         </button>
         <div id="collapseFive" className="collapse" data-parent="#accordion">
           <div className="card-body">
-            Este es el área descriptiva de un colapsable de selección única. Una vez que se accione sobre el área de
-            títulos, se abrirá el componente mostrando el área descriptiva.
+            Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra
+            dentro de un colapsable.
           </div>
         </div>
       </div>
       <div className="card">
         <button className="card-header collapsed card-link" data-toggle="collapse" data-target="#collapseSix">
-          Colapsable
+          Título
         </button>
         <div id="collapseSix" className="collapse" data-parent="#accordion">
           <div className="card-body">
-            Este es el área descriptiva de un colapsable de selección única. Una vez que se accione sobre el área de
-            títulos, se abrirá el componente mostrando el área descriptiva.
+            Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra
+            dentro de un colapsable.
           </div>
         </div>
       </div>
@@ -94,9 +94,9 @@ export const SeleccionMultiple = (): JSX.Element => (
   </div>
 );
 
-SeleccionMultiple.story = { name: 'Selección múltiple' };
+MultipleSelection.story = { name: 'Selección múltiple' };
 
-export const SeleccionConInformacion = (): JSX.Element => (
+export const SelectionInformation = (): JSX.Element => (
   <div className="accordion-wrapper">
     <div className="accordion" id="accordionExample">
       <div className="card">
@@ -105,17 +105,17 @@ export const SeleccionConInformacion = (): JSX.Element => (
           data-toggle="collapse"
           data-target="#collapseFive">
           <span className="collpase-title">Total: </span> <br />
-          <span className="collpase-subtitle">$ 450</span>
+          <span className="collpase-subtitle">$ 450,00</span>
         </button>
         <div id="collapseFive" className="collapse" data-parent="#accordion">
           <div className="card-body">
-            <small>BOLETA N° 2564-59879543</small>
+            <small className="text-success">$200,00</small>
             <h4 className="mb-0">Solicitud de informes varios</h4>
-            <small>$ 450</small>
+            <small>Boleta N° 2549-48758798</small>
             <hr />
-            <small>BOLETA N° 2564-59879543</small>
-            <h4 className="mb-0">Solicitud de informes varios</h4>
-            <small>$ 450</small>
+            <small className="text-success">$250,00</small>
+            <h4 className="mb-0">Ecoparque</h4>
+            <small>Boleta N° 2549-48758798</small>
           </div>
         </div>
       </div>
@@ -123,14 +123,18 @@ export const SeleccionConInformacion = (): JSX.Element => (
   </div>
 );
 
-SeleccionConInformacion.story = { name: 'Selección con información' };
+SelectionInformation.story = { name: 'Selección con información' };
 
-export const SeleccionConIcono = (): JSX.Element => (
+export const SelectionIcon = (): JSX.Element => (
   <div id="accordion">
     <div className="accordion-wrapper">
       <div className="accordion" id="accordionExample">
         <div className="card">
-          <button className="card-header collapsed card-link " data-toggle="collapse" data-target="#collapseEight">
+          <button
+            type="button"
+            className="card-header collapsed card-link"
+            data-toggle="collapse"
+            data-target="#collapseEight">
             <i className="bx bx-sm align-top mr-1 bxs-user-circle"></i>
             Colapsable
           </button>
@@ -146,4 +150,53 @@ export const SeleccionConIcono = (): JSX.Element => (
   </div>
 );
 
-SeleccionConIcono.story = { name: 'Selección con ícono' };
+SelectionIcon.story = { name: 'Selección con ícono' };
+
+export const CollapseList = (): JSX.Element => (
+  <div className="" style={{ width: '750px' }}>
+    <div className="accordion" id="accordionListExample">
+      <div className="card">
+        <button
+          type="button"
+          className="card-header collapsed card-link card-info"
+          data-toggle="collapse"
+          data-target="#collapseEight">
+          <span className="collpase-title">Tarjeta de crédito / débito </span>
+          <br />
+          <span className="collpase-subtitle">VISA, MasterCard, AMEX, CABAL, Maestro</span>
+        </button>
+        <div id="collapseEight" className="collapse" data-parent="#accordion">
+          <form className="card-body">
+            <div className="card-details">
+              <i className="bx bxl-visa"></i>
+              <div className="card-details-content">
+                <h4>Visa Débito ****1234</h4>
+                <small>Heraldo Paez</small>
+              </div>
+              <input type="radio" className="form-radio" name="credit_card" id="visa" />
+            </div>
+            <hr />
+            <div className="card-details">
+              <i className="bx bxl-mastercard"></i>
+              <div className="card-details-content">
+                <h4>MasterCard Crédito ****5678</h4>
+                <small>Heraldo Paez</small>
+              </div>
+              <input type="radio" className="form-radio" name="credit_card" id="master" />
+            </div>
+            <hr />
+            <div className="card-details">
+              <span className="material-icons-round">info</span>
+              <div className="card-details-content">
+                <h4>Nueva tarjeta de crédito</h4>
+              </div>
+              <input type="radio" className="form-radio" name="credit_card" id="new_card" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+CollapseList.story = { name: 'Colapsable lista' };
