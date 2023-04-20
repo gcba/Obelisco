@@ -1,7 +1,7 @@
 /* === Custom variables and mixins === */
 
 $footer-padding-y: spaceUnits(12);
-$footer-legal-margin-bottom: spaceUnits(6);
+$footer-legal-margin-bottom: spaceUnits(10);
 
 $footer-border-width: spaceUnits(1);
 $footer-border-color: $yellow;
@@ -56,7 +56,6 @@ $divider-border: 0.125rem solid $grisulado-700;
 
       .footer-content-img {
         display: flex;
-        justify-content: space-between;
 
         .img-vamos-ba {
           height: $footer-icon-height-vamos-ba;

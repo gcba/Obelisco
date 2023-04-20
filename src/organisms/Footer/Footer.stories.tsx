@@ -62,12 +62,12 @@ const SocialSection = (): JSX.Element => (
 const LegalSection = (): JSX.Element => (
   <section className="footer-legal-section">
     <div className="row align-items-center">
-      <div className="col-12 col-md-5 col-xl-4 mb-4 mb-md-0 footer-content-img">
+      <div className="col-12 footer-content-img">
         <img className="d-lg-none" src="footer/ciudad-ba-sm.svg" alt="Ciudad de Buenos Aires" height="48" />
         <img className="d-none d-lg-inline" src="footer/ciudad-ba.svg" alt="Ciudad de Buenos Aires" height="40" />
-        <img className="img-vamos-ba" src="footer/vamos-ba.svg" alt="Vamos Buenos Aires" />
+        <img className="img-vamos-ba ml-4" src="footer/vamos-ba.svg" alt="Vamos Buenos Aires" />
       </div>
-      <div className="col-12 col-md-7 col-xl-8">
+      <div className="col-12">
         <ul className="list-inline">
           <li className="list-inline-item">
             <a href="https://boletinoficial.buenosaires.gob.ar">Boletín oficial</a>
@@ -83,6 +83,9 @@ const LegalSection = (): JSX.Element => (
           <li className="list-inline-item">
             <a href="https://www.buenosaires.gob.ar/oficiosjudiciales">Oficios judiciales</a>
           </li>
+          <li className="list-inline-item">
+            <a href="https://www.buenosaires.gob.ar/gobierno/transparencia">Transparencia activa</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -92,7 +95,7 @@ const LegalSection = (): JSX.Element => (
 const LicenseSection = (): JSX.Element => (
   <section>
     <div className="footer-license-text">
-      Los contenidos de buenosaires.gob.ar están licenciados bajo <br className="d-none d-sm-inline" /> Creative Commons
+       Los contenidos de buenosaires.gob.ar están licenciados bajo Creative Commons
       Reconocimiento 2.5 Argentina License.
     </div>
   </section>
