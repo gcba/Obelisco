@@ -14,19 +14,29 @@ export default {
 
 export const simple = (): JSX.Element => (
   <>
-    <ProgressBar type="info" width={25}></ProgressBar>
-    <ProgressBar type="info" width={50}></ProgressBar>
-    <ProgressBar type="info" width={100}></ProgressBar>
+    <div className="progression-container">
+      <ProgressBar type="info" width={25}></ProgressBar>
+    </div>
+    <div className="progression-container">
+      <ProgressBar type="info" width={50}></ProgressBar>
+    </div>
+    <div className="progression-container">
+      <ProgressBar type="info" width={100}></ProgressBar>
+    </div>
   </>
 );
 
-simple.story = { name: 'Simple' };
-
 export const withDescription = (): JSX.Element => (
   <>
-    <ProgressBar type="success" width={25} description="Descripción"></ProgressBar>
-    <ProgressBar type="success" width={50} description="Descripción"></ProgressBar>
-    <ProgressBar type="success" width={100} description="Descripción"></ProgressBar>
+    <div className="progression-container">
+      <ProgressBar type="success" width={25} description="Descripción"></ProgressBar>
+    </div>
+    <div className="progression-container">
+      <ProgressBar type="success" width={50} description="Descripción"></ProgressBar>
+    </div>
+    <div className="progression-container">
+      <ProgressBar type="success" width={100} description="Descripción"></ProgressBar>
+    </div>
   </>
 );
 

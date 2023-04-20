@@ -12,7 +12,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = (props: React.PropsWithCh
   const className = `progress-bar bg-${type}`;
 
   return (
-    <div className="progression-container">
+    <>
       {description && <p className="steps">{description}</p>}
       <div className="progress">
         <div
@@ -23,6 +23,6 @@ export const ProgressBar: React.FC<ProgressBarProps> = (props: React.PropsWithCh
           aria-valuemin={0}
           aria-valuemax={100}></div>
       </div>
-    </div>
+    </>
   );
 };
