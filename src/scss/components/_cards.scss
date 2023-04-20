@@ -579,7 +579,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       margin-left: $card-deck-margin;
     }
   }
-  @include media-breakpoint-down(xs)  {
+  @include media-breakpoint-down(xs) {
     .card {
       &:nth-of-type(2) {
         margin-top: 30px;
@@ -645,7 +645,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.card-column {
-  .card, .group-access {
+  .card,
+  .group-access {
     max-width: calc(calc(100% / 4) - 30px);
 
     @include media-breakpoint-down(md) {
@@ -662,7 +663,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 .card-deck.max-cards-3.card-column {
-  .card, .group-access {
+  .card,
+  .group-access {
     max-width: calc(calc(100% / 3) - 30px);
 
     @include media-breakpoint-down(sm) {
@@ -676,7 +678,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.max-cards-2.card-column {
-  .card, .group-access {
+  .card,
+  .group-access {
     max-width: calc(calc(100% / 2) - 30px);
 
     @include media-breakpoint-down(xs) {
@@ -685,7 +688,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 .card-deck.max-cards-1.card-column {
-  .card, .group-access {
+  .card,
+  .group-access {
     max-width: calc(calc(100% / 3) - 30px);
 
     &:nth-of-type(-n + 3) {
@@ -860,7 +864,7 @@ button.card {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        gap: 0.813rem;
+        gap: 0.75rem;
 
         .card-details-content {
           display: grid;
@@ -869,41 +873,41 @@ button.card {
           > h4 {
             margin-bottom: 0;
           }
-
         }
 
-        i, .material-icons-round {
+        i,
+        .material-icons-round {
           margin: auto 0;
           font-size: 1.5rem;
         }
 
         .form-radio {
           margin-left: auto;
-          width: 20px;
-          height: 20px;
+          width: 1.25rem;
+          height: 1.25rem;
           appearance: none;
           background-color: $white;
           font: inherit;
           color: currentColor;
-          border: 0.15em solid currentColor;
+          border: 0.15rem solid currentColor;
           border-radius: 50%;
-          transform: translateY(-0.075em);
+          transform: translateY(-0.075rem);
           display: grid;
           place-content: center;
         }
 
         .form-radio:checked {
-          border: 0.15em solid $info;
+          border: 0.15rem solid $info;
         }
 
         .form-radio::before {
-          content: "";
-          width: 0.65em;
-          height: 0.65em;
+          content: '';
+          width: 0.65rem;
+          height: 0.65rem;
           border-radius: 50%;
           transform: scale(0);
           transition: 120ms transform ease-in-out;
-          box-shadow: inset 1em 1em $info;
+          box-shadow: inset 1rem 1rem $info;
         }
 
         .form-radio:checked::before {
