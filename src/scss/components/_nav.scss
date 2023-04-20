@@ -322,19 +322,18 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
           &:hover {
             box-shadow: 0px 4px 0px 0px $nav-link-border-active;
-
-            &:focus {
-              border-radius: 0;
-            }
           }
 
           &:focus {
-            @include border-radius($border-radius * 2);
+            border-radius: 8px;
           }
         }
 
         &:focus {
           box-shadow: $input-btn-focus-box-shadow inset;
+          &:hover {
+            box-shadow: $input-btn-focus-box-shadow inset;
+          }
         }
 
         &:hover {
@@ -367,6 +366,9 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
             background-color: $grisulado-10;
             color: $grisulado-900;
             box-shadow: none;
+            &:focus {
+              border-radius: 8px 8px 0px 0px;
+            }
           }
         }
       }
