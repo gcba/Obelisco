@@ -4,6 +4,8 @@ import './Spinner.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+
+// Components
 import { spinnerTypes, sizes } from '../utils';
 import { Spinner } from '.';
 
@@ -12,8 +14,6 @@ export default {
   title: 'Componentes|Spinner',
   decorators: [withA11y]
 };
-
-// Components
 
 export const SpinnerTypes = (): JSX.Element => (
   <div className="spinner-wrapper">
