@@ -176,9 +176,9 @@ SimpleIcon.story = {
 
 export const SliderTab = (): JSX.Element => {
   return (
-    <>
+    <div className="wrapper-tabs">
       <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills tabs" />
-    </>
+    </div>
   );
 };
 
