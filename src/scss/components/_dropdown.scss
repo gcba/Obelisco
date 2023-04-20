@@ -167,6 +167,43 @@ $animation-toggle: transform 0.2s ease-in-out;
         vertical-align: bottom;
       }
 
+      &:has(i) {
+        &:focus {
+          i {
+            color: $grisulado-900;
+          }
+        }
+
+        i {
+          display: inline-block;
+          background-color: $grisulado-50;
+          margin-left: spaceUnits(1);
+          vertical-align: middle;
+          border-radius: $border-radius;
+          width: 1.4rem;
+          padding: 0.2rem;
+        }
+      }
+
+      &:not(:has(.dropdown-language-icon)) {
+        &:focus {
+          span {
+            color: $grisulado-900;
+          }
+        }
+
+        span {
+          display: inline-block;
+          background-color: $grisulado-50;
+          margin-left: spaceUnits(1);
+          border-radius: $border-radius;
+          font-size: 1.2rem;
+          padding: 0.1rem;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+
       .dropdown-toggle {
         color: $grisulado-900;
       }
