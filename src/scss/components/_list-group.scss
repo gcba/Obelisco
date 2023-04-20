@@ -85,7 +85,6 @@ a.list-group-item {
     .access-text {
       font-size: 13px;
       margin: 0;
-      text-decoration: $no-text-decoration;
     }
   }
 
@@ -109,6 +108,7 @@ a.list-group-item {
   &.hover {
     box-shadow: $box-shadow-access-hover;
     color: $list-group-color-hover;
+    text-decoration: $no-text-decoration;
     backface-visibility: visible;
 
     &.list-group-item-logout {
@@ -117,14 +117,6 @@ a.list-group-item {
 
     .access-title {
       text-decoration: underline;
-    }
-
-    .access-content {
-      width: 100%;
-
-      .access-title {
-        text-decoration: underline;
-      }
     }
 
     &:after {
@@ -153,14 +145,6 @@ a.list-group-item {
         @include float-height-icon;
       }
 
-      .access-content {
-        .access-title,
-        .access-text {
-          color: $list-group-color;
-          text-decoration: $no-text-decoration;
-        }
-      }
-
       .access-title {
         text-decoration: $no-text-decoration;
       }
@@ -174,7 +158,12 @@ a.list-group-item {
   &:active,
   &.active {
     box-shadow: $box-shadow-access-focus;
-    background-color: unset;
+    background-color: $white;
+    color: $list-group-color-hover;
+
+    .access-title {
+      text-decoration: underline;
+    }
 
     &:not(:focus) {
       color: $list-group-color-hover;
@@ -182,18 +171,6 @@ a.list-group-item {
 
     &.list-group-item-logout {
       box-shadow: $box-shadow-access-hover-danger;
-    }
-
-    .access-title {
-      text-decoration: underline;
-    }
-
-    .access-content {
-      width: 100%;
-
-      .access-title {
-        text-decoration: underline;
-      }
     }
 
     &:after {
@@ -207,50 +184,10 @@ a.list-group-item {
   }
 
   &.item-sm {
-    color: $list-group-color;
     padding: $padding-list-group-item-sm;
+
     @include media-breakpoint-down(xs) {
       padding: $padding-list-group-item-sm-mobile;
-    }
-
-    &:hover,
-    &.hover {
-      box-shadow: $box-shadow-access-hover;
-      color: $list-group-color-hover;
-      text-decoration: $no-text-decoration;
-
-      .access-content {
-        width: 100%;
-
-        .access-title {
-          color: $list-group-color-hover;
-          text-decoration: underline;
-        }
-
-        .access-text {
-          color: $list-group-color-hover;
-          text-decoration: $no-text-decoration;
-        }
-      }
-    }
-
-    &:focus,
-    &.focus {
-      box-shadow: $box-shadow-access-focus;
-      color: $list-group-color;
-
-      .access-title {
-        color: $list-group-color;
-        text-decoration: $no-text-decoration;
-      }
-
-      .access-content {
-        .access-text,
-        .access-title {
-          color: $list-group-color;
-          text-decoration: $no-text-decoration;
-        }
-      }
     }
   }
 
@@ -304,6 +241,7 @@ a.list-group-item {
 .group-access {
   display: grid;
   margin-bottom: 1rem;
+  background-color: $white;
 
   .card-access {
     display: grid;
