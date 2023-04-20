@@ -98,6 +98,8 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   &.flex-column {
     gap: 0.25rem;
     margin-top: 0.188rem;
+    background-color: $white;
+    border-radius: $border-radius * 2;
 
     &:first-child {
       margin-top: 0;
