@@ -325,7 +325,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
           }
 
           &:focus {
-            border-radius: 8px;
+            border-radius: $border-radius * 2;
           }
         }
 
@@ -367,7 +367,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
             color: $grisulado-900;
             box-shadow: none;
             &:focus {
-              border-radius: 8px 8px 0px 0px;
+              border-radius: $border-radius * 2 $border-radius * 2 0px 0px;
             }
           }
         }
