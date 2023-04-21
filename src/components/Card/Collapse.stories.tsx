@@ -10,7 +10,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const UniqueSelection = (): JSX.Element => (
+export const CollapseUniqueSelection = (): JSX.Element => (
   <div id="accordion">
     <div className="accordion-wrapper">
       <div className="accordion" id="accordionExample">
@@ -52,9 +52,9 @@ export const UniqueSelection = (): JSX.Element => (
   </div>
 );
 
-UniqueSelection.story = { name: 'Selección única' };
+CollapseUniqueSelection.story = { name: 'Selección única' };
 
-export const MultipleSelection = (): JSX.Element => (
+export const CollapseMultipleSelection = (): JSX.Element => (
   <div className="accordion-wrapper">
     <div className="accordion" id="accordionExample">
       <div className="card">
@@ -94,9 +94,9 @@ export const MultipleSelection = (): JSX.Element => (
   </div>
 );
 
-MultipleSelection.story = { name: 'Selección múltiple' };
+CollapseMultipleSelection.story = { name: 'Selección múltiple' };
 
-export const SelectionInformation = (): JSX.Element => (
+export const CollapseInformation = (): JSX.Element => (
   <div className="accordion-wrapper">
     <div className="accordion" id="accordionExample">
       <div className="card">
@@ -104,7 +104,7 @@ export const SelectionInformation = (): JSX.Element => (
           className="card-header collapsed card-link card-info"
           data-toggle="collapse"
           data-target="#collapseFive">
-          <span className="collpase-title">Total: </span> <br />
+          <h1 className="collpase-title">Total: </h1>
           <span className="collpase-subtitle">$ 450,00</span>
         </button>
         <div id="collapseFive" className="collapse" data-parent="#accordion">
@@ -123,9 +123,9 @@ export const SelectionInformation = (): JSX.Element => (
   </div>
 );
 
-SelectionInformation.story = { name: 'Selección con información' };
+CollapseInformation.story = { name: 'Selección con información' };
 
-export const SelectionIcon = (): JSX.Element => (
+export const CollapseIcon = (): JSX.Element => (
   <div id="accordion">
     <div className="accordion-wrapper">
       <div className="accordion" id="accordionExample">
@@ -136,7 +136,36 @@ export const SelectionIcon = (): JSX.Element => (
             data-toggle="collapse"
             data-target="#collapseEight">
             <i className="bx bx-sm align-top mr-1 bxs-user-circle"></i>
-            Colapsable
+            Título
+          </button>
+          <div id="collapseEight" className="collapse" data-parent="#accordion">
+            <div className="card-body">
+              Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra
+              dentro de un colapsable.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+CollapseIcon.story = { name: 'Selección con ícono' };
+
+export const CollapsableLabelIcon = (): JSX.Element => (
+  <div id="accordion">
+    <div className="accordion-wrapper">
+      <div className="accordion" id="accordionExample">
+        <div className="card">
+          <button
+            type="button"
+            className="card-header collapsed card-link"
+            data-toggle="collapse"
+            data-target="#collapseEight">
+            <i className="bx bx-sm align-top mr-1 bxs-user-circle"></i>
+            <span className="collapse-label">Label</span>
+            <h1 className="collpase-title">Título</h1>
+            <span className="collpase-subtitle">Descripción</span>
           </button>
           <div id="collapseEight" className="collapse" data-parent="#accordion">
             <div className="card-body">
@@ -150,10 +179,10 @@ export const SelectionIcon = (): JSX.Element => (
   </div>
 );
 
-SelectionIcon.story = { name: 'Selección con ícono' };
+CollapsableLabelIcon.story = { name: 'Selección con label y descripción' };
 
 export const CollapseList = (): JSX.Element => (
-  <div className="" style={{ width: '750px' }}>
+  <div className="accordion-wrapper">
     <div className="accordion" id="accordionListExample">
       <div className="card">
         <button
@@ -161,8 +190,7 @@ export const CollapseList = (): JSX.Element => (
           className="card-header collapsed card-link card-info"
           data-toggle="collapse"
           data-target="#collapseEight">
-          <span className="collpase-title">Tarjeta de crédito / débito </span>
-          <br />
+          <h1 className="collpase-title">Tarjeta de crédito / débito </h1>
           <span className="collpase-subtitle">VISA, MasterCard, AMEX, CABAL, Maestro</span>
         </button>
         <div id="collapseEight" className="collapse" data-parent="#accordion">

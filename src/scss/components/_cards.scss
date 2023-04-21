@@ -42,7 +42,7 @@ $card-deck-margin: $grid-gutter-width / 2;
 $card-deck-margin-top: $grid-gutter-width;
 
 $card-text-decoration: none;
-$card-font-weight: 600;
+$card-font-weight: 700;
 
 $collapse-border-width: 2px;
 $collapse-info-title-size: 1.125rem;
@@ -190,7 +190,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   .card-title {
     margin-bottom: 0;
     @extend .h4;
-    font-weight: 600;
+    font-weight: $headings-font-weight;
 
     @include media-breakpoint-up(sm) {
       font-weight: 700;
@@ -470,7 +470,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     .card-body {
       .card-title {
         @extend .h2;
-        font-weight: 600;
+        font-weight: $headings-font-weight;
         margin: $panel-title-margin-horizontal;
 
         @include media-breakpoint-down(md) {
@@ -508,7 +508,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     .card-body {
       .card-title {
         @extend .h2;
-        font-weight: 600;
+        font-weight: $headings-font-weight;
         margin: $panel-title-margin-vertical;
       }
 
@@ -774,8 +774,38 @@ button.card {
       line-height: 1.4;
       font-size: 18px;
       font-weight: 700;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto;
+      grid-column-gap: 0.75rem;
+      grid-row-gap: 0px;
+      align-items: center;
+
+      &:has(i, .material-icons-round) {
+        grid-template-columns: 1.5rem 1fr auto;
+      }
+
+      &:has(.collapse-label) {
+        i,
+        .material-icons-round {
+          grid-area: 1 / 1 / 4 / 2;
+        }
+
+        .collapse-label {
+          grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .collpase-title {
+          grid-area: 2 / 2 / 3 / 3;
+        }
+        .collpase-subtitle {
+          grid-area: 3 / 2 / 4 / 3;
+        }
+
+        &:after {
+          grid-area: 1 / 3 / 4 / 4;
+        }
+      }
 
       &:after {
         content: $accordion-icon-expanded-blue;
@@ -807,6 +837,7 @@ button.card {
           background-color: $grisulado-10;
           color: $blue;
           box-shadow: $card-box-hover-shadow;
+          backface-visibility: visible;
 
           + * > .card-body {
             border-color: $card-header-bg;
@@ -828,17 +859,18 @@ button.card {
       }
 
       &.card-info {
-        display: block;
+        grid-row-gap: 0.125rem;
+        grid-column-gap: 0.5rem;
 
         &:after {
-          transform: translateY(-50%);
+          grid-area: 1 / 2 / 3 / 3;
         }
 
         &.collapsed {
           border-radius: $card-border-radius;
 
           &:after {
-            transform: translateY(-50%);
+            grid-area: 1 / 2 / 3 / 3;
           }
         }
       }
@@ -847,12 +879,15 @@ button.card {
     .collpase-subtitle {
       text-transform: uppercase;
       font-weight: $card-subtitle-font-weight;
-      font-size: $collapse-info-title-size;
+      font-size: $collapse-info-subtitle-size;
+      grid-area: 2 / 1 / 3 / 2;
     }
 
     .collpase-title {
       font-weight: $card-font-weight;
-      font-size: $collapse-info-subtitle-size;
+      font-size: $collapse-info-title-size;
+      grid-area: 1 / 1 / 2 / 2;
+      margin-bottom: 0;
     }
 
     .card-body {
@@ -872,13 +907,14 @@ button.card {
 
           > h4 {
             margin-bottom: 0;
+            font-weight: $headings-font-weight;
           }
         }
 
         i,
         .material-icons-round {
           margin: auto 0;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
 
         .form-radio {
