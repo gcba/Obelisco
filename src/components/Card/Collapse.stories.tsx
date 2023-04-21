@@ -169,8 +169,8 @@ export const CollapsableLabelIcon = (): JSX.Element => (
           </button>
           <div id="collapseEight" className="collapse" data-parent="#accordion">
             <div className="card-body">
-              Este es el área descriptiva de un colapsable de selección única. Una vez que se accione sobre el área de
-              títulos, se abrirá el componente mostrando el área descriptiva.
+              Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra
+              dentro de un colapsable.
             </div>
           </div>
         </div>
