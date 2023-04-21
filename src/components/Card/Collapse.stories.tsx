@@ -104,8 +104,8 @@ export const CollapseInformation = (): JSX.Element => (
           className="card-header collapsed card-link card-info"
           data-toggle="collapse"
           data-target="#collapseFive">
-          <h1 className="collpase-title">Total: </h1>
-          <span className="collpase-subtitle">$ 450,00</span>
+          <span className="collapse-label">Total a pagar</span>
+          <h1 className="collpase-title">$450,00</h1>
         </button>
         <div id="collapseFive" className="collapse" data-parent="#accordion">
           <div className="card-body">
