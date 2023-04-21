@@ -1,5 +1,5 @@
 // Base
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Typography.stories.scss';
 
 // Addons
@@ -12,12 +12,23 @@ export default {
 };
 
 export const Headings = (): JSX.Element => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 592);
+    }
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
       <h1>H1 - Nunito Bold 37px</h1>
       <h2>H2 - Nunito Semibold 28px</h2>
       <h3>H3 - Nunito Semibold 21px</h3>
-      <h4>H4 - Nunito Bold 19px</h4>
+      {isMobile ? <h4>H4 - Nunito Semibold 19px</h4> : <h4>H4 - Nunito Bold 19px</h4>}
       <h5>H5 - Nunito Semibold 17px</h5>
       <h6>H6 - Open Sans Bold 16px</h6>
     </>
