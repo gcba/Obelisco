@@ -76,7 +76,7 @@ const CollapseContent = (): JSX.Element => (
 export const CollapseInformation = (): JSX.Element => (
   <div className="accordion-wrapper">
     <div className="accordion" id="accordionExample">
-      <Collapse identifier="collapseOne" isInfo content={<CollapseContent />}>
+      <Collapse identifier="collapseOne" content={<CollapseContent />}>
         <span className="collapse-label">Total a pagar</span>
         <h1 className="collpase-title">$450,00</h1>
       </Collapse>
@@ -154,7 +154,7 @@ const CollapseForm = (): JSX.Element => (
 export const CollapseList = (): JSX.Element => (
   <div className="accordion-wrapper">
     <div className="accordion" id="accordionListExample">
-      <Collapse identifier="collapseOne" isInfo content={<CollapseForm />}>
+      <Collapse identifier="collapseOne" content={<CollapseForm />}>
         <h1 className="collpase-title">Tarjeta de crédito / débito </h1>
         <span className="collpase-subtitle">VISA, MasterCard, AMEX, CABAL, Maestro</span>
       </Collapse>

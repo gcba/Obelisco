@@ -4,20 +4,13 @@ import React from 'react';
 interface CollapseProps {
   identifier: string;
   description?: string;
-  isInfo?: boolean;
   content?: React.ReactNode;
 }
 
-export const Collapse: React.FC<CollapseProps> = ({
-  children,
-  description,
-  identifier,
-  isInfo,
-  content
-}): JSX.Element => {
+export const Collapse: React.FC<CollapseProps> = ({ children, description, identifier, content }): JSX.Element => {
   const collapseClass = classNames({
     'card-header collapsed card-link': true,
-    'card-info': isInfo
+    'card-info': !!content
   });
 
   return (
@@ -26,7 +19,7 @@ export const Collapse: React.FC<CollapseProps> = ({
         {children}
       </button>
       <div id={identifier} className="collapse" data-parent="#accordion">
-        {!isInfo ? <div className="card-body">{description}</div> : content}
+        {content ?? <div className="card-body">{description}</div>}
       </div>
     </div>
   );
