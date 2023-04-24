@@ -9,9 +9,7 @@ addDecorator(withHTML);
 
 const headers = [
   'Comenzar|Inicio',
-  'Componentes|Accesos/Horizontal',
-  'Componentes|Accesos/Lista de accesos',
-  'Componentes|Accesos/Vertical',
+  'Componentes|Accesos',
   'Componentes|Alerta',
   'Componentes|Alerta/Listas',
   'Componentes|Audio',
@@ -57,6 +55,7 @@ const headers = [
   'Formulario|Texto',
   'Formulario|Validación',
   'Plantillas|Plantilla',
+  'Organismos|Accesos',
   'Organismos|Footer (pie de página)',
   'Organismos|Header (encabezado)/Con buscador',
   'Organismos|Header (encabezado)/Sin buscador',
