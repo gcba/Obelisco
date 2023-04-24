@@ -73,7 +73,7 @@ const LegalSection = (): JSX.Element => (
             <a href="https://boletinoficial.buenosaires.gob.ar">Boletín oficial</a>
           </li>
           <li className="list-inline-item">
-            <a href="https://www.buenosaires.gob.ar/innovacion/ciudadinteligente/terminos-y-condiciones">
+            <a href="https://buenosaires.gob.ar/jefaturadegabinete/innovacion/terminos-y-condiciones">
               Términos y condiciones
             </a>
           </li>

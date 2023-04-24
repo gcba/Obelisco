@@ -8,7 +8,7 @@ $footer-border-color: $yellow;
 
 $footer-link-separation: spaceUnits(8);
 $footer-link-separation-phone: spaceUnits(6);
-$footer-link-separation-redes: spaceUnits(10.564);
+$footer-link-separation-redes: spaceUnits(5);
 $footer-icon-separation: spaceUnits(2);
 $footer-icon-size: spaceUnits(6);
 
@@ -79,7 +79,7 @@ $divider-border: 0.125rem solid $grisulado-700;
 
     &.phone-items {
       margin-right: $footer-link-separation-phone;
-      font-weight: 600;
+      font-weight: 400;
     }
 
     &.redes-items {
@@ -97,7 +97,7 @@ $divider-border: 0.125rem solid $grisulado-700;
   }
 
   .footer-license-text {
-    @extend small;
+    @extend .text-xs;
   }
 
   .divider {
