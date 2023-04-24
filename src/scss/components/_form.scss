@@ -122,6 +122,70 @@ $form-validation-states: (
   }
 }
 
+.file-group {
+  position: relative;
+  min-height: 120px;
+  width: 100%;
+  color: $blue;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: $grisulado-100;
+
+  i, span{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+
+    @media (max-width: 460px) {
+      top: 33%;
+    }
+  }
+
+  .label {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .custom-file {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+}
+
+.filename-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+
+  label {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: $blue;
+    margin-bottom: 0px;
+
+    i,span {
+      font-size: 2rem;
+      margin-right: 5px;
+      color: $grisulado-900;
+    }
+  }
+}
+
+
 .custom-control-label {
   padding: spaceUnits(1);
   padding-left: $custom-control-indicator-size + spaceUnits(5);
