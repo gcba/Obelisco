@@ -12,11 +12,10 @@ export default {
 };
 
 interface InputFileProps {
-  label: string;
   onFileSelect: (file: File) => void;
 }
 
-export const LoadFile = ({ label, onFileSelect }: InputFileProps): JSX.Element => {
+export const LoadFile = ({ onFileSelect }: InputFileProps): JSX.Element => {
   const [file, setFile] = useState<File | null>(null);
   const [inputKey, setInputKey] = useState<number>(0);
 
