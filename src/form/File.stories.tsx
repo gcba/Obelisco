@@ -49,7 +49,7 @@ export const LoadFile = ({ label, onFileSelect }: InputFileProps): JSX.Element =
         />
       </div>
       {file && (
-        <div className="filename-container">
+        <div className="filename-detail">
           <label>
             <i className="bx bx-file"></i>
             {file.name.length > 20 ? `${file.name.slice(0, 20)}...` : file.name}
