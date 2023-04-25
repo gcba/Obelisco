@@ -131,7 +131,8 @@ $form-validation-states: (
   border-width: 2px;
   border-color: $grisulado-100;
 
-  i, span{
+  i,
+  span {
     position: absolute;
     top: 42%;
     left: 50%;
@@ -173,18 +174,18 @@ $form-validation-states: (
   label {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 0.625rem;
     color: $blue;
     margin-bottom: 0px;
 
-    i,span {
+    i,
+    span {
       font-size: 2rem;
-      margin-right: 5px;
+      margin-right: 0.313rem;
       color: $grisulado-900;
     }
   }
 }
-
 
 .custom-control-label {
   padding: spaceUnits(1);
@@ -314,7 +315,7 @@ $form-validation-states: (
     }
     &:checked {
       ~ .custom-control-label::before {
-        border-color:$custom-control-indicator-checked-color;
+        border-color: $custom-control-indicator-checked-color;
       }
     }
   }
