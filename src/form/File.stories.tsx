@@ -11,12 +11,12 @@ export default {
   decorators: [withA11y]
 };
 
-interface SubirUnArchivoProps {
+interface InputFileProps {
   label: string;
   onFileSelect: (file: File) => void;
 }
 
-export const SubirUnArchivo = ({ label, onFileSelect }: SubirUnArchivoProps): JSX.Element => {
+export const LoadFile = ({ label, onFileSelect }: InputFileProps): JSX.Element => {
   const [file, setFile] = useState<File | null>(null);
   const [inputKey, setInputKey] = useState<number>(0);
 
@@ -65,6 +65,6 @@ export const SubirUnArchivo = ({ label, onFileSelect }: SubirUnArchivoProps): JS
   );
 };
 
-SubirUnArchivo.story = {
+LoadFile.story = {
   name: 'Subir un archivo'
 };
