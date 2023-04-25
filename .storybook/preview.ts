@@ -16,8 +16,8 @@ const headers = [
   'Componentes|Alerta/Listas',
   'Componentes|Audio',
   'Componentes|Barra de progreso',
-  'Componentes|Botones',
   'Componentes|Botones/Estados',
+  'Componentes|Botones',
   'Componentes|Colapsable',
   'Componentes|Desplegables',
   'Componentes|Enlace',
@@ -73,9 +73,10 @@ addParameters({
       const aHeader = a[1].kind;
       const bHeader = b[1].kind;
     
-      if (aHeader !== bHeader) {
+      if (aHeader !== bHeader) {        
         const aHeaderIndex = headers.findIndex((h) => h === aHeader);
         const bHeaderIndex = headers.findIndex((h) => h === bHeader);
+        if(a[0] === 'componentes-botones--button-types') return (aHeaderIndex - bHeaderIndex) - 1;
         return aHeaderIndex - bHeaderIndex;
       }
     
