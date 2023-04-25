@@ -947,6 +947,10 @@ button.card {
       border: $collapse-border-width solid $card-header-bg;
       @include border-bottom-radius($card-border-radius);
 
+      > h4 {
+        font-weight: $headings-font-weight;
+      }
+
       > label.card-details {
         cursor: pointer;
       }
