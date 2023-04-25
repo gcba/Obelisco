@@ -11,11 +11,7 @@ export default {
   decorators: [withA11y]
 };
 
-interface InputFileProps {
-  onFileSelect: (file: File) => void;
-}
-
-export const LoadFile = ({ onFileSelect }: InputFileProps): JSX.Element => {
+export const LoadFile = (): JSX.Element => {
   const [file, setFile] = useState<File | null>(null);
   const [inputKey, setInputKey] = useState<number>(0);
 
@@ -23,7 +19,6 @@ export const LoadFile = ({ onFileSelect }: InputFileProps): JSX.Element => {
     const file = e.target.files?.[0];
     if (file) {
       setFile(file);
-      onFileSelect(file);
     }
   };
 
