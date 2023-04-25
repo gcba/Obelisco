@@ -37,7 +37,7 @@ export const LoadFile = ({ label, onFileSelect }: InputFileProps): JSX.Element =
     <div className="form-wrapper-lg">
       <div className="file-group bg-light">
         <i className="bx bx-cloud-upload"></i>
-        <label htmlFor="file-input" className="label">
+        <label htmlFor="file-input" className="input-file-title">
           Arrastrá tus archivos acá o hace click para adjuntar
         </label>
         <input
