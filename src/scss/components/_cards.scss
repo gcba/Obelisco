@@ -789,7 +789,7 @@ button.card {
       text-align: left;
       padding: $card-header-padding;
       transition: background-color 0.2s;
-      border-radius: $border-radius $border-radius 0 0;
+      border-radius: $border-radius-lg $border-radius-lg 0 0;
       position: relative;
       z-index: 1;
       color: $white;
