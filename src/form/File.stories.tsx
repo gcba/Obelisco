@@ -33,14 +33,12 @@ export const LoadFile = ({ label, onFileSelect }: InputFileProps): JSX.Element =
     setInputKey((prevKey) => prevKey + 1); // Incrementa el key para renderizar un nuevo input
   };
 
-  label = 'Arrastrá tus archivos acá o hace click para adjuntar';
-
   return (
     <div className="form-wrapper-lg">
       <div className="file-group bg-light">
         <i className="bx bx-cloud-upload"></i>
         <label htmlFor="file-input" className="label">
-          {label}
+          Arrastrá tus archivos acá o hace click para adjuntar
         </label>
         <input
           key={inputKey} // Añade un key único para que React cree un nuevo input
