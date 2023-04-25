@@ -134,7 +134,7 @@ $form-validation-states: (
   i,
   span {
     position: absolute;
-    top: 42%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.5rem;
@@ -169,19 +169,19 @@ $form-validation-states: (
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 
   label {
     display: flex;
     align-items: center;
-    margin-left: 0.625rem;
+    margin-left: 0.5rem;
     color: $blue;
     margin-bottom: 0px;
 
     i,
     span {
       font-size: 2rem;
-      margin-right: 0.313rem;
+      margin-right: 0.75rem;
       color: $grisulado-900;
     }
   }
