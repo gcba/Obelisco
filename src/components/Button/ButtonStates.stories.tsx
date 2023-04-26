@@ -52,7 +52,7 @@ export const ButtonDisabled = (): JSX.Element => {
   return (
     <div className="btn-wrapper">
       {sizesButton.map((item) => (
-        <Button key={item.size} type="secondary" disabled={true} size={item.size}>
+        <Button key={item.size} type="secondary" isDisabled size={item.size}>
           {item.name}
         </Button>
       ))}
