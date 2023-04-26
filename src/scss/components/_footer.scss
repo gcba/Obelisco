@@ -9,19 +9,19 @@ $footer-legal-margin-bottom-sm: spaceUnits(6);
 $footer-border-width: spaceUnits(1);
 $footer-border-color: $yellow;
 
-$footer-link-separation: spaceUnits(8);
-$footer-link-separation-phone: spaceUnits(5);
-$footer-link-separation-redes: spaceUnits(5);
+$footer-link-separation: spaceUnits(4);
+$footer-link-separation-phone: spaceUnits(4);
+$footer-link-separation-redes: spaceUnits(4);
 $footer-icon-separation: spaceUnits(2);
 $footer-icon-size: spaceUnits(6);
 
 $footer-icon-height-vamos-ba: 2.375rem;
 $footer-icon-height-vamos-ba-sm: 3rem;
 
-$divier-margin: 2.5rem 0 2.5rem;
+$divider-margin: 2.5rem 0 2.5rem;
 $divider-border: 0.125rem solid $grisulado-700;
 
-$divier-margin-mobile: 2rem 0 2rem;
+$divider-margin-mobile: 2rem 0 2rem;
 
 /* === Custom styles === */
 
@@ -35,7 +35,11 @@ $divier-margin-mobile: 2rem 0 2rem;
   }
 
   h4 {
-    margin-bottom: spaceUnits(4);
+    margin-bottom: spaceUnits(2);
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: spaceUnits(4);
+    }
   }
 
   a {
@@ -123,10 +127,10 @@ $divier-margin-mobile: 2rem 0 2rem;
 
   .divider {
     border-top: $divider-border;
-    margin: $divier-margin;
+    margin: $divider-margin;
 
     @include media-breakpoint-down(sm) {
-      margin: $divier-margin-mobile;
+      margin: $divider-margin-mobile;
     }
   }
 }
