@@ -84,7 +84,7 @@ export const CollapseInformation = (): JSX.Element => (
   </div>
 );
 
-CollapseInformation.story = { name: 'Selección con información' };
+CollapseInformation.story = { name: 'Con información' };
 
 export const CollapseIcon = (): JSX.Element => (
   <div id="accordion">
@@ -100,7 +100,7 @@ export const CollapseIcon = (): JSX.Element => (
   </div>
 );
 
-CollapseIcon.story = { name: 'Selección con ícono' };
+CollapseIcon.story = { name: 'Con ícono' };
 
 export const CollapsableLabelIcon = (): JSX.Element => (
   <div id="accordion">
@@ -119,7 +119,7 @@ export const CollapsableLabelIcon = (): JSX.Element => (
   </div>
 );
 
-CollapsableLabelIcon.story = { name: 'Selección con label y descripción' };
+CollapsableLabelIcon.story = { name: 'Con volanta y descripción' };
 
 const CollapseForm = (): JSX.Element => (
   <form className="card-body">
@@ -162,4 +162,4 @@ export const CollapseList = (): JSX.Element => (
   </div>
 );
 
-CollapseList.story = { name: 'Colapsable lista' };
+CollapseList.story = { name: 'Con lista seleccionable' };
