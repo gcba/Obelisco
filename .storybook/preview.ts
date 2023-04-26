@@ -72,17 +72,17 @@ addParameters({
     storySort: (a: Array<any>, b: Array<any>) => {
       const aHeader = a[1].kind;
       const bHeader = b[1].kind;
-    
-      if (aHeader !== bHeader) {        
+
+      if (aHeader !== bHeader) {
         const aHeaderIndex = headers.findIndex((h) => h === aHeader);
         const bHeaderIndex = headers.findIndex((h) => h === bHeader);
-        if(a[0] === 'componentes-botones--button-types') return (aHeaderIndex - bHeaderIndex) - 1;
+        if (a[0] === 'componentes-botones--button-types') return aHeaderIndex - bHeaderIndex - 1;
         return aHeaderIndex - bHeaderIndex;
       }
-    
+
       return 0;
     },
-  showPanel: true
+    showPanel: true
   }
 });
 
