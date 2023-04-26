@@ -77,7 +77,7 @@ $divider-margin-mobile: 2rem 0 2rem;
 
       .footer-content-img {
         display: flex;
-        justify-content: space-between;
+        gap: 2rem;
         margin-bottom: $footer-legal-margin-bottom;
 
         @include media-breakpoint-down(sm) {
