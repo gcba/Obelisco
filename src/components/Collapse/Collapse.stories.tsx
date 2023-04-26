@@ -64,11 +64,11 @@ CollapseMultipleSelection.story = { name: 'Selección múltiple' };
 const CollapseContent = (): JSX.Element => (
   <div className="card-body">
     <small className="text-success">$200,00</small>
-    <h4 className="mb-0">Solicitud de informes varios</h4>
+    <h5 className="mb-0">Solicitud de informes varios</h5>
     <small>Boleta N° 2549-48758798</small>
     <hr />
     <small className="text-success">$250,00</small>
-    <h4 className="mb-0">Ecoparque</h4>
+    <h5 className="mb-0">Ecoparque</h5>
     <small>Boleta N° 2549-48758798</small>
   </div>
 );
@@ -78,7 +78,7 @@ export const CollapseInformation = (): JSX.Element => (
     <div className="accordion" id="accordionExample">
       <Collapse identifier="collapseOne" content={<CollapseContent />}>
         <span className="collapse-label">Total a pagar</span>
-        <h3 className="collapse-title">$450,00</h3>
+        <h4 className="collapse-title">$450,00</h4>
       </Collapse>
     </div>
   </div>
@@ -111,7 +111,7 @@ export const CollapsableLabelIcon = (): JSX.Element => (
           identifier="collapseOne">
           <i className="bx bx-sm align-top mr-1 bxs-user-circle"></i>
           <span className="collapse-label">Label</span>
-          <h3 className="collapse-title">Título</h3>
+          <h4 className="collapse-title">Título</h4>
           <span className="collapse-subtitle">Descripción</span>
         </Collapse>
       </div>
@@ -126,7 +126,7 @@ const CollapseForm = (): JSX.Element => (
     <label className="card-details" htmlFor="visa">
       <i className="bx bxl-visa"></i>
       <div className="card-details-content">
-        <h4>Visa Débito ****1234</h4>
+        <h5>Visa Débito ****1234</h5>
         <small>Heraldo Paez</small>
       </div>
       <input type="radio" className="form-radio" name="credit_card" id="visa" />
@@ -135,7 +135,7 @@ const CollapseForm = (): JSX.Element => (
     <label className="card-details" htmlFor="master">
       <i className="bx bxl-mastercard"></i>
       <div className="card-details-content">
-        <h4>MasterCard Crédito ****5678</h4>
+        <h5>MasterCard Crédito ****5678</h5>
         <small>Heraldo Paez</small>
       </div>
       <input type="radio" className="form-radio" name="credit_card" id="master" />
@@ -144,7 +144,7 @@ const CollapseForm = (): JSX.Element => (
     <label className="card-details" htmlFor="new_card">
       <span className="material-icons-round">info</span>
       <div className="card-details-content">
-        <h4>Nueva tarjeta de crédito</h4>
+        <h5>Nueva tarjeta de crédito</h5>
       </div>
       <input type="radio" className="form-radio" name="credit_card" id="new_card" />
     </label>
@@ -155,7 +155,7 @@ export const CollapseList = (): JSX.Element => (
   <div className="accordion-wrapper">
     <div className="accordion" id="accordionListExample">
       <Collapse identifier="collapseOne" content={<CollapseForm />}>
-        <h3 className="collapse-title">Tarjeta de crédito / débito </h3>
+        <h4 className="collapse-title">Tarjeta de crédito / débito </h4>
         <span className="collapse-subtitle">VISA, MasterCard, AMEX, CABAL, Maestro</span>
       </Collapse>
     </div>
