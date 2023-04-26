@@ -1,13 +1,16 @@
 /* === Custom variables and mixins === */
 
-$footer-padding-y: spaceUnits(12);
+$footer-padding-y: spaceUnits(10);
 $footer-legal-margin-bottom: spaceUnits(10);
+
+$footer-padding-y-sm: spaceUnits(8);
+$footer-legal-margin-bottom-sm: spaceUnits(6);
 
 $footer-border-width: spaceUnits(1);
 $footer-border-color: $yellow;
 
 $footer-link-separation: spaceUnits(8);
-$footer-link-separation-phone: spaceUnits(6);
+$footer-link-separation-phone: spaceUnits(5);
 $footer-link-separation-redes: spaceUnits(5);
 $footer-icon-separation: spaceUnits(2);
 $footer-icon-size: spaceUnits(6);
@@ -15,8 +18,10 @@ $footer-icon-size: spaceUnits(6);
 $footer-icon-height-vamos-ba: 2.375rem;
 $footer-icon-height-vamos-ba-sm: 3rem;
 
-$divier-margin: 3.063rem 0 3.188rem;
+$divier-margin: 2.5rem 0 2.5rem;
 $divider-border: 0.125rem solid $grisulado-700;
+
+$divier-margin-mobile: 2rem 0 2rem;
 
 /* === Custom styles === */
 
@@ -24,6 +29,10 @@ $divider-border: 0.125rem solid $grisulado-700;
   @extend .bg-dark, .text-white;
   padding: $footer-padding-y 0;
   border-top: $footer-border-width solid $footer-border-color;
+
+  @include media-breakpoint-down(sm) {
+    padding: $footer-padding-y-sm 0;
+  }
 
   h4 {
     margin-bottom: spaceUnits(4);
@@ -47,8 +56,16 @@ $divider-border: 0.125rem solid $grisulado-700;
   section {
     margin-bottom: $footer-padding-y;
 
+    @include media-breakpoint-down(sm) {
+      margin-bottom: $footer-padding-y-sm;
+    }
+
     &.footer-legal-section {
       margin-bottom: $footer-legal-margin-bottom;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 1.5rem;
+      }
 
       .list-inline {
         margin-bottom: 0;
@@ -58,6 +75,10 @@ $divider-border: 0.125rem solid $grisulado-700;
         display: flex;
         justify-content: space-between;
         margin-bottom: $footer-legal-margin-bottom;
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: $footer-legal-margin-bottom-sm;
+        }
 
         .img-vamos-ba {
           height: $footer-icon-height-vamos-ba;
@@ -92,7 +113,7 @@ $divider-border: 0.125rem solid $grisulado-700;
 
     @include media-breakpoint-down(sm) {
       display: block;
-      margin-bottom: spaceUnits(3);
+      margin-bottom: spaceUnits(4);
     }
   }
 
@@ -103,5 +124,9 @@ $divider-border: 0.125rem solid $grisulado-700;
   .divider {
     border-top: $divider-border;
     margin: $divier-margin;
+
+    @include media-breakpoint-down(sm) {
+      margin: $divier-margin-mobile;
+    }
   }
 }
