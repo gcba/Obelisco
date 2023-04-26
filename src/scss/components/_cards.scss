@@ -189,6 +189,18 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 
+@mixin accordion-only-child($class) {
+  &:has(#{$class}:only-child) {
+    #{$class} {
+      grid-area: auto;
+    }
+
+    &:after {
+      grid-area: auto;
+    }
+  }
+}
+
 /* === Bootstrap Import === */
 
 @import 'node_modules/bootstrap/scss/card';
@@ -929,6 +941,13 @@ button.card {
             grid-area: 1 / 2 / 3;
           }
         }
+
+        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+        @include accordion-only-child('.collpase-title');
+        @include accordion-only-child('.collapse-title');
+        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+        @include accordion-only-child('.collpase-subtitle');
+        @include accordion-only-child('.collapse-subtitle');
 
         &.collapsed {
           border-radius: $card-border-radius;
