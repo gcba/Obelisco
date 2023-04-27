@@ -25,7 +25,7 @@ export const Tooltip = (): JSX.Element => {
             key={index}
             direction={direction}
             text={`Esta es la descripción de un tooltip "${position}".`}>
-            <Button type="link" iconMaterial={icon}></Button>
+            <Button type="link" isIconSpinner={<span className="material-icons-round">{icon}</span>}></Button>
           </TooltipContainer>
         ))}
       </div>
@@ -36,7 +36,7 @@ export const Tooltip = (): JSX.Element => {
               key={index}
               direction={direction}
               text={`Esta es la descripción de un tooltip "${position}".`}>
-              <Button type="link" iconMaterial={icon}></Button>
+              <Button type="link" isIconSpinner={<span className="material-icons-round">{icon}</span>}></Button>
             </TooltipContainer>
           ))}
         </div>
@@ -46,7 +46,7 @@ export const Tooltip = (): JSX.Element => {
               key={index}
               direction={direction}
               text={`Esta es la descripción de un tooltip "${position}".`}>
-              <Button type="link" iconMaterial={icon}></Button>
+              <Button type="link" isIconSpinner={<span className="material-icons-round">{icon}</span>}></Button>
             </TooltipContainer>
           ))}
         </div>
@@ -57,7 +57,7 @@ export const Tooltip = (): JSX.Element => {
             key={index}
             direction={direction}
             text={`Esta es la descripción de un tooltip "${position}".`}>
-            <Button type="link" iconMaterial={icon}></Button>
+            <Button type="link" isIconSpinner={<span className="material-icons-round">{icon}</span>}></Button>
           </TooltipContainer>
         ))}
       </div>
