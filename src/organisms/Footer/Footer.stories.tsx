@@ -114,12 +114,8 @@ export const Completo = (): JSX.Element => (
   </footer>
 );
 
-export const SoloTelefonos = (): JSX.Element => (
+export const SoloLegales = (): JSX.Element => (
   <footer className="main-footer">
-    <div className="container">
-      <PhonesSection />
-    </div>
-    <hr className="divider" />
     <div className="container">
       <LegalSection />
       <LicenseSection />
@@ -127,23 +123,6 @@ export const SoloTelefonos = (): JSX.Element => (
   </footer>
 );
 
-SoloTelefonos.story = {
-  name: 'Solo teléfonos'
-};
-
-export const SoloRedes = (): JSX.Element => (
-  <footer className="main-footer">
-    <div className="container">
-      <SocialSection />
-    </div>
-    <hr className="divider" />
-    <div className="container">
-      <LegalSection />
-      <LicenseSection />
-    </div>
-  </footer>
-);
-
-SoloRedes.story = {
-  name: 'Solo redes'
+SoloLegales.story = {
+  name: 'Solo legales'
 };
