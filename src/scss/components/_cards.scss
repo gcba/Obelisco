@@ -48,6 +48,7 @@ $collapse-border-width: 2px;
 $collapse-info-subtitle-size: 1rem;
 
 $accordion-margin: 0.75rem;
+$accordion-card-header-padding: 0.75rem 1.5rem;
 
 $panel-deck-mt: 2.5rem;
 $card-panel-img-size: 3.75rem;
@@ -802,7 +803,7 @@ button.card {
       background-color: $blue;
       border-width: 0;
       text-align: left;
-      padding: $card-header-padding;
+      padding: $accordion-card-header-padding;
       transition: background-color 0.2s;
       border-radius: $border-radius-lg $border-radius-lg 0 0;
       position: relative;
@@ -879,6 +880,7 @@ button.card {
         background-color: $card-header-bg;
         color: $grisulado-900;
         position: relative;
+        backface-visibility: hidden;
 
         &:hover,
         &.hover {
