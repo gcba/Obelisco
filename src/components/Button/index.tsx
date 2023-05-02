@@ -10,10 +10,11 @@ export interface ButtonProps {
   className?: string;
   isOutline?: boolean;
   isIconSpinner?: React.ReactNode;
+  ariaLabel?: string;
 }
 
 export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<ButtonProps>) => {
-  const { type, size, isBlock, isDisabled, children, isOutline, isIconSpinner } = props;
+  const { type, size, isBlock, isDisabled, children, isOutline, isIconSpinner, ariaLabel } = props;
 
   const className = classNames(
     'btn',
@@ -26,7 +27,7 @@ export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<But
   );
 
   return (
-    <button type="button" className={className} disabled={isDisabled}>
+    <button type="button" className={className} disabled={isDisabled} aria-label={ariaLabel}>
       {isIconSpinner}
       {children}
     </button>

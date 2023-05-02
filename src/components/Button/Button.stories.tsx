@@ -94,7 +94,12 @@ export const ButtonWithIcon = (): JSX.Element => {
       </div>
       <div className="btn-wrapper">
         {sizes.map((size) => (
-          <Button key={size} type="primary" size={size} isIconSpinner={<i className="bx bxs-info-circle"></i>}></Button>
+          <Button
+            key={size}
+            type="primary"
+            size={size}
+            isIconSpinner={<i className="bx bxs-info-circle"></i>}
+            ariaLabel="Botón"></Button>
         ))}
         {sizes.map((size) => (
           <Button
@@ -102,7 +107,8 @@ export const ButtonWithIcon = (): JSX.Element => {
             type="primary"
             isOutline
             size={size}
-            isIconSpinner={<span className="material-icons-round">info</span>}></Button>
+            isIconSpinner={<span className="material-icons-round">info</span>}
+            ariaLabel="Botón"></Button>
         ))}
       </div>
     </>
