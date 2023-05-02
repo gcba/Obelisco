@@ -14,8 +14,8 @@ const headers = [
   'Componentes|Alerta/Listas',
   'Componentes|Audio',
   'Componentes|Barra de progreso',
+  'Componentes|Botones/Estados',
   'Componentes|Botones',
-  'Componentes|Botones/En caja',
   'Componentes|Colapsable',
   'Componentes|Desplegables',
   'Componentes|Enlace',
@@ -55,6 +55,7 @@ const headers = [
   'Formulario|Texto',
   'Formulario|Validación',
   'Plantillas|Plantilla',
+  'Organismos|Botones',
   'Organismos|Accesos',
   'Organismos|Footer (pie de página)',
   'Organismos|Header (encabezado)/Con buscador',
@@ -70,16 +71,17 @@ addParameters({
     storySort: (a: Array<any>, b: Array<any>) => {
       const aHeader = a[1].kind;
       const bHeader = b[1].kind;
-    
+
       if (aHeader !== bHeader) {
         const aHeaderIndex = headers.findIndex((h) => h === aHeader);
         const bHeaderIndex = headers.findIndex((h) => h === bHeader);
+        if (a[0] === 'componentes-botones--button-types') return aHeaderIndex - bHeaderIndex - 1;
         return aHeaderIndex - bHeaderIndex;
       }
-    
+
       return 0;
     },
-  showPanel: true
+    showPanel: true
   }
 });
 

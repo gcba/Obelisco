@@ -1,16 +1,7 @@
-.btn-wrapper .btn,
-.btn-container {
+.btn-wrapper .btn {
   margin: 0 0.5rem 1rem;
 }
 
 .btn-block-wrapper {
-  width: 240px;
-}
-
-.btn-container {
-  width: 340px;
-
-  .card {
-    margin-bottom: 1rem;
-  }
+  max-width: 340px;
 }
