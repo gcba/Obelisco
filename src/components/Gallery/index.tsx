@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 export interface GridProps {
   total?: number;
@@ -60,7 +60,7 @@ export const Gallery: React.FC<GalleryProps> = (props: React.PropsWithChildren<G
 
   return (
     <div
-      className={`modal modal-carousel ${show ? 'd-block' : ''}`}
+      className={`modal modal-carousel ${show && 'd-block'}`}
       data-backdrop="static"
       tabIndex={-1}
       role="dialog"

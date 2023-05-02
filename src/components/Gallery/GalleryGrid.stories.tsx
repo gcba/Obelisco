@@ -12,86 +12,26 @@ export default {
   decorators: [withA11y]
 };
 
-export const SieteImagenes = (): JSX.Element => (
-  <>
+// Función para crear los componentes
+const createGridComponent = (name: string, total: number) => {
+  const Component = () => (
     <div className="gallery-grid-container">
-      <GridImage />
-    </div>
-  </>
-);
-
-SieteImagenes.story = {
-  name: 'Siete imágenes'
-};
-
-export const SeisImagenes = (): JSX.Element => {
-  return (
-    <div className="gallery-grid-container">
-      <GridImage total={6} />
+      <GridImage total={total} />
     </div>
   );
+
+  Component.story = {
+    name
+  };
+
+  return Component;
 };
 
-SeisImagenes.story = {
-  name: 'Seis imágenes'
-};
-
-export const CincoImagenes = (): JSX.Element => {
-  return (
-    <div className="gallery-grid-container">
-      <GridImage total={5} />
-    </div>
-  );
-};
-
-CincoImagenes.story = {
-  name: 'Cinco imágenes'
-};
-
-export const CuatroImagenes = (): JSX.Element => {
-  return (
-    <div className="gallery-grid-container">
-      <GridImage total={4} />
-    </div>
-  );
-};
-
-CuatroImagenes.story = {
-  name: 'Cuatro imágenes'
-};
-
-export const TresImagenes = (): JSX.Element => {
-  return (
-    <div className="gallery-grid-container">
-      <GridImage total={3} />
-    </div>
-  );
-};
-
-TresImagenes.story = {
-  name: 'Tres imágenes'
-};
-
-export const DosImagenes = (): JSX.Element => {
-  return (
-    <div className="gallery-grid-container">
-      <GridImage total={2} />
-    </div>
-  );
-};
-
-DosImagenes.story = {
-  name: 'Dos imágenes'
-};
-
-export const UnaImagen = (): JSX.Element => {
-  return (
-    <div className="gallery-grid-container">
-      <GridImage total={1} />
-    </div>
-  );
-};
-
-UnaImagen.story = {
-  name: 'Una imagen'
-};
+// Creación de los componentes utilizando la función
+export const SieteImagenes = createGridComponent('Siete imágenes', 7);
+export const SeisImagenes = createGridComponent('Seis imágenes', 6);
+export const CincoImagenes = createGridComponent('Cinco imágenes', 5);
+export const CuatroImagenes = createGridComponent('Cuatro imágenes', 4);
+export const TresImagenes = createGridComponent('Tres imágenes', 3);
+export const DosImagenes = createGridComponent('Dos imágenes', 2);
+export const UnaImagen = createGridComponent('Una imagen', 1);

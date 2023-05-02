@@ -14,9 +14,9 @@ export default {
 
 export const Galeria = (): JSX.Element => {
   return (
-    <div>
+    <>
       <Gallery show={true} total={3} />
-    </div>
+    </>
   );
 };
 
