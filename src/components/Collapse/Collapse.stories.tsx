@@ -110,7 +110,7 @@ export const CollapsableLabelIcon = (): JSX.Element => (
           description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
           identifier="collapseOne">
           <i className="bx bx-sm align-top mr-1 bxs-user-circle"></i>
-          <span className="collapse-label">Label</span>
+          <span className="collapse-label">Volanta</span>
           <h4 className="collapse-title">Título</h4>
           <span className="collapse-subtitle">Descripción</span>
         </Collapse>
