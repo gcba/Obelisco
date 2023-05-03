@@ -343,6 +343,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     .card-body {
       padding: 0;
+
       a {
         display: block;
         width: fit-content;
@@ -462,11 +463,13 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   &.card-horizontal.unbordered {
     .card-body {
       padding: $card-spacer-unbordered;
+
       a {
         display: block;
         width: fit-content;
       }
     }
+
     .card-icon-left {
       margin: 0;
     }
@@ -618,6 +621,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       margin-left: $card-deck-margin;
     }
   }
+
   @include media-breakpoint-down(xs) {
     .card {
       &:nth-of-type(2) {
@@ -701,6 +705,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 }
+
 .card-deck.max-cards-3.card-column {
   .card,
   .group-access {
@@ -726,6 +731,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 }
+
 .card-deck.max-cards-1.card-column {
   .card,
   .group-access {
@@ -953,13 +959,13 @@ button.card {
             // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
             .collpase-title,
             .collapse-title {
-              grid-area: 1 / 1 / 2;;
+              grid-area: 1 / 1 / 2;
             }
 
             // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
             .collpase-subtitle,
             .collapse-subtitle {
-              grid-area: 2 / 1 / 3;;
+              grid-area: 2 / 1 / 3;
             }
           }
         }

@@ -164,6 +164,7 @@ $theme-colors: map-merge(
 
     @if $color == 'primary' {
       color: $grisulado-900;
+
       &:visited,
       &:hover {
         color: $grisulado-900;
@@ -174,6 +175,7 @@ $theme-colors: map-merge(
       background-color: transparent;
       border-color: $link-color;
       color: $link-color;
+
       &:hover,
       &:focus,
       &.focus,
@@ -208,7 +210,12 @@ a.btn {
   }
 
   //Botón con spinner
-   &:focus, &.focus, &:hover, &.hover, &:active, &.active {
+  &:focus,
+  &.focus,
+  &:hover,
+  &.hover,
+  &:active,
+  &.active {
     &:is(.btn-outline-secondary, .btn-outline-success, .btn-outline-danger) {
       .spinner-border {
         border-color: $white;
