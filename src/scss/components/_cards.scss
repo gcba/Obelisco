@@ -494,6 +494,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       width: 526px;
       height: 296px;
       border-radius: $card-border-radius;
+      object-fit: cover;
 
       + .card-body {
         margin-left: $panel-spacer-lg;
