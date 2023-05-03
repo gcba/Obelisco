@@ -1,31 +1,34 @@
 import * as React from 'react';
+import classNames from 'classnames';
 import { ButtonType, Size, sizeToClass } from '../utils';
 
 export interface ButtonProps {
   type: ButtonType;
   size?: Size;
-  block?: boolean;
-  disabled?: boolean;
+  isBlock?: boolean;
+  isDisabled?: boolean;
   className?: string;
-  outline?: boolean;
-  iconBx?: string;
-  iconMaterial?: string;
+  isOutline?: boolean;
+  isIconSpinner?: React.ReactNode;
+  ariaLabel?: string;
 }
 
 export const Button: React.FC<ButtonProps> = (props: React.PropsWithChildren<ButtonProps>) => {
-  const { type, size, block, disabled, children, outline, iconBx, iconMaterial } = props;
+  const { type, size, isBlock, isDisabled, children, isOutline, isIconSpinner, ariaLabel } = props;
 
-  let className = `btn btn-${type}`;
-  if (outline) className = `btn btn-outline-${type}`;
-  if (!!size && size !== 'default') className += ` btn-${sizeToClass(size)}`;
-  if (block) className += ` btn-block`;
-  if (props.className) className += ` ${props.className}`;
-  if (iconBx || iconMaterial) className += ` btn-icon`;
+  const className = classNames(
+    'btn',
+    { [`btn-${type}`]: !isOutline },
+    { [`btn-outline-${type}`]: isOutline },
+    size && sizeToClass(size) && `btn-${sizeToClass(size)}`,
+    { 'btn-block': isBlock },
+    props.className,
+    { 'btn-icon': isIconSpinner }
+  );
 
   return (
-    <button type="button" className={className} disabled={disabled}>
-      {iconBx && <i className={`bx ${iconBx}`}></i>}
-      {iconMaterial && <span className="material-icons-round">{`${iconMaterial}`}</span>}
+    <button type="button" className={className} disabled={isDisabled} aria-label={ariaLabel}>
+      {isIconSpinner}
       {children}
     </button>
   );

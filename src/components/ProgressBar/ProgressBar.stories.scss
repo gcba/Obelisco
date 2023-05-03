@@ -1,4 +1,10 @@
 .progression-container {
-  width: 244px;
+  width: 427px;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 480px) {
+  .progression-container {
+    width: 244px;
+  }
 }
