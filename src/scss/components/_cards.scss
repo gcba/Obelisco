@@ -1012,6 +1012,11 @@ button.card {
       border: $collapse-border-width solid $card-header-bg;
       @include border-bottom-radius($card-border-radius);
 
+      hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
       > h5 {
         font-weight: $headings-font-weight;
       }
