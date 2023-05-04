@@ -9,10 +9,21 @@ export interface DropdownProps {
   size?: 'sm' | 'lg';
   onlyIcon?: boolean;
   buttonIcon?: React.ReactNode;
+  option?: true;
 }
 
 export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren<DropdownProps>) => {
-  const { title = 'Desplegable', isActive, isBordered, children, size, onlyIcon, className, buttonIcon } = props;
+  const {
+    title = 'Desplegable',
+    isActive,
+    isBordered,
+    children,
+    size,
+    onlyIcon,
+    className,
+    buttonIcon,
+    option
+  } = props;
 
   const containerClass = classNames('dropdown', className);
 
@@ -23,7 +34,14 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
     [`btn-dropdown-${size}`]: size
   });
 
-  return (
+  return option ? (
+    <fieldset className="dropdown">
+      <button type="button" className={buttonClass} data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+        {title}
+      </button>
+      {children}
+    </fieldset>
+  ) : (
     <div className={containerClass}>
       <button type="button" className={buttonClass} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {onlyIcon ? (
