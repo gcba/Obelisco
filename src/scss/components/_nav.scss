@@ -73,7 +73,6 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         }
       }
     }
-    
 
     &.tabs {
       .nav-item > .nav-link {
@@ -98,6 +97,8 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   &.flex-column {
     gap: 0.25rem;
     margin-top: 0.188rem;
+    background-color: $white;
+    border-radius: $border-radius * 2;
 
     &:first-child {
       margin-top: 0;
@@ -129,6 +130,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     .nav-link {
       text-decoration: none;
       background-color: $white;
+      outline: 0.2rem solid transparent;
 
       &:hover {
         span {
@@ -319,19 +321,18 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
           &:hover {
             box-shadow: 0px 4px 0px 0px $nav-link-border-active;
-
-            &:focus {
-              border-radius: 0;
-            }
           }
 
           &:focus {
-            @include border-radius($border-radius * 2);
+            border-radius: $border-radius * 2;
           }
         }
 
         &:focus {
           box-shadow: $input-btn-focus-box-shadow inset;
+          &:hover {
+            box-shadow: $input-btn-focus-box-shadow inset;
+          }
         }
 
         &:hover {
@@ -364,6 +365,9 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
             background-color: $grisulado-10;
             color: $grisulado-900;
             box-shadow: none;
+            &:focus {
+              border-radius: $border-radius * 2 $border-radius * 2 0px 0px;
+            }
           }
         }
       }

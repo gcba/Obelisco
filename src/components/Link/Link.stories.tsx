@@ -15,7 +15,7 @@ export const Predeterminado = (): JSX.Element => {
   return (
     <p>
       Nuestro sistema de{' '}
-      <a className="" href="#" target="_blank" rel="noreferrer">
+      <a href="#" target="_blank" rel="noreferrer">
         enlace en párrafo
       </a>{' '}
       brinda un conjunto de herramientas y componentes colaborativos y accesibles que define procesos para que los

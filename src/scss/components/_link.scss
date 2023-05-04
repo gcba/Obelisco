@@ -18,6 +18,7 @@ $link-access: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.or
 /* === Custom styles === */
 
 a {
+  outline: none;
   color: $blue;
   cursor: pointer;
 

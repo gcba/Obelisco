@@ -3,10 +3,10 @@ import { AlertType } from '../utils';
 import classNames from 'classnames';
 
 export const alertTypes: AlertType[] = [
-  { type: 'primary', text: 'Esta es la descripción de una alerta de advertencia.' },
-  { type: 'danger', text: 'Esta es la descripción de una alerta de advertencia.' },
   { type: 'info', text: 'Esta es la descripción de una alerta de información.' },
-  { type: 'success', text: 'Esta es la descripción de una alerta de éxito.' }
+  { type: 'primary', text: 'Esta es la descripción de una alerta de advertencia.' },
+  { type: 'success', text: 'Esta es la descripción de una alerta de éxito.' },
+  { type: 'danger', text: 'Esta es la descripción de una alerta de error.' }
 ];
 
 export const alertHighlight: AlertType[] = [
