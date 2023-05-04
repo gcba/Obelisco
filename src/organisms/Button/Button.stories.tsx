@@ -7,11 +7,11 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración general del componente
 export default {
-  title: 'Componentes|Botones/En caja',
+  title: 'Organismos|Botones',
   decorators: [withA11y]
 };
 
-export const ConBoton = (): JSX.Element => {
+export const ButtonBox = (): JSX.Element => {
   return (
     <div className="btn-container">
       <div className="card">
@@ -39,9 +39,9 @@ export const ConBoton = (): JSX.Element => {
   );
 };
 
-ConBoton.story = { name: 'Con botón' };
+ButtonBox.story = { name: 'Con botón' };
 
-export const ConEnlace = (): JSX.Element => {
+export const ButtonBoxLink = (): JSX.Element => {
   return (
     <div className="btn-container">
       <div className="card">
@@ -69,24 +69,4 @@ export const ConEnlace = (): JSX.Element => {
   );
 };
 
-ConEnlace.story = { name: 'Con enlace' };
-
-export const Completo = (): JSX.Element => {
-  return (
-    <div className="btn-container">
-      <div className="card">
-        <div className="card-body">
-          <h4 className="card-title">Iniciá el trámite y completá todos los pasos</h4>
-          <p className="card-text">Si tenés un trámite iniciado podés continuarlo desde acá.</p>
-          <a className="btn btn-primary btn-block" href="#" target="_blank">
-            Iniciar trámite
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-Completo.story = {
-  name: 'Con título y bajada'
-};
+ButtonBoxLink.story = { name: 'Con enlace' };

@@ -1,3 +1,14 @@
 .spinner {
-  max-width: 100%;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    &:has(.spinner-block) {
+      width: 2.5rem;
+      margin: auto;
+    }
+  }
 }
