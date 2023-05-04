@@ -205,6 +205,34 @@ export const SoloIcono = (): JSX.Element => (
         </button>
       </div>
     </Dropdown>
+    <br />
+    <Dropdown onlyIcon={true} buttonIcon={<i className="bx bxs-check-circle ml-0"></i>}>
+      <div className="dropdown-menu">
+        <button className="dropdown-item" type="button">
+          Opción 1
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 2
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 3
+        </button>
+      </div>
+    </Dropdown>
+    <br />
+    <Dropdown onlyIcon={true} buttonIcon={<span className="material-icons-round ml-0">home</span>}>
+      <div className="dropdown-menu">
+        <button className="dropdown-item" type="button">
+          Opción 1
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 2
+        </button>
+        <button className="dropdown-item" type="button">
+          Opción 3
+        </button>
+      </div>
+    </Dropdown>
   </div>
 );
 
@@ -278,71 +306,3 @@ export const Tamanos = (): JSX.Element => (
 );
 
 Tamanos.story = { name: 'Tamaños' };
-
-export const test = (): JSX.Element => (
-  <div className="dropdown-container">
-    <Dropdown onlyIcon={true} buttonIcon={<i className="bx bxs-check-circle ml-0"></i>}>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </Dropdown>
-
-    <br />
-
-    <Dropdown onlyIcon={true} buttonIcon={<span className="material-icons-round ml-0">home</span>}>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </Dropdown>
-
-    <br />
-
-    <Dropdown title="Mi perfil" isBordered={true} buttonIcon={<i className="bx bxs-check-circle"></i>}>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </Dropdown>
-
-    <br />
-
-    <Dropdown title="Mi perfil" isBordered={true} buttonIcon={<span className="material-icons-round">home</span>}>
-      <div className="dropdown-menu">
-        <button className="dropdown-item" type="button">
-          Opción 1
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 2
-        </button>
-        <button className="dropdown-item" type="button">
-          Opción 3
-        </button>
-      </div>
-    </Dropdown>
-  </div>
-);
-
-test.story = { name: 'J - Test icons' };
