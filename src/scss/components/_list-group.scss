@@ -220,6 +220,7 @@ a.list-group-item {
 
 .list-group {
   gap: 1rem;
+
   &.list-group-row {
     @include media-breakpoint-up(md) {
       flex-direction: row;

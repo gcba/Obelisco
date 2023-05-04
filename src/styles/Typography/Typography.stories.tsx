@@ -28,7 +28,7 @@ export const Headings = (): JSX.Element => {
       <h1>H1 - Nunito Bold 37px</h1>
       <h2>H2 - Nunito Semibold 28px</h2>
       <h3>H3 - Nunito Semibold 21px</h3>
-      {isMobile ? <h4>H4 - Nunito Semibold 19px</h4> : <h4>H4 - Nunito Bold 19px</h4>}
+      <h4>H4 - Nunito {isMobile ? 'Semibold' : 'Bold'} 19px</h4>
       <h5>H5 - Nunito Semibold 17px</h5>
       <h6>H6 - Open Sans Bold 16px</h6>
     </>

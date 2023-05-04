@@ -65,6 +65,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         max-height: 30px;
         padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
         font-size: 1rem;
+
         .nav-icon {
           i,
           span {
@@ -83,6 +84,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         &-sm {
           padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
           font-size: 1rem;
+
           .nav-icon {
             i,
             span {
@@ -103,9 +105,11 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     &:first-child {
       margin-top: 0;
     }
+
     .nav-item > .nav-link {
       max-height: fit-content;
     }
+
     .nav .nav-item .nav-link .nav-icon {
       i,
       .material-icons-round {
@@ -305,6 +309,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       .nav-link {
         background: transparent;
         transition: font-weight 0.4s ease-in-out;
+
         span,
         i {
           font-size: 1.25rem;
@@ -330,6 +335,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
         &:focus {
           box-shadow: $input-btn-focus-box-shadow inset;
+
           &:hover {
             box-shadow: $input-btn-focus-box-shadow inset;
           }
@@ -365,6 +371,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
             background-color: $grisulado-10;
             color: $grisulado-900;
             box-shadow: none;
+
             &:focus {
               border-radius: $border-radius * 2 $border-radius * 2 0px 0px;
             }
@@ -374,6 +381,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
       &-bg {
         @extend .nav-box;
+
         .nav-item {
           .nav-link {
             &.active,
@@ -403,12 +411,14 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       .nav-item > .nav-link {
         width: auto;
         min-width: $nav-link-fixed-width;
+
         @include media-breakpoint-down(md) {
           min-width: auto;
         }
       }
     }
   }
+
   .right-left {
     width: 2.5rem;
     height: 100%;
@@ -501,6 +511,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   .nav-mobile-trigger {
     display: none;
   }
+
   .nav-responsive {
     background-color: transparent;
 

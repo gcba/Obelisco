@@ -28,9 +28,7 @@ export const SimpleConIcono = (): JSX.Element => {
   return (
     <>
       <NavHorizontal items={simpleItems} selected="2" hasIcon={true} />
-
       <br />
-
       <NavHorizontal items={simpleItems} selected="2" hasIcon={true} hasReverse={true} />
     </>
   );
