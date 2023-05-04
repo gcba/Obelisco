@@ -214,7 +214,7 @@ SoloIcono.story = {
 
 export const Idioma = (): JSX.Element => (
   <div className="dropdown-container">
-    <Dropdown title="ES" buttonIcon={<span className="dropdown-language-icon"></span>}>
+    <Dropdown title="ES " buttonIcon={<span className="dropdown-language-icon"></span>}>
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">
           Inglés

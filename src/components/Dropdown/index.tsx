@@ -30,7 +30,8 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
           buttonIcon
         ) : (
           <>
-            {title} {buttonIcon}
+            {title}
+            {buttonIcon}
           </>
         )}
       </button>
