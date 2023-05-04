@@ -981,18 +981,7 @@ button.card {
 
         &.collapsed {
           border-radius: $card-border-radius;
-        }
-
-        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-        @include accordion-only-child('.collpase-title');
-        @include accordion-only-child('.collapse-title');
-        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-        @include accordion-only-child('.collpase-subtitle');
-        @include accordion-only-child('.collapse-subtitle');
-
-        &.collapsed {
-          border-radius: $card-border-radius;
-        }
+        }       
       }
     }
 
@@ -1029,7 +1018,6 @@ button.card {
         margin-top: 1rem;
         margin-bottom: 1rem;
       }
-
       > h5 {
         font-weight: $headings-font-weight;
       }
