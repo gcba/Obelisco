@@ -1,15 +1,18 @@
+/* === Custom variables and mixins === */
+
 $list-group-color: $grisulado-900;
 $list-group-color-hover: $blue;
 $list-group-border: 8px;
+$list-group-padding: 1.5rem;
+$list-group-padding-mobile: 1rem;
 
 $padding-card-access-body: 1.5rem;
-$padding-card-access-body-list: 1.5rem 1.5rem 0;
-$padding-access-option-item-sm: 10px 1.5rem;
-$padding-title-option: 1rem 1.5rem 0;
-$padding-title-option-first-child: 0.5rem 1.5rem 0;
-$font-size-icon-card: 2.5rem;
+$padding-list-group-item-sm: 0.75rem 1.5rem;
+$padding-list-group-item-sm-mobile: 0.5rem 1rem;
+$padding-title-option: 0.75rem 1.5rem;
+$padding-title-option-first-child: 0.75rem 1.5rem 0;
+$font-size-icon-card: 2rem;
 $card-size: 64px;
-$font-title-option: 17px;
 
 $box-shadow-access: 0 0 0 2px $grisulado-50;
 $box-shadow-access-hover: 0 0 0 2px $blue;
@@ -20,16 +23,16 @@ $box-shadow-access-focus: 0 0 0 4px theme-color-level('info', 3);
 
 $no-text-decoration: none;
 
-$margin-clearfix: 1rem 1.5rem 0.8rem;
+$margin-clearfix: 0 1.5rem;
+$margin-clearfix-mobile: 0 1rem;
 $border-clearfix: 2px solid $grisulado-50;
 
-$list-gorup-padding-y: spaceUnits(6);
-$list-gorup-padding-x: spaceUnits(4);
+$list-group-padding-x: spaceUnits(4);
 
-$list-gorup-category-margin: spaceUnits(2);
+$list-group-category-margin: spaceUnits(2);
 
-$list-group-icon-arrow: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(56, 72, 92);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>');
-$list-group-icon-arrow-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path></svg>');
+$list-group-icon-arrow: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(56, 72, 92);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
+$list-group-icon-arrow-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
 $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" style="fill: rgba(201, 59, 59, 1);msFilter:;"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><g><path d="M5,5h6c0.55,0,1-0.45,1-1v0c0-0.55-0.45-1-1-1H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h6c0.55,0,1-0.45,1-1v0 c0-0.55-0.45-1-1-1H5V5z"/><path d="M20.65,11.65l-2.79-2.79C17.54,8.54,17,8.76,17,9.21V11h-7c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h7v1.79 c0,0.45,0.54,0.67,0.85,0.35l2.79-2.79C20.84,12.16,20.84,11.84,20.65,11.65z"/></g></g></svg>');
 
 @mixin display-flex-between {
@@ -55,8 +58,36 @@ a.list-group-item {
   border: none;
   box-shadow: $box-shadow-access;
   border-radius: $list-group-border;
-  margin-bottom: 1rem;
-  padding: $list-gorup-padding-y $list-gorup-padding-x;
+  padding: $list-group-padding;
+  display: flex;
+  backface-visibility: hidden;
+
+  @include media-breakpoint-down(xs) {
+    padding: $list-group-padding-mobile;
+  }
+
+  i,
+  .material-icons-round {
+    font-size: 1.25rem;
+    align-self: center;
+    margin-right: 0.75rem;
+    vertical-align: middle;
+  }
+
+  &:not(.access-content) {
+    > .access-title {
+      width: 100%;
+    }
+  }
+
+  .access-content {
+    width: 100%;
+
+    .access-text {
+      font-size: 13px;
+      margin: 0;
+    }
+  }
 
   &:visited {
     color: $list-group-color;
@@ -69,12 +100,18 @@ a.list-group-item {
   &:last-child {
     margin-bottom: 0px;
     border-radius: $list-group-border;
+
+    &:is(.card-item) {
+      border-radius: $border-radius-card-item;
+    }
   }
 
   &:hover,
   &.hover {
     box-shadow: $box-shadow-access-hover;
     color: $list-group-color-hover;
+    text-decoration: $no-text-decoration;
+    backface-visibility: visible;
 
     &.list-group-item-logout {
       box-shadow: $box-shadow-access-hover-danger;
@@ -84,23 +121,8 @@ a.list-group-item {
       text-decoration: underline;
     }
 
-    .access-content {
-      width: 100%;
-
-      .access-title {
-        color: $list-group-color-hover;
-        text-decoration: underline;
-      }
-
-      .access-text {
-        color: $list-group-color-hover;
-        text-decoration: $no-text-decoration !important;
-      }
-    }
-
     &:after {
       content: $list-group-icon-arrow-hover;
-      @include float-height-icon;
     }
   }
 
@@ -115,6 +137,7 @@ a.list-group-item {
       &.list-group-item-logout {
         color: $danger;
         box-shadow: $box-shadow-access-focus;
+
         &:after {
           content: $list-group-icon-logout;
         }
@@ -131,68 +154,43 @@ a.list-group-item {
     }
   }
 
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active,
+  &.active {
+    box-shadow: $box-shadow-access-focus;
+    background-color: $white;
+    color: $list-group-color-hover;
+
+    .access-title {
+      text-decoration: underline;
+    }
+
+    &:not(:focus) {
+      color: $list-group-color-hover;
+    }
+
+    &.list-group-item-logout {
+      box-shadow: $box-shadow-access-hover-danger;
+    }
+
+    &:after {
+      content: $list-group-icon-arrow-hover;
+    }
+  }
+
   &:after {
     content: $list-group-icon-arrow;
     @include float-height-icon;
   }
 
   &.item-sm {
-    color: $list-group-color;
-    padding: 1rem;
-    @include display-flex-between;
-    align-items: flex-start;
+    padding: $padding-list-group-item-sm;
 
-    &:hover,
-    &.hover {
-      box-shadow: $box-shadow-access-hover;
-      color: $list-group-color-hover;
-      text-decoration: $no-text-decoration;
-
-      .access-content {
-        width: 100%;
-
-        .access-title {
-          color: $list-group-color-hover;
-          text-decoration: underline;
-        }
-
-        .access-text {
-          color: $list-group-color-hover;
-          text-decoration: $no-text-decoration;
-        }
-      }
-    }
-
-    &:focus,
-    &.focus {
-      box-shadow: $box-shadow-access-focus;
-      color: $list-group-color;
-
-      .access-title {
-        color: $list-group-color;
-        text-decoration: $no-text-decoration;
-      }
-
-      .access-content {
-        .access-text,
-        .access-title {
-          color: $list-group-color;
-          text-decoration: $no-text-decoration;
-        }
-      }
-    }
-
-    .access-content {
-      width: 100%;
-
-      .access-text {
-        text-decoration: $no-text-decoration;
-      }
-    }
-
-    .access-text {
-      font-size: 13px;
-      margin: 0;
+    @include media-breakpoint-down(xs) {
+      padding: $padding-list-group-item-sm-mobile;
     }
   }
 
@@ -229,24 +227,24 @@ a.list-group-item {
 
     .list-group-item {
       width: 100%;
-
-      &:last-child {
-        margin-bottom: 1rem;
-      }
     }
   }
 
   .list-group-title,
   .list-group-category {
-    padding: $list-gorup-category-margin $list-gorup-padding-x;
+    padding: $list-group-category-margin $list-group-padding-x;
     margin: 0;
+  }
+
+  .no-shadow {
+    box-shadow: none;
   }
 }
 
 .group-access {
   display: grid;
   margin-bottom: 1rem;
-  max-width: 712px;
+  background-color: $white;
 
   .card-access {
     display: grid;
@@ -255,22 +253,41 @@ a.list-group-item {
     border-radius: $list-group-border;
     padding-bottom: 0;
 
-    .card-access-body {
-      padding: $padding-card-access-body;
-      @include display-flex-between;
+    .clearfix {
+      margin: $margin-clearfix;
+      border-top: $border-clearfix;
 
-      &.p-list {
-        padding: $padding-card-access-body-list;
+      @include media-breakpoint-down(xs) {
+        margin: $margin-clearfix-mobile;
+      }
+    }
+
+    .card-access-body {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: $padding-card-access-body;
+
+      &:not(.p-list) {
+        &:has(~ .container-access) {
+          ~ .card-item {
+            &:not(:hover) {
+              @extend .shadow-none;
+            }
+          }
+        }
+      }
+
+      &:not(.reverse) {
+        justify-content: space-between;
       }
 
       .card-access-title {
-        font-size: 19px;
-        font-weight: 700;
-        margin-top: 0.5rem;
+        @extend .h4;
+        margin-bottom: 0.25rem;
       }
 
       .card-access-text {
-        font-size: 13px;
         margin: 0;
       }
 
@@ -282,88 +299,73 @@ a.list-group-item {
         border-radius: $list-group-border;
         text-align: center;
         line-height: $card-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &.descriptive {
           color: $blue;
-          font-size: 24px;
-          font-weight: 900;
+          font-weight: 600;
+          font-size: 1.806rem;
+          font-family: $font-family-headings;
         }
       }
 
       &.reverse {
-        gap: 15px;
         flex-direction: row-reverse;
         justify-content: flex-end;
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding: 1rem;
       }
     }
 
     .container-access {
-      .clearfix {
-        margin: $margin-clearfix;
-        border-top: $border-clearfix;
-      }
-
       .access-option {
+        padding: 0.625rem 0;
+
+        @include media-breakpoint-down(xs) {
+          padding: 0.5rem 0;
+        }
+
+        .list-group-item:last-child {
+          margin-bottom: 0;
+        }
+
         .item-sm {
           box-shadow: none;
-          padding: $padding-access-option-item-sm;
           margin-bottom: 5px;
 
-          &:last-child {
-            margin-bottom: 13px;
+          &:active,
+          &.active {
+            box-shadow: $box-shadow-access-focus;
           }
 
           &:hover,
           &.hover {
             box-shadow: $box-shadow-access-hover;
-            color: $list-group-color-hover;
-
-            &:after {
-              content: $list-group-icon-arrow-hover;
-              @include float-height-icon;
-            }
           }
 
           &:focus,
           &.focus {
             box-shadow: $box-shadow-access-focus;
-            background: $white;
-            text-decoration: $no-text-decoration;
-
-            &:after {
-              content: $list-group-icon-arrow;
-              @include float-height-icon;
-            }
           }
         }
 
         .title-option {
           padding: $padding-title-option;
-          font-size: $font-title-option;
-
-          &:first-child {
-            padding: $padding-title-option-first-child;
-          }
+          @extend .h5;
+          margin-bottom: 0;
         }
       }
-    }
-
-    .list-group-item {
-      padding: $list-gorup-padding-y;
-      margin-top: auto;
-      width: 100%;
     }
   }
 
   .card-item {
-    border-top: $box-shadow-access;
     border-right: 0;
     border-left: 0;
     border-bottom: 0;
-    margin-bottom: 0 !important;
-    border-radius: $border-radius-card-item !important;
     @include display-flex-between;
   }
 }
-
-/* === Mobile styles === */

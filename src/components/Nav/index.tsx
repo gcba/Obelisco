@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { Size } from '../utils';
 
@@ -18,6 +18,16 @@ export interface NavProps {
   navSize?: 'default' | 'large';
   onClick?: (id: string) => void;
   hasIcon?: boolean;
+}
+
+export interface NavItemComponentProps extends NavItem {
+  level: number;
+  selected?: string;
+  onClick?: (id: string) => void;
+  hasBordered?: boolean;
+  type?: Size;
+  hasIcon?: boolean;
+  onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const listClasses = 'nav flex-column nav-pills';
@@ -68,16 +78,7 @@ export const NavHorizontal: React.FC<NavProps> = (props: React.PropsWithChildren
   );
 };
 
-interface NavItemComponentProps extends NavItem {
-  level: number;
-  selected?: string;
-  onClick?: (id: string) => void;
-  hasBordered?: boolean;
-  type?: Size;
-  hasIcon?: boolean;
-}
-
-const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
+export const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
   const { name, id, href, children, level, disabled, selected, hasIcon } = props;
 
   const isActive = selected && id === selected;
@@ -116,14 +117,7 @@ const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItemCompone
       {!disabled && (isActive || hasActiveChild) && children && (
         <ul className={listClasses}>
           {children.map((item) => (
-            <NavItemComponent
-              {...item}
-              key={item.id}
-              level={level + 1}
-              onClick={props.onClick}
-              selected={selected}
-              hasIcon={hasIcon}
-            />
+            <NavItemComponent {...item} key={item.id} level={level + 1} onClick={props.onClick} selected={selected} />
           ))}
         </ul>
       )}
@@ -188,7 +182,7 @@ const NavItemComponentHorizontal: React.FC<NavItemComponentProps> = (props: NavI
   );
 };
 
-const checkActiveChild = (children?: NavItem[], selected?: string): boolean => {
+export const checkActiveChild = (children?: NavItem[], selected?: string): boolean => {
   return !!children?.some((child) => {
     return child.id === selected || (child.children && checkActiveChild(child.children, selected));
   });

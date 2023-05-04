@@ -13,8 +13,7 @@ export const buttonTypes: Array<ButtonTypeWithName> = [
   { type: 'link', name: 'Link' }
 ];
 
-export type AlertType = Type | 'info';
-export const alertTypes: AlertType[] = ['primary', 'success', 'info', 'danger'];
+export type AlertType = { type: Type | 'info'; text: string };
 
 export type Size = 'default' | 'small' | 'large';
 export const sizes: Size[] = ['small', 'default', 'large'];
@@ -48,3 +47,71 @@ export const sizeToClass = (size: Size | 'default'): string => {
       return 'sm';
   }
 };
+
+export type DataDirection =
+  | 'top-right'
+  | 'top'
+  | 'top-left'
+  | 'right-bottom'
+  | 'right'
+  | 'right-top'
+  | 'left-bottom'
+  | 'left'
+  | 'left-top'
+  | 'bottom-right'
+  | 'bottom'
+  | 'bottom-left';
+
+export interface Direction {
+  direction: DataDirection;
+  icon: string;
+  position: string;
+}
+
+export const directionTop: Direction[] = [
+  { direction: 'top-right', icon: 'turn_right', position: 'arriba-derecha' },
+  { direction: 'top', icon: 'arrow_upward', position: 'arriba' },
+  { direction: 'top-left', icon: 'turn_left', position: 'arriba-izquierda' }
+];
+
+export const directionLeft: Direction[] = [
+  { direction: 'right-bottom', icon: 'south_east', position: 'derecha-abajo' },
+  { direction: 'right', icon: 'arrow_forward', position: 'derecha' },
+  { direction: 'right-top', icon: 'north_east', position: 'derecha-arriba' }
+];
+
+export const directionRight: Direction[] = [
+  { direction: 'left-bottom', icon: 'south_west', position: 'izquierda-abajo' },
+  { direction: 'left', icon: 'keyboard_backspace', position: 'izquierda' },
+  { direction: 'left-top', icon: 'north_west', position: 'izquierda-arriba' }
+];
+
+export const directionBottom: Direction[] = [
+  { direction: 'bottom-right', icon: 'subdirectory_arrow_right', position: 'abajo-derecha' },
+  { direction: 'bottom', icon: 'arrow_downward', position: 'abajo' },
+  { direction: 'bottom-left', icon: 'subdirectory_arrow_left', position: 'abajo-izquierda' }
+];
+
+export type SpinnerType = Type | 'secondary' | 'info' | 'light' | 'dark';
+export const spinnerTypes: SpinnerType[] = ['primary', 'secondary', 'success', 'danger', 'info', 'light', 'dark'];
+
+export interface ButtonTypeWithSpinner {
+  type: Type | 'secondary' | 'link';
+  spinner: SpinnerType;
+}
+
+export const buttonSpinnerTypes: Array<ButtonTypeWithSpinner> = [
+  { type: 'primary', spinner: 'dark' },
+  { type: 'secondary', spinner: 'light' },
+  { type: 'success', spinner: 'light' },
+  { type: 'danger', spinner: 'light' },
+  { type: 'link', spinner: 'info' }
+];
+
+export const buttonOutlineSpinnerTypes: Array<ButtonTypeWithSpinner> = [
+  { type: 'primary', spinner: 'dark' },
+  { type: 'secondary', spinner: 'secondary' },
+  { type: 'success', spinner: 'success' },
+  { type: 'danger', spinner: 'danger' },
+  { type: 'link', spinner: 'info' }
+];

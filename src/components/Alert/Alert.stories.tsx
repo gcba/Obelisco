@@ -6,7 +6,8 @@ import './Alert.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { alertTypes } from '../utils';
+import { Alert, ListLinks } from '.';
+import { alertHighlight, alertLink, alertTypes } from './index';
 
 // Configuración general del componente
 export default {
@@ -14,45 +15,76 @@ export default {
   decorators: [withA11y]
 };
 
-export const Texto = (): JSX.Element => {
+export const Simple = (): JSX.Element => {
   return (
     <div className="alert-wrapper">
-      <div className="alert alert-danger" role="alert">
-        <p>
-          Un texto simple para una alerta simple, incluso&nbsp;
-          <a href="#">con hipervínculos</a>.
-        </p>
-      </div>
+      <Alert arrayAlerts={alertTypes} />
     </div>
   );
 };
 
-export const Titulo = (): JSX.Element => {
+export const SimpleClose = (): JSX.Element => {
   return (
     <div className="alert-wrapper">
-      <div className="alert alert-danger" role="alert">
-        <p>
-          <strong>Este es un destacado de una alerta (opcional). </strong>
-          Un texto simple para una alerta simple, incluso&nbsp;
-          <a href="#">con hipervínculos</a>.
-        </p>
-      </div>
+      <Alert arrayAlerts={alertTypes} isDismissible />
     </div>
   );
 };
 
-Titulo.story = {
-  name: 'Destacado y texto'
+SimpleClose.story = {
+  name: 'Con cierre'
 };
 
-export const Colores = (): JSX.Element => {
+export const SimpleHighlight = (): JSX.Element => {
   return (
     <div className="alert-wrapper">
-      {alertTypes.map((type) => (
-        <div key={type} className={`alert alert-${type}`} role="alert">
-          <p>Un texto simple para una alerta simple.</p>
-        </div>
-      ))}
+      <Alert arrayAlerts={alertHighlight} />
     </div>
   );
 };
+
+SimpleHighlight.story = {
+  name: 'Con destacado'
+};
+
+export const SimpleHiperlink = (): JSX.Element => {
+  return (
+    <div className="alert-wrapper">
+      <Alert arrayAlerts={alertLink} />
+    </div>
+  );
+};
+
+SimpleHiperlink.story = {
+  name: 'Con hipervínculo'
+};
+
+export const ListLinksExample = (): JSX.Element => {
+  return (
+    <div className="alert-wrapper">
+      <ListLinks
+        type="danger"
+        text="<strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que continua al texto destacado."
+        textLink="Ancla al error"
+        isListLinks
+      />
+    </div>
+  );
+};
+
+ListLinksExample.story = { name: 'Con lista de enlaces' };
+
+export const List = (): JSX.Element => {
+  return (
+    <div className="alert-wrapper">
+      <ListLinks
+        type="info"
+        text="<strong>Este es un destacado de una alerta de información.</strong> Esta es la descripción de una alerta de información que continua al texto destacado."
+        textLink="Texto descriptivo"
+        isListLinks={false}
+      />
+    </div>
+  );
+};
+
+List.story = { name: 'Con lista descriptiva' };
