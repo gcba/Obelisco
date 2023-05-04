@@ -541,6 +541,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     .card-img {
       border-radius: $card-border-radius;
+      object-fit: cover;
 
       @include media-breakpoint-down(sm) {
         width: 100%;
