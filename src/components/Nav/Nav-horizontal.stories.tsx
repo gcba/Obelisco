@@ -24,7 +24,15 @@ const simpleItems = [
 
 export const Simple = (): JSX.Element => <NavHorizontal items={simpleItems} selected="2" />;
 
-export const SimpleConIcono = (): JSX.Element => <NavHorizontal items={simpleItems} selected="2" hasIcon={true} />;
+export const SimpleConIcono = (): JSX.Element => {
+  return (
+    <>
+      <NavHorizontal items={simpleItems} selected="2" hasIcon={true} />
+      <br />
+      <NavHorizontal items={simpleItems} selected="2" hasIcon={true} hasReverse={true} />
+    </>
+  );
+};
 
 SimpleConIcono.story = {
   name: 'Simple con ícono'

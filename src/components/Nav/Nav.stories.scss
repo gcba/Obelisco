@@ -10,8 +10,13 @@
 .wrapper-bg {
   background-color: #f3f6f9;
   padding: 2.5rem;
+  max-width: 720px;
 
   @media only screen and (max-width: 768px) {
     padding: 2.5rem 0;
   }
+}
+
+.wrapper-tabs {
+  max-width: 720px;
 }

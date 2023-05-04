@@ -12,6 +12,7 @@ import { Spinner } from '.';
 // Configuración general del componente
 export default {
   title: 'Componentes|Spinner',
+  component: Spinner,
   decorators: [withA11y]
 };
 

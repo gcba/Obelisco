@@ -494,6 +494,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       width: 526px;
       height: 296px;
       border-radius: $card-border-radius;
+      object-fit: cover;
 
       + .card-body {
         margin-left: $panel-spacer-lg;
@@ -540,6 +541,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     .card-img {
       border-radius: $card-border-radius;
+      object-fit: cover;
 
       @include media-breakpoint-down(sm) {
         width: 100%;
@@ -1011,6 +1013,11 @@ button.card {
       padding: 1rem 1.5rem;
       border: $collapse-border-width solid $card-header-bg;
       @include border-bottom-radius($card-border-radius);
+
+      hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
 
       > h5 {
         font-weight: $headings-font-weight;
