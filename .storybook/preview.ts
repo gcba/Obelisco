@@ -8,78 +8,77 @@ addDecorator(withHTML);
 // .storybook/preview.js
 
 const headers = [
-  'Comenzar|Inicio',
-  'Componentes|Accesos',
-  'Componentes|Alerta',
-  'Componentes|Alerta/Listas',
-  'Componentes|Audio',
-  'Componentes|Barra de progreso',
-  'Componentes|Botones',
-  'Componentes|Botones/En caja',
-  'Componentes|Colapsable',
-  'Componentes|Desplegables',
-  'Componentes|Enlace',
-  'Componentes|Enlace/Lista',
-  'Componentes|Etiqueta',
-  'Componentes|Galería',
-  'Componentes|Galería/Grillas',
-  'Componentes|Mensajes de estado',
-  'Componentes|Migas de pan',
-  'Componentes|Modal',
-  'Componentes|Navegación y pestañas/Navegación horizontal',
-  'Componentes|Navegación y pestañas/Navegación vertical',
-  'Componentes|Navegación y pestañas/Pestañas simple',
-  'Componentes|Navegación y pestañas/Pestañas con contenedor',
-  'Componentes|Opciones',
-  'Componentes|Paginado/Numerado',
-  'Componentes|Paginado',
-  'Componentes|Panel',
-  'Componentes|Panel/Panel horizontal/Con imagen',
-  'Componentes|Panel/Panel horizontal/Con video',
-  'Componentes|Panel/Panel vertical/Con imagen',
-  'Componentes|Panel/Panel vertical/Con video',
-  'Componentes|Pasos de un formulario',
-  'Componentes|Spinner',
-  'Componentes|Tarjetas/Tipos',
-  'Componentes|Tarjetas/Lista ancho completo',
-  'Componentes|Tarjetas/Lista ancho por tarjeta',
-  'Componentes|Tooltip',
-  'Estilos|Grilla',
-  'Estilos|Tipografía',
-  'Formulario|Archivo',
-  'Formulario|Buscador',
-  'Formulario|Checkbox',
-  'Formulario|Con fondo',
-  'Formulario|Lista de selección',
-  'Formulario|Radio',
-  'Formulario|Texto',
-  'Formulario|Validación',
-  'Plantillas|Plantilla',
-  'Organismos|Accesos',
-  'Organismos|Footer (pie de página)',
-  'Organismos|Header (encabezado)/Con buscador',
-  'Organismos|Header (encabezado)/Sin buscador',
-  'Organismos|Header (encabezado)/Mobile',
-  'Organismos|Tablas',
-  'Organismos|Tablas/Con acciones',
-  'Versión|Releases'
+  'comenzar-inicio--instalacion',
+  'componentes-accesos',
+  'componentes-alerta',
+  'componentes-audio',
+  'componentes-barra-de-progreso',
+  'componentes-botones--button-types',
+  'componentes-botones-estados',
+  'componentes-botones',
+  'componentes-colapsable',
+  'componentes-desplegables',
+  'componentes-enlace',
+  'componentes-enlace-lista',
+  'componentes-etiqueta',
+  'componentes-galería',
+  'componentes-galería-grillas',
+  'componentes-mensajes-de-estado',
+  'componentes-migas-de-pan',
+  'componentes-modal',
+  'componentes-navegación-y-pestañas-navegación-horizontal',
+  'componentes-navegación-y-pestañas-navegación-vertical',
+  'componentes-navegación-y-pestañas-pestañas-simple',
+  'componentes-navegación-y-pestañas-pestañas-con-contenedor',
+  'componentes-opciones',
+  'componentes-paginado-numerado',
+  'componentes-paginado',
+  'componentes-panel',
+  'componentes-panel-panel-horizontal-con-imagen',
+  'componentes-panel-panel-horizontal-con-video',
+  'componentes-panel-panel-vertical-con-imagen',
+  'componentes-panel-panel-vertical-con-video',
+  'componentes-pasos-de-un-formulario',
+  'componentes-spinner',
+  'componentes-tarjetas-tipos',
+  'componentes-tarjetas-lista-ancho-completo',
+  'componentes-tarjetas-lista-ancho-por-tarjeta',
+  'componentes-tooltip--tooltip',
+  'estilos-grilla',
+  'estilos-tipografía',
+  'formulario-archivo',
+  'formulario-buscador',
+  'formulario-checkbox',
+  'formulario-con-fondo',
+  'formulario-lista-de-selección',
+  'formulario-radio',
+  'formulario-texto',
+  'formulario-validación',
+  'plantillas-plantilla',
+  'organismos-accesos',
+  'organismos-botones',
+  'organismos-footer-pie-de-página',
+  'organismos-header-encabezado-con-buscador',
+  'organismos-header-encabezado-sin-buscador',
+  'organismos-header-encabezado-mobile',
+  'organismos-tablas',
+  'organismos-tablas-con-acciones',
+  'versión-releases'
 ];
 
 addParameters({
   options: {
     storySort: (a: Array<any>, b: Array<any>) => {
-      const aHeader = a[1].kind;
-      const bHeader = b[1].kind;
-    
+      const aHeader = a[0];
+      const bHeader = b[0];
+
       if (aHeader !== bHeader) {
-        const aHeaderIndex = headers.findIndex((h) => h === aHeader);
-        const bHeaderIndex = headers.findIndex((h) => h === bHeader);
+        const aHeaderIndex = headers.findIndex((h) => h === aHeader.split('--')[0] || h === aHeader);
+        const bHeaderIndex = headers.findIndex((h) => h === bHeader.split('--')[0] || h === bHeader);
         return aHeaderIndex - bHeaderIndex;
       }
-    
-      return 0;
     },
-  showPanel: true
+    showPanel: true
   }
 });
 

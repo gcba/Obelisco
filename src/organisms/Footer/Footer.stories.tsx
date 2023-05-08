@@ -62,18 +62,18 @@ const SocialSection = (): JSX.Element => (
 const LegalSection = (): JSX.Element => (
   <section className="footer-legal-section">
     <div className="row align-items-center">
-      <div className="col-12 col-md-5 col-xl-4 mb-4 mb-md-0 footer-content-img">
+      <div className="col-12 col-md-5 col-xl-4 footer-content-img">
         <img className="d-lg-none" src="footer/ciudad-ba-sm.svg" alt="Ciudad de Buenos Aires" height="48" />
         <img className="d-none d-lg-inline" src="footer/ciudad-ba.svg" alt="Ciudad de Buenos Aires" height="40" />
         <img className="img-vamos-ba" src="footer/vamos-ba.svg" alt="Vamos Buenos Aires" />
       </div>
-      <div className="col-12 col-md-7 col-xl-8">
+      <div className="col-12">
         <ul className="list-inline">
           <li className="list-inline-item">
             <a href="https://boletinoficial.buenosaires.gob.ar">Boletín oficial</a>
           </li>
           <li className="list-inline-item">
-            <a href="https://www.buenosaires.gob.ar/innovacion/ciudadinteligente/terminos-y-condiciones">
+            <a href="https://buenosaires.gob.ar/jefaturadegabinete/innovacion/terminos-y-condiciones">
               Términos y condiciones
             </a>
           </li>
@@ -82,6 +82,9 @@ const LegalSection = (): JSX.Element => (
           </li>
           <li className="list-inline-item">
             <a href="https://www.buenosaires.gob.ar/oficiosjudiciales">Oficios judiciales</a>
+          </li>
+          <li className="list-inline-item">
+            <a href="https://www.buenosaires.gob.ar/gobierno/transparencia">Transparencia activa</a>
           </li>
         </ul>
       </div>
@@ -92,8 +95,7 @@ const LegalSection = (): JSX.Element => (
 const LicenseSection = (): JSX.Element => (
   <section>
     <div className="footer-license-text">
-      Los contenidos de buenosaires.gob.ar están licenciados bajo <br className="d-none d-sm-inline" /> Creative Commons
-      Reconocimiento 2.5 Argentina License.
+      Los contenidos de buenosaires.gob.ar están licenciados bajo Creative Commons Reconocimiento 2.5 Argentina License.
     </div>
   </section>
 );
@@ -112,12 +114,8 @@ export const Completo = (): JSX.Element => (
   </footer>
 );
 
-export const SoloTelefonos = (): JSX.Element => (
+export const SoloLegales = (): JSX.Element => (
   <footer className="main-footer">
-    <div className="container">
-      <PhonesSection />
-    </div>
-    <hr className="divider" />
     <div className="container">
       <LegalSection />
       <LicenseSection />
@@ -125,23 +123,6 @@ export const SoloTelefonos = (): JSX.Element => (
   </footer>
 );
 
-SoloTelefonos.story = {
-  name: 'Solo teléfonos'
-};
-
-export const SoloRedes = (): JSX.Element => (
-  <footer className="main-footer">
-    <div className="container">
-      <SocialSection />
-    </div>
-    <hr className="divider" />
-    <div className="container">
-      <LegalSection />
-      <LicenseSection />
-    </div>
-  </footer>
-);
-
-SoloRedes.story = {
-  name: 'Solo redes'
+SoloLegales.story = {
+  name: 'Solo legales'
 };

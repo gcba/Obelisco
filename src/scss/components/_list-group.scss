@@ -135,6 +135,7 @@ a.list-group-item {
       &.list-group-item-logout {
         color: $danger;
         box-shadow: $box-shadow-access-focus;
+
         &:after {
           content: $list-group-icon-logout;
         }
@@ -216,10 +217,11 @@ a.list-group-item {
 }
 
 .list-group {
+  gap: 1rem;
+
   &.list-group-row {
     @include media-breakpoint-up(md) {
       flex-direction: row;
-      gap: 1rem;
     }
 
     .list-group-item {
@@ -253,6 +255,7 @@ a.list-group-item {
     .clearfix {
       margin: $margin-clearfix;
       border-top: $border-clearfix;
+
       @include media-breakpoint-down(xs) {
         margin: $margin-clearfix-mobile;
       }
