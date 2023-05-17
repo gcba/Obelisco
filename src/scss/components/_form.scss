@@ -56,6 +56,16 @@ $form-icons: (
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(201, 59, 59, 1);transform: ;msFilter:;"><path d="M11.953 2C6.465 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.493 2 11.953 2zM13 17h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>')
 );
 
+%calendarNumber {
+  @extend .h5;
+  height: 2.25rem;
+  width: 2.25rem;
+  display: inline-block;
+  line-height: 2.25rem;
+  margin-bottom: 0;
+  border-radius: 50%;
+}
+
 // Some configuration is inside ../_colors.scs
 
 $form-validation-states: (
@@ -250,7 +260,7 @@ $form-validation-states: (
     }
     &:checked {
       ~ .custom-control-label::before {
-        border-color:$custom-control-indicator-checked-color;
+        border-color: $custom-control-indicator-checked-color;
       }
     }
   }
@@ -362,5 +372,168 @@ $form-validation-states: (
     color: #fff;
     background-color: $blue;
     box-shadow: none;
+  }
+}
+
+.calendar {
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 340px;
+  width: 100%;
+
+  .date-title {
+    margin-bottom: 1rem;
+  }
+
+  .date-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    h4 {
+      margin-bottom: 0;
+    }
+    &:not(:has(.dropdown)) {
+      padding: 0 0.5rem;
+      @extend .h4;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .date-body {
+    border-top: 1px solid $grisulado-10;
+    border-bottom: 1px solid $grisulado-10;
+    background-color: $white;
+    @extend .h5;
+    color: $grisulado-300;
+
+    table {
+      width: 100%;
+      margin-top: 0.75rem;
+      text-align: center;
+
+      .date-week th {
+        font-weight: 700;
+        color: $grisulado-900;
+        padding-bottom: 1rem;
+      }
+
+      td {
+        border-bottom: 10px solid $white;
+        pointer-events: inherit;
+
+        span {
+          @extend %calendarNumber;
+
+          &.active {
+            color: $white;
+            background-color: $blue;
+            pointer-events: pointer;
+            cursor: pointer;
+          }
+        }
+
+        .label-radio {
+          position: relative;
+          @extend %calendarNumber;
+          padding: 0;
+          background-color: $grisulado-50;
+          color: $grisulado-900;
+          border: none;
+          pointer-events: pointer;
+          cursor: pointer;
+
+          &:active,
+          &.active,
+          &:focus {
+            color: $white;
+            background-color: $blue;
+            box-shadow: none;
+          }
+
+          .date-radio {
+            clip: rect(0, 0, 0, 0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 2.25rem;
+            width: 2.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .date-footer {
+    .date-footer-list {
+      padding: 0 1rem 1rem;
+      margin-bottom: 0;
+
+      li {
+        @extend .small;
+        list-style-type: none;
+        margin-bottom: 0.25rem;
+      }
+
+      &.list-inline {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+
+        li {
+          display: inline-flex;
+          align-items: center;
+          justify-content: start;
+          gap: 0.5rem;
+
+          .material-icons-round {
+            font-size: 1rem;
+
+            &.date-icon-available {
+              color: $grisulado-50;
+            }
+
+            &.date-icon-active {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.calendar-picker {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.5rem;
+  min-height: fit-content;
+  border: 1px solid $grisulado-50;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+
+  .calendar-time {
+    border-left: 1px solid $grisulado-50;
+    padding-left: 3.5rem;
+
+    .time-title {
+      margin-bottom: 1.5rem;
+    }
+
+    .time-custom-radio {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .calendar-time {
+      border-left: none;
+      padding-left: 0;
+    }
   }
 }
