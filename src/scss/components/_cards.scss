@@ -13,8 +13,7 @@ $card-cap-color: $text-muted;
 $card-cap-bg: inherit;
 $card-active-color: $white;
 $card-header-bg: $grisulado-10;
-$card-header-padding-y: 0.75rem;
-$card-header-padding-x: 1.5rem;
+$card-header-padding: 0.75rem 1.813rem 0.75rem 1.5rem;
 $card-bg-info: #005387;
 
 $card-border-width: 0;
@@ -43,13 +42,13 @@ $card-deck-margin: $grid-gutter-width / 2;
 $card-deck-margin-top: $grid-gutter-width;
 
 $card-text-decoration: none;
-$card-font-weight: 600;
+$card-font-weight: 700;
 
 $collapse-border-width: 2px;
-$collapse-info-title-size: 1.3125rem;
-$collapse-info-subtitle-size: 0.825rem;
+$collapse-info-subtitle-size: 1rem;
 
 $accordion-margin: 0.75rem;
+$accordion-card-header-padding: 0.75rem 1.5rem;
 
 $panel-deck-mt: 2.5rem;
 $card-panel-img-size: 3.75rem;
@@ -163,9 +162,48 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 
+@mixin accordion-columns-4 {
+  i,
+  .material-icons-round {
+    grid-area: 1 / 1 / 4 / 2;
+  }
+
+  .collapse-label {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+  .collpase-title,
+  .collapse-title {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+
+  // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+  .collpase-subtitle,
+  .collapse-subtitle {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+
+  &:after {
+    grid-area: 1 / 3 / 4 / 4;
+  }
+}
+
+@mixin accordion-only-child($class) {
+  &:has(#{$class}:only-child) {
+    #{$class} {
+      grid-area: auto;
+    }
+
+    &:after {
+      grid-area: auto;
+    }
+  }
+}
+
 /* === Bootstrap Import === */
 
-@import '~bootstrap/scss/card';
+@import 'node_modules/bootstrap/scss/card';
 
 /* === Custom styles === */
 
@@ -191,7 +229,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   .card-title {
     margin-bottom: 0;
     @extend .h4;
-    font-weight: 600;
+    font-weight: $headings-font-weight;
 
     @include media-breakpoint-up(sm) {
       font-weight: 700;
@@ -305,6 +343,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     .card-body {
       padding: 0;
+
       a {
         display: block;
         width: fit-content;
@@ -424,11 +463,13 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   &.card-horizontal.unbordered {
     .card-body {
       padding: $card-spacer-unbordered;
+
       a {
         display: block;
         width: fit-content;
       }
     }
+
     .card-icon-left {
       margin: 0;
     }
@@ -471,7 +512,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     .card-body {
       .card-title {
         @extend .h2;
-        font-weight: 600;
+        font-weight: $headings-font-weight;
         margin: $panel-title-margin-horizontal;
 
         @include media-breakpoint-down(md) {
@@ -509,7 +550,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     .card-body {
       .card-title {
         @extend .h2;
-        font-weight: 600;
+        font-weight: $headings-font-weight;
         margin: $panel-title-margin-vertical;
       }
 
@@ -580,10 +621,11 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       margin-left: $card-deck-margin;
     }
   }
-  @include media-breakpoint-down(xs)  {
+
+  @include media-breakpoint-down(xs) {
     .card {
       &:nth-of-type(2) {
-        margin-top: 30px; 
+        margin-top: 30px;
       }
     }
   }
@@ -646,7 +688,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.card-column {
-  .card, .group-access {
+  .card,
+  .group-access {
     max-width: calc(calc(100% / 4) - 30px);
 
     @include media-breakpoint-down(md) {
@@ -662,8 +705,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 }
+
 .card-deck.max-cards-3.card-column {
-  .card, .group-access {
+  .card,
+  .group-access {
     max-width: calc(calc(100% / 3) - 30px);
 
     @include media-breakpoint-down(sm) {
@@ -677,7 +722,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 }
 
 .card-deck.max-cards-2.card-column {
-  .card, .group-access {
+  .card,
+  .group-access {
     max-width: calc(calc(100% / 2) - 30px);
 
     @include media-breakpoint-down(xs) {
@@ -685,8 +731,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     }
   }
 }
+
 .card-deck.max-cards-1.card-column {
-  .card, .group-access {
+  .card,
+  .group-access {
     max-width: calc(calc(100% / 3) - 30px);
 
     &:nth-of-type(-n + 3) {
@@ -761,21 +809,63 @@ button.card {
       background-color: $blue;
       border-width: 0;
       text-align: left;
-      padding: $card-header-padding-y $card-header-padding-x;
+      padding: $accordion-card-header-padding;
       transition: background-color 0.2s;
-      border-radius: $border-radius $border-radius 0 0;
+      border-radius: $border-radius-lg $border-radius-lg 0 0;
       position: relative;
       z-index: 1;
       color: $white;
       min-height: 48px;
-      line-height: 1.4;
-      font-size: 18px;
-      font-weight: 700;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto;
+      grid-column-gap: 0.75rem;
+      grid-row-gap: 0;
+      align-items: center;
+      @extend .h4;
+
+      &:after {
+        grid-area: 1 / 2 / 3 / 3;
+      }
+
+      &:has(i, .material-icons-round) {
+        grid-template-columns: 1.5rem 1fr auto;
+        @include accordion-columns-4;
+      }
+
+      // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+      &:has(.collapse-label + .collapse-title, .collpase-title + .collapse-subtitle, .collpase-subtitle) {
+        grid-row-gap: 0.25rem;
+
+        .collapse-label {
+          grid-area: 1 / 1 / 2;
+        }
+
+        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+        .collpase-title,
+        .collapse-title {
+          grid-area: 2 / 1 / 3;
+        }
+
+        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+        .collpase-subtitle,
+        .collapse-subtitle {
+          grid-area: 3 / 1 / 3;
+        }
+
+        &:after {
+          grid-area: 1 / 2 / 4;
+        }
+
+        &:has(i, .material-icons-round) {
+          @include accordion-columns-4;
+        }
+      }
 
       &:after {
         content: $accordion-icon-expanded-blue;
         height: spaceUnits(5);
-        float: right;
+        margin-left: auto;
       }
 
       &:focus,
@@ -795,13 +885,15 @@ button.card {
         border-radius: $border-radius-lg;
         background-color: $card-header-bg;
         color: $grisulado-900;
+        position: relative;
+        backface-visibility: hidden;
 
         &:hover,
         &.hover {
           background-color: $grisulado-10;
           color: $blue;
           box-shadow: $card-box-hover-shadow;
-          content: $accordion-icon-user-white;
+          backface-visibility: visible;
 
           + * > .card-body {
             border-color: $card-header-bg;
@@ -810,51 +902,185 @@ button.card {
           &:after {
             content: $accordion-icon-collapsed-blue;
             height: spaceUnits(6);
-            float: right;
+            display: inline-block;
+            vertical-align: middle;
           }
         }
 
         &:after {
           content: $accordion-icon-collapsed;
+          display: inline-block;
+          vertical-align: middle;
         }
       }
 
       &.card-info {
-        &:after {
-          content: 'Ver menos';
-          position: absolute;
-          top: 50%;
-          right: $card-header-padding-x;
-          transform: translateY(-50%);
-          text-decoration: underline;
-          font-weight: $card-font-weight;
+        grid-column-gap: 0.75rem;
+        grid-row-gap: 0.25rem;
+
+        > br {
+          display: none;
         }
+
+        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+        &:has(.collapse-label + .collapse-title, .collpase-title) {
+          &:has(i, .material-icons-round) {
+            grid-template-columns: 1.5rem 1fr auto;
+
+            @include accordion-columns-4;
+          }
+
+          .collapse-label {
+            grid-area: 1 / 1 / 2;
+          }
+
+          // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+          .collpase-title,
+          .collapse-title {
+            grid-area: 2 / 1 / 3;
+          }
+
+          // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+          .collpase-subtitle,
+          .collapse-subtitle {
+            grid-area: 3 / 1 / 3;
+          }
+
+          &:after {
+            grid-area: 1 / 2 / 3;
+          }
+
+          // FIXME: REMOVER COLLPASE MAL ARMADO (VIEJO)
+          &:has(span + br + span) {
+            > br {
+              display: none;
+            }
+
+            // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+            .collpase-title,
+            .collapse-title {
+              grid-area: 1 / 1 / 2;
+            }
+
+            // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+            .collpase-subtitle,
+            .collapse-subtitle {
+              grid-area: 2 / 1 / 3;
+            }
+          }
+        }
+
+        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+        @include accordion-only-child('.collpase-title');
+        @include accordion-only-child('.collapse-title');
+        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+        @include accordion-only-child('.collpase-subtitle');
+        @include accordion-only-child('.collapse-subtitle');
 
         &.collapsed {
           border-radius: $card-border-radius;
-
-          &:after {
-            content: 'Ver detalle';
-          }
         }
       }
     }
 
-    .collpase-subtitle {
-      text-transform: uppercase;
-      font-weight: $card-font-weight;
-      font-size: $collapse-info-title-size;
-    }
-
-    .collpase-title {
+    // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+    .collpase-subtitle,
+    .collapse-subtitle {
       font-weight: $card-subtitle-font-weight;
       font-size: $collapse-info-subtitle-size;
+      font-family: $font-family-sans-serif;
+      grid-area: 2 / 1 / 3 / 2;
+    }
+
+    // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+    .collpase-title,
+    .collapse-title {
+      @extend .h4;
+      font-weight: $card-font-weight;
+      grid-area: 1 / 1 / 2 / 2;
+      margin-bottom: 0;
+    }
+
+    .collapse-label {
+      font-size: 0.813rem;
+      grid-area: 2 / 1 / 3 / 2;
+      font-weight: $lead-font-weight;
     }
 
     .card-body {
-      padding-top: 1rem;
+      padding: 1rem 1.5rem;
       border: $collapse-border-width solid $card-header-bg;
       @include border-bottom-radius($card-border-radius);
+
+      > h5 {
+        font-weight: $headings-font-weight;
+      }
+
+      > label.card-details {
+        cursor: pointer;
+        margin-bottom: 0;
+      }
+
+      .card-details {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        .card-details-content {
+          display: grid;
+          grid-column-gap: 1rem;
+          width: 95%;
+
+          @media screen and (max-width: 592px) {
+            width: 70%;
+          }
+
+          > h5 {
+            margin-bottom: 0;
+            font-weight: $headings-font-weight;
+          }
+        }
+
+        i,
+        .material-icons-round {
+          margin: auto 0;
+          font-size: 1.25rem;
+        }
+
+        .form-radio {
+          cursor: pointer;
+          margin-left: auto;
+          width: 1.25rem;
+          height: 1.25rem;
+          appearance: none;
+          background-color: $white;
+          font: inherit;
+          color: currentColor;
+          border: 0.15rem solid currentColor;
+          border-radius: 50%;
+          transform: translateY(-0.075rem);
+          display: grid;
+          place-content: center;
+        }
+
+        .form-radio:checked {
+          border: 0.15rem solid $info;
+        }
+
+        .form-radio::before {
+          content: '';
+          width: 0.65rem;
+          height: 0.65rem;
+          border-radius: 50%;
+          transform: scale(0);
+          transition: 120ms transform ease-in-out;
+          box-shadow: inset 1rem 1rem $info;
+        }
+
+        .form-radio:checked::before {
+          transform: scale(1);
+        }
+      }
     }
   }
 }

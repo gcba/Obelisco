@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/gcba/obelisco/blob/master/LICENSE)
  */
 
-// @import "~bootstrap/scss/bootstrap";
+// @import "bootstrap/scss/bootstrap";
 
 // Custom variables
 @import 'variables/colors';
@@ -12,20 +12,20 @@
 @import 'variables/grid';
 
 // Bootstrap base
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
 @import 'variables/miscellaneous';
-@import '~bootstrap/scss/mixins';
-@import '~bootstrap/scss/utilities';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/utilities';
 $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
-@import '~bootstrap/scss/root';
-@import '~bootstrap/scss/reboot';
-@import '~bootstrap/scss/print';
-@import '~bootstrap/scss/transitions';
-@import '~bootstrap/scss/type';
-@import '~bootstrap/scss/code';
-@import '~bootstrap/scss/close';
-@import '~bootstrap/scss/grid';
+@import 'node_modules/bootstrap/scss/root';
+@import 'node_modules/bootstrap/scss/reboot';
+@import 'node_modules/bootstrap/scss/print';
+@import 'node_modules/bootstrap/scss/transitions';
+@import 'node_modules/bootstrap/scss/type';
+@import 'node_modules/bootstrap/scss/code';
+@import 'node_modules/bootstrap/scss/close';
+@import 'node_modules/bootstrap/scss/grid';
 
 // Custom styles
 @import 'components/typography';
@@ -52,6 +52,7 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/progression';
 @import 'components/stepper';
 @import 'components/table';
+@import 'components/tooltip';
 @import 'components/audio';
 @import 'components/status-message';
 @import 'components/spinner';

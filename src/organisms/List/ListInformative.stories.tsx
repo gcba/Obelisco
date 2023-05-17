@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Componentes|Listas',
+  title: 'Organismos|Listas',
   decorators: [withA11y]
 };
 

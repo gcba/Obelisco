@@ -7,71 +7,66 @@ $pagination-active-color: $white;
 $pagination-hover-color: $blue;
 
 $pagination-box-shadow: 0 0 0 0.125rem $grisulado-50;
-$pagination-focus-box-shadow: 0 0 0 0.25rem theme-color-level('info', 3) !important;
+$pagination-focus-box-shadow: 0 0 0 0.25rem theme-color-level('info', 3);
 $pagination-hover-box-shadow: 0 0 0 0.125rem $blue;
 
 $pagination-padding-y: spaceUnits(1);
 $pagination-padding-x: spaceUnits(3);
-$pagination-margin-x: 0.2rem;
 $pagination-border-width: 0;
 
-$pagination-hover-bg: transparent;
 $pagination-disabled-bg: transparent;
 
 /* === Custom variables and mixins === */
 
-$page-navigation-border: 2px solid $border-color;
-
-$pagination-icon-size: spaceUnits(5);
 $pagination-size: 40px;
+
+$pagination-icon-padding-x-sm: spaceUnits(1);
+$pagination-icon-padding-x: spaceUnits(2);
 
 $pagination-icon-left-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M14.71 6.71c-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"></path></svg>');
 $pagination-icon-right-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(0,123,199);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
 $pagination-icon-left: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(56, 72, 92);transform:;-ms-filter:"><path d="M14.71 6.71c-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"></path></svg>');
 $pagination-icon-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(56, 72, 92);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
-$pagination-icon-right-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
-$pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M14.71 6.71c-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"></path></svg>');
+$pagination-icon-right-active: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M9.29 6.71c-.39.39-.39 1.02 0 1.41L13.17 12l-3.88 3.88c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"></path></svg>');
+$pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgb(255,255,255);transform:;-ms-filter:"><path d="M14.71 6.71c-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.38-1.03 0-1.41z"></path></svg>');
+
+@mixin pagination-states($text-decoration, $box-shadow, $bg-color, $color, $icon-left, $icon-right) {
+  text-decoration: $text-decoration;
+  box-shadow: $box-shadow;
+  background-color: $bg-color;
+  color: $color;
+
+  .page-previous-icon {
+    content: $icon-left;
+  }
+
+  .page-next-icon {
+    content: $icon-right;
+  }
+
+  .page-previous-text,
+  .page-next-text {
+    color: $color;
+  }
+}
 
 /* === Bootstrap Import === */
 
-@import '~bootstrap/scss/pagination';
+@import 'node_modules/bootstrap/scss/pagination';
 
 /* === Custom styles === */
 
 .pagination {
-  gap: 0.25rem;
+  gap: 0.5rem;
 
   .page-item {
     display: inline-block;
 
     &.no-events {
       pointer-events: none;
-    }
-
-    &:active,
-    &.active {
       .page-link {
-        background-color: $pagination-active-bg;
-
-        &:hover,
-        &.hover {
-          box-shadow: $pagination-box-shadow;
-          color: $pagination-active-color;
-          text-decoration: none;
-
-          .page-previous-icon {
-            content: $pagination-icon-left-active-hover !important;
-          }
-
-          .page-next-icon {
-            content: $pagination-icon-right-active-hover !important;
-          }
-        }
-      }
-
-      .page-previous-text,
-      .page-next-text {
-        color: $pagination-active-color !important;
+        box-shadow: none;
+        background-color: transparent;
       }
     }
 
@@ -80,74 +75,119 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
       justify-content: center;
       align-items: center;
       border-radius: $border-radius * 2;
-      margin: 0 $pagination-margin-x;
       box-shadow: $pagination-box-shadow;
       height: $pagination-size;
       min-width: 35px;
       font-family: $font-family-headings;
-      gap: 0.5rem;
+      gap: 0.25rem;
       text-decoration: none;
       font-weight: normal;
+      font-size: 1.125rem;
 
-      &:hover,
-      &.hover {
-        text-decoration: underline;
-        box-shadow: $pagination-hover-box-shadow;
+      .page-previous-icon,
+      .page-next-icon {
+        display: inline-block;
+        vertical-align: text-bottom;
+      }
 
-        .page-previous-icon {
-          content: $pagination-icon-left-hover;
-        }
+      .page-previous-icon {
+        content: $pagination-icon-left;
+      }
 
-        .page-next-icon {
-          content: $pagination-icon-right-hover;
-        }
+      .page-next-icon {
+        content: $pagination-icon-right;
+      }
+
+      &:has(.page-previous-icon) {
+        padding-left: $pagination-icon-padding-x-sm;
+      }
+
+      &:has(.page-next-icon) {
+        padding-right: $pagination-icon-padding-x-sm;
+      }
+
+      &:has(.page-previous-icon, .page-next-icon):not(:has(.page-next-text, .page-previous-text)) {
+        padding-left: $pagination-icon-padding-x;
+        padding-right: $pagination-icon-padding-x;
+      }
+
+      &:visited {
+        color: $pagination-color;
       }
 
       &:focus,
       &.focus {
-        text-decoration: none;
+        @include pagination-states(
+          none,
+          $pagination-focus-box-shadow,
+          $pagination-bg,
+          $pagination-color,
+          $pagination-icon-left,
+          $pagination-icon-right
+        );
+      }
 
-        .page-previous-text,
-        .page-next-text {
-          color: $pagination-color;
-        }
+      &:hover,
+      &.hover {
+        @include pagination-states(
+          underline,
+          $pagination-hover-box-shadow,
+          $pagination-bg,
+          $pagination-hover-color,
+          $pagination-icon-left-hover,
+          $pagination-icon-right-hover
+        );
+      }
+    }
+
+    &:active,
+    &.active {
+      .page-link,
+      .page-link:visited {
+        @include pagination-states(
+          none,
+          $pagination-box-shadow,
+          $pagination-active-bg,
+          $pagination-active-color,
+          $pagination-icon-left-active,
+          $pagination-icon-right-active
+        );
 
         &:hover,
         &.hover {
-          .page-previous-icon {
-            content: $pagination-icon-left;
-          }
-
-          .page-next-icon {
-            content: $pagination-icon-right;
-          }
+          @include pagination-states(
+            none,
+            $pagination-box-shadow,
+            $pagination-active-bg,
+            $pagination-active-color,
+            $pagination-icon-left-active,
+            $pagination-icon-right-active
+          );
         }
       }
     }
-  }
 
-  .page-previous-icon,
-  .page-next-icon {
-    display: inline-block;
-    vertical-align: text-bottom;
-  }
-
-  .page-previous-icon {
-    content: $pagination-icon-left;
-  }
-
-  .page-next-icon {
-    content: $pagination-icon-right;
-  }
-
-  .page-item.disabled {
-    .page-previous-icon {
-      content: $pagination-icon-left-hover;
+    &:is(.disabled) {
+      pointer-events: none;
     }
-    
-    .page-next-icon {
-      content: $pagination-icon-right-hover;
+
+    &.disabled {
+      .page-previous-icon {
+        content: $pagination-icon-left-hover;
+      }
+
+      .page-next-icon {
+        content: $pagination-icon-right-hover;
+      }
     }
+  }
+  
+  .page-navigation {
+    padding-top: spaceUnits(6);
+    padding-bottom: spaceUnits(4);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -155,56 +195,20 @@ $pagination-icon-left-active-hover: url('data:image/svg+xml;utf8,<svg xmlns="htt
   .pagination {
     .page-item {
       .page-link {
-        margin: 0;
-      }
+        min-width: 2rem;
+        width: 2rem;
+        height: 2rem;
 
-      .page-previous-text,
-      .page-next-text {
-        @include sr-only;
-      }
-    }
-  }
-}
-
-.page-navigation {
-  padding-top: spaceUnits(6);
-  padding-bottom: spaceUnits(4);
-  border-bottom: $page-navigation-border;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  .page-link {
-    &:active {
-      background-color: $pagination-active-bg;
-
-      &:hover {
         .page-previous-text,
         .page-next-text {
-          color: $white !important;
+          @include sr-only;
+        }
+
+        &:has(.page-previous-icon, .page-next-icon) {
+          padding-left: $pagination-icon-padding-x-sm;
+          padding-right: $pagination-icon-padding-x-sm;
         }
       }
-    }
-
-    &:hover {
-      .page-previous-text,
-      .page-next-text {
-        color: $pagination-hover-color;
-      }
-    }
-
-    &:focus {
-      &:hover {
-        .page-previous-text,
-        .page-next-text {
-          color: $pagination-color;
-        }
-      }
-    }
-
-    .page-previous-text,
-    .page-next-text {
-      color: $pagination-color;
     }
   }
 }

@@ -17,6 +17,8 @@ $alert-text-distance: spaceUnits(2);
 
 // Íconos para cada tipo de alerta
 
+$close-icon: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1)'><path d='m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z'></path></svg>");
+
 $alert-icons: (
   'success':
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(38, 135, 74, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>'),
@@ -58,13 +60,17 @@ $theme-colors: map-merge(
     'primary': $orange
   )
 );
-@import '~bootstrap/scss/alert';
+@import 'node_modules/bootstrap/scss/alert';
 
 /* === Custom styles === */
 
 .alert {
   counter-reset: section;
   padding-left: $alert-padding-y + $alert-padding-left;
+
+  &:not(:has(ol, ul)) {
+    display: flex;
+  }
 
   &::before {
     content: '';
@@ -94,7 +100,10 @@ $theme-colors: map-merge(
 
     &.list-links {
       color: $blue;
-      text-decoration: underline;
+
+      span {
+        text-decoration: underline;
+      }
     }
 
     li {
@@ -116,6 +125,19 @@ $theme-colors: map-merge(
 
     &:visited {
       color: $blue;
+    }
+  }
+
+  &.alert-dismissible {
+    p {
+      margin-bottom: 0;
+    }
+
+    .close {
+      color: $black;
+      opacity: 0.75;
+      padding: 0;
+      margin: $alert-padding-y $alert-padding-x;
     }
   }
 }

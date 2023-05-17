@@ -51,7 +51,7 @@ $theme-colors: map-merge(
 
 /* === Bootstrap Import === */
 
-@import '~bootstrap/scss/buttons';
+@import 'node_modules/bootstrap/scss/buttons';
 
 /* === Custom styles === */
 @mixin btn-disabled {
@@ -164,6 +164,7 @@ $theme-colors: map-merge(
 
     @if $color == 'primary' {
       color: $grisulado-900;
+
       &:visited,
       &:hover {
         color: $grisulado-900;
@@ -174,6 +175,7 @@ $theme-colors: map-merge(
       background-color: transparent;
       border-color: $link-color;
       color: $link-color;
+
       &:hover,
       &:focus,
       &.focus,
@@ -193,18 +195,32 @@ a.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.25rem;
 
   i,
-  span {
-    margin-right: 0.25rem;
-    font-size: 0.9375rem;
+  .material-icons-round {
+    font-size: 1rem;
   }
 
   &.btn-lg {
     i,
-    span {
-      margin-right: 0.25rem;
-      font-size: $btn-font-size;
+    .material-icons-round {
+      font-size: 1.25rem;
+    }
+  }
+
+  //Botón con spinner
+  &:focus,
+  &.focus,
+  &:hover,
+  &.hover,
+  &:active,
+  &.active {
+    &:is(.btn-outline-secondary, .btn-outline-success, .btn-outline-danger) {
+      .spinner-border {
+        border-color: $white;
+        border-right-color: $grisulado-300;
+      }
     }
   }
 }
