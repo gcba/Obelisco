@@ -86,7 +86,7 @@ const LegalSection = (): JSX.Element => (
             </a>
           </li>
           <li className="list-inline-item">
-            <a href="https://www.buenosaires.gob.ar/gobierno/transparencia">Transparencia activa</a>
+            <a href="https://www.buenosaires.gob.ar/gobierno/transparencia">Transparencia</a>
           </li>
         </ul>
       </div>
