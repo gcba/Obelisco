@@ -1,5 +1,9 @@
 import * as React from 'react';
 
+// Components
+import { panelBgColor } from '../utils';
+import classnames from 'classnames';
+
 export interface PannelAction {
   name: string;
   className: string;
@@ -17,6 +21,7 @@ interface BasePanelProps {
   description?: string | JSX.Element;
   buttons?: PannelAction[];
   link?: PannelAction;
+  bgColor?: panelBgColor;
 }
 
 export interface SimplePanel extends BasePanelProps {
@@ -44,10 +49,14 @@ const getVideo = (video?: PanelImage): JSX.Element | null => {
 };
 
 export const PanelHorizontal: React.FC<SimplePanel> = (props: React.PropsWithChildren<SimplePanel>) => {
-  const { title, description, picture, video, buttons, link } = props;
+  const { title, description, picture, video, buttons, link, bgColor } = props;
+
+  const panelHorizontalClasses = classnames('card', 'card-simple', 'panel-horizontal', {
+    [`bg-${bgColor}`]: bgColor !== undefined
+  });
 
   return (
-    <div className="card card-simple panel-horizontal">
+    <div className={panelHorizontalClasses.trim()}>
       {picture && getImage(picture as PanelImage)}
       {video && getVideo(video as PanelImage)}
       <div className="card-body">
@@ -70,10 +79,14 @@ export const PanelHorizontal: React.FC<SimplePanel> = (props: React.PropsWithChi
 };
 
 export const PanelVertical: React.FC<SimplePanel> = (props: React.PropsWithChildren<SimplePanel>) => {
-  const { title, description, picture, video, buttons, link } = props;
+  const { title, description, picture, video, buttons, link, bgColor } = props;
+
+  const panelVerticalClasses = classnames('card', 'card-simple', 'panel-vertical', {
+    [`bg-${bgColor}`]: bgColor !== undefined
+  });
 
   return (
-    <div className="card card-simple panel-vertical">
+    <div className={panelVerticalClasses.trim()}>
       {picture && getImage(picture as PanelImage)}
       {video && getVideo(video as PanelImage)}
       <div className="card-body">

@@ -158,6 +158,18 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
     .download-link {
       width: 100%;
       margin-right: 0;
+
+      + .card-link {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+%panel-bg-color {
+  &.bg-white, &.bg-light {
+    padding: 1.5rem;
+    @include media-breakpoint-down(xs) {
+     padding: 1rem;
     }
   }
 }
@@ -523,10 +535,13 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
       .card-text {
         margin-bottom: $panel-text-margin-bottom;
+        margin-top: 0;
       }
 
       @include card-link-panel;
     }
+
+    @extend %panel-bg-color;
   }
 
   &.panel-vertical {
@@ -558,16 +573,21 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
       .card-text {
         margin-bottom: $panel-text-margin-bottom;
+        margin-top: 0;
       }
 
       @include card-link-panel;
     }
+
+    @extend %panel-bg-color;
   }
 
   &.panel-list-link {
     .card-title {
       @extend .h3;
     }
+
+    @extend %panel-bg-color;
   }
 
   &.panel-sm {
@@ -599,6 +619,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
         @extend .h3;
       }
     }
+
+    @extend %panel-bg-color;
   }
 }
 

@@ -1,16 +1,23 @@
 // Base
 import React from 'react';
+import './Panel.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración general del componente
 export default {
-  title: 'Componentes|Panel',
+  title: 'Componentes|Panel/Chico/Horizontal',
   decorators: [withA11y]
 };
 
-export const PanelInformacion = (): JSX.Element => {
+export const SmallPanelHorizontalColors = (): JSX.Element => {
+  return <div className="storybook__wrapper-small"></div>;
+};
+
+SmallPanelHorizontalColors.story = { name: 'Con fondo' };
+
+export const SmallPanelHorizontalVariants = (): JSX.Element => {
   return (
     <div className="container">
       <div className="panel-deck max-cards-2">
@@ -49,4 +56,4 @@ export const PanelInformacion = (): JSX.Element => {
   );
 };
 
-PanelInformacion.story = { name: 'Panel de información' };
+SmallPanelHorizontalVariants.story = { name: 'Variantes' };
