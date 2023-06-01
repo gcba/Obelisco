@@ -46,6 +46,11 @@ $divider-margin-mobile: 2rem 0 2rem;
     @extend .text-white;
     text-decoration: underline;
 
+    &:focus,
+    &.focus {
+      box-shadow: 0 0 0 2px $grisulado-10;
+    }
+
     &:visited {
       @extend .text-white;
     }

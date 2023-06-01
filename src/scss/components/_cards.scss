@@ -833,6 +833,11 @@ button.card {
       &:has(i, .material-icons-round) {
         grid-template-columns: 1.5rem 1fr auto;
         @include accordion-columns-4;
+
+        i, .material-icons-round {
+          font-size: 1.5rem !important;
+          width: 1.5rem;
+        }
       }
 
       // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
