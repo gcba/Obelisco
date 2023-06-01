@@ -1,9 +1,10 @@
 // Base
-import React from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './Dropdown.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+import React from 'react';
 
 // Configuración general del componente
 export default {
@@ -382,3 +383,103 @@ export const Tamanos = (): JSX.Element => (
 );
 
 Tamanos.story = { name: 'Tamaños' };
+
+export const DesplegableCheckbox = (): JSX.Element => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [checkboxStates, setCheckboxStates] = useState({
+    design: false,
+    programming: false,
+    marketing: false
+  });
+
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const handleCheckboxChange = (checkboxName: string) => {
+    setCheckboxStates((prevState) => ({
+      ...prevState,
+      [checkboxName]: !prevState[checkboxName]
+    }));
+  };
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen((prevState) => !prevState);
+  };
+
+  const handleOutsideClick = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleOutsideClick);
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
+
+  const selectedCheckboxCount = Object.values(checkboxStates).filter((checked) => checked).length;
+
+  return (
+    <>
+      <div className="dropdown-container">
+        <div className={`dropdown mb-3 ${dropdownOpen ? 'show' : ''}`} ref={dropdownRef}>
+          <button
+            type="button"
+            className={`btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle ${
+              dropdownOpen ? 'active' : ''
+            }`}
+            onClick={handleDropdownToggle}
+            aria-haspopup="true"
+            aria-expanded={dropdownOpen ? 'true' : 'false'}>
+            Desplegable {selectedCheckboxCount > 0 ? `(${selectedCheckboxCount})` : ''}
+          </button>
+          <div className={`dropdown-menu dropdown-body ${dropdownOpen ? 'show' : ''}`}>
+            <div className="custom-control custom-checkbox" onClick={(event) => event.stopPropagation()}>
+              <input
+                className="custom-control-input"
+                type="checkbox"
+                id="skills-design-input"
+                name="skills"
+                value="design"
+                checked={checkboxStates.design}
+                onChange={() => handleCheckboxChange('design')}
+              />
+              <label className="custom-control-label" htmlFor="skills-design-input">
+                Diseño
+              </label>
+            </div>
+            <div className="custom-control custom-checkbox" onClick={(event) => event.stopPropagation()}>
+              <input
+                className="custom-control-input"
+                type="checkbox"
+                id="skills-programming-input"
+                name="skills"
+                value="programming"
+                checked={checkboxStates.programming}
+                onChange={() => handleCheckboxChange('programming')}
+              />
+              <label className="custom-control-label" htmlFor="skills-programming-input">
+                Programación
+              </label>
+            </div>
+            <div className="custom-control custom-checkbox" onClick={(event) => event.stopPropagation()}>
+              <input
+                className="custom-control-input"
+                type="checkbox"
+                id="skills-marketing-input"
+                name="skills"
+                value="marketing"
+                checked={checkboxStates.marketing}
+                onChange={() => handleCheckboxChange('marketing')}
+              />
+              <label className="custom-control-label" htmlFor="skills-marketing-input">
+                Marketing
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
