@@ -18,15 +18,15 @@ export const SmallPanelVerticalColors = (): JSX.Element => {
       <div className="card card-simple panel-sm">
         <img
           src="cards/paseobajo-wide.png"
-          className="rounded-lg mb-4"
+          className="rounded-lg"
           width={154}
           height={154}
           alt="descripción alternativa"
         />
         <div className="card-body">
-          <h3 className="card-title">Título de tarjeta</h3>
+          <h3 className="card-title">Nombre del titular</h3>
           <p className="card-text">
-            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+            Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.
           </p>
         </div>
       </div>
@@ -34,15 +34,15 @@ export const SmallPanelVerticalColors = (): JSX.Element => {
       <div className="card card-simple panel-sm bg-white">
         <img
           src="cards/paseobajo-wide.png"
-          className="rounded-lg mb-4"
+          className="rounded-lg"
           width={154}
           height={154}
           alt="descripción alternativa"
         />
         <div className="card-body">
-          <h3 className="card-title">Título de tarjeta</h3>
+          <h3 className="card-title">Nombre del titular</h3>
           <p className="card-text">
-            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+            Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.
           </p>
         </div>
       </div>
@@ -50,15 +50,15 @@ export const SmallPanelVerticalColors = (): JSX.Element => {
       <div className="card card-simple panel-sm bg-light">
         <img
           src="cards/paseobajo-wide.png"
-          className="rounded-lg mb-4"
+          className="rounded-lg"
           width={154}
           height={154}
           alt="descripción alternativa"
         />
         <div className="card-body">
-          <h3 className="card-title">Título de tarjeta</h3>
+          <h3 className="card-title">Nombre del titular</h3>
           <p className="card-text">
-            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+            Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.
           </p>
         </div>
       </div>
@@ -74,15 +74,15 @@ export const SmallPanelVerticalButtons = (): JSX.Element => {
       <div className="card card-simple panel-sm">
         <img
           src="cards/paseobajo-wide.png"
-          className="rounded-lg mb-4"
+          className="rounded-lg"
           width={154}
           height={154}
           alt="descripción alternativa"
         />
         <div className="card-body">
-          <h3 className="card-title">Título de tarjeta</h3>
+          <h3 className="card-title">Nombre del titular</h3>
           <p className="card-text">
-            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+            Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.
           </p>
         </div>
         <div className="panel-footer">
@@ -106,15 +106,15 @@ export const SmallPanelVerticalLink = (): JSX.Element => {
       <div className="card card-simple panel-sm">
         <img
           src="cards/paseobajo-wide.png"
-          className="rounded-lg mb-4"
+          className="rounded-lg"
           width={154}
           height={154}
           alt="descripción alternativa"
         />
         <div className="card-body">
-          <h3 className="card-title">Título de tarjeta</h3>
+          <h3 className="card-title">Nombre del titular</h3>
           <p className="card-text">
-            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+            Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.
           </p>
         </div>
         <div className="panel-footer">
@@ -135,18 +135,19 @@ export const SmallPanelVerticalListLink = (): JSX.Element => {
       <div className="card card-simple panel-list-link">
         <img
           src="cards/paseobajo-wide.png"
-          className="rounded-lg mb-4"
+          className="rounded-lg"
           width={154}
           height={154}
           alt="descripción alternativa"
         />
         <div className="card-body">
-          <h3 className="card-title">Lista de enlaces con imagen</h3>
+          <h3 className="card-title">Nombre del titular</h3>
           <p className="card-text">
-            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+            Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.
           </p>
         </div>
         <div className="list-link">
+          <h4 className="list-link-item-title">H4 - Nombre del titular</h4>
           <a className="download card-link" href="#" target="_blank" rel="noreferrer">
             Enlace
           </a>
@@ -179,15 +180,15 @@ export const SmallPanelVerticalListDownloadButton = (): JSX.Element => {
       <div className="card card-simple panel-list-link">
         <img
           src="cards/paseobajo-wide.png"
-          className="rounded-lg mb-4"
+          className="rounded-lg"
           width={154}
           height={154}
           alt="descripción alternativa"
         />
         <div className="card-body">
-          <h3 className="card-title">Lista de enlaces con imagen</h3>
+          <h3 className="card-title">Nombre del titular</h3>
           <p className="card-text">
-            Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
+            Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.
           </p>
         </div>
         <div className="list-link">

@@ -62,16 +62,21 @@ export const PanelHorizontal: React.FC<SimplePanel> = (props: React.PropsWithChi
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         {description && <p className="card-text">{description}</p>}
-        {buttons &&
-          buttons.map(({ className, name }, index) => (
-            <button type="button" className={className} key={index}>
-              {name}
-            </button>
-          ))}
+        {buttons && (
+          <div className="panel-footer">
+            {buttons.map(({ className, name }, index) => (
+              <button type="button" className={className} key={index}>
+                {name}
+              </button>
+            ))}
+          </div>
+        )}
         {link && (
-          <a className={link.className} href={picture ? picture?.src : video?.src} download>
-            {link.name}
-          </a>
+          <div className="panel-footer">
+            <a className={link.className} href={picture ? picture?.src : video?.src} download>
+              {link.name}
+            </a>
+          </div>
         )}
       </div>
     </div>
@@ -92,16 +97,21 @@ export const PanelVertical: React.FC<SimplePanel> = (props: React.PropsWithChild
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         {description && <p className="card-text">{description}</p>}
-        {buttons &&
-          buttons.map(({ className, name }, index) => (
-            <button type="button" className={className} key={index}>
-              {name}
-            </button>
-          ))}
+        {buttons && (
+          <div className="panel-footer">
+            {buttons.map(({ className, name }, index) => (
+              <button type="button" className={className} key={index}>
+                {name}
+              </button>
+            ))}
+          </div>
+        )}
         {link && (
-          <a className={link.className} href={picture ? picture?.src : video?.src} download>
-            {link.name}
-          </a>
+          <div className="panel-footer">
+            <a className={link.className} href={picture ? picture?.src : video?.src} download>
+              {link.name}
+            </a>
+          </div>
         )}
       </div>
     </div>

@@ -13,8 +13,9 @@ export default {
   decorators: [withA11y]
 };
 
-const TITLE = 'Encabezado';
-const DESCRIPTION = 'Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.';
+const TITLE = 'Nombre del titular';
+const DESCRIPTION =
+  'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
 const BUTTONS_ARR = [
   {
     name: 'Botón',
