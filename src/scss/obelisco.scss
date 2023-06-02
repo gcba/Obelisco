@@ -50,6 +50,7 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/pagination';
 @import 'components/progression';
 @import 'components/stepper';
+@import 'components/switch';
 @import 'components/table';
 @import 'components/tooltip';
 @import 'components/audio';
