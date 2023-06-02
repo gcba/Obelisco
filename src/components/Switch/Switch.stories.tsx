@@ -5,6 +5,9 @@ import './Switch.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
+// Components
+import { SwitchContainer } from '.';
+
 // Configuración general del componente
 export default {
   title: 'Componentes|Switch',
@@ -14,82 +17,28 @@ export default {
 export const Switch = (): JSX.Element => {
   return (
     <>
-      <label className="switch">
-        <input type="checkbox" id="switch-1"></input>
-        <span className="slider"></span>
-      </label>
-      <label htmlFor="switch-1" className="switch-label">
-        Label
-      </label>
-      <label className="switch">
-        <input type="checkbox" id="switch-2" checked></input>
-        <span className="slider"></span>
-      </label>
-      <label htmlFor="switch-2" className="switch-label">
-        Label
-      </label>
+      <SwitchContainer label="Label" id="switch-1" />
+      <SwitchContainer label="Label" id="switch-2" isChecked />
       <br />
       <br />
-      <label className="switch switch-dark">
-        <input type="checkbox" id="switch-dark-1"></input>
-        <span className="slider"></span>
-      </label>
-      <label htmlFor="switch-dark-1" className="switch-label">
-        Label
-      </label>
-      <label className="switch switch-dark">
-        <input type="checkbox" id="switch-dark-2" checked></input>
-        <span className="slider"></span>
-      </label>
-      <label htmlFor="switch-dark-2" className="switch-label">
-        Label
-      </label>
+      <SwitchContainer label="Label" id="switch-dark-1" isDark />
+      <SwitchContainer label="Label" id="switch-dark-2" isDark isChecked />
       <br />
       <br />
-      <label className="switch">
-        <input type="checkbox" id="switch-disable-1" disabled></input>
-        <span className="slider"></span>
-      </label>
-      <label htmlFor="switch-disable-1" className="switch-label disabled">
-        Label
-      </label>
-      <label className="switch">
-        <input type="checkbox" id="switch-disable-2" disabled checked></input>
-        <span className="slider"></span>
-      </label>
-      <label htmlFor="switch-disable-2" className="switch-label disabled">
-        Label
-      </label>
+      <SwitchContainer label="Label" id="switch-disable-1" isDisabled />
+      <SwitchContainer label="Label" id="switch-disable-2" isDisabled isChecked />
       <br />
       <br />
-      <label className="switch switch-sm">
-        <input type="checkbox"></input>
-        <span className="slider"></span>
-      </label>
-      <label className="switch switch-sm">
-        <input type="checkbox" checked></input>
-        <span className="slider"></span>
-      </label>
+      <SwitchContainer id="switch-sm-1" isSmall />
+      <SwitchContainer id="switch-sm-2" isSmall isChecked />
       <br />
       <br />
-      <label className="switch switch-dark switch-sm">
-        <input type="checkbox"></input>
-        <span className="slider"></span>
-      </label>
-      <label className="switch switch-dark switch-sm">
-        <input type="checkbox" checked></input>
-        <span className="slider"></span>
-      </label>
+      <SwitchContainer id="switch-dark-sm-1" isSmall isDark />
+      <SwitchContainer id="switch-dark-sm-2" isSmall isDark isChecked />
       <br />
       <br />
-      <label className="switch switch-sm">
-        <input type="checkbox" disabled></input>
-        <span className="slider"></span>
-      </label>
-      <label className="switch switch-sm">
-        <input type="checkbox" disabled checked></input>
-        <span className="slider"></span>
-      </label>
+      <SwitchContainer id="switch-sm-disable-1" isSmall isDisabled />
+      <SwitchContainer id="switch-sm-disable-2" isSmall isDisabled isChecked />
     </>
   );
 };
