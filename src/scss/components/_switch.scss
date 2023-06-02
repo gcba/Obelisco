@@ -1,4 +1,15 @@
 /* === Variable and mixins overides === */
+$switch-width: 48px;
+$switch-height: 24px;
+$switch-sm-width: 32px;
+$switch-sm-height: 16px;
+
+$switch-indicator-width: 18px;
+$switch-indicator-height: 18px;
+$switch-sm-indicator-width: 10px;
+$switch-sm-indicator-height: 10px;
+
+$switch-focus-shadow: 0 0 0 2px #005387;
 
 /* === Bootstrap Import === */
 
@@ -6,23 +17,23 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 48px;
-  height: 24px;
+  width: $switch-width;
+  height: $switch-height;
 
   &.switch-dark {
     input:checked + .slider {
       background-color: $grisulado-900;
     }
   }
-  
+
   &.switch-sm {
-    width: 32px;
-    height: 16px;
+    width: $switch-sm-width;
+    height: $switch-sm-height;
 
     .slider {
       &:before {
-        height: 10px;
-        width: 10px;
+        height: $switch-sm-indicator-height;
+        width: $switch-sm-indicator-width;
         left: 2px;
         bottom: 3px;
       }
@@ -43,7 +54,7 @@
     }
 
     &:focus + .slider {
-      box-shadow: 0 0 0 2px #005387;
+      box-shadow: $switch-focus-shadow;
       outline: none;
     }
 
@@ -75,8 +86,8 @@
     &:before {
       position: absolute;
       content: '';
-      height: 18px;
-      width: 18px;
+      height: $switch-indicator-height;
+      width: $switch-indicator-width;
       left: 2px;
       bottom: 3px;
       background-color: $white;
