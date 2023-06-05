@@ -5,7 +5,7 @@ import React from 'react';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { PanelVertical } from '.';
+import { LargePanel } from '.';
 
 // Configuración general del componente
 export default {
@@ -34,39 +34,25 @@ const LINK = {
   name: 'Descargar',
   className: 'download'
 };
+const PICTURE = {
+  src: 'panel/larreta.jpg',
+  alt: 'descripción alternativa'
+};
+const VIDEO = {
+  src: 'panel/larreta.mp4',
+  alt: 'descripción alternativa'
+};
 
 export const BackgroundHorizontalPanel = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-vertical">
       {/* Transparente */}
-      <PanelVertical
-        title={TITLE}
-        description={DESCRIPTION}
-        picture={{
-          src: 'panel/larreta.jpg',
-          alt: 'descripción alternativa'
-        }}
-      />
+      <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} picture={PICTURE} />
       {/* Blanco */}
-      <PanelVertical
-        title={TITLE}
-        description={DESCRIPTION}
-        picture={{
-          src: 'panel/larreta.jpg',
-          alt: 'descripción alternativa'
-        }}
-        bgColor="white"
-      />
+      <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} picture={PICTURE} bgColor="white" />
       {/* Grisulado */}
-      <PanelVertical
-        title={TITLE}
-        description={DESCRIPTION}
-        picture={{
-          src: 'panel/larreta.jpg',
-          alt: 'descripción alternativa'
-        }}
-        bgColor="light"
-      />
+      <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} picture={PICTURE} bgColor="light" />
+      {/* Transparente */}
     </div>
   );
 };
@@ -76,25 +62,15 @@ export const HighLightPanel = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-vertical">
       {/* Con Imagen y botones */}
-      <PanelVertical
+      <LargePanel
+        direction={'vertical'}
         title={TITLE}
         description={DESCRIPTION}
-        picture={{
-          src: 'panel/larreta.jpg',
-          alt: 'descripción alternativa'
-        }}
+        picture={PICTURE}
         buttons={BUTTONS_ARR}
       />
-      {/* Con Video y botones */}
-      <PanelVertical
-        title={TITLE}
-        description={DESCRIPTION}
-        video={{
-          src: 'panel/larreta.mp4',
-          alt: 'descripción alternativa'
-        }}
-        buttons={BUTTONS_ARR}
-      />
+      {/* Con video y botones */}
+      <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} video={VIDEO} buttons={BUTTONS_ARR} />
     </div>
   );
 };
@@ -104,25 +80,9 @@ export const HighLightPanelButtonLink = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-vertical">
       {/* Con Imagen y boton de descarga */}
-      <PanelVertical
-        title={TITLE}
-        description={DESCRIPTION}
-        picture={{
-          src: 'panel/larreta.jpg',
-          alt: 'descripción alternativa'
-        }}
-        link={LINK_BUTTON}
-      />
-      {/* Con Video y boton de descarga */}
-      <PanelVertical
-        title={TITLE}
-        description={DESCRIPTION}
-        video={{
-          src: 'panel/larreta.mp4',
-          alt: 'descripción alternativa'
-        }}
-        link={LINK_BUTTON}
-      />
+      <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} picture={PICTURE} link={LINK_BUTTON} />
+      {/* Con video y boton de descarga */}
+      <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} video={VIDEO} link={LINK_BUTTON} />
     </div>
   );
 };
@@ -132,25 +92,9 @@ export const HighLightPanelLink = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-vertical">
       {/* Con Imagen y enlace */}
-      <PanelVertical
-        title={TITLE}
-        description={DESCRIPTION}
-        picture={{
-          src: 'panel/larreta.jpg',
-          alt: 'descripción alternativa'
-        }}
-        link={LINK}
-      />
-      {/* Con Video y enlace */}
-      <PanelVertical
-        title={TITLE}
-        description={DESCRIPTION}
-        video={{
-          src: 'panel/larreta.mp4',
-          alt: 'descripción alternativa'
-        }}
-        link={LINK}
-      />
+      <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} picture={PICTURE} link={LINK} />
+      {/* Con video y enlace */}
+      <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} video={VIDEO} link={LINK} />
     </div>
   );
 };
