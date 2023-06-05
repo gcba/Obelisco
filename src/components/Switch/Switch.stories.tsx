@@ -17,16 +17,16 @@ export default {
 export const Switch = (): JSX.Element => {
   return (
     <>
-      <SwitchContainer label="Label" id="switch-1" />
-      <SwitchContainer label="Label" id="switch-2" isChecked />
+      <SwitchContainer label="Apagado" id="switch-1" />
+      <SwitchContainer label="Prendido" id="switch-2" isChecked />
       <br />
       <br />
-      <SwitchContainer label="Label" id="switch-dark-1" isDark />
-      <SwitchContainer label="Label" id="switch-dark-2" isDark isChecked />
+      <SwitchContainer label="Apagado" id="switch-dark-1" isDark />
+      <SwitchContainer label="Prendido" id="switch-dark-2" isDark isChecked />
       <br />
       <br />
-      <SwitchContainer label="Label" id="switch-disable-1" isDisabled />
-      <SwitchContainer label="Label" id="switch-disable-2" isDisabled isChecked />
+      <SwitchContainer label="Apagado" id="switch-disable-1" isDisabled />
+      <SwitchContainer label="Prendido" id="switch-disable-2" isDisabled isChecked />
       <br />
       <br />
       <SwitchContainer id="switch-sm-1" isSmall />

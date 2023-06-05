@@ -18,6 +18,10 @@ export const SwitchContainer: React.FC<SwitchProps> = (props: SwitchProps) => {
     'switch-dark': isDark
   });
 
+  const labelClasses = classNames('switch-label', {
+    disabled: isDisabled
+  });
+
   return (
     <>
       <label className={switchClasses}>
@@ -25,7 +29,7 @@ export const SwitchContainer: React.FC<SwitchProps> = (props: SwitchProps) => {
         <span className="slider"></span>
       </label>
       {label && (
-        <label htmlFor={id} className="switch-label">
+        <label htmlFor={id} className={labelClasses}>
           {label}
         </label>
       )}
