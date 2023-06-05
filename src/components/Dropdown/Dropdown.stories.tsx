@@ -1,5 +1,4 @@
 // Base
-import { useRef, useState, useEffect } from 'react';
 import './Dropdown.stories.scss';
 
 // Addons
