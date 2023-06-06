@@ -5,14 +5,34 @@ import './Panel.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
+// Components
+import { SmallPanel } from '.';
+
 // Configuración general del componente
 export default {
   title: 'Componentes|Panel/Chico/Horizontal',
   decorators: [withA11y]
 };
 
+const TITLE = 'Nombre del titular';
+const DESCRIPTION =
+  'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
+const PICTURE = {
+  src: 'cards/paseobajo-wide.png',
+  alt: 'descripción alternativa'
+};
+
 export const SmallPanelHorizontalColors = (): JSX.Element => {
-  return <div className="storybook__wrapper-small"></div>;
+  return (
+    <div className="storybook__wrapper-small-horizontal">
+      {/* Transparente */}
+      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={PICTURE} />
+      {/* Blanco */}
+      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={PICTURE} bgColor="white" />
+      {/* Grisulado */}
+      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={PICTURE} bgColor="light" />
+    </div>
+  );
 };
 
 SmallPanelHorizontalColors.story = { name: 'Con fondo' };

@@ -6,7 +6,7 @@ import './Panel.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { SmallPanel } from '.';
+import { SmallMapPanel, SmallPanel } from '.';
 
 // Configuración general del componente
 export default {
@@ -67,6 +67,30 @@ const LINK_LIST_BUTTONS = [
   }
 ];
 
+const TITLE_MAP = 'Dirección';
+const TITLE_MAP_DESCRIP = 'Ubicación';
+const DESCRIPTION_MAP = 'Dirección: Av. Monroe 3555';
+const BUTTONS_MAP_ARR = [
+  {
+    name: 'Cómo llego',
+    className: 'btn btn-primary btn-lg btn-block'
+  }
+];
+const BUTTONS_MAP_DESCRIPTION_ARR = [
+  {
+    name: 'Cómo llego',
+    className: 'btn btn-primary btn-lg'
+  }
+];
+const PICTURE_MAP = {
+  src: 'panel/mapa.jpg',
+  alt: 'Mapa'
+};
+const PICTURE_MAP_DESCRIP = {
+  src: 'panel/mapa-hospital.jpg',
+  alt: 'Mapa'
+};
+
 export const SmallPanelVerticalColors = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-small">
@@ -121,3 +145,52 @@ export const SmallPanelVerticalListDownloadButton = (): JSX.Element => {
 };
 
 SmallPanelVerticalListDownloadButton.story = { name: 'Con lista de botón de descarga' };
+
+export const Maps = (): JSX.Element => {
+  return (
+    <div className="storybook__wrapper-vertical">
+      <SmallMapPanel title={TITLE_MAP} picture={PICTURE_MAP} buttons={BUTTONS_MAP_ARR} />
+      <SmallMapPanel title={TITLE_MAP} picture={PICTURE_MAP} buttons={BUTTONS_MAP_ARR} bgColor="light" />
+      <SmallMapPanel
+        title={TITLE_MAP_DESCRIP}
+        description={DESCRIPTION_MAP}
+        picture={PICTURE_MAP_DESCRIP}
+        buttons={BUTTONS_MAP_DESCRIPTION_ARR}
+      />
+      <SmallMapPanel
+        title={TITLE_MAP_DESCRIP}
+        description={DESCRIPTION_MAP}
+        picture={PICTURE_MAP_DESCRIP}
+        buttons={BUTTONS_MAP_DESCRIPTION_ARR}
+        bgColor="light"
+      />
+    </div>
+  );
+};
+
+Maps.story = { name: 'Con mapa' };
+
+export const Process = (): JSX.Element => {
+  return (
+    <div className="storybook__wrapper-small">
+      <div className="card card-simple panel-sm-process">
+        <div className="card-body">
+          <h3 className="card-title">Título H3</h3>
+          <button type="button" className="btn btn-primary btn-lg btn-block">
+            Iniciar trámite
+          </button>
+        </div>
+      </div>
+      <div className="card card-simple panel-sm-process bg-light">
+        <div className="card-body">
+          <h3 className="card-title">Título H3</h3>
+          <button type="button" className="btn btn-primary btn-lg btn-block">
+            Iniciar trámite
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+Process.story = { name: 'Trámites' };

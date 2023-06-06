@@ -6,14 +6,19 @@ $panel-big-horizontal-title-margin-sm: 2rem 0 0 0;
 $panel-big-card-text-margin: 0.8125rem 0 0 0;
 $panel-big-title-margin-mobile: 1.5rem 0 0 0;
 
-$panel-small-horizontal-title-margin: 1.5rem 0 0 0;
-$panel-small-horizontal-title-margin-sm: 1rem 0 0 0;
+$panel-small-vertical-title-margin: 1.5rem 0 0 0;
+$panel-small-vertical-title-margin-mobile: 1rem 0 0 0;
+$panel-small-spacer: 1.5rem;
+$panel-small-spacer-mobile: 1rem;
 
-$panel-link-margin-right: 1rem;
-$panel-link-margin-bottom: 1rem;
+$panel-small-map-title-margin: 0 0 0.25rem;
+$panel-small-map-img-margin: 1rem 0;
+$panel-small-map-padding: 1.5rem;
+$panel-small-map-padding-mobile: 1rem;
+$panel-small-process-title-margin: 0 0 1rem;
 
 $card-panel-img-size: 3.75rem;
-$card-panel-img-mt: 1.25rem;
+$card-panel-img-mt: 0;
 $card-panel-card-body-pl: 1rem;
 
 $panel-deck-mt: 2.5rem;
@@ -188,7 +193,7 @@ $panel-deck-card-mr: 2rem;
     .card-body {
       .card-title {
         @extend .h3;
-        margin: $panel-small-horizontal-title-margin;
+        margin: $panel-small-vertical-title-margin;
       }
 
       .card-text {
@@ -209,12 +214,80 @@ $panel-deck-card-mr: 2rem;
     @include media-breakpoint-down(xs) {
       .card-body {
         .card-title {
-          margin: $panel-small-horizontal-title-margin-sm;
+          margin: $panel-small-vertical-title-margin-mobile;
         }
       }
 
       .panel-footer {
         margin-top: spaceUnits(4);
+      }
+    }
+
+    &-horizontal {
+      @extend .panel-sm;
+      flex-direction: row;
+
+      img {
+        aspect-ratio: 1 / 1;
+        + .card-body {
+          margin-left: $panel-small-spacer;
+        }
+      }
+      .card-body {
+        .card-title {
+          margin-top: 0;
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        img + .card-body {
+          margin-left: $panel-small-spacer-mobile;
+        }
+      }
+    }
+
+    &-map {
+      @extend .panel-sm;
+      background-color: $white;
+      padding: $panel-small-map-padding;
+
+      .card-body {
+        .card-title {
+          @extend .h5;
+          margin: $panel-small-map-title-margin;
+        }
+  
+        .card-text {
+          margin: 0;
+        }
+
+        .card-img {
+          margin: $panel-small-map-img-margin;
+        }
+
+        .panel-footer {
+          margin: 0;
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding: $panel-small-map-padding-mobile;
+      }
+    }
+
+    &-process {
+      @extend .panel-sm;
+      background-color: $white;
+      padding: $panel-small-map-padding;
+
+      .card-body {
+        .card-title {
+          margin: $panel-small-process-title-margin;
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        padding: $panel-small-map-padding-mobile;
       }
     }
   }
@@ -265,6 +338,11 @@ $panel-deck-card-mr: 2rem;
         padding-left: $card-panel-card-body-pl;
       }
     }
+
+    .card-body .card-text-panel {
+      margin-top: spaceUnits(1);
+      margin-bottom: 0px;
+    }
   }
 }
 //panel chico horizontal
@@ -289,20 +367,6 @@ $panel-deck-card-mr: 2rem;
       margin-bottom: 0px;
     }
 
-    .card.card-horizontal.card-simple.card-horizontal {
-      margin-bottom: 0px;
-    }
-
-    .card.card-horizontal .card-img-left-panel {
-      margin-top: 0px;
-    }
-
     @include panel-deck;
-  }
-
-  @include media-breakpoint-down(sm) {
-    .card.card-horizontal .card-img-left-panel {
-      margin-top: 0px;
-    }
   }
 }

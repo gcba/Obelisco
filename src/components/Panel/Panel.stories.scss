@@ -23,5 +23,9 @@
     &:has(.panel-sm) {
       gap: 4rem;
     }
+
+    &-horizontal {
+      @extend .storybook__wrapper-vertical;
+    }
   }
 }

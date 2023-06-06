@@ -30,7 +30,7 @@ export type PanelImage = {
 export type PanelPicture = PanelImage;
 
 interface BasePanelProps {
-  title: string;
+  title?: string;
   description?: string | JSX.Element;
   buttons?: PannelAction[];
   link?: PannelAction;
@@ -59,6 +59,54 @@ const getSmallImage = (picture?: PanelImage): JSX.Element | null => {
   return null;
 };
 
+const PanelFooter: React.FC<BasePanelProps> = ({ buttons, link, listLinkPanel, listLinkButtonPanel }) => {
+  return (
+    <>
+      {buttons && (
+        <div className="panel-footer">
+          {buttons.map(({ className, name }, index) => (
+            <button type="button" className={className} key={index}>
+              {name}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {link && (
+        <div className="panel-footer">
+          <a {...(link.className && { className: link.className })} href={link.url} target="_blank" rel="noreferrer">
+            {link.name}
+          </a>
+        </div>
+      )}
+
+      {listLinkPanel && (
+        <div className="list-link">
+          <h4 className="list-link-item-title">{listLinkPanel.listTitle}</h4>
+          {listLinkPanel.links?.map(({ name, className, url }, index) => (
+            <a key={index} className={className} href={url} target="_blank" rel="noreferrer">
+              {name}
+            </a>
+          ))}
+        </div>
+      )}
+
+      {listLinkButtonPanel && (
+        <div className="list-link">
+          {listLinkButtonPanel.map(({ listTitle, name, className, url }, index) => (
+            <React.Fragment key={index}>
+              <h4 className="list-link-item-title">{listTitle}</h4>
+              <a className={className} href={url} target="_blank" rel="noreferrer">
+                {name}
+              </a>
+            </React.Fragment>
+          ))}
+        </div>
+      )}
+    </>
+  );
+};
+
 const getVideo = (video?: PanelImage): JSX.Element | null => {
   if (video && video.src !== undefined) {
     return (
@@ -85,89 +133,94 @@ export const LargePanel: React.FC<SimplePanel> = (props: React.PropsWithChildren
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         {description && <p className="card-text">{description}</p>}
-        {buttons && (
-          <div className="panel-footer">
-            {buttons.map(({ className, name }, index) => (
-              <button type="button" className={className} key={index}>
-                {name}
-              </button>
-            ))}
-          </div>
-        )}
-        {link && (
-          <div className="panel-footer">
-            <a className={link.className} href={picture ? picture?.src : video?.src} download>
-              {link.name}
-            </a>
-          </div>
-        )}
+        <PanelFooter buttons={buttons} link={link} />
       </div>
     </div>
   );
 };
 
 export const SmallPanel: React.FC<SimplePanel> = (props: React.PropsWithChildren<SimplePanel>) => {
-  const { title, description, picture, buttons, link, bgColor, listLinkPanel, listLinkButtonPanel } = props;
+  const { title, description, picture, buttons, link, bgColor, direction, listLinkPanel, listLinkButtonPanel } = props;
 
   const smallPanelClasses = classnames(
     'card',
     'card-simple',
     {
-      'panel-list-link':
+      [`panel-list-link${direction === 'horizontal' ? ` panel-sm-horizontal` : ''.trim()}`]:
         listLinkPanel || listLinkPanel !== undefined || listLinkButtonPanel || listLinkButtonPanel !== undefined
     },
     {
-      'panel-sm':
-        (!listLinkPanel && !listLinkButtonPanel) || (listLinkPanel == undefined && listLinkButtonPanel == undefined)
+      [`panel-sm${direction ? `-${direction}` : ''}`]:
+        (!listLinkPanel && !listLinkButtonPanel && direction !== 'horizontal') ||
+        (listLinkPanel == undefined && listLinkButtonPanel == undefined)
     },
     { [`bg-${bgColor}`]: bgColor !== undefined }
   );
 
-  return (
-    <div className={smallPanelClasses.trim()}>
-      {picture && getSmallImage(picture as PanelImage)}
-      <div className="card-body">
-        <h3 className="card-title">{title}</h3>
-        {description && <p className="card-text">{description}</p>}
+  if (direction === 'horizontal') {
+    return (
+      <div className={smallPanelClasses.trim()}>
+        {picture && getSmallImage(picture as PanelImage)}
+        <div className="card-body">
+          <h3 className="card-title">{title}</h3>
+          {description && <p className="card-text">{description}</p>}
+          <PanelFooter
+            buttons={buttons}
+            link={link}
+            listLinkPanel={listLinkPanel}
+            listLinkButtonPanel={listLinkButtonPanel}
+          />
+        </div>
       </div>
-      {buttons && (
-        <div className="panel-footer">
-          {buttons.map(({ className, name }, index) => (
-            <button type="button" className={className} key={index}>
-              {name}
-            </button>
-          ))}
+    );
+  } else {
+    return (
+      <div className={smallPanelClasses.trim()}>
+        {picture && getSmallImage(picture as PanelImage)}
+        <div className="card-body">
+          <h3 className="card-title">{title}</h3>
+          {description && <p className="card-text">{description}</p>}
         </div>
-      )}
-      {link && (
-        <div className="panel-footer">
-          <a {...(link.className && { className: link.className })} href={link.url} target="_blank" rel="noreferrer">
-            {link.name}
-          </a>
-        </div>
-      )}
-      {listLinkPanel && (
-        <div className="list-link">
-          <h4 className="list-link-item-title">{listLinkPanel.listTitle}</h4>
-          {listLinkPanel.links?.map(({ name, className, url }, index) => (
-            <a key={index} className={className} href={url} target="_blank" rel="noreferrer">
-              {name}
-            </a>
-          ))}
-        </div>
-      )}
-      {listLinkButtonPanel && (
-        <div className="list-link">
-          {listLinkButtonPanel.map(({ listTitle, name, className, url }, index) => (
-            <React.Fragment key={index}>
-              <h4 className="list-link-item-title">{listTitle}</h4>
-              <a className={className} href={url} target="_blank" rel="noreferrer">
-                {name}
-              </a>
-            </React.Fragment>
-          ))}
-        </div>
-      )}
+        <PanelFooter
+          buttons={buttons}
+          link={link}
+          listLinkPanel={listLinkPanel}
+          listLinkButtonPanel={listLinkButtonPanel}
+        />
+      </div>
+    );
+  }
+};
+
+export const SmallMapPanel: React.FC<SimplePanel> = (props: React.PropsWithChildren<SimplePanel>) => {
+  const { title, description, picture, buttons, bgColor } = props;
+
+  const panelMapClasses = classnames('card', 'card-simple', 'panel-sm-map', {
+    [`bg-${bgColor}`]: bgColor !== undefined
+  });
+
+  return (
+    <div className={panelMapClasses.trim()}>
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
+        {description && <p className="card-text">Dirección: Av. Monroe 3555</p>}
+        {!description && (
+          <form className="form-search form-search-sm">
+            <div className="form-group">
+              <input
+                type="search"
+                className="form-control form-control-sm input-search"
+                id="name-input"
+                name="name"
+                placeholder="Buscar..."
+              />
+              <button className="reset" type="reset"></button>
+            </div>
+          </form>
+        )}
+        {picture && getImage(picture as PanelImage)}
+        <PanelFooter buttons={buttons} />
+      </div>
     </div>
   );
 };
