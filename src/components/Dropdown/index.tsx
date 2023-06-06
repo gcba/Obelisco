@@ -20,6 +20,8 @@ export interface DropdownProps {
 export interface DropdownOptionProps {
   options: Option[];
   isRadio: boolean;
+  iconBox?: string;
+  iconMat?: string;
 }
 
 export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren<DropdownProps>) => {
@@ -70,12 +72,12 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
 
 export default Dropdown;
 
-export const DropdownOption = ({ options, isRadio }: DropdownOptionProps): JSX.Element => {
-  const [dropdownOpen, setDropdownOpen] = useState(false); // Estado para controlar si el desplegable está abierto o cerrado
-  const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({}); // Estado para mantener el estado de las opciones seleccionadas
-  const dropdownRef = useRef<HTMLDivElement>(null); // Referencia al elemento del desplegable
+export const DropdownOption = ({ options, isRadio, iconBox, iconMat }: DropdownOptionProps): JSX.Element => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({});
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Maneja el cambio en una opción de checkbox, es decir en el button muestra la cantiad seleccionada
+  // Maneja el cambio de estado de una casilla de verificación
   const handleCheckboxChange = (checkboxName: string) => {
     setCheckboxStates((prevState) => ({
       ...prevState,
@@ -83,7 +85,7 @@ export const DropdownOption = ({ options, isRadio }: DropdownOptionProps): JSX.E
     }));
   };
 
-  // Maneja el cambio en una opción de radio, es decir en el button muestra si se seleciono un radio
+  // Maneja el cambio de estado de un radio button
   const handleRadioChange = (radioName: string) => {
     const updatedCheckboxStates = {};
     options.forEach((option) => {
@@ -92,19 +94,18 @@ export const DropdownOption = ({ options, isRadio }: DropdownOptionProps): JSX.E
     setCheckboxStates(updatedCheckboxStates);
   };
 
-  // Maneja el evento de clic en el botón del desplegable para abrirlo o cerrarlo
+  // Maneja el evento de abrir/cerrar el dropdown
   const handleDropdownToggle = () => {
     setDropdownOpen((prevState) => !prevState);
   };
 
-  // Maneja el evento de clic fuera del desplegable para cerrarlo si está abierto
+  // Maneja el evento de clic fuera del dropdown para cerrarlo
   const handleOutsideClick = useCallback((event: MouseEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setDropdownOpen(false);
     }
   }, []);
 
-  // Agrega un efecto de escucha de clics globales para cerrar el desplegable cuando se hace clic fuera de él
   useEffect(() => {
     document.addEventListener('click', handleOutsideClick);
     return () => {
@@ -112,7 +113,7 @@ export const DropdownOption = ({ options, isRadio }: DropdownOptionProps): JSX.E
     };
   }, [handleOutsideClick]);
 
-  const selectedCheckboxCount = Object.values(checkboxStates).filter((checked) => checked).length; // Calcula la cantidad de opciones seleccionadas
+  const selectedCheckboxCount = Object.values(checkboxStates).filter((checked) => checked).length;
 
   return (
     <>
@@ -131,18 +132,37 @@ export const DropdownOption = ({ options, isRadio }: DropdownOptionProps): JSX.E
           <div className={`dropdown-menu dropdown-body ${dropdownOpen ? 'show' : ''}`}>
             {options.map((option) => (
               <div className={`custom-control ${isRadio ? 'custom-radio' : 'custom-checkbox'}`} key={option.value}>
-                <input
-                  className="custom-control-input"
-                  type={isRadio ? 'radio' : 'checkbox'}
-                  id={`skills-${option.value}-input`}
-                  name="skills"
-                  value={option.value}
-                  checked={checkboxStates[option.value]}
-                  onChange={() => (isRadio ? handleRadioChange(option.value) : handleCheckboxChange(option.value))}
-                />
-                <label className="custom-control-label" htmlFor={`skills-${option.value}-input`}>
-                  {option.label}
-                </label>
+                {isRadio ? (
+                  <label className={`btn btn-chip btn-sm ${checkboxStates[option.value] ? 'active' : ''}`}>
+                    <input
+                      className="btn-check"
+                      type="radio"
+                      id={`skills-${option.value}-input`}
+                      name="profession"
+                      value={option.value}
+                      checked={checkboxStates[option.value]}
+                      onChange={() => handleRadioChange(option.value)}
+                    />
+                    {option.label}
+                    {iconBox && <i className={`bx ${iconBox}`} />}
+                    {iconMat && <span className="material-icons-round">{iconMat}</span>}
+                  </label>
+                ) : (
+                  <>
+                    <input
+                      className="custom-control-input"
+                      type="checkbox"
+                      id={`skills-${option.value}-input`}
+                      name="skills"
+                      value={option.value}
+                      checked={checkboxStates[option.value]}
+                      onChange={() => handleCheckboxChange(option.value)}
+                    />
+                    <label className="custom-control-label" htmlFor={`skills-${option.value}-input`}>
+                      {option.label}
+                    </label>
+                  </>
+                )}
               </div>
             ))}
           </div>

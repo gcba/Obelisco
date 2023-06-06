@@ -255,10 +255,9 @@ $animation-toggle: transform 0.2s ease-in-out;
     }
 
     &.dropdown-body {
-      background: $white;
+      background: white;
 
-      .custom-checkbox,
-      .custom-radio {
+      .custom-checkbox {
         margin-bottom: 0.25rem;
 
         &:last-of-type {
@@ -279,8 +278,7 @@ $animation-toggle: transform 0.2s ease-in-out;
           }
 
           &::after {
-            background-image: none;
-            /* Inicialmente no mostrar el icono */
+            background-image: none; /* Inicialmente no mostrar el icono */
             top: 0.9rem;
           }
         }
@@ -288,7 +286,7 @@ $animation-toggle: transform 0.2s ease-in-out;
 
       .custom-control-input:checked ~ .custom-control-label {
         background-color: $blue;
-        color: $white;
+        color: white;
       }
 
       .custom-checkbox {
@@ -301,9 +299,26 @@ $animation-toggle: transform 0.2s ease-in-out;
         }
       }
 
-      .custom-radio {
-        .custom-control-input:checked ~ .custom-control-label::before {
-          outline: 3px solid $white;
+      .btn-chip {
+        width: 100%;
+        min-height: 3.125rem;
+        text-align: start;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        background: $white;
+        
+        .bx, .material-icons-round {
+          display: none;
+          font-size: 1.5rem;
+        }
+
+        &.active {
+          background: $blue;
+
+          .bx, .material-icons-round {
+            display: block;
+          }
         }
       }
     }
