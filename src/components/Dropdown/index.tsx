@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 
 interface Option {
   value: string;
@@ -38,11 +38,11 @@ export const DropdownOption = ({ options, isRadio }: DropdownProps): JSX.Element
   };
 
   // Maneja el evento de clic fuera del desplegable para cerrarlo si está abierto
-  const handleOutsideClick = (event: MouseEvent) => {
+  const handleOutsideClick = useCallback((event: MouseEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setDropdownOpen(false);
     }
-  };
+  }, []);
 
   // Agrega un efecto de escucha de clics globales para cerrar el desplegable cuando se hace clic fuera de él
   useEffect(() => {
@@ -50,7 +50,7 @@ export const DropdownOption = ({ options, isRadio }: DropdownProps): JSX.Element
     return () => {
       document.removeEventListener('click', handleOutsideClick);
     };
-  }, []);
+  }, [handleOutsideClick]);
 
   const selectedCheckboxCount = Object.values(checkboxStates).filter((checked) => checked).length; // Calcula la cantidad de opciones seleccionadas
 
