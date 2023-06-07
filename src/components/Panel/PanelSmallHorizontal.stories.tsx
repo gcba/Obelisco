@@ -19,25 +19,31 @@ const DESCRIPTION =
   'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
 const PICTURE = {
   src: 'cards/paseobajo-wide.png',
-  alt: 'descripción alternativa'
+  alt: 'descripción alternativa',
+  className: 'rounded-lg',
+  size: 154
+};
+const PICTURE_XS = {
+  src: 'cards/paseobajo-wide.png',
+  alt: 'descripción alternativa',
+  className: 'rounded-lg',
+  size: 104
 };
 
 export const SmallPanelHorizontalColors = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-small-horizontal">
-      {/* Transparente */}
+      {/* Mediana */}
       <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={PICTURE} />
-      {/* Blanco */}
-      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={PICTURE} bgColor="white" />
-      {/* Grisulado */}
-      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={PICTURE} bgColor="light" />
+      {/* Chica */}
+      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={PICTURE_XS} />
     </div>
   );
 };
 
-SmallPanelHorizontalColors.story = { name: 'Con fondo' };
+SmallPanelHorizontalColors.story = { name: 'Tamaños de imagen' };
 
-export const SmallPanelHorizontalVariants = (): JSX.Element => {
+/* export const SmallPanelHorizontalVariants = (): JSX.Element => {
   return (
     <div className="container">
       <div className="panel-deck max-cards-2">
@@ -76,4 +82,4 @@ export const SmallPanelHorizontalVariants = (): JSX.Element => {
   );
 };
 
-SmallPanelHorizontalVariants.story = { name: 'Variantes' };
+SmallPanelHorizontalVariants.story = { name: 'Variantes' }; */

@@ -25,6 +25,8 @@ export interface ListButtonPanelAction {
 export type PanelImage = {
   src: string;
   alt?: string;
+  className?: string;
+  size?: number;
 };
 
 export type PanelPicture = PanelImage;
@@ -45,17 +47,19 @@ export interface SimplePanel extends BasePanelProps {
   video?: PanelPicture;
 }
 
-const createImage = (picture?: PanelImage, additionalProps = {}): JSX.Element | null => {
+const getImage = (picture?: PanelImage): JSX.Element | null => {
   if (picture && picture.src !== undefined) {
-    return <img src={picture.src} alt={picture.alt || ''} {...additionalProps} />;
+    return (
+      <img
+        src={picture.src}
+        alt={picture.alt || ''}
+        className={picture.className || 'card-img'}
+        {...(picture.size && { width: picture.size, height: picture.size })}
+      />
+    );
   }
   return null;
 };
-
-const getImage = (picture?: PanelImage) => createImage(picture, { className: 'card-img' });
-
-const getSmallImage = (picture?: PanelImage) =>
-  createImage(picture, { className: 'rounded-lg', width: 154, height: 154 });
 
 const getVideo = (video?: PanelImage): JSX.Element | null => {
   if (video && video.src !== undefined) {
@@ -163,7 +167,7 @@ export const SmallPanel: React.FC<SimplePanel> = (props: React.PropsWithChildren
   if (direction === 'horizontal') {
     return (
       <div className={smallPanelClasses.trim()}>
-        {picture && getSmallImage(picture as PanelImage)}
+        {picture && getImage(picture as PanelImage)}
         <div className="card-body">
           <h3 className="card-title">{title}</h3>
           {description && <p className="card-text">{description}</p>}
@@ -179,7 +183,7 @@ export const SmallPanel: React.FC<SimplePanel> = (props: React.PropsWithChildren
   } else {
     return (
       <div className={smallPanelClasses.trim()}>
-        {picture && getSmallImage(picture as PanelImage)}
+        {picture && getImage(picture as PanelImage)}
         <div className="card-body">
           <h3 className="card-title">{title}</h3>
           {description && <p className="card-text">{description}</p>}

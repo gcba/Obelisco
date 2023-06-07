@@ -29,7 +29,9 @@ const BUTTONS_ARR = [
 ];
 const PICTURE = {
   src: 'cards/paseobajo-wide.png',
-  alt: 'descripción alternativa'
+  alt: 'descripción alternativa',
+  className: 'rounded-lg',
+  size: 154
 };
 const LINK = {
   name: 'Enlace',
@@ -91,21 +93,6 @@ const PICTURE_MAP_DESCRIP = {
   alt: 'Mapa'
 };
 
-export const SmallPanelVerticalColors = (): JSX.Element => {
-  return (
-    <div className="storybook__wrapper-small">
-      {/* Transparente */}
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} />
-      {/* Blanco */}
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} bgColor="white" />
-      {/* Grisulado */}
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} bgColor="light" />
-    </div>
-  );
-};
-
-SmallPanelVerticalColors.story = { name: 'Con fondo' };
-
 export const SmallPanelVerticalButtons = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-small">
@@ -145,6 +132,31 @@ export const SmallPanelVerticalListDownloadButton = (): JSX.Element => {
 };
 
 SmallPanelVerticalListDownloadButton.story = { name: 'Con lista de botón de descarga' };
+
+export const SmallPanelVerticalWithoutAccion = (): JSX.Element => {
+  return (
+    <div className="storybook__wrapper-small">
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} />
+    </div>
+  );
+};
+
+SmallPanelVerticalWithoutAccion.story = { name: 'Sin accionable' };
+
+export const SmallPanelVerticalColors = (): JSX.Element => {
+  return (
+    <div className="storybook__wrapper-small">
+      {/* Transparente */}
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} />
+      {/* Blanco */}
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} bgColor="white" />
+      {/* Grisulado */}
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} bgColor="light" />
+    </div>
+  );
+};
+
+SmallPanelVerticalColors.story = { name: 'Con fondo' };
 
 export const Maps = (): JSX.Element => {
   return (
@@ -186,6 +198,28 @@ export const Process = (): JSX.Element => {
       <div className="card card-simple panel-sm-process bg-light">
         <div className="card-body">
           <h3 className="card-title">Título H3</h3>
+          <div className="panel-footer">
+            <button type="button" className="btn btn-primary btn-lg btn-block">
+              Iniciar trámite
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="card card-simple panel-sm-process">
+        <div className="card-body">
+          <h3 className="card-title">Título H3</h3>
+          <p className="card-text">Descripción</p>
+          <div className="panel-footer">
+            <button type="button" className="btn btn-primary btn-lg btn-block">
+              Iniciar trámite
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="card card-simple panel-sm-process bg-light">
+        <div className="card-body">
+          <h3 className="card-title">Título H3</h3>
+          <p className="card-text">Descripción</p>
           <div className="panel-footer">
             <button type="button" className="btn btn-primary btn-lg btn-block">
               Iniciar trámite

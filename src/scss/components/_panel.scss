@@ -4,7 +4,6 @@ $panel-spacer-lg: 2rem;
 $panel-large-vertical-title-margin: 2rem 0 0 0;
 $panel-large-horizontal-title-margin-sm: 2rem 0 0 0;
 $panel-large-card-text-margin: 0.8125rem 0 0 0;
-$panel-large-title-margin-mobile: 1.5rem 0 0 0;
 
 $panel-small-vertical-title-margin: 1.5rem 0 0 0;
 $panel-small-vertical-title-margin-mobile: 1rem 0 0 0;
@@ -47,18 +46,9 @@ $panel-deck-card-mr: 2rem;
 
 @mixin panel-big-mobile {
   @include media-breakpoint-down(xs) {
-    .card-img {
-      + .card-body {
-          .card-title {
-            margin: $panel-large-title-margin-mobile;
-          }
-      }
-    }
-
     .card-body {
       .panel-footer {
         flex-direction: column;
-        margin-top: 1rem;
         .card-link,
         .download-link {
           width: 100%;
