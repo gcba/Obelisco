@@ -176,17 +176,21 @@ export const Process = (): JSX.Element => {
       <div className="card card-simple panel-sm-process">
         <div className="card-body">
           <h3 className="card-title">Título H3</h3>
-          <button type="button" className="btn btn-primary btn-lg btn-block">
-            Iniciar trámite
-          </button>
+          <div className="panel-footer">
+            <button type="button" className="btn btn-primary btn-lg btn-block">
+              Iniciar trámite
+            </button>
+          </div>
         </div>
       </div>
       <div className="card card-simple panel-sm-process bg-light">
         <div className="card-body">
           <h3 className="card-title">Título H3</h3>
-          <button type="button" className="btn btn-primary btn-lg btn-block">
-            Iniciar trámite
-          </button>
+          <div className="panel-footer">
+            <button type="button" className="btn btn-primary btn-lg btn-block">
+              Iniciar trámite
+            </button>
+          </div>
         </div>
       </div>
     </div>

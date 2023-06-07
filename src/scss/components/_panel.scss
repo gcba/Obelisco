@@ -1,21 +1,20 @@
 /* === Variable and mixins overides === */
 
 $panel-spacer-lg: 2rem;
-$panel-big-vertical-title-margin: 2rem 0 0 0;
-$panel-big-horizontal-title-margin-sm: 2rem 0 0 0;
-$panel-big-card-text-margin: 0.8125rem 0 0 0;
-$panel-big-title-margin-mobile: 1.5rem 0 0 0;
+$panel-large-vertical-title-margin: 2rem 0 0 0;
+$panel-large-horizontal-title-margin-sm: 2rem 0 0 0;
+$panel-large-card-text-margin: 0.8125rem 0 0 0;
+$panel-large-title-margin-mobile: 1.5rem 0 0 0;
 
 $panel-small-vertical-title-margin: 1.5rem 0 0 0;
 $panel-small-vertical-title-margin-mobile: 1rem 0 0 0;
 $panel-small-spacer: 1.5rem;
 $panel-small-spacer-mobile: 1rem;
 
-$panel-small-map-title-margin: 0 0 0.25rem;
-$panel-small-map-img-margin: 1rem 0;
+$panel-small-map-img-margin: 1rem 0 0;
 $panel-small-map-padding: 1.5rem;
 $panel-small-map-padding-mobile: 1rem;
-$panel-small-process-title-margin: 0 0 1rem;
+$panel-small-card-text-margin: 0.25rem 0 0;
 
 $card-panel-img-size: 3.75rem;
 $card-panel-img-mt: 0;
@@ -48,10 +47,15 @@ $panel-deck-card-mr: 2rem;
 
 @mixin panel-big-mobile {
   @include media-breakpoint-down(xs) {
-    .card-body {
-      .card-title {
-        margin: $panel-big-title-margin-mobile;
+    .card-img {
+      + .card-body {
+          .card-title {
+            margin: $panel-large-title-margin-mobile;
+          }
       }
+    }
+
+    .card-body {
       .panel-footer {
         flex-direction: column;
         margin-top: 1rem;
@@ -97,12 +101,11 @@ $panel-deck-card-mr: 2rem;
     .card-body {
       .card-title {
         @extend .h2;
-        font-weight: $headings-font-weight;
         margin: 0;
       }
 
       .card-text {
-        margin: $panel-big-card-text-margin;
+        margin: $panel-large-card-text-margin;
       }
 
       .panel-footer {
@@ -125,11 +128,16 @@ $panel-deck-card-mr: 2rem;
 
         + .card-body {
           margin-left: 0;
+
+          .card-title {
+            margin: $panel-large-horizontal-title-margin-sm;
+          }
         }
       }
+
       .card-body {
         .card-title {
-          margin: $panel-big-horizontal-title-margin-sm;
+          margin: 0;
         }
       }
     }
@@ -160,15 +168,22 @@ $panel-deck-card-mr: 2rem;
       }
     }
 
+    .card-img {
+      + .card-body {
+          .card-title {
+            margin: $panel-large-vertical-title-margin;
+          }
+      }
+    }
+
     .card-body {
       .card-title {
         @extend .h2;
-        font-weight: $headings-font-weight;
-        margin: $panel-big-vertical-title-margin;
+        margin: 0;
       }
 
       .card-text {
-        margin: $panel-big-card-text-margin;
+        margin: $panel-large-card-text-margin;
       }
 
       .panel-footer {
@@ -190,14 +205,22 @@ $panel-deck-card-mr: 2rem;
   &.panel-sm {
     @extend %panel-bg-color;
 
+    img {
+      + .card-body {
+        .card-title {
+          margin: $panel-small-vertical-title-margin;
+        }
+      }
+    }
+
     .card-body {
       .card-title {
         @extend .h3;
-        margin: $panel-small-vertical-title-margin;
+        margin: 0;
       }
 
       .card-text {
-        margin-top: spaceUnits(1);
+        margin: $panel-small-card-text-margin;
       }
     }
 
@@ -212,9 +235,11 @@ $panel-deck-card-mr: 2rem;
     }
 
     @include media-breakpoint-down(xs) {
-      .card-body {
-        .card-title {
-          margin: $panel-small-vertical-title-margin-mobile;
+      img {
+        + .card-body {
+          .card-title {
+            margin: $panel-small-vertical-title-margin-mobile;
+          }
         }
       }
 
@@ -230,12 +255,11 @@ $panel-deck-card-mr: 2rem;
       img {
         aspect-ratio: 1 / 1;
         + .card-body {
-          margin-left: $panel-small-spacer;
-        }
-      }
-      .card-body {
-        .card-title {
-          margin-top: 0;
+            margin-left: $panel-small-spacer;
+
+            .card-title {
+              margin-top: 0;
+            }
         }
       }
 
@@ -254,11 +278,10 @@ $panel-deck-card-mr: 2rem;
       .card-body {
         .card-title {
           @extend .h5;
-          margin: $panel-small-map-title-margin;
         }
   
-        .card-text {
-          margin: 0;
+        form {
+          margin: $panel-small-card-text-margin;
         }
 
         .card-img {
@@ -266,7 +289,7 @@ $panel-deck-card-mr: 2rem;
         }
 
         .panel-footer {
-          margin: 0;
+          margin-top: spaceUnits(4);
         }
       }
 
@@ -281,8 +304,12 @@ $panel-deck-card-mr: 2rem;
       padding: $panel-small-map-padding;
 
       .card-body {
-        .card-title {
-          margin: $panel-small-process-title-margin;
+        .card-text {
+          margin: $panel-small-card-text-margin;
+        }
+
+        .panel-footer {
+          margin-top: spaceUnits(4);
         }
       }
 
@@ -340,8 +367,7 @@ $panel-deck-card-mr: 2rem;
     }
 
     .card-body .card-text-panel {
-      margin-top: spaceUnits(1);
-      margin-bottom: 0px;
+      margin: $panel-small-card-text-margin;
     }
   }
 }
