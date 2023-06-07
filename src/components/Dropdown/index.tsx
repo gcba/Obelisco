@@ -19,9 +19,8 @@ export interface DropdownProps {
 
 export interface DropdownOptionProps {
   options: Option[];
-  isRadio: boolean;
-  iconBox?: string;
-  iconMat?: string;
+  isRadio?: boolean;
+  children?: React.ReactNode;
 }
 
 export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren<DropdownProps>) => {
@@ -72,7 +71,7 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
 
 export default Dropdown;
 
-export const DropdownOption = ({ options, isRadio, iconBox, iconMat }: DropdownOptionProps): JSX.Element => {
+export const DropdownOption = ({ options, isRadio, children }: DropdownOptionProps): JSX.Element => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({});
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -144,8 +143,7 @@ export const DropdownOption = ({ options, isRadio, iconBox, iconMat }: DropdownO
                       onChange={() => handleRadioChange(option.value)}
                     />
                     {option.label}
-                    {iconBox && <i className={`bx ${iconBox}`} />}
-                    {iconMat && <span className="material-icons-round">{iconMat}</span>}
+                    {children}
                   </label>
                 ) : (
                   <>

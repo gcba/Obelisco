@@ -323,9 +323,15 @@ export const Options = (): JSX.Element => {
 
   return (
     <>
-      <DropdownOption options={checkboxOptions} isRadio={false} />
-      <DropdownOption options={radioOptions} isRadio={true} iconBox="bx-check" />
-      <DropdownOption options={radioOptions} isRadio={true} iconMat="done" />
+      <DropdownOption options={checkboxOptions}>
+        <i className="bx bxs-check"></i>
+      </DropdownOption>
+      <DropdownOption options={radioOptions} isRadio={true}>
+        <span className="material-icons-round">done</span>
+      </DropdownOption>
+      <DropdownOption options={radioOptions} isRadio={true}>
+        <span className="material-icons-round">done</span>
+      </DropdownOption>
     </>
   );
 };
