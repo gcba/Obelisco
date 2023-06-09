@@ -1,5 +1,5 @@
 // Base
-import React, { useState } from 'react';
+import React from 'react';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
