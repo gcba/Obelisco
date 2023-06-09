@@ -106,6 +106,10 @@ $panel-deck-card-mr: 2rem;
         .card-link {
           margin-left: 0;
         }
+
+        a.btn-icon {
+          display: inline-flex;
+        }
       }
     }
 
@@ -184,6 +188,10 @@ $panel-deck-card-mr: 2rem;
           margin-left: 0;
         }
       }
+
+      a.btn-icon {
+        display: inline-flex;
+      }
     }
 
     @extend %panel-bg-color;
@@ -259,54 +267,6 @@ $panel-deck-card-mr: 2rem;
         }
       }
     }
-
-    &-map {
-      @extend .panel-sm;
-      background-color: $white;
-      padding: $panel-small-map-padding;
-
-      .card-body {
-        .card-title {
-          @extend .h5;
-        }
-  
-        form {
-          margin: $panel-small-card-text-margin;
-        }
-
-        .card-img {
-          margin: $panel-small-map-img-margin;
-        }
-
-        .panel-footer {
-          margin-top: spaceUnits(4);
-        }
-      }
-
-      @include media-breakpoint-down(xs) {
-        padding: $panel-small-map-padding-mobile;
-      }
-    }
-
-    &-process {
-      @extend .panel-sm;
-      background-color: $white;
-      padding: $panel-small-map-padding;
-
-      .card-body {
-        .card-text {
-          margin: $panel-small-card-text-margin;
-        }
-
-        .panel-footer {
-          margin-top: spaceUnits(4);
-        }
-      }
-
-      @include media-breakpoint-down(xs) {
-        padding: $panel-small-map-padding-mobile;
-      }
-    }
   }
 
   //panel chico vertical con lista de enlaces o botones de descarga
@@ -332,6 +292,10 @@ $panel-deck-card-mr: 2rem;
 
         &.btn {
           display: inline-block;
+
+          &.btn-icon {
+            display: inline-flex;
+          }
         }
       }
 
@@ -341,7 +305,7 @@ $panel-deck-card-mr: 2rem;
     }
   }
 
-  //panel chico horizontal
+  //panel informativo horizontal
   &.card-horizontal {
     .card-img-left-panel {
       width: $card-panel-img-size;
@@ -361,7 +325,7 @@ $panel-deck-card-mr: 2rem;
     }
   }
 }
-//panel chico horizontal
+//panel informativo horizontal
 .panel-deck {
   .card {
     margin-bottom: $panel-deck-card-mb;

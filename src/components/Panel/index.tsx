@@ -8,6 +8,8 @@ export interface PanelAction {
   name: string;
   className?: string;
   url?: string;
+  icon?: string;
+  isDownload?: boolean;
 }
 
 export interface ListPanelAction {
@@ -20,6 +22,8 @@ export interface ListButtonPanelAction {
   name: string;
   className?: string;
   url?: string;
+  icon?: string;
+  isDownload?: boolean;
 }
 
 export type PanelImage = {
@@ -73,19 +77,36 @@ const getVideo = (video?: PanelImage): JSX.Element | null => {
   return null;
 };
 
+const ButtonIcon: React.FC<{ icon: string }> = ({ icon }) => (
+  <>
+    {!icon.includes('bx') && <span className="material-icons-round">{icon}</span>}
+    {icon.includes('bx') && <i className={icon}></i>}
+  </>
+);
+
 const ButtonGroup: React.FC<{ buttons: PanelAction[] }> = ({ buttons }) => (
   <div className="panel-footer">
-    {buttons.map(({ className, name }, index) => (
+    {buttons.map(({ className, name, icon }, index) => (
       <button type="button" className={className} key={index}>
+        {icon && <ButtonIcon icon={icon} />}
         {name}
       </button>
     ))}
   </div>
 );
 
-const LinkGroup: React.FC<{ link: PanelAction }> = ({ link }) => (
+const LinkGroup: React.FC<{ link: PanelAction; picture?: PanelImage; video?: PanelImage }> = ({
+  link,
+  picture,
+  video
+}) => (
   <div className="panel-footer">
-    <a {...(link.className && { className: link.className })} href={link.url} target="_blank" rel="noreferrer">
+    <a
+      {...(link.className && { className: link.className })}
+      href={!link.url ? (picture ? picture?.src : video?.src) : link.url}
+      {...(link.isDownload && { download: true })}
+      {...(!link.isDownload && { target: '_blank', rel: 'noreferrer' })}>
+      {link.icon && <ButtonIcon icon={link.icon} />}
       {link.name}
     </a>
   </div>
@@ -94,8 +115,14 @@ const LinkGroup: React.FC<{ link: PanelAction }> = ({ link }) => (
 const LinkList: React.FC<{ listLinkPanel: ListPanelAction }> = ({ listLinkPanel }) => (
   <div className="list-link">
     <h4 className="list-link-item-title">{listLinkPanel.listTitle}</h4>
-    {listLinkPanel.links?.map(({ name, className, url }, index) => (
-      <a key={index} className={className} href={url} target="_blank" rel="noreferrer">
+    {listLinkPanel.links?.map(({ name, className, url, icon, isDownload }, index) => (
+      <a
+        key={index}
+        {...(className && { className: className })}
+        href={url}
+        {...(isDownload && { download: true })}
+        {...(!isDownload && { target: '_blank', rel: 'noreferrer' })}>
+        {icon && <ButtonIcon icon={icon} />}
         {name}
       </a>
     ))}
@@ -104,10 +131,15 @@ const LinkList: React.FC<{ listLinkPanel: ListPanelAction }> = ({ listLinkPanel 
 
 const LinkButtonList: React.FC<{ listLinkButtonPanel: ListButtonPanelAction[] }> = ({ listLinkButtonPanel }) => (
   <div className="list-link">
-    {listLinkButtonPanel.map(({ listTitle, name, className, url }, index) => (
+    {listLinkButtonPanel.map(({ listTitle, name, className, url, icon, isDownload }, index) => (
       <React.Fragment key={index}>
         <h4 className="list-link-item-title">{listTitle}</h4>
-        <a className={className} href={url} target="_blank" rel="noreferrer">
+        <a
+          {...(className && { className: className })}
+          href={url}
+          {...(isDownload && { download: true })}
+          {...(!isDownload && { target: '_blank', rel: 'noreferrer' })}>
+          {icon && <ButtonIcon icon={icon} />}
           {name}
         </a>
       </React.Fragment>
@@ -115,11 +147,11 @@ const LinkButtonList: React.FC<{ listLinkButtonPanel: ListButtonPanelAction[] }>
   </div>
 );
 
-const PanelFooter: React.FC<BasePanelProps> = ({ buttons, link, listLinkPanel, listLinkButtonPanel }) => {
+const PanelFooter: React.FC<SimplePanel> = ({ buttons, link, listLinkPanel, listLinkButtonPanel, picture, video }) => {
   return (
     <>
       {buttons && <ButtonGroup buttons={buttons} />}
-      {link && <LinkGroup link={link} />}
+      {link && <LinkGroup link={link} picture={picture} video={video} />}
       {listLinkPanel && <LinkList listLinkPanel={listLinkPanel} />}
       {listLinkButtonPanel && <LinkButtonList listLinkButtonPanel={listLinkButtonPanel} />}
     </>
@@ -140,7 +172,7 @@ export const LargePanel: React.FC<SimplePanel> = (props: React.PropsWithChildren
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         {description && <p className="card-text">{description}</p>}
-        <PanelFooter buttons={buttons} link={link} />
+        <PanelFooter buttons={buttons} link={link} picture={picture} video={video} />
       </div>
     </div>
   );
@@ -197,37 +229,4 @@ export const SmallPanel: React.FC<SimplePanel> = (props: React.PropsWithChildren
       </div>
     );
   }
-};
-
-export const SmallMapPanel: React.FC<SimplePanel> = (props: React.PropsWithChildren<SimplePanel>) => {
-  const { title, description, picture, buttons, bgColor } = props;
-
-  const panelMapClasses = classnames('card', 'card-simple', 'panel-sm-map', {
-    [`bg-${bgColor}`]: bgColor !== undefined
-  });
-
-  return (
-    <div className={panelMapClasses.trim()}>
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        {description && <p className="card-text">Dirección: Av. Monroe 3555</p>}
-        {!description && (
-          <form className="form-search form-search-sm">
-            <div className="form-group">
-              <input
-                type="search"
-                className="form-control form-control-sm input-search"
-                id="name-input"
-                name="name"
-                placeholder="Buscar..."
-              />
-              <button className="reset" type="reset"></button>
-            </div>
-          </form>
-        )}
-        {picture && getImage(picture as PanelImage)}
-        <PanelFooter buttons={buttons} />
-      </div>
-    </div>
-  );
 };

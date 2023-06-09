@@ -6,7 +6,18 @@ import './Panel.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { SmallMapPanel, SmallPanel } from '.';
+import { SmallPanel } from '.';
+import {
+  TITLE,
+  DESCRIPTION,
+  SMALL_PICTURE,
+  SMALL_BUTTONS_ARR,
+  LINK,
+  SMALL_LINK_DOWNLOAD,
+  LINK_LIST,
+  LINK_DOWNLOAD_LIST,
+  LINK_LIST_BUTTONS
+} from './Panel.constants';
 
 // Configuración general del componente
 export default {
@@ -14,221 +25,94 @@ export default {
   decorators: [withA11y]
 };
 
-const TITLE = 'Nombre del titular';
-const DESCRIPTION =
-  'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
-const BUTTONS_ARR = [
-  {
-    name: 'Acción 1',
-    className: 'btn btn-secondary btn-sm card-link'
-  },
-  {
-    name: 'Acción 2',
-    className: 'btn btn-link btn-sm card-link'
-  }
-];
-const PICTURE = {
-  src: 'cards/paseobajo-wide.png',
-  alt: 'descripción alternativa',
-  className: 'rounded-lg',
-  size: 154
+export const SmallPanelVerticalWithoutAccion = (): JSX.Element => {
+  return (
+    <div className="storybook__wrapper-small">
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} />
+    </div>
+  );
 };
-const LINK = {
-  name: 'Enlace',
-  url: '#'
-};
-const LINK_LIST = {
-  listTitle: 'H4 - Nombre del titular',
-  links: [
-    { name: 'Enlace', className: 'download card-link', url: '#' },
-    { name: 'Enlace', className: 'download card-link', url: '#' },
-    { name: 'Enlace', className: 'download card-link', url: '#' },
-    { name: 'Enlace', className: 'download card-link', url: '#' },
-    { name: 'Enlace', className: 'download card-link', url: '#' },
-    { name: 'Enlace', className: 'download card-link', url: '#' }
-  ]
-};
-const LINK_LIST_BUTTONS = [
-  {
-    listTitle: 'Nombre del archivo',
-    name: 'Descargar',
-    className: 'btn btn-secondary btn-sm download-link card-link',
-    url: '#'
-  },
-  {
-    listTitle: 'Nombre del archivo',
-    name: 'Descargar',
-    className: 'btn btn-secondary btn-sm download-link card-link',
-    url: '#'
-  },
-  {
-    listTitle: 'Nombre del archivo',
-    name: 'Descargar',
-    className: 'btn btn-secondary btn-sm download-link card-link',
-    url: '#'
-  }
-];
-
-const TITLE_MAP = 'Dirección';
-const TITLE_MAP_DESCRIP = 'Ubicación';
-const DESCRIPTION_MAP = 'Dirección: Av. Monroe 3555';
-const BUTTONS_MAP_ARR = [
-  {
-    name: 'Cómo llego',
-    className: 'btn btn-primary btn-lg btn-block'
-  }
-];
-const BUTTONS_MAP_DESCRIPTION_ARR = [
-  {
-    name: 'Cómo llego',
-    className: 'btn btn-primary btn-lg'
-  }
-];
-const PICTURE_MAP = {
-  src: 'panel/mapa.jpg',
-  alt: 'Mapa'
-};
-const PICTURE_MAP_DESCRIP = {
-  src: 'panel/mapa-hospital.jpg',
-  alt: 'Mapa'
-};
+SmallPanelVerticalWithoutAccion.story = { name: 'Sin accionable' };
 
 export const SmallPanelVerticalButtons = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-small">
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} />
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} buttons={SMALL_BUTTONS_ARR} />
     </div>
   );
 };
-
 SmallPanelVerticalButtons.story = { name: 'Con botones' };
 
 export const SmallPanelVerticalLink = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-small">
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} link={LINK} />
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} link={LINK} />
     </div>
   );
 };
-
 SmallPanelVerticalLink.story = { name: 'Con enlace' };
+
+export const SmallPanelVerticalLinkDownload = (): JSX.Element => {
+  return (
+    <div className="storybook__wrapper-small">
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} link={SMALL_LINK_DOWNLOAD} />
+    </div>
+  );
+};
+SmallPanelVerticalLinkDownload.story = { name: 'Con enlace de descarga' };
 
 export const SmallPanelVerticalListLink = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-small">
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} listLinkPanel={LINK_LIST} />
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} listLinkPanel={LINK_LIST} />
     </div>
   );
 };
-
 SmallPanelVerticalListLink.story = { name: 'Con lista de enlaces' };
+
+export const SmallPanelVerticalListLinkDownload = (): JSX.Element => {
+  return (
+    <div className="storybook__wrapper-small">
+      <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} listLinkPanel={LINK_DOWNLOAD_LIST} />
+    </div>
+  );
+};
+SmallPanelVerticalListLinkDownload.story = { name: 'Con lista de enlaces de descarga' };
 
 export const SmallPanelVerticalListDownloadButton = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-small">
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} listLinkButtonPanel={LINK_LIST_BUTTONS} />
+      <SmallPanel
+        title={TITLE}
+        description={DESCRIPTION}
+        picture={SMALL_PICTURE}
+        listLinkButtonPanel={LINK_LIST_BUTTONS}
+      />
     </div>
   );
 };
-
 SmallPanelVerticalListDownloadButton.story = { name: 'Con lista de botón de descarga' };
 
-export const SmallPanelVerticalWithoutAccion = (): JSX.Element => {
+export const SmallPanelVerticalBackground = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-small">
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} />
-    </div>
-  );
-};
-
-SmallPanelVerticalWithoutAccion.story = { name: 'Sin accionable' };
-
-export const SmallPanelVerticalColors = (): JSX.Element => {
-  return (
-    <div className="storybook__wrapper-small">
-      {/* Transparente */}
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} />
-      {/* Blanco */}
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} bgColor="white" />
       {/* Grisulado */}
-      <SmallPanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} bgColor="light" />
-    </div>
-  );
-};
-
-SmallPanelVerticalColors.story = { name: 'Con fondo' };
-
-export const Maps = (): JSX.Element => {
-  return (
-    <div className="storybook__wrapper-vertical">
-      <SmallMapPanel title={TITLE_MAP} picture={PICTURE_MAP} buttons={BUTTONS_MAP_ARR} />
-      <SmallMapPanel title={TITLE_MAP} picture={PICTURE_MAP} buttons={BUTTONS_MAP_ARR} bgColor="light" />
-      <SmallMapPanel
-        title={TITLE_MAP_DESCRIP}
-        description={DESCRIPTION_MAP}
-        picture={PICTURE_MAP_DESCRIP}
-        buttons={BUTTONS_MAP_DESCRIPTION_ARR}
-      />
-      <SmallMapPanel
-        title={TITLE_MAP_DESCRIP}
-        description={DESCRIPTION_MAP}
-        picture={PICTURE_MAP_DESCRIP}
-        buttons={BUTTONS_MAP_DESCRIPTION_ARR}
+      <SmallPanel
+        title={TITLE}
+        description={DESCRIPTION}
+        picture={SMALL_PICTURE}
+        buttons={SMALL_BUTTONS_ARR}
         bgColor="light"
       />
+      {/* Blanco */}
+      <SmallPanel
+        title={TITLE}
+        description={DESCRIPTION}
+        picture={SMALL_PICTURE}
+        buttons={SMALL_BUTTONS_ARR}
+        bgColor="white"
+      />
     </div>
   );
 };
-
-Maps.story = { name: 'Con mapa' };
-
-export const Process = (): JSX.Element => {
-  return (
-    <div className="storybook__wrapper-small">
-      <div className="card card-simple panel-sm-process">
-        <div className="card-body">
-          <h3 className="card-title">Título H3</h3>
-          <div className="panel-footer">
-            <button type="button" className="btn btn-primary btn-lg btn-block">
-              Iniciar trámite
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="card card-simple panel-sm-process bg-light">
-        <div className="card-body">
-          <h3 className="card-title">Título H3</h3>
-          <div className="panel-footer">
-            <button type="button" className="btn btn-primary btn-lg btn-block">
-              Iniciar trámite
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="card card-simple panel-sm-process">
-        <div className="card-body">
-          <h3 className="card-title">Título H3</h3>
-          <p className="card-text">Descripción</p>
-          <div className="panel-footer">
-            <button type="button" className="btn btn-primary btn-lg btn-block">
-              Iniciar trámite
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="card card-simple panel-sm-process bg-light">
-        <div className="card-body">
-          <h3 className="card-title">Título H3</h3>
-          <p className="card-text">Descripción</p>
-          <div className="panel-footer">
-            <button type="button" className="btn btn-primary btn-lg btn-block">
-              Iniciar trámite
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-Process.story = { name: 'Trámites' };
+SmallPanelVerticalBackground.story = { name: 'Con fondo' };

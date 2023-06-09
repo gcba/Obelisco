@@ -7,6 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Components
 import { SmallPanel } from '.';
+import { TITLE, DESCRIPTION, SMALL_PICTURE, SMALL_PICTURE_XS } from './Panel.constants';
 
 // Configuración general del componente
 export default {
@@ -14,34 +15,18 @@ export default {
   decorators: [withA11y]
 };
 
-const TITLE = 'Nombre del titular';
-const DESCRIPTION =
-  'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
-const PICTURE = {
-  src: 'cards/paseobajo-wide.png',
-  alt: 'descripción alternativa',
-  className: 'rounded-lg',
-  size: 154
-};
-const PICTURE_XS = {
-  src: 'cards/paseobajo-wide.png',
-  alt: 'descripción alternativa',
-  className: 'rounded-lg',
-  size: 104
-};
-
 export const SmallPanelHorizontalColors = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-small-horizontal">
       {/* Mediana */}
-      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={PICTURE} />
+      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} />
       {/* Chica */}
-      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={PICTURE_XS} />
+      <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE_XS} />
     </div>
   );
 };
 
-SmallPanelHorizontalColors.story = { name: 'Tamaños de imagen' };
+SmallPanelHorizontalColors.story = { name: 'Sin accionable' };
 
 /* export const SmallPanelHorizontalVariants = (): JSX.Element => {
   return (

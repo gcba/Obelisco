@@ -6,6 +6,18 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Components
 import { LargePanel } from '.';
+import {
+  TITLE,
+  DESCRIPTION,
+  PICTURE,
+  VIDEO,
+  LINK,
+  LINK_DOWNLOAD,
+  LINK_DOWNLOAD_BUTTON,
+  LINK_DOWNLOAD_BUTTON_ICON,
+  BUTTONS_ARR,
+  BUTTON_ARR
+} from './Panel.constants';
 
 // Configuración general del componente
 export default {
@@ -13,100 +25,68 @@ export default {
   decorators: [withA11y]
 };
 
-const TITLE = 'Nombre del titular';
-const DESCRIPTION =
-  'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
-const BUTTON_ARR = [
-  {
-    name: 'Botón',
-    className: 'btn btn-lg btn-primary card-link'
-  }
-];
-const BUTTONS_ARR = [
-  {
-    name: 'Botón',
-    className: 'btn btn-lg btn-primary card-link'
-  },
-  {
-    name: 'Botón',
-    className: 'btn btn-lg btn-secondary card-link'
-  }
-];
-const LINK_BUTTON = {
-  name: 'Descargar',
-  className: 'btn btn-secondary btn-lg download-link'
-};
-const LINK = {
-  name: 'Descargar',
-  className: 'download'
-};
-const PICTURE = {
-  src: 'panel/larreta.jpg',
-  alt: 'descripción alternativa'
-};
-const VIDEO = {
-  src: 'panel/larreta.mp4',
-  alt: 'descripción alternativa'
-};
-
-export const HighLightButtonsPanel = (): JSX.Element => {
+/* Con Imagen | Video y 2 botones */
+export const HorizontalPanelButtons = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-horizontal">
-      {/* Con Imagen y botones */}
       <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} />
-      {/* Con video y botones */}
       <LargePanel title={TITLE} description={DESCRIPTION} video={VIDEO} buttons={BUTTONS_ARR} />
     </div>
   );
 };
-HighLightButtonsPanel.story = { name: 'Con dos botones' };
+HorizontalPanelButtons.story = { name: 'Con dos botones' };
 
-export const HighLightPanel = (): JSX.Element => {
+/* Con Imagen | Video y 1 boton */
+export const HorizontalPanelButton = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-horizontal">
-      {/* Con Imagen y botones */}
       <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTON_ARR} />
-      {/* Con video y botones */}
       <LargePanel title={TITLE} description={DESCRIPTION} video={VIDEO} buttons={BUTTON_ARR} />
     </div>
   );
 };
-HighLightPanel.story = { name: 'Con un botón' };
+HorizontalPanelButton.story = { name: 'Con un botón' };
 
-export const HighLightPanelButtonLink = (): JSX.Element => {
+/* Con Imagen | Video y enlace */
+export const HorizontalPanelLink = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-horizontal">
-      {/* Con Imagen y boton de descarga */}
-      <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} link={LINK_BUTTON} />
-      {/* Con video y boton de descarga */}
-      <LargePanel title={TITLE} description={DESCRIPTION} video={VIDEO} link={LINK_BUTTON} />
-    </div>
-  );
-};
-HighLightPanelButtonLink.story = { name: 'Con botón de descarga' };
-
-export const HighLightPanelLink = (): JSX.Element => {
-  return (
-    <div className="storybook__wrapper-horizontal">
-      {/* Con Imagen y enlace */}
       <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} link={LINK} />
-      {/* Con video y enlace */}
       <LargePanel title={TITLE} description={DESCRIPTION} video={VIDEO} link={LINK} />
     </div>
   );
 };
-HighLightPanelLink.story = { name: 'Con enlace de descarga' };
+HorizontalPanelLink.story = { name: 'Con enlace' };
 
-export const BackgroundHorizontalPanel = (): JSX.Element => {
+/* Con Imagen | Video y enlace de descarga */
+export const HorizontalPanelLinkDownload = (): JSX.Element => {
   return (
     <div className="storybook__wrapper-horizontal">
-      {/* Transparente */}
-      <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} />
-      {/* Blanco */}
-      <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} bgColor="white" />
-      {/* Grisulado */}
-      <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} bgColor="light" />
+      <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} link={LINK_DOWNLOAD} />
+      <LargePanel title={TITLE} description={DESCRIPTION} video={VIDEO} link={LINK_DOWNLOAD} />
     </div>
   );
 };
-BackgroundHorizontalPanel.story = { name: 'Con fondo' };
+HorizontalPanelLinkDownload.story = { name: 'Con enlace de descarga' };
+
+/* Con Imagen | Video y boton de descarga */
+export const HorizontalPanelLinkButtonDownload = (): JSX.Element => {
+  return (
+    <div className="storybook__wrapper-horizontal">
+      <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} link={LINK_DOWNLOAD_BUTTON} />
+      <LargePanel title={TITLE} description={DESCRIPTION} video={VIDEO} link={LINK_DOWNLOAD_BUTTON_ICON} />
+    </div>
+  );
+};
+HorizontalPanelLinkButtonDownload.story = { name: 'Con botón de descarga' };
+
+/* Con fondo bris y blanco*/
+export const HorizontalPanelBackground = (): JSX.Element => {
+  return (
+    <div className="storybook__wrapper-horizontal">
+      <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} bgColor="light" />
+      <LargePanel title={TITLE} description={DESCRIPTION} picture={PICTURE} buttons={BUTTONS_ARR} bgColor="white" />
+    </div>
+  );
+};
+HorizontalPanelBackground.story = { name: 'Con fondo' };
