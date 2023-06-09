@@ -1,9 +1,9 @@
 // Base
-import React from 'react';
+import React, { useState } from 'react';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
-import { Collapse } from '.';
+import { Collapse, CollapseListScoring } from '.';
 
 // Configuración general del componente
 export default {
@@ -163,3 +163,55 @@ export const CollapseList = (): JSX.Element => (
 );
 
 CollapseList.story = { name: 'Con lista seleccionable' };
+
+export const CollapsableCheck = (): JSX.Element => {
+  const exampleContentList = [
+    {
+      title: 'N° de infracción: ',
+      value: '6780'
+    },
+    {
+      title: 'Puntos a descontar: ',
+      value: '0 puntos a descontar',
+      positive: false
+    },
+    {
+      title: 'Puntos a resignar: ',
+      value: '0 puntos a descontar',
+      positive: true
+    },
+    {
+      title: 'Lugar: ',
+      value: 'Bartolomé Mitre 900'
+    },
+    {
+      title: 'Estado del acta: ',
+      value: 'Radicada en la UACF N° 4 en UACF - Av. Regimiento de Patricios 65 de 14:00 hs. a 19:30 hs.'
+    },
+    {
+      title: 'Legajo: ',
+      value: '537405-000/18'
+    },
+    {
+      title: 'Controlador: ',
+      value: '4'
+    }
+  ];
+
+  return (
+    <div id="accordion">
+      <div className="accordion-wrapper">
+        <div className="accordion accordion-checkbox" id="accordionExample">
+          <CollapseListScoring
+            identifier="collapseOne"
+            volanta="Acta N°Q22535977 - 11-03-2021 14:52"
+            reason="Violar luz roja"
+            detail="$1.785,00"
+            contentList={exampleContentList}></CollapseListScoring>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+CollapsableCheck.story = { name: 'Puntaje' };
