@@ -1101,9 +1101,8 @@ button.card {
     }
   }
 
-  &.accordion-checkbox {
+  &.accordion-form {
     .card {
-
       .card-header,
       .card-link {
         display: flex;
@@ -1113,7 +1112,6 @@ button.card {
         &:focus {
           box-shadow: $card-focus-box-shadow;
         }
-  
         &:after {
           content: $accordion-icon-scoring-open;
           height: spaceUnits(6);
@@ -1121,11 +1119,11 @@ button.card {
           vertical-align: middle;
           transform: rotate(180deg);
         }
-  
+
         .custom-control,
         .custom-checkbox {
           width: 1.4rem;
-  
+
           .custom-control-label {
             &::before,
             &::after {
@@ -1135,18 +1133,29 @@ button.card {
             }
           }
         }
-  
+
+        .custom-radio {
+          .custom-control-label {
+            &::after {
+              width: 10.5px;
+            }
+          }
+
+          .custom-control-input:checked ~ .custom-control-label::after {
+            background: white;
+          }
+        }
+
         &.collapsed {
-          // Estilos específicos cuando la clase "collapsed" está presente
           background: $white;
-  
+
           &:after {
             content: $accordion-icon-scoring;
             height: spaceUnits(5);
             margin-left: auto;
             transform: rotate(360deg);
           }
-  
+
           .custom-control-label {
             &::before,
             &::after {
@@ -1155,27 +1164,27 @@ button.card {
               border-color: $grisulado-900;
             }
           }
+
+          .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+            background: $blue;
+          }
         }
-  
+
         .custom-control-label {
-          // Estilos comunes para ambas clases ".card-header" y ".card-link"
           border-color: $white;
         }
       }
-  
+      
       .card-body {
         ul {
           padding: 0;
           list-style: none;
-  
           li {
             display: flex;
             margin-bottom: 1rem;
-  
             p {
               margin: 0;
               line-height: 1.375rem;
-  
               strong {
                 color: $grisulado-900;
               }
@@ -1185,6 +1194,5 @@ button.card {
       }
     }
   }
-  
   
 }

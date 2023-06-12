@@ -201,12 +201,13 @@ export const CollapsableCheck = (): JSX.Element => {
   return (
     <div id="accordion">
       <div className="accordion-wrapper">
-        <div className="accordion accordion-checkbox" id="accordionExample">
+        <div className="accordion accordion-form" id="accordionExample">
           <CollapseListScoring
             identifier="collapseOne"
             volanta="Acta N°Q22535977 - 11-03-2021 14:52"
             reason="Violar luz roja"
             detail="$1.785,00"
+            isRadio={false}
             contentList={exampleContentList}></CollapseListScoring>
         </div>
       </div>

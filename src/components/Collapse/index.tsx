@@ -14,6 +14,7 @@ interface CollapseProps {
     positive?: boolean;
   }[];
   children?: React.ReactNode;
+  isRadio?: boolean;
 }
 
 export const Collapse: React.FC<CollapseProps> = ({ children, description, identifier, content }): JSX.Element => {
@@ -42,7 +43,8 @@ export const CollapseListScoring: React.FC<CollapseProps> = ({
   reason,
   detail,
   contentList,
-  description
+  description,
+  isRadio
 }): JSX.Element => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [isChecked, setIsChecked] = useState(false);
@@ -80,17 +82,33 @@ export const CollapseListScoring: React.FC<CollapseProps> = ({
         data-bs-target={`#${identifier}`}
         aria-expanded={isOpen}
         onClick={handleCollapseToggle}>
-        <div className="custom-control custom-checkbox">
-          <input
-            className="custom-control-input"
-            type="checkbox"
-            id={`skills-${identifier}-input`}
-            name="skills"
-            value={identifier}
-            onChange={handleCheckboxChange}
-          />
-          <label className="custom-control-label" htmlFor={`skills-${identifier}-input`} />
-        </div>
+        {!isRadio ? (
+          <div className="custom-control custom-checkbox">
+            <input
+              className="custom-control-input"
+              type="checkbox"
+              id={`skills-${identifier}-input`}
+              name="skills"
+              value={identifier}
+              checked={isChecked} // Agregado: vincula el estado isChecked con el input de checkbox
+              onChange={handleCheckboxChange}
+            />
+            <label className="custom-control-label" htmlFor={`skills-${identifier}-input`} />
+          </div>
+        ) : (
+          <div className="custom-control custom-radio">
+            <input
+              className="custom-control-input"
+              type="radio"
+              name="profession"
+              id={`profession-${identifier}`} // Actualizado: utiliza el identificador dinámico para el atributo "id"
+              value={identifier}
+              checked={isChecked} // Agregado: vincula el estado isChecked con el input de radio
+              onChange={handleCheckboxChange} // Actualizado: utiliza la misma función de cambio para ambos tipos de input
+            />
+            <label className="custom-control-label" htmlFor={`profession-${identifier}`}></label>
+          </div>
+        )}
         <div className="d-block">
           <span className="collapse-label">{volanta}</span>
           <h4 id={`title-${identifier}`} className={titleClass}>
