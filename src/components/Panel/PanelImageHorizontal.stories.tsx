@@ -78,3 +78,22 @@ export const HighLightPanelLink = (): JSX.Element => {
   );
 };
 HighLightPanelLink.story = { name: 'Con enlace de descarga' };
+
+export const HighLightPanelIframe = (): JSX.Element => {
+  return (
+    <PanelHorizontal
+      title={TITLE}
+      description={DESCRIPTION}
+      iframe={{
+        src: 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13132.260674265006!2d-58.38310044999999!3d-34.6277934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1685540879981!5m2!1ses-419!2sar',
+        width: '526',
+        height: '296',
+        style: { border: '0' },
+        loading: 'lazy',
+        referrerPolicy: 'no-referrer-when-downgrade'
+      }}
+      buttons={BUTTONS_ARR}
+    />
+  );
+};
+HighLightPanelIframe.story = { name: 'Con iframe' };
