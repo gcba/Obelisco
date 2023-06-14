@@ -1,8 +1,31 @@
-.panel-wrapper {
-  width: 526px;
-  max-width: 100%;
-}
-
 .card-img {
   object-position: top;
+}
+
+.storybook__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 100%;
+  
+  &-horizontal {
+    @extend .storybook__wrapper;
+    width: 1084px;
+  }
+  &-vertical {
+    @extend .storybook__wrapper;
+    width: 526px;
+  }
+  &-small {
+    @extend .storybook__wrapper;
+    width: 340px;
+
+    &:has(.panel-sm) {
+      gap: 4rem;
+    }
+
+    &-horizontal {
+      @extend .storybook__wrapper-vertical;
+    }
+  }
 }
