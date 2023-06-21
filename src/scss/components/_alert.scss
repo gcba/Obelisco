@@ -67,6 +67,7 @@ $theme-colors: map-merge(
 .alert {
   counter-reset: section;
   padding-left: $alert-padding-y + $alert-padding-left;
+  word-break: break-word;
 
   &:not(:has(ol, ul)) {
     display: flex;
