@@ -50,21 +50,6 @@ $collapse-info-subtitle-size: 1rem;
 $accordion-margin: 0.75rem;
 $accordion-card-header-padding: 0.75rem 1.5rem;
 
-$panel-deck-mt: 2.5rem;
-$card-panel-img-size: 3.75rem;
-$card-panel-img-mt: 1.25rem;
-$card-panel-card-body-pl: 1rem;
-$panel-deck-card-mb: 1.5rem;
-$panel-deck-card-mr: 2rem;
-
-$panel-spacer-lg: 2rem;
-$panel-title-margin-vertical: 2rem 0 0.813rem 0;
-$panel-title-margin-horizontal: 1rem 0 0.813rem 0;
-$panel-title-margin-horizontal-sm: 2rem 0 0.813rem 0;
-$panel-text-margin-bottom: 1.5rem;
-$panel-link-margin-right: 1rem;
-$panel-link-margin-bottom: 1rem;
-
 $accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
 $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
 
@@ -114,17 +99,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
   }
 }
 
-@mixin panel-deck {
-  .card {
-    flex: 1 0 35%;
-    margin-top: 0;
-
-    &:nth-of-type(n + 3) {
-      margin-top: $panel-deck-mt;
-    }
-  }
-}
-
 @mixin card-deck-1 {
   .card,
   .group-access {
@@ -134,30 +108,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
     &:nth-of-type(n + 2) {
       margin-top: $card-deck-margin-top;
-    }
-  }
-}
-
-@mixin card-link-panel {
-  .card-link {
-    margin: 0 $panel-link-margin-right $panel-link-margin-bottom 0;
-
-    + .card-link {
-      margin-right: 0;
-    }
-  }
-
-  .download-link,
-  .download {
-    margin-bottom: $panel-link-margin-bottom;
-    display: inline-block;
-  }
-
-  @include media-breakpoint-down(xs) {
-    .card-link,
-    .download-link {
-      width: 100%;
-      margin-right: 0;
     }
   }
 }
@@ -244,11 +194,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
   .card-text {
     margin-top: $card-spacer / 2;
-  }
-
-  .card-text-panel {
-    margin-top: $card-spacer / 4;
-    margin-bottom: 0px;
   }
 
   .card-footer {
@@ -373,19 +318,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       }
     }
 
-    .card-img-left-panel {
-      width: $card-panel-img-size;
-      height: $card-panel-img-size;
-      margin-top: $card-panel-img-mt;
-      border-radius: $card-border-radius;
-      object-fit: cover;
-      flex-shrink: 0;
-
-      + .card-body {
-        padding-left: $card-panel-card-body-pl;
-      }
-    }
-
     &.card-lg {
       .card-img-left {
         width: $card-picture-size-lg;
@@ -474,132 +406,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       margin: 0;
     }
   }
-
-  &.panel-horizontal {
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-
-    @include media-breakpoint-down(md) {
-      flex-direction: column;
-    }
-
-    > video {
-      &.card-img {
-        height: auto;
-      }
-    }
-
-    .card-img {
-      width: 526px;
-      height: 296px;
-      border-radius: $card-border-radius;
-      object-fit: cover;
-
-      + .card-body {
-        margin-left: $panel-spacer-lg;
-      }
-
-      @include media-breakpoint-down(md) {
-        width: 100%;
-        height: auto;
-
-        + .card-body {
-          margin-left: 0;
-        }
-      }
-    }
-
-    .card-body {
-      .card-title {
-        @extend .h2;
-        font-weight: $headings-font-weight;
-        margin: $panel-title-margin-horizontal;
-
-        @include media-breakpoint-down(md) {
-          margin: $panel-title-margin-horizontal-sm;
-        }
-      }
-
-      .card-text {
-        margin-bottom: $panel-text-margin-bottom;
-      }
-
-      @include card-link-panel;
-    }
-  }
-
-  &.panel-vertical {
-    flex-direction: column;
-    width: 100%;
-
-    > video {
-      &.card-img {
-        height: auto;
-      }
-    }
-
-    .card-img {
-      border-radius: $card-border-radius;
-      object-fit: cover;
-
-      @include media-breakpoint-down(sm) {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .card-body {
-      .card-title {
-        @extend .h2;
-        font-weight: $headings-font-weight;
-        margin: $panel-title-margin-vertical;
-      }
-
-      .card-text {
-        margin-bottom: $panel-text-margin-bottom;
-      }
-
-      @include card-link-panel;
-    }
-  }
-
-  &.panel-list-link {
-    .card-title {
-      @extend .h3;
-    }
-  }
-
-  &.panel-sm {
-    .panel-footer {
-      display: flex;
-      margin-top: spaceUnits(6);
-
-      .card-link {
-        margin-right: $panel-link-margin-right;
-
-        + .card-link {
-          margin: 0;
-        }
-      }
-
-      @include media-breakpoint-down(xs) {
-        flex-wrap: wrap;
-
-        .card-link,
-        .download-link {
-          width: 100%;
-          margin: 0 0 $panel-link-margin-bottom;
-        }
-      }
-    }
-
-    .card-body {
-      .card-title {
-        @extend .h3;
-      }
-    }
-  }
 }
 
 .card-deck {
@@ -629,45 +435,6 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       &:nth-of-type(2) {
         margin-top: 30px;
       }
-    }
-  }
-}
-
-.panel-deck {
-  .card {
-    margin-bottom: $panel-deck-card-mb;
-  }
-
-  .card.card-horizontal.card-simple.card-horizontal {
-    flex-direction: row;
-  }
-
-  @include media-breakpoint-up(sm) {
-    display: flex;
-    flex-flow: row wrap;
-    margin-right: -$card-deck-margin;
-    margin-left: -$card-deck-margin;
-
-    .card {
-      flex: 1 0 0%;
-      margin-right: $panel-deck-card-mr;
-      margin-bottom: 0px;
-    }
-
-    .card.card-horizontal.card-simple.card-horizontal {
-      margin-bottom: 0px;
-    }
-
-    .card.card-horizontal .card-img-left-panel {
-      margin-top: 0px;
-    }
-
-    @include panel-deck;
-  }
-
-  @include media-breakpoint-down(sm) {
-    .card.card-horizontal .card-img-left-panel {
-      margin-top: 0px;
     }
   }
 }
