@@ -86,6 +86,7 @@ $divider-margin-mobile: 2rem 0 2rem;
         margin-bottom: $footer-legal-margin-bottom;
 
         @include media-breakpoint-down(sm) {
+          flex-wrap: wrap;
           margin-bottom: $footer-legal-margin-bottom-sm;
         }
 

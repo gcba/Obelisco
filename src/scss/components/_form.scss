@@ -301,18 +301,18 @@ $form-validation-states: (
 .custom-radio {
   .custom-control-input:checked ~ .custom-control-label {
     &:before {
-      background: transparent;
+      box-shadow: inset 0 0 0 3.4px $white;
+      background-color: $custom-control-indicator-checked-color;
     }
 
-    &::after {
+    &:after {
       background-image: none;
-      width: 10px;
-      height: 10px;
-      margin: 5px;
-      background-color: $custom-control-indicator-checked-color;
-      border-radius: 100%;
-      left: spaceUnits(3.12);
     }
+  }
+  .custom-control-input:checked:not(:disabled):focus ~ .custom-control-label:before {
+    box-shadow: 0 0 0 7px #005386, inset 0 0 0 3.4px $white;
+    outline: 3px solid $white;
+    background-color: $custom-control-indicator-checked-color;
   }
 }
 
