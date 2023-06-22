@@ -330,7 +330,7 @@ export const Options = (): JSX.Element => {
         <span className="material-icons-round">done</span>
       </DropdownOption>
       <DropdownOption options={radioOptions} isRadio={true}>
-        <span className="material-icons-round">done</span>
+        <i className="bx bx-check"></i>
       </DropdownOption>
     </>
   );
