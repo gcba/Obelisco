@@ -24,10 +24,10 @@ export const SwitchContainer: React.FC<SwitchProps> = (props: SwitchProps) => {
 
   return (
     <>
-      <div className={switchClasses}>
+      <label className={switchClasses}>
         <input type="checkbox" id={id} disabled={isDisabled} checked={isChecked}></input>
         <span className="slider"></span>
-      </div>
+      </label>
       {label && (
         <label htmlFor={id} className={labelClasses}>
           {label}
