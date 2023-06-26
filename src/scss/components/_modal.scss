@@ -42,21 +42,32 @@ $modal-dialog-margin-y-sm-up: 3rem;
   }
 
   .modal-content {
-    // box-shadow: 0 0 0 2px $grisulado-50;
     border: none;
 
     .modal-header {
       border-bottom: 0;
-      box-shadow: 0 1.563rem 0 $modal-header-divisor rgba($grisulado-50, 1);
-      padding-bottom: 0.4rem;
+      padding-bottom: 0.5rem;
 
       .modal-title {
-        font-weight: bold;
+        line-height: 24px;
+        letter-spacing: -0.19px;
       }
+    }
+
+    hr {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      border: 0;
+      border-top: 1px solid #e6ebf0;
+      width: calc(100% - 48px);
     }
 
     .modal-body {
       padding: spaceUnits(2) spaceUnits(6) 0;
+
+      p {
+        line-height: 24px;
+      }
 
       > *:last-child {
         margin: 0;
@@ -65,16 +76,16 @@ $modal-dialog-margin-y-sm-up: 3rem;
 
     .modal-footer {
       border-top: 0;
-      padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x
-        $modal-inner-padding-bottom;
-      gap: spaceUnits(1);
+      padding: 16px 24px 24px 24px;
 
-      & > *:first-child {
-        margin-left: 0;
-      }
+      button.btn {
+        &:nth-child(1) {
+          margin: 0px 8px 0px 0px;
+        }
 
-      & > *:last-child {
-        margin-right: 0;
+        &:last-child {
+          margin: 0px;
+        }
       }
     }
   }
