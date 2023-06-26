@@ -1,0 +1,50 @@
+/* === Custom variables and mixins === */
+
+$map-padding: 1.5rem;
+$map-padding-mobile: 1rem;
+$map-title-margin: 0 0 0.25rem;
+$map-card-text-margin: 0.25rem 0 0;
+$map-iframe-margin: 1rem 0 0;
+$map-btn-margin: 1rem 0 0;
+
+/* === Custom styles === */
+
+.card.map {
+  background-color: $white;
+  padding: $map-padding;
+  box-shadow: none;
+
+  .card-body {
+    padding: 0;
+
+    .card-title {
+      @extend .h5;
+      margin: $map-title-margin;
+    }
+
+    form,
+    .card-text {
+      margin: $map-card-text-margin;
+    }
+
+    .map-iframe {
+      width: 100%;
+      margin: $map-iframe-margin;
+      iframe {
+        width: 100%;
+        height: 146px;
+        border: none;
+        border-radius: 0.5rem;
+      }
+    }
+
+    .btn {
+      margin: $map-btn-margin;
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: $map-padding-mobile;
+  }
+}
