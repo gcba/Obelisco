@@ -10,7 +10,7 @@ $list-steps-padding-sm: 0 0 0.5rem 1.75rem;
 
 $list-steps-padding-lg: 0.1875rem 0 1rem 3.25rem;
 $list-steps-circle-size-lg: 2.5rem;
-$list-steps-line-width-lg: 0.1875rem;
+$list-steps-line-width-lg: 0.25rem;
 
 $list-steps-numbers: 50;
 
@@ -38,7 +38,7 @@ $list-steps-numbers: 50;
       background-color: $list-steps-font-color;
       position: absolute;
       /* box-shadow: 0 0 0 0.125rem $list-steps-font-color; */
-      border: 0.125rem solid $list-steps-font-color;
+      border: $list-steps-line-width solid $list-steps-font-color;
       width: $list-steps-circle-size;
       height: $list-steps-circle-size;
       border-radius: 50%;
@@ -104,14 +104,14 @@ $list-steps-numbers: 50;
         width: $list-steps-circle-size-lg;
         height: $list-steps-circle-size-lg;
         /* box-shadow: 0 0 0 0.25rem $list-steps-font-color; */
-        border: 0.25rem solid $list-steps-font-color;
+        border: $list-steps-line-width-lg solid $list-steps-font-color;
         @extend .h4;
         line-height: 33px;
       }
   
       &:not(:last-child):after {
         width: $list-steps-line-width-lg;
-        left: 1.125rem;
+        left: 1.12rem;
       }
     }
   }
@@ -124,6 +124,7 @@ $list-steps-numbers: 50;
         height: $list-steps-circle-size-sm;
         font-size: 0.73125rem;
         line-height: 13px;
+        top: 0.1875rem;
       }
   
       &:not(:last-child):after {
