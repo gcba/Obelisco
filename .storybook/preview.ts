@@ -37,6 +37,7 @@ const headers = [
   'componentes-panel-grande-vertical',
   'componentes-panel-chico-horizontal',
   'componentes-panel-chico-vertical',
+  'componentes-pasos-de-trámite',
   'componentes-pasos-de-un-formulario',
   'componentes-spinner',
   'componentes-tarjetas-tipos',
