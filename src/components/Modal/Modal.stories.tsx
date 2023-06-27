@@ -10,24 +10,27 @@ export default {
   decorators: [withA11y]
 };
 
-export const Generico = (): JSX.Element => {
+export const Default = (): JSX.Element => {
   return (
     <>
-      <div className="modal d-block" tabIndex={-1} role="dialog">
+      <div className="modal d-block" tabIndex={-1} role="dialog" id="exampleModal1">
         <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h4 className="modal-title">Modal</h4>
+              <h4 className="modal-title">¡Importante!</h4>
             </div>
+            <hr />
             <div className="modal-body">
-              <p>Esta es la descripción del modal.</p>
+              <p>
+                Antes de realizar la ficha de salud, tené en cuenta haber realizado los pasos previos correspondientes.
+              </p>
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-dismiss="modal">
-                Acción 2
+              <button type="button" className="btn btn-outline-link" data-dismiss="modal">
+                Volver atrás
               </button>
-              <button type="button" className="btn btn-danger">
-                Acción 1
+              <button type="button" className="btn btn-primary">
+                Continuar
               </button>
             </div>
           </div>
@@ -38,55 +41,22 @@ export const Generico = (): JSX.Element => {
   );
 };
 
-Generico.story = { name: 'Genérico' };
+Default.story = { name: 'Predeterminado' };
 
-export const Demo = (): JSX.Element => {
+export const Types = (): JSX.Element => {
   return (
-    <div>
-      <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Ver modal
-      </button>
-
-      <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal">
-        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h4 className="modal-title">Modal</h4>
-            </div>
-            <div className="modal-body">
-              <p>Esta es la descripción del modal.</p>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-link" data-dismiss="modal">
-                Acción 2
-              </button>
-              <button type="button" className="btn btn-primary">
-                Acción 1
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-Demo.story = { name: 'Demo' };
-
-export const Test = (): JSX.Element => {
-  return (
-    <div>
+    <>
       <div className="btn-wrapper">
         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-          Ejemplo 1
+          Modal de confirmación
         </button>
 
         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
-          Ejemplo 2
+          Modal de peligro
         </button>
 
         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
-          Ejemplo 3
+          Modal de reconocimiento
         </button>
       </div>
 
@@ -94,7 +64,6 @@ export const Test = (): JSX.Element => {
         <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <small>CARGA EXITOSA</small>
               <h4 className="modal-title">¡Importante!</h4>
             </div>
             <hr />
@@ -119,7 +88,6 @@ export const Test = (): JSX.Element => {
         <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <small>CARGA EXITOSA</small>
               <h4 className="modal-title">Eliminar documento</h4>
             </div>
             <hr />
@@ -153,6 +121,8 @@ export const Test = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
+
+Types.story = { name: 'Tipos' };
