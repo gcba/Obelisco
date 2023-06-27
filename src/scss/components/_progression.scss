@@ -18,7 +18,12 @@ $progress-bg: $grisulado-100;
 
 /* === Bootstrap Import === */
 @import 'node_modules/bootstrap/scss/progress';
+
 /* === Custom styles === */
+.progress-bar {
+  border-radius: 20px;
+}
+
 .progression {
   @extend .list-unstyled, .flex-column;
   margin-bottom: 0;

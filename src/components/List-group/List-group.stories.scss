@@ -2,6 +2,23 @@
   max-width: 324px;
 }
 
-.list-group {
-  margin: 1.5rem 0;
+.list-group-container-sizes {
+  .list-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+      align-items: unset;
+    }
+
+    .list-group-item {
+      width: 324px;
+
+      @media screen and (max-width: 384px) {
+        width: auto;
+      }
+    }
+  }
 }

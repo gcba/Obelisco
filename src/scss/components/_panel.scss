@@ -1,0 +1,348 @@
+/* === Variable and mixins overides === */
+
+$panel-spacer-lg: 2rem;
+$panel-large-vertical-title-margin: 2rem 0 0 0;
+$panel-large-horizontal-title-margin-sm: 2rem 0 0 0;
+$panel-large-card-text-margin: 0.8125rem 0 0 0;
+
+$panel-small-vertical-title-margin: 1.5rem 0 0 0;
+$panel-small-vertical-title-margin-mobile: 1rem 0 0 0;
+$panel-small-spacer: 1.5rem;
+$panel-small-spacer-mobile: 1rem;
+
+$panel-small-map-img-margin: 1rem 0 0;
+$panel-small-map-padding: 1.5rem;
+$panel-small-map-padding-mobile: 1rem;
+$panel-small-card-text-margin: 0.25rem 0 0;
+
+$card-panel-img-size: 3.75rem;
+$card-panel-img-mt: 0;
+$card-panel-card-body-pl: 1rem;
+
+$panel-deck-mt: 2.5rem;
+$panel-deck-card-mb: 1.5rem;
+$panel-deck-card-mr: 2rem;
+
+@mixin panel-deck {
+  .card {
+    flex: 1 0 35%;
+    margin-top: 0;
+
+    &:nth-of-type(n + 3) {
+      margin-top: $panel-deck-mt;
+    }
+  }
+}
+
+%panel-bg-color {
+  &.bg-white,
+  &.bg-light {
+    padding: 1.5rem;
+    @include media-breakpoint-down(xs) {
+      padding: 1rem;
+    }
+  }
+}
+
+@mixin panel-big-mobile {
+  @include media-breakpoint-down(xs) {
+    .card-body {
+      .panel-footer {
+        flex-direction: column;
+        .card-link,
+        .download-link {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* === Custom styles === */
+
+.card {
+  //Panel Grande Horizontal
+  &.panel-horizontal {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+
+    > video {
+      &.card-img {
+        height: auto;
+      }
+    }
+
+    .card-img {
+      width: 526px;
+      height: 296px;
+      border-radius: $card-border-radius;
+      object-fit: cover;
+
+      + .card-body {
+        margin-left: $panel-spacer-lg;
+      }
+    }
+
+    .card-body {
+      .card-title {
+        @extend .h2;
+        margin: 0;
+      }
+
+      .card-text {
+        margin: $panel-large-card-text-margin;
+      }
+
+      .panel-footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+
+        .card-link {
+          margin-left: 0;
+        }
+
+        a.btn-icon {
+          display: inline-flex;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      .card-img {
+        width: 100%;
+        height: auto;
+
+        + .card-body {
+          margin-left: 0;
+
+          .card-title {
+            margin: $panel-large-horizontal-title-margin-sm;
+          }
+        }
+      }
+
+      .card-body {
+        .card-title {
+          margin: 0;
+        }
+      }
+    }
+
+    @extend %panel-bg-color;
+
+    @include panel-big-mobile;
+  }
+
+  //Panel Grande Vertical
+  &.panel-vertical {
+    flex-direction: column;
+    width: 100%;
+
+    > video {
+      &.card-img {
+        height: auto;
+      }
+    }
+
+    .card-img {
+      border-radius: $card-border-radius;
+      object-fit: cover;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .card-img {
+      + .card-body {
+          .card-title {
+            margin: $panel-large-vertical-title-margin;
+          }
+      }
+    }
+
+    .card-body {
+      .card-title {
+        @extend .h2;
+        margin: 0;
+      }
+
+      .card-text {
+        margin: $panel-large-card-text-margin;
+      }
+
+      .panel-footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        .card-link {
+          margin-left: 0;
+        }
+      }
+
+      a.btn-icon {
+        display: inline-flex;
+      }
+    }
+
+    @extend %panel-bg-color;
+
+    @include panel-big-mobile;
+  }
+
+  //panel chico vertical con botones o enlace
+  &.panel-sm {
+    @extend %panel-bg-color;
+
+    img {
+      + .card-body {
+        .card-title {
+          margin: $panel-small-vertical-title-margin;
+        }
+      }
+    }
+
+    .card-body {
+      .card-title {
+        @extend .h3;
+        margin: 0;
+      }
+
+      .card-text {
+        margin: $panel-small-card-text-margin;
+      }
+    }
+
+    .panel-footer {
+      display: flex;
+      gap: 1rem;
+      margin-top: spaceUnits(6);
+
+      .card-link {
+        margin: 0;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      img {
+        + .card-body {
+          .card-title {
+            margin: $panel-small-vertical-title-margin-mobile;
+          }
+        }
+      }
+
+      .panel-footer {
+        margin-top: spaceUnits(4);
+      }
+    }
+
+    &-horizontal {
+      @extend .panel-sm;
+      flex-direction: row;
+
+      img {
+        aspect-ratio: 1 / 1;
+        + .card-body {
+            margin-left: $panel-small-spacer;
+
+            .card-title {
+              margin-top: 0;
+            }
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        img + .card-body {
+          margin-left: $panel-small-spacer-mobile;
+        }
+      }
+    }
+  }
+
+  //panel chico vertical con lista de enlaces o botones de descarga
+  &.panel-list-link {
+    @extend .panel-sm;
+
+    .list-link {
+      margin-top: spaceUnits(6);
+
+      .list-link-item-title {
+        margin-bottom: spaceUnits(4);
+        &:has(+ .btn.card-link) {
+          margin-bottom: spaceUnits(2);
+        }
+      }
+
+      .card-link {
+        display: block;
+        margin: 0 0 spaceUnits(4) 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.btn {
+          display: inline-block;
+
+          &.btn-icon {
+            display: inline-flex;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(xs) {
+        margin-top: spaceUnits(4);
+      }
+    }
+  }
+
+  //panel informativo horizontal
+  &.card-horizontal {
+    .card-img-left-panel {
+      width: $card-panel-img-size;
+      height: $card-panel-img-size;
+      margin-top: $card-panel-img-mt;
+      border-radius: $card-border-radius;
+      object-fit: cover;
+      flex-shrink: 0;
+
+      + .card-body {
+        padding-left: $card-panel-card-body-pl;
+      }
+    }
+
+    .card-body .card-text-panel {
+      margin: $panel-small-card-text-margin;
+    }
+  }
+}
+//panel informativo horizontal
+.panel-deck {
+  .card {
+    margin-bottom: $panel-deck-card-mb;
+  }
+
+  .card.card-horizontal.card-simple.card-horizontal {
+    flex-direction: row;
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -$card-deck-margin;
+    margin-left: -$card-deck-margin;
+
+    .card {
+      flex: 1 0 0%;
+      margin-right: $panel-deck-card-mr;
+      margin-bottom: 0px;
+    }
+
+    @include panel-deck;
+  }
+}

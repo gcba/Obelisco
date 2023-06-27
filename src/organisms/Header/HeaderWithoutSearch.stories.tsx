@@ -23,7 +23,7 @@ export const HeaderNoLoginSearch = (): JSX.Element => {
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false">
-          Menú <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="nav nav-pills">
@@ -66,7 +66,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false">
-          Menú <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="list-group-content d-responsive ml-2">
           <a href="#" aria-label="Cerrar sesión" className="list-group-item list-group-item-logout logout-sm">
