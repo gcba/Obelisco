@@ -42,11 +42,18 @@ $modal-dialog-margin-y-sm-up: 3rem;
   }
 
   .modal-content {
-    border: none;
+    border: 0;
+    border: 1px solid #E6EBF0;
 
     .modal-header {
       border-bottom: 0;
       padding-bottom: 0.5rem;
+      display: flex;
+      flex-direction: column;
+
+      small{
+        margin-bottom: 8px;
+      }
 
       .modal-title {
         line-height: 24px;
@@ -58,7 +65,7 @@ $modal-dialog-margin-y-sm-up: 3rem;
       margin-top: 0px;
       margin-bottom: 0px;
       border: 0;
-      border-top: 1px solid #e6ebf0;
+      border: 1px solid #e6ebf0;
       width: calc(100% - 48px);
     }
 

@@ -94,6 +94,7 @@ export const Test = (): JSX.Element => {
         <div className="modal-dialog modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
+              <small>CARGA EXITOSA</small>
               <h4 className="modal-title">¡Importante!</h4>
             </div>
             <hr />
@@ -114,10 +115,11 @@ export const Test = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal2">
+      <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal2" data-backdrop="static">
         <div className="modal-dialog modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
+              <small>CARGA EXITOSA</small>
               <h4 className="modal-title">Eliminar documento</h4>
             </div>
             <hr />
@@ -140,6 +142,7 @@ export const Test = (): JSX.Element => {
         <div className="modal-dialog modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
+              <small>CARGA EXITOSA</small>
               <h4 className="modal-title">Los archivos se cargaron correctamente</h4>
             </div>
             <div className="modal-footer">
