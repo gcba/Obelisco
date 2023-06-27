@@ -53,7 +53,7 @@ export const MapComponent: React.FC<BaseMapProps> = (props: React.PropsWithChild
               title={iframe.name}></iframe>
           </div>
         )}
-        <a href={button?.url} className="btn btn-primary btn-lg">
+        <a href={button?.url} className="btn btn-primary btn-lg btn-block">
           {button?.name}
         </a>
       </div>
