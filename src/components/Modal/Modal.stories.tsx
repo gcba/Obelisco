@@ -14,7 +14,7 @@ export const Generico = (): JSX.Element => {
   return (
     <>
       <div className="modal d-block" tabIndex={-1} role="dialog">
-        <div className="modal-dialog modal-sm" role="document">
+        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <h4 className="modal-title">Modal</h4>
@@ -48,7 +48,7 @@ export const Demo = (): JSX.Element => {
       </button>
 
       <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal">
-        <div className="modal-dialog modal-sm" role="document">
+        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <h4 className="modal-title">Modal</h4>
@@ -91,7 +91,7 @@ export const Test = (): JSX.Element => {
       </div>
 
       <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal1">
-        <div className="modal-dialog modal-sm" role="document">
+        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <small>CARGA EXITOSA</small>
@@ -115,8 +115,8 @@ export const Test = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal2" data-backdrop="static">
-        <div className="modal-dialog modal-sm" role="document">
+      <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal2">
+        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <small>CARGA EXITOSA</small>
@@ -139,7 +139,7 @@ export const Test = (): JSX.Element => {
       </div>
 
       <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal3">
-        <div className="modal-dialog modal-sm" role="document">
+        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
               <small>CARGA EXITOSA</small>

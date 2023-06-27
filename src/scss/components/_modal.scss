@@ -42,8 +42,7 @@ $modal-dialog-margin-y-sm-up: 3rem;
   }
 
   .modal-content {
-    border: 0;
-    border: 1px solid #E6EBF0;
+    border: 1px solid $grisulado-50;
 
     .modal-header {
       border-bottom: 0;
@@ -51,12 +50,12 @@ $modal-dialog-margin-y-sm-up: 3rem;
       display: flex;
       flex-direction: column;
 
-      small{
-        margin-bottom: 8px;
+      small {
+        margin-bottom: 0.5rem;
       }
 
       .modal-title {
-        line-height: 24px;
+        line-height: 1.5rem;
         letter-spacing: -0.19px;
       }
     }
@@ -64,16 +63,15 @@ $modal-dialog-margin-y-sm-up: 3rem;
     hr {
       margin-top: 0px;
       margin-bottom: 0px;
-      border: 0;
-      border: 1px solid #e6ebf0;
-      width: calc(100% - 48px);
+      border: 1px solid $grisulado-50;
+      width: calc(100% - 3rem);
     }
 
     .modal-body {
       padding: spaceUnits(2) spaceUnits(6) 0;
 
       p {
-        line-height: 24px;
+        line-height: 1.5rem;
       }
 
       > *:last-child {
@@ -83,11 +81,11 @@ $modal-dialog-margin-y-sm-up: 3rem;
 
     .modal-footer {
       border-top: 0;
-      padding: 16px 24px 24px 24px;
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
 
       button.btn {
         &:nth-child(1) {
-          margin: 0px 8px 0px 0px;
+          margin: 0px 0.5rem 0px 0px;
         }
 
         &:last-child {
