@@ -19,7 +19,6 @@ export const Default = (): JSX.Element => {
             <div className="modal-header">
               <h4 className="modal-title">¡Importante!</h4>
             </div>
-            <hr />
             <div className="modal-body">
               <p>
                 Antes de realizar la ficha de salud, tené en cuenta haber realizado los pasos previos correspondientes.
@@ -66,7 +65,6 @@ export const Types = (): JSX.Element => {
             <div className="modal-header">
               <h4 className="modal-title">¡Importante!</h4>
             </div>
-            <hr />
             <div className="modal-body">
               <p>
                 Antes de realizar la ficha de salud, tené en cuenta haber realizado los pasos previos correspondientes.
@@ -90,7 +88,6 @@ export const Types = (): JSX.Element => {
             <div className="modal-header">
               <h4 className="modal-title">Eliminar documento</h4>
             </div>
-            <hr />
             <div className="modal-body">
               <p>El documento que seleccionaste será eliminado.</p>
             </div>
@@ -109,7 +106,7 @@ export const Types = (): JSX.Element => {
       <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal3">
         <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div className="modal-content">
-            <div className="modal-header">
+            <div className="modal-header unbordered">
               <small>CARGA EXITOSA</small>
               <h4 className="modal-title">Los archivos se cargaron correctamente</h4>
             </div>

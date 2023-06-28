@@ -42,13 +42,19 @@ $modal-dialog-margin-y-sm-up: 3rem;
   }
 
   .modal-content {
-    border: 1px solid $grisulado-50;
+    border: 2px solid $grisulado-50;
 
     .modal-header {
       border-bottom: 0;
       padding-bottom: 0.5rem;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 1.563rem 0 $modal-header-divisor $grisulado-50;
+
+      &.unbordered {
+        box-shadow: none;
+        background: none;
+      }
 
       small {
         margin-bottom: 0.5rem;
@@ -58,13 +64,6 @@ $modal-dialog-margin-y-sm-up: 3rem;
         line-height: 1.5rem;
         letter-spacing: -0.19px;
       }
-    }
-
-    hr {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      border: 1px solid $grisulado-50;
-      width: calc(100% - 3rem);
     }
 
     .modal-body {
