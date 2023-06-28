@@ -6,7 +6,7 @@ import classnames from 'classnames';
 
 export interface ListStepsContent {
   title: string;
-  description?: string[];
+  description?: string;
   isLightItem?: boolean;
 }
 
@@ -31,7 +31,7 @@ export const ListSteps: React.FC<ListStepsProps> = (props: React.PropsWithChildr
       {content.map(({ title, description, isLightItem }, index) => (
         <li className={`list-steps-item ${isLightItem ? `list-steps-item-light` : ''.trim()}`} key={index}>
           <h4>{title}</h4>
-          {description && description.map((item, i) => <p key={i}>{item}</p>)}
+          {description && <p>{description}</p>}
         </li>
       ))}
     </ul>

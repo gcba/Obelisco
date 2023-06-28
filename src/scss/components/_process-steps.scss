@@ -1,15 +1,15 @@
 /* === Custom variables and mixins === */
 
-$list-steps-padding: 0 0 0.5rem 2.25rem;
+$list-steps-padding: 0 0 1.5rem 2.25rem;
 $list-steps-font-color: $grisulado-900;
 $list-steps-circle-size: 1.5rem;
-$list-steps-line-width: 0.125rem;
+$list-steps-line-width: 0.1875rem;
+$list-steps-title-margin-bottom-mobile: 0.25rem;
 
-$list-steps-circle-size-sm: 1rem;
-$list-steps-padding-sm: 0 0 0.5rem 1.75rem;
-
-$list-steps-padding-lg: 0.1875rem 0 1rem 3.25rem;
+$list-steps-padding-lg: 0.125rem 0 1.5rem 3.5rem;
+$list-steps-padding-lg-mobile: 0 0 1.5rem 3rem;
 $list-steps-circle-size-lg: 2.5rem;
+$list-steps-circle-size-lg-mobile: 2rem;
 $list-steps-line-width-lg: 0.25rem;
 
 $list-steps-numbers: 50;
@@ -25,11 +25,14 @@ $list-steps-numbers: 50;
     position: relative;
     padding: $list-steps-padding;
 
+    h4 {
+      @include media-breakpoint-down(xs) {
+        margin-bottom: $list-steps-title-margin-bottom-mobile;
+      }
+    }
+
     p {
       margin-bottom: 0;
-      + p, span, a {
-        margin-top: 0.25rem;
-      }
     }
 
     &:before {
@@ -37,18 +40,18 @@ $list-steps-numbers: 50;
       color: $white;
       background-color: $list-steps-font-color;
       position: absolute;
-      /* box-shadow: 0 0 0 0.125rem $list-steps-font-color; */
-      border: $list-steps-line-width solid $list-steps-font-color;
+      box-shadow: 0 0 0 $list-steps-line-width $list-steps-font-color inset;
       width: $list-steps-circle-size;
       height: $list-steps-circle-size;
       border-radius: 50%;
       top: 0;
       left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1rem;
       font-weight: 700;
       font-family: $font-family-headings;
-      text-align: center;
-      line-height: 22px;
     }
 
     &:not(:last-child):after {
@@ -58,7 +61,7 @@ $list-steps-numbers: 50;
       z-index: -1;
       width: $list-steps-line-width;
       height: 100%;
-      left: 0.6875rem;
+      left: 0.675rem;
       top: calc(50% + 34px);
       transform: translate(0, calc(-50% - 24px));
     }
@@ -67,6 +70,50 @@ $list-steps-numbers: 50;
       &:before {
         background-color: $white;
         color: $list-steps-font-color;
+      }
+    }
+  }
+
+  &.list-steps-lg {
+    .list-steps-item {
+      padding: $list-steps-padding-lg;
+      @include media-breakpoint-down(xs) {
+        padding: $list-steps-padding-lg-mobile;
+      }
+
+      h4 {
+        @extend .h2;
+      }
+
+      &:before {
+        width: $list-steps-circle-size-lg;
+        height: $list-steps-circle-size-lg;
+        box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color inset;
+        @extend .h4;
+        @include media-breakpoint-down(xs) {
+          width: $list-steps-circle-size-lg-mobile;
+          height: $list-steps-circle-size-lg-mobile;
+        }
+      }
+  
+      &:not(:last-child):after {
+        width: $list-steps-line-width-lg;
+        left: 1.12rem;
+        @include media-breakpoint-down(xs) {
+          left: 0.9rem;
+        }
+      }
+    }
+  }
+
+  &.list-steps-sm {
+    .list-steps-item {
+      h4 {
+        @extend .h5;
+        line-height: 24px;
+        @include media-breakpoint-down(xs) {
+          margin-bottom: $list-steps-title-margin-bottom-mobile;
+        }
       }
     }
   }
@@ -86,49 +133,46 @@ $list-steps-numbers: 50;
         &:nth-child(#{$i}) {
           &:before {
             content: "#{$i}";
+            box-shadow: 0 0 0 1px $list-steps-font-color;
+          }
+        }
+      }
+
+      &.list-steps-item-light {
+        &:before {
+          background-color: $white;
+          color: $list-steps-font-color;
+          box-shadow: 0 0 0 $list-steps-line-width $list-steps-font-color;
+        }
+      }
+    }
+
+    &.list-steps-lg {
+      .list-steps-item {
+        &:before {
+          box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color inset;
+        }
+        &:is(.list-steps-item-light) {
+          &:before {
+            box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color;
           }
         }
       }
     }
-  }
 
-  &.list-steps-lg {
-    .list-steps-item {
-      padding: $list-steps-padding-lg;
-
-      h4 {
-        @extend .h2;
+    &.list-steps-light {
+      .list-steps-item {
+        &:before {
+          box-shadow: 0 0 0 $list-steps-line-width $list-steps-font-color;
+        }
       }
 
-      &:before {
-        width: $list-steps-circle-size-lg;
-        height: $list-steps-circle-size-lg;
-        /* box-shadow: 0 0 0 0.25rem $list-steps-font-color; */
-        border: $list-steps-line-width-lg solid $list-steps-font-color;
-        @extend .h4;
-        line-height: 33px;
-      }
-  
-      &:not(:last-child):after {
-        width: $list-steps-line-width-lg;
-        left: 1.12rem;
-      }
-    }
-  }
-
-  &.list-steps-sm:not(.list-steps-numbers) {
-    .list-steps-item {
-      padding: $list-steps-padding-sm;
-      &:before {
-        width: $list-steps-circle-size-sm;
-        height: $list-steps-circle-size-sm;
-        font-size: 0.73125rem;
-        line-height: 13px;
-        top: 0.1875rem;
-      }
-  
-      &:not(:last-child):after {
-        left: 0.46rem;
+      &.list-steps-lg {
+        .list-steps-item {
+          &:before {
+            box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color;
+          }
+        }
       }
     }
   }
