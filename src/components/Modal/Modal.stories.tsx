@@ -3,6 +3,7 @@ import React from 'react';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+import { Modal } from '.';
 
 // Configuración general del componente
 export default {
@@ -13,28 +14,18 @@ export default {
 export const Default = (): JSX.Element => {
   return (
     <>
-      <div className="modal d-block" tabIndex={-1} role="dialog" id="exampleModal1">
-        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h4 className="modal-title">¡Importante!</h4>
-            </div>
-            <div className="modal-body">
-              <p>
-                Antes de realizar la ficha de salud, tené en cuenta haber realizado los pasos previos correspondientes.
-              </p>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-outline-link" data-dismiss="modal">
-                Volver atrás
-              </button>
-              <button type="button" className="btn btn-primary">
-                Continuar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Modal
+        id="exampleModal"
+        title="¡Importante!"
+        description="Antes de realizar la ficha de salud, tené en cuenta haber realizado los pasos previos correspondientes."
+        isBlock>
+        <button type="button" className="btn btn-outline-link" data-dismiss="modal">
+          Volver atrás
+        </button>
+        <button type="button" className="btn btn-primary">
+          Continuar
+        </button>
+      </Modal>
       <div className="modal-backdrop show"></div>
     </>
   );
@@ -59,65 +50,32 @@ export const Types = (): JSX.Element => {
         </button>
       </div>
 
-      <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal1">
-        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h4 className="modal-title">¡Importante!</h4>
-            </div>
-            <div className="modal-body">
-              <p>
-                Antes de realizar la ficha de salud, tené en cuenta haber realizado los pasos previos correspondientes.
-              </p>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-outline-link" data-dismiss="modal">
-                Volver atrás
-              </button>
-              <button type="button" className="btn btn-primary">
-                Continuar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Modal
+        id="exampleModal1"
+        title="¡Importante!"
+        description="Antes de realizar la ficha de salud, tené en cuenta haber realizado los pasos previos correspondientes.">
+        <button type="button" className="btn btn-outline-link" data-dismiss="modal">
+          Volver atrás
+        </button>
+        <button type="button" className="btn btn-primary">
+          Continuar
+        </button>
+      </Modal>
 
-      <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal2">
-        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h4 className="modal-title">Eliminar documento</h4>
-            </div>
-            <div className="modal-body">
-              <p>El documento que seleccionaste será eliminado.</p>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-outline-secondary" data-dismiss="modal">
-                Cancelar
-              </button>
-              <button type="button" className="btn btn-danger">
-                Eliminar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Modal id="exampleModal2" title="Eliminar documento" description="El documento que seleccionaste será eliminado.">
+        <button type="button" className="btn btn-outline-secondary" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="button" className="btn btn-danger">
+          Eliminar
+        </button>
+      </Modal>
 
-      <div className="modal fade" tabIndex={-1} role="dialog" id="exampleModal3">
-        <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
-          <div className="modal-content">
-            <div className="modal-header unbordered">
-              <small>CARGA EXITOSA</small>
-              <h4 className="modal-title">Los archivos se cargaron correctamente</h4>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-primary" data-dismiss="modal">
-                Aceptar
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Modal id="exampleModal3" title="Los archivos se cargaron correctamente" subtitle="CARGA EXITOSA" isUnbordered>
+        <button type="button" className="btn btn-primary" data-dismiss="modal">
+          Aceptar
+        </button>
+      </Modal>
     </>
   );
 };
