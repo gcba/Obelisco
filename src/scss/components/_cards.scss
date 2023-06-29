@@ -226,6 +226,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
   .card-img-top {
     border-radius: $card-border-radius $card-border-radius 0 0;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
   }
 
   .card-event-top {
