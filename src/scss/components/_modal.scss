@@ -16,6 +16,7 @@ $modal-footer-margin-between: spaceUnits(3);
 
 $modal-content-border-radius: spaceUnits(2);
 $modal-sm: 340px;
+$modal-mobile: 328px;
 $modal-dialog-margin-y-sm-up: 3rem;
 
 /* === Custom variables and mixins === */
@@ -81,15 +82,28 @@ $modal-dialog-margin-y-sm-up: 3rem;
     .modal-footer {
       border-top: 0;
       padding: 1rem 1.5rem 1.5rem 1.5rem;
+      gap: 0.5rem;
 
       button.btn {
-        &:nth-child(1) {
-          margin: 0px 0.5rem 0px 0px;
-        }
+        margin: 0px;
+      }
+    }
 
-        &:last-child {
-          margin: 0px;
-        }
+    @include media-breakpoint-down(sm) {
+      width: $modal-mobile;
+      margin: auto;
+
+      .modal-header {
+        padding: 1rem 1rem 0.5rem 1rem;
+      }
+
+      .modal-body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .modal-footer {
+        padding: 1rem;
       }
     }
   }

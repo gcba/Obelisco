@@ -30,9 +30,11 @@ export const Modal: React.FC<ModalProps> = (props: React.PropsWithChildren<Modal
             {subtitle && <small>{subtitle}</small>}
             <h4 className="modal-title">{title}</h4>
           </div>
-          <div className="modal-body">
-            <p>{description}</p>
-          </div>
+          {description && (
+            <div className="modal-body">
+              <p>{description}</p>
+            </div>
+          )}
           <div className="modal-footer">{children}</div>
         </div>
       </div>
