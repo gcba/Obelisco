@@ -78,6 +78,7 @@ $panel-deck-card-mr: 2rem;
       height: 296px;
       border-radius: $card-border-radius;
       object-fit: cover;
+      object-position: center;
 
       + .card-body {
         margin-left: $panel-spacer-lg;
@@ -151,6 +152,7 @@ $panel-deck-card-mr: 2rem;
     .card-img {
       border-radius: $card-border-radius;
       object-fit: cover;
+      object-position: center;
 
       @include media-breakpoint-down(sm) {
         width: 100%;
@@ -200,6 +202,8 @@ $panel-deck-card-mr: 2rem;
     @extend %panel-bg-color;
 
     img {
+      object-fit: cover;
+      object-position: center;
       + .card-body {
         .card-title {
           margin: $panel-small-vertical-title-margin;
