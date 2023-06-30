@@ -197,7 +197,7 @@ export const NewsCard = (): JSX.Element => {
         description={description}
         footer={footer}
         picture={{
-          src: 'https://buenosaires.gob.ar/sites/default/files/media/image/2014/07/08/b800a4462e49630719b2a9463365175fe50b1500.jpg',
+          src: 'cards/evento.jpg',
           alt: 'descripción alternativa'
         }}
         href="#"
@@ -225,7 +225,7 @@ export const SimpleEventCard = (): JSX.Element => {
         description={eventSubtitle}
         footer={footer}
         picture={{
-          src: 'https://buenosaires.gob.ar/sites/default/files/media/image/2014/07/08/b800a4462e49630719b2a9463365175fe50b1500.jpg',
+          src: 'cards/evento.jpg',
           alt: 'descripción alternativa'
         }}
         href="#"
@@ -241,11 +241,7 @@ export const EventCard = (): JSX.Element => {
     <div className="cards-container">
       <a className="card" href="#">
         <div className="card-event-top">
-          <img
-            src="https://buenosaires.gob.ar/sites/default/files/media/image/2014/07/08/b800a4462e49630719b2a9463365175fe50b1500.jpg"
-            className="card-event-bg"
-            alt="descripción alternativa"
-          />
+          <img src="cards/evento-bg.jpg" className="card-event-bg" alt="descripción alternativa" />
           <div className="card-event-img">
             <img src="cards/evento-thumb.jpg" alt="descripción alternativa" />
           </div>
