@@ -69,10 +69,6 @@ $theme-colors: map-merge(
   padding-left: $alert-padding-y + $alert-padding-left;
   word-break: break-word;
 
-  &:not(:has(ol, ul)) {
-    display: flex;
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -121,7 +117,7 @@ $theme-colors: map-merge(
     margin-bottom: 0;
   }
 
-  a {
+  a:not(.btn) {
     color: $blue;
 
     &:visited {
