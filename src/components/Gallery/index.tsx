@@ -16,9 +16,8 @@ function createImageObject(number: number) {
     alt: 'Texto alternativo de la imagen',
     author: 'Autor de la imagen.',
     title: 'Título de la imagen',
-    description: `Descripción o epígrafe de la imagen.
-    <br />
-    Recomendamos en este espacio no utilizar más de 2 líneas, para generar una lectura óptima.`
+    description:
+      'Descripción o epígrafe de la imagen. \nRecomendamos en este espacio no utilizar más de 2 líneas, para generar una lectura óptima.'
   };
 }
 
@@ -89,7 +88,16 @@ export const Gallery: React.FC<GalleryProps> = (props: React.PropsWithChildren<G
                     <h5 className="h2">
                       {title} {index + 1}.
                     </h5>
-                    <p dangerouslySetInnerHTML={{ __html: description }}></p>
+                    {description && (
+                      <p>
+                        {description.split('\n').map((line, index) => (
+                          <React.Fragment key={index}>
+                            {index === 0 ? `${line} ` : line}
+                            {index === 0 && <br />}
+                          </React.Fragment>
+                        ))}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
