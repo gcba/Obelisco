@@ -120,3 +120,86 @@ export const ListLinks: React.FC<ListLinksProps> = ({ type, text, textLink, isLi
     </div>
   );
 };
+
+interface AlertAction {
+  name: string;
+  className?: string;
+  url?: string;
+}
+interface AlertFullWidthProps {
+  buttons?: AlertAction[];
+  isDismissible?: boolean;
+  isLink?: boolean;
+  alertBgColor?: string;
+  isCookie?: boolean;
+  isFixed?: boolean;
+}
+
+export const AlertFullWidthComponent: React.FC<AlertFullWidthProps> = (
+  props: React.PropsWithChildren<AlertFullWidthProps>
+) => {
+  const { isDismissible, isLink, alertBgColor, buttons, isCookie, isFixed } = props;
+
+  const alertFullWidthClasses = classNames(
+    'alert',
+    'alert-full-width',
+    { [`bg-${alertBgColor}`]: alertBgColor !== undefined },
+    { ['alert-dismissible show fade']: isDismissible },
+    { ['bg-dark']: isCookie },
+    { ['position-fixed fixed-bottom']: isFixed }
+  );
+
+  return (
+    <div className={alertFullWidthClasses.trim()}>
+      <div className="alert-content">
+        <span className="material-icons-round">
+          {isCookie ? 'cookie' : alertBgColor === 'dark' ? 'directions_bus_filled' : 'info'}
+        </span>
+        <p className="alert-text">
+          <strong>
+            {isCookie
+              ? 'En nuestro sitio usamos cookies para brindarte una mejor experiencia.'
+              : alertBgColor === 'dark'
+              ? 'Este es un destacado de una alerta de aviso no semántico de ancho completo.'
+              : 'Este es un destacado de una alerta de info de ancho completo.'}
+          </strong>
+          {isLink && (
+            <>
+              {' '}
+              Versión con{' '}
+              <a href="#" target="_blank" rel="noreferrer">
+                enlace
+              </a>{' '}
+              en línea.
+            </>
+          )}
+          {buttons && !isCookie && ' Versión con botón.'}
+          {isDismissible && ' Versión con cierre.'}
+          {isCookie && (
+            <>
+              {' '}
+              <a href="#" target="_blank" rel="noreferrer">
+                Conocé más o desactivalas.
+              </a>
+            </>
+          )}
+          {!isLink && !buttons && !isDismissible && ' Versión sólo texto.'}
+        </p>
+        {buttons && (
+          <div className="alert-actions">
+            {buttons?.map(({ className, name, url }, index) => (
+              <a key={index} href={url} target="_blank" rel="noreferrer" className={className}>
+                {name}
+              </a>
+            ))}
+          </div>
+        )}
+        {isDismissible && (
+          <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+            <span className="material-icons-round">close</span>
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};
