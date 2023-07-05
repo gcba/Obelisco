@@ -22,6 +22,10 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
   .navbar-search {
     &.d-responsive {
       display: block;
+      @media (max-width: 370px) {
+        order: 3;
+        width: 100%;
+      }
     }
 
     &:is(.active-search) {
@@ -38,16 +42,16 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
 
       .input-search {
         min-height: 44px;
-        width: 48px;
+        width: 100%;
         padding: $navbar-search-closed-padding;
-        background-position: center;
-        color: transparent;
-        pointer-events: none;
+        // background-position: center;
+        // color: transparent;
+        // pointer-events: none;
         background-color: $white;
 
-        &::placeholder {
-          color: transparent;
-        }
+        // &::placeholder {
+        //   color: transparent;
+        // }
       }
     }
   }
@@ -60,6 +64,9 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
     border-radius: 8px;
     padding: 0 0.75rem;
     height: 44px;
+    @media (max-width: 370px) {
+      margin-left: auto !important;
+    }
   }
 
   .navbar-collapse {
@@ -103,6 +110,10 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
 /* === Custom styles === */
 
 .navbar {
+  .container {
+    row-gap: 0.625rem;
+  }
+
   @include media-breakpoint-up(md) {
     height: $navbar-height-desktop;
     padding-top: $navbar-padding-y-desktop;
@@ -141,16 +152,16 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
 
         &:not(.active-search) {
           .input-search {
-            width: 48px;
+            width: 100%;
             padding: $navbar-search-closed-padding;
-            background-position: center;
-            color: transparent;
-            pointer-events: none;
+            // background-position: center;
+            // color: transparent;
+            // pointer-events: none;
             background-color: $white;
 
-            &::placeholder {
-              color: transparent;
-            }
+            // &::placeholder {
+            //   color: transparent;
+            // }
           }
         }
       }
@@ -199,16 +210,16 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
 
       &:not(.active-search) {
         .input-search {
-          width: 48px;
+          width: 100%;
           padding: $navbar-search-closed-padding;
-          background-position: center;
-          color: transparent;
-          pointer-events: none;
+          // background-position: center;
+          // color: transparent;
+          // pointer-events: none;
           background-color: $white;
 
-          &::placeholder {
-            color: transparent;
-          }
+          // &::placeholder {
+          //   color: transparent;
+          // }
         }
       }
 
