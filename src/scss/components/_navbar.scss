@@ -25,6 +25,7 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
       @media (max-width: 370px) {
         order: 3;
         width: 100%;
+        margin-top: 0.625rem;
       }
     }
 
@@ -110,9 +111,6 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
 /* === Custom styles === */
 
 .navbar {
-  .container {
-    row-gap: 0.625rem;
-  }
 
   @include media-breakpoint-up(md) {
     height: $navbar-height-desktop;
@@ -180,6 +178,27 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
     }
   }
 
+  &:has(.list-group-content) {
+    @media (max-width: 420px) {
+      .list-group-content.d-responsive {
+        order: 4;
+        margin-top: 0.625rem;
+      }
+      .navbar-search.d-responsive {
+        order: 3;
+        width: 70%;
+        margin-top: 0.625rem;
+        margin-right: 0.625rem;
+      }
+    }
+    
+    @media (max-width: 420px) {
+      .navbar-toggler {
+        margin-left: auto !important;
+      }
+    }
+  }
+  
   .navbar-brand {
     @include media-breakpoint-down(xs) {
       margin-right: 0.7rem;
