@@ -14,7 +14,7 @@ $navbar-logo-width: spaceUnits(18);
 $navbar-logo-sm: spaceUnits(8.5);
 
 $navbar-search-with: spaceUnits(84);
-$navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
+$navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752) spaceUnits(3.752);
 
 @mixin responsive {
   height: auto;
@@ -22,7 +22,11 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
   .navbar-search {
     &.d-responsive {
       display: block;
-      @media (max-width: 370px) {
+      .reset[type='reset'] {
+        top: 3px;
+      }
+
+      @media (max-width: 420px) {
         order: 3;
         width: 100%;
         margin-top: 0.625rem;
@@ -178,8 +182,8 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
     }
   }
 
-  &:has(.list-group-content) {
-    @media (max-width: 420px) {
+  &:has(.list-group-content):has(.navbar-search) {
+    @media (max-width: 477px) {
       .list-group-content.d-responsive {
         order: 4;
         margin-top: 0.625rem;
@@ -192,7 +196,7 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(3.752);
       }
     }
     
-    @media (max-width: 420px) {
+    @media (max-width: 477px) {
       .navbar-toggler {
         margin-left: auto !important;
       }
