@@ -81,7 +81,9 @@ const LegalSection = (): JSX.Element => (
             <a href="https://www.buenosaires.gob.ar/privacidad">Política de privacidad</a>
           </li>
           <li className="list-inline-item">
-            <a href="https://buenosaires.gob.ar/jefedegobierno/legalytecnica/normativa/boletin-oficial-y-registro/oficios-judiciales">Oficios judiciales</a>
+            <a href="https://buenosaires.gob.ar/jefedegobierno/legalytecnica/normativa/boletin-oficial-y-registro/oficios-judiciales">
+              Oficios judiciales
+            </a>
           </li>
           <li className="list-inline-item">
             <a href="https://www.buenosaires.gob.ar/gobierno/transparencia">Transparencia</a>
@@ -125,4 +127,32 @@ export const SoloLegales = (): JSX.Element => (
 
 SoloLegales.story = {
   name: 'Solo legales'
+};
+
+export const FooterIndicator = (): JSX.Element => (
+  <>
+    <div className="footer-info">
+      <div className="footer-info-content">
+        <h4 className="footer-info-text">¿Te fue útil esta página?</h4>
+        <div className="footer-info-actions">
+          <button className="btn btn-primary">Sí, me fue útil</button>
+          <button className="btn btn-secondary">No me sirvió</button>
+        </div>
+      </div>
+    </div>
+    <footer className="main-footer">
+      <div className="container">
+        <PhonesSection />
+        <SocialSection />
+      </div>
+      <hr className="divider" />
+      <div className="container">
+        <LegalSection />
+        <LicenseSection />
+      </div>
+    </footer>
+  </>
+);
+FooterIndicator.story = {
+  name: 'Con indicador'
 };
