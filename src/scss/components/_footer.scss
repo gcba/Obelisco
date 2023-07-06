@@ -148,6 +148,7 @@ $footer-info-gap-mobile: 1rem;
 .footer-info {
   background-color: $grisulado-10;
   padding: $footer-info-padding;
+  word-break: break-word;
 
   > .container {
     &:has(.footer-info-text),
@@ -158,9 +159,6 @@ $footer-info-gap-mobile: 1rem;
       gap: $footer-info-gap;
     }
 
-    a {
-      word-break: break-word;
-    }
     .footer-info-text {
       margin: 0;
     }
