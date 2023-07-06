@@ -1,5 +1,6 @@
 // Base
 import React from 'react';
+import './Footer.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -103,26 +104,30 @@ const LicenseSection = (): JSX.Element => (
 );
 
 export const Completo = (): JSX.Element => (
-  <footer className="main-footer">
-    <div className="container">
-      <PhonesSection />
-      <SocialSection />
-    </div>
-    <hr className="divider" />
-    <div className="container">
-      <LegalSection />
-      <LicenseSection />
-    </div>
-  </footer>
+  <div className="storybook__container-footer">
+    <footer className="main-footer">
+      <div className="container">
+        <PhonesSection />
+        <SocialSection />
+      </div>
+      <hr className="divider" />
+      <div className="container">
+        <LegalSection />
+        <LicenseSection />
+      </div>
+    </footer>
+  </div>
 );
 
 export const SoloLegales = (): JSX.Element => (
-  <footer className="main-footer">
-    <div className="container">
-      <LegalSection />
-      <LicenseSection />
-    </div>
-  </footer>
+  <div className="storybook__container-footer">
+    <footer className="main-footer">
+      <div className="container">
+        <LegalSection />
+        <LicenseSection />
+      </div>
+    </footer>
+  </div>
 );
 
 SoloLegales.story = {
@@ -130,7 +135,7 @@ SoloLegales.story = {
 };
 
 export const FooterIndicator = (): JSX.Element => (
-  <>
+  <div className="storybook__container-footer">
     <div className="footer-info">
       <div className="container">
         <h4 className="footer-info-text">¿Te fue útil esta página?</h4>
@@ -151,7 +156,7 @@ export const FooterIndicator = (): JSX.Element => (
         <LicenseSection />
       </div>
     </footer>
-  </>
+  </div>
 );
 FooterIndicator.story = {
   name: 'Con indicador'
