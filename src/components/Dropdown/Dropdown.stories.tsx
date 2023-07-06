@@ -337,3 +337,73 @@ export const Options = (): JSX.Element => {
 };
 
 Options.story = { name: 'Formulario' };
+
+export const Test = (): JSX.Element => {
+  return (
+    <div className="dropdown-container">
+      <div className="dropdown mb-3">
+        <button
+          type="button"
+          className="btn btn-dropdown dropdown-toggle btn-dropdown-border btn-dropdown-lg"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          <span className="material-icons-round">dashboard</span>Filtro (1)
+        </button>
+        <div className="dropdown-menu">
+          <button className="dropdown-item" type="button">
+            Opción 1
+          </button>
+          <button className="dropdown-item" type="button">
+            Opción 2
+          </button>
+          <button className="dropdown-item" type="button">
+            Opción 3
+          </button>
+        </div>
+      </div>
+      <div className="dropdown mb-3">
+        <button
+          type="button"
+          className="btn btn-dropdown dropdown-toggle btn-dropdown-border"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          <span className="material-icons-round">dashboard</span>Filtro (1)
+        </button>
+        <div className="dropdown-menu">
+          <button className="dropdown-item" type="button">
+            Opción 1
+          </button>
+          <button className="dropdown-item" type="button">
+            Opción 2
+          </button>
+          <button className="dropdown-item" type="button">
+            Opción 3
+          </button>
+        </div>
+      </div>
+      <div className="dropdown">
+        <button
+          type="button"
+          className="btn btn-dropdown dropdown-toggle btn-dropdown-border btn-dropdown-sm"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false">
+          <span className="material-icons-round">dashboard</span>Filtro (1)
+        </button>
+        <div className="dropdown-menu">
+          <button className="dropdown-item" type="button">
+            Opción 1
+          </button>
+          <button className="dropdown-item" type="button">
+            Opción 2
+          </button>
+          <button className="dropdown-item" type="button">
+            Opción 3
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};

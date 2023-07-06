@@ -17,6 +17,7 @@ $animation-toggle: transform 0.2s ease-in-out;
 /* === Custom styles === */
 
 .dropdown {
+  width: fit-content;
   &.show {
     .btn {
       &.btn-dropdown {
@@ -66,7 +67,7 @@ $animation-toggle: transform 0.2s ease-in-out;
     }
 
     &.btn-dropdown {
-      padding: $btn-padding-y;
+      // padding: $btn-padding-y;
       font-weight: $body-font-weight;
       border: 2px solid transparent;
       background-color: $white;
@@ -74,17 +75,24 @@ $animation-toggle: transform 0.2s ease-in-out;
       font-size: 1.125rem;
       line-height: 1;
       padding: 0.5rem 0.75rem;
+      display: flex;
+      align-items: center;
+
+      .bx, .material-icons-round {
+        align-self: end;
+      }
 
       &-sm {
-        max-height: 32px;
-        font-size: 1rem;
-        padding: 6px 0.75rem 3px;
+        max-height: 30px;
+        padding: 0.1875rem 0.75rem;
+        .bx, .material-icons-round {
+          font-size: 21px;
+        }
       }
 
       &-lg {
         padding: 0.75rem;
         max-height: 48px;
-        padding: 0.75rem;
       }
 
       &.btn-dropdown-border {
@@ -95,7 +103,7 @@ $animation-toggle: transform 0.2s ease-in-out;
       &:hover {
         border-radius: spaceUnits(2);
         box-shadow: 0 0 0 2px $blue;
-        text-decoration: underline;
+        text-decoration: none;
         color: $blue;
 
         &.dropdown-toggle:after {
@@ -167,42 +175,42 @@ $animation-toggle: transform 0.2s ease-in-out;
         vertical-align: bottom;
       }
 
-      &:has(i) {
-        &:focus {
-          i {
-            color: $grisulado-900;
-          }
-        }
+        // &:has(i) {
+        //   &:focus {
+        //     i {
+        //       color: $grisulado-900;
+        //     }
+        //   }
 
-        i {
-          display: inline-block;
-          background-color: $grisulado-50;
-          margin-left: spaceUnits(1);
-          vertical-align: middle;
-          border-radius: $border-radius;
-          padding: 0.2rem;
-          font-size: 1rem;
-        }
-      }
+        //   i {
+        //     display: inline-block;
+        //     background-color: $grisulado-50;
+        //     margin-left: spaceUnits(1);
+        //     vertical-align: middle;
+        //     border-radius: $border-radius;
+        //     padding: 0.2rem;
+        //     font-size: 1rem;
+        //   }
+        // }
 
-      &:not(:has(.dropdown-language-icon)) {
-        &:focus {
-          span {
-            color: $grisulado-900;
-          }
-        }
+        // &:not(:has(.dropdown-language-icon)) {
+        //   &:focus {
+        //     span {
+        //       color: $grisulado-900;
+        //     }
+        //   }
 
-        span {
-          display: inline-block;
-          background-color: $grisulado-50;
-          margin-left: spaceUnits(1);
-          border-radius: $border-radius;
-          text-align: center;
-          vertical-align: middle;
-          font-size: 1rem;
-          padding: 0.2rem;
-        }
-      }
+        //   span {
+        //     display: inline-block;
+        //     background-color: $grisulado-50;
+        //     margin-left: spaceUnits(1);
+        //     border-radius: $border-radius;
+        //     text-align: center;
+        //     vertical-align: middle;
+        //     font-size: 1rem;
+        //     padding: 0.2rem;
+        //   }
+        // }
 
       .dropdown-toggle {
         color: $grisulado-900;
@@ -216,11 +224,13 @@ $animation-toggle: transform 0.2s ease-in-out;
     border: 0;
     border-radius: spaceUnits(2);
     box-shadow: 0 0 0 2px #e6ebf0 !important;
-    min-width: 15rem;
+    // min-width: 15rem;
+    width: 100%;
+    min-width: auto;
 
-    @include media-breakpoint-up(md) {
-      width: 340px;
-    }
+    // @include media-breakpoint-up(md) {
+    //   width: 340px;
+    // }
 
     .dropdown-item {
       border-radius: $border-radius;
@@ -228,6 +238,7 @@ $animation-toggle: transform 0.2s ease-in-out;
       color: $body-color;
       white-space: normal;
       text-decoration: none;
+      word-break: break-all;
 
       &:hover {
         background-color: $white;
@@ -330,11 +341,16 @@ $animation-toggle: transform 0.2s ease-in-out;
       display: flex;
       justify-content: space-between;
       max-width: 340px;
+
+      .bx, .material-icons-round {
+        align-self: end;
+      }
       
       p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        align-self: center;
       }
     }
 
