@@ -37,10 +37,6 @@ $alert-icons: (
   border-color: $border;
   border: 2px solid $border;
   border-radius: spaceUnits(2);
-
-  a {
-    color: inherit;
-  }
 }
 
 @mixin alert-icon($type) {
