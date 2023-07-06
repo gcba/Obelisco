@@ -78,7 +78,7 @@ $animation-toggle: transform 0.2s ease-in-out;
       &-sm {
         max-height: 32px;
         font-size: 1rem;
-        padding: 0.375rem 0.5rem 0.25rem;
+        padding: 6px 0.75rem 3px;
       }
 
       &-lg {
@@ -323,4 +323,32 @@ $animation-toggle: transform 0.2s ease-in-out;
       }
     }
   }
+
+  &.dropdown-form {
+    width: fit-content;
+    .btn-dropdown {
+      display: flex;
+      justify-content: space-between;
+      max-width: 340px;
+      
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .dropdown-menu {
+      width: 100%;
+      min-width: auto;
+
+      .custom-control:last-child {
+        .btn-chip {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
+
+

@@ -74,6 +74,7 @@ export default Dropdown;
 export const DropdownOption = ({ options, isRadio, children }: DropdownOptionProps): JSX.Element => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({});
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Maneja el cambio de estado de una casilla de verificación
@@ -86,6 +87,9 @@ export const DropdownOption = ({ options, isRadio, children }: DropdownOptionPro
 
   // Maneja el cambio de estado de un radio button
   const handleRadioChange = (radioName: string) => {
+    const selectedOption = options.find((option) => option.value === radioName)?.label || null;
+    setSelectedOption(selectedOption);
+
     const updatedCheckboxStates = {};
     options.forEach((option) => {
       updatedCheckboxStates[option.value] = option.value === radioName;
@@ -113,20 +117,22 @@ export const DropdownOption = ({ options, isRadio, children }: DropdownOptionPro
   }, [handleOutsideClick]);
 
   const selectedCheckboxCount = Object.values(checkboxStates).filter((checked) => checked).length;
+  const dropdownTitle = selectedCheckboxCount > 0 ? `Desplegable (${selectedCheckboxCount})` : 'Desplegable';
+  const displayTitle = selectedOption ? selectedOption : dropdownTitle;
 
   return (
     <>
       <div className="dropdown-container">
-        <div className={`dropdown mb-3 ${dropdownOpen ? 'show' : ''}`} ref={dropdownRef}>
+        <div className={`dropdown dropdown-form ${dropdownOpen ? 'show' : ''}`} ref={dropdownRef}>
           <button
             type="button"
-            className={`btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle ${
+            className={`btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle  ${
               dropdownOpen ? 'active' : ''
             }`}
             onClick={handleDropdownToggle}
             aria-haspopup="true"
             aria-expanded={dropdownOpen ? 'true' : 'false'}>
-            Desplegable {selectedCheckboxCount > 0 ? `(${selectedCheckboxCount})` : ''}
+            <p className="mb-0">{displayTitle}</p>
           </button>
           <div className={`dropdown-menu dropdown-body ${dropdownOpen ? 'show' : ''}`}>
             {options.map((option) => (
