@@ -132,7 +132,7 @@ SoloLegales.story = {
 export const FooterIndicator = (): JSX.Element => (
   <>
     <div className="footer-info">
-      <div className="footer-info-content">
+      <div className="container">
         <h4 className="footer-info-text">¿Te fue útil esta página?</h4>
         <div className="footer-info-actions">
           <button className="btn btn-primary">Sí, me fue útil</button>
