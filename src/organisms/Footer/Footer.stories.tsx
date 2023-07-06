@@ -20,11 +20,11 @@ const phones = [
 ];
 
 const social = [
-  ['Facebook', 'https://www.facebook.com/GCBA'],
-  ['Instagram', 'https://www.instagram.com/buenosaires'],
+  ['Facebook', 'https://www.facebook.com/GCBA', 'facebook-circle'],
+  ['Instagram', 'https://www.instagram.com/buenosaires', 'instagram-alt'],
   ['Twitter', 'https://twitter.com/gcba'],
   ['YouTube', 'https://www.youtube.com/user/GCBA'],
-  ['LinkedIn', 'https://ar.linkedin.com/company/gobierno-de-la-ciudad-de-buenos-aires']
+  ['LinkedIn', 'https://ar.linkedin.com/company/gobierno-de-la-ciudad-de-buenos-aires', 'linkedin-square']
 ];
 
 const PhonesSection = (): JSX.Element => (
@@ -47,10 +47,10 @@ const SocialSection = (): JSX.Element => (
   <section>
     <h4>Redes de la ciudad</h4>
     <ul className="list-inline">
-      {social.map(([network, href]) => (
+      {social.map(([network, href, icon]) => (
         <li className="list-inline-item redes-items" key={network}>
           <a href={href}>
-            <i className={`bx bxl-${network.toLocaleLowerCase()}`} />
+            <i className={`bx bxl-${icon ? icon : network.toLocaleLowerCase()}`} />
             {network}
           </a>
         </li>
