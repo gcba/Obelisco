@@ -12,7 +12,7 @@ $list-steps-circle-size-lg: 2.5rem;
 $list-steps-circle-size-lg-mobile: 2rem;
 $list-steps-line-width-lg: 0.25rem;
 
-$list-steps-numbers: 50;
+$list-steps-numbers: 9;
 
 /* === Custom styles === */
 
@@ -24,6 +24,10 @@ $list-steps-numbers: 50;
     color: $list-steps-font-color;
     position: relative;
     padding: $list-steps-padding;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
 
     h4 {
       @include media-breakpoint-down(xs) {
@@ -81,6 +85,10 @@ $list-steps-numbers: 50;
         padding: $list-steps-padding-lg-mobile;
       }
 
+      &:last-child {
+        padding-bottom: 0;
+      }
+
       h4 {
         @extend .h2;
       }
@@ -93,6 +101,7 @@ $list-steps-numbers: 50;
         @include media-breakpoint-down(xs) {
           width: $list-steps-circle-size-lg-mobile;
           height: $list-steps-circle-size-lg-mobile;
+          font-weight: 700;
         }
       }
   
