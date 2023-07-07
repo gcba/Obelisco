@@ -6,79 +6,13 @@ import './ProcessSteps.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { ListSteps } from '.';
+import { ListSteps, LISTSTEPS_CONTENT, LISTSTEPS_CONTENT_LARGE, LISTSTEPS_CONTENT_LIGHT_ITEMS } from '.';
 
 // Configuración general del componente
 export default {
   title: 'Componentes|Pasos de trámite',
   decorators: [withA11y]
 };
-
-const LISTSTEPS_CONTENT = [
-  {
-    title: 'Instrucción 1',
-    description:
-      'En esta descripción de la instrucción 1 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.'
-  },
-  {
-    title: 'Instrucción 2',
-    description:
-      'En esta descripción de la instrucción 2 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.'
-  },
-  {
-    title: 'Instrucción 3',
-    description:
-      'En esta descripción de la instrucción 3 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.'
-  }
-];
-const LISTSTEPS_CONTENT_LARGE = [
-  {
-    title: 'Instrucción 1',
-    description:
-      'En esta descripción de la instrucción 1 se muestran los detalles principales de las acciones que deberá tomar el usuario luego. En esta descripción de la instrucción 1 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.'
-  },
-  {
-    title: 'Instrucción 2',
-    description:
-      'En esta descripción de la instrucción 2 se muestran los detalles principales de las acciones que deberá tomar el usuario luego. En esta descripción de la instrucción 2 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.'
-  },
-  {
-    title: 'Instrucción 3',
-    description:
-      'En esta descripción de la instrucción 3 se muestran los detalles principales de las acciones que deberá tomar el usuario luego. En esta descripción de la instrucción 3 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.'
-  }
-];
-
-const LISTSTEPS_CONTENT_LIGHT_ITEMS = [
-  {
-    title: 'Instrucción 1',
-    description:
-      'En esta descripción de la instrucción 1 se muestran los detalles principales de las acciones que deberá tomar el usuario luego. En esta descripción de la instrucción 1 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.'
-  },
-  {
-    title: 'Instrucción 2',
-    description:
-      'En esta descripción de la instrucción 2 se muestran los detalles principales de las acciones que deberá tomar el usuario luego. En esta descripción de la instrucción 2 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.'
-  },
-  {
-    title: 'Instrucción 3',
-    description:
-      'En esta descripción de la instrucción 3 se muestran los detalles principales de las acciones que deberá tomar el usuario luego. En esta descripción de la instrucción 3 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.',
-    isLightItem: true
-  },
-  {
-    title: 'Instrucción 4',
-    description:
-      'En esta descripción de la instrucción 4 se muestran los detalles principales de las acciones que deberá tomar el usuario luego. En esta descripción de la instrucción 4 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.',
-    isLightItem: true
-  },
-  {
-    title: 'Instrucción 5',
-    description:
-      'En esta descripción de la instrucción 5 se muestran los detalles principales de las acciones que deberá tomar el usuario luego. En esta descripción de la instrucción 5 se muestran los detalles principales de las acciones que deberá tomar el usuario luego.',
-    isLightItem: true
-  }
-];
 
 export const ListStepsSizes = (): JSX.Element => (
   <div className="storybook__wrapper-list-step">
