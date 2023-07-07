@@ -21,6 +21,8 @@ export interface DropdownOptionProps {
   options: Option[];
   isRadio?: boolean;
   children?: React.ReactNode;
+  icon?: React.ReactNode;
+  iconType?: 'material' | 'boxicon';
 }
 
 export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren<DropdownProps>) => {
@@ -71,7 +73,7 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
 
 export default Dropdown;
 
-export const DropdownOption = ({ options, isRadio, children }: DropdownOptionProps): JSX.Element => {
+export const DropdownOption = ({ options, isRadio, children, icon, iconType }: DropdownOptionProps): JSX.Element => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({});
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -132,6 +134,7 @@ export const DropdownOption = ({ options, isRadio, children }: DropdownOptionPro
             onClick={handleDropdownToggle}
             aria-haspopup="true"
             aria-expanded={dropdownOpen ? 'true' : 'false'}>
+            {icon && iconType === 'material' ? icon : icon && <i className={`bx ${icon}`}></i>}
             <p className="mb-0">{displayTitle}</p>
           </button>
           <div className={`dropdown-menu dropdown-body ${dropdownOpen ? 'show' : ''}`}>
