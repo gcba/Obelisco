@@ -23,6 +23,10 @@ $divider-border: 0.125rem solid $grisulado-700;
 
 $divider-margin-mobile: 2rem 0 2rem;
 
+$footer-info-padding: 1.5rem 0;
+$footer-info-gap: 2rem;
+$footer-info-gap-mobile: 1rem;
+
 /* === Custom styles === */
 
 .main-footer {
@@ -137,6 +141,54 @@ $divider-margin-mobile: 2rem 0 2rem;
 
     @include media-breakpoint-down(sm) {
       margin: $divider-margin-mobile;
+    }
+  }
+}
+
+.footer-info {
+  background-color: $grisulado-10;
+  padding: $footer-info-padding;
+  word-break: break-word;
+
+  > .container {
+    &:has(.footer-info-text),
+    &:has(.footer-info-actions) {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: $footer-info-gap;
+    }
+
+    .footer-info-text {
+      margin: 0;
+    }
+
+    .footer-info-actions {
+      flex-basis: 50%;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &:has(.footer-info-text),
+    &:has(.footer-info-actions) {
+      .container {
+        flex-wrap: wrap;
+        gap: $footer-info-gap-mobile;
+
+        .footer-info-text {
+          font-weight: 700;
+        }
+        .footer-info-actions {
+          flex-basis: 100%;
+          flex-shrink: 1;
+          gap: 0.5rem;
+          align-items: flex-start;
+        }
+      }
     }
   }
 }
