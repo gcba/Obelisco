@@ -143,7 +143,38 @@ $list-steps-numbers: 9;
           &:before {
             content: "#{$i}";
             box-shadow: 0 0 0 1px $list-steps-font-color;
+             padding-top: 1px;
           }
+        }
+      }
+
+      &:nth-child(4) {
+        &:before {
+          padding-right: 1.5px;
+        }
+      }
+
+      &:nth-child(5) {
+        &:before {
+          padding-right: 0.5px;
+        }
+      }
+
+      &:nth-child(6) {
+        &:before {
+          padding-right: 1px;
+        }
+      }
+
+      &:nth-child(7) {
+        &:before {
+          padding-top: 1.5px;
+        }
+      }
+
+      &:nth-child(9) {
+        &:before {
+          padding-left: 1px;
         }
       }
 
@@ -161,6 +192,7 @@ $list-steps-numbers: 9;
         &:before {
           box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color inset;
         }
+
         &:is(.list-steps-item-light) {
           &:before {
             box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color;
