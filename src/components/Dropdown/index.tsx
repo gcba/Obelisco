@@ -131,55 +131,53 @@ export const DropdownOption = ({
 
   return (
     <>
-      <div className="storybook-dropdown-form-container">
-        <div className={`dropdown dropdown-form ${dropdownOpen ? 'show' : ''}`} ref={dropdownRef}>
-          <button
-            type="button"
-            className={`btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle  ${
-              dropdownOpen ? 'active' : ''
-            }`}
-            onClick={handleDropdownToggle}
-            aria-haspopup="true"
-            aria-expanded={dropdownOpen ? 'true' : 'false'}>
-            {icon && iconType === 'material' ? icon : icon && <i className={`bx ${icon}`}></i>}
-            <p className="mb-0">{displayTitle}</p>
-          </button>
-          <div className={`dropdown-menu dropdown-body ${dropdownOpen ? 'show' : ''}`}>
-            {options.map((option) => (
-              <div className={`custom-control ${isRadio ? 'custom-radio' : 'custom-checkbox'}`} key={option.value}>
-                {isRadio ? (
-                  <label className={`btn btn-chip btn-sm ${checkboxStates[option.value] ? 'active' : ''}`}>
-                    <input
-                      className="btn-check"
-                      type="radio"
-                      id={generateUniqueID(option.value, isRadio)}
-                      name="profession"
-                      value={option.value}
-                      checked={checkboxStates[option.value]}
-                      onChange={() => handleRadioChange(option.value)}
-                    />
+      <div className={`dropdown dropdown-form ${dropdownOpen ? 'show' : ''}`} ref={dropdownRef}>
+        <button
+          type="button"
+          className={`btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle  ${
+            dropdownOpen ? 'active' : ''
+          }`}
+          onClick={handleDropdownToggle}
+          aria-haspopup="true"
+          aria-expanded={dropdownOpen ? 'true' : 'false'}>
+          {icon && iconType === 'material' ? icon : icon && <i className={`bx ${icon}`}></i>}
+          <p className="mb-0">{displayTitle}</p>
+        </button>
+        <div className={`dropdown-menu dropdown-body ${dropdownOpen ? 'show' : ''}`}>
+          {options.map((option) => (
+            <div className={`custom-control ${isRadio ? 'custom-radio' : 'custom-checkbox'}`} key={option.value}>
+              {isRadio ? (
+                <label className={`btn btn-chip btn-sm ${checkboxStates[option.value] ? 'active' : ''}`}>
+                  <input
+                    className="btn-check"
+                    type="radio"
+                    id={generateUniqueID(option.value, isRadio)}
+                    name="profession"
+                    value={option.value}
+                    checked={checkboxStates[option.value]}
+                    onChange={() => handleRadioChange(option.value)}
+                  />
+                  {option.label}
+                  {children}
+                </label>
+              ) : (
+                <>
+                  <input
+                    className="custom-control-input"
+                    type="checkbox"
+                    id={`skills-${option.value}-input`}
+                    name="skills"
+                    value={option.value}
+                    checked={checkboxStates[option.value]}
+                    onChange={() => handleCheckboxChange(option.value)}
+                  />
+                  <label className="custom-control-label" htmlFor={`skills-${option.value}-input`}>
                     {option.label}
-                    {children}
                   </label>
-                ) : (
-                  <>
-                    <input
-                      className="custom-control-input"
-                      type="checkbox"
-                      id={`skills-${option.value}-input`}
-                      name="skills"
-                      value={option.value}
-                      checked={checkboxStates[option.value]}
-                      onChange={() => handleCheckboxChange(option.value)}
-                    />
-                    <label className="custom-control-label" htmlFor={`skills-${option.value}-input`}>
-                      {option.label}
-                    </label>
-                  </>
-                )}
-              </div>
-            ))}
-          </div>
+                </>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </>

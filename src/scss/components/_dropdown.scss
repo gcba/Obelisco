@@ -20,6 +20,7 @@ $animation-toggle: transform 0.2s ease-in-out;
 @mixin dropdown-menu-style-sm() {
   .custom-control-label {
     min-height: 1.875rem;
+    padding: 0 0.75rem 0 3rem;
 
     &::before {
       top: 0.4rem;
@@ -56,6 +57,11 @@ $animation-toggle: transform 0.2s ease-in-out;
       top: 0.3rem;
       left: 0.15rem;
     }
+  }
+
+  .btn,
+  .btn-chip {
+    min-height: 3em;
   }
 
   .custom-control {

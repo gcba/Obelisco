@@ -294,7 +294,7 @@ export const Options = (): JSX.Element => {
   ];
 
   return (
-    <>
+    <div className="storybook-dropdown-form-container">
       <DropdownOption options={checkboxOptions}>
         <i className="bx bxs-check"></i>
       </DropdownOption>
@@ -311,7 +311,7 @@ export const Options = (): JSX.Element => {
       <DropdownOption options={radioOptions} isRadio={true} icon="bx-ghost" iconType="boxicon">
         <i className="bx bx-check"></i>
       </DropdownOption>
-    </>
+    </div>
   );
 };
 
