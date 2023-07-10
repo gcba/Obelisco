@@ -73,13 +73,18 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
 
 export default Dropdown;
 
-export const DropdownOption = ({ options, isRadio, children, icon, iconType }: DropdownOptionProps): JSX.Element => {
+export const DropdownOption = ({
+  options,
+  isRadio = false,
+  children,
+  icon,
+  iconType
+}: DropdownOptionProps): JSX.Element => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({});
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Maneja el cambio de estado de una casilla de verificación
   const handleCheckboxChange = (checkboxName: string) => {
     setCheckboxStates((prevState) => ({
       ...prevState,
@@ -87,7 +92,6 @@ export const DropdownOption = ({ options, isRadio, children, icon, iconType }: D
     }));
   };
 
-  // Maneja el cambio de estado de un radio button
   const handleRadioChange = (radioName: string) => {
     const selectedOption = options.find((option) => option.value === radioName)?.label || null;
     setSelectedOption(selectedOption);
@@ -99,12 +103,10 @@ export const DropdownOption = ({ options, isRadio, children, icon, iconType }: D
     setCheckboxStates(updatedCheckboxStates);
   };
 
-  // Maneja el evento de abrir/cerrar el dropdown
   const handleDropdownToggle = () => {
     setDropdownOpen((prevState) => !prevState);
   };
 
-  // Maneja el evento de clic fuera del dropdown para cerrarlo
   const handleOutsideClick = useCallback((event: MouseEvent) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setDropdownOpen(false);
@@ -122,9 +124,14 @@ export const DropdownOption = ({ options, isRadio, children, icon, iconType }: D
   const dropdownTitle = selectedCheckboxCount > 0 ? `Desplegable (${selectedCheckboxCount})` : 'Desplegable';
   const displayTitle = selectedOption ? selectedOption : dropdownTitle;
 
+  const generateUniqueID = (value: string, isRadio: boolean) => {
+    const prefix = isRadio ? 'radio' : 'checkbox';
+    return `${prefix}-${value}-${Math.random().toString(36).substr(2, 9)}`;
+  };
+
   return (
     <>
-      <div className="dropdown-container">
+      <div className="storybook-dropdown-form-container">
         <div className={`dropdown dropdown-form ${dropdownOpen ? 'show' : ''}`} ref={dropdownRef}>
           <button
             type="button"
@@ -145,7 +152,7 @@ export const DropdownOption = ({ options, isRadio, children, icon, iconType }: D
                     <input
                       className="btn-check"
                       type="radio"
-                      id={`skills-${option.value}-input`}
+                      id={generateUniqueID(option.value, isRadio)}
                       name="profession"
                       value={option.value}
                       checked={checkboxStates[option.value]}

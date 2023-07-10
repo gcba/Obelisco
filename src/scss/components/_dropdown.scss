@@ -4,9 +4,9 @@ $dropdown-box-shadow: 0 0 spaceUnits(3) transparentize($grisulado-100, 0.25);
 $dropdown-item-padding: spaceUnits(2) spaceUnits(2);
 
 $icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>');
-$icon-chevron-down: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
-$icon-chevron-down-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
-$icon-chevron-down-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>');
+$icon-chevron-down: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224px%22%20fill%3D%22%2338485c%22%3E%3Cpath%20d%3D%22M24%2024H0V0h24v24z%22%20fill%3D%22none%22%20opacity%3D%22.87%22%2F%3E%3Cpath%20d%3D%22M15.88%209.29L12%2013.17%208.12%209.29c-.39-.39-1.02-.39-1.41%200-.39.39-.39%201.02%200%201.41l4.59%204.59c.39.39%201.02.39%201.41%200l4.59-4.59c.39-.39.39-1.02%200-1.41-.39-.38-1.03-.39-1.42%200z%22%2F%3E%3C%2Fsvg%3E');
+$icon-chevron-down-white: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224px%22%20fill%3D%22%23ffffff%22%3E%3Cpath%20d%3D%22M24%2024H0V0h24v24z%22%20fill%3D%22none%22%20opacity%3D%22.87%22%2F%3E%3Cpath%20d%3D%22M15.88%209.29L12%2013.17%208.12%209.29c-.39-.39-1.02-.39-1.41%200-.39.39-.39%201.02%200%201.41l4.59%204.59c.39.39%201.02.39%201.41%200l4.59-4.59c.39-.39.39-1.02%200-1.41-.39-.38-1.03-.39-1.42%200z%22%2F%3E%3C%2Fsvg%3E');
+$icon-chevron-down-hover: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224px%22%20fill%3D%22%23007bc7%22%3E%3Cpath%20d%3D%22M24%2024H0V0h24v24z%22%20fill%3D%22none%22%20opacity%3D%22.87%22%2F%3E%3Cpath%20d%3D%22M15.88%209.29L12%2013.17%208.12%209.29c-.39-.39-1.02-.39-1.41%200-.39.39-.39%201.02%200%201.41l4.59%204.59c.39.39%201.02.39%201.41%200l4.59-4.59c.39-.39.39-1.02%200-1.41-.39-.38-1.03-.39-1.42%200z%22%2F%3E%3C%2Fsvg%3E');
 $icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>');
 
 $animation-toggle: transform 0.2s ease-in-out;
@@ -16,8 +16,57 @@ $animation-toggle: transform 0.2s ease-in-out;
 
 /* === Custom styles === */
 
+//Mixin styles dropdown form
+@mixin dropdown-menu-style-sm() {
+  .custom-control-label {
+    min-height: 1.875rem;
+
+    &::before {
+      top: 0.4rem;
+    }
+  }
+
+  .custom-checkbox {
+    .custom-control-input:checked ~ .custom-control-label::after {
+      width: 46px;
+      height: 50px;
+      top: -0.6rem;
+      left: -0.1rem;
+    }
+  }
+
+  .btn,
+  .btn-chip {
+    min-height: 1.875rem;
+    padding: 0rem 0.75rem;
+  }
+}
+
+@mixin dropdown-menu-style-lg() {
+  .custom-control-label {
+    min-height: 3rem;
+
+    &::before {
+      top: 0.9rem;
+    }
+  }
+
+  .custom-checkbox {
+    .custom-control-input:checked ~ .custom-control-label::after {
+      top: 0.3rem;
+      left: 0.15rem;
+    }
+  }
+
+  .custom-control {
+    min-height: 1.875rem;
+  }
+}
+//fin Mixin styles dropdown form
+
 .dropdown {
   width: fit-content;
+
   &.show {
     .btn {
       &.btn-dropdown {
@@ -78,14 +127,16 @@ $animation-toggle: transform 0.2s ease-in-out;
       display: flex;
       align-items: center;
 
-      .bx, .material-icons-round {
+      .bx,
+      .material-icons-round {
         align-self: end;
       }
 
       &-sm {
         max-height: 30px;
         padding: 0.1875rem 0.75rem;
-        .bx, .material-icons-round {
+        .bx,
+        .material-icons-round {
           font-size: 21px;
         }
       }
@@ -152,10 +203,11 @@ $animation-toggle: transform 0.2s ease-in-out;
         content: $icon-chevron-down;
         display: inline-block;
         vertical-align: middle;
-        width: 1.4em;
-        height: 1.4em;
+        width: 1.5rem;
+        height: 1.5rem;
         border: none;
         transition: $animation-toggle;
+        margin-left: 0.25rem;
       }
 
       .dropdown-user-icon {
@@ -175,42 +227,42 @@ $animation-toggle: transform 0.2s ease-in-out;
         vertical-align: bottom;
       }
 
-        // &:has(i) {
-        //   &:focus {
-        //     i {
-        //       color: $grisulado-900;
-        //     }
-        //   }
+      // &:has(i) {
+      //   &:focus {
+      //     i {
+      //       color: $grisulado-900;
+      //     }
+      //   }
 
-        //   i {
-        //     display: inline-block;
-        //     background-color: $grisulado-50;
-        //     margin-left: spaceUnits(1);
-        //     vertical-align: middle;
-        //     border-radius: $border-radius;
-        //     padding: 0.2rem;
-        //     font-size: 1rem;
-        //   }
-        // }
+      //   i {
+      //     display: inline-block;
+      //     background-color: $grisulado-50;
+      //     margin-left: spaceUnits(1);
+      //     vertical-align: middle;
+      //     border-radius: $border-radius;
+      //     padding: 0.2rem;
+      //     font-size: 1rem;
+      //   }
+      // }
 
-        // &:not(:has(.dropdown-language-icon)) {
-        //   &:focus {
-        //     span {
-        //       color: $grisulado-900;
-        //     }
-        //   }
+      // &:not(:has(.dropdown-language-icon)) {
+      //   &:focus {
+      //     span {
+      //       color: $grisulado-900;
+      //     }
+      //   }
 
-        //   span {
-        //     display: inline-block;
-        //     background-color: $grisulado-50;
-        //     margin-left: spaceUnits(1);
-        //     border-radius: $border-radius;
-        //     text-align: center;
-        //     vertical-align: middle;
-        //     font-size: 1rem;
-        //     padding: 0.2rem;
-        //   }
-        // }
+      //   span {
+      //     display: inline-block;
+      //     background-color: $grisulado-50;
+      //     margin-left: spaceUnits(1);
+      //     border-radius: $border-radius;
+      //     text-align: center;
+      //     vertical-align: middle;
+      //     font-size: 1rem;
+      //     padding: 0.2rem;
+      //   }
+      // }
 
       .dropdown-toggle {
         color: $grisulado-900;
@@ -276,15 +328,16 @@ $animation-toggle: transform 0.2s ease-in-out;
 
         .custom-control-label {
           width: 100%;
-          min-height: 3.125rem;
+          min-height: 2.5rem;
           margin: 0;
           display: flex;
           align-items: center;
           word-break: break-word;
+          padding-left: 3rem;
 
           &::before {
             background-color: $white;
-            top: 0.9rem;
+            top: 0.68rem;
           }
 
           &::after {
@@ -304,21 +357,36 @@ $animation-toggle: transform 0.2s ease-in-out;
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' style='fill: rgba(0, 123, 199, 1);transform: ;msFilter:;'%3E%3Cpath d='m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z'%3E%3C/path%3E%3C/svg%3E");
           width: 40px;
           height: 40px;
-          top: 0.25rem;
+          top: 0rem;
           left: 0.1rem;
+        }
+      }
+
+      .custom-radio {
+        margin-bottom: 0.25rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &.btn,
+        .btn-chip {
+          margin: 0;
+          min-height: 2.5rem;
         }
       }
 
       .btn-chip {
         width: 100%;
-        min-height: 3.125rem;
+        min-height: 3rem;
         text-align: start;
         align-items: center;
         display: flex;
         justify-content: space-between;
         background: $white;
-        
-        .bx, .material-icons-round {
+
+        .bx,
+        .material-icons-round {
           display: none;
           font-size: 1.5rem;
         }
@@ -326,7 +394,8 @@ $animation-toggle: transform 0.2s ease-in-out;
         &.active {
           background: $blue;
 
-          .bx, .material-icons-round {
+          .bx,
+          .material-icons-round {
             display: block;
           }
         }
@@ -336,6 +405,7 @@ $animation-toggle: transform 0.2s ease-in-out;
 
   &.dropdown-form {
     width: fit-content;
+
     .btn-dropdown {
       display: flex;
       justify-content: space-between;
@@ -348,16 +418,26 @@ $animation-toggle: transform 0.2s ease-in-out;
         align-self: center;
       }
 
-      .bx, .material-icons-round {
+      .bx,
+      .material-icons-round {
+        font-size: 1.5rem;
         margin-right: 0.25rem;
       }
-      
+
       p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         align-self: center;
       }
+    }
+
+    .btn-dropdown-sm + .dropdown-menu {
+      @include dropdown-menu-style-sm();
+    }
+
+    .btn-dropdown-lg + .dropdown-menu {
+      @include dropdown-menu-style-lg();
     }
 
     .dropdown-menu {
@@ -371,5 +451,3 @@ $animation-toggle: transform 0.2s ease-in-out;
     }
   }
 }
-
-

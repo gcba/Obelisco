@@ -232,9 +232,9 @@ Idioma.story = {
   name: 'Desplegable idioma'
 };
 
-export const Tamanos = (): JSX.Element => (
+export const Sizes = (): JSX.Element => (
   <div className="dropdown-container">
-    <Dropdown className="mb-3" size="lg" isBordered={true} title="Filtro (1)">
+    <Dropdown className="mb-3" size="lg" isBordered={true} title="Desplegable (1)">
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">
           Opción 1
@@ -248,7 +248,7 @@ export const Tamanos = (): JSX.Element => (
       </div>
     </Dropdown>
 
-    <Dropdown className="mb-3" isBordered={true} title="Filtro (1)">
+    <Dropdown className="mb-3" isBordered={true} title="Desplegable (1)">
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">
           Opción 1
@@ -262,7 +262,7 @@ export const Tamanos = (): JSX.Element => (
       </div>
     </Dropdown>
 
-    <Dropdown size="sm" isBordered={true} title="Filtro (1)">
+    <Dropdown size="sm" isBordered={true} title="Desplegable (1)">
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">
           Opción 1
@@ -278,7 +278,7 @@ export const Tamanos = (): JSX.Element => (
   </div>
 );
 
-Tamanos.story = { name: 'Tamaños' };
+Sizes.story = { name: 'Tamaños' };
 
 export const Options = (): JSX.Element => {
   const checkboxOptions = [
