@@ -260,7 +260,12 @@ $animation-toggle: transform 0.2s ease-in-out;
     border-radius: spaceUnits(2);
     box-shadow: 0 0 0 2px #e6ebf0 !important;
     max-width: 340px;
+    min-width: 340px;
     width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      min-width: 250px;
+    }
 
     .dropdown-item {
       border-radius: $border-radius;
