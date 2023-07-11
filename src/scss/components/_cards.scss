@@ -295,7 +295,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       padding: 0;
 
       a {
-        display: block;
+        display: inline-block;
         width: fit-content;
       }
     }
@@ -402,7 +402,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       padding: $card-spacer-unbordered;
 
       a {
-        display: block;
+        display: inline-block;
         width: fit-content;
       }
     }
