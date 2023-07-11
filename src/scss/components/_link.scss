@@ -22,6 +22,7 @@ a {
   outline: none;
   color: $blue;
   cursor: pointer;
+  word-break: break-word;
 
   &:visited {
     color: $link-visited-color;

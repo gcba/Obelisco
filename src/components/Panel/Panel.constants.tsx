@@ -39,7 +39,7 @@ export const LINK_DOWNLOAD_BUTTON_ICON = {
   isDownload: true
 };
 export const PICTURE = {
-  src: 'panel/larreta.jpg',
+  src: 'panel/hlarreta.jpg',
   alt: 'descripción alternativa'
 };
 export const VIDEO = {

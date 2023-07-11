@@ -40,6 +40,7 @@ const headers = [
   'componentes-panel-chico-vertical',
   'componentes-pasos-de-un-formulario',
   'componentes-spinner',
+  'componentes-switch',
   'componentes-tarjetas-tipos',
   'componentes-tarjetas-lista-ancho-completo',
   'componentes-tarjetas-lista-ancho-por-tarjeta',

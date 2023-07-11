@@ -37,10 +37,6 @@ $alert-icons: (
   border-color: $border;
   border: 2px solid $border;
   border-radius: spaceUnits(2);
-
-  a {
-    color: inherit;
-  }
 }
 
 @mixin alert-icon($type) {
@@ -68,10 +64,6 @@ $theme-colors: map-merge(
   counter-reset: section;
   padding-left: $alert-padding-y + $alert-padding-left;
   word-break: break-word;
-
-  &:not(:has(ol, ul)) {
-    display: flex;
-  }
 
   &::before {
     content: '';
@@ -121,7 +113,7 @@ $theme-colors: map-merge(
     margin-bottom: 0;
   }
 
-  a {
+  a:not(.btn) {
     color: $blue;
 
     &:visited {

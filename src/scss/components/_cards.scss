@@ -226,6 +226,9 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
   .card-img-top {
     border-radius: $card-border-radius $card-border-radius 0 0;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
   }
 
   .card-event-top {
@@ -261,8 +264,10 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       img {
         width: $card-picture-size-lg;
         height: $card-picture-size-lg;
-        object-fit: cover;
         border-radius: $card-event-img-border-radius;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        object-position: center;
       }
 
       &:before,
@@ -290,7 +295,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       padding: 0;
 
       a {
-        display: block;
+        display: inline-block;
         width: fit-content;
       }
     }
@@ -397,7 +402,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
       padding: $card-spacer-unbordered;
 
       a {
-        display: block;
+        display: inline-block;
         width: fit-content;
       }
     }
