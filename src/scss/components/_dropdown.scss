@@ -18,13 +18,16 @@ $animation-toggle: transform 0.2s ease-in-out;
 
 //Mixin styles dropdown form
 @mixin dropdown-menu-style-sm() {
-  .custom-control-label {
+  .custom-control-label, .dropdown-item {
     min-height: 1.875rem;
     padding: 0 0.75rem 0 3rem;
 
     &::before {
       top: 0.4rem;
     }
+  }
+  .dropdown-item {
+    padding: 0rem 0.5rem 0.25rem;
   }
 
   .custom-checkbox {
@@ -44,7 +47,7 @@ $animation-toggle: transform 0.2s ease-in-out;
 }
 
 @mixin dropdown-menu-style-lg() {
-  .custom-control-label {
+  .custom-control-label, .dropdown-item {
     min-height: 3rem;
 
     &::before {
@@ -73,9 +76,11 @@ $animation-toggle: transform 0.2s ease-in-out;
 .dropdown {
   width: fit-content;
 
+// Estilos generales de dropdown menu show
   &.show {
     .btn {
       &.btn-dropdown {
+
         &.dropdown-toggle:after {
           content: $icon-chevron-down-white;
           transform: rotate(180deg);
@@ -122,7 +127,6 @@ $animation-toggle: transform 0.2s ease-in-out;
     }
 
     &.btn-dropdown {
-      // padding: $btn-padding-y;
       font-weight: $body-font-weight;
       border: 2px solid transparent;
       background-color: $white;
@@ -135,6 +139,7 @@ $animation-toggle: transform 0.2s ease-in-out;
 
       .bx,
       .material-icons-round {
+        font-size: 1.5rem;
         align-self: end;
       }
 
@@ -143,13 +148,21 @@ $animation-toggle: transform 0.2s ease-in-out;
         padding: 0.1875rem 0.75rem;
         .bx,
         .material-icons-round {
-          font-size: 21px;
+          font-size: 21px ;
+        }
+
+        + .dropdown-menu {
+          @include dropdown-menu-style-sm();
         }
       }
 
       &-lg {
         padding: 0.75rem;
         max-height: 48px;
+
+        + .dropdown-menu {
+          @include dropdown-menu-style-lg();
+        }
       }
 
       &.btn-dropdown-border {
@@ -220,7 +233,7 @@ $animation-toggle: transform 0.2s ease-in-out;
         content: $icon-user;
         display: inline-block;
         background-color: $grisulado-50;
-        margin-left: spaceUnits(1);
+        margin-left: spaceUnits(2);
         vertical-align: middle;
         border-radius: $border-radius;
         width: 1.4rem;
@@ -230,45 +243,9 @@ $animation-toggle: transform 0.2s ease-in-out;
       .dropdown-language-icon {
         content: $icon-world;
         display: inline-block;
-        vertical-align: bottom;
+        vertical-align: middle;
+        margin: 0px 0px 0.125rem 0.25rem;
       }
-
-      // &:has(i) {
-      //   &:focus {
-      //     i {
-      //       color: $grisulado-900;
-      //     }
-      //   }
-
-      //   i {
-      //     display: inline-block;
-      //     background-color: $grisulado-50;
-      //     margin-left: spaceUnits(1);
-      //     vertical-align: middle;
-      //     border-radius: $border-radius;
-      //     padding: 0.2rem;
-      //     font-size: 1rem;
-      //   }
-      // }
-
-      // &:not(:has(.dropdown-language-icon)) {
-      //   &:focus {
-      //     span {
-      //       color: $grisulado-900;
-      //     }
-      //   }
-
-      //   span {
-      //     display: inline-block;
-      //     background-color: $grisulado-50;
-      //     margin-left: spaceUnits(1);
-      //     border-radius: $border-radius;
-      //     text-align: center;
-      //     vertical-align: middle;
-      //     font-size: 1rem;
-      //     padding: 0.2rem;
-      //   }
-      // }
 
       .dropdown-toggle {
         color: $grisulado-900;
@@ -285,10 +262,6 @@ $animation-toggle: transform 0.2s ease-in-out;
     width: 100%;
     min-width: 9.625rem;
 
-    // @include media-breakpoint-up(md) {
-    //   width: 340px;
-    // }
-
     .dropdown-item {
       border-radius: $border-radius;
       padding: $dropdown-item-padding;
@@ -296,13 +269,14 @@ $animation-toggle: transform 0.2s ease-in-out;
       white-space: normal;
       text-decoration: none;
       word-break: break-all;
+      align-items: center;
+      display: flex;
 
       &:hover {
         background-color: $white;
         border-radius: spaceUnits(2);
         box-shadow: 0 0 0 2px $blue;
         color: $blue;
-        text-decoration: underline;
       }
 
       &:focus {
@@ -376,13 +350,13 @@ $animation-toggle: transform 0.2s ease-in-out;
         }
 
         &.btn,
-        .btn-chip {
+        .btn-chip { //estilos de btn-chip para radio
           margin: 0;
           min-height: 2.5rem;
         }
       }
 
-      .btn-chip {
+      .btn-chip { //estilos generales de btn-chip
         width: 100%;
         min-height: 3rem;
         text-align: start;
@@ -425,7 +399,6 @@ $animation-toggle: transform 0.2s ease-in-out;
 
       .bx,
       .material-icons-round {
-        font-size: 1.5rem;
         margin-right: 0.25rem;
       }
 
