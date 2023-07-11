@@ -1,5 +1,6 @@
 // Base
 import React from 'react';
+import './Header.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -12,7 +13,7 @@ export default {
 
 export const HeaderSearchSelected = (): JSX.Element => {
   return (
-    <div className="header-container">
+    <div className="storybook__container-header">
       <header className="navbar navbar-light">
         <div className="container">
           <div className="navbar-search active-search">
@@ -42,7 +43,7 @@ HeaderSearchSelected.story = {
 
 export const HeaderSearch = (): JSX.Element => {
   return (
-    <div className="header-container">
+    <div className="storybook__container-header">
       <header className="navbar navbar-light">
         <div className="container">
           <div className="navbar-search active-search">
