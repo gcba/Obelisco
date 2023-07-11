@@ -259,8 +259,8 @@ $animation-toggle: transform 0.2s ease-in-out;
     border: 0;
     border-radius: spaceUnits(2);
     box-shadow: 0 0 0 2px #e6ebf0 !important;
+    max-width: 340px;
     width: 100%;
-    min-width: 9.625rem;
 
     .dropdown-item {
       border-radius: $border-radius;
