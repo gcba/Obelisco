@@ -1,5 +1,6 @@
 // Base
 import React from 'react';
+import './Footer.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -20,11 +21,11 @@ const phones = [
 ];
 
 const social = [
-  ['Facebook', 'https://www.facebook.com/GCBA'],
-  ['Instagram', 'https://www.instagram.com/buenosaires'],
+  ['Facebook', 'https://www.facebook.com/GCBA', 'facebook-circle'],
+  ['Instagram', 'https://www.instagram.com/buenosaires', 'instagram-alt'],
   ['Twitter', 'https://twitter.com/gcba'],
   ['YouTube', 'https://www.youtube.com/user/GCBA'],
-  ['LinkedIn', 'https://ar.linkedin.com/company/gobierno-de-la-ciudad-de-buenos-aires']
+  ['LinkedIn', 'https://ar.linkedin.com/company/gobierno-de-la-ciudad-de-buenos-aires', 'linkedin-square']
 ];
 
 const PhonesSection = (): JSX.Element => (
@@ -47,10 +48,10 @@ const SocialSection = (): JSX.Element => (
   <section>
     <h4>Redes de la ciudad</h4>
     <ul className="list-inline">
-      {social.map(([network, href]) => (
+      {social.map(([network, href, icon]) => (
         <li className="list-inline-item redes-items" key={network}>
           <a href={href}>
-            <i className={`bx bxl-${network.toLocaleLowerCase()}`} />
+            <i className={`bx bxl-${icon ? icon : network.toLocaleLowerCase()}`} />
             {network}
           </a>
         </li>
@@ -81,7 +82,9 @@ const LegalSection = (): JSX.Element => (
             <a href="https://www.buenosaires.gob.ar/privacidad">Política de privacidad</a>
           </li>
           <li className="list-inline-item">
-            <a href="https://buenosaires.gob.ar/jefedegobierno/legalytecnica/normativa/boletin-oficial-y-registro/oficios-judiciales">Oficios judiciales</a>
+            <a href="https://buenosaires.gob.ar/jefedegobierno/legalytecnica/normativa/boletin-oficial-y-registro/oficios-judiciales">
+              Oficios judiciales
+            </a>
           </li>
           <li className="list-inline-item">
             <a href="https://www.buenosaires.gob.ar/gobierno/transparencia">Transparencia</a>
@@ -101,28 +104,60 @@ const LicenseSection = (): JSX.Element => (
 );
 
 export const Completo = (): JSX.Element => (
-  <footer className="main-footer">
-    <div className="container">
-      <PhonesSection />
-      <SocialSection />
-    </div>
-    <hr className="divider" />
-    <div className="container">
-      <LegalSection />
-      <LicenseSection />
-    </div>
-  </footer>
+  <div className="storybook__container-footer">
+    <footer className="main-footer">
+      <div className="container">
+        <PhonesSection />
+        <SocialSection />
+      </div>
+      <hr className="divider" />
+      <div className="container">
+        <LegalSection />
+        <LicenseSection />
+      </div>
+    </footer>
+  </div>
 );
 
 export const SoloLegales = (): JSX.Element => (
-  <footer className="main-footer">
-    <div className="container">
-      <LegalSection />
-      <LicenseSection />
-    </div>
-  </footer>
+  <div className="storybook__container-footer">
+    <footer className="main-footer">
+      <div className="container">
+        <LegalSection />
+        <LicenseSection />
+      </div>
+    </footer>
+  </div>
 );
 
 SoloLegales.story = {
   name: 'Solo legales'
+};
+
+export const FooterIndicator = (): JSX.Element => (
+  <div className="storybook__container-footer">
+    <div className="footer-info">
+      <div className="container">
+        <h4 className="footer-info-text">¿Te fue útil esta página?</h4>
+        <div className="footer-info-actions">
+          <button className="btn btn-primary">Sí, me fue útil</button>
+          <button className="btn btn-secondary">No me sirvió</button>
+        </div>
+      </div>
+    </div>
+    <footer className="main-footer">
+      <div className="container">
+        <PhonesSection />
+        <SocialSection />
+      </div>
+      <hr className="divider" />
+      <div className="container">
+        <LegalSection />
+        <LicenseSection />
+      </div>
+    </footer>
+  </div>
+);
+FooterIndicator.story = {
+  name: 'Con indicador'
 };

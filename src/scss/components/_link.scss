@@ -22,6 +22,7 @@ a {
   outline: none;
   color: $blue;
   cursor: pointer;
+  word-break: break-word;
 
   &:visited {
     color: $link-visited-color;
@@ -84,19 +85,5 @@ a {
       height: 1em;
       margin-right: spaceUnits(1);
     }
-  }
-}
-
-.list-link {
-  margin-top: 1.5rem;
-
-  .list-link-item-title {
-    margin-bottom: 0.5rem;
-  }
-
-  .card-link {
-    display: table;
-    margin: spaceUnits(2) 0;
-    margin-bottom: 1.125rem;
   }
 }
