@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 export interface GridProps {
@@ -56,13 +57,10 @@ export const GridImage: React.FC<GridProps> = (props: React.PropsWithChildren<Gr
 export const GalleryContainer: React.FC<GalleryProps> = (props: React.PropsWithChildren<GalleryProps>) => {
   const { total = images.length, show = false } = props;
 
+  const modalClass = classNames('modal', 'modal-carousel', { 'd-block': show });
+
   return (
-    <div
-      className={`modal modal-carousel ${show && 'd-block'}`}
-      data-backdrop="static"
-      tabIndex={-1}
-      role="dialog"
-      id="modalGallery">
+    <div className={modalClass} data-backdrop="static" tabIndex={-1} role="dialog" id="modalGallery">
       <div className="modal-dialog modal-lg" role="document">
         <div className="modal-content">
           <a href="#" className="modal-carousel-close" data-dismiss="modal">
