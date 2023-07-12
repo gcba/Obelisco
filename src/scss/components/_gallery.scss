@@ -256,7 +256,7 @@ $carousel-margin-bottom: spaceUnits(4);
     > img {
       width: 100%;
       border-radius: $border-radius-lg;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 3 / 2;
       object-fit: cover;
       object-position: center;
     }
