@@ -4,7 +4,7 @@ import './Gallery.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
-import { Gallery, GridImage } from '.';
+import { GalleryContainer, GridImage } from '.';
 
 // Configuración general del componente
 export default {
@@ -12,15 +12,15 @@ export default {
   decorators: [withA11y]
 };
 
-export const Galeria = (): JSX.Element => {
+export const Gallery = (): JSX.Element => {
   return (
     <>
-      <Gallery show={true} total={3} />
+      <GalleryContainer show={true} total={3} />
     </>
   );
 };
 
-Galeria.story = {
+Gallery.story = {
   name: 'Galería'
 };
 

@@ -53,7 +53,7 @@ export const GridImage: React.FC<GridProps> = (props: React.PropsWithChildren<Gr
   );
 };
 
-export const Gallery: React.FC<GalleryProps> = (props: React.PropsWithChildren<GalleryProps>) => {
+export const GalleryContainer: React.FC<GalleryProps> = (props: React.PropsWithChildren<GalleryProps>) => {
   const { total = images.length, show = false } = props;
 
   return (
