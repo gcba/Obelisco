@@ -15,7 +15,7 @@ export default {
 // Función para crear los componentes
 const createGridComponent = (name: string, total: number) => {
   const Component = () => (
-    <div className="gallery-grid-container">
+    <div className="storybook__container-grid">
       <GridImage total={total} />
     </div>
   );

@@ -30,7 +30,7 @@ export const Demo = (): JSX.Element => {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-8 offset-md-2">
-            <div className="gallery-grid-container">
+            <div className="storybook__container-grid">
               <GridImage total={3} interactive={true}></GridImage>
             </div>
           </div>
