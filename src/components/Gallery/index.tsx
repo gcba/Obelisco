@@ -49,7 +49,6 @@ export const GridImage: React.FC<GridProps> = (props: React.PropsWithChildren<Gr
           )
         )}
       </div>
-      {interactive && <Gallery total={total} />}
     </>
   );
 };
@@ -66,7 +65,7 @@ export const Gallery: React.FC<GalleryProps> = (props: React.PropsWithChildren<G
       id="modalGallery">
       <div className="modal-dialog modal-lg" role="document">
         <div className="modal-content">
-          <a className="modal-carousel-close" data-dismiss="modal">
+          <a href="#" className="modal-carousel-close" data-dismiss="modal">
             Cerrar ventana
           </a>
           <div id="modalGalleryControls" className="carousel" data-ride="carousel" data-interval="false">
