@@ -163,27 +163,38 @@ export const AlertFullWidthComponent: React.FC<AlertFullWidthProps> = (
               ? 'Este es un destacado de una alerta de aviso no semántico de ancho completo.'
               : 'Este es un destacado de una alerta de info de ancho completo.'}
           </strong>
-          {isLink && (
-            <>
-              {' '}
-              Versión con{' '}
-              <a href="#" target="_blank" rel="noreferrer">
-                enlace
-              </a>{' '}
-              en línea.
-            </>
-          )}
-          {buttons && !isCookie && ' Versión con botón.'}
-          {isDismissible && ' Versión con cierre.'}
-          {isCookie && (
-            <>
-              {' '}
-              <a href="#" target="_blank" rel="noreferrer">
-                Conocé más o desactivalas.
-              </a>
-            </>
-          )}
-          {!isLink && !buttons && !isDismissible && ' Versión sólo texto.'}
+          {(() => {
+            switch (true) {
+              case isLink:
+                return (
+                  <>
+                    {' '}
+                    Versión con{' '}
+                    <a href="#" target="_blank" rel="noreferrer">
+                      enlace
+                    </a>{' '}
+                    en línea.
+                  </>
+                );
+              case buttons && !isCookie && buttons?.length === 1:
+                return ' Versión con botón.';
+              case buttons && !isCookie && buttons?.length !== 1:
+                return ' Versión con botones.';
+              case isDismissible:
+                return ' Versión con cierre.';
+              case isCookie:
+                return (
+                  <>
+                    {' '}
+                    <a href="#" target="_blank" rel="noreferrer">
+                      Conocé más o desactivalas.
+                    </a>
+                  </>
+                );
+              default:
+                return ' Versión solo texto.';
+            }
+          })()}
         </p>
         {buttons && (
           <div className="alert-actions">
@@ -203,3 +214,20 @@ export const AlertFullWidthComponent: React.FC<AlertFullWidthProps> = (
     </div>
   );
 };
+
+function createButtons(size: number, text?: string): AlertAction[] {
+  const listButtons: AlertAction[] = [];
+  for (let i = 1; i <= size; i++) {
+    const listItem: AlertAction = {
+      name: text ? text : 'Botón',
+      className: 'btn btn-sm btn-link',
+      url: '#'
+    };
+    listButtons.push(listItem);
+  }
+  return listButtons;
+}
+
+export const BUTTON_ALERT = createButtons(1);
+export const BUTTONS_ALERT = createButtons(2);
+export const BUTTONS_ALERT_COOKIE = createButtons(1, 'Aceptar todo');

@@ -179,9 +179,13 @@ $theme-colors: map-merge(
     }
 
     .alert-text {
-      margin: 0;
-      text-align: left;
       grid-column: 2 / 3;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+      margin: 0;
     }
     
     .alert-actions {

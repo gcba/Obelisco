@@ -6,7 +6,7 @@ import './Alert.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { Alert, ListLinks, AlertFullWidthComponent } from '.';
+import { Alert, ListLinks, AlertFullWidthComponent, BUTTONS_ALERT_COOKIE, BUTTONS_ALERT, BUTTON_ALERT } from '.';
 import { alertHighlight, alertLink, alertTypes } from './index';
 import { Card } from '../Card';
 
@@ -16,36 +16,9 @@ export default {
   decorators: [withA11y]
 };
 
-const BUTTONS_ALERT = [
-  {
-    name: 'Botón',
-    className: 'btn btn-sm btn-link',
-    url: '#'
-  }
-];
-const BUTTONS_ALERT_COOKIE = [
-  {
-    name: 'Aceptar todo',
-    className: 'btn btn-sm btn-link',
-    url: '#'
-  }
-];
-const BUTTONS_ALERT_ARR = [
-  {
-    name: 'Ver más',
-    className: 'btn btn-sm btn-primary',
-    url: '#'
-  },
-  {
-    name: 'Ver más',
-    className: 'btn btn-sm btn-secondary',
-    url: '#'
-  }
-];
-
 export const Simple = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <Alert arrayAlerts={alertTypes} />
     </div>
   );
@@ -53,7 +26,7 @@ export const Simple = (): JSX.Element => {
 
 export const SimpleClose = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <Alert arrayAlerts={alertTypes} isDismissible />
     </div>
   );
@@ -65,7 +38,7 @@ SimpleClose.story = {
 
 export const SimpleHighlight = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <Alert arrayAlerts={alertHighlight} />
     </div>
   );
@@ -77,7 +50,7 @@ SimpleHighlight.story = {
 
 export const SimpleHiperlink = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <Alert arrayAlerts={alertLink} />
     </div>
   );
@@ -89,7 +62,7 @@ SimpleHiperlink.story = {
 
 export const ListLinksExample = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <ListLinks
         type="danger"
         text="<strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que continua al texto destacado."
@@ -104,7 +77,7 @@ ListLinksExample.story = { name: 'Con lista de enlaces' };
 
 export const List = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <ListLinks
         type="info"
         text="<strong>Este es un destacado de una alerta de información.</strong> Esta es la descripción de una alerta de información que continua al texto destacado."
@@ -119,13 +92,13 @@ List.story = { name: 'Con lista descriptiva' };
 
 export const AlertFullWidthTest = (): JSX.Element => {
   return (
-    <div className="storybook-container-alert-full-width">
-      <AlertFullWidthComponent alertBgColor="info" buttons={BUTTONS_ALERT} />
-      <AlertFullWidthComponent alertBgColor="dark" buttons={BUTTONS_ALERT} />
-      <AlertFullWidthComponent alertBgColor="info" buttons={BUTTONS_ALERT_ARR} isDismissible={true} />
+    <div className="storybook__container-alert-full-width">
+      <AlertFullWidthComponent alertBgColor="info" buttons={BUTTON_ALERT} />
+      <AlertFullWidthComponent alertBgColor="dark" buttons={BUTTON_ALERT} />
+      <AlertFullWidthComponent alertBgColor="info" buttons={BUTTONS_ALERT} isDismissible={true} />
       <AlertFullWidthComponent isLink={true} isDismissible={true} />
       <AlertFullWidthComponent alertBgColor="info" isLink={true} isDismissible={true} />
-      <AlertFullWidthComponent buttons={BUTTONS_ALERT_ARR} />
+      <AlertFullWidthComponent buttons={BUTTONS_ALERT} />
       <div className="alert alert-full-width alert-dismissible show fade" role="alert">
         <div className="alert-content bg-white rounded-lg">
           <h3>titulo</h3>
@@ -153,26 +126,36 @@ export const AlertFullWidthTest = (): JSX.Element => {
 };
 AlertFullWidthTest.story = { name: 'Ancho completo test' };
 
-export const AlertFullWidth = (): JSX.Element => {
+export const AlertFullWidthDark = (): JSX.Element => {
   return (
-    <div className="storybook-container-alert-full-width">
-      <AlertFullWidthComponent alertBgColor="info" isLink={true} />
-      <AlertFullWidthComponent alertBgColor="info" />
-      <AlertFullWidthComponent alertBgColor="info" buttons={BUTTONS_ALERT} />
-      <AlertFullWidthComponent alertBgColor="info" isDismissible={true} />
-      <AlertFullWidthComponent alertBgColor="dark" isLink={true} />
+    <div className="storybook__container-alert-full-width">
       <AlertFullWidthComponent alertBgColor="dark" />
+      <AlertFullWidthComponent alertBgColor="dark" isLink={true} />
+      <AlertFullWidthComponent alertBgColor="dark" buttons={BUTTON_ALERT} />
       <AlertFullWidthComponent alertBgColor="dark" buttons={BUTTONS_ALERT} />
       <AlertFullWidthComponent alertBgColor="dark" isDismissible={true} />
       <AlertFullWidthComponent isCookie={true} buttons={BUTTONS_ALERT_COOKIE} />
     </div>
   );
 };
-AlertFullWidth.story = { name: 'Ancho completo' };
+AlertFullWidthDark.story = { name: 'Ancho completo grisulado' };
+
+export const AlertFullWidth = (): JSX.Element => {
+  return (
+    <div className="storybook__container-alert-full-width">
+      <AlertFullWidthComponent alertBgColor="info" />
+      <AlertFullWidthComponent alertBgColor="info" isLink={true} />
+      <AlertFullWidthComponent alertBgColor="info" buttons={BUTTON_ALERT} />
+      <AlertFullWidthComponent alertBgColor="info" buttons={BUTTONS_ALERT} />
+      <AlertFullWidthComponent alertBgColor="info" isDismissible={true} />
+    </div>
+  );
+};
+AlertFullWidth.story = { name: 'Ancho completo info' };
 
 export const AlertFullWidthPosition = (): JSX.Element => {
   return (
-    <div className="storybook-container-alert-full-width-placement">
+    <div className="storybook__container-alert-full-width-placement">
       <div>
         <header className="navbar navbar-light navbar-md">
           <div className="container">
@@ -325,7 +308,7 @@ AlertFullWidthPosition.story = { name: 'Ancho completo Posición' };
 
 export const AlertFullWidthFixed = (): JSX.Element => {
   return (
-    <div className="storybook-container-alert-full-width-placement">
+    <div className="storybook__container-alert-full-width-placement">
       <div>
         <header className="navbar navbar-light navbar-md">
           <div className="container">
