@@ -321,7 +321,7 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
       margin-right: 0.7rem;
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       display: block;
     }
   }
