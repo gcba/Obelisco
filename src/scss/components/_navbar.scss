@@ -30,6 +30,16 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
       margin-bottom: 2px;
     }
 
+    @include media-breakpoint-down(sm) {
+      &:has(> .multi-collapse.collapse.show) {
+        width: 100%;
+      }
+
+      .multi-collapse.collapse.show {
+        flex-basis: 100%;
+      }
+    }
+
     .btn-icon {
       display: flex;
       align-items: center;
@@ -435,7 +445,6 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
         flex-direction: row;
         align-items: center;
         gap: 8px;
-        // background-color: blue;
         width: 100%;
       }
     }
