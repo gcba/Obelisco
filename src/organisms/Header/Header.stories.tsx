@@ -20,7 +20,7 @@ export const HeaderNoLogin = (): JSX.Element => {
             <img className="header-logo" src="header/LogoBA.svg" alt="Logo de la ciudad de buenos aires" />
           </a>
           <div className="navbar-btn-search">
-            <div className="collapse multi-collapse" id="navbarBrand">
+            <div className="collapse multi-collapse" id="navbarSearch">
               <form className="form-search">
                 <div className="form-group">
                   <input
@@ -109,7 +109,7 @@ export const HeaderLogin = (): JSX.Element => {
             <img className="header-logo" src="header/LogoBA.svg" alt="Logo de la ciudad de buenos aires" />
           </a>
           <div className="navbar-btn-search">
-            <div className="collapse multi-collapse" id="navbarBrand">
+            <div className="collapse multi-collapse" id="navbarSearch">
               <form className="form-search">
                 <div className="form-group">
                   <input

@@ -20,22 +20,46 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
   height: auto;
   justify-content: end;
 
+  .navbar-btn-search.multi-collapse.collapsing,
+  .bx.bx-right-arrow-alt.multi-collapse.collapsing {
+    display: block;
+    transition: none;
+    height: auto !important;
+  }
+
+  .navbar-brand.multi-collapse.collapsing,
+  .multi-collapse.collapsing:has(.navbar-toggler),
+  .bx.bx-search.multi-collapse.collapsing {
+    display: none;
+    transition: none;
+    height: auto !important;
+  }
+
+  .multi-collapse.collapsing:has(.form-search) {
+    height: auto !important;
+    overflow: visible;
+  }
+
   .navbar-btn-search {
     margin-left: auto;
     display: flex;
     align-items: center;
     height: 100%;
 
-    #navbarBrand {
-      margin-bottom: 2px;
+    .form-control.input-search {
+      margin-bottom: 0;
+      margin-top: 0;
     }
 
     @include media-breakpoint-down(sm) {
-      &:has(> .multi-collapse.collapse.show) {
+
+      &:has(> .multi-collapse.collapse.show),
+      &:has(> .multi-collapse.collapsing) {
         width: 100%;
       }
 
-      .multi-collapse.collapse.show {
+      .multi-collapse.collapse.show,
+      .multi-collapse.collapsing {
         flex-basis: 100%;
       }
     }
@@ -182,9 +206,11 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
     margin-left: 10px !important;
   }
 
-  .collapsing {
-    display: none;
-    transition: none;
+  .navbar-collapse:last-child.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s linear;
   }
 }
 
@@ -316,16 +342,6 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
     }
   }
 
-  .navbar-brand {
-    @include media-breakpoint-down(xs) {
-      margin-right: 0.7rem;
-    }
-
-    @include media-breakpoint-up(md) {
-      display: block;
-    }
-  }
-
   .header-logo {
     height: $navbar-logo-sm;
 
@@ -353,14 +369,7 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
         .input-search {
           width: 100%;
           padding: $navbar-search-closed-padding;
-          // background-position: center;
-          // color: transparent;
-          // pointer-events: none;
           background-color: $white;
-
-          // &::placeholder {
-          //   color: transparent;
-          // }
         }
       }
 
@@ -477,5 +486,20 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
     line-height: 1.378;
     text-align: end;
     font-family: 'Nunito', sans-serif;
+  }
+
+  #navbarBrand{
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  .collapse,
+  .collapsing {
+    transition: none;
+  }
+  
+  .collapse.show {
+    transition: none;
   }
 }

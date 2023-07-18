@@ -14,7 +14,7 @@ export default {
 export const HeaderNoLoginSearch = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-lg">
+      <header className="navbar navbar-light navbar-md">
         <div className="container">
           <a href="#" className="navbar-brand">
             <img className="header-logo" src="header/LogoBA.svg" alt="Ciudad de Buenos Aires" />
@@ -59,7 +59,7 @@ HeaderNoLoginSearch.story = {
 export const HeaderLoginSearch = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-lg">
+      <header className="navbar navbar-light navbar-md">
         <div className="container">
           <a href="#" className="navbar-brand">
             <img className="header-logo" src="header/LogoBA.svg" alt="Ciudad de Buenos Aires" />
