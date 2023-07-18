@@ -16,6 +16,9 @@ $navbar-logo-sm: spaceUnits(8.5);
 $navbar-search-with: spaceUnits(84);
 $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752) spaceUnits(3.752);
 
+$navbar-btn-icon-width: 48px;
+$navbar-btn-icon-height: 40px;
+
 @mixin responsive {
   height: auto;
   justify-content: end;
@@ -67,10 +70,10 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
       display: flex;
       align-items: center;
       justify-content: center;
-      min-width: 48px;
-      min-height: 40px;
-      max-width: 48px;
-      max-height: 40px;
+      min-width: $navbar-btn-icon-width;
+      min-height: $navbar-btn-icon-height;
+      max-width: $navbar-btn-icon-width;
+      max-height: $navbar-btn-icon-height;
 
       i {
         font-size: 24px;
@@ -121,9 +124,9 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
     color: $grisulado-900;
     border-radius: 8px;
     padding: 0px;
-    height: 40px;
+    height: $navbar-btn-icon-height;
     margin-left: 13px !important;
-    width: 48px;
+    width: $navbar-btn-icon-width;
   }
 
   .navbar-collapse {
@@ -171,8 +174,8 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
 
         .nav-link {
           padding: 13px 12px;
-          max-height: 48px;
-          height: 48px;
+          max-height: $navbar-btn-icon-width;
+          height: $navbar-btn-icon-width;
           display: flex;
           justify-content: end;
           align-items: center;
@@ -246,8 +249,8 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
     position: absolute;
     top: 6px;
     right: 8px;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background-color: #c93b3b;
     border-radius: 50%;
   }
@@ -292,14 +295,7 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
           .input-search {
             width: 100%;
             padding: $navbar-search-closed-padding;
-            // background-position: center;
-            // color: transparent;
-            // pointer-events: none;
             background-color: $white;
-
-            // &::placeholder {
-            //   color: transparent;
-            // }
           }
         }
       }
@@ -475,8 +471,8 @@ $navbar-search-closed-padding: spaceUnits(2.752) spaceUnits(18) spaceUnits(2.752
   }
 
   .logout {
-    height: 48px;
-    max-height: 48px;
+    height: $navbar-btn-icon-width;
+    max-height: $navbar-btn-icon-width;
     padding: 13px 8px 13px 12px;
     color: #dc3545;
     text-decoration: none;
