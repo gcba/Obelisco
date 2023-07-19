@@ -96,7 +96,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
               </li>
               <li className="nav-item">
                 <a href="#" aria-label="Notificaciones" className="nav-link notifications">
-                  <i className="bx bxs-bell"></i>
+                  <span className="material-icons-round">notifications</span>
                   <span>Sección 5</span>
                 </a>
               </li>
