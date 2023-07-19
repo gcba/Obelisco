@@ -55,6 +55,7 @@ $navbar-btn-icon-height: 40px;
     }
 
     @include media-breakpoint-down(sm) {
+
       &:has(> .multi-collapse.collapse.show),
       &:has(> .multi-collapse.collapsing) {
         width: 100%;
@@ -479,5 +480,9 @@ $navbar-btn-icon-height: 40px;
     @include media-breakpoint-up(md) {
       display: block;
     }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(56, 72, 92, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
   }
 }
