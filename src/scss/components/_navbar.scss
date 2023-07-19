@@ -75,9 +75,14 @@ $navbar-btn-icon-height: 40px;
     align-items: center;
     height: 100%;
 
-    .form-control.input-search {
-      margin-bottom: 0;
-      margin-top: 0;
+    .form-search {
+      height: 40px;
+
+      .form-control.input-search {
+        margin-bottom: 0;
+        margin-top: 0;
+        height: 40px;
+      }
     }
 
     @include media-breakpoint-down(sm) {
@@ -135,7 +140,7 @@ $navbar-btn-icon-height: 40px;
       }
 
       .input-search {
-        min-height: 44px;
+        min-height: 40px;
         width: 100%;
         padding: $navbar-search-closed-padding;
         background-color: $white;
@@ -421,7 +426,8 @@ $navbar-btn-icon-height: 40px;
       width: $navbar-search-with;
     }
 
-    margin-bottom: 3px;
+    margin-bottom: 2px;
+    margin-top: 2px;
   }
 
   .navbar-toggler {
@@ -477,8 +483,8 @@ $navbar-btn-icon-height: 40px;
         align-items: center;
         gap: 8px;
         width: 100%;
-        
-        .logout-sm{
+
+        .logout-sm {
           padding: 10px 16px;
           backface-visibility: visible;
         }
@@ -497,6 +503,7 @@ $navbar-btn-icon-height: 40px;
     .form-group {
       .input-search {
         width: $navbar-search-with;
+        height: 40px;
       }
     }
   }
