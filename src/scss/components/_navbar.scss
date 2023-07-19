@@ -135,8 +135,6 @@ $navbar-btn-icon-height: 40px;
     flex-direction: column;
     float: right;
     align-items: flex-end;
-    margin-top: 16px;
-    border-top: 2px solid $grisulado-50;
 
     &.collapse:not(.show) {
       display: none;
@@ -146,6 +144,8 @@ $navbar-btn-icon-height: 40px;
       flex-direction: column;
       align-items: flex-end;
       gap: 10px;
+      margin-top: 16px;
+      border-top: 2px solid $grisulado-50;
 
       .nav-item {
         width: 100%;
