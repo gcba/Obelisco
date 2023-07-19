@@ -135,7 +135,7 @@ $navbar-btn-icon-height: 40px;
     float: right;
     align-items: flex-end;
     margin-top: 16px;
-    border-top: 2px solid rgba(224, 224, 224, 0.414);
+    border-top: 2px solid $grisulado-50;
 
     &.collapse:not(.show) {
       display: none;
@@ -251,7 +251,7 @@ $navbar-btn-icon-height: 40px;
     right: 8px;
     width: 8px;
     height: 8px;
-    background-color: #c93b3b;
+    background-color: $red;
     border-radius: 50%;
   }
 
@@ -390,15 +390,6 @@ $navbar-btn-icon-height: 40px;
   }
 
   .navbar-toggler {
-    @include media-breakpoint-down(sm) {
-      border: none;
-      box-shadow: 0 0 0 2px $grisulado-50;
-      color: $grisulado-900;
-      border-radius: 0.5rem;
-      padding: 0 0.75rem;
-      height: 44px;
-    }
-
     @include media-breakpoint-up(md) {
       display: none;
     }
