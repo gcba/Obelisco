@@ -6,7 +6,7 @@ $navbar-brand-padding-y: 0;
 
 /* === Custom variables and mixins === */
 
-$navbar-height-desktop: spaceUnits(20);
+$navbar-height-desktop: spaceUnits(21);
 $navbar-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 
 $navbar-logo-height: spaceUnits(9.5);
@@ -38,6 +38,32 @@ $navbar-btn-icon-height: 40px;
     height: auto !important;
   }
 
+  &:has(.navbar-toggler.btn-icon[aria-expanded='true']) {
+    .navbar-brand.multi-collapse.collapsing,
+    .multi-collapse.collapsing:has(.navbar-toggler),
+    .bx.bx-search.multi-collapse.collapsing {
+      display: block;
+    }
+
+    .multi-collapse.collapsing:has(.navbar-toggler) {
+      overflow: visible;
+    }
+
+    .navbar-btn-search.multi-collapse.collapsing,
+    .bx.bx-right-arrow-alt.multi-collapse.collapsing,
+    .multi-collapse.collapsing:has(.form-search) {
+      display: none;
+    }
+
+    .navbar-btn-search {
+      @include media-breakpoint-down(sm) {
+        &:has(> .multi-collapse.collapsing) {
+          width: auto;
+        }
+      }
+    }
+  }
+
   .multi-collapse.collapsing:has(.form-search) {
     height: auto !important;
     overflow: visible;
@@ -55,7 +81,6 @@ $navbar-btn-icon-height: 40px;
     }
 
     @include media-breakpoint-down(sm) {
-
       &:has(> .multi-collapse.collapse.show),
       &:has(> .multi-collapse.collapsing) {
         width: 100%;
@@ -186,6 +211,10 @@ $navbar-btn-icon-height: 40px;
               display: none;
             }
 
+            .material-icons-round {
+              display: none;
+            }
+
             span {
               display: block;
               padding-right: 10px;
@@ -213,6 +242,7 @@ $navbar-btn-icon-height: 40px;
     height: 0;
     overflow: hidden;
     transition: height 0.35s linear;
+    display: block;
   }
 }
 
@@ -236,6 +266,10 @@ $navbar-btn-icon-height: 40px;
     position: relative;
 
     i {
+      display: block;
+    }
+
+    .material-icons-round {
       display: block;
     }
 
@@ -443,6 +477,11 @@ $navbar-btn-icon-height: 40px;
         align-items: center;
         gap: 8px;
         width: 100%;
+        
+        .logout-sm{
+          padding: 10px 16px;
+          backface-visibility: visible;
+        }
       }
     }
   }

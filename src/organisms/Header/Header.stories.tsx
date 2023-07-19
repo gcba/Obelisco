@@ -17,7 +17,7 @@ export const HeaderNoLogin = (): JSX.Element => {
       <header className="navbar navbar-light navbar-lg">
         <div className="container">
           <a className="navbar-brand collapse multi-collapse show" id="navbarBrand" href="#">
-            <img className="header-logo" src="header/LogoBA.svg" alt="Logo de la ciudad de buenos aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la ciudad de buenos aires" />
           </a>
           <div className="navbar-btn-search">
             <div className="collapse multi-collapse" id="navbarSearch">
@@ -106,7 +106,7 @@ export const HeaderLogin = (): JSX.Element => {
       <header className="navbar navbar-light navbar-lg">
         <div className="container">
           <a className="navbar-brand collapse multi-collapse show" id="navbarBrand" href="#">
-            <img className="header-logo" src="header/LogoBA.svg" alt="Logo de la ciudad de buenos aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la ciudad de buenos aires" />
           </a>
           <div className="navbar-btn-search">
             <div className="collapse multi-collapse" id="navbarSearch">
@@ -167,7 +167,7 @@ export const HeaderLogin = (): JSX.Element => {
               </li>
               <li className="nav-item">
                 <a href="#" aria-label="Notificaciones" className="nav-link notifications">
-                  <i className="bx bxs-bell"></i>
+                  <span className="material-icons-round">notifications</span>
                   <span>Sección 5</span>
                 </a>
               </li>

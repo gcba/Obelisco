@@ -17,7 +17,7 @@ export const HeaderNoLoginSearch = (): JSX.Element => {
       <header className="navbar navbar-light navbar-md">
         <div className="container">
           <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/LogoBA.svg" alt="Ciudad de Buenos Aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Ciudad de Buenos Aires" />
           </a>
           <button
             className="navbar-toggler collapsed"
@@ -62,7 +62,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
       <header className="navbar navbar-light navbar-md">
         <div className="container">
           <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/LogoBA.svg" alt="Ciudad de Buenos Aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Ciudad de Buenos Aires" />
           </a>
           <button
             className="navbar-toggler collapsed ml-auto"
