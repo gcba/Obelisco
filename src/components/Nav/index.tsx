@@ -18,6 +18,7 @@ export interface NavProps {
   navSize?: 'default' | 'large';
   onClick?: (id: string) => void;
   hasIcon?: boolean;
+  hasReverse?: boolean;
 }
 
 export interface NavItemComponentProps extends NavItem {
@@ -27,6 +28,7 @@ export interface NavItemComponentProps extends NavItem {
   hasBordered?: boolean;
   type?: Size;
   hasIcon?: boolean;
+  hasReverse?: boolean;
   onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
@@ -53,7 +55,7 @@ export const Nav: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>
 const listClassesHorizontal = 'nav flex-row nav-pills';
 
 export const NavHorizontal: React.FC<NavProps> = (props: React.PropsWithChildren<NavProps>) => {
-  const { items, selected, navSize, onClick, hasIcon } = props;
+  const { items, selected, navSize, onClick, hasIcon, hasReverse } = props;
 
   const mainListClasses = classnames(listClassesHorizontal, {
     'nav-lg': navSize === 'large'
@@ -70,6 +72,7 @@ export const NavHorizontal: React.FC<NavProps> = (props: React.PropsWithChildren
             onClick={onClick}
             selected={selected}
             hasIcon={hasIcon}
+            hasReverse={hasReverse}
             type={item.type}
           />
         ))}
@@ -126,7 +129,7 @@ export const NavItemComponent: React.FC<NavItemComponentProps> = (props: NavItem
 };
 
 const NavItemComponentHorizontal: React.FC<NavItemComponentProps> = (props: NavItemComponentProps) => {
-  const { name, id, href, children, level, disabled, selected, hasBordered, type, hasIcon } = props;
+  const { name, id, href, children, level, disabled, selected, hasBordered, type, hasIcon, hasReverse } = props;
 
   const isActive = selected && id === selected;
   const hasActiveChild = checkActiveChild(children, selected);
@@ -155,7 +158,12 @@ const NavItemComponentHorizontal: React.FC<NavItemComponentProps> = (props: NavI
         onClick={handleClick}
         aria-disabled={disabled}
         tabIndex={disabled ? -1 : undefined}>
-        {hasIcon ? (
+        {hasReverse ? (
+          <div className="nav-icon">
+            <span>{name}</span>
+            <i className="bx bxs-user-circle"></i>
+          </div>
+        ) : hasIcon ? (
           <div className="nav-icon">
             <i className="bx bxs-user-circle"></i>
             <span>{name}</span>

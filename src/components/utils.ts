@@ -115,3 +115,5 @@ export const buttonOutlineSpinnerTypes: Array<ButtonTypeWithSpinner> = [
   { type: 'danger', spinner: 'danger' },
   { type: 'link', spinner: 'info' }
 ];
+
+export type panelBgColor = 'light' | 'white';
