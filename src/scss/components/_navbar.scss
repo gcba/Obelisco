@@ -192,7 +192,6 @@ $navbar-btn-icon-height: 40px;
 
         &.d-responsive-logout {
           width: auto;
-          margin-right: 4px;
 
           .list-group-item {
             display: none;
@@ -200,11 +199,12 @@ $navbar-btn-icon-height: 40px;
 
           .logout {
             display: block;
+            padding: 12px;
           }
         }
 
         .nav-link {
-          padding: 13px 12px;
+          padding: 12px;
           max-height: $navbar-btn-icon-width;
           height: $navbar-btn-icon-width;
           display: flex;
@@ -485,7 +485,7 @@ $navbar-btn-icon-height: 40px;
         width: 100%;
 
         .logout-sm {
-          padding: 10px 16px;
+          padding: 8px 12px;
           backface-visibility: visible;
         }
       }
@@ -511,7 +511,7 @@ $navbar-btn-icon-height: 40px;
   .logout {
     height: $navbar-btn-icon-width;
     max-height: $navbar-btn-icon-width;
-    padding: 13px 8px 13px 12px;
+    padding: 12px 12px;
     color: #dc3545;
     text-decoration: none;
     display: none;
@@ -520,6 +520,12 @@ $navbar-btn-icon-height: 40px;
     line-height: 1.378;
     text-align: end;
     font-family: 'Nunito', sans-serif;
+
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0 2px #c93b3b;
+      border-radius: 8px;
+    }
   }
 
   #navbarBrand {

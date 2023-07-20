@@ -125,7 +125,7 @@ $form-validation-states: (
       font-size: 1.5rem;
       color: $grisulado-100;
       position: relative;
-      top: -3px;
+      top: -4px;
       left: 15px;
     }
   }
@@ -196,7 +196,7 @@ $form-validation-states: (
 
     &.form-control-sm {
       &[type='search'] ~ .reset[type='reset'] {
-        top: 1px;
+        top: 2px;
       }
     }
   }

@@ -17,7 +17,7 @@ export const HeaderNoLoginSearch = (): JSX.Element => {
       <header className="navbar navbar-light navbar-md">
         <div className="container">
           <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/logotipo_ba.svg" alt="Ciudad de Buenos Aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
           </a>
           <button
             className="navbar-toggler collapsed"
@@ -62,7 +62,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
       <header className="navbar navbar-light navbar-md">
         <div className="container">
           <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/logotipo_ba.svg" alt="Ciudad de Buenos Aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
           </a>
           <button
             className="navbar-toggler collapsed"
@@ -97,7 +97,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
               <li className="nav-item">
                 <a href="#" aria-label="Notificaciones" className="nav-link notifications">
                   <span className="material-icons-round">notifications</span>
-                  <span>Sección 5</span>
+                  <span>Notificaciones</span>
                 </a>
               </li>
               <li className="nav-item d-responsive-logout">
@@ -105,7 +105,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
                   &nbsp;
                 </a>
                 <a href="#" aria-label="Cerrar sesión" className=" list-group-item-logout logout-sm logout">
-                  <span>Sección 6</span>
+                  <span>Cerrar sesión</span>
                 </a>
               </li>
             </ul>

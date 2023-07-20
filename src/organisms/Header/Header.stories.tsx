@@ -17,7 +17,7 @@ export const HeaderNoLogin = (): JSX.Element => {
       <header className="navbar navbar-light navbar-lg">
         <div className="container">
           <a className="navbar-brand collapse multi-collapse show" id="navbarBrand" href="#">
-            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la ciudad de buenos aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
           </a>
           <div className="navbar-btn-search">
             <div className="collapse multi-collapse" id="navbarSearch">
@@ -106,7 +106,7 @@ export const HeaderLogin = (): JSX.Element => {
       <header className="navbar navbar-light navbar-lg">
         <div className="container">
           <a className="navbar-brand collapse multi-collapse show" id="navbarBrand" href="#">
-            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la ciudad de buenos aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
           </a>
           <div className="navbar-btn-search">
             <div className="collapse multi-collapse" id="navbarSearch">
@@ -168,7 +168,7 @@ export const HeaderLogin = (): JSX.Element => {
               <li className="nav-item">
                 <a href="#" aria-label="Notificaciones" className="nav-link notifications">
                   <span className="material-icons-round">notifications</span>
-                  <span>Sección 5</span>
+                  <span>Notificaciones</span>
                 </a>
               </li>
               <li className="nav-item d-responsive">
@@ -193,7 +193,7 @@ export const HeaderLogin = (): JSX.Element => {
                   &nbsp;
                 </a>
                 <a href="#" aria-label="Cerrar sesión" className=" list-group-item-logout logout-sm logout">
-                  <span>Sección 6</span>
+                  <span>Cerrar sesión</span>
                 </a>
               </li>
             </ul>
