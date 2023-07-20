@@ -1,20 +1,20 @@
 // Base
 import React from 'react';
-import './List.stories.scss';
+import './ListSteps.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
 // Config
 export default {
-  title: 'Organismos|Listas',
+  title: 'Componentes|Listas/Lista informativa',
   decorators: [withA11y]
 };
 
 export const ListaInformativa = (): JSX.Element => {
   return (
     <>
-      <div className="lists-wrapper">
+      <div className=".storybook__wrapper-list-informative">
         <ul className="list-informative-ul">
           <li>Esta es la información de una línea de la lista</li>
           <li>

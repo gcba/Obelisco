@@ -1,7 +1,12 @@
 .storybook__wrapper-list-steps {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    width: 100%;
-    max-width: 712px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  max-width: 712px;
+}
+
+.storybook__wrapper-list-informative {
+  max-width: 664px;
+  margin-bottom: 2rem;
 }
