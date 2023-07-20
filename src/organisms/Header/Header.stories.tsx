@@ -46,7 +46,7 @@ export const HeaderNoLogin = (): JSX.Element => {
           </div>
           <div className="collapse multi-collapse show" id="navbarToggler">
             <button
-              className="navbar-toggler collapsed ml-2"
+              className="navbar-toggler collapsed"
               data-toggle="collapse"
               data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
@@ -135,7 +135,7 @@ export const HeaderLogin = (): JSX.Element => {
           </div>
           <div className="collapse multi-collapse show" id="navbarToggler">
             <button
-              className="navbar-toggler collapsed ml-2"
+              className="navbar-toggler collapsed"
               data-toggle="collapse"
               data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"

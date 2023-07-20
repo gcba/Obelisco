@@ -65,7 +65,7 @@ export const HeaderLoginSearch = (): JSX.Element => {
             <img className="header-logo" src="header/logotipo_ba.svg" alt="Ciudad de Buenos Aires" />
           </a>
           <button
-            className="navbar-toggler collapsed ml-auto"
+            className="navbar-toggler collapsed"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
