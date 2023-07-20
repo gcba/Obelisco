@@ -75,7 +75,7 @@ export const HeaderNoLogin = (): JSX.Element => {
                         className="form-control form-control-sm input-search"
                         id="header-search-example-2"
                         name="header-search"
-                        placeholder="Buscar..."
+                        placeholder="Buscar en Buenos Aires..."
                         aria-label="Ingrese su búsqueda"
                       />
                       <button className="reset" type="reset"></button>
@@ -181,7 +181,7 @@ export const HeaderLogin = (): JSX.Element => {
                         id="header-search-example-4"
                         name="header-search"
                         aria-label="Ingrese su búsqueda"
-                        placeholder="Buscar..."
+                        placeholder="Buscar en Buenos Aires..."
                       />
                       <button className="reset" type="reset"></button>
                     </div>
