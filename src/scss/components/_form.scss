@@ -13,7 +13,7 @@ $input-border-color: $grisulado-50;
 $input-border-width: 2px;
 $input-box-shadow: 0 0 0 $input-border-width $input-border-color;
 
-$input-height: 48px;
+$input-height: 44px;
 $input-border-radius: $border-radius-lg;
 
 $custom-select-height: $input-height;
@@ -23,7 +23,7 @@ $custom-select-disabled-bg: $input-disabled-bg;
 $input-focus-border-color: $input-disabled-color;
 $input-focus-box-shadow: $focus-box-shadow;
 
-$input-height-sm: 40px;
+$input-height-sm: 44px;
 
 $custom-control-indicator-checked-color: $blue;
 $custom-control-indicator-active-color: $blue;
@@ -82,7 +82,7 @@ $form-validation-states: (
   height: $input-height;
 
   &-sm {
-    height: 44px;
+    height: $input-height-sm;
   }
 }
 
@@ -105,8 +105,9 @@ $form-validation-states: (
     }
   }
 
-  .input-search, input[type='search'] {
-    padding-right: 4.5rem;
+  .input-search,
+  input[type='search'] {
+    padding-right: 4.2rem;
   }
 
   .input-search,
@@ -124,7 +125,7 @@ $form-validation-states: (
       font-size: 1.5rem;
       color: $grisulado-100;
       position: relative;
-      top: -2px;
+      top: -3px;
       left: 15px;
     }
   }
@@ -189,14 +190,9 @@ $form-validation-states: (
       border: none;
       position: absolute;
       background: transparent $form-search-button-reset no-repeat center center;
-      top: 5px;
       right: 42px;
-    }
-
-    &.form-control-sm {
-      &[type='search'] ~ .reset[type='reset'] {
-        top: 1px;
-      }
+      top: 50%;
+      transform: translate(0, -50%);
     }
   }
 
@@ -249,16 +245,19 @@ $form-validation-states: (
 
 .custom-control {
   padding-left: 0;
+
   .custom-control-input.is-invalid {
     ~ .custom-control-label {
       color: inherit;
     }
+
     &:checked {
       ~ .custom-control-label::before {
-        border-color:$custom-control-indicator-checked-color;
+        border-color: $custom-control-indicator-checked-color;
       }
     }
   }
+
   &.custom-checkbox {
     .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
       background: $custom-control-indicator-checked-color;
@@ -309,6 +308,7 @@ $form-validation-states: (
       background-image: none;
     }
   }
+
   .custom-control-input:checked:not(:disabled):focus ~ .custom-control-label:before {
     box-shadow: 0 0 0 7px #005386, inset 0 0 0 3.4px $white;
     outline: 3px solid $white;
