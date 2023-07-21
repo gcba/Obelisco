@@ -21,6 +21,7 @@ export const HeaderNoLogin = (): JSX.Element => {
           </a>
           <div className="navbar-btn-search">
             <button
+              id="navbarTogglerBack"
               className="navbar-toggler btn-icon"
               data-toggle="collapse"
               data-target=".multi-collapse"
@@ -110,6 +111,7 @@ export const HeaderLogin = (): JSX.Element => {
           </a>
           <div className="navbar-btn-search">
             <button
+              id="navbarTogglerBack"
               className="navbar-toggler btn-icon"
               data-toggle="collapse"
               data-target=".multi-collapse"
