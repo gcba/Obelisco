@@ -190,14 +190,9 @@ $form-validation-states: (
       border: none;
       position: absolute;
       background: transparent $form-search-button-reset no-repeat center center;
-      top: 1px;
       right: 42px;
-    }
-
-    &.form-control-sm {
-      &[type='search'] ~ .reset[type='reset'] {
-        top: 2px;
-      }
+      top: 50%;
+      transform: translate(0, -50%);
     }
   }
 
