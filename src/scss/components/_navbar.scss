@@ -24,7 +24,7 @@ $navbar-btn-icon-height: 40px;
   justify-content: end;
 
   .navbar-btn-search.multi-collapse.collapsing,
-  .bx.bx-right-arrow-alt.multi-collapse.collapsing {
+  .bx.bx-left-arrow-alt.multi-collapse.collapsing {
     display: block;
     transition: none;
     height: auto !important;
@@ -50,7 +50,7 @@ $navbar-btn-icon-height: 40px;
     }
 
     .navbar-btn-search.multi-collapse.collapsing,
-    .bx.bx-right-arrow-alt.multi-collapse.collapsing,
+    .bx.bx-left-arrow-alt.multi-collapse.collapsing,
     .multi-collapse.collapsing:has(.form-search) {
       display: none;
     }

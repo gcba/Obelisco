@@ -28,7 +28,7 @@ export const HeaderNoLogin = (): JSX.Element => {
               aria-expanded="false"
               aria-controls="navbarBrand navbarToggler icon-search icon-close">
               <i className="bx bx-search collapse multi-collapse show"></i>
-              <i className="bx bx-right-arrow-alt collapse multi-collapse"></i>
+              <i className="bx bx-left-arrow-alt collapse multi-collapse"></i>
             </button>
             <div className="collapse multi-collapse" id="navbarSearch">
               <form className="form-search">
@@ -118,7 +118,7 @@ export const HeaderLogin = (): JSX.Element => {
               aria-expanded="false"
               aria-controls="navbarBrand navbarToggler icon-search icon-close">
               <i className="bx bx-search collapse multi-collapse show"></i>
-              <i className="bx bx-right-arrow-alt collapse multi-collapse"></i>
+              <i className="bx bx-left-arrow-alt collapse multi-collapse"></i>
             </button>
             <div className="collapse multi-collapse" id="navbarSearch">
               <form className="form-search">
