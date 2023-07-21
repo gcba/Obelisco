@@ -20,6 +20,15 @@ export const HeaderNoLogin = (): JSX.Element => {
             <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
           </a>
           <div className="navbar-btn-search">
+            <button
+              className="navbar-toggler btn-icon"
+              data-toggle="collapse"
+              data-target=".multi-collapse"
+              aria-expanded="false"
+              aria-controls="navbarBrand navbarToggler icon-search icon-close">
+              <i className="bx bx-search collapse multi-collapse show"></i>
+              <i className="bx bx-right-arrow-alt collapse multi-collapse"></i>
+            </button>
             <div className="collapse multi-collapse" id="navbarSearch">
               <form className="form-search">
                 <div className="form-group">
@@ -34,15 +43,6 @@ export const HeaderNoLogin = (): JSX.Element => {
                 </div>
               </form>
             </div>
-            <button
-              className="navbar-toggler btn-icon"
-              data-toggle="collapse"
-              data-target=".multi-collapse"
-              aria-expanded="false"
-              aria-controls="navbarBrand navbarToggler icon-search icon-close">
-              <i className="bx bx-search collapse multi-collapse show"></i>
-              <i className="bx bx-right-arrow-alt collapse multi-collapse"></i>
-            </button>
           </div>
           <div className="collapse multi-collapse show" id="navbarToggler">
             <button
@@ -109,6 +109,15 @@ export const HeaderLogin = (): JSX.Element => {
             <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
           </a>
           <div className="navbar-btn-search">
+            <button
+              className="navbar-toggler btn-icon"
+              data-toggle="collapse"
+              data-target=".multi-collapse"
+              aria-expanded="false"
+              aria-controls="navbarBrand navbarToggler icon-search icon-close">
+              <i className="bx bx-search collapse multi-collapse show"></i>
+              <i className="bx bx-right-arrow-alt collapse multi-collapse"></i>
+            </button>
             <div className="collapse multi-collapse" id="navbarSearch">
               <form className="form-search">
                 <div className="form-group">
@@ -123,15 +132,6 @@ export const HeaderLogin = (): JSX.Element => {
                 </div>
               </form>
             </div>
-            <button
-              className="navbar-toggler collapsed btn-icon"
-              data-toggle="collapse"
-              data-target=".multi-collapse"
-              aria-expanded="false"
-              aria-controls="navbarBrand navbarToggler icon-search icon-close">
-              <i className="bx bx-search collapse multi-collapse show"></i>
-              <i className="bx bx-right-arrow-alt collapse multi-collapse"></i>
-            </button>
           </div>
           <div className="collapse multi-collapse show" id="navbarToggler">
             <button

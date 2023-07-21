@@ -156,7 +156,7 @@ $navbar-btn-icon-height: 40px;
     border-radius: 8px;
     padding: 0px;
     height: $navbar-btn-icon-height;
-    margin-left: 13px !important;
+    margin-right: 10px !important;
     width: $navbar-btn-icon-width;
   }
 
@@ -200,6 +200,8 @@ $navbar-btn-icon-height: 40px;
           .logout {
             display: block;
             padding: 12px;
+            background-color: $white;
+            border-radius: 8px;
           }
         }
 
@@ -298,7 +300,7 @@ $navbar-btn-icon-height: 40px;
   @include media-breakpoint-up(md) {
     height: $navbar-height-desktop;
     padding-top: $navbar-padding-y-desktop;
-    padding-bottom: $navbar-padding-y-desktop;
+    padding-bottom: $navbar-padding-y-desktop;    
   }
 
   @include media-breakpoint-down(xs) {
@@ -485,8 +487,13 @@ $navbar-btn-icon-height: 40px;
         width: 100%;
 
         .logout-sm {
-          padding: 8px 12px;
+          padding: 10px 16px;
           backface-visibility: visible;
+        }
+
+        .nav-link{
+          padding: 12px;
+          min-height: 48px;
         }
       }
     }
