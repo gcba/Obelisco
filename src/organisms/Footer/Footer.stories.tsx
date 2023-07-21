@@ -22,10 +22,12 @@ const phones = [
 
 const social = [
   ['Facebook', 'https://www.facebook.com/GCBA', 'facebook-circle'],
-  ['Instagram', 'https://www.instagram.com/buenosaires', 'instagram-alt'],
-  ['Twitter', 'https://twitter.com/gcba'],
+  ['Instagram', 'https://www.instagram.com/gcba/', 'instagram-alt'],
+  ['Twitter', 'https://twitter.com/buenosaires'],
   ['YouTube', 'https://www.youtube.com/user/GCBA'],
-  ['LinkedIn', 'https://ar.linkedin.com/company/gobierno-de-la-ciudad-de-buenos-aires', 'linkedin-square']
+  ['LinkedIn', 'https://ar.linkedin.com/company/gobierno-de-la-ciudad-de-buenos-aires', 'linkedin-square'],
+  ['TikTok', 'https://www.tiktok.com/@buenosaires', 'tiktok'],
+  ['Pinterest', 'https://www.pinterest.es/buenosaires/', 'pinterest']
 ];
 
 const PhonesSection = (): JSX.Element => (
