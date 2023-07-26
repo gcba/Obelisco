@@ -137,7 +137,7 @@ export const Instalacion = (): JSX.Element => (
       <p>Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:</p>
       <pre className="code-box">
         <code>
-          &lt;link href=&quot;https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+          &lt;link href=&quot;https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
           <br />
           &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons+Round&quot;
           rel=&quot;stylesheet&quot;&gt;
