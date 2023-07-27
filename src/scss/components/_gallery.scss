@@ -232,6 +232,8 @@ $carousel-margin-bottom: spaceUnits(4);
   .modal-carousel-close {
     text-align: right;
     margin-bottom: $carousel-margin-bottom;
+    width: fit-content;
+    margin-left: auto;
 
     &:after {
       content: $carousel-close-icon;
@@ -253,8 +255,10 @@ $carousel-margin-bottom: spaceUnits(4);
   .gallery-grid-item {
     > img {
       width: 100%;
-      object-fit: cover;
       border-radius: $border-radius-lg;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      object-position: center;
     }
   }
 
@@ -297,6 +301,17 @@ $carousel-margin-bottom: spaceUnits(4);
   &.gallery-max-7 {
     .gallery-grid-item {
       @include makeGrid(7);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+
+    .gallery-grid-item {
+      > img {
+        border-radius: 4px;
+      }
     }
   }
 }

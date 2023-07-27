@@ -22,6 +22,7 @@ const headers = [
   'componentes-etiqueta',
   'componentes-galería',
   'componentes-galería-grillas',
+  'componentes-listas-lista-de-pasos',
   'componentes-mensajes-de-estado',
   'componentes-migas-de-pan',
   'componentes-modal',
