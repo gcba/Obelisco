@@ -207,7 +207,7 @@ $theme-colors: map-merge(
 
       &:not(:has(.material-icons-round, .bx)) {
         grid-template-columns: 1fr auto;
-        
+
         .alert-text {
           grid-column: 1 / 2;
         }
@@ -218,6 +218,10 @@ $theme-colors: map-merge(
 
         &:not(:has(.alert-actions)) {
           grid-template-columns: 1fr;
+
+          .alert-text {
+            text-align: center;
+          }
         }
       }
 
