@@ -9,10 +9,4 @@
   gap: 2.5rem;
   position: absolute;
   left: 0;
-
-  &-placement {
-    @extend .storybook__container-alert-full-width;
-    top: 0;
-    gap: 3rem;
-  }
 }

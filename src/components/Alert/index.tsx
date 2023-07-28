@@ -121,45 +121,36 @@ export const ListLinks: React.FC<ListLinksProps> = ({ type, text, textLink, isLi
   );
 };
 
+//Alerta de ancho completo
 interface AlertAction {
   name: string;
   className?: string;
   url?: string;
 }
 interface AlertFullWidthProps {
+  iconAlert?: string;
   buttons?: AlertAction[];
-  isDismissible?: boolean;
   isLink?: boolean;
-  alertBgColor?: string;
-  isCookie?: boolean;
-  isFixed?: boolean;
+  isDark?: boolean;
 }
 
 export const AlertFullWidthComponent: React.FC<AlertFullWidthProps> = (
   props: React.PropsWithChildren<AlertFullWidthProps>
 ) => {
-  const { isDismissible, isLink, alertBgColor, buttons, isCookie, isFixed } = props;
+  const { isLink, isDark, buttons, iconAlert } = props;
 
-  const alertFullWidthClasses = classNames(
-    'alert',
-    'alert-full-width',
-    { [`bg-${alertBgColor}`]: alertBgColor !== undefined },
-    { ['alert-dismissible show fade']: isDismissible },
-    { ['bg-dark']: isCookie },
-    { ['position-fixed fixed-bottom']: isFixed }
-  );
+  const alertFullWidthClasses = classNames('alert', 'alert-full-width', {
+    ['bg-dark']: isDark !== undefined
+  });
 
   return (
     <div className={alertFullWidthClasses.trim()}>
       <div className="alert-content">
-        <span className="material-icons-round">
-          {isCookie ? 'cookie' : alertBgColor === 'dark' ? 'directions_bus_filled' : 'info'}
-        </span>
+        {iconAlert && !iconAlert?.includes('bx') && <span className="material-icons-round">{iconAlert}</span>}
+        {iconAlert && iconAlert?.includes('bx') && <i className={iconAlert}></i>}
         <p className="alert-text">
           <strong>
-            {isCookie
-              ? 'En nuestro sitio usamos cookies para brindarte una mejor experiencia.'
-              : alertBgColor === 'dark'
+            {isDark
               ? 'Este es un destacado de una alerta de aviso no semántico de ancho completo.'
               : 'Este es un destacado de una alerta de info de ancho completo.'}
           </strong>
@@ -176,21 +167,10 @@ export const AlertFullWidthComponent: React.FC<AlertFullWidthProps> = (
                     en línea.
                   </>
                 );
-              case buttons && !isCookie && buttons?.length === 1:
+              case buttons && buttons?.length === 1:
                 return ' Versión con botón.';
-              case buttons && !isCookie && buttons?.length !== 1:
+              case buttons && buttons?.length !== 1:
                 return ' Versión con botones.';
-              case isDismissible:
-                return ' Versión con cierre.';
-              case isCookie:
-                return (
-                  <>
-                    {' '}
-                    <a href="#" target="_blank" rel="noreferrer">
-                      Conocé más o desactivalas.
-                    </a>
-                  </>
-                );
               default:
                 return ' Versión solo texto.';
             }
@@ -205,29 +185,27 @@ export const AlertFullWidthComponent: React.FC<AlertFullWidthProps> = (
             ))}
           </div>
         )}
-        {isDismissible && (
-          <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-            <span className="material-icons-round">close</span>
-          </button>
-        )}
       </div>
     </div>
   );
 };
 
-function createButtons(size: number, text?: string): AlertAction[] {
-  const listButtons: AlertAction[] = [];
-  for (let i = 1; i <= size; i++) {
-    const listItem: AlertAction = {
-      name: text ? text : 'Botón',
-      className: 'btn btn-sm btn-link',
-      url: '#'
-    };
-    listButtons.push(listItem);
+export const BUTTON_ALERT: AlertAction[] = [
+  {
+    name: 'Botón',
+    className: 'btn btn-sm btn-link',
+    url: '#'
   }
-  return listButtons;
-}
-
-export const BUTTON_ALERT = createButtons(1);
-export const BUTTONS_ALERT = createButtons(2);
-export const BUTTONS_ALERT_COOKIE = createButtons(1, 'Aceptar todo');
+];
+export const BUTTONS_ALERT: AlertAction[] = [
+  {
+    name: 'Botón',
+    className: 'btn btn-sm btn-link',
+    url: '#'
+  },
+  {
+    name: 'Botón',
+    className: 'btn btn-sm btn-primary',
+    url: '#'
+  }
+];

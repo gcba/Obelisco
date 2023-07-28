@@ -11,6 +11,7 @@ const headers = [
   'comenzar-inicio--instalacion',
   'componentes-accesos',
   'componentes-alerta',
+  'componentes-alerta-banner',
   'componentes-audio',
   'componentes-barra-de-progreso',
   'componentes-botones--button-types',
