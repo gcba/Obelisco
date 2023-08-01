@@ -1,7 +1,8 @@
 /* === Variable and mixins overides === */
 
 $banner-padding: 1rem;
-$banner-width: 1084px;
+$banner-width: 100%;
+$banner-content-width: 1084px;
 $banner-gap: 0.75rem;
 $banner-actions-gap: 0.75rem;
 $banner-icon-size: 1.5rem;
@@ -11,6 +12,7 @@ $banner-icon-size: 1.5rem;
   padding: $banner-padding;
   background-color: $grisulado-50;
   word-break: break-word;
+  width: $banner-width;
 
   a:not(.btn) {
     color: $grisulado-900;
@@ -26,7 +28,7 @@ $banner-icon-size: 1.5rem;
   }
 
   .banner-content {
-    max-width: $banner-width;
+    max-width: $banner-content-width;
     margin-right: auto;
     margin-left: auto;
     display: grid;
