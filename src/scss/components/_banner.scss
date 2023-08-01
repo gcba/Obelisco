@@ -6,6 +6,7 @@ $banner-content-width: 1084px;
 $banner-gap: 0.75rem;
 $banner-actions-gap: 0.75rem;
 $banner-icon-size: 1.5rem;
+$banner-padding-mobile: 0.25rem;
 
 /* === Custom styles === */
 .banner {
@@ -13,6 +14,12 @@ $banner-icon-size: 1.5rem;
   background-color: $grisulado-50;
   word-break: break-word;
   width: $banner-width;
+
+  &:has(.banner-actions) {
+    @include media-breakpoint-down(sm) {
+      padding-top: $banner-padding - $banner-padding-mobile;
+    }
+  }
 
   a:not(.btn) {
     color: $grisulado-900;
@@ -36,26 +43,23 @@ $banner-icon-size: 1.5rem;
     align-items: center;
     grid-gap: $banner-gap;
 
+    @include media-breakpoint-down(sm) {
+      grid-row-gap: $banner-gap - $banner-padding-mobile;
+    }
+
     .material-icons-round,
     .bx {
       font-size: $banner-icon-size;
       grid-column: 1 / 2;
+
+      @include media-breakpoint-down(sm) {
+        padding-top: $banner-padding-mobile;
+      }
     }
 
     .banner-text {
       grid-column: 2 / 3;
-      flex-grow: 1;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      line-clamp: 1;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
       margin: 0;
-
-      @include media-breakpoint-down(sm) {
-        -webkit-line-clamp: 3;
-        line-clamp: 3;
-      }
     }
 
     .banner-actions {
@@ -66,6 +70,25 @@ $banner-icon-size: 1.5rem;
 
       @include media-breakpoint-down(sm) {
         flex-wrap: wrap;
+      }
+    }
+
+    &:has(.banner-actions) {
+      .banner-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 30px;
+
+        @include media-breakpoint-down(sm) {
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+          line-height: 24px;
+          padding: $banner-padding-mobile 0;
+        }
       }
     }
 
