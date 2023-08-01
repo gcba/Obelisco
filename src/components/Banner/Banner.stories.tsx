@@ -6,7 +6,7 @@ import './Banner.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { Banner, BUTTON_ALERT, BUTTONS_ALERT, useTextResponsive } from '.';
+import { Banner, BUTTON_BANNER, BUTTONS_BANNER, TEXT_BANNER_LINK, TextBannerButton, handleTextResponsive } from '.';
 
 // Configuración general del componente
 export default {
@@ -17,28 +17,48 @@ export default {
 export const BannerTypes = (): JSX.Element => {
   return (
     <div className="storybook__container-banner">
-      <Banner />
-      <Banner isDark={true} />
+      <Banner textBanner={TEXT_BANNER_LINK} />
+      <Banner textBanner={TEXT_BANNER_LINK} isDark={true} />
     </div>
   );
 };
 BannerTypes.story = { name: 'Tipos' };
 
 export const BannerButton = (): JSX.Element => {
+  handleTextResponsive();
   return (
     <div className="storybook__container-banner">
-      <Banner iconBanner="departure_board" buttons={BUTTON_ALERT} responsiveText={useTextResponsive()} />
-      <Banner iconBanner="departure_board" buttons={BUTTON_ALERT} responsiveText={useTextResponsive()} isDark={true} />
+      <Banner
+        iconBanner="departure_board"
+        buttons={BUTTON_BANNER}
+        textBanner={<TextBannerButton textButtonAmount="un solo botón" />}
+      />
+      <Banner
+        iconBanner="departure_board"
+        buttons={BUTTON_BANNER}
+        textBanner={<TextBannerButton textButtonAmount="un solo botón" />}
+        isDark={true}
+      />
     </div>
   );
 };
 BannerButton.story = { name: 'Con botón' };
 
 export const BannerButtons = (): JSX.Element => {
+  handleTextResponsive();
   return (
     <div className="storybook__container-banner">
-      <Banner iconBanner="cookie" buttons={BUTTONS_ALERT} responsiveText={useTextResponsive()} />
-      <Banner iconBanner="cookie" buttons={BUTTONS_ALERT} responsiveText={useTextResponsive()} isDark={true} />
+      <Banner
+        iconBanner="cookie"
+        buttons={BUTTONS_BANNER}
+        textBanner={<TextBannerButton textButtonAmount="dos botones" />}
+      />
+      <Banner
+        iconBanner="cookie"
+        buttons={BUTTONS_BANNER}
+        textBanner={<TextBannerButton textButtonAmount="dos botones" />}
+        isDark={true}
+      />
     </div>
   );
 };
