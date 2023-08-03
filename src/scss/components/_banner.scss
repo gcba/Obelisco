@@ -31,6 +31,14 @@ $banner-padding-mobile: 0.25rem;
 
     a:not(.btn) {
       color: $white;
+
+      &:focus {
+        box-shadow: 0 0 0 0.125rem $white;
+      }
+    }
+
+    .btn:focus {
+      box-shadow: 0 0 0 0.25rem $white;
     }
   }
 
