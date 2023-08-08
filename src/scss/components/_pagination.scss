@@ -152,6 +152,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
           $pagination-icon-left-active,
           $pagination-icon-right-active
         );
+        z-index: 0;
 
         &:hover,
         &.hover {
