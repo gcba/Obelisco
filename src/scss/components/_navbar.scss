@@ -1,5 +1,6 @@
 /* === Variable and mixins overides === */
 
+$navbar-padding: 0.75rem 1rem;
 $navbar-padding-y: spaceUnits(2);
 $navbar-padding-y-desktop: spaceUnits(4.5);
 $navbar-brand-padding-y: 0;
@@ -260,6 +261,7 @@ $navbar-btn-icon-height: 40px;
 /* === Custom styles === */
 
 .navbar {
+  padding: $navbar-padding;
   .container {
     padding-left: 16px;
     padding-right: 16px;
@@ -535,13 +537,9 @@ $navbar-btn-icon-height: 40px;
     }
   }
 
-  #navbarBrand {
-    @include media-breakpoint-up(md) {
-      display: block;
-    }
-  }
-
-  #navbarToggler {
+  .navbar-brand.collapse.multi-collapse,
+  .collapse.multi-collapse:has(.form-search),
+  .collapse.multi-collapse:has(.navbar-toggler) {
     @include media-breakpoint-up(md) {
       .navbar-toggler {
         margin-right: 0px !important;
@@ -552,15 +550,9 @@ $navbar-btn-icon-height: 40px;
     }
   }
 
-  #navbarTogglerBack {
+  .navbar-btn-search .navbar-toggler.btn-icon {
     @include media-breakpoint-up(md) {
       display: none;
-    }
-  }
-
-  #navbarSearch {
-    @include media-breakpoint-up(md) {
-      display: block;
     }
   }
 
