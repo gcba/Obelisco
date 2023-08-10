@@ -65,7 +65,7 @@ npm install material-icons@latest
 
 Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
 ```
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 ```
 

@@ -1,0 +1,159 @@
+/* === Variable and mixins overides === */
+
+$banner-padding: 1rem;
+$banner-width: 100%;
+$banner-content-width: 1084px;
+$banner-gap: 0.75rem;
+$banner-actions-gap: 0.75rem;
+$banner-icon-size: 1.5rem;
+$banner-padding-mobile: 0.25rem;
+
+/* === Custom styles === */
+.banner {
+  padding: $banner-padding;
+  background-color: $grisulado-50;
+  word-break: break-word;
+  width: $banner-width;
+
+  &:has(.banner-actions) {
+    @include media-breakpoint-down(sm) {
+      padding-top: $banner-padding - $banner-padding-mobile;
+    }
+  }
+
+  a:not(.btn) {
+    color: $grisulado-900;
+  }
+
+  &.banner-dark {
+    background-color: $grisulado-900;
+    color: $white;
+
+    a:not(.btn) {
+      color: $white;
+
+      &:focus {
+        box-shadow: 0 0 0 0.125rem $white;
+      }
+    }
+
+    .btn:focus {
+      box-shadow: 0 0 0 0.25rem $white;
+    }
+  }
+
+  .banner-content {
+    max-width: $banner-content-width;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    grid-gap: $banner-gap;
+
+    @include media-breakpoint-down(sm) {
+      grid-row-gap: $banner-gap - $banner-padding-mobile;
+    }
+
+    .material-icons-round,
+    .bx {
+      font-size: $banner-icon-size;
+      grid-column: 1 / 2;
+
+      @include media-breakpoint-down(sm) {
+        padding-top: $banner-padding-mobile;
+      }
+    }
+
+    .banner-text {
+      grid-column: 2 / 3;
+      margin: 0;
+    }
+
+    .banner-actions {
+      grid-column: 3 / 4;
+      display: flex;
+      align-items: center;
+      gap: $banner-actions-gap;
+
+      @include media-breakpoint-down(sm) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &:has(.banner-actions) {
+      .banner-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        line-height: 30px;
+
+        @include media-breakpoint-down(sm) {
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+          line-height: 24px;
+          padding: $banner-padding-mobile 0;
+        }
+      }
+    }
+
+    &:not(:has(.material-icons-round, .bx)) {
+      grid-template-columns: 1fr auto;
+
+      .banner-text {
+        grid-column: 1 / 2;
+      }
+
+      .banner-actions {
+        grid-column: 2 / 3;
+      }
+
+      &:not(:has(.banner-actions)) {
+        grid-template-columns: 1fr;
+
+        .banner-text {
+          text-align: center;
+        }
+      }
+    }
+
+    &:not(:has(.banner-actions)) {
+      grid-template-columns: auto 1fr;
+    }
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto;
+
+      .material-icons-round,
+      .bx {
+        grid-area: 1 / 1 / 2 / 2;
+        align-self: flex-start;
+      }
+
+      .banner-text {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+
+      .banner-actions {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+
+      &:not(:has(.material-icons-round, .bx)) {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+
+        .banner-text {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .banner-actions {
+          grid-area: 2 / 1 / 3 / 3;
+        }
+      }
+    }
+  }
+}
