@@ -111,3 +111,9 @@ $table-striped-order: even;
     }
   }
 }
+
+.table-responsive, .table-responsive-sm, .table-responsive-md, .table-responsive-lg, .table-responsive-xl {
+  > .table-bordered {
+    border: $border-width solid $border-color;
+  }
+}
