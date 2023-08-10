@@ -32,7 +32,7 @@ export const Instalacion = (): JSX.Element => (
       </p>
       {/* VER DOCUMENTACION */}
       <h2>
-        <a href="https://gcba.github.io/estandares/componentes/web/">Ver la documentación de componentes</a>.
+        <a href="https://gcba.github.io/estandares/componentes/acceso/">Ver la documentación de componentes</a>.
       </h2>
       <br />
 
