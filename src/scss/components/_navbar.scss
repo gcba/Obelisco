@@ -1,7 +1,6 @@
 /* === Variable and mixins overides === */
 
-$navbar-padding: 0.75rem 1rem;
-$navbar-padding-y: spaceUnits(2);
+$navbar-padding-y: spaceUnits(3);
 $navbar-padding-y-desktop: spaceUnits(4.5);
 $navbar-brand-padding-y: 0;
 
@@ -261,7 +260,6 @@ $navbar-btn-icon-height: 40px;
 /* === Custom styles === */
 
 .navbar {
-  padding: $navbar-padding;
   .container {
     padding-left: 16px;
     padding-right: 16px;
