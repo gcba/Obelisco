@@ -89,7 +89,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
     );
   };
 
-  const handleIconClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleIconClick = (event: React.MouseEvent<HTMLElement>) => {
     const iconId = event.currentTarget.id;
     const tabsBox = tabsBoxRef.current;
     if (!tabsBox) return;
@@ -200,12 +200,12 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
         </ul>
         {isWithButton && (
           <div className="icons-container">
-            <div className="right-left icon" onClick={handleIconClick} id="left">
+            <button className="right-left icon" onClick={handleIconClick} id="left">
               <span className="material-icons-round">arrow_back_ios</span>
-            </div>
-            <div className="right-left icon" onClick={handleIconClick} id="right">
+            </button>
+            <button className="right-left icon" onClick={handleIconClick} id="right">
               <span className="material-icons-round">arrow_forward_ios</span>
-            </div>
+            </button>
           </div>
         )}
       </nav>

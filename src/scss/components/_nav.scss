@@ -429,6 +429,8 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    padding: 0;
+    border: none;
 
     > span {
       font-size: 16px;
