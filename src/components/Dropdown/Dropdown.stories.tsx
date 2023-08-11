@@ -9,13 +9,13 @@ import { Dropdown, DropdownOption } from './index';
 
 // Configuración general del componente
 export default {
-  title: 'Componentes|Desplegables',
+  title: 'Componentes|Desplegables/De navegación',
   decorators: [withA11y]
 };
 
 export const Desplegable = (): JSX.Element => (
   <>
-    <div className="dropdown-container">
+    <div className="storybook__container-dropdown">
       <Dropdown className="mb-3" size="sm">
         <div className="dropdown-menu">
           <button className="dropdown-item" type="button">
@@ -67,7 +67,7 @@ Desplegable.story = {
 
 export const DesplegableConEnlaces = (): JSX.Element => (
   <>
-    <div className="dropdown-container">
+    <div className="storybook__container-dropdown">
       <Dropdown className="mb-3" size="sm" isBordered={true}>
         <ul className="dropdown-menu">
           <li>
@@ -156,7 +156,7 @@ DesplegableConEnlaces.story = {
 };
 
 export const DesplegableConIcono = (): JSX.Element => (
-  <div className="dropdown-container">
+  <div className="storybook__container-dropdown">
     <Dropdown className="mb-3" size="lg" title="Mi perfil" buttonIcon={<span className="dropdown-user-icon"></span>}>
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">
@@ -192,7 +192,7 @@ DesplegableConIcono.story = {
 };
 
 export const SoloIcono = (): JSX.Element => (
-  <div className="dropdown-container">
+  <div className="storybook__container-dropdown">
     <Dropdown onlyIcon={true} buttonIcon={<span className="dropdown-user-icon ml-0">&nbsp;</span>}>
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">
@@ -214,7 +214,7 @@ SoloIcono.story = {
 };
 
 export const Idioma = (): JSX.Element => (
-  <div className="dropdown-container">
+  <div className="storybook__container-dropdown">
     <Dropdown title="ES " buttonIcon={<span className="dropdown-language-icon"></span>}>
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">
@@ -233,7 +233,7 @@ Idioma.story = {
 };
 
 export const Sizes = (): JSX.Element => (
-  <div className="dropdown-container">
+  <div className="storybook__container-dropdown">
     <Dropdown className="mb-3" size="lg" isBordered={true} title="Desplegable (1)">
       <div className="dropdown-menu">
         <button className="dropdown-item" type="button">
