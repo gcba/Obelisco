@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import classNames from 'classnames';
+import { Size, sizeToClass } from '../utils';
 
 export interface Option {
   value: string;
@@ -23,6 +24,7 @@ export interface DropdownOptionProps {
   children?: React.ReactNode;
   icon?: React.ReactNode;
   iconType?: 'material' | 'boxicon';
+  size?: Size;
 }
 
 export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren<DropdownProps>) => {
@@ -78,7 +80,8 @@ export const DropdownOption = ({
   isRadio = false,
   children,
   icon,
-  iconType
+  iconType,
+  size
 }: DropdownOptionProps): JSX.Element => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({});
@@ -134,20 +137,21 @@ export const DropdownOption = ({
       <div className={`dropdown dropdown-form ${dropdownOpen ? 'show' : ''}`} ref={dropdownRef}>
         <button
           type="button"
-          className={`btn btn-dropdown btn-dropdown-border btn-dropdown-lg dropdown-toggle  ${
-            dropdownOpen ? 'active' : ''
-          }`}
+          className={`btn btn-dropdown btn-dropdown-border dropdown-toggle ${
+            size !== undefined && sizeToClass(size) ? `btn-dropdown-${sizeToClass(size)} ` : ''
+          }${dropdownOpen ? 'active' : ''}`.trim()}
           onClick={handleDropdownToggle}
           aria-haspopup="true"
           aria-expanded={dropdownOpen ? 'true' : 'false'}>
           {icon && iconType === 'material' ? icon : icon && <i className={`bx ${icon}`}></i>}
-          <p className="mb-0">{displayTitle}</p>
+          <span className="btn-dropdown-text">{displayTitle}</span>
+          <span className="material-icons-round btn-dropdown-icon">expand_more</span>
         </button>
         <div className={`dropdown-menu dropdown-body ${dropdownOpen ? 'show' : ''}`}>
           {options.map((option) => (
             <div className={`custom-control ${isRadio ? 'custom-radio' : 'custom-checkbox'}`} key={option.value}>
               {isRadio ? (
-                <label className={`btn btn-chip btn-sm ${checkboxStates[option.value] ? 'active' : ''}`}>
+                <label className={`btn btn-chip ${checkboxStates[option.value] ? 'active' : ''}`}>
                   <input
                     className="btn-check"
                     type="radio"
@@ -157,7 +161,7 @@ export const DropdownOption = ({
                     checked={checkboxStates[option.value]}
                     onChange={() => handleRadioChange(option.value)}
                   />
-                  {option.label}
+                  <span className="btn-chip-text">{option.label}</span>
                   {children}
                 </label>
               ) : (

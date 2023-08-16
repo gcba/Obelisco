@@ -13,33 +13,21 @@ export default {
   decorators: [withA11y]
 };
 
-export const DropdownSelectionSizes = (): JSX.Element => {
-  //TODO
-  const checkboxOptions = [
-    { value: 'checkOne', label: 'Opción 1' },
-    { value: 'checkTwo', label: 'Opción 2' },
-    { value: 'checkThree', label: 'Opción 3' }
-  ];
+const checkboxOptions = [
+  { value: 'checkOne', label: 'Opción 1' },
+  { value: 'checkTwo', label: 'Opción 2' },
+  { value: 'checkThree', label: 'Opción 3' }
+];
 
-  return (
-    <div className="storybook__container-dropdown-form">
-      <DropdownOption options={checkboxOptions}>
-        <i className="bx bxs-check"></i>
-      </DropdownOption>
-    </div>
-  );
-};
-DropdownSelectionSizes.story = { name: 'Tamaños' };
+const radioOptions = [
+  { value: 'radioOne', label: 'Opción 1' },
+  { value: 'radioTwo', label: 'Opción 2' },
+  { value: 'radioThree', label: 'Opción 3' }
+];
 
 export const DropdownSelectionCheckbox = (): JSX.Element => {
-  const checkboxOptions = [
-    { value: 'checkOne', label: 'Opción 1' },
-    { value: 'checkTwo', label: 'Opción 2' },
-    { value: 'checkThree', label: 'Opción 3' }
-  ];
-
   return (
-    <div className="storybook__container-dropdown-form">
+    <div className="storybook__container-dropdown">
       <DropdownOption options={checkboxOptions}>
         <i className="bx bxs-check"></i>
       </DropdownOption>
@@ -49,14 +37,8 @@ export const DropdownSelectionCheckbox = (): JSX.Element => {
 DropdownSelectionCheckbox.story = { name: 'Con checkbox' };
 
 export const DropdownSelectionRadio = (): JSX.Element => {
-  const radioOptions = [
-    { value: 'radioOne', label: 'Opción 1' },
-    { value: 'radioTwo', label: 'Opción 2' },
-    { value: 'radioThree', label: 'Opción 3' }
-  ];
-
   return (
-    <div className="storybook__container-dropdown-form">
+    <div className="storybook__container-dropdown">
       <DropdownOption options={radioOptions} isRadio={true}>
         <span className="material-icons-round">done</span>
       </DropdownOption>
@@ -66,14 +48,8 @@ export const DropdownSelectionRadio = (): JSX.Element => {
 DropdownSelectionRadio.story = { name: 'Con radio' };
 
 export const DropdownSelectionIcon = (): JSX.Element => {
-  const radioOptions = [
-    { value: 'radioOne', label: 'Opción 1' },
-    { value: 'radioTwo', label: 'Opción 2' },
-    { value: 'radioThree', label: 'Opción 3' }
-  ];
-
   return (
-    <div className="storybook__container-dropdown-form">
+    <div className="storybook__container-dropdown">
       <DropdownOption
         options={radioOptions}
         isRadio={true}
@@ -81,10 +57,27 @@ export const DropdownSelectionIcon = (): JSX.Element => {
         iconType="material">
         <i className="bx bx-check"></i>
       </DropdownOption>
-      <DropdownOption options={radioOptions} isRadio={true} icon="bx-ghost" iconType="boxicon">
-        <i className="bx bx-check"></i>
+      <DropdownOption options={checkboxOptions} icon="bx-ghost" iconType="boxicon">
+        <i className="bx bxs-check"></i>
       </DropdownOption>
     </div>
   );
 };
 DropdownSelectionIcon.story = { name: 'Con ícono' };
+
+export const DropdownSelectionSizes = (): JSX.Element => {
+  return (
+    <div className="storybook__container-dropdown">
+      <DropdownOption options={radioOptions} isRadio={true} size="small">
+        <span className="material-icons-round">done</span>
+      </DropdownOption>
+      <DropdownOption options={radioOptions} isRadio={true}>
+        <span className="material-icons-round">done</span>
+      </DropdownOption>
+      <DropdownOption options={radioOptions} isRadio={true} size="large">
+        <span className="material-icons-round">done</span>
+      </DropdownOption>
+    </div>
+  );
+};
+DropdownSelectionSizes.story = { name: 'Tamaños' };
