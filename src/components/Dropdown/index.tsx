@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { Size, sizeToClass } from '../utils';
 
@@ -14,6 +14,7 @@ export interface DropdownOptionProps {
   icon?: React.ReactNode;
   iconType?: 'material' | 'boxicon';
   size?: Size;
+  idDropdown?: string;
 }
 export interface DropdownProps {
   title?: string;
@@ -141,12 +142,11 @@ export const DropdownOption = ({
   children,
   icon,
   iconType,
-  size
+  size,
+  idDropdown
 }: DropdownOptionProps): JSX.Element => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({});
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleCheckboxChange = (checkboxName: string) => {
     setCheckboxStates((prevState) => ({
@@ -166,23 +166,6 @@ export const DropdownOption = ({
     setCheckboxStates(updatedCheckboxStates);
   };
 
-  const handleDropdownToggle = () => {
-    setDropdownOpen((prevState) => !prevState);
-  };
-
-  const handleOutsideClick = useCallback((event: MouseEvent) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-      setDropdownOpen(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    document.addEventListener('click', handleOutsideClick);
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, [handleOutsideClick]);
-
   const selectedCheckboxCount = Object.values(checkboxStates).filter((checked) => checked).length;
   const dropdownTitle = selectedCheckboxCount > 0 ? `Desplegable (${selectedCheckboxCount})` : 'Desplegable';
   const displayTitle = selectedOption ? selectedOption : dropdownTitle;
@@ -194,20 +177,22 @@ export const DropdownOption = ({
 
   return (
     <>
-      <div className={`dropdown dropdown-form ${dropdownOpen ? 'show' : ''}`} ref={dropdownRef}>
+      <div className="dropdown dropdown-form">
         <button
           type="button"
-          className={`btn btn-dropdown btn-dropdown-border dropdown-toggle ${
+          className={`btn btn-dropdown btn-dropdown-border ${
             size !== undefined && sizeToClass(size) ? `btn-dropdown-${sizeToClass(size)} ` : ''
-          }${dropdownOpen ? 'active' : ''}`.trim()}
-          onClick={handleDropdownToggle}
-          aria-haspopup="true"
-          aria-expanded={dropdownOpen ? 'true' : 'false'}>
+          }`.trim()}
+          data-toggle="collapse"
+          data-target={`#${idDropdown}`}
+          aria-controls={idDropdown}
+          aria-expanded="false"
+          aria-label="Toggle">
           {icon && iconType === 'material' ? icon : icon && <i className={`bx ${icon}`}></i>}
           <span className="btn-dropdown-text">{displayTitle}</span>
           <span className="material-icons-round btn-dropdown-icon">expand_more</span>
         </button>
-        <div className={`dropdown-menu dropdown-body ${dropdownOpen ? 'show' : ''}`}>
+        <div className="dropdown-menu dropdown-body collapse" id={idDropdown}>
           {options.map((option) => (
             <div className={`custom-control ${isRadio ? 'custom-radio' : 'custom-checkbox'}`} key={option.value}>
               {isRadio ? (

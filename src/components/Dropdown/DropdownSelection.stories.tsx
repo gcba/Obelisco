@@ -28,7 +28,7 @@ const radioOptions = [
 export const DropdownSelectionCheckbox = (): JSX.Element => {
   return (
     <div className="storybook__container-dropdown">
-      <DropdownOption options={checkboxOptions}>
+      <DropdownOption options={checkboxOptions} idDropdown="checkboxExample">
         <i className="bx bxs-check"></i>
       </DropdownOption>
     </div>
@@ -39,7 +39,7 @@ DropdownSelectionCheckbox.story = { name: 'Con checkbox' };
 export const DropdownSelectionRadio = (): JSX.Element => {
   return (
     <div className="storybook__container-dropdown">
-      <DropdownOption options={radioOptions} isRadio={true}>
+      <DropdownOption options={radioOptions} isRadio={true} idDropdown="radioExample">
         <span className="material-icons-round">done</span>
       </DropdownOption>
     </div>
@@ -54,10 +54,11 @@ export const DropdownSelectionIcon = (): JSX.Element => {
         options={radioOptions}
         isRadio={true}
         icon={<span className="material-icons-round">event</span>}
-        iconType="material">
+        iconType="material"
+        idDropdown="radioIcon">
         <i className="bx bx-check"></i>
       </DropdownOption>
-      <DropdownOption options={checkboxOptions} icon="bx-ghost" iconType="boxicon">
+      <DropdownOption options={checkboxOptions} icon="bx-ghost" iconType="boxicon" idDropdown="checkboxIcon">
         <i className="bx bxs-check"></i>
       </DropdownOption>
     </div>
@@ -68,13 +69,13 @@ DropdownSelectionIcon.story = { name: 'Con ícono' };
 export const DropdownSelectionSizes = (): JSX.Element => {
   return (
     <div className="storybook__container-dropdown">
-      <DropdownOption options={radioOptions} isRadio={true} size="small">
+      <DropdownOption options={radioOptions} isRadio={true} size="small" idDropdown="radioSmall">
         <span className="material-icons-round">done</span>
       </DropdownOption>
-      <DropdownOption options={radioOptions} isRadio={true}>
+      <DropdownOption options={radioOptions} isRadio={true} idDropdown="radio">
         <span className="material-icons-round">done</span>
       </DropdownOption>
-      <DropdownOption options={radioOptions} isRadio={true} size="large">
+      <DropdownOption options={radioOptions} isRadio={true} size="large" idDropdown="radioLarge">
         <span className="material-icons-round">done</span>
       </DropdownOption>
     </div>
