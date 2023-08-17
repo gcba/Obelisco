@@ -12,9 +12,6 @@ $dropdown-item-padding-lg: spaceUnits(3);
 $dropdown-item-padding-sm: 0.1875rem spaceUnits(3);
 $dropdown-item-padding-left-checkbox: spaceUnits(12);
 
-$icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path></svg>');
-$icon-world: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(56, 72, 92, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>');
-
 $animation-toggle: transform 0.2s ease-in-out;
 
 /* === Bootstrap Import === */
@@ -236,24 +233,6 @@ $animation-toggle: transform 0.2s ease-in-out;
       .btn-dropdown-icon {
         transform: rotate(-360deg);
         transition: $animation-toggle;
-      }
-
-      .dropdown-user-icon {
-        content: $icon-user;
-        display: inline-block;
-        background-color: $grisulado-50;
-        margin-left: spaceUnits(2);
-        vertical-align: middle;
-        border-radius: $border-radius;
-        width: 1.4rem;
-        padding: 0.2rem;
-      }
-
-      .dropdown-language-icon {
-        content: $icon-world;
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0px 0px 0.125rem 0.25rem;
       }
 
       .dropdown-toggle {

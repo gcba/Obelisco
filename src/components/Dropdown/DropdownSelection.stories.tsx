@@ -28,43 +28,33 @@ const radioOptions = [
 export const DropdownSelectionCheckbox = (): JSX.Element => {
   return (
     <div className="storybook__container-dropdown">
-      <DropdownOption options={checkboxOptions} idDropdown="checkboxExample">
+      <DropdownOption
+        options={checkboxOptions}
+        idDropdown="checkboxExample"
+        icon={<span className="material-icons-round">person</span>}
+        iconType="material">
         <i className="bx bxs-check"></i>
       </DropdownOption>
     </div>
   );
 };
-DropdownSelectionCheckbox.story = { name: 'Con checkbox' };
+DropdownSelectionCheckbox.story = { name: 'Con selección múltiple' };
 
 export const DropdownSelectionRadio = (): JSX.Element => {
-  return (
-    <div className="storybook__container-dropdown">
-      <DropdownOption options={radioOptions} isRadio={true} idDropdown="radioExample">
-        <span className="material-icons-round">done</span>
-      </DropdownOption>
-    </div>
-  );
-};
-DropdownSelectionRadio.story = { name: 'Con radio' };
-
-export const DropdownSelectionIcon = (): JSX.Element => {
   return (
     <div className="storybook__container-dropdown">
       <DropdownOption
         options={radioOptions}
         isRadio={true}
-        icon={<span className="material-icons-round">event</span>}
-        iconType="material"
-        idDropdown="radioIcon">
-        <i className="bx bx-check"></i>
-      </DropdownOption>
-      <DropdownOption options={checkboxOptions} icon="bx-ghost" iconType="boxicon" idDropdown="checkboxIcon">
-        <i className="bx bxs-check"></i>
+        idDropdown="radioExample"
+        icon={<span className="material-icons-round">person</span>}
+        iconType="material">
+        <span className="material-icons-round">done</span>
       </DropdownOption>
     </div>
   );
 };
-DropdownSelectionIcon.story = { name: 'Con ícono' };
+DropdownSelectionRadio.story = { name: 'Con selección única' };
 
 export const DropdownSelectionSizes = (): JSX.Element => {
   return (
