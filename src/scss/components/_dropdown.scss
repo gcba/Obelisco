@@ -615,6 +615,10 @@ $animation-toggle: transform 0.2s ease-in-out;
         text-overflow: ellipsis;
         align-self: center;
       }
+
+      @include media-breakpoint-down(sm) {
+        max-width: 250px;
+      }
     }
 
     .btn-dropdown-sm + .dropdown-menu {
