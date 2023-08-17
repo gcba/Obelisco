@@ -7,17 +7,6 @@ export interface Option {
   label: string;
 }
 
-export interface DropdownProps {
-  title?: string;
-  className?: string;
-  isActive?: boolean;
-  isBordered?: boolean;
-  size?: 'sm' | 'lg';
-  onlyIcon?: boolean;
-  buttonIcon?: React.ReactNode;
-  option?: true;
-}
-
 export interface DropdownOptionProps {
   options: Option[];
   isRadio?: boolean;
@@ -26,54 +15,125 @@ export interface DropdownOptionProps {
   iconType?: 'material' | 'boxicon';
   size?: Size;
 }
+export interface DropdownProps {
+  title?: string;
+  isBordered?: boolean;
+  onlyIcon?: boolean;
+  btnIconRight?: string;
+  btnIconRightClass?: string;
+  btnIconLeft?: string;
+  btnIconLeftClass?: string;
+  isMenuRight?: boolean;
+  isNested?: boolean;
+  idDropdown?: string;
+  isSubDropdown?: boolean;
+}
+export interface DropdownItemsProps {
+  title?: string;
+  isBordered?: boolean;
+  isDanger?: boolean;
+  isAlignRight?: boolean;
+  itemIconRight?: string;
+  itemIconLeft?: string;
+  isSubItem?: boolean;
+}
+
+export const DropdownItem: React.FC<DropdownItemsProps> = (props: React.PropsWithChildren<DropdownItemsProps>) => {
+  const {
+    title = 'Opción de navegación',
+    isBordered,
+    isDanger,
+    itemIconRight,
+    itemIconLeft,
+    isAlignRight,
+    isSubItem
+  } = props;
+
+  const itemClass = classNames('dropdown-item', {
+    'item-border': isBordered,
+    'item-danger': isDanger,
+    'sub-item': isSubItem
+  });
+
+  return (
+    <a className={itemClass} href="#">
+      {itemIconLeft && <span className="material-icons-round">{itemIconLeft}</span>}
+      <span className={`item-text ${isAlignRight ? 'text-right' : ''}`.trim()}>
+        {isDanger ? 'Cerrar sesión' : title}
+      </span>
+      {itemIconRight && <span className="material-icons-round">{itemIconRight}</span>}
+    </a>
+  );
+};
 
 export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren<DropdownProps>) => {
   const {
     title = 'Desplegable',
-    isActive,
     isBordered,
     children,
-    size,
     onlyIcon,
-    className,
-    buttonIcon,
-    option
+    btnIconRight,
+    btnIconLeft,
+    btnIconRightClass,
+    btnIconLeftClass,
+    isMenuRight,
+    isNested,
+    idDropdown = 'dropdownContent',
+    isSubDropdown
   } = props;
 
-  const containerClass = classNames('dropdown', className);
+  const dropdownClass = classNames('dropdown', { 'sub-dropdown': isSubDropdown });
 
-  const buttonClass = classNames('btn', 'btn-dropdown', {
-    'dropdown-toggle': !buttonIcon && !onlyIcon,
-    active: isActive,
+  const buttonDrpdownClass = classNames('btn', 'btn-dropdown', 'btn-dropdown-lg', {
     'btn-dropdown-border': isBordered,
-    [`btn-dropdown-${size}`]: size
+    'dropdown-toggle': !isNested || isNested == undefined,
+    'sub-btn-dropdown': isSubDropdown
   });
 
-  return option ? (
-    <fieldset className="dropdown">
-      <button type="button" className={buttonClass} data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-        {title}
-      </button>
-      {children}
-    </fieldset>
-  ) : (
-    <div className={containerClass}>
-      <button type="button" className={buttonClass} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {onlyIcon ? (
-          buttonIcon
-        ) : (
-          <>
-            {title}
-            {buttonIcon}
-          </>
+  const dropdownMenuClass = classNames('dropdown-menu', {
+    'dropdown-menu-right': isMenuRight,
+    'collapse ': isNested,
+    'sub-dropdown-menu': isSubDropdown
+  });
+
+  return (
+    <div className={dropdownClass}>
+      <button
+        type="button"
+        className={buttonDrpdownClass}
+        {...(isNested
+          ? {
+              'data-toggle': 'collapse',
+              'data-target': `#${idDropdown}`,
+              'aria-controls': `${idDropdown}`,
+              'aria-expanded': 'false',
+              'aria-label': 'Toggle'
+            }
+          : {
+              'data-toggle': 'dropdown',
+              'aria-haspopup': 'true',
+              'aria-expanded': 'false'
+            })}>
+        {btnIconLeft && (
+          <span className={`material-icons-round ${btnIconLeftClass ? btnIconLeftClass : ''}`.trim()}>
+            {btnIconLeft}
+          </span>
+        )}
+        {(!onlyIcon || onlyIcon == undefined) && (
+          <span className={isSubDropdown ? 'item-text' : 'btn-dropdown-text'}>{title}</span>
+        )}
+        {btnIconRight && (
+          <span className={`material-icons-round ${btnIconRightClass ? btnIconRightClass : ''}`.trim()}>
+            {btnIconRight}
+          </span>
         )}
       </button>
-      {children}
+      <div className={dropdownMenuClass} {...(isNested ? { id: idDropdown } : {})}>
+        {children}
+      </div>
     </div>
   );
 };
-
-export default Dropdown;
 
 export const DropdownOption = ({
   options,

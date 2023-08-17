@@ -428,7 +428,7 @@ $animation-toggle: transform 0.2s ease-in-out;
         }
       }
 
-      &:has(.sub-dropdown-container .sub-dropdown-menu.dropdown-menu-right) {
+      &:has(.sub-dropdown-menu.dropdown-menu-right) {
         @include media-breakpoint-up(md) {
           .btn-dropdown-icon {
             transform: rotate(90deg);
@@ -436,50 +436,41 @@ $animation-toggle: transform 0.2s ease-in-out;
         }
       }
 
-      .sub-dropdown-container {
-        .sub-dropdown-menu {
-          position: static !important;
-          transform: none !important;
-          box-shadow: none !important;
-          margin: 0.25rem 0;
+      .sub-dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        box-shadow: none !important;
+        margin: 0.25rem 0;
 
-          .sub-item {
-            @extend .dropdown-item;
-            @include media-breakpoint-down(sm) {
-              padding-left: 2rem !important;
-            }
-          }
-
-          @include media-breakpoint-up(md) {
-            box-shadow: $dropdown-box-shadow !important;
-            margin: 0;
-          }
-        }
-
-        &.dropdown-menu-right {
-          .dropdown-item .item-text {
-            text-align: right;
-            @include media-breakpoint-down(sm) {
-              text-align: left;
-            }
+        .sub-item {
+          @extend .dropdown-item;
+          @include media-breakpoint-down(sm) {
+            padding-left: 2rem !important;
           }
         }
 
         @include media-breakpoint-up(md) {
-          position: absolute;
+          box-shadow: $dropdown-box-shadow !important;
+          margin: 0;
+          position: absolute !important;
           top: 0;
-          left: unset;
+          left: unset !important;
           right: -348px;
-          padding-left: 0.5rem;
 
-          &:has(.dropdown-menu-right) {
-            right: 340px;
-            padding-left: 0;
-            padding-right: 0.5rem;
-
-            .btn-dropdown-icon {
-              transform: rotate(90deg);
+          &.dropdown-menu-right {
+              right: 348px;
+              .btn-dropdown-icon {
+                transform: rotate(90deg);
             }
+          }
+        }
+      }
+
+      &.dropdown-menu-right {
+        .dropdown-item .item-text {
+          text-align: right;
+          @include media-breakpoint-down(sm) {
+            text-align: left;
           }
         }
       }

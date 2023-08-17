@@ -5,7 +5,7 @@ import './Dropdown.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-import { Dropdown } from './index';
+import { Dropdown, DropdownItem } from './index';
 
 // Configuración general del componente
 export default {
@@ -15,81 +15,21 @@ export default {
 
 export const DropdownIcons = (): JSX.Element => (
   <div className="storybook__container-dropdown">
-    <div className="dropdown">
-      <button
-        type="button"
-        className="btn btn-dropdown dropdown-toggle btn-dropdown-lg btn-dropdown-border"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        <span>Desplegable</span>
-        <span className="material-icons-round btn-dropdown-icon">expand_more</span>
-      </button>
-      <div className="dropdown-menu">
-        <a className="dropdown-item" href="#">
-          <span className="material-icons-round">info</span>
-          <span className="item-text">Opción de navegación</span>
-          <span className="material-icons-round">info</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="material-icons-round">info</span>
-          <span className="item-text text-right">Opción de navegación</span>
-          <span className="material-icons-round">info</span>
-        </a>
-        <a className="dropdown-item item-danger" href="#">
-          <span className="material-icons-round">logout</span>
-          <span className="item-text">Cerrar sesión</span>
-        </a>
-      </div>
-    </div>
-    <div className="dropdown">
-      <button
-        type="button"
-        className="btn btn-dropdown dropdown-toggle btn-dropdown-lg btn-dropdown-border"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        <span className="material-icons-round">menu</span>
-        <span>Desplegable</span>
-      </button>
-      <div className="dropdown-menu">
-        <a className="dropdown-item" href="#">
-          <span className="material-icons-round">info</span>
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text text-right">Opción de navegación</span>
-          <span className="material-icons-round">info</span>
-        </a>
-        <a className="dropdown-item item-danger" href="#">
-          <span className="item-text text-right">Cerrar sesión</span>
-          <span className="material-icons-round">logout</span>
-        </a>
-      </div>
-    </div>
-    <div className="dropdown">
-      <button
-        type="button"
-        className="btn btn-dropdown dropdown-toggle btn-dropdown-lg btn-dropdown-border"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        <span className="material-icons-round">menu</span>
-      </button>
-      <div className="dropdown-menu">
-        <a className="dropdown-item item-border" href="#">
-          <span className="material-icons-round">info</span>
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item item-danger" href="#">
-          <span className="material-icons-round">logout</span>
-          <span className="item-text">Cerrar sesión</span>
-        </a>
-      </div>
-    </div>
+    <Dropdown btnIconRight="expand_more" btnIconRightClass="btn-dropdown-icon" isBordered>
+      <DropdownItem itemIconLeft="info" itemIconRight="info" />
+      <DropdownItem itemIconLeft="info" itemIconRight="info" isAlignRight />
+      <DropdownItem itemIconLeft="logout" isDanger />
+    </Dropdown>
+    <Dropdown btnIconLeft="menu" isBordered>
+      <DropdownItem itemIconLeft="info" />
+      <DropdownItem itemIconRight="info" isAlignRight />
+      <DropdownItem itemIconRight="logout" isDanger isAlignRight />
+    </Dropdown>
+    <Dropdown btnIconLeft="menu" onlyIcon isBordered>
+      <DropdownItem itemIconLeft="info" isBordered />
+      <DropdownItem itemIconRight="info" isAlignRight />
+      <DropdownItem itemIconRight="logout" isDanger isAlignRight />
+    </Dropdown>
   </div>
 );
 
@@ -99,66 +39,25 @@ DropdownIcons.story = {
 
 export const DropdownPosition = (): JSX.Element => (
   <div className="storybook__container-dropdown-position">
-    <div className="dropdown">
-      <button
-        type="button"
-        className="btn btn-dropdown dropdown-toggle btn-dropdown-lg btn-dropdown-border"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        <span>Desplegable Izq.</span>
-        <span className="material-icons-round btn-dropdown-icon">expand_more</span>
-      </button>
-      <div className="dropdown-menu">
-        <a className="dropdown-item" href="#">
-          <span className="material-icons-round">info</span>
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item item-danger" href="#">
-          <span className="material-icons-round">logout</span>
-          <span className="item-text">Cerrar sesión</span>
-        </a>
-      </div>
-    </div>
-    <div className="dropdown">
-      <button
-        type="button"
-        className="btn btn-dropdown dropdown-toggle btn-dropdown-lg btn-dropdown-border"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false">
-        <span className="material-icons-round btn-dropdown-icon">expand_more</span>
-        <span>Desplegable Der.</span>
-      </button>
-      <div className="dropdown-menu dropdown-menu-right">
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-          <span className="material-icons-round">info</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item item-danger" href="#">
-          <span className="item-text">Cerrar sesión</span>
-          <span className="material-icons-round">logout</span>
-        </a>
-      </div>
-    </div>
+    <Dropdown title="Desplegable Izq." btnIconRight="expand_more" btnIconRightClass="btn-dropdown-icon" isBordered>
+      <DropdownItem itemIconLeft="info" />
+      <DropdownItem />
+      <DropdownItem />
+      <DropdownItem />
+      <DropdownItem itemIconLeft="logout" isDanger />
+    </Dropdown>
+    <Dropdown
+      title="Desplegable Der."
+      btnIconLeft="expand_more"
+      btnIconLeftClass="btn-dropdown-icon"
+      isBordered
+      isMenuRight>
+      <DropdownItem itemIconRight="info" isAlignRight />
+      <DropdownItem isAlignRight />
+      <DropdownItem isAlignRight />
+      <DropdownItem isAlignRight />
+      <DropdownItem itemIconRight="logout" isDanger isAlignRight />
+    </Dropdown>
   </div>
 );
 
@@ -168,115 +67,52 @@ DropdownPosition.story = {
 
 export const DropdownNested = (): JSX.Element => (
   <div className="storybook__container-dropdown-position">
-    <div className="dropdown">
-      <button
-        className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border"
-        type="button"
-        data-toggle="collapse"
-        data-target="#dropdownContent"
-        aria-controls="dropdownContent"
-        aria-expanded="false"
-        aria-label="Toggle">
-        <span>Desplegable Izq.</span>
-        <span className="material-icons-round btn-dropdown-icon">expand_more</span>
-      </button>
-
-      <div className="dropdown-menu collapse" id="dropdownContent">
-        <div className="dropdown sub-dropdown">
-          <button
-            type="button"
-            className="btn btn-dropdown dropdown-toggle btn-dropdown-lg sub-btn-dropdown"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false">
-            <span className="material-icons-round">info</span>
-            <span className="item-text">Opción en cascada</span>
-            <span className="material-icons-round btn-dropdown-icon">expand_more</span>
-          </button>
-          <div className="sub-dropdown-container">
-            <div className="dropdown-menu sub-dropdown-menu">
-              <a className="dropdown-item sub-item" href="#">
-                <span className="item-text">Opción de navegación</span>
-              </a>
-              <a className="dropdown-item sub-item" href="#">
-                <span className="item-text">Opción de navegación</span>
-              </a>
-              <a className="dropdown-item sub-item" href="#">
-                <span className="item-text">Opción de navegación</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="material-icons-round">info</span>
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item item-danger" href="#">
-          <span className="material-icons-round">logout</span>
-          <span className="item-text">Cerrar sesión</span>
-        </a>
-      </div>
-    </div>
-    <div className="dropdown">
-      <button
-        className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border"
-        type="button"
-        data-toggle="collapse"
-        data-target="#dropdownContentLeft"
-        aria-controls="dropdownContentLeft"
-        aria-expanded="false"
-        aria-label="Toggle">
-        <span className="material-icons-round btn-dropdown-icon">expand_more</span>
-        <span>Desplegable Der.</span>
-      </button>
-      <div className="dropdown-menu dropdown-menu-right collapse" id="dropdownContentLeft">
-        <div className="dropdown sub-dropdown">
-          <button
-            type="button"
-            className="btn btn-dropdown dropdown-toggle btn-dropdown-lg sub-btn-dropdown"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false">
-            <span className="material-icons-round btn-dropdown-icon">expand_more</span>
-            <span className="item-text">Opción en cascada</span>
-            <span className="material-icons-round">info</span>
-          </button>
-          <div className="sub-dropdown-container">
-            <div className="dropdown-menu sub-dropdown-menu dropdown-menu-right">
-              <a className="dropdown-item sub-item" href="#">
-                <span className="item-text">Opción de navegación</span>
-              </a>
-              <a className="dropdown-item sub-item" href="#">
-                <span className="item-text">Opción de navegación</span>
-              </a>
-              <a className="dropdown-item sub-item" href="#">
-                <span className="item-text">Opción de navegación</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-          <span className="material-icons-round">info</span>
-        </a>
-        <a className="dropdown-item" href="#">
-          <span className="item-text">Opción de navegación</span>
-        </a>
-        <a className="dropdown-item item-danger" href="#">
-          <span className="item-text">Cerrar sesión</span>
-          <span className="material-icons-round">logout</span>
-        </a>
-      </div>
-    </div>
+    <Dropdown
+      title="Desplegable Izq."
+      btnIconRight="expand_more"
+      btnIconRightClass="btn-dropdown-icon"
+      isBordered
+      isNested
+      idDropdown="dropdownContentLeft">
+      <Dropdown
+        title="Opción en cascada"
+        isSubDropdown
+        btnIconRight="expand_more"
+        btnIconRightClass="btn-dropdown-icon"
+        btnIconLeft="info">
+        <DropdownItem isSubItem />
+        <DropdownItem isSubItem />
+        <DropdownItem isSubItem />
+      </Dropdown>
+      <DropdownItem />
+      <DropdownItem itemIconLeft="info" />
+      <DropdownItem />
+      <DropdownItem itemIconLeft="logout" isDanger />
+    </Dropdown>
+    <Dropdown
+      title="Desplegable Der."
+      btnIconLeft="expand_more"
+      btnIconLeftClass="btn-dropdown-icon"
+      isBordered
+      isNested
+      idDropdown="dropdownContentRight"
+      isMenuRight>
+      <Dropdown
+        title="Opción en cascada"
+        isSubDropdown
+        btnIconLeft="expand_more"
+        btnIconLeftClass="btn-dropdown-icon"
+        btnIconRight="info"
+        isMenuRight>
+        <DropdownItem isSubItem />
+        <DropdownItem isSubItem />
+        <DropdownItem isSubItem />
+      </Dropdown>
+      <DropdownItem />
+      <DropdownItem itemIconRight="info" />
+      <DropdownItem />
+      <DropdownItem itemIconRight="logout" isDanger />
+    </Dropdown>
   </div>
 );
 
@@ -284,7 +120,7 @@ DropdownNested.story = {
   name: 'Anidado'
 };
 
-export const DesplegableEspecificos = (): JSX.Element => (
+/* export const DesplegableEspecificos = (): JSX.Element => (
   <div className="storybook__container-dropdown">
     <Dropdown className="mb-3" size="lg" title="Mi perfil" buttonIcon={<span className="dropdown-user-icon"></span>}>
       <div className="dropdown-menu">
@@ -341,7 +177,7 @@ export const DesplegableEspecificos = (): JSX.Element => (
 
 DesplegableEspecificos.story = {
   name: 'Específicos'
-};
+}; */
 /* export const Desplegable = (): JSX.Element => (
   <>
     <div className="storybook__container-dropdown">
