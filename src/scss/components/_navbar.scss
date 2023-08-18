@@ -21,7 +21,7 @@ $navbar-btn-icon-height: 40px;
 
 @mixin responsive {
   height: auto;
-  justify-content: end;
+  justify-content: flex-end;
 
   .navbar-btn-search.multi-collapse.collapsing,
   .bx.bx-left-arrow-alt.multi-collapse.collapsing {
@@ -210,7 +210,7 @@ $navbar-btn-icon-height: 40px;
           max-height: $navbar-btn-icon-width;
           height: $navbar-btn-icon-width;
           display: flex;
-          justify-content: end;
+          justify-content: flex-end;
           align-items: center;
 
           &.notifications {
@@ -440,7 +440,7 @@ $navbar-btn-icon-height: 40px;
 
   .navbar-collapse {
     .nav {
-      justify-content: end;
+      justify-content: flex-end;
     }
 
     @include media-breakpoint-down(sm) {
