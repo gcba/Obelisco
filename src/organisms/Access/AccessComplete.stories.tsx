@@ -41,13 +41,13 @@ const accessCategory: CategoryList[] = [
 ];
 
 export const Simple = (): JSX.Element => (
-  <div className="list-group-container">
+  <div className="storybook__container-list-group">
     <AccessOrganisms simpleComponent={true} />
   </div>
 );
 
 export const AccessList = (): JSX.Element => (
-  <div className="list-group-container">
+  <div className="storybook__container-list-group">
     <AccessOrganisms accessList={accessList} />
   </div>
 );
@@ -57,7 +57,7 @@ AccessList.story = {
 };
 
 export const Categories = (): JSX.Element => (
-  <div className="list-group-container">
+  <div className="storybook__container-list-group">
     <AccessOrganisms categoryList={accessCategory} />
   </div>
 );
