@@ -13,7 +13,7 @@ export default {
 
 export const CollapseUniqueSelection = (): JSX.Element => (
   <div id="accordion">
-    <div className="accordion-wrapper">
+    <div className="storybook__container-accordion">
       <div className="accordion" id="accordionExample">
         <Collapse
           description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
@@ -38,7 +38,7 @@ export const CollapseUniqueSelection = (): JSX.Element => (
 CollapseUniqueSelection.story = { name: 'Selección única' };
 
 export const CollapseMultipleSelection = (): JSX.Element => (
-  <div className="accordion-wrapper">
+  <div className="storybook__container-accordion">
     <div className="accordion" id="accordionExample">
       <Collapse
         description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
@@ -74,7 +74,7 @@ const CollapseContent = (): JSX.Element => (
 );
 
 export const CollapseInformation = (): JSX.Element => (
-  <div className="accordion-wrapper">
+  <div className="storybook__container-accordion">
     <div className="accordion" id="accordionExample">
       <Collapse identifier="collapseOne" content={<CollapseContent />}>
         <span className="collapse-label">Total a pagar</span>
@@ -88,7 +88,7 @@ CollapseInformation.story = { name: 'Con información' };
 
 export const CollapseIcon = (): JSX.Element => (
   <div id="accordion">
-    <div className="accordion-wrapper">
+    <div className="storybook__container-accordion">
       <div className="accordion" id="accordionExample">
         <Collapse
           description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
@@ -104,7 +104,7 @@ CollapseIcon.story = { name: 'Con ícono' };
 
 export const CollapsableLabelIcon = (): JSX.Element => (
   <div id="accordion">
-    <div className="accordion-wrapper">
+    <div className="storybook__container-accordion">
       <div className="accordion" id="accordionExample">
         <Collapse
           description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
@@ -152,7 +152,7 @@ const CollapseForm = (): JSX.Element => (
 );
 
 export const CollapseList = (): JSX.Element => (
-  <div className="accordion-wrapper">
+  <div className="storybook__container-accordion">
     <div className="accordion" id="accordionListExample">
       <Collapse identifier="collapseOne" content={<CollapseForm />}>
         <h4 className="collapse-title">Tarjeta de crédito / débito </h4>

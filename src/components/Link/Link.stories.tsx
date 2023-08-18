@@ -1,6 +1,5 @@
 // Base
 import React from 'react';
-import './Link.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';

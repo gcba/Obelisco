@@ -1,23 +1,19 @@
-.card-img {
-  object-position: top;
-}
-
-.storybook__wrapper {
+.storybook__container-panel {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   max-width: 100%;
   
   &-horizontal {
-    @extend .storybook__wrapper;
+    @extend .storybook__container-panel;
     width: 1084px;
   }
   &-vertical {
-    @extend .storybook__wrapper;
+    @extend .storybook__container-panel;
     width: 526px;
   }
   &-small {
-    @extend .storybook__wrapper;
+    @extend .storybook__container-panel;
     width: 340px;
 
     &:has(.panel-sm) {
@@ -25,7 +21,7 @@
     }
 
     &-horizontal {
-      @extend .storybook__wrapper-vertical;
+      @extend .storybook__container-panel-vertical;
     }
   }
 }

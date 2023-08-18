@@ -20,7 +20,7 @@ export default {
 export const ButtonTypes = (): JSX.Element => {
   return (
     <>
-      <div className="btn-wrapper">
+      <div className="storybook__container-btn">
         {buttonTypes.map((item) => (
           <Button key={item.type} type={item.type}>
             {item.name}
@@ -30,7 +30,7 @@ export const ButtonTypes = (): JSX.Element => {
           Enlace
         </a>
       </div>
-      <div className="btn-wrapper">
+      <div className="storybook__container-btn">
         {buttonTypes.map((item) => (
           <Button key={item.type} type={item.type} isOutline>
             {item.name}
@@ -47,7 +47,7 @@ ButtonTypes.story = { name: 'Tipos' };
 
 export const ButtonSizes = (): JSX.Element => {
   return (
-    <div className="btn-wrapper">
+    <div className="storybook__container-btn">
       {sizesButton.map((item) => (
         <Button key={item.size} type="secondary" size={item.size}>
           {item.name}
@@ -63,7 +63,7 @@ ButtonSizes.story = { name: 'Tamaños' };
 
 export const ButtonBlock = (): JSX.Element => {
   return (
-    <div className="btn-block-wrapper">
+    <div className="storybook__container-btn-block">
       <Button type="secondary" isBlock>
         Expandible
       </Button>
@@ -75,7 +75,7 @@ ButtonBlock.story = { name: 'Expandible' };
 export const ButtonWithIcon = (): JSX.Element => {
   return (
     <>
-      <div className="btn-wrapper">
+      <div className="storybook__container-btn">
         {sizes.map((size) => (
           <Button key={size} type="primary" size={size} isIconSpinner={<i className="bx bxs-info-circle"></i>}>
             Botón
@@ -92,7 +92,7 @@ export const ButtonWithIcon = (): JSX.Element => {
           </Button>
         ))}
       </div>
-      <div className="btn-wrapper">
+      <div className="storybook__container-btn">
         {sizes.map((size) => (
           <Button
             key={size}
@@ -118,14 +118,14 @@ ButtonWithIcon.story = { name: 'Con ícono' };
 
 export const ButtonWithSpinner = (): JSX.Element => (
   <>
-    <div className="btn-wrapper">
+    <div className="storybook__container-btn">
       {buttonSpinnerTypes.map((item) => (
         <Button key={item.type} type={item.type} isIconSpinner={<Spinner type={item.spinner} size="small"></Spinner>}>
           Botón
         </Button>
       ))}
     </div>
-    <div className="btn-wrapper">
+    <div className="storybook__container-btn">
       {buttonOutlineSpinnerTypes.map((item) => (
         <Button
           key={item.type}

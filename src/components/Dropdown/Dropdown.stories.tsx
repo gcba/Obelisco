@@ -13,7 +13,7 @@ export default {
 
 export const Desplegable = (): JSX.Element => (
   <>
-    <div className="dropdown-container">
+    <div className="storybook__container-dropdown">
       <div className="dropdown mb-3">
         <button
           type="button"
@@ -87,7 +87,7 @@ Desplegable.story = {
 
 export const DesplegableConEnlaces = (): JSX.Element => (
   <>
-    <div className="dropdown-container">
+    <div className="storybook__container-dropdown">
       <div className="dropdown mb-3">
         <button
           type="button"
@@ -205,7 +205,7 @@ DesplegableConEnlaces.story = {
 };
 
 export const DesplegableConIcono = (): JSX.Element => (
-  <div className="dropdown-container">
+  <div className="storybook__container-dropdown">
     <div className="dropdown mb-3">
       <button
         type="button"
@@ -256,7 +256,7 @@ DesplegableConIcono.story = {
 };
 
 export const SoloIcono = (): JSX.Element => (
-  <div className="dropdown-container">
+  <div className="storybook__container-dropdown">
     <div className="dropdown">
       <button
         type="button"
@@ -287,7 +287,7 @@ SoloIcono.story = {
 };
 
 export const Idioma = (): JSX.Element => (
-  <div className="dropdown-container">
+  <div className="storybook__container-dropdown">
     <div className="dropdown">
       <button
         type="button"
@@ -314,7 +314,7 @@ Idioma.story = {
 };
 
 export const Tamanos = (): JSX.Element => (
-  <div className="dropdown-container">
+  <div className="storybook__container-dropdown">
     <div className="dropdown mb-3">
       <button
         type="button"

@@ -162,7 +162,7 @@ ContainerSizeTabs.story = {
 
 export const ContainerTabsBg = (): JSX.Element => {
   return (
-    <div className="wrapper-bg">
+    <div className="storybook__container-bg">
       <NavTabsSlider
         items={simpleItems}
         selected="1"
@@ -196,7 +196,7 @@ ContainerTabsIcon.story = {
 
 export const ContainerSliderTabs = (): JSX.Element => {
   return (
-    <div className="wrapper-tabs">
+    <div className="storybook__container-tabs">
       <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills tabs nav-box" />
     </div>
   );
@@ -208,7 +208,7 @@ ContainerSliderTabs.story = {
 
 export const ContainerSliderTabBg = (): JSX.Element => {
   return (
-    <div className="wrapper-bg">
+    <div className="storybook__container-bg">
       <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills tabs nav-box-bg" />
     </div>
   );
