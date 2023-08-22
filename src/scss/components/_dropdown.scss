@@ -325,6 +325,10 @@ $animation-toggle: transform 0.2s ease-in-out;
 
         &:hover {
           color: $blue;
+
+          &:active {
+            color: $white;
+          }
         }
       }
 
@@ -353,7 +357,16 @@ $animation-toggle: transform 0.2s ease-in-out;
             .item-text {
               text-decoration: underline;
             }
+            &:active {
+              color: $white;
+              box-shadow: none;
+            }
+            
           }
+        }
+        &:active {
+          color: $white;
+          background-color: $danger;
         }
       }
     }
@@ -383,6 +396,8 @@ $animation-toggle: transform 0.2s ease-in-out;
         gap: 0.75rem;
         border: none;
         white-space: normal;
+        font-size: $font-size-base;
+        font-family: $font-family-sans-serif;
 
         &:not(:last-child) {
           margin-bottom: 0.25rem;
@@ -395,8 +410,6 @@ $animation-toggle: transform 0.2s ease-in-out;
 
         .item-text {
           flex-grow: 1;
-          font-size: $font-size-base;
-          font-family: $font-family-sans-serif;
           text-align: left;
         }
 
