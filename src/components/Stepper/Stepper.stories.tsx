@@ -13,7 +13,7 @@ export default {
 
 export const PasosDeUnFormulario = (): JSX.Element => {
   return (
-    <div className="storybook_container-stepper">
+    <div className="storybook__container-stepper">
       <div className="stepper">
         <p className="step-title">Nombre del paso</p>
         <p className="step-next">Paso siguiente: Nombre del paso 3</p>
