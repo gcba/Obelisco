@@ -223,6 +223,16 @@ a.btn {
       }
     }
   }
+
+  //Botón con spinner
+   &:focus, &.focus, &:hover, &.hover, &:active, &.active {
+    &:is(.btn-outline-secondary, .btn-outline-success, .btn-outline-danger) {
+      .spinner-border {
+        border-color: $white;
+        border-right-color: $grisulado-300;
+      }
+    }
+  }
 }
 
 //

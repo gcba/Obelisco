@@ -61,7 +61,6 @@ a.list-group-item {
   padding: $list-group-padding;
   display: flex;
   backface-visibility: hidden;
-
   @include media-breakpoint-down(xs) {
     padding: $list-group-padding-mobile;
   }
@@ -100,7 +99,6 @@ a.list-group-item {
   &:last-child {
     margin-bottom: 0px;
     border-radius: $list-group-border;
-
     &:is(.card-item) {
       border-radius: $border-radius-card-item;
     }
@@ -353,7 +351,6 @@ a.list-group-item {
             box-shadow: $box-shadow-access-focus;
           }
         }
-
         .title-option {
           padding: $padding-title-option;
           @extend .h5;

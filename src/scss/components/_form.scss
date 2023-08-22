@@ -131,6 +131,104 @@ $form-validation-states: (
   }
 }
 
+.file-group {
+  position: relative;
+  width: 100%;
+  min-height: 120px;
+  text-align: center;
+  border-radius: $border-radius-lg;
+
+  .input-file-title {
+    width: 100%;
+    padding: 0rem 0.5rem 0 0.5rem;
+
+    input[type='file'] {
+      width: 100%;
+      height: 100%;
+      color: transparent;
+      cursor: pointer;
+    }
+
+    input::file-selector-button {
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .custom-file {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      z-index: 99;
+      opacity: 1;
+      outline: none;
+
+      &:focus {
+        box-shadow: $input-focus-box-shadow;
+        border-radius: $border-radius-lg;
+      }
+    }
+
+    .main-file {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: $blue;
+      display: flex;
+      flex-direction: column;
+      padding: 0 0.5rem;
+      border-style: dashed;
+      border-width: 2px;
+      border-color: $grisulado-100;
+      border-radius: $border-radius-lg;
+      background: $grisulado-10;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background: white;
+        transition: 0.2s ease-in-out;
+      }
+
+      .bx,
+      .material-symbols-rounded {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+.filename-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+
+  .file-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: $blue;
+    margin-bottom: 0.5rem;
+
+    .file-box {
+      align-items: center;
+      display: flex;
+      .bx,
+      .material-symbols-rounded {
+        font-size: 2rem;
+        margin-right: 0.75rem;
+        color: $grisulado-900;
+      }
+    }
+  }
+  &.multiple {
+    display: block;
+  }
+}
+
 .custom-control-label {
   padding: spaceUnits(1);
   padding-left: $custom-control-indicator-size + spaceUnits(5);
