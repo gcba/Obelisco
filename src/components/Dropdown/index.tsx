@@ -31,7 +31,6 @@ export interface DropdownProps {
 }
 export interface DropdownItemsProps {
   title?: string;
-  isBordered?: boolean;
   isDanger?: boolean;
   isAlignRight?: boolean;
   itemIconRight?: string;
@@ -54,7 +53,6 @@ export const DropdownIcon: React.FC<{ itemIcon: string; itemIconClass?: string }
 export const DropdownItem: React.FC<DropdownItemsProps> = (props: React.PropsWithChildren<DropdownItemsProps>) => {
   const {
     title = 'Opción de navegación',
-    isBordered,
     isDanger,
     itemIconRight,
     itemIconLeft,
@@ -64,7 +62,6 @@ export const DropdownItem: React.FC<DropdownItemsProps> = (props: React.PropsWit
   } = props;
 
   const itemClass = classNames('dropdown-item', {
-    'item-border': isBordered,
     'item-danger': isDanger,
     'sub-item': isSubItem
   });

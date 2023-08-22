@@ -288,17 +288,12 @@ $animation-toggle: transform 0.2s ease-in-out;
       color: $body-color;
       white-space: normal;
       text-decoration: none;
-      word-break: break-all;
       display: flex;
       align-items: center;
       gap: 0.75rem;
 
       &:not(:last-child) {
         margin-bottom: 0.25rem;
-      }
-
-      &.item-border {
-        box-shadow: $dropdown-box-shadow;
       }
 
       .item-text {
@@ -313,10 +308,6 @@ $animation-toggle: transform 0.2s ease-in-out;
       &.disabled, &[disabled] {
         color: $grisulado-300;
         pointer-events: none;
-
-        &.item-border {
-          box-shadow: 0 0 0 2px $grisulado-50;
-        }
       }
 
       &:hover {
