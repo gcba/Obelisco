@@ -39,6 +39,17 @@ export interface DropdownItemsProps {
   isSubItem?: boolean;
 }
 
+export const DropdownIcon: React.FC<{ itemIcon: string; itemIconClass?: string }> = ({ itemIcon, itemIconClass }) => (
+  <>
+    {itemIcon && !itemIcon?.includes('bx') && (
+      <span className={`material-icons-round ${itemIconClass ? itemIconClass : ''}`.trim()}>{itemIcon}</span>
+    )}
+    {itemIcon && itemIcon?.includes('bx') && (
+      <i className={`${itemIcon} ${itemIconClass ? itemIconClass : ''}`.trim()}></i>
+    )}
+  </>
+);
+
 export const DropdownItem: React.FC<DropdownItemsProps> = (props: React.PropsWithChildren<DropdownItemsProps>) => {
   const {
     title = 'Opción de navegación',
@@ -58,11 +69,11 @@ export const DropdownItem: React.FC<DropdownItemsProps> = (props: React.PropsWit
 
   return (
     <a className={itemClass} href="#">
-      {itemIconLeft && <span className="material-icons-round">{itemIconLeft}</span>}
+      {itemIconLeft && <DropdownIcon itemIcon={itemIconLeft} />}
       <span className={`item-text ${isAlignRight ? 'text-right' : ''}`.trim()}>
         {isDanger ? 'Cerrar sesión' : title}
       </span>
-      {itemIconRight && <span className="material-icons-round">{itemIconRight}</span>}
+      {itemIconRight && <DropdownIcon itemIcon={itemIconRight} />}
     </a>
   );
 };
@@ -115,19 +126,11 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
               'aria-haspopup': 'true',
               'aria-expanded': 'false'
             })}>
-        {btnIconLeft && (
-          <span className={`material-icons-round ${btnIconLeftClass ? btnIconLeftClass : ''}`.trim()}>
-            {btnIconLeft}
-          </span>
-        )}
+        {btnIconLeft && <DropdownIcon itemIcon={btnIconLeft} itemIconClass={btnIconLeftClass} />}
         {(!onlyIcon || onlyIcon == undefined) && (
           <span className={isSubDropdown ? 'item-text' : 'btn-dropdown-text'}>{title}</span>
         )}
-        {btnIconRight && (
-          <span className={`material-icons-round ${btnIconRightClass ? btnIconRightClass : ''}`.trim()}>
-            {btnIconRight}
-          </span>
-        )}
+        {btnIconRight && <DropdownIcon itemIcon={btnIconRight} itemIconClass={btnIconRightClass} />}
       </button>
       <div className={dropdownMenuClass} {...(isNested ? { id: idDropdown } : {})}>
         {children}

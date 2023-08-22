@@ -305,6 +305,11 @@ $animation-toggle: transform 0.2s ease-in-out;
         flex-grow: 1;
       }
 
+      .bx,
+      .material-icons-round {
+        font-size: 1.5rem;
+      }
+
       &:hover {
         background-color: $white;
         border-radius: spaceUnits(2);
