@@ -85,7 +85,7 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
 
   const dropdownClass = classNames('dropdown', { 'sub-dropdown': isSubDropdown });
 
-  const buttonDrpdownClass = classNames('btn', 'btn-dropdown', 'btn-dropdown-lg', {
+  const buttonDropdownClass = classNames('btn', 'btn-dropdown', 'btn-dropdown-lg', {
     'btn-dropdown-border': isBordered,
     'dropdown-toggle': !isNested || isNested == undefined,
     'sub-btn-dropdown': isSubDropdown
@@ -101,7 +101,7 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
     <div className={dropdownClass}>
       <button
         type="button"
-        className={buttonDrpdownClass}
+        className={buttonDropdownClass}
         {...(isNested
           ? {
               'data-toggle': 'collapse',
