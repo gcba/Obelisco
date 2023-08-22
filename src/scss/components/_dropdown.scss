@@ -310,6 +310,15 @@ $animation-toggle: transform 0.2s ease-in-out;
         font-size: 1.5rem;
       }
 
+      &.disabled, &[disabled] {
+        color: $grisulado-300;
+        pointer-events: none;
+
+        &.item-border {
+          box-shadow: 0 0 0 2px $grisulado-50;
+        }
+      }
+
       &:hover {
         background-color: $white;
         border-radius: spaceUnits(2);

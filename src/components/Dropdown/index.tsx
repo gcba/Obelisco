@@ -37,6 +37,7 @@ export interface DropdownItemsProps {
   itemIconRight?: string;
   itemIconLeft?: string;
   isSubItem?: boolean;
+  isDisabled?: boolean;
 }
 
 export const DropdownIcon: React.FC<{ itemIcon: string; itemIconClass?: string }> = ({ itemIcon, itemIconClass }) => (
@@ -58,7 +59,8 @@ export const DropdownItem: React.FC<DropdownItemsProps> = (props: React.PropsWit
     itemIconRight,
     itemIconLeft,
     isAlignRight,
-    isSubItem
+    isSubItem,
+    isDisabled
   } = props;
 
   const itemClass = classNames('dropdown-item', {
@@ -68,7 +70,7 @@ export const DropdownItem: React.FC<DropdownItemsProps> = (props: React.PropsWit
   });
 
   return (
-    <a className={itemClass} href="#">
+    <a className={itemClass} href="#" {...(isDisabled ? { disabled: true } : {})}>
       {itemIconLeft && <DropdownIcon itemIcon={itemIconLeft} />}
       <span className={`item-text ${isAlignRight ? 'text-right' : ''}`.trim()}>
         {isDanger ? 'Cerrar sesión' : title}

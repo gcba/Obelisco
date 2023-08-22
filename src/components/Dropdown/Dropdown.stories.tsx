@@ -18,6 +18,7 @@ export const DropdownIcons = (): JSX.Element => (
     <Dropdown btnIconRight="expand_more" btnIconRightClass="btn-dropdown-icon" isBordered>
       <DropdownItem itemIconLeft="info" itemIconRight="info" />
       <DropdownItem itemIconLeft="info" itemIconRight="info" isAlignRight />
+      <DropdownItem itemIconLeft="info" itemIconRight="info" isAlignRight isDisabled />
       <DropdownItem itemIconLeft="logout" isDanger />
     </Dropdown>
     <Dropdown btnIconLeft="menu" isBordered>
