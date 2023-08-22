@@ -175,7 +175,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
 
   return (
     <>
-      <nav className={`tabs-slider ${!isWithButton ? 'px-0' : ''}`}>
+      <nav className="tabs-slider">
         <ul
           className={mainListClasses}
           ref={tabsBoxRef}
