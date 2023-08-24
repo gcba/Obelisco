@@ -172,7 +172,7 @@ const rightAligned = (content: TableCellContet) => {
 export const Responsive = (): JSX.Element => {
   return (
     <div className="storybook__container-table-responsive">
-      <div className="table-responsive">
+      <div className="responsive-scroll">
         <Table
           head={['#', 'Nombre', 'Apellido', 'Dirección', 'Ciudad', 'Comuna', 'Provincia']}
           body={[
