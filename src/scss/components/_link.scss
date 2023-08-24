@@ -23,7 +23,9 @@ a {
   color: $blue;
   cursor: pointer;
   word-break: break-word;
-
+  display: inline-block;
+  width: fit-content;
+  
   &:visited {
     color: $link-visited-color;
   }

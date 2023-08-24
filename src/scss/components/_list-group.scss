@@ -61,6 +61,7 @@ a.list-group-item {
   padding: $list-group-padding;
   display: flex;
   backface-visibility: hidden;
+  width: 100%;
 
   @include media-breakpoint-down(xs) {
     padding: $list-group-padding-mobile;
