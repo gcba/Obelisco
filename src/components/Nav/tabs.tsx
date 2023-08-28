@@ -1,60 +1,52 @@
 import React, { useRef, useState } from 'react';
 import classnames from 'classnames';
-import { checkActiveChild, NavItem, NavItemComponent, NavItemComponentProps, NavProps } from '.';
+import { NavItem, NavItemComponent, NavItemComponentProps, NavProps } from '.';
 
 export interface TabsItem extends NavItem {
   iconTabs: string;
+  content: React.ReactNode;
 }
 
 export interface TabsProps extends NavProps {
   items: TabsItem[];
   classUl: string;
   isWithButton?: boolean;
-  onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export interface TabsComponentsProps extends NavItemComponentProps, TabsItem {}
 
 const NavItemComponentSlider: React.FC<TabsComponentsProps> = (props: TabsComponentsProps) => {
-  const { name, id, href, children, level, disabled, selected, hasBordered, type, hasIcon, onSelect, iconTabs } = props;
+  const { name, id, children, disabled, selected, level, iconTabs, hasIcon } = props;
 
-  const isActive = selected && id === selected;
-  const hasActiveChild = checkActiveChild(children, selected);
+  const isActive = selected === id;
 
   const linkClassName = classnames('nav-link', {
-    'nav-link-sm': type === 'small',
-    'nav-link-lg': type === 'large',
-    'border-link': hasBordered,
-    'active-child': !disabled && hasActiveChild,
-    active: !disabled && isActive,
+    active: isActive,
     disabled: disabled
   });
 
   return (
-    <li className="nav-item">
-      <a
+    <li className="nav-item" role="presentation">
+      <button
         className={linkClassName}
-        href={href || '#'}
-        onClick={onSelect}
-        aria-disabled={disabled}
-        tabIndex={disabled ? -1 : undefined}>
+        disabled={disabled}
+        tabIndex={disabled ? -1 : undefined}
+        data-toggle="tab"
+        data-target={`#panel-${id}`}
+        type="button"
+        role="tab"
+        aria-controls={`panel-${id}`}
+        aria-selected={isActive}>
         {hasIcon && iconTabs ? (
           <div className="nav-icon" dangerouslySetInnerHTML={{ __html: `${name} ${iconTabs}` }}></div>
         ) : (
           <>{name}</>
         )}
-      </a>
-      {!disabled && (isActive || hasActiveChild) && children && (
-        <ul className={listClasses}>
+      </button>
+      {children && (
+        <ul className={listClasses} role="tabpanel" id={`panel-${id}`}>
           {children.map((item) => (
-            <NavItemComponent
-              {...item}
-              key={item.id}
-              level={level + 1}
-              onClick={props.onClick}
-              selected={selected}
-              hasIcon={hasIcon}
-            />
+            <NavItemComponent {...item} key={item.id} selected={selected} level={level} />
           ))}
         </ul>
       )}
@@ -65,7 +57,9 @@ const NavItemComponentSlider: React.FC<TabsComponentsProps> = (props: TabsCompon
 const listClasses = 'nav nav-pills tabs';
 
 export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildren<TabsProps>) => {
-  const { items, selected, navSize, hasIcon, classUl, isWithButton = true } = props;
+  const { items, navSize, hasIcon, classUl, isWithButton = true, selected } = props;
+
+  const [activeTabId] = useState<string>(selected || ''); // Valor predeterminado de cadena vacía si selected es null o undefined
 
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -108,28 +102,9 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
     handleIcons(targetPosition);
   };
 
-  const handleTabClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    const tab = event.currentTarget;
-    const tabsBox = tabsBoxRef.current;
-    event.preventDefault();
-    if (!tabsBox) return;
-    if (scrollLeft == tabsBoxRef?.current?.scrollLeft) {
-      const activeTab = tabsBox.querySelector('.active');
-      if (activeTab) {
-        const duration = 1;
-        setTimeout(() => {
-          activeTab.classList.remove('active');
-          tab.classList.add('active');
-        }, duration);
-      } else {
-        tab.classList.add('active');
-      }
-    }
-  };
-
   const handleMouseDown = (event: React.MouseEvent<HTMLUListElement>) => {
     setIsDragging(true);
-    event.preventDefault();
+
     const tabsBox = tabsBoxRef.current;
     if (!tabsBox) return;
     setStartX(event.pageX - tabsBox.offsetLeft);
@@ -138,7 +113,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
 
   const handleMouseMove = (event: React.MouseEvent<HTMLUListElement>) => {
     if (!isDragging) return;
-    event.preventDefault();
+
     const tabsBox = tabsBoxRef.current;
     if (!tabsBox) return;
     const x = event.pageX - tabsBox.offsetLeft;
@@ -149,7 +124,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
 
   const handleTouchStart = (event: React.TouchEvent<HTMLUListElement>) => {
     setIsDragging(true);
-    event.preventDefault();
+
     const tabsBox = tabsBoxRef.current;
     if (!tabsBox) return;
     setStartX(event.touches[0].pageX - tabsBox.offsetLeft);
@@ -158,7 +133,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
 
   const handleTouchMove = (event: React.TouchEvent<HTMLUListElement>) => {
     if (!isDragging) return;
-    event.preventDefault();
+
     const tabsBox = tabsBoxRef.current;
     if (!tabsBox) return;
     const x = event.touches[0].pageX - tabsBox.offsetLeft;
@@ -185,16 +160,17 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          onMouseLeave={handleMouseLeave}>
+          onMouseLeave={handleMouseLeave}
+          id="myTab"
+          role="tablist">
           {items.map((item) => (
             <NavItemComponentSlider
               {...item}
               key={item.id}
-              level={0}
-              onSelect={handleTabClick}
-              selected={selected}
               hasIcon={hasIcon}
               type={item.type}
+              selected={activeTabId}
+              level={0}
             />
           ))}
         </ul>
@@ -209,6 +185,22 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
           </div>
         )}
       </nav>
+      <div className="tab-content" id="myTabContent">
+        {items.map((item) => (
+          <div
+            key={item.id}
+            className={classnames('tab-pane', {
+              fade: true,
+              show: item.id === activeTabId,
+              active: item.id === activeTabId
+            })}
+            id={`panel-${item.id}`}
+            role="tabpanel"
+            aria-labelledby={`${item.id}-tab`}>
+            {item.content}
+          </div>
+        ))}
+      </div>
     </>
   );
 };

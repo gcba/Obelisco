@@ -29,7 +29,7 @@ export interface NavItemComponentProps extends NavItem {
   type?: Size;
   hasIcon?: boolean;
   hasReverse?: boolean;
-  onSelect?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+  onSelect?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const listClasses = 'nav flex-column nav-pills';
