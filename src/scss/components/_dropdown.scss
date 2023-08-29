@@ -380,15 +380,6 @@ $animation-toggle: transform 0.2s ease-in-out;
       .dropdown-item .item-text,
       .sub-dropdown > .btn.sub-btn-dropdown .item-text {
         text-align: right;
-        @include media-breakpoint-down(sm) {
-          text-align: left;
-        }
-      }
-
-      .dropdown-item .item-text {
-        @include media-breakpoint-down(sm) {
-          flex-grow: 0;
-        }
       }
     }
 
