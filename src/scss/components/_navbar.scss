@@ -233,6 +233,11 @@ $navbar-btn-icon-height: 40px;
           margin-bottom: 4px;
         }
       }
+
+      .nav-dropdown {
+        display: flex;
+        justify-content: flex-end;
+      }
     }
   }
 
@@ -461,10 +466,6 @@ $navbar-btn-icon-height: 40px;
 
         .nav-item {
           font-size: 16px;
-
-          span {
-            font-size: 16px;
-          }
         }
 
         .nav-item:first-child {
