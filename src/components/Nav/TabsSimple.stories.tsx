@@ -185,6 +185,8 @@ export const Simple = (): JSX.Element => {
         hasIcon={false}
         classUl="nav nav-pills tabs"
         isWithButton={false}
+        idPrefix="simple"
+        label="Simple tab list"
       />
     </>
   );
@@ -202,6 +204,8 @@ export const SimpleWidth = (): JSX.Element => {
         hasIcon={false}
         classUl="nav nav-pills tabs fixedWidth"
         isWithButton={false}
+        idPrefix="width"
+        label="width tab list"
       />
     </>
   );
@@ -220,11 +224,21 @@ export const SimpleSizes = (): JSX.Element => {
         hasIcon={false}
         classUl="nav nav-pills tabs"
         isWithButton={false}
+        idPrefix="sizeLg"
+        label="lg tab list"
       />
 
       <br />
 
-      <NavTabsSlider items={sizeItems} selected="8" hasIcon={false} classUl="nav nav-pills tabs" isWithButton={false} />
+      <NavTabsSlider
+        items={sizeItems}
+        selected="8"
+        hasIcon={false}
+        classUl="nav nav-pills tabs"
+        isWithButton={false}
+        idPrefix="sizeMd"
+        label="md tab list"
+      />
 
       <br />
 
@@ -234,6 +248,8 @@ export const SimpleSizes = (): JSX.Element => {
         hasIcon={false}
         classUl="nav nav-pills tabs"
         isWithButton={false}
+        idPrefix="sizeSm"
+        label="sm tab list"
       />
     </>
   );
@@ -252,6 +268,8 @@ export const SimpleIcon = (): JSX.Element => {
         hasIcon={true}
         classUl="nav nav-pills tabs"
         isWithButton={false}
+        idPrefix="icon"
+        label="icon tab list"
       />
     </>
   );
@@ -264,7 +282,14 @@ SimpleIcon.story = {
 export const SliderTab = (): JSX.Element => {
   return (
     <div className="storybook__container-tabs">
-      <NavTabsSlider items={sliderItems} selected="14" hasIcon={true} classUl="nav nav-pills tabs" />
+      <NavTabsSlider
+        items={sliderItems}
+        selected="14"
+        hasIcon={true}
+        classUl="nav nav-pills tabs"
+        idPrefix="slider"
+        label="slider tab list"
+      />
     </div>
   );
 };

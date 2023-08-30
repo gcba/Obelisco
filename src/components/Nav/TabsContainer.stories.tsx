@@ -184,6 +184,8 @@ export const ContainerTabs = (): JSX.Element => {
       hasIcon={false}
       classUl="nav nav-pills tabs nav-box"
       isWithButton={false}
+      idPrefix="simple"
+      label="Simple tab list"
     />
   );
 };
@@ -201,6 +203,8 @@ export const ContainerTabWidth = (): JSX.Element => {
         hasIcon={false}
         classUl="nav nav-pills tabs nav-box fixedWidth"
         isWithButton={false}
+        idPrefix="width"
+        label="width tab list"
       />
     </>
   );
@@ -219,6 +223,8 @@ export const ContainerSizeTabs = (): JSX.Element => {
         hasIcon={false}
         classUl="nav nav-pills tabs nav-box"
         isWithButton={false}
+        idPrefix="sizeLg"
+        label="lg tab list"
       />
 
       <br />
@@ -229,6 +235,8 @@ export const ContainerSizeTabs = (): JSX.Element => {
         hasIcon={false}
         classUl="nav nav-pills tabs nav-box"
         isWithButton={false}
+        idPrefix="sizeMd"
+        label="md tab list"
       />
 
       <br />
@@ -239,6 +247,8 @@ export const ContainerSizeTabs = (): JSX.Element => {
         hasIcon={false}
         classUl="nav nav-pills tabs nav-box"
         isWithButton={false}
+        idPrefix="sizeSm"
+        label="sm tab list"
       />
     </>
   );
@@ -257,6 +267,8 @@ export const ContainerTabsBg = (): JSX.Element => {
         hasIcon={false}
         classUl="nav nav-pills tabs nav-box-bg"
         isWithButton={false}
+        idPrefix="container"
+        label="container tab list"
       />
     </div>
   );
@@ -274,6 +286,8 @@ export const ContainerTabsIcon = (): JSX.Element => {
       hasIcon={true}
       classUl="nav nav-pills tabs nav-box"
       isWithButton={false}
+      idPrefix="icon"
+      label="icon tab list"
     />
   );
 };
@@ -285,7 +299,14 @@ ContainerTabsIcon.story = {
 export const ContainerSliderTabs = (): JSX.Element => {
   return (
     <div className="storybook__container-tabs">
-      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills tabs nav-box" />
+      <NavTabsSlider
+        items={sliderItems}
+        selected="1"
+        hasIcon={true}
+        classUl="nav nav-pills tabs nav-box"
+        idPrefix="containerSlider"
+        label="container slider tab list "
+      />
     </div>
   );
 };
@@ -297,7 +318,14 @@ ContainerSliderTabs.story = {
 export const ContainerSliderTabBg = (): JSX.Element => {
   return (
     <div className="storybook__container-bg">
-      <NavTabsSlider items={sliderItems} selected="1" hasIcon={true} classUl="nav nav-pills tabs nav-box-bg" />
+      <NavTabsSlider
+        items={sliderItems}
+        selected="1"
+        hasIcon={true}
+        classUl="nav nav-pills tabs nav-box-bg"
+        idPrefix="containerSliderBg"
+        label="container background slider tab list "
+      />
     </div>
   );
 };

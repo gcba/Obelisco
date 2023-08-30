@@ -10,6 +10,8 @@ export interface TabsItem extends NavItem {
 export interface TabsProps extends NavProps {
   items: TabsItem[];
   classUl: string;
+  idPrefix: string;
+  label: string;
   isWithButton?: boolean;
 }
 
@@ -32,10 +34,10 @@ const NavItemComponentSlider: React.FC<TabsComponentsProps> = (props: TabsCompon
         disabled={disabled}
         tabIndex={disabled ? -1 : undefined}
         data-toggle="tab"
-        data-target={`#panel-${id}`}
+        data-target={`#panel-content-${id}`}
         type="button"
         role="tab"
-        aria-controls={`panel-${id}`}
+        aria-controls={`panel-content-${id}`}
         aria-selected={isActive}>
         {hasIcon && iconTabs ? (
           <div className="nav-icon" dangerouslySetInnerHTML={{ __html: `${name} ${iconTabs}` }}></div>
@@ -57,7 +59,7 @@ const NavItemComponentSlider: React.FC<TabsComponentsProps> = (props: TabsCompon
 const listClasses = 'nav nav-pills tabs';
 
 export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildren<TabsProps>) => {
-  const { items, navSize, hasIcon, classUl, isWithButton = true, selected } = props;
+  const { items, navSize, hasIcon, classUl, isWithButton = true, selected, idPrefix } = props;
 
   const [activeTabId] = useState<string>(selected || ''); // Valor predeterminado de cadena vacía si selected es null o undefined
 
@@ -150,7 +152,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
 
   return (
     <>
-      <nav className="tabs-slider">
+      <nav className="tabs-slider" aria-label={props.label}>
         <ul
           className={mainListClasses}
           ref={tabsBoxRef}
@@ -161,7 +163,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
           onMouseLeave={handleMouseLeave}
-          id="myTab"
+          id={`${idPrefix}-myTab`}
           role="tablist">
           {items.map((item) => (
             <NavItemComponentSlider
@@ -185,7 +187,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
           </div>
         )}
       </nav>
-      <div className="tab-content" id="myTabContent">
+      <div className="tab-content" id={`${idPrefix}-myTabContent`}>
         {items.map((item) => (
           <div
             key={item.id}
@@ -194,9 +196,9 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
               show: item.id === activeTabId,
               active: item.id === activeTabId
             })}
-            id={`panel-${item.id}`}
+            id={`panel-content-${item.id}`}
             role="tabpanel"
-            aria-labelledby={`${item.id}-tab`}>
+            aria-label={`${item.id}-tab`}>
             {item.content}
           </div>
         ))}
