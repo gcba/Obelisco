@@ -17,26 +17,26 @@ const simpleItems: TabsItem[] = [
     name: 'Pestaña 1',
     id: '1',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 1'
+    content: 'Contenido Pestaña  1'
   },
   {
     name: 'Pestaña 2',
     id: '2',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 2'
+    content: 'Contenido Pestaña  2'
   },
   {
     name: 'Pestaña 3',
     id: '3',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 3'
+    content: 'Contenido Pestaña  3'
   },
   {
     name: 'Pestaña 4',
     id: '4',
     disabled: true,
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 4'
+    content: 'Contenido Pestaña  4'
   }
 ];
 
@@ -46,21 +46,21 @@ const sizeLgItems: TabsItem[] = [
     id: '5',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'large',
-    content: 'contenido 1'
+    content: 'Contenido Pestaña 1'
   },
   {
     name: 'Pestaña grande',
     id: '6',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'large',
-    content: 'contenido 2'
+    content: 'Contenido Pestaña 2'
   },
   {
     name: 'Pestaña grande',
     id: '7',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'large',
-    content: 'contenido 3'
+    content: 'Contenido Pestaña 3'
   }
 ];
 
@@ -77,14 +77,14 @@ const sizeItems: TabsItem[] = [
     id: '9',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'default',
-    content: 'contenido 2'
+    content: 'Contenido Pestaña 2'
   },
   {
     name: 'Pestaña mediana',
     id: '10',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'default',
-    content: 'contenido 3'
+    content: 'Contenido Pestaña 3'
   }
 ];
 
@@ -94,21 +94,21 @@ const sizeSmItems: TabsItem[] = [
     id: '11',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'small',
-    content: 'contenido 1'
+    content: 'Contenido Pestaña 1'
   },
   {
     name: 'Pestaña chica',
     id: '12',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'small',
-    content: 'contenido 2'
+    content: 'Contenido Pestaña 2'
   },
   {
     name: 'Pestaña chica',
     id: '13',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'small',
-    content: 'contenido 3'
+    content: 'Contenido Pestaña 3'
   }
 ];
 
@@ -117,62 +117,62 @@ const sliderItems: TabsItem[] = [
     name: 'Pestaña 1',
     id: '14',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 1'
+    content: 'Contenido Pestaña  1'
   },
   {
     name: 'Pestaña 2',
     id: '15',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 2'
+    content: 'Contenido Pestaña  2'
   },
   {
     name: 'Pestaña 3',
     id: '16',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 3'
+    content: 'Contenido Pestaña  3'
   },
   {
     name: 'Pestaña 4',
     id: '17',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 4'
+    content: 'Contenido Pestaña  4'
   },
   {
     name: 'Pestaña 5',
     id: '18',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 5'
+    content: 'Contenido Pestaña  5'
   },
   {
     name: 'Pestaña 6',
     id: '19',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 6'
+    content: 'Contenido Pestaña  6'
   },
   {
     name: 'Pestaña 7',
     id: '20',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 7'
+    content: 'Contenido Pestaña  7'
   },
   {
     name: 'Pestaña 8',
     id: '21',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 8'
+    content: 'Contenido Pestaña  8'
   },
   {
     name: 'Pestaña 9',
     id: '22',
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 9'
+    content: 'Contenido Pestaña  9'
   },
   {
     name: 'Pestaña 10',
     id: '23',
     disabled: true,
     iconTabs: '<span class="material-icons-round">home</span>',
-    content: 'Contenido de la Pestaña 10'
+    content: 'Contenido Pestaña  10'
   }
 ];
 
