@@ -18,7 +18,13 @@ export const Predeterminado = (): JSX.Element => {
         enlace en párrafo
       </a>{' '}
       brinda un conjunto de herramientas y componentes colaborativos y accesibles que define procesos para que los
-      equipos internos y externos puedan trabajar alineadamente.
+      equipos internos y externos puedan trabajar alineadamente. Además contamos con la etiqueta small para{' '}
+      <small>
+        <a href="#" target="_blank" rel="noreferrer">
+          enlaces en párrafo
+        </a>{' '}
+      </small>
+      con menor tamaño de fuente
     </p>
   );
 };
