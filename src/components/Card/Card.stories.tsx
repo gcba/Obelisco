@@ -22,7 +22,7 @@ const footer = 'Fecha de publicación: 10/10/2021';
 export const TitleTextLink = (): JSX.Element => {
   return (
     <>
-      <div className="horizontal-container">
+      <div className="storybook__container-card-horizontal">
         <SimpleCard
           title={title}
           description={description}
@@ -36,7 +36,7 @@ export const TitleTextLink = (): JSX.Element => {
       </div>
       <br />
       <br />
-      <div className="cards-container">
+      <div className="storybook__container-cards">
         <SimpleCard
           title={title}
           description={description}
@@ -84,7 +84,7 @@ TitleTextLink.story = { name: 'Sin contenedor' };
 
 export const TitleText = (): JSX.Element => {
   return (
-    <div className="cards-container">
+    <div className="storybook__container-cards">
       <Card
         title={title}
         description={description}
@@ -106,7 +106,7 @@ TitleText.story = { name: 'Con contenedor' };
 export const HorizontalCard = (): JSX.Element => {
   return (
     <>
-      <div className="horizontal-container">
+      <div className="storybook__container-card-horizontal">
         <Card
           title={title}
           description={description}
@@ -131,7 +131,7 @@ export const HorizontalCard = (): JSX.Element => {
         />
       </div>
       <br />
-      <div className="cards-container">
+      <div className="storybook__container-cards">
         <Card
           title="Título de tarjeta"
           picture={{
@@ -190,7 +190,7 @@ HorizontalCard.story = { name: 'Contenedor con imagen o ícono horizontal' };
 
 export const NewsCard = (): JSX.Element => {
   return (
-    <div className="cards-container">
+    <div className="storybook__container-cards">
       <Card
         tags={['Etiqueta 1', 'Etiqueta 2']}
         title={title}
@@ -219,7 +219,7 @@ export const SimpleEventCard = (): JSX.Element => {
     </>
   );
   return (
-    <div className="cards-container">
+    <div className="storybook__container-cards">
       <Card
         title={eventTitle}
         description={eventSubtitle}
@@ -238,7 +238,7 @@ SimpleEventCard.story = { name: 'Evento simple' };
 
 export const EventCard = (): JSX.Element => {
   return (
-    <div className="cards-container">
+    <div className="storybook__container-cards">
       <a className="card" href="#">
         <div className="card-event-top">
           <img src="cards/evento-bg.jpg" className="card-event-bg" alt="descripción alternativa" />

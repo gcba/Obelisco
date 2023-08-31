@@ -5,9 +5,16 @@ interface CollapseProps {
   identifier: string;
   description?: string;
   content?: React.ReactNode;
+  isOnlySelect?: boolean;
 }
 
-export const Collapse: React.FC<CollapseProps> = ({ children, description, identifier, content }): JSX.Element => {
+export const Collapse: React.FC<CollapseProps> = ({
+  children,
+  description,
+  identifier,
+  content,
+  isOnlySelect
+}): JSX.Element => {
   const collapseClass = classNames({
     'card-header collapsed card-link': true,
     'card-info': !!content
@@ -18,7 +25,7 @@ export const Collapse: React.FC<CollapseProps> = ({ children, description, ident
       <button className={collapseClass} data-toggle="collapse" data-target={'#' + identifier}>
         {children}
       </button>
-      <div id={identifier} className="collapse" data-parent="#accordion">
+      <div id={identifier} className="collapse" {...(isOnlySelect ? { 'data-parent': '#accordionExample' } : {})}>
         {content ?? <div className="card-body">{description}</div>}
       </div>
     </div>

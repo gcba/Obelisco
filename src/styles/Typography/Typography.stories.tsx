@@ -80,7 +80,7 @@ Transformations.story = {
 
 export const Quote = (): JSX.Element => {
   return (
-    <div className="bloquote-wrapper">
+    <div className="storybook__container-bloquote">
       <blockquote>
         <p>
           Este es un apartado del texto que se quiere destacar por su importancia dentro del contenido de la página.

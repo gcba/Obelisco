@@ -18,8 +18,8 @@ export default {
 
 export const Tooltip = (): JSX.Element => {
   return (
-    <div className="tooltip-container">
-      <div className="tooltip-row">
+    <div className="storybook__container-tooltip">
+      <div className="storybook__container-tooltip-row">
         {directionTop.map(({ direction, icon, position }, index) => (
           <TooltipContainer
             key={index}
@@ -29,8 +29,8 @@ export const Tooltip = (): JSX.Element => {
           </TooltipContainer>
         ))}
       </div>
-      <div className="tooltip-row">
-        <div className="tooltip-column left">
+      <div className="storybook__container-tooltip-row">
+        <div className="storybook__container-tooltip-column left">
           {directionLeft.map(({ direction, icon, position }, index) => (
             <TooltipContainer
               key={index}
@@ -40,7 +40,7 @@ export const Tooltip = (): JSX.Element => {
             </TooltipContainer>
           ))}
         </div>
-        <div className="tooltip-column right">
+        <div className="storybook__container-tooltip-column right">
           {directionRight.map(({ direction, icon, position }, index) => (
             <TooltipContainer
               key={index}
@@ -51,7 +51,7 @@ export const Tooltip = (): JSX.Element => {
           ))}
         </div>
       </div>
-      <div className="tooltip-row">
+      <div className="storybook__container-tooltip-row">
         {directionBottom.map(({ direction, icon, position }, index) => (
           <TooltipContainer
             key={index}
@@ -65,7 +65,7 @@ export const Tooltip = (): JSX.Element => {
       <br />
       <br />
 
-      <div className="tooltip-row">
+      <div className="storybook__container-tooltip-row">
         {directionTop.map(({ direction, position }, index) => (
           <TooltipContainer
             key={index}
@@ -76,8 +76,8 @@ export const Tooltip = (): JSX.Element => {
           </TooltipContainer>
         ))}
       </div>
-      <div className="tooltip-row">
-        <div className="tooltip-column left">
+      <div className="storybook__container-tooltip-row">
+        <div className="storybook__container-tooltip-column left">
           {directionLeft.map(({ direction, position }, index) => (
             <TooltipContainer
               key={index}
@@ -88,7 +88,7 @@ export const Tooltip = (): JSX.Element => {
             </TooltipContainer>
           ))}
         </div>
-        <div className="tooltip-column right">
+        <div className="storybook__container-tooltip-column right">
           {directionRight.map(({ direction, position }, index) => (
             <TooltipContainer
               key={index}
@@ -100,7 +100,7 @@ export const Tooltip = (): JSX.Element => {
           ))}
         </div>
       </div>
-      <div className="tooltip-row">
+      <div className="storybook__container-tooltip-row">
         {directionBottom.map(({ direction, position }, index) => (
           <TooltipContainer
             key={index}

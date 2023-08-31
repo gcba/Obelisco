@@ -1,6 +1,5 @@
 // Base
 import React from 'react';
-import './Link.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -26,22 +25,20 @@ export const Predeterminado = (): JSX.Element => {
 
 export const Externo = (): JSX.Element => {
   return (
-    <div>
-      <p>
-        Nuestro sistema de{' '}
-        <a className="external" href="#" target="_blank" rel="noreferrer">
-          enlace externo
-        </a>{' '}
-        brinda un conjunto de herramientas y componentes colaborativos y accesibles que define procesos para que los
-        equipos internos y externos puedan trabajar alineadamente.
-      </p>
-    </div>
+    <p>
+      Nuestro sistema de{' '}
+      <a className="external" href="#" target="_blank" rel="noreferrer">
+        enlace externo
+      </a>{' '}
+      brinda un conjunto de herramientas y componentes colaborativos y accesibles que define procesos para que los
+      equipos internos y externos puedan trabajar alineadamente.
+    </p>
   );
 };
 
 export const Descarga = (): JSX.Element => {
   return (
-    <div>
+    <>
       <p>
         Nuestro sistema de{' '}
         <a className="download" href="#" target="_blank" rel="noreferrer">
@@ -56,21 +53,19 @@ export const Descarga = (): JSX.Element => {
       <a className="btn btn-secondary btn-sm download-link" href="#" target="_blank" rel="noreferrer">
         Descargar
       </a>
-    </div>
+    </>
   );
 };
 
 export const Acceso = (): JSX.Element => {
   return (
-    <div>
-      <p>
-        Nuestro sistema de{' '}
-        <a className="access" href="#" target="_blank" rel="noreferrer">
-          enlace de acceso
-        </a>{' '}
-        brinda un conjunto de herramientas y componentes colaborativos y accesibles que define procesos para que los
-        equipos internos y externos puedan trabajar alineadamente.
-      </p>
-    </div>
+    <p>
+      Nuestro sistema de{' '}
+      <a className="access" href="#" target="_blank" rel="noreferrer">
+        enlace de acceso
+      </a>{' '}
+      brinda un conjunto de herramientas y componentes colaborativos y accesibles que define procesos para que los
+      equipos internos y externos puedan trabajar alineadamente.
+    </p>
   );
 };

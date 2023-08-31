@@ -27,7 +27,7 @@ const LIST = [
 ];
 
 export const StatusSuccess = (): JSX.Element => (
-  <div className="status-container">
+  <div className="storybook__container-status">
     <StatusMessage
       title="Esto es un título de un mensaje de éxito"
       type="success"
@@ -42,7 +42,7 @@ StatusSuccess.story = {
 };
 
 export const StatusWarning = (): JSX.Element => (
-  <div className="status-container">
+  <div className="storybook__container-status">
     <StatusMessage
       title="Esto es un título de un mensaje de advertencia"
       type="primary"
@@ -58,7 +58,7 @@ StatusWarning.story = {
 };
 
 export const StatusInfo = (): JSX.Element => (
-  <div className="status-container">
+  <div className="storybook__container-status">
     <StatusMessage
       title="Esto es un título de un mensaje de información"
       type="info"
@@ -75,7 +75,7 @@ StatusInfo.story = {
 };
 
 export const StatusDanger = (): JSX.Element => (
-  <div className="status-container">
+  <div className="storybook__container-status">
     <StatusMessage
       title="Esto es un título de un mensaje de peligro"
       type="danger"
@@ -91,7 +91,7 @@ StatusDanger.story = {
 };
 
 export const StatusInstitutional = (): JSX.Element => (
-  <div className="status-container-institutional">
+  <div className="storybook__container-status-institutional">
     <StatusMessage
       title="Este es un mensaje institucional del Gobierno de la Ciudad de Buenos Aires"
       type="institutional"

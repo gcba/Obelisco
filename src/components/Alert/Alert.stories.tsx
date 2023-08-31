@@ -17,7 +17,7 @@ export default {
 
 export const Simple = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <Alert arrayAlerts={alertTypes} />
     </div>
   );
@@ -25,7 +25,7 @@ export const Simple = (): JSX.Element => {
 
 export const SimpleClose = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <Alert arrayAlerts={alertTypes} isDismissible />
     </div>
   );
@@ -37,7 +37,7 @@ SimpleClose.story = {
 
 export const SimpleHighlight = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <Alert arrayAlerts={alertHighlight} />
     </div>
   );
@@ -49,7 +49,7 @@ SimpleHighlight.story = {
 
 export const SimpleHiperlink = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <Alert arrayAlerts={alertLink} />
     </div>
   );
@@ -61,7 +61,7 @@ SimpleHiperlink.story = {
 
 export const ListLinksExample = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <ListLinks
         type="danger"
         text="<strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que continua al texto destacado."
@@ -76,7 +76,7 @@ ListLinksExample.story = { name: 'Con lista de enlaces' };
 
 export const List = (): JSX.Element => {
   return (
-    <div className="alert-wrapper">
+    <div className="storybook__container-alert">
       <ListLinks
         type="info"
         text="<strong>Este es un destacado de una alerta de información.</strong> Esta es la descripción de una alerta de información que continua al texto destacado."

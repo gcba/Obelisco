@@ -12,7 +12,7 @@ export default {
 
 export const ListaDeSeleccion = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="lista-de-seleccion">Nombre del selector *</label>
         <select className="custom-select" id="lista-de-seleccion">
@@ -31,7 +31,7 @@ ListaDeSeleccion.story = { name: 'Lista de selección' };
 
 export const Deshabilitado = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="lista-de-seleccion">Nombre del selector *</label>
         <select className="custom-select" id="lista-de-seleccion" disabled>
@@ -45,7 +45,7 @@ export const Deshabilitado = (): JSX.Element => {
 
 export const Validacion = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="lista-de-seleccion">Nombre del selector *</label>
         <select className="custom-select is-valid" id="lista-de-seleccion">

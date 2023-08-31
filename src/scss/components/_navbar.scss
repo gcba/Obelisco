@@ -1,6 +1,6 @@
 /* === Variable and mixins overides === */
 
-$navbar-padding-y: spaceUnits(2);
+$navbar-padding-y: spaceUnits(3);
 $navbar-padding-y-desktop: spaceUnits(4.5);
 $navbar-brand-padding-y: 0;
 
@@ -21,7 +21,7 @@ $navbar-btn-icon-height: 40px;
 
 @mixin responsive {
   height: auto;
-  justify-content: end;
+  justify-content: flex-end;
 
   .navbar-btn-search.multi-collapse.collapsing,
   .bx.bx-left-arrow-alt.multi-collapse.collapsing {
@@ -210,8 +210,9 @@ $navbar-btn-icon-height: 40px;
           max-height: $navbar-btn-icon-width;
           height: $navbar-btn-icon-width;
           display: flex;
-          justify-content: end;
+          justify-content: flex-end;
           align-items: center;
+          width: 100%;
 
           &.notifications {
             i {
@@ -440,7 +441,7 @@ $navbar-btn-icon-height: 40px;
 
   .navbar-collapse {
     .nav {
-      justify-content: end;
+      justify-content: flex-end;
     }
 
     @include media-breakpoint-down(sm) {
@@ -535,13 +536,9 @@ $navbar-btn-icon-height: 40px;
     }
   }
 
-  #navbarBrand {
-    @include media-breakpoint-up(md) {
-      display: block;
-    }
-  }
-
-  #navbarToggler {
+  .navbar-brand.collapse.multi-collapse,
+  .collapse.multi-collapse:has(.form-search),
+  .collapse.multi-collapse:has(.navbar-toggler) {
     @include media-breakpoint-up(md) {
       .navbar-toggler {
         margin-right: 0px !important;
@@ -552,15 +549,9 @@ $navbar-btn-icon-height: 40px;
     }
   }
 
-  #navbarTogglerBack {
+  .navbar-btn-search .navbar-toggler.btn-icon {
     @include media-breakpoint-up(md) {
       display: none;
-    }
-  }
-
-  #navbarSearch {
-    @include media-breakpoint-up(md) {
-      display: block;
     }
   }
 

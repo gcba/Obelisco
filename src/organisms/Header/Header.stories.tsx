@@ -26,7 +26,7 @@ export const HeaderNoLogin = (): JSX.Element => {
               data-toggle="collapse"
               data-target=".multi-collapse"
               aria-expanded="false"
-              aria-controls="navbarBrand navbarToggler icon-search icon-close">
+              aria-controls="navbarBrand navbarToggler">
               <i className="bx bx-search collapse multi-collapse show"></i>
               <i className="bx bx-left-arrow-alt collapse multi-collapse"></i>
             </button>
@@ -116,7 +116,7 @@ export const HeaderLogin = (): JSX.Element => {
               data-toggle="collapse"
               data-target=".multi-collapse"
               aria-expanded="false"
-              aria-controls="navbarBrand navbarToggler icon-search icon-close">
+              aria-controls="navbarBrand navbarToggler">
               <i className="bx bx-search collapse multi-collapse show"></i>
               <i className="bx bx-left-arrow-alt collapse multi-collapse"></i>
             </button>

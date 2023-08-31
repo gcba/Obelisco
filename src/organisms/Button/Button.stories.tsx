@@ -13,7 +13,7 @@ export default {
 
 export const ButtonBox = (): JSX.Element => {
   return (
-    <div className="btn-container">
+    <div className="storybook__container-btn-organisms">
       <div className="card">
         <div className="card-body">
           <button type="button" className="btn btn-primary btn-block btn-sm">
@@ -43,7 +43,7 @@ ButtonBox.story = { name: 'Con botón' };
 
 export const ButtonBoxLink = (): JSX.Element => {
   return (
-    <div className="btn-container">
+    <div className="storybook__container-btn-organisms">
       <div className="card">
         <div className="card-body">
           <a className="btn btn-primary btn-block btn-sm" href="#" target="_blank">

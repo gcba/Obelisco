@@ -13,7 +13,7 @@ export default {
 
 export const SubirUnArchivo = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="file-input">Adjuntar un archivo de ejemplo</label>
         <input type="file" className="form-control-file" id="file-input" />

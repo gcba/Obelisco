@@ -1,21 +1,21 @@
-.tooltip-container {
+.storybook__container-tooltip {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 5rem 0;
 
-  .tooltip-row {
+  .storybook__container-tooltip-row {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 16px;
     margin-bottom: 1rem;
 
-    &:has(.tooltip-column) {
+    &:has(.storybook__container-tooltip-column) {
       flex-direction: column;
     }
 
-    .tooltip-column {
+    .storybook__container-tooltip-column {
       width: 100%;
       display: flex;
       justify-content: center;
@@ -25,11 +25,11 @@
 }
 
 @media screen and (max-width: 975.98px) {
-  .tooltip-container {
+  .storybook__container-tooltip {
     padding: 10rem 0;
 
-    .tooltip-row {
-      &:has(.tooltip-column) {
+    .storybook__container-tooltip-row {
+      &:has(.storybook__container-tooltip-column) {
         flex-direction: row;
       }
 

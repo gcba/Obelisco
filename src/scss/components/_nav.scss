@@ -400,12 +400,15 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0 2.5rem 0 2rem;
+  padding: 0;
+
+  &:has(.icons-container) {
+    padding: 0 2.5rem;
+  }
 
   .nav {
     width: fit-content;
     overflow-x: hidden;
-    margin-left: 0.625rem;
 
     &.fixedWidth {
       .nav-item > .nav-link {
@@ -429,6 +432,8 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    padding: 0;
+    border: none;
 
     > span {
       font-size: 16px;
