@@ -35,6 +35,7 @@ a {
   word-break: break-word;
   display: inline-block;
   width: fit-content;
+  text-decoration-thickness: 1px;
 
   &:visited {
     color: $link-visited-color;
@@ -42,6 +43,7 @@ a {
 
   @include hover() {
     color: $link-active-color;
+    text-decoration-thickness: 1px;
   }
 
   &:focus {
