@@ -11,7 +11,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const Audio = (): JSX.Element => {
+/* export const Audio = (): JSX.Element => {
   return (
     <div className="storybook__container-audio">
       <audio controls>
@@ -80,7 +80,7 @@ export const ConContenedor = (): JSX.Element => {
 
 ConContenedor.story = {
   name: 'Con contenedor'
-};
+}; */
 
 /*
 export const ContainerNews = (): JSX.Element => {

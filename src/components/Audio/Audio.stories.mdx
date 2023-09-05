@@ -1,0 +1,24 @@
+import React from 'react';
+import { mdx } from '@mdx-js/react';
+
+## test
+
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Checkbox } from './Checkbox';
+
+<Meta title="MDX/Checkbox" component={Checkbox} />
+
+# Checkbox
+
+With `MDX` we can define a story for `Checkbox` right in the middle of our
+markdown documentation.
+
+<Preview>
+  <Story name="all checkboxes">
+    <form>
+      <Checkbox id="Unchecked" label="Unchecked" />
+      <Checkbox id="Checked" label="Checked" checked />
+      <Checkbox appearance="secondary" id="second" label="Secondary" checked />
+    </form>
+  </Story>
+</Preview>
