@@ -58,6 +58,7 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/spinner';
 @import 'components/panel';
 @import 'components/banner';
+@import 'components/list-link';
 
 // Custom styles
 @import 'utilities/overflowCustom';
