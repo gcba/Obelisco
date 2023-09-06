@@ -1,3 +1,21 @@
-.dropdown-container {
-  width: 244px;
+.storybook__container-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  &-position {
+    @extend .storybook__container-dropdown;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media (max-width: 751.98px) {
+      .dropdown:nth-child(2) {
+        margin-left: auto;
+      }
+    }
+  }
 }

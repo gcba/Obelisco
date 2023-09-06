@@ -27,12 +27,12 @@ export const Instalacion = (): JSX.Element => (
         />
       </p>
       <p>
-        Obelisco es el nuevo sistema de diseño basado en componentes para los productos digitales de la ciudad de Buenos
-        Aires. Fue creado para reemplazar <a href="https://github.com/gcba/bastrap">BAstrap</a>.
+        Sistema de diseño basado en componentes para productos digitales de la Ciudad de Buenos Aires. Diseñado para
+        sustituir a <a href="https://github.com/gcba/bastrap">BAstrap</a>, brindando una mejor experiencia de usuario.
       </p>
       {/* VER DOCUMENTACION */}
       <h2>
-        <a href="https://gcba.github.io/estandares/componentes/web/">Ver la documentación de componentes</a>.
+        <a href="https://gcba.github.io/estandares/componentes/acceso/">Ver la documentación de componentes</a>.
       </h2>
       <br />
 
@@ -137,7 +137,7 @@ export const Instalacion = (): JSX.Element => (
       <p>Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:</p>
       <pre className="code-box">
         <code>
-          &lt;link href=&quot;https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+          &lt;link href=&quot;https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
           <br />
           &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons+Round&quot;
           rel=&quot;stylesheet&quot;&gt;

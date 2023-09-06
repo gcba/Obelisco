@@ -97,7 +97,7 @@ export const Deshabilitado = (): JSX.Element => {
 export const BotonRadio = (): JSX.Element => {
   return (
     <>
-      <div className="btn-wrapper" data-toggle="buttons">
+      <div className="storybook__container-btn" data-toggle="buttons">
         <label className="btn btn-chip btn-sm">
           <input type="radio" name="options1" id="option1" className="btn-check"></input>
           Botón

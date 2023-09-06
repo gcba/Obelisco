@@ -13,7 +13,7 @@ export default {
 
 export const Texto = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="name-input">Nombre *</label>
         <input type="text" className="form-control" id="name-input" name="name" placeholder="Ejemplo: Camila" />
@@ -24,7 +24,7 @@ export const Texto = (): JSX.Element => {
 
 export const Numero = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="number-input">Campo numérico *</label>
         <input type="number" className="form-control" id="number-input" name="number" value="30" />
@@ -37,7 +37,7 @@ Numero.story = { name: 'Número' };
 
 export const CorreoElectronico = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="email-input">Correo electrónico</label>
         <span id="email-help" className="form-text">
@@ -60,7 +60,7 @@ CorreoElectronico.story = { name: 'Correo electrónico' };
 
 export const Fecha = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="date-input">Fecha</label>
         <span id="date-help" className="form-text">
@@ -74,7 +74,7 @@ export const Fecha = (): JSX.Element => {
 
 export const BloqueDeTexto = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="text-area">Bloque de texto</label>
         <textarea className="form-control" id="text-area" rows={3}></textarea>
@@ -87,7 +87,7 @@ BloqueDeTexto.story = { name: 'Bloque de texto' };
 
 export const Deshabilitado = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group disabled">
         <label htmlFor="name-input">Nombre</label>
         <input type="text" className="form-control" id="name-input" name="name" value="Camila" disabled />

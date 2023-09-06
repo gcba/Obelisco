@@ -14,10 +14,10 @@ export default {
 export const HeaderNoLoginSearch = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light">
+      <header className="navbar navbar-light navbar-md">
         <div className="container">
           <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/LogoBA.svg" alt="Ciudad de Buenos Aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
           </a>
           <button
             className="navbar-toggler collapsed"
@@ -31,12 +31,12 @@ export const HeaderNoLoginSearch = (): JSX.Element => {
             <ul className="nav nav-pills">
               <li className="nav-item">
                 <a href="#" className="nav-link active">
-                  <span>Inicio</span>
+                  <span>Sección 1</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a href="#" className="nav-link">
-                  <span>Chateá con BOTI</span>
+                  <span>Sección 2</span>
                 </a>
               </li>
               <li className="nav-item">
@@ -62,51 +62,50 @@ export const HeaderLoginSearch = (): JSX.Element => {
       <header className="navbar navbar-light navbar-md">
         <div className="container">
           <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/LogoBA.svg" alt="Ciudad de Buenos Aires" />
+            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
           </a>
           <button
-            className="navbar-toggler collapsed ml-auto"
+            className="navbar-toggler collapsed"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="list-group-content d-responsive ml-2">
-            <a href="#" aria-label="Cerrar sesión" className="list-group-item list-group-item-logout logout-sm">
-              &nbsp;
-            </a>
-          </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="nav nav-pills">
               <li className="nav-item">
                 <a href="#" className="nav-link active">
-                  <span>Inicio</span>
+                  <span>Sección 1</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a href="#" className="nav-link">
-                  <span>Chateá con BOTI</span>
+                  <span>Sección 2</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a href="#" className="nav-link">
-                  <span>Mi actividad</span>
+                  <span>Sección 3</span>
                 </a>
               </li>
               <li className="nav-item">
                 <a href="#" className="nav-link">
-                  <span>Mi cuenta</span>
+                  <span>Sección 4</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#" aria-label="Notificaciones" className="nav-link">
-                  <i className="bx bxs-bell"></i>
+                <a href="#" aria-label="Notificaciones" className="nav-link notifications">
+                  <span className="material-icons-round">notifications</span>
+                  <span>Notificaciones</span>
                 </a>
               </li>
-              <li className="nav-item d-responsive">
+              <li className="nav-item d-responsive-logout">
                 <a href="#" aria-label="Cerrar sesión" className="list-group-item list-group-item-logout logout-sm">
                   &nbsp;
+                </a>
+                <a href="#" aria-label="Cerrar sesión" className=" list-group-item-logout logout-sm logout">
+                  <span>Cerrar sesión</span>
                 </a>
               </li>
             </ul>

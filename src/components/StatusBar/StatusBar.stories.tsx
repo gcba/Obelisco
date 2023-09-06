@@ -14,7 +14,7 @@ export default {
 
 
 export const Colapsado = (): JSX.Element => (
-  <div className="progression-container">
+  <div className="storybook_container-progression">
     <ul className="progression">
       <li className="progression-item completed" aria-expanded="false">
         <p className="progression-title">Estado anterior</p>
@@ -47,7 +47,7 @@ export const Colapsado = (): JSX.Element => (
 );
 
 export const ConDetalles = (): JSX.Element => (
-  <div className="progression-container">
+  <div className="storybook_container-progression">
     <ul className="progression expanded">
       <li className="progression-item completed" aria-expanded="true">
         <p className="progression-title">Estado anterior</p>

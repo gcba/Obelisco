@@ -18,7 +18,7 @@ export default {
 
 export const ButtonFocus = (): JSX.Element => {
   return (
-    <div className="btn-wrapper">
+    <div className="storybook__container-btn">
       {buttonTypes.map((item) => (
         <Button key={item.type} type={item.type} className="focus">
           {item.name}
@@ -34,7 +34,7 @@ ButtonFocus.story = { name: 'Con foco' };
 
 export const ButtonActive = (): JSX.Element => {
   return (
-    <div className="btn-wrapper">
+    <div className="storybook__container-btn">
       {buttonTypes.map((item) => (
         <Button key={item.type} type={item.type} className="active">
           {item.name}
@@ -50,7 +50,7 @@ ButtonActive.story = { name: 'Activos' };
 
 export const ButtonDisabled = (): JSX.Element => {
   return (
-    <div className="btn-wrapper">
+    <div className="storybook__container-btn">
       {sizesButton.map((item) => (
         <Button key={item.size} type="secondary" isDisabled size={item.size}>
           {item.name}

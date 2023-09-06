@@ -159,6 +159,7 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 .card {
   box-shadow: $card-box-shadow;
+  width: 100%;
 
   .card-body {
     padding: $card-spacer;

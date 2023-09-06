@@ -36,7 +36,7 @@ Default.story = { name: 'Predeterminado' };
 export const Types = (): JSX.Element => {
   return (
     <>
-      <div className="btn-wrapper">
+      <div className="storybook__container-btn">
         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
           Modal de confirmación
         </button>

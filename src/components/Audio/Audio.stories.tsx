@@ -13,7 +13,7 @@ export default {
 
 export const Audio = (): JSX.Element => {
   return (
-    <div className="audio-container">
+    <div className="storybook__container-audio">
       <audio controls>
         <source
           src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-61905/zapsplat_multimedia_alert_chime_short_musical_notification_cute_child_like_001_64918.mp3?_=1"
@@ -28,7 +28,7 @@ export const Audio = (): JSX.Element => {
 export const ConContenedor = (): JSX.Element => {
   return (
     <>
-      <div className="cards-container">
+      <div className="storybook__container-cards">
         <div className="card">
           <div className="card-body">
             <h4 className="card-title">Título de contenedor</h4>
@@ -46,7 +46,7 @@ export const ConContenedor = (): JSX.Element => {
         </div>
       </div>
       <br />
-      <div className="cards-container">
+      <div className="storybook__container-cards">
         <div className="card">
           <div className="card-body">
             <h4 className="card-title">Título de contenedor</h4>
@@ -61,7 +61,7 @@ export const ConContenedor = (): JSX.Element => {
         </div>
       </div>
       <br />
-      <div className="cards-container">
+      <div className="storybook__container-cards">
         <div className="card">
           <div className="card-body">
             <audio className="audio-sm" controls>
@@ -85,7 +85,7 @@ ConContenedor.story = {
 /*
 export const ContainerNews = (): JSX.Element => {
   return (
-    <div className="cards-container">
+    <div className="storybook__container-cards">
       <a className="card" href="#">
         <img src="cards/evento.jpg" className="card-img-top" alt="descripción alternativa" />
         <audio className="audio-event" controls>

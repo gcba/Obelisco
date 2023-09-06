@@ -28,7 +28,7 @@ export default {
 /* Con Imagen | Video y 2 botones */
 export const VerticalPanelButtons = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-vertical">
+    <div className="storybook__container-panel-vertical">
       <LargePanel
         direction={'vertical'}
         title={TITLE}
@@ -45,7 +45,7 @@ VerticalPanelButtons.story = { name: 'Con dos botones' };
 /* Con Imagen | Video y 1 boton */
 export const VerticalPanelButton = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-vertical">
+    <div className="storybook__container-panel-vertical">
       <LargePanel
         direction={'vertical'}
         title={TITLE}
@@ -62,7 +62,7 @@ VerticalPanelButton.story = { name: 'Con un botón' };
 /* Con Imagen | Video y enlace */
 export const VerticalPanelLink = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-vertical">
+    <div className="storybook__container-panel-vertical">
       <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} picture={PICTURE} link={LINK} />
       <LargePanel direction={'vertical'} title={TITLE} description={DESCRIPTION} video={VIDEO} link={LINK} />
     </div>
@@ -73,7 +73,7 @@ VerticalPanelLink.story = { name: 'Con enlace' };
 /* Con Imagen | Video y enlace de descarga */
 export const VerticalPanelLinkDownload = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-vertical">
+    <div className="storybook__container-panel-vertical">
       <LargePanel
         direction={'vertical'}
         title={TITLE}
@@ -90,7 +90,7 @@ VerticalPanelLinkDownload.story = { name: 'Con enlace de descarga' };
 /* Con Imagen | Video y boton de descarga */
 export const VerticalPanelLinkButtonDownload = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-vertical">
+    <div className="storybook__container-panel-vertical">
       <LargePanel
         direction={'vertical'}
         title={TITLE}
@@ -113,7 +113,7 @@ VerticalPanelLinkButtonDownload.story = { name: 'Con botón de descarga' };
 /* Con fondo bris y blanco*/
 export const VerticalPanelBackground = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-vertical">
+    <div className="storybook__container-panel-vertical">
       <LargePanel
         direction={'vertical'}
         title={TITLE}

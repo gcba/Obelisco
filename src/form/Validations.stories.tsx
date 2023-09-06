@@ -13,7 +13,7 @@ export default {
 
 export const Valido = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="name-input">Nombre</label>
         <input type="text" className="form-control is-valid" id="name-input" name="name" value="Camila" required />
@@ -28,7 +28,7 @@ Valido.story = { name: 'Válido' };
 
 export const Invalido = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <div className="form-group">
         <label htmlFor="name-input">Nombre</label>
         <input type="text" className="form-control is-invalid" id="name-input" name="name" required />

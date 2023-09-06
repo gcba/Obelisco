@@ -13,7 +13,7 @@ export default {
 
 export const Texto = (): JSX.Element => {
   return (
-    <div className="form-wrapper bg-light p-4">
+    <div className="storybook__container-form bg-light p-4">
       <div className="form-group">
         <label htmlFor="name-input">Nombre</label>
         <input type="text" className="form-control" id="name-input" name="name" placeholder="Ejemplo: Camila" />
@@ -24,7 +24,7 @@ export const Texto = (): JSX.Element => {
 
 export const ListaDeSeleccion = (): JSX.Element => {
   return (
-    <div className="form-wrapper bg-light p-4">
+    <div className="storybook__container-form bg-light p-4">
       <div className="form-group">
         <label htmlFor="lista-de-seleccion">Nombre del selector</label>
         <select className="custom-select" id="lista-de-seleccion">
@@ -40,7 +40,7 @@ ListaDeSeleccion.story = { name: 'Lista de selección' };
 
 export const BloqueDeTexto = (): JSX.Element => {
   return (
-    <div className="form-wrapper bg-light p-4">
+    <div className="storybook__container-form bg-light p-4">
       <div className="form-group">
         <label htmlFor="text-area">Bloque de texto</label>
         <textarea className="form-control" id="text-area" rows={3}></textarea>
@@ -53,7 +53,7 @@ BloqueDeTexto.story = { name: 'Bloque de texto' };
 
 export const CasillaDeSeleccion = (): JSX.Element => {
   return (
-    <div className="form-wrapper bg-light p-4">
+    <div className="storybook__container-form bg-light p-4">
       <div className="custom-control custom-checkbox">
         <input
           className="custom-control-input"

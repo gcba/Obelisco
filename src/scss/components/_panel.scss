@@ -285,6 +285,7 @@ $panel-deck-card-mr: 2rem;
 
       .card-link {
         display: block;
+        width: fit-content;
         margin: 0 0 spaceUnits(4) 0;
         &:last-child {
           margin-bottom: 0;

@@ -27,7 +27,7 @@ export default {
 
 export const SmallPanelVerticalWithoutAccion = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-small">
+    <div className="storybook__container-panel-small">
       <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} />
     </div>
   );
@@ -36,7 +36,7 @@ SmallPanelVerticalWithoutAccion.story = { name: 'Sin accionable' };
 
 export const SmallPanelVerticalButtons = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-small">
+    <div className="storybook__container-panel-small">
       <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} buttons={SMALL_BUTTONS_ARR} />
     </div>
   );
@@ -45,7 +45,7 @@ SmallPanelVerticalButtons.story = { name: 'Con botones' };
 
 export const SmallPanelVerticalLink = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-small">
+    <div className="storybook__container-panel-small">
       <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} link={LINK} />
     </div>
   );
@@ -54,7 +54,7 @@ SmallPanelVerticalLink.story = { name: 'Con enlace' };
 
 export const SmallPanelVerticalLinkDownload = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-small">
+    <div className="storybook__container-panel-small">
       <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} link={SMALL_LINK_DOWNLOAD} />
     </div>
   );
@@ -63,7 +63,7 @@ SmallPanelVerticalLinkDownload.story = { name: 'Con enlace de descarga' };
 
 export const SmallPanelVerticalListLink = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-small">
+    <div className="storybook__container-panel-small">
       <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} listLinkPanel={LINK_LIST} />
     </div>
   );
@@ -72,7 +72,7 @@ SmallPanelVerticalListLink.story = { name: 'Con lista de enlaces' };
 
 export const SmallPanelVerticalListLinkDownload = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-small">
+    <div className="storybook__container-panel-small">
       <SmallPanel title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} listLinkPanel={LINK_DOWNLOAD_LIST} />
     </div>
   );
@@ -81,7 +81,7 @@ SmallPanelVerticalListLinkDownload.story = { name: 'Con lista de enlaces de desc
 
 export const SmallPanelVerticalListDownloadButton = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-small">
+    <div className="storybook__container-panel-small">
       <SmallPanel
         title={TITLE}
         description={DESCRIPTION}
@@ -95,7 +95,7 @@ SmallPanelVerticalListDownloadButton.story = { name: 'Con lista de botón de des
 
 export const SmallPanelVerticalBackground = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-small">
+    <div className="storybook__container-panel-small">
       {/* Grisulado */}
       <SmallPanel
         title={TITLE}

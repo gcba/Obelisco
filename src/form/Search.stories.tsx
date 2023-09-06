@@ -13,7 +13,7 @@ export default {
 
 export const Buscador = (): JSX.Element => {
   return (
-    <div className="form-wrapper">
+    <div className="storybook__container-form">
       <form className="form-search">
         <div className="form-group">
           <input

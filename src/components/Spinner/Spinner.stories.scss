@@ -1,14 +1,12 @@
-.spinner {
-  &-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3rem;
+.storybook__container-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 
-    &:has(.spinner-block) {
-      width: 2.5rem;
-      margin: auto;
-    }
+  &:has(.spinner-block) {
+    width: 2.5rem;
+    margin: auto;
   }
 }

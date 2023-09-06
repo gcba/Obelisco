@@ -1,13 +1,13 @@
-.nav-container {
+.storybook__container-nav {
   width: 100%;
   max-width: 360px;
 }
 
-.nav-tab-container {
+.storybook__container-nav-tab {
   max-width: 550px;
 }
 
-.wrapper-bg {
+.storybook__container-bg {
   background-color: #f3f6f9;
   padding: 2.5rem;
   max-width: 720px;
@@ -17,6 +17,6 @@
   }
 }
 
-.wrapper-tabs {
+.storybook__container-tabs {
   max-width: 720px;
 }

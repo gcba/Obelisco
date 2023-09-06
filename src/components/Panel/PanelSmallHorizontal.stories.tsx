@@ -17,7 +17,7 @@ export default {
 
 export const SmallPanelHorizontalColors = (): JSX.Element => {
   return (
-    <div className="storybook__wrapper-small-horizontal">
+    <div className="storybook__container-panel-small-horizontal">
       {/* Mediana */}
       <SmallPanel direction="horizontal" title={TITLE} description={DESCRIPTION} picture={SMALL_PICTURE} />
       {/* Chica */}

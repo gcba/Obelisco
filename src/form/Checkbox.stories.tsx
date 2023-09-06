@@ -111,7 +111,7 @@ export const Deshabilitado = (): JSX.Element => {
 
 export const BotonCheck = (): JSX.Element => {
   return (
-    <div className="btn-wrapper">
+    <div className="storybook__container-btn">
       <input type="checkbox" className="btn-check" id="btn-check" autoComplete="off" />
       <label className="btn btn-chip btn-sm" htmlFor="btn-check">
         Botón

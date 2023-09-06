@@ -47,7 +47,6 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/modal';
 @import 'components/nav';
 @import 'components/navbar';
-@import 'components/options';
 @import 'components/pagination';
 @import 'components/list-steps';
 @import 'components/progression';
@@ -59,3 +58,7 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/status-message';
 @import 'components/spinner';
 @import 'components/panel';
+@import 'components/banner';
+
+// Custom styles
+@import 'utilities/overflowCustom';

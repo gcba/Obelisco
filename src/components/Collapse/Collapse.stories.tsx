@@ -11,26 +11,21 @@ export default {
   decorators: [withA11y]
 };
 
+const COLLAPSE_DESCRIPTION =
+  'Esta es la descripción que se encuentra dentro de un colapsable. Recomendamos no utilizar demasiado texto, para generar una lectura óptima.';
+
 export const CollapseUniqueSelection = (): JSX.Element => (
-  <div id="accordion">
-    <div className="accordion-wrapper">
-      <div className="accordion" id="accordionExample">
-        <Collapse
-          description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
-          identifier="collapseOne">
-          Título
-        </Collapse>
-        <Collapse
-          description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
-          identifier="collapseTwo">
-          Título
-        </Collapse>
-        <Collapse
-          description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
-          identifier="collapseThree">
-          Título
-        </Collapse>
-      </div>
+  <div className="storybook__container-accordion">
+    <div className="accordion" id="accordionExample">
+      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne" isOnlySelect={true}>
+        Título
+      </Collapse>
+      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseTwo" isOnlySelect={true}>
+        Título
+      </Collapse>
+      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseThree" isOnlySelect={true}>
+        Título
+      </Collapse>
     </div>
   </div>
 );
@@ -38,21 +33,15 @@ export const CollapseUniqueSelection = (): JSX.Element => (
 CollapseUniqueSelection.story = { name: 'Selección única' };
 
 export const CollapseMultipleSelection = (): JSX.Element => (
-  <div className="accordion-wrapper">
-    <div className="accordion" id="accordionExample">
-      <Collapse
-        description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
-        identifier="collapseOne">
+  <div className="storybook__container-accordion">
+    <div className="accordion">
+      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne">
         Título
       </Collapse>
-      <Collapse
-        description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
-        identifier="collapseTwo">
+      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseTwo">
         Título
       </Collapse>
-      <Collapse
-        description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
-        identifier="collapseThree">
+      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseThree">
         Título
       </Collapse>
     </div>
@@ -74,8 +63,8 @@ const CollapseContent = (): JSX.Element => (
 );
 
 export const CollapseInformation = (): JSX.Element => (
-  <div className="accordion-wrapper">
-    <div className="accordion" id="accordionExample">
+  <div className="storybook__container-accordion">
+    <div className="accordion">
       <Collapse identifier="collapseOne" content={<CollapseContent />}>
         <span className="collapse-label">Total a pagar</span>
         <h4 className="collapse-title">$450,00</h4>
@@ -87,15 +76,11 @@ export const CollapseInformation = (): JSX.Element => (
 CollapseInformation.story = { name: 'Con información' };
 
 export const CollapseIcon = (): JSX.Element => (
-  <div id="accordion">
-    <div className="accordion-wrapper">
-      <div className="accordion" id="accordionExample">
-        <Collapse
-          description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
-          identifier="collapseOne">
-          <i className="bx bxs-user-circle"></i> Título
-        </Collapse>
-      </div>
+  <div className="storybook__container-accordion">
+    <div className="accordion">
+      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne">
+        <i className="bx bxs-user-circle"></i> Título
+      </Collapse>
     </div>
   </div>
 );
@@ -103,18 +88,14 @@ export const CollapseIcon = (): JSX.Element => (
 CollapseIcon.story = { name: 'Con ícono' };
 
 export const CollapsableLabelIcon = (): JSX.Element => (
-  <div id="accordion">
-    <div className="accordion-wrapper">
-      <div className="accordion" id="accordionExample">
-        <Collapse
-          description="Esta es la descripción que se encuentra dentro de un colapsable. Esta es la descripción que se encuentra dentro de un colapsable."
-          identifier="collapseOne">
-          <i className="bx bxs-user-circle"></i>
-          <span className="collapse-label">Volanta</span>
-          <h4 className="collapse-title">Título</h4>
-          <span className="collapse-subtitle">Descripción</span>
-        </Collapse>
-      </div>
+  <div className="storybook__container-accordion">
+    <div className="accordion">
+      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne">
+        <i className="bx bxs-user-circle"></i>
+        <span className="collapse-label">Volanta</span>
+        <h4 className="collapse-title">Título</h4>
+        <span className="collapse-subtitle">Descripción</span>
+      </Collapse>
     </div>
   </div>
 );
@@ -152,8 +133,8 @@ const CollapseForm = (): JSX.Element => (
 );
 
 export const CollapseList = (): JSX.Element => (
-  <div className="accordion-wrapper">
-    <div className="accordion" id="accordionListExample">
+  <div className="storybook__container-accordion">
+    <div className="accordion">
       <Collapse identifier="collapseOne" content={<CollapseForm />}>
         <h4 className="collapse-title">Tarjeta de crédito / débito </h4>
         <span className="collapse-subtitle">VISA, MasterCard, AMEX, CABAL, Maestro</span>

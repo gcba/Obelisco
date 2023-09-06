@@ -63,12 +63,10 @@ $list-steps-numbers: 9;
       content: '';
       position: absolute;
       background-color: $list-steps-font-color;
-      z-index: -1;
       width: $list-steps-line-width;
-      height: 100%;
+      height: calc(100% - 24px);
       left: 0.675rem;
-      top: calc(50% + 34px);
-      transform: translate(0, calc(-50% - 24px));
+      top: $list-steps-circle-size;
     }
 
     &.list-steps-item-light {
@@ -109,8 +107,12 @@ $list-steps-numbers: 9;
       &:not(:last-child):after {
         width: $list-steps-line-width-lg;
         left: 1.12rem;
+        top: $list-steps-circle-size-lg;
+        height: calc(100% - 40px);
         @include media-breakpoint-down(xs) {
           left: 0.9rem;
+          top: $list-steps-circle-size-lg-mobile;
+          height: calc(100% - 32px);
         }
       }
     }

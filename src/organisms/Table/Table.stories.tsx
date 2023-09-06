@@ -1,5 +1,6 @@
 // Base
 import React from 'react';
+import './Table.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
@@ -166,4 +167,22 @@ const rightAligned = (content: TableCellContet) => {
     content,
     props: { className: 'text-right' }
   };
+};
+
+export const Responsive = (): JSX.Element => {
+  return (
+    <div className="storybook__container-table-responsive">
+      <div className="responsive-scroll" tabIndex={0}>
+        <Table
+          head={['#', 'Nombre', 'Apellido', 'Dirección', 'Ciudad', 'Comuna', 'Provincia']}
+          body={[
+            ['1', 'Juan', 'Alberto', 'Av. Santa Fe 1234', 'CABA', '1', 'Buenos Aires'],
+            ['2', 'María', 'Julia', 'Av. Santa Fe 1234', 'CABA', '1', 'Buenos Aires'],
+            ['3', 'Esther', 'Fermin', 'Av. Santa Fe 1234', 'CABA', '1', 'Buenos Aires']
+          ]}
+          bordered={true}
+        />
+      </div>
+    </div>
+  );
 };
