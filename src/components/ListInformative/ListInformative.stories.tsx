@@ -35,7 +35,7 @@ export const ListInformativeCheck = (): JSX.Element => {
   return (
     <div className="storybook__container-list-informative">
       <div className="list-informative">
-        <h3 className="list-informative-subtitle">Este es el subtítulo de una lista general</h3>
+        <h3 className="list-informative-subtitle">Este es el subtítulo de una lista de requisitos</h3>
         <ul className="list-informative-check">
           <li>Este es el contenido de un ítem de una lista de requisitos.</li>
           <li>Este es el contenido de un ítem de una lista de requisitos.</li>
