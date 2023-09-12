@@ -47,6 +47,7 @@ $panel-deck-card-mr: 2rem;
 @mixin panel-big-mobile {
   @include media-breakpoint-down(xs) {
     .card-body {
+      width: 100%;
       .panel-footer {
         flex-direction: column;
         .card-link,
