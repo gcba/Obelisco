@@ -140,3 +140,14 @@ export const AccessListVertical = (): JSX.Element => {
     </div>
   );
 };
+
+export const AccessDeck = (): JSX.Element => {
+  return (
+    <a href="#" className="list-group-item item-sm">
+      <span className="access-title">
+        <i className="bx bxs-info-circle"></i>
+        Acceso
+      </span>
+    </a>
+  );
+};

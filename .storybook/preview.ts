@@ -10,6 +10,8 @@ addDecorator(withHTML);
 const headers = [
   'comenzar-inicio--instalacion',
   'componentes-accesos',
+  'componentes-accesos-lista-ancho-completo',
+  'componentes-accesos-lista-ancho-por-acceso',
   'componentes-alerta',
   'componentes-audio',
   'componentes-banner',
