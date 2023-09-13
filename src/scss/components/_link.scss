@@ -24,6 +24,26 @@ $link-access: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.or
 
 /* === Custom styles === */
 
+@mixin link-icon-variant ($icon-link, $icon-margin-left, $icon-margin-right) {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.25rem;
+  margin-left: $icon-margin-left;
+  margin-right: $icon-margin-right;
+  padding-left: 1.25rem;
+  background: 0 0;
+  background-color: currentColor;
+  -webkit-mask-image: $icon-link, linear-gradient(transparent, transparent);
+  mask-image: $icon-link, linear-gradient(transparent, transparent);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 1.25rem 1.25rem;
+  mask-size: 1.25rem 1.25rem;
+}
+
 a {
   outline: none;
   color: $blue;
@@ -67,45 +87,13 @@ a {
 
   &.external {
     &::after {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      height: 1.25rem;
-      margin-left: 2px;
-      margin-left: 2px;
-      padding-left: 1.25rem;
-      background: 0 0;
-      background-color: currentColor;
-      -webkit-mask-image: $link-external-icon, linear-gradient(transparent, transparent);
-      mask-image: $link-external-icon, linear-gradient(transparent, transparent);
-      -webkit-mask-position: center center;
-      mask-position: center center;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: 1.25rem 1.25rem;
-      mask-size: 1.25rem 1.25rem;
+      @include link-icon-variant($link-external-icon, $link-margin-icon, 0);
     }
   }
 
   &.download {
-    &::after {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      height: 1.25rem;
-      margin-left: 2px;
-      margin-left: 2px;
-      padding-left: 1.25rem;
-      background: 0 0;
-      background-color: currentColor;
-      -webkit-mask-image: $link-download-icon, linear-gradient(transparent, transparent);
-      mask-image: $link-download-icon, linear-gradient(transparent, transparent);
-      -webkit-mask-position: center center;
-      mask-position: center center;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: 1.25rem 1.25rem;
-      mask-size: 1.25rem 1.25rem;
+    &::before {
+      @include link-icon-variant($link-download-icon, 0, $link-margin-icon);
     }
   }
 
@@ -129,23 +117,7 @@ a {
 
   &.access {
     &::after {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      height: 1.25rem;
-      margin-left: 2px;
-      margin-left: 2px;
-      padding-left: 1.25rem;
-      background: 0 0;
-      background-color: currentColor;
-      -webkit-mask-image: $link-access, linear-gradient(transparent, transparent);
-      mask-image: $link-access, linear-gradient(transparent, transparent);
-      -webkit-mask-position: center center;
-      mask-position: center center;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: 1.25rem 1.25rem;
-      mask-size: 1.25rem 1.25rem;
+      @include link-icon-variant($link-access, $link-margin-icon, 0);
     }
   }
 
