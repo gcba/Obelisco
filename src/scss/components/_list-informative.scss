@@ -1,0 +1,160 @@
+/* === Variable and mixins overides === */
+$list-informative-subtitule-margin-bottom: 2rem;
+$list-informative-li-padding-left: 2rem;
+$list-informative-li-icon-size: 24px;
+$list-informative-li-line-height: 24px;
+$list-informative-li-margin-bottom: 1rem;
+
+/* === Custom variables and mixins === */
+
+$list-icon-bullet: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><g clip-path="url(%23clip0_14005_218)"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="%2338485C"/></g><defs><clipPath id="clip0_14005_218"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>');
+
+$list-icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><g id="check"><path id="Vector" d="M8.79506 15.875L5.32506 12.405C4.93506 12.015 4.30506 12.015 3.91506 12.405C3.52506 12.795 3.52506 13.425 3.91506 13.815L8.09506 17.995C8.48506 18.385 9.11506 18.385 9.50506 17.995L20.0851 7.41502C20.4751 7.02502 20.4751 6.39502 20.0851 6.00502C19.6951 5.61502 19.0651 5.61502 18.6751 6.00502L8.79506 15.875Z" fill="%2338485C"/></g></svg>');
+/* === Custom styles === */
+
+.list-informative-subtitle {
+  margin-bottom: $list-informative-subtitule-margin-bottom;
+}
+
+.list-informative-bullet {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    line-height: $list-informative-li-line-height;
+    position: relative;
+    padding-left: $list-informative-li-padding-left;
+
+    &:before {
+      content: $list-icon-bullet;
+      display: inline-block;
+      height: $list-informative-li-icon-size;
+      width: $list-informative-li-icon-size;
+      position: absolute;
+      left: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $list-informative-li-margin-bottom;
+    }
+  }
+}
+
+.list-informative-check {
+  @extend .list-informative-bullet;
+
+  li:before {
+    content: $list-icon-check;
+  }
+}
+
+
+/* === 
+
+ESTILOS EN CASO DE QUE SE IMPLEMENTE: 
+- QUE CADA ICONO DE LA LISTA PUEDA VARIAR (COLOCANDO ETIQUETA HTML)
+- QUE SE PUEDA COMBINAR DISTINTOS ICONOS EN UNA MISMA LISTA
+- QUE EXISTA LA VARIANTE LISTA SIN ICONOS
+
+ === */
+/* === Variable and mixins overides === */
+
+$list-informative-padding-left: 1.625rem;
+$list-informative-icon-size: 1.5rem;
+$list-informative-margin: 1rem;
+$list-informative-padding: 1rem;
+$list-informative-ul-margin: 0.625rem;
+$list-informative-ol-margin: 0.5rem;
+$list-informative-ul-position-left: 2.125rem;
+$list-informative-ol-position-left: 2rem;
+
+/* === Custom variables and mixins === */
+
+@mixin list-informative-style-subtitle($tag) {
+  display: grid;
+  grid-template-columns: $list-informative-icon-size 100%;
+  grid-column-gap: $list-informative-ul-margin;
+  grid-area: 1 / 2 / 2 / 3;
+
+  #{$tag} {
+    margin-top: $list-informative-margin / 4;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
+
+@mixin list-informative-style-icon($tag, $position-left, $icon-margin-right) {
+  list-style: none;
+  display: flex;
+  position: relative;
+  left: -$position-left;
+
+  #{$tag} {
+    font-size: $list-informative-icon-size;
+    margin-right: $icon-margin-right;
+  }
+}
+
+@mixin list-informative-style() {
+  padding-left: $list-informative-padding-left;
+
+  li {
+    margin-bottom: $list-informative-margin;
+    padding-left: $list-informative-padding / 2;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &:has(i) {
+      @include list-informative-style-icon('i', $list-informative-ul-position-left, $list-informative-ul-margin);
+    }
+
+    &:has(span) {
+      @include list-informative-style-icon('span', $list-informative-ol-position-left, $list-informative-ol-margin);
+    }
+
+    &:has(p) {
+      p {
+        margin-top: $list-informative-margin / 4;
+      }
+    }
+
+    &:has(small) {
+      small {
+        display: block;
+        margin-top: $list-informative-margin / 4;
+      }
+    }
+
+    &:has(i + small) {
+      @include list-informative-style-subtitle('small');
+    }
+
+    &:has(i + p) {
+      @include list-informative-style-subtitle('p');
+    }
+
+    &:has(span + small) {
+      @include list-informative-style-subtitle('small');
+    }
+
+    &:has(span + p) {
+      @include list-informative-style-subtitle('p');
+    }
+  }
+}
+
+/* === Custom styles === */
+
+.list-informative-ul {
+  @include list-informative-style();
+}
+
+.list-informative-ol {
+  @include list-informative-style();
+}
+
+.unstyled {
+  list-style-type: none;
+}
