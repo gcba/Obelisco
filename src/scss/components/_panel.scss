@@ -269,7 +269,7 @@ $panel-deck-card-mr: 2rem;
     }
   }
 
-  //panel chico vertical con lista de enlaces o botones de descarga
+  //panel chico vertical con lista de botones de descarga
   &.panel-list-link {
     @extend .panel-sm;
 
@@ -279,14 +279,14 @@ $panel-deck-card-mr: 2rem;
       .list-link-item-title {
         margin-bottom: spaceUnits(4);
         &:has(+ .btn.card-link) {
-          margin-bottom: spaceUnits(2);
+          margin-bottom: -(spaceUnits(2));
         }
       }
 
       .card-link {
         display: block;
         width: fit-content;
-        margin: 0 0 spaceUnits(4) 0;
+        margin: 0;
         &:last-child {
           margin-bottom: 0;
         }
