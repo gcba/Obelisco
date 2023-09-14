@@ -1,0 +1,43 @@
+/* === Variable and mixins overides === */
+$block-padding: 1.5rem;
+$block-padding-mobile: 1rem;
+$block-border-radiius: 0.5rem;
+$block-box-shadow: 0 0 0 2px $grisulado-50;
+$block-text-margin: 0.25rem 0 0;
+$block-footer-margin-top: 1rem;
+$block-progressBar-margin-top: 1rem;
+
+
+/* === Custom variables and mixins === */
+
+
+/* === Custom styles === */
+
+.block {
+    padding: $block-padding;
+    background-color: $white;
+    box-shadow: $block-box-shadow;
+    border-radius: $block-border-radiius;
+    width: 100%;
+    word-wrap: break-word;
+
+    .block-body {
+        .block-title {
+            margin-bottom: 0;
+        }
+        .block-text {
+            margin: $block-text-margin;
+        }
+        .progress {
+            margin-top: $block-progressBar-margin-top;
+        }
+    }
+
+    .block-footer {
+        margin-top: $block-footer-margin-top;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: $block-padding-mobile;
+    }
+}

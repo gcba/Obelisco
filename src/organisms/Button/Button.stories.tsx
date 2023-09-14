@@ -1,4 +1,4 @@
-// Base
+/* // Base
 import React from 'react';
 import './Button.stories.scss';
 
@@ -70,3 +70,4 @@ export const ButtonBoxLink = (): JSX.Element => {
 };
 
 ButtonBoxLink.story = { name: 'Con enlace' };
+ */
