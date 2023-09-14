@@ -373,6 +373,11 @@ $animation-toggle: transform 0.2s ease-in-out;
           color: $white;
           background-color: $danger;
         }
+        
+        &.disabled, &[disabled] {
+          color: $grisulado-300;
+          pointer-events: none;
+        }
       }
     }
 
