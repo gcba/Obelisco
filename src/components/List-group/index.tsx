@@ -79,6 +79,7 @@ export const AccessSizesComponent: React.FC<AccessSizeInterface> = (
   );
 };
 
+/* Se Comenta temporalmente por que se agrega la seccion ancho por columna y por acceso
 export const AccessListHorizontal = (): JSX.Element => {
   return (
     <div className="list-group list-group-row">
@@ -140,6 +141,7 @@ export const AccessListVertical = (): JSX.Element => {
     </div>
   );
 };
+*/
 
 export const AccessDeck = (): JSX.Element => {
   return (
