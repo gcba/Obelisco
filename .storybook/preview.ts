@@ -61,7 +61,7 @@ const headers = [
   'formulario-validación',
   'plantillas-plantilla',
   'organismos-accesos',
-  'organismos-botones',
+  'organismos-bloque',
   'organismos-footer-pie-de-página',
   'organismos-header-encabezado-con-buscador',
   'organismos-header-encabezado-sin-buscador',

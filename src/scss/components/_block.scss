@@ -1,0 +1,13 @@
+/* === Variable and mixins overides === */
+
+
+/* === Custom variables and mixins === */
+
+
+/* === Custom styles === */
+.card.border-light-50 {
+    box-shadow: 0 0 0 2px $grisulado-50;
+    .progress {
+        margin-top: 1rem;
+    }
+}
