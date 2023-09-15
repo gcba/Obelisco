@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { Size, sizeToClass } from '../utils';
 
 export interface Option {
+  disabled?: boolean;
   value: string;
   label: string;
 }
@@ -15,6 +16,7 @@ export interface DropdownOptionProps {
   iconType?: 'material' | 'boxicon';
   size?: Size;
   idDropdown?: string;
+  isDisabled?: boolean;
 }
 export interface DropdownProps {
   title?: string;
@@ -145,7 +147,8 @@ export const DropdownOption = ({
   icon,
   iconType,
   size,
-  idDropdown
+  idDropdown,
+  isDisabled = false
 }: DropdownOptionProps): JSX.Element => {
   const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({});
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -198,7 +201,10 @@ export const DropdownOption = ({
           {options.map((option) => (
             <div className={`custom-control ${isRadio ? 'custom-radio' : 'custom-checkbox'}`} key={option.value}>
               {isRadio ? (
-                <label className={`btn btn-chip ${checkboxStates[option.value] ? 'active' : ''}`}>
+                <label
+                  className={`btn btn-chip ${checkboxStates[option.value] ? 'active' : ''} ${
+                    option.disabled ? 'disabled' : ''
+                  }`}>
                   <input
                     className="btn-check"
                     type="radio"
@@ -221,6 +227,7 @@ export const DropdownOption = ({
                     value={option.value}
                     checked={checkboxStates[option.value]}
                     onChange={() => handleCheckboxChange(option.value)}
+                    disabled={isDisabled || option.disabled}
                   />
                   <label className="custom-control-label" htmlFor={`skills-${option.value}-input`}>
                     {option.label}
