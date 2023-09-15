@@ -60,7 +60,6 @@ const headers = [
   'plantillas-plantilla',
   'organismos-accesos',
   'organismos-bloque',
-  'organismos-botones',
   'organismos-footer-pie-de-página',
   'organismos-header-encabezado-con-buscador',
   'organismos-header-encabezado-sin-buscador',

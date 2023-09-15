@@ -9,7 +9,7 @@ interface BlockButtonProps {
   name?: string;
 }
 
-interface BlockProps {
+interface ButtonBlockProps {
   title?: string;
   text?: string;
   blockProgressBar?: ProgressBarProps;
@@ -17,21 +17,19 @@ interface BlockProps {
   isLight?: boolean;
 }
 
-export const Block: React.FC<BlockProps> = (props: React.PropsWithChildren<BlockProps>) => {
+export const Block: React.FC<ButtonBlockProps> = (props: React.PropsWithChildren<ButtonBlockProps>) => {
   const { title, text, blockProgressBar, button, isLight } = props;
 
-  const BlockClasses = classNames('block', { 'bg-light': isLight });
+  const BlockClasses = classNames('card', 'border-light-50', { 'bg-light': isLight });
 
   return (
     <div className={BlockClasses.trim()}>
-      <div className="block-body">
-        <h4 className="block-title">{title}</h4>
-        {text && <p className="block-text">{text}</p>}
+      <div className="card-body">
+        {title && <h4 className="mb-0">{title}</h4>}
+        {text && <p className="mb-0 mt-1">{text}</p>}
         {blockProgressBar && <ProgressBar type={blockProgressBar.type} width={blockProgressBar.width}></ProgressBar>}
-      </div>
-      {button && (
-        <div className="block-footer">
-          {button.isButton ? (
+        {button &&
+          (button.isButton ? (
             <button type="button" className={button.className}>
               {button.name}
             </button>
@@ -39,9 +37,8 @@ export const Block: React.FC<BlockProps> = (props: React.PropsWithChildren<Block
             <a href={button.url} target="_blank" rel="noreferrer" className={button.className}>
               {button.name}
             </a>
-          )}
-        </div>
-      )}
+          ))}
+      </div>
     </div>
   );
 };
