@@ -248,8 +248,9 @@ export const SearchNoLogin = (): JSX.Element => {
                   <input
                     type="search"
                     className="form-control input-search"
-                    id="name-input"
+                    id="name-input1"
                     name="name"
+                    aria-label="Buscar en Buenos Aires - 1"
                     placeholder="Buscar en Buenos Aires..."
                   />
                   <button className="reset" type="reset"></button>
@@ -327,8 +328,9 @@ export const SearchNoLogin = (): JSX.Element => {
                   <input
                     type="search"
                     className="form-control input-search"
-                    id="name-input"
+                    id="name-input2"
                     name="name"
+                    aria-label="Buscar en Buenos Aires - 2"
                     placeholder="Buscar en Buenos Aires..."
                   />
                   <button className="reset" type="reset"></button>
@@ -382,8 +384,9 @@ export const SearchNoLogin = (): JSX.Element => {
                   <input
                     type="search"
                     className="form-control input-search"
-                    id="name-input"
+                    id="name-input3"
                     name="name"
+                    aria-label="Buscar en Buenos Aires - 3"
                     placeholder="Buscar en Buenos Aires..."
                   />
                   <button className="reset" type="reset"></button>
@@ -451,8 +454,9 @@ export const SearchLogin = (): JSX.Element => {
                   <input
                     type="search"
                     className="form-control input-search"
-                    id="name-input"
+                    id="name-input1"
                     name="name"
+                    aria-label="Buscar en Buenos Aires - 1"
                     placeholder="Buscar en Buenos Aires..."
                   />
                   <button className="reset" type="reset"></button>
@@ -543,8 +547,9 @@ export const SearchLogin = (): JSX.Element => {
                   <input
                     type="search"
                     className="form-control input-search"
-                    id="name-input"
+                    id="name-input2"
                     name="name"
+                    aria-label="Buscar en Buenos Aires - 2"
                     placeholder="Buscar en Buenos Aires..."
                   />
                   <button className="reset" type="reset"></button>
@@ -611,8 +616,9 @@ export const SearchLogin = (): JSX.Element => {
                   <input
                     type="search"
                     className="form-control input-search"
-                    id="name-input"
+                    id="name-input3"
                     name="name"
+                    aria-label="Buscar en Buenos Aires - 3"
                     placeholder="Buscar en Buenos Aires..."
                   />
                   <button className="reset" type="reset"></button>
