@@ -77,25 +77,25 @@ export const SMALL_LINK_DOWNLOAD = {
   isDownload: true
 };
 export const LINK_LIST = {
-  listTitle: 'H4 - Nombre del titular',
+  listTitle: 'Título de una lista de enlaces',
   links: [
-    { name: 'Enlace', className: 'card-link', url: '#' },
-    { name: 'Enlace', className: 'card-link', url: '#' },
-    { name: 'Enlace', className: 'card-link', url: '#' },
-    { name: 'Enlace', className: 'card-link', url: '#' },
-    { name: 'Enlace', className: 'card-link', url: '#' },
-    { name: 'Enlace', className: 'card-link', url: '#' }
+    { name: 'Enlace predeterminado', url: '#' },
+    { name: 'Enlace predeterminado', url: '#' },
+    { name: 'Enlace predeterminado', url: '#' },
+    { name: 'Enlace predeterminado', url: '#' },
+    { name: 'Enlace predeterminado', url: '#' },
+    { name: 'Enlace predeterminado', url: '#' }
   ]
 };
 export const LINK_DOWNLOAD_LIST = {
-  listTitle: 'H4 - Nombre del titular',
+  listTitle: 'Título de una lista de enlaces',
   links: [
-    { name: 'Enlace', className: 'download card-link', url: '#', isDownload: true },
-    { name: 'Enlace', className: 'download card-link', url: '#', isDownload: true },
-    { name: 'Enlace', className: 'download card-link', url: '#', isDownload: true },
-    { name: 'Enlace', className: 'download card-link', url: '#', isDownload: true },
-    { name: 'Enlace', className: 'download card-link', url: '#', isDownload: true },
-    { name: 'Enlace', className: 'download card-link', url: '#', isDownload: true }
+    { name: 'Enlace de descarga', className: 'download', url: '#', isDownload: true },
+    { name: 'Enlace de descarga', className: 'download', url: '#', isDownload: true },
+    { name: 'Enlace de descarga', className: 'download', url: '#', isDownload: true },
+    { name: 'Enlace de descarga', className: 'download', url: '#', isDownload: true },
+    { name: 'Enlace de descarga', className: 'download', url: '#', isDownload: true },
+    { name: 'Enlace de descarga', className: 'download', url: '#', isDownload: true }
   ]
 };
 export const LINK_LIST_BUTTONS = [

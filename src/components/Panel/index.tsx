@@ -114,7 +114,7 @@ const LinkGroup: React.FC<{ link: PanelAction; picture?: PanelImage; video?: Pan
 
 const LinkList: React.FC<{ listLinkPanel: ListPanelAction }> = ({ listLinkPanel }) => (
   <div className="list-link">
-    <h4 className="list-link-item-title">{listLinkPanel.listTitle}</h4>
+    <h3 className="list-link-title">{listLinkPanel.listTitle}</h3>
     {listLinkPanel.links?.map(({ name, className, url, icon, isDownload }, index) => (
       <a
         key={index}

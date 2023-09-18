@@ -1,0 +1,23 @@
+/* === Custom variables and mixins === */
+
+/* === Custom styles === */
+
+.list-link {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @include media-breakpoint-down(xs) {
+    gap: 1.25rem;
+  }
+
+  .list-link-title {
+    margin-bottom: 1rem;
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .btn {
+    width: fit-content;
+  }
+}

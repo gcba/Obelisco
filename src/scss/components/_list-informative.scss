@@ -1,0 +1,50 @@
+/* === Variable and mixins overides === */
+$list-informative-subtitule-margin-bottom: 2rem;
+$list-informative-li-padding-left: 2rem;
+$list-informative-li-icon-size: 24px;
+$list-informative-li-line-height: 24px;
+$list-informative-li-margin-bottom: 1rem;
+
+/* === Custom variables and mixins === */
+
+$list-icon-bullet: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><g clip-path="url(%23clip0_14005_218)"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="%2338485C"/></g><defs><clipPath id="clip0_14005_218"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>');
+
+$list-icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><g id="check"><path id="Vector" d="M8.79506 15.875L5.32506 12.405C4.93506 12.015 4.30506 12.015 3.91506 12.405C3.52506 12.795 3.52506 13.425 3.91506 13.815L8.09506 17.995C8.48506 18.385 9.11506 18.385 9.50506 17.995L20.0851 7.41502C20.4751 7.02502 20.4751 6.39502 20.0851 6.00502C19.6951 5.61502 19.0651 5.61502 18.6751 6.00502L8.79506 15.875Z" fill="%2338485C"/></g></svg>');
+/* === Custom styles === */
+
+.list-informative-subtitle {
+  margin-bottom: $list-informative-subtitule-margin-bottom;
+}
+
+.list-informative-bullet {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    line-height: $list-informative-li-line-height;
+    position: relative;
+    padding-left: $list-informative-li-padding-left;
+
+    &:before {
+      content: $list-icon-bullet;
+      display: inline-block;
+      height: $list-informative-li-icon-size;
+      width: $list-informative-li-icon-size;
+      position: absolute;
+      left: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $list-informative-li-margin-bottom;
+    }
+  }
+}
+
+.list-informative-check {
+  @extend .list-informative-bullet;
+
+  li:before {
+    content: $list-icon-check;
+  }
+}

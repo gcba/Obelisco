@@ -3,20 +3,46 @@ $link-display: inline;
 $link-position: center;
 $link-padding: 0.5rem;
 $link-margin-x: 0.5rem;
-$link-visited-color: theme-color-level('info', 1);
-$link-active-color: theme-color-level('info', 1.5);
-$link-focus-color: theme-color-level('info', 3);
+$link-margin-icon: 0.125rem;
+$link-color-state: #005387;
+$link-hover-color: $link-color-state;
+$link-visited-color: $link-color-state;
+$link-focus-color: $link-color-state;
 
-$link-external-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(0,123,199); transform: ;msFilter:;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>');
-$link-external-icon-active: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255,255,255); transform: ;msFilter:;"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>');
-$link-download: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" transform="scale(0.8)" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M19 9h-4V3H9v6H5l7 8zM4 19h16v2H4z"></path></svg>');
-$link-download-link: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13.825 7.5H12.5V3.33333C12.5 2.875 12.125 2.5 11.6667 2.5H8.33335C7.87502 2.5 7.50002 2.875 7.50002 3.33333V7.5H6.17502C5.71669 7.5 5.34168 7.86667 5.33335 8.325C5.33335 8.55 5.42502 8.76667 5.58335 8.925L9.40835 12.75C9.73335 13.075 10.2584 13.075 10.5834 12.75L14.4083 8.925C14.7333 8.6 14.7333 8.075 14.4083 7.75C14.25 7.59167 14.0417 7.50833 13.8167 7.5H13.825ZM4.16669 15.8333C4.16669 16.2917 4.54169 16.6667 5.00002 16.6667H15C15.4584 16.6667 15.8334 16.2917 15.8334 15.8333C15.8334 15.375 15.4584 15 15 15H5.00002C4.54169 15 4.16669 15.375 4.16669 15.8333Z" fill="rgb(255,255,255)"/></svg>');
+$link-focus-width: 0.125rem;
+
+$link-external-icon: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.16667 17.5C3.70833 17.5 3.31597 17.3368 2.98958 17.0104C2.66319 16.684 2.5 16.2917 2.5 15.8333V4.16667C2.5 3.70833 2.66319 3.31597 2.98958 2.98958C3.31597 2.66319 3.70833 2.5 4.16667 2.5H9.16667C9.40278 2.5 9.60069 2.57986 9.76042 2.73958C9.92014 2.89931 10 3.09722 10 3.33333C10 3.56944 9.92014 3.76736 9.76042 3.92708C9.60069 4.08681 9.40278 4.16667 9.16667 4.16667H4.16667V15.8333H15.8333V10.8333C15.8333 10.5972 15.9132 10.3993 16.0729 10.2396C16.2326 10.0799 16.4306 10 16.6667 10C16.9028 10 17.1007 10.0799 17.2604 10.2396C17.4201 10.3993 17.5 10.5972 17.5 10.8333V15.8333C17.5 16.2917 17.3368 16.684 17.0104 17.0104C16.684 17.3368 16.2917 17.5 15.8333 17.5H4.16667ZM15.8333 5.33333L8.66667 12.5C8.51389 12.6528 8.31944 12.7292 8.08333 12.7292C7.84722 12.7292 7.65278 12.6528 7.5 12.5C7.34722 12.3472 7.27083 12.1528 7.27083 11.9167C7.27083 11.6806 7.34722 11.4861 7.5 11.3333L14.6667 4.16667H12.5C12.2639 4.16667 12.066 4.08681 11.9062 3.92708C11.7465 3.76736 11.6667 3.56944 11.6667 3.33333C11.6667 3.09722 11.7465 2.89931 11.9062 2.73958C12.066 2.57986 12.2639 2.5 12.5 2.5H17.5V7.5C17.5 7.73611 17.4201 7.93403 17.2604 8.09375C17.1007 8.25347 16.9028 8.33333 16.6667 8.33333C16.4306 8.33333 16.2326 8.25347 16.0729 8.09375C15.9132 7.93403 15.8333 7.73611 15.8333 7.5V5.33333Z' fill='%23007BC7'/%3E%3C/svg%3E");
+
+$link-download-icon: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(%23clip0_13425_780)"><path d="M13.8251 7.5H12.5001V3.33333C12.5001 2.875 12.1251 2.5 11.6667 2.5H8.33342C7.87508 2.5 7.50008 2.875 7.50008 3.33333V7.5H6.17508C5.43341 7.5 5.05841 8.4 5.58341 8.925L9.40841 12.75C9.73342 13.075 10.2584 13.075 10.5834 12.75L14.4084 8.925C14.9334 8.4 14.5667 7.5 13.8251 7.5ZM4.16675 15.8333C4.16675 16.2917 4.54175 16.6667 5.00008 16.6667H15.0001C15.4584 16.6667 15.8334 16.2917 15.8334 15.8333C15.8334 15.375 15.4584 15 15.0001 15H5.00008C4.54175 15 4.16675 15.375 4.16675 15.8333Z" fill="%23007BC7"/></g><defs><clipPath id="clip0_13425_780"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>');
+
+$link-download-link: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(%23clip0_13425_786)"><path d="M13.8251 7.5H12.5001V3.33333C12.5001 2.875 12.1251 2.5 11.6667 2.5H8.33342C7.87508 2.5 7.50008 2.875 7.50008 3.33333V7.5H6.17508C5.43341 7.5 5.05841 8.4 5.58341 8.925L9.40841 12.75C9.73342 13.075 10.2584 13.075 10.5834 12.75L14.4084 8.925C14.9334 8.4 14.5667 7.5 13.8251 7.5ZM4.16675 15.8333C4.16675 16.2917 4.54175 16.6667 5.00008 16.6667H15.0001C15.4584 16.6667 15.8334 16.2917 15.8334 15.8333C15.8334 15.375 15.4584 15 15.0001 15H5.00008C4.54175 15 4.16675 15.375 4.16675 15.8333Z" fill="white"/></g><defs><clipPath id="clip0_13425_786"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>');
 $link-download-link-sm: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.06 6H9.99998V2.66667C9.99998 2.3 9.69998 2 9.33331 2H6.66665C6.29998 2 5.99998 2.3 5.99998 2.66667V6H4.93998C4.57332 6 4.27331 6.29333 4.26664 6.66C4.26664 6.84 4.33998 7.01333 4.46664 7.14L7.52664 10.2C7.78664 10.46 8.20664 10.46 8.46664 10.2L11.5266 7.14C11.7866 6.88 11.7866 6.46 11.5266 6.2C11.4 6.07333 11.2333 6.00667 11.0533 6H11.06ZM3.33331 12.6667C3.33331 13.0333 3.63331 13.3333 3.99998 13.3333H12C12.3666 13.3333 12.6666 13.0333 12.6666 12.6667C12.6666 12.3 12.3666 12 12 12H3.99998C3.63331 12 3.33331 12.3 3.33331 12.6667Z" fill="rgb(255,255,255)"/></svg>');
-$link-access: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>');
+
+$link-access: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13.4791 10.8334H4.16659C3.93047 10.8334 3.73256 10.7536 3.57284 10.5938C3.41311 10.4341 3.33325 10.2362 3.33325 10.0001C3.33325 9.76398 3.41311 9.56606 3.57284 9.40634C3.73256 9.24662 3.93047 9.16676 4.16659 9.16676H13.4791L9.39575 5.08342C9.22908 4.91676 9.14922 4.72231 9.15617 4.50009C9.16311 4.27787 9.24992 4.08342 9.41658 3.91676C9.58325 3.76398 9.7777 3.68412 9.99992 3.67717C10.2221 3.67023 10.4166 3.75009 10.5833 3.91676L16.0833 9.41676C16.1666 9.50009 16.2256 9.59037 16.2603 9.68759C16.2951 9.78481 16.3124 9.88898 16.3124 10.0001C16.3124 10.1112 16.2951 10.2154 16.2603 10.3126C16.2256 10.4098 16.1666 10.5001 16.0833 10.5834L10.5833 16.0834C10.4305 16.2362 10.2395 16.3126 10.0103 16.3126C9.78117 16.3126 9.58325 16.2362 9.41658 16.0834C9.24992 15.9168 9.16658 15.7188 9.16658 15.4897C9.16658 15.2605 9.24992 15.0626 9.41658 14.8959L13.4791 10.8334Z" fill="%23007BC7"/></svg>');
 
 /* === Bootstrap Import === */
 
 /* === Custom styles === */
+
+@mixin link-icon-variant ($icon-link, $icon-margin-left, $icon-margin-right) {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.25rem;
+  margin-left: $icon-margin-left;
+  margin-right: $icon-margin-right;
+  padding-left: 1.25rem;
+  background: 0 0;
+  background-color: currentColor;
+  -webkit-mask-image: $icon-link, linear-gradient(transparent, transparent);
+  mask-image: $icon-link, linear-gradient(transparent, transparent);
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 1.25rem 1.25rem;
+  mask-size: 1.25rem 1.25rem;
+}
 
 a {
   outline: none;
@@ -25,39 +51,49 @@ a {
   word-break: break-word;
   display: inline-block;
   width: fit-content;
-  
+  text-decoration-thickness: 1px;
+  backface-visibility: hidden;
+
   &:visited {
     color: $link-visited-color;
   }
 
   @include hover() {
-    color: $link-active-color;
+    color: $link-hover-color;
+    text-decoration-thickness: 1px;
   }
 
   &:focus {
     color: $link-focus-color;
-    text-decoration: $link-decoration;
-    box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
     border-radius: $border-radius-lg;
+    box-shadow: 0 0 0 $link-focus-width $box-shadow-button;
+  }
+
+  &.list-group-item,
+  &.btn,
+  &.badge,
+  &.modal-carousel-close,
+  &.gallery-grid-item,
+  &.nav-link,
+  &.page-link,
+  &.card {
+    // Aplicar cuando tenga las clases extras
+
+    width: auto;
+    &:focus {
+      box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+    }
   }
 
   &.external {
     &::after {
-      content: $link-external-icon;
-      display: inline-block;
-      vertical-align: sub;
-      height: 1em;
-      margin-left: spaceUnits(1);
+      @include link-icon-variant($link-external-icon, $link-margin-icon, 0);
     }
   }
 
   &.download {
     &::before {
-      content: $link-download;
-      display: inline-block;
-      vertical-align: top;
-      height: 1em;
-      margin-right: spaceUnits(1);
+      @include link-icon-variant($link-download-icon, 0, $link-margin-icon);
     }
   }
 
@@ -69,23 +105,28 @@ a {
       display: inline-block;
       vertical-align: middle;
       height: 1rem;
-      margin-right: spaceUnits(1);
+      margin-right: $link-margin-icon;
     }
 
     &:is(.btn-lg):before {
       content: $link-download-link;
-      vertical-align: top;
+      vertical-align: middle;
       height: 1.25rem;
     }
   }
 
   &.access {
     &::after {
-      content: $link-access;
-      display: inline-block;
-      vertical-align: top;
-      height: 1em;
-      margin-right: spaceUnits(1);
+      @include link-icon-variant($link-access, $link-margin-icon, 0);
+    }
+  }
+
+  &.link-white {
+    color: white;
+
+    &:focus {
+      border-radius: $border-radius-lg;
+      box-shadow: 0 0 0 $link-focus-width white;
     }
   }
 }
