@@ -161,8 +161,13 @@ export const DropdownOption = ({
   };
 
   const handleRadioChange = (radioName: string) => {
-    const selectedOption = options.find((option) => option.value === radioName)?.label || null;
-    setSelectedOption(selectedOption);
+    const selectedOption = options.find((option) => option.value === radioName);
+
+    if (selectedOption && selectedOption.disabled) {
+      return;
+    }
+
+    setSelectedOption(selectedOption?.label || null);
 
     const updatedCheckboxStates = {};
     options.forEach((option) => {

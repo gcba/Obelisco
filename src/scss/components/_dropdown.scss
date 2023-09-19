@@ -544,18 +544,18 @@ $animation-toggle: transform 0.2s ease-in-out;
 
         &.btn,
         .btn-chip {
-          //estilos de btn-chip para radio
+          // Estilos de btn-chip para radio
           margin: 0;
           min-height: 2.5rem;
 
-          &:has(.btn-check:focus) {
+          &:not(.disabled):has(.btn-check:focus) {
             box-shadow: $dropdown-box-shadow-focus;
             &:before {
               box-shadow: none;
               outline: none;
             }
           }
-        }
+        }        
       }
 
       .btn-chip {
