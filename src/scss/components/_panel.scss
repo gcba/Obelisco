@@ -154,6 +154,7 @@ $panel-deck-card-mr: 2rem;
       border-radius: $card-border-radius;
       object-fit: cover;
       object-position: center;
+      aspect-ratio: 16 / 9;
 
       @include media-breakpoint-down(sm) {
         width: 100%;
