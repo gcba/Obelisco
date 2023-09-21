@@ -27,6 +27,8 @@ const headers = [
   'componentes-galería',
   'componentes-galería-grillas',
   'componentes-listas-lista-de-pasos',
+  'componentes-listas-lista-de-enlaces',
+  'componentes-listas-lista-informativa',
   'componentes-mensajes-de-estado',
   'componentes-migas-de-pan',
   'componentes-modal',
@@ -66,6 +68,7 @@ const headers = [
   'organismos-header-encabezado-con-buscador',
   'organismos-header-encabezado-sin-buscador',
   'organismos-header-encabezado-mobile',
+  'organismos-listas',
   'organismos-tablas',
   'organismos-tablas-con-acciones',
   'versión-releases'
