@@ -76,7 +76,8 @@ a {
   &.gallery-grid-item,
   &.nav-link,
   &.page-link,
-  &.card {
+  &.card,
+  &.navbar-brand {
     // Aplicar cuando tenga las clases extras
 
     width: auto;
