@@ -215,7 +215,7 @@ export const SearchNoLogin = (): JSX.Element => {
     <div className="storybook__container-header">
       <header className="navbar navbar-light">
         <div className="container" id="collapsed-items1">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <div className="navbar-sections-dropdown">
@@ -314,7 +314,7 @@ export const SearchNoLogin = (): JSX.Element => {
       </header>
       <header className="navbar navbar-light">
         <div className="container" id="collapsed-items2">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <button
@@ -393,7 +393,7 @@ export const SearchNoLogin = (): JSX.Element => {
       </header>
       <header className="navbar navbar-light">
         <div className="container">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <button
@@ -449,7 +449,7 @@ export const SearchLogin = (): JSX.Element => {
     <div className="storybook__container-header">
       <header className="navbar navbar-light">
         <div className="container" id="collapsed-items1">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <div className="navbar-sections-dropdown">
@@ -595,7 +595,7 @@ export const SearchLogin = (): JSX.Element => {
       </header>
       <header className="navbar navbar-light">
         <div className="container" id="collapsed-items2">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <button
@@ -721,7 +721,7 @@ export const SearchLogin = (): JSX.Element => {
       </header>
       <header className="navbar navbar-light">
         <div className="container" id="collapsed-items3">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <button

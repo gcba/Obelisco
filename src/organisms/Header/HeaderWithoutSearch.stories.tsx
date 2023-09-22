@@ -125,7 +125,7 @@ export const NoLogin = (): JSX.Element => {
     <div className="storybook__container-header">
       <header className="navbar navbar-light">
         <div className="container">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <div className="navbar-sections-dropdown">
@@ -195,7 +195,7 @@ export const NoLogin = (): JSX.Element => {
       </header>
       <header className="navbar navbar-light">
         <div className="container">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <button
@@ -245,7 +245,7 @@ export const NoLogin = (): JSX.Element => {
       </header>
       <header className="navbar navbar-light">
         <div className="container">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <div className="navbar-login-btn">
@@ -272,7 +272,7 @@ export const Login = (): JSX.Element => {
     <div className="storybook__container-header">
       <header className="navbar navbar-light">
         <div className="container" id="collapsed-items1">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <div className="navbar-sections-dropdown">
@@ -389,7 +389,7 @@ export const Login = (): JSX.Element => {
       </header>
       <header className="navbar navbar-light">
         <div className="container" id="collapsed-items2">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <button
@@ -486,7 +486,7 @@ export const Login = (): JSX.Element => {
       </header>
       <header className="navbar navbar-light">
         <div className="container">
-          <a href="#" className="navbar-brand">
+          <a href="https://buenosaires.gob.ar" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
           <div className="navbar-user-dropdown">
