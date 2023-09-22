@@ -525,7 +525,7 @@ export const SearchLogin = (): JSX.Element => {
                 aria-expanded="false"
                 aria-label="Toggle">
                 <span className="material-icons-round">person</span>
-                <span className="btn-dropdown-text">Martina Pérez Leloir</span>
+                <span className="btn-dropdown-text">Perfil</span>
                 <span className="sr-only">Mi perfil</span>
               </button>
               <div
@@ -627,7 +627,7 @@ export const SearchLogin = (): JSX.Element => {
                 aria-expanded="false"
                 aria-label="Toggle">
                 <span className="material-icons-round">person</span>
-                <span className="btn-dropdown-text">Martina Pérez Leloir</span>
+                <span className="btn-dropdown-text">Perfil</span>
                 <span className="sr-only">Mi perfil</span>
               </button>
               <div
@@ -744,7 +744,7 @@ export const SearchLogin = (): JSX.Element => {
                 aria-expanded="false"
                 aria-label="Toggle">
                 <span className="material-icons-round">person</span>
-                <span className="btn-dropdown-text">Martina Pérez Leloir</span>
+                <span className="btn-dropdown-text">Perfil</span>
                 <span className="sr-only">Mi perfil</span>
               </button>
               <div
