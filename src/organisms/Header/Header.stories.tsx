@@ -214,7 +214,7 @@ export const SearchNoLogin = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <header className="navbar navbar-light">
-        <div className="container" id="collapsed-items2">
+        <div className="container" id="collapsed-items1">
           <a href="#" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
@@ -233,7 +233,7 @@ export const SearchNoLogin = (): JSX.Element => {
                 <span className="material-icons-round btn-dropdown-icon-mobile">menu</span>
                 <span className="sr-only">Menú</span>
               </button>
-              <div className="dropdown-menu collapse" id="dropdownSections" data-parent="#collapsed-items2">
+              <div className="dropdown-menu collapse" id="dropdownSections" data-parent="#collapsed-items1">
                 <div className="dropdown sub-dropdown">
                   <button
                     type="button"
@@ -280,7 +280,7 @@ export const SearchNoLogin = (): JSX.Element => {
             aria-label="Buscador">
             <i className="bx bx-search"></i>
           </button>
-          <div className="navbar-user-btn">
+          <div className="navbar-login-btn">
             <a
               className="btn btn-lg btn-icon btn-outline-link"
               href="#"
@@ -290,7 +290,7 @@ export const SearchNoLogin = (): JSX.Element => {
               <span className="btn-text">Acceder</span>
             </a>
           </div>
-          <div className="collapse navbar-collapse navbar-search" id="navbarSearch2" data-parent="#collapsed-items2">
+          <div className="collapse navbar-collapse navbar-search" id="navbarSearch2" data-parent="#collapsed-items1">
             <div className="nav nav-search-content">
               <form className="form-search">
                 <div className="form-group">
@@ -313,7 +313,7 @@ export const SearchNoLogin = (): JSX.Element => {
         </div>
       </header>
       <header className="navbar navbar-light">
-        <div className="container" id="collapsed-items1">
+        <div className="container" id="collapsed-items2">
           <a href="#" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
@@ -335,7 +335,7 @@ export const SearchNoLogin = (): JSX.Element => {
             aria-label="Buscador">
             <i className="bx bx-search"></i>
           </button>
-          <div className="navbar-user-btn">
+          <div className="navbar-login-btn">
             <a
               className="btn btn-lg btn-icon btn-outline-link"
               href="#"
@@ -345,7 +345,7 @@ export const SearchNoLogin = (): JSX.Element => {
               <span className="btn-text">Acceder</span>
             </a>
           </div>
-          <div className="collapse navbar-collapse navbar-sections" id="navbarSections" data-parent="#collapsed-items1">
+          <div className="collapse navbar-collapse navbar-sections" id="navbarSections" data-parent="#collapsed-items2">
             <ul className="nav nav-pills">
               <li className="nav-item">
                 <a href="#" className="nav-link nav-link-lg">
@@ -369,7 +369,7 @@ export const SearchNoLogin = (): JSX.Element => {
               </li>
             </ul>
           </div>
-          <div className="collapse navbar-collapse navbar-search" id="navbarSearch1" data-parent="#collapsed-items1">
+          <div className="collapse navbar-collapse navbar-search" id="navbarSearch1" data-parent="#collapsed-items2">
             <div className="nav nav-search-content">
               <form className="form-search">
                 <div className="form-group">
@@ -405,7 +405,7 @@ export const SearchNoLogin = (): JSX.Element => {
             aria-label="Buscador">
             <i className="bx bx-search"></i>
           </button>
-          <div className="navbar-user-btn">
+          <div className="navbar-login-btn">
             <a
               className="btn btn-lg btn-icon btn-outline-link"
               href="#"
@@ -448,7 +448,7 @@ export const SearchLogin = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <header className="navbar navbar-light">
-        <div className="container" id="collapsed-items3">
+        <div className="container" id="collapsed-items1">
           <a href="#" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
@@ -467,7 +467,7 @@ export const SearchLogin = (): JSX.Element => {
                 <span className="material-icons-round btn-dropdown-icon-mobile">menu</span>
                 <span className="sr-only">Menú</span>
               </button>
-              <div className="dropdown-menu collapse" id="dropdownSections" data-parent="#collapsed-items3">
+              <div className="dropdown-menu collapse" id="dropdownSections" data-parent="#collapsed-items1">
                 <div className="dropdown sub-dropdown">
                   <button
                     type="button"
@@ -531,7 +531,7 @@ export const SearchLogin = (): JSX.Element => {
               <div
                 className="dropdown-menu dropdown-menu-right collapse "
                 id="dropdownUser3"
-                data-parent="#collapsed-items3">
+                data-parent="#collapsed-items1">
                 <div className="dropdown sub-dropdown">
                   <button
                     type="button"
@@ -571,7 +571,7 @@ export const SearchLogin = (): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="collapse navbar-collapse navbar-search" id="navbarSearch3" data-parent="#collapsed-items3">
+          <div className="collapse navbar-collapse navbar-search" id="navbarSearch3" data-parent="#collapsed-items1">
             <div className="nav nav-search-content">
               <form className="form-search">
                 <div className="form-group">
@@ -720,7 +720,7 @@ export const SearchLogin = (): JSX.Element => {
         </div>
       </header>
       <header className="navbar navbar-light">
-        <div className="container" id="collapsed-items1">
+        <div className="container" id="collapsed-items3">
           <a href="#" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
@@ -750,7 +750,7 @@ export const SearchLogin = (): JSX.Element => {
               <div
                 className="dropdown-menu dropdown-menu-right collapse"
                 id="dropdownUser1"
-                data-parent="#collapsed-items1">
+                data-parent="#collapsed-items3">
                 <div className="dropdown sub-dropdown">
                   <button
                     type="button"
@@ -790,7 +790,7 @@ export const SearchLogin = (): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="collapse navbar-collapse navbar-search" id="navbarSearch1" data-parent="#collapsed-items1">
+          <div className="collapse navbar-collapse navbar-search" id="navbarSearch1" data-parent="#collapsed-items3">
             <div className="nav nav-search-content">
               <form className="form-search">
                 <div className="form-group">

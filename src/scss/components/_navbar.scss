@@ -75,7 +75,7 @@ $navbar-container-width: 1366px;
   }
 
   &:has(.navbar-sections-dropdown) {
-    :not(:has(.navbar-user-btn, .navbar-search-btn)) {
+    :not(:has(.navbar-login-btn, .navbar-search-btn)) {
       @include media-breakpoint-down(md) { 
         .navbar-sections-dropdown .dropdown .dropdown-menu {
           left: unset;
@@ -86,7 +86,7 @@ $navbar-container-width: 1366px;
   }
 
   &:has(.navbar-sections-dropdown) {
-    &:has(.navbar-user-btn, .navbar-user-dropdown) {
+    &:has(.navbar-login-btn, .navbar-user-dropdown) {
       &:has(.navbar-search-btn) {
         @include media-breakpoint-down(md) {
           .navbar-sections-dropdown .dropdown .dropdown-menu {
@@ -103,7 +103,7 @@ $navbar-container-width: 1366px;
   }
 
   &:has(.navbar-sections-dropdown) {
-    &:has(.navbar-user-btn, .navbar-search-btn, .navbar-user-dropdown) {
+    &:has(.navbar-login-btn, .navbar-search-btn, .navbar-user-dropdown) {
       @include media-breakpoint-down(md) {
         .navbar-sections-dropdown .dropdown .dropdown-menu {
           left: unset;
@@ -134,7 +134,7 @@ $navbar-container-width: 1366px;
     }
   }
 
-  .navbar-user-btn,
+  .navbar-login-btn,
   .navbar-user-dropdown {
     @include media-breakpoint-up(lg) {
       order: 4;
@@ -200,7 +200,7 @@ $navbar-container-width: 1366px;
     }
   }
 
-  .navbar-user-btn {
+  .navbar-login-btn {
     .btn {
       @include media-breakpoint-down(lg) {
         width: 48px;

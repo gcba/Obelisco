@@ -128,10 +128,67 @@ export const NoLogin = (): JSX.Element => {
           <a href="#" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
-          <div className="navbar-user-btn">
-            <a className="btn btn-lg btn-icon btn-outline-link" href="#" target="_blank" aria-label="Botón">
-              <span className="material-icons-round">person</span>
-              <span className="btn-text">Botón</span>
+          <div className="navbar-sections-dropdown">
+            <div className="dropdown">
+              <button
+                type="button"
+                className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border"
+                data-toggle="collapse"
+                data-target="#dropdownSections"
+                aria-controls="dropdownSections"
+                aria-expanded="false"
+                aria-label="Toggle">
+                <span className="btn-dropdown-text">Menú</span>
+                <span className="material-icons-round btn-dropdown-icon">expand_more</span>
+                <span className="material-icons-round btn-dropdown-icon-mobile">menu</span>
+                <span className="sr-only">Menú</span>
+              </button>
+              <div className="dropdown-menu collapse" id="dropdownSections" data-parent="#collapsed-items1">
+                <div className="dropdown sub-dropdown">
+                  <button
+                    type="button"
+                    className="btn btn-dropdown btn-dropdown-lg dropdown-toggle sub-btn-dropdown"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    <span className="item-text">Sección 1 en cascada</span>
+                    <span className="material-icons-round btn-dropdown-icon">expand_more</span>
+                  </button>
+                  <div className="dropdown-menu sub-dropdown-menu">
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                  </div>
+                </div>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Sección 2</span>
+                </a>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Sección 3</span>
+                </a>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Sección 4</span>
+                </a>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Sección 5</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="navbar-login-btn">
+            <a
+              className="btn btn-lg btn-icon btn-outline-link"
+              href="#"
+              target="_blank"
+              aria-label="Acceder a mi cuenta">
+              <span className="material-icons-round">login</span>
+              <span className="btn-text">Acceder</span>
             </a>
           </div>
         </div>
@@ -147,24 +204,28 @@ export const NoLogin = (): JSX.Element => {
             data-target="#navbarSections"
             aria-controls="navbarSections"
             aria-expanded="false"
-            aria-label="Menu">
+            aria-label="Menú">
             <i className="bx bx-menu"></i>
           </button>
-          <div className="navbar-user-btn">
-            <a className="btn btn-lg btn-icon btn-outline-link" href="#" target="_blank" aria-label="Botón">
-              <span className="material-icons-round">person</span>
-              <span className="btn-text">Botón</span>
+          <div className="navbar-login-btn">
+            <a
+              className="btn btn-lg btn-icon btn-outline-link"
+              href="#"
+              target="_blank"
+              aria-label="Acceder a mi cuenta">
+              <span className="material-icons-round">login</span>
+              <span className="btn-text">Acceder</span>
             </a>
           </div>
           <div className="collapse navbar-collapse navbar-sections" id="navbarSections">
             <ul className="nav nav-pills">
               <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg active">
+                <a href="#" className="nav-link nav-link-lg">
                   <span>Sección 1</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg">
+                <a href="#" className="nav-link nav-link-lg active">
                   <span>Sección 2</span>
                 </a>
               </li>
@@ -187,6 +248,33 @@ export const NoLogin = (): JSX.Element => {
           <a href="#" className="navbar-brand">
             <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
           </a>
+          <div className="navbar-login-btn">
+            <a
+              className="btn btn-lg btn-icon btn-outline-link"
+              href="#"
+              target="_blank"
+              aria-label="Acceder a mi cuenta">
+              <span className="material-icons-round">login</span>
+              <span className="btn-text">Acceder</span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+  );
+};
+NoLogin.story = {
+  name: 'No logueado'
+};
+
+export const Login = (): JSX.Element => {
+  return (
+    <div className="storybook__container-header">
+      <header className="navbar navbar-light">
+        <div className="container" id="collapsed-items1">
+          <a href="#" className="navbar-brand">
+            <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
+          </a>
           <div className="navbar-sections-dropdown">
             <div className="dropdown">
               <button
@@ -197,14 +285,34 @@ export const NoLogin = (): JSX.Element => {
                 aria-controls="dropdownSections"
                 aria-expanded="false"
                 aria-label="Toggle">
-                <span className="material-icons-round">menu</span>
-                <span className="btn-dropdown-text">Menu</span>
-                <span className="sr-only">Menu</span>
+                <span className="btn-dropdown-text">Menú</span>
+                <span className="material-icons-round btn-dropdown-icon">expand_more</span>
+                <span className="material-icons-round btn-dropdown-icon-mobile">menu</span>
+                <span className="sr-only">Menú</span>
               </button>
-              <div className="dropdown-menu dropdown-menu-right collapse" id="dropdownSections">
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Sección 1</span>
-                </a>
+              <div className="dropdown-menu collapse" id="dropdownSections" data-parent="#collapsed-items1">
+                <div className="dropdown sub-dropdown">
+                  <button
+                    type="button"
+                    className="btn btn-dropdown btn-dropdown-lg dropdown-toggle sub-btn-dropdown"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    <span className="item-text">Sección 1 en cascada</span>
+                    <span className="material-icons-round btn-dropdown-icon">expand_more</span>
+                  </button>
+                  <div className="dropdown-menu sub-dropdown-menu">
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                  </div>
+                </div>
                 <a className="dropdown-item" href="#">
                   <span className="item-text">Sección 2</span>
                 </a>
@@ -220,24 +328,162 @@ export const NoLogin = (): JSX.Element => {
               </div>
             </div>
           </div>
-          <div className="navbar-user-btn">
-            <a className="btn btn-lg btn-icon btn-outline-link" href="#" target="_blank" aria-label="Botón">
-              <span className="material-icons-round">person</span>
-              <span className="btn-text">Botón</span>
-            </a>
+          <div className="navbar-user-dropdown">
+            <div className="dropdown">
+              <button
+                type="button"
+                className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border"
+                data-toggle="collapse"
+                data-target="#dropdownUser3"
+                aria-controls="dropdownUser3"
+                aria-expanded="false"
+                aria-label="Toggle">
+                <span className="material-icons-round">person</span>
+                <span className="btn-dropdown-text">Martina Pérez Leloir</span>
+                <span className="sr-only">Mi perfil</span>
+              </button>
+              <div
+                className="dropdown-menu dropdown-menu-right collapse "
+                id="dropdownUser3"
+                data-parent="#collapsed-items1">
+                <div className="dropdown sub-dropdown">
+                  <button
+                    type="button"
+                    className="btn btn-dropdown btn-dropdown-lg dropdown-toggle sub-btn-dropdown"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    <span className="material-icons-round btn-dropdown-icon">expand_more</span>
+                    <span className="item-text">Opción en cascada</span>
+                  </button>
+                  <div className="dropdown-menu dropdown-menu-right sub-dropdown-menu">
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                  </div>
+                </div>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Opción de navegación</span>
+                </a>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Opción de navegación</span>
+                </a>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Sección con notificación</span>
+                  <span className="item-notifications"></span>
+                </a>
+                <a className="dropdown-item item-danger" href="#">
+                  <span className="item-text">Cerrar sesión</span>
+                  <span className="material-icons-round">logout</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </header>
-    </div>
-  );
-};
-NoLogin.story = {
-  name: 'No logueado'
-};
-
-export const Login = (): JSX.Element => {
-  return (
-    <div className="storybook__container-header">
+      <header className="navbar navbar-light">
+        <div className="container" id="collapsed-items2">
+          <a href="#" className="navbar-brand">
+            <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
+          </a>
+          <button
+            className="navbar-toggler collapsed navbar-sections-btn"
+            data-toggle="collapse"
+            data-target="#navbarSections"
+            aria-controls="navbarSections"
+            aria-expanded="false"
+            aria-label="Menu">
+            <i className="bx bx-menu"></i>
+          </button>
+          <div className="navbar-user-dropdown">
+            <div className="dropdown">
+              <button
+                type="button"
+                className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border"
+                data-toggle="collapse"
+                data-target="#dropdownUser2"
+                aria-controls="dropdownUser2"
+                aria-expanded="false"
+                aria-label="Toggle">
+                <span className="material-icons-round">person</span>
+                <span className="btn-dropdown-text">Martina Pérez Leloir</span>
+                <span className="sr-only">Mi perfil</span>
+              </button>
+              <div
+                className="dropdown-menu dropdown-menu-right collapse "
+                id="dropdownUser2"
+                data-parent="#collapsed-items2">
+                <div className="dropdown sub-dropdown">
+                  <button
+                    type="button"
+                    className="btn btn-dropdown btn-dropdown-lg dropdown-toggle sub-btn-dropdown"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    <span className="material-icons-round btn-dropdown-icon">expand_more</span>
+                    <span className="item-text">Opción en cascada</span>
+                  </button>
+                  <div className="dropdown-menu dropdown-menu-right sub-dropdown-menu">
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                    <a className="dropdown-item sub-item" href="#">
+                      <span className="item-text">Opción de navegación</span>
+                    </a>
+                  </div>
+                </div>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Opción de navegación</span>
+                </a>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Opción de navegación</span>
+                </a>
+                <a className="dropdown-item" href="#">
+                  <span className="item-text">Sección con notificación</span>
+                  <span className="item-notifications"></span>
+                </a>
+                <a className="dropdown-item item-danger" href="#">
+                  <span className="item-text">Cerrar sesión</span>
+                  <span className="material-icons-round">logout</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="collapse navbar-collapse navbar-sections" id="navbarSections" data-parent="#collapsed-items2">
+            <ul className="nav nav-pills">
+              <li className="nav-item">
+                <a href="#" className="nav-link nav-link-lg">
+                  <span>Sección 1</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link nav-link-lg active">
+                  <span>Sección 2</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link nav-link-lg">
+                  <span>Sección 3</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link nav-link-lg">
+                  <span>Sección 4</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
       <header className="navbar navbar-light">
         <div className="container">
           <a href="#" className="navbar-brand">
@@ -287,204 +533,7 @@ export const Login = (): JSX.Element => {
                   <span className="item-text">Opción de navegación</span>
                 </a>
                 <a className="dropdown-item" href="#">
-                  <span className="item-text">Notificaciones</span>
-                  <span className="item-notifications"></span>
-                </a>
-                <a className="dropdown-item item-danger" href="#">
-                  <span className="item-text">Cerrar sesión</span>
-                  <span className="material-icons-round">logout</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <header className="navbar navbar-light">
-        <div className="container" id="collapsed-items1">
-          <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
-          </a>
-          <button
-            className="navbar-toggler collapsed navbar-sections-btn"
-            data-toggle="collapse"
-            data-target="#navbarSections"
-            aria-controls="navbarSections"
-            aria-expanded="false"
-            aria-label="Menu">
-            <i className="bx bx-menu"></i>
-          </button>
-          <div className="navbar-user-dropdown">
-            <div className="dropdown">
-              <button
-                type="button"
-                className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border"
-                data-toggle="collapse"
-                data-target="#dropdownUser2"
-                aria-controls="dropdownUser2"
-                aria-expanded="false"
-                aria-label="Toggle">
-                <span className="material-icons-round">person</span>
-                <span className="btn-dropdown-text">Martina Pérez Leloir</span>
-                <span className="sr-only">Mi perfil</span>
-              </button>
-              <div
-                className="dropdown-menu dropdown-menu-right collapse "
-                id="dropdownUser2"
-                data-parent="#collapsed-items1">
-                <div className="dropdown sub-dropdown">
-                  <button
-                    type="button"
-                    className="btn btn-dropdown btn-dropdown-lg dropdown-toggle sub-btn-dropdown"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false">
-                    <span className="material-icons-round btn-dropdown-icon">expand_more</span>
-                    <span className="item-text">Opción en cascada</span>
-                  </button>
-                  <div className="dropdown-menu dropdown-menu-right sub-dropdown-menu">
-                    <a className="dropdown-item sub-item" href="#">
-                      <span className="item-text">Opción de navegación</span>
-                    </a>
-                    <a className="dropdown-item sub-item" href="#">
-                      <span className="item-text">Opción de navegación</span>
-                    </a>
-                    <a className="dropdown-item sub-item" href="#">
-                      <span className="item-text">Opción de navegación</span>
-                    </a>
-                  </div>
-                </div>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Opción de navegación</span>
-                </a>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Opción de navegación</span>
-                </a>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Notificaciones</span>
-                  <span className="item-notifications"></span>
-                </a>
-                <a className="dropdown-item item-danger" href="#">
-                  <span className="item-text">Cerrar sesión</span>
-                  <span className="material-icons-round">logout</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="collapse navbar-collapse navbar-sections" id="navbarSections" data-parent="#collapsed-items1">
-            <ul className="nav nav-pills">
-              <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg active">
-                  <span>Sección 1</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg">
-                  <span>Sección 2</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg">
-                  <span>Sección 3</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg">
-                  <span>Sección 4</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <header className="navbar navbar-light">
-        <div className="container" id="collapsed-items2">
-          <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/header_logotipo_ba.svg" alt="Inicio" />
-          </a>
-          <div className="navbar-sections-dropdown">
-            <div className="dropdown">
-              <button
-                type="button"
-                className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border"
-                data-toggle="collapse"
-                data-target="#dropdownSections"
-                aria-controls="dropdownSections"
-                aria-expanded="false"
-                aria-label="Toggle">
-                <span className="material-icons-round">menu</span>
-                <span className="btn-dropdown-text">Menu</span>
-                <span className="sr-only">Menu</span>
-              </button>
-              <div
-                className="dropdown-menu dropdown-menu-right collapse "
-                id="dropdownSections"
-                data-parent="#collapsed-items2">
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Sección 1</span>
-                </a>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Sección 2</span>
-                </a>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Sección 3</span>
-                </a>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Sección 4</span>
-                </a>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Sección 5</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="navbar-user-dropdown">
-            <div className="dropdown">
-              <button
-                type="button"
-                className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border"
-                data-toggle="collapse"
-                data-target="#dropdownUser3"
-                aria-controls="dropdownUser3"
-                aria-expanded="false"
-                aria-label="Toggle">
-                <span className="material-icons-round">person</span>
-                <span className="btn-dropdown-text">Martina Pérez Leloir</span>
-                <span className="sr-only">Mi perfil</span>
-              </button>
-              <div
-                className="dropdown-menu dropdown-menu-right collapse "
-                id="dropdownUser3"
-                data-parent="#collapsed-items2">
-                <div className="dropdown sub-dropdown">
-                  <button
-                    type="button"
-                    className="btn btn-dropdown btn-dropdown-lg dropdown-toggle sub-btn-dropdown"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false">
-                    <span className="material-icons-round btn-dropdown-icon">expand_more</span>
-                    <span className="item-text">Opción en cascada</span>
-                  </button>
-                  <div className="dropdown-menu dropdown-menu-right sub-dropdown-menu">
-                    <a className="dropdown-item sub-item" href="#">
-                      <span className="item-text">Opción de navegación</span>
-                    </a>
-                    <a className="dropdown-item sub-item" href="#">
-                      <span className="item-text">Opción de navegación</span>
-                    </a>
-                    <a className="dropdown-item sub-item" href="#">
-                      <span className="item-text">Opción de navegación</span>
-                    </a>
-                  </div>
-                </div>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Opción de navegación</span>
-                </a>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Opción de navegación</span>
-                </a>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Notificaciones</span>
+                  <span className="item-text">Sección con notificación</span>
                   <span className="item-notifications"></span>
                 </a>
                 <a className="dropdown-item item-danger" href="#">
