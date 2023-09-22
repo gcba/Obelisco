@@ -207,16 +207,6 @@ export const NoLogin = (): JSX.Element => {
             aria-label="Menú">
             <i className="bx bx-menu"></i>
           </button>
-          <div className="navbar-login-btn">
-            <a
-              className="btn btn-lg btn-icon btn-outline-link"
-              href="#"
-              target="_blank"
-              aria-label="Acceder a mi cuenta">
-              <span className="material-icons-round">login</span>
-              <span className="btn-text">Acceder</span>
-            </a>
-          </div>
           <div className="collapse navbar-collapse navbar-sections" id="navbarSections">
             <ul className="nav nav-pills">
               <li className="nav-item">
@@ -240,6 +230,16 @@ export const NoLogin = (): JSX.Element => {
                 </a>
               </li>
             </ul>
+          </div>
+          <div className="navbar-login-btn">
+            <a
+              className="btn btn-lg btn-icon btn-outline-link"
+              href="#"
+              target="_blank"
+              aria-label="Acceder a mi cuenta">
+              <span className="material-icons-round">login</span>
+              <span className="btn-text">Acceder</span>
+            </a>
           </div>
         </div>
       </header>
@@ -401,6 +401,30 @@ export const Login = (): JSX.Element => {
             aria-label="Menu">
             <i className="bx bx-menu"></i>
           </button>
+          <div className="collapse navbar-collapse navbar-sections" id="navbarSections" data-parent="#collapsed-items2">
+            <ul className="nav nav-pills">
+              <li className="nav-item">
+                <a href="#" className="nav-link nav-link-lg">
+                  <span>Sección 1</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link nav-link-lg active">
+                  <span>Sección 2</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link nav-link-lg">
+                  <span>Sección 3</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link nav-link-lg">
+                  <span>Sección 4</span>
+                </a>
+              </li>
+            </ul>
+          </div>
           <div className="navbar-user-dropdown">
             <div className="dropdown">
               <button
@@ -457,30 +481,6 @@ export const Login = (): JSX.Element => {
                 </a>
               </div>
             </div>
-          </div>
-          <div className="collapse navbar-collapse navbar-sections" id="navbarSections" data-parent="#collapsed-items2">
-            <ul className="nav nav-pills">
-              <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg">
-                  <span>Sección 1</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg active">
-                  <span>Sección 2</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg">
-                  <span>Sección 3</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link nav-link-lg">
-                  <span>Sección 4</span>
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </header>

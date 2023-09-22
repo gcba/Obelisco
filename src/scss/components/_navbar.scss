@@ -1,7 +1,7 @@
 /* === Variable and mixins overides === */
 
 $navbar-padding-y: 1.125rem;
-$navbar-padding-x: spaceUnits(0);
+$navbar-padding-x: 0;
 $navbar-padding-mobile: 0.625rem 0;
 $navbar-brand-padding-y: 0;
 
@@ -147,17 +147,9 @@ $navbar-sections-border-top: 2px solid $grisulado-50;
     }
   }
 
-  .navbar-login-btn,
-  .navbar-user-dropdown {
-    @include media-breakpoint-up(lg) {
-      order: 4;
-    }
-  }
-
   .navbar-user-dropdown {
     .dropdown {
       .btn-dropdown {
-        max-width: 214px;
         .btn-dropdown-text {
           @include media-breakpoint-down(lg) {
             display: none;
@@ -235,6 +227,10 @@ $navbar-sections-border-top: 2px solid $grisulado-50;
       display: inline-block;
       flex-grow: unset;
       flex-basis: fit-content;
+    }
+
+    @include media-breakpoint-down(md) {
+      order: 5;
     }
   }
   .navbar-search {
