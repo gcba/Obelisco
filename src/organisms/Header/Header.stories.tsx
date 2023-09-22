@@ -241,7 +241,7 @@ export const SearchNoLogin = (): JSX.Element => {
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false">
-                    <span className="item-text">Opción en cascada</span>
+                    <span className="item-text">Sección 1 en cascada</span>
                     <span className="material-icons-round btn-dropdown-icon">expand_more</span>
                   </button>
                   <div className="dropdown-menu sub-dropdown-menu">
@@ -256,9 +256,6 @@ export const SearchNoLogin = (): JSX.Element => {
                     </a>
                   </div>
                 </div>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Sección 1</span>
-                </a>
                 <a className="dropdown-item" href="#">
                   <span className="item-text">Sección 2</span>
                 </a>
@@ -478,7 +475,7 @@ export const SearchLogin = (): JSX.Element => {
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false">
-                    <span className="item-text">Opción en cascada</span>
+                    <span className="item-text">Sección 1 en cascada</span>
                     <span className="material-icons-round btn-dropdown-icon">expand_more</span>
                   </button>
                   <div className="dropdown-menu sub-dropdown-menu">
@@ -493,9 +490,6 @@ export const SearchLogin = (): JSX.Element => {
                     </a>
                   </div>
                 </div>
-                <a className="dropdown-item" href="#">
-                  <span className="item-text">Sección 1</span>
-                </a>
                 <a className="dropdown-item" href="#">
                   <span className="item-text">Sección 2</span>
                 </a>
@@ -567,7 +561,7 @@ export const SearchLogin = (): JSX.Element => {
                   <span className="item-text">Opción de navegación</span>
                 </a>
                 <a className="dropdown-item" href="#">
-                  <span className="item-text">Notificaciones</span>
+                  <span className="item-text">Sección con notificación</span>
                   <span className="item-notifications"></span>
                 </a>
                 <a className="dropdown-item item-danger" href="#">
@@ -669,7 +663,7 @@ export const SearchLogin = (): JSX.Element => {
                   <span className="item-text">Opción de navegación</span>
                 </a>
                 <a className="dropdown-item" href="#">
-                  <span className="item-text">Notificaciones</span>
+                  <span className="item-text">Sección con notificación</span>
                   <span className="item-notifications"></span>
                 </a>
                 <a className="dropdown-item item-danger" href="#">
@@ -786,7 +780,7 @@ export const SearchLogin = (): JSX.Element => {
                   <span className="item-text">Opción de navegación</span>
                 </a>
                 <a className="dropdown-item" href="#">
-                  <span className="item-text">Notificaciones</span>
+                  <span className="item-text">Sección con notificación</span>
                   <span className="item-notifications"></span>
                 </a>
                 <a className="dropdown-item item-danger" href="#">

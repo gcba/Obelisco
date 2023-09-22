@@ -66,15 +66,13 @@ $navbar-container-width: 1366px;
     }
   }
 
-
-  //TODO
-  /* &:has(.navbar-sections, .navbar-sections-dropdown) {
+  &:has(.navbar-sections, .navbar-sections-dropdown) {
     .navbar-brand {
       @include media-breakpoint-up(lg) {
         margin-right: 0;
       }
     }
-  } */
+  }
 
   &:has(.navbar-sections-dropdown) {
     :not(:has(.navbar-user-btn, .navbar-search-btn)) {
@@ -85,15 +83,6 @@ $navbar-container-width: 1366px;
         }
       }
     }    
-  }
-
-  //TODO 
-  &:has(.navbar-sections-dropdown, .navbar-user-btn) {
-    .navbar-search {
-      @include media-breakpoint-up(lg) {
-        margin-right: 0.5rem;
-      }
-    }
   }
 
   &:has(.navbar-sections-dropdown) {
@@ -112,6 +101,7 @@ $navbar-container-width: 1366px;
       
     }
   }
+
   &:has(.navbar-sections-dropdown) {
     &:has(.navbar-user-btn, .navbar-search-btn, .navbar-user-dropdown) {
       @include media-breakpoint-down(md) {
@@ -160,6 +150,7 @@ $navbar-container-width: 1366px;
       }
     }
   }
+
   .navbar-sections-dropdown,
   .navbar-user-dropdown {
     .dropdown {
@@ -273,12 +264,12 @@ $navbar-container-width: 1366px;
               max-width: 100%;
               width: 100%;
               height: 40px;
-              padding-right: 1.75rem;
+              padding: 0.75rem 2rem 0.75rem 1rem;
             }
           }
           .reset[type='reset'] {
             @include media-breakpoint-down(md) {
-              right: 58px;
+              right: 60px;
               font-size: 1.5rem;
               &:after {
                 color: transparent;
