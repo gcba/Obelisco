@@ -24,7 +24,7 @@ $link-access: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.or
 
 /* === Custom styles === */
 
-@mixin link-icon-variant ($icon-link, $icon-margin-left, $icon-margin-right) {
+@mixin link-icon-variant($icon-link, $icon-margin-left, $icon-margin-right) {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -79,8 +79,8 @@ a {
   &.card,
   &.navbar-brand {
     // Aplicar cuando tenga las clases extras
-
     width: auto;
+
     &:focus {
       box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
     }

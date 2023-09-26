@@ -68,9 +68,10 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
 
 @include media-breakpoint-down(xs) {
   .access-deck {
-    .list-group-item  {
+    .list-group-item {
       margin-left: 0;
       margin-right: 0;
+
       &:nth-of-type(2) {
         margin-top: 30px;
       }

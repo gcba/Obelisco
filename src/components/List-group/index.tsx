@@ -10,7 +10,7 @@ export interface AccessStateInterface {
 }
 export interface AccessSizeInterface {
   type: AccessSize;
-  name: AccessSizeNames;
+  name: string;
 }
 
 export const AccessTypes: Array<AccessStateInterface> = [
@@ -142,14 +142,3 @@ export const AccessListVertical = (): JSX.Element => {
   );
 };
 */
-
-export const AccessDeck = (): JSX.Element => {
-  return (
-    <a href="#" className="list-group-item item-sm">
-      <span className="access-title">
-        <i className="bx bxs-info-circle"></i>
-        Acceso
-      </span>
-    </a>
-  );
-};
