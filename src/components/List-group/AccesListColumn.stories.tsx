@@ -44,12 +44,14 @@ export const TresColumnas = (): JSX.Element => {
 
 export const DosColumnas = (): JSX.Element => {
   return (
-    <div className="access-deck access-column max-cards-2">
-      <AccessDeck />
-      <AccessDeck />
-      <AccessDeck />
-      <AccessDeck />
-      <AccessDeck />
+    <div className="container">
+      <div className="access-deck access-column max-cards-2">
+        <AccessDeck />
+        <AccessDeck />
+        <AccessDeck />
+        <AccessDeck />
+        <AccessDeck />
+      </div>
     </div>
   );
 };

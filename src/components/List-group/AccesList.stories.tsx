@@ -17,7 +17,7 @@ export default {
 export const CuatroColumnas = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="access-deck  max-cards-4">
+      <div className="access-deck max-cards-4">
         <AccessDeck />
         <AccessDeck />
         <AccessDeck />
@@ -31,7 +31,7 @@ export const CuatroColumnas = (): JSX.Element => {
 export const TresColumnas = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="access-deck  max-cards-3">
+      <div className="access-deck max-cards-3">
         <AccessDeck />
         <AccessDeck />
         <AccessDeck />
@@ -44,12 +44,14 @@ export const TresColumnas = (): JSX.Element => {
 
 export const DosColumnas = (): JSX.Element => {
   return (
-    <div className="access-deck  max-cards-2">
-      <AccessDeck />
-      <AccessDeck />
-      <AccessDeck />
-      <AccessDeck />
-      <AccessDeck />
+    <div className="container">
+      <div className="access-deck max-cards-2">
+        <AccessDeck />
+        <AccessDeck />
+        <AccessDeck />
+        <AccessDeck />
+        <AccessDeck />
+      </div>
     </div>
   );
 };
@@ -57,7 +59,7 @@ export const DosColumnas = (): JSX.Element => {
 export const UnaColumna = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="access-deck  max-cards-1">
+      <div className="access-deck max-cards-1">
         <AccessDeck />
         <AccessDeck />
         <AccessDeck />
