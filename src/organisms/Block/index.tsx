@@ -20,13 +20,13 @@ interface ButtonBlockProps {
 export const Block: React.FC<ButtonBlockProps> = (props: React.PropsWithChildren<ButtonBlockProps>) => {
   const { title, text, blockProgressBar, button, isLight } = props;
 
-  const BlockClasses = classNames('card', 'border-light-50', { 'bg-light': isLight });
+  const BlockClasses = classNames('card', 'card-block', { 'bg-light': isLight });
 
   return (
     <div className={BlockClasses.trim()}>
       <div className="card-body">
-        {title && <h4 className="mb-0">{title}</h4>}
-        {text && <p className="mb-0 mt-1">{text}</p>}
+        {title && <h4 className="block-title">{title}</h4>}
+        {text && <p className="block-text">{text}</p>}
         {blockProgressBar && <ProgressBar type={blockProgressBar.type} width={blockProgressBar.width}></ProgressBar>}
         {button &&
           (button.isButton ? (
