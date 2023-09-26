@@ -129,10 +129,12 @@ $form-validation-states: (
       left: 15px;
     }
 
-    &:focus, &:focus-visible {
+    &:focus,
+    &:focus-visible {
       box-shadow: 0 0 0 0.25rem #00568b;
       border-radius: 0.5rem;
       outline: none;
+
       &::after {
         color: transparent;
       }

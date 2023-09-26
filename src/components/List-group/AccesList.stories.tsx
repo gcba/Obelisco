@@ -20,7 +20,7 @@ const name = '';
 export const CuatroColumnas = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="access-deck  max-cards-4">
+      <div className="access-deck max-cards-4">
         <AccessSizesComponent type={type} name={name} />
         <AccessSizesComponent type={type} name={name} />
         <AccessSizesComponent type={type} name={name} />
@@ -34,7 +34,7 @@ export const CuatroColumnas = (): JSX.Element => {
 export const TresColumnas = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="access-deck  max-cards-3">
+      <div className="access-deck max-cards-3">
         <AccessSizesComponent type={type} name={name} />
         <AccessSizesComponent type={type} name={name} />
         <AccessSizesComponent type={type} name={name} />
@@ -48,7 +48,7 @@ export const TresColumnas = (): JSX.Element => {
 export const DosColumnas = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="access-deck  max-cards-2">
+      <div className="access-deck max-cards-2">
         <AccessSizesComponent type={type} name={name} />
         <AccessSizesComponent type={type} name={name} />
         <AccessSizesComponent type={type} name={name} />
@@ -62,7 +62,7 @@ export const DosColumnas = (): JSX.Element => {
 export const UnaColumna = (): JSX.Element => {
   return (
     <div className="container">
-      <div className="access-deck  max-cards-1">
+      <div className="access-deck max-cards-1">
         <AccessSizesComponent type={type} name={name} />
         <AccessSizesComponent type={type} name={name} />
         <AccessSizesComponent type={type} name={name} />

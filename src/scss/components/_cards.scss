@@ -616,7 +616,8 @@ button.card {
         grid-template-columns: 1.5rem 1fr auto;
         @include accordion-columns-4;
 
-        i, .material-icons-round {
+        i,
+        .material-icons-round {
           font-size: 1.5rem !important;
           width: 1.5rem;
         }

@@ -38,6 +38,7 @@ $panel-deck-card-mr: 2rem;
   &.bg-white,
   &.bg-light {
     padding: 1.5rem;
+
     @include media-breakpoint-down(xs) {
       padding: 1rem;
     }
@@ -48,8 +49,10 @@ $panel-deck-card-mr: 2rem;
   @include media-breakpoint-down(xs) {
     .card-body {
       width: 100%;
+
       .panel-footer {
         flex-direction: column;
+
         .card-link,
         .download-link {
           width: 100%;
@@ -114,6 +117,7 @@ $panel-deck-card-mr: 2rem;
     @include media-breakpoint-down(md) {
       flex-direction: column;
       align-items: flex-start;
+
       .card-img {
         width: 100%;
         height: auto;
@@ -164,9 +168,9 @@ $panel-deck-card-mr: 2rem;
 
     .card-img {
       + .card-body {
-          .card-title {
-            margin: $panel-large-vertical-title-margin;
-          }
+        .card-title {
+          margin: $panel-large-vertical-title-margin;
+        }
       }
     }
 
@@ -184,6 +188,7 @@ $panel-deck-card-mr: 2rem;
         display: flex;
         gap: 1rem;
         margin-top: 1.5rem;
+
         .card-link {
           margin-left: 0;
         }
@@ -206,6 +211,7 @@ $panel-deck-card-mr: 2rem;
     img {
       object-fit: cover;
       object-position: center;
+
       + .card-body {
         .card-title {
           margin: $panel-small-vertical-title-margin;
@@ -254,12 +260,13 @@ $panel-deck-card-mr: 2rem;
 
       img {
         aspect-ratio: 1 / 1;
-        + .card-body {
-            margin-left: $panel-small-spacer;
 
-            .card-title {
-              margin-top: 0;
-            }
+        + .card-body {
+          margin-left: $panel-small-spacer;
+
+          .card-title {
+            margin-top: 0;
+          }
         }
       }
 
@@ -280,6 +287,7 @@ $panel-deck-card-mr: 2rem;
 
       .list-link-item-title {
         margin-bottom: spaceUnits(4);
+
         &:has(+ .btn.card-link) {
           margin-bottom: -(spaceUnits(2));
         }
@@ -289,6 +297,7 @@ $panel-deck-card-mr: 2rem;
         display: block;
         width: fit-content;
         margin: 0;
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -328,6 +337,7 @@ $panel-deck-card-mr: 2rem;
     }
   }
 }
+
 //panel informativo horizontal
 .panel-deck {
   .card {
