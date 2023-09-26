@@ -47,12 +47,14 @@ export const TresColumnas = (): JSX.Element => {
 
 export const DosColumnas = (): JSX.Element => {
   return (
-    <div className="access-deck  max-cards-2">
-      <AccessSizesComponent type={type} name={name} />
-      <AccessSizesComponent type={type} name={name} />
-      <AccessSizesComponent type={type} name={name} />
-      <AccessSizesComponent type={type} name={name} />
-      <AccessSizesComponent type={type} name={name} />
+    <div className="container">
+      <div className="access-deck  max-cards-2">
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+      </div>
     </div>
   );
 };

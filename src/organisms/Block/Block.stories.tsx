@@ -16,18 +16,18 @@ export default {
 
 const BUTTON_BLOCK = {
   name: 'Iniciar trámite',
-  className: 'btn btn-lg btn-primary btn-block mt-3',
+  className: 'btn btn-lg btn-primary btn-block',
   url: '#',
   isButton: true
 };
 const BUTTON_BLOCK_LINK = {
   name: 'Iniciar trámite',
-  className: 'btn btn-lg btn-primary btn-block mt-3',
+  className: 'btn btn-lg btn-primary btn-block',
   url: '#'
 };
 const BUTTON_PROGRESS_BAR_BLOCK = {
   name: 'Continuar trámite',
-  className: 'btn btn-lg btn-primary btn-block mt-3',
+  className: 'btn btn-lg btn-primary btn-block',
   url: '#'
 };
 
