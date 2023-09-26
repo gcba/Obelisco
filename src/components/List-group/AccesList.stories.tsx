@@ -6,7 +6,7 @@ import './List-group.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { AccessDeck } from './index';
+import { AccessSizesComponent } from './index';
 
 // Configuración general del componente
 export default {
@@ -14,15 +14,18 @@ export default {
   decorators: [withA11y]
 };
 
+const type = 'item-sm';
+const name = '';
+
 export const CuatroColumnas = (): JSX.Element => {
   return (
     <div className="container">
       <div className="access-deck  max-cards-4">
-        <AccessDeck />
-        <AccessDeck />
-        <AccessDeck />
-        <AccessDeck />
-        <AccessDeck />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
       </div>
     </div>
   );
@@ -32,11 +35,11 @@ export const TresColumnas = (): JSX.Element => {
   return (
     <div className="container">
       <div className="access-deck  max-cards-3">
-        <AccessDeck />
-        <AccessDeck />
-        <AccessDeck />
-        <AccessDeck />
-        <AccessDeck />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
       </div>
     </div>
   );
@@ -45,11 +48,11 @@ export const TresColumnas = (): JSX.Element => {
 export const DosColumnas = (): JSX.Element => {
   return (
     <div className="access-deck  max-cards-2">
-      <AccessDeck />
-      <AccessDeck />
-      <AccessDeck />
-      <AccessDeck />
-      <AccessDeck />
+      <AccessSizesComponent type={type} name={name} />
+      <AccessSizesComponent type={type} name={name} />
+      <AccessSizesComponent type={type} name={name} />
+      <AccessSizesComponent type={type} name={name} />
+      <AccessSizesComponent type={type} name={name} />
     </div>
   );
 };
@@ -58,11 +61,11 @@ export const UnaColumna = (): JSX.Element => {
   return (
     <div className="container">
       <div className="access-deck  max-cards-1">
-        <AccessDeck />
-        <AccessDeck />
-        <AccessDeck />
-        <AccessDeck />
-        <AccessDeck />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
+        <AccessSizesComponent type={type} name={name} />
       </div>
     </div>
   );
