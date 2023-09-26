@@ -881,3 +881,19 @@ button.card {
     }
   }
 }
+
+//Estilos para lista de tarjetas verticales desplazable
+.responsive-scroll {
+  &.vertical-cards-container {
+    min-width: 300px;
+    max-width: 1088px;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    padding: 0.25rem;
+    
+    .card {
+      min-width: 260px;
+      max-width: 328px;
+    }
+  }
+}

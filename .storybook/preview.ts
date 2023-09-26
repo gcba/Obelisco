@@ -50,6 +50,7 @@ const headers = [
   'componentes-tarjetas-tipos',
   'componentes-tarjetas-lista-ancho-completo',
   'componentes-tarjetas-lista-ancho-por-tarjeta',
+  'componentes-tarjetas-lista-desplazable',
   'componentes-tooltip--tooltip',
   'estilos-grilla',
   'estilos-tipografía',
