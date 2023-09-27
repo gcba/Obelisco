@@ -32,7 +32,7 @@ export const AccessBorder = (): JSX.Element => (
 );
 
 AccessBorder.story = {
-  name: 'Con borde'
+  name: 'Estados'
 };
 
 export const AccessDescription = (): JSX.Element => (
