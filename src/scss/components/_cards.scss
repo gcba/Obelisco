@@ -886,17 +886,20 @@ button.card {
 //Estilos para lista de tarjetas verticales desplazable
 .responsive-scroll {
   &.vertical-cards-container {
-    max-width: 1088px;
     border-radius: 0.5rem;
     gap: 1rem;
     padding: 0.25rem 0.25rem 0.75rem;
-    
+
     .card {
       width: 340px;
       min-width: 340px;
+
       @include media-breakpoint-down(xs) {
-        width: 328px;
-        min-width: 300px;
+        min-width: 328px;
+      }
+
+      @media (max-width: 400px) {
+        min-width: 80vw;
       }
     }
   }
