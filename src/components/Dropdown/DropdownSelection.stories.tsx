@@ -16,13 +16,13 @@ export default {
 const checkboxOptions = [
   { value: 'checkOne', label: 'Opción 1' },
   { value: 'checkTwo', label: 'Opción 2' },
-  { value: 'checkThree', label: 'Opción 3' }
+  { value: 'checkThree', label: 'Opción 3', isDisabled: true }
 ];
 
 const radioOptions = [
   { value: 'radioOne', label: 'Opción 1' },
   { value: 'radioTwo', label: 'Opción 2' },
-  { value: 'radioThree', label: 'Opción 3' }
+  { value: 'radioThree', label: 'Opción 3', isDisabled: true }
 ];
 
 export const DropdownSelectionCheckbox = (): JSX.Element => {

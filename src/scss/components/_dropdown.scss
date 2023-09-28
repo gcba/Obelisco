@@ -80,6 +80,7 @@ $animation-toggle: transform 0.2s ease-in-out;
     min-height: 1.875rem;
   }
 }
+
 //fin Mixin styles dropdown form
 
 .dropdown {
@@ -168,6 +169,7 @@ $animation-toggle: transform 0.2s ease-in-out;
       &-sm {
         min-height: 30px;
         padding: 0.1875rem 0.75rem;
+
         .bx,
         .material-icons-round {
           font-size: 21px;
@@ -305,7 +307,8 @@ $animation-toggle: transform 0.2s ease-in-out;
         font-size: 1.5rem;
       }
 
-      &.disabled, &[disabled] {
+      &.disabled,
+      &[disabled] {
         color: $grisulado-300;
         pointer-events: none;
       }
@@ -348,30 +351,41 @@ $animation-toggle: transform 0.2s ease-in-out;
 
       &.item-danger {
         color: $danger;
+
         &:hover {
           box-shadow: 0 0 0 2px $danger;
           color: $danger;
+
           .item-text {
             text-decoration: underline;
           }
         }
+
         &:focus {
           &:hover {
             box-shadow: $dropdown-box-shadow-focus;
             color: $danger;
+
             .item-text {
               text-decoration: underline;
             }
+
             &:active {
               color: $white;
               box-shadow: none;
             }
-            
           }
         }
+
         &:active {
           color: $white;
           background-color: $danger;
+        }
+
+        &.disabled,
+        &[disabled] {
+          color: $grisulado-300;
+          pointer-events: none;
         }
       }
     }
@@ -432,6 +446,7 @@ $animation-toggle: transform 0.2s ease-in-out;
 
         .sub-item {
           @extend .dropdown-item;
+
           @include media-breakpoint-down(sm) {
             padding-left: 2rem !important;
           }
@@ -446,9 +461,10 @@ $animation-toggle: transform 0.2s ease-in-out;
           right: -348px;
 
           &.dropdown-menu-right {
-              right: 348px;
-              .btn-dropdown-icon {
-                transform: rotate(90deg);
+            right: 348px;
+
+            .btn-dropdown-icon {
+              transform: rotate(90deg);
             }
           }
         }
@@ -457,6 +473,7 @@ $animation-toggle: transform 0.2s ease-in-out;
       &.dropdown-menu-right {
         .dropdown-item .item-text {
           text-align: right;
+
           @include media-breakpoint-down(sm) {
             text-align: left;
           }
@@ -522,6 +539,7 @@ $animation-toggle: transform 0.2s ease-in-out;
         &:has(.custom-control-input:focus) {
           .custom-control-label {
             box-shadow: $dropdown-box-shadow-focus;
+
             &:before {
               box-shadow: none;
               outline: none;
@@ -539,12 +557,13 @@ $animation-toggle: transform 0.2s ease-in-out;
 
         &.btn,
         .btn-chip {
-          //estilos de btn-chip para radio
+          // Estilos de btn-chip para radio
           margin: 0;
           min-height: 2.5rem;
 
-          &:has(.btn-check:focus) {
+          &:not(.disabled):has(.btn-check:focus) {
             box-shadow: $dropdown-box-shadow-focus;
+
             &:before {
               box-shadow: none;
               outline: none;

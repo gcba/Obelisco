@@ -1,0 +1,26 @@
+/* === Variable and mixins overides === */
+
+/* === Custom variables and mixins === */
+$card-block-box-shadow: 0 0 0 2px $grisulado-50;
+
+/* === Custom styles === */
+.card.card-block {
+  box-shadow: $card-block-box-shadow;
+
+  .block-title {
+    margin-bottom: 0;
+  }
+
+  .block-text {
+    margin-bottom: 0;
+    margin-top: 0.25rem;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+
+  .progress {
+    margin-top: 1rem;
+  }
+}

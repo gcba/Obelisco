@@ -11,8 +11,6 @@ import {
   AccessBorderComponent,
   AccessIconComponent,
   AccessTypes,
-  AccessListVertical,
-  AccessListHorizontal,
   AccessSizesComponent,
   AccessSizes
 } from '.';
@@ -34,7 +32,7 @@ export const AccessBorder = (): JSX.Element => (
 );
 
 AccessBorder.story = {
-  name: 'Con borde'
+  name: 'Estados'
 };
 
 export const AccessDescription = (): JSX.Element => (
@@ -79,6 +77,7 @@ AccessSizesStory.story = {
   name: 'Tamaños'
 };
 
+/* Se Comenta temporalmente por que se agrega la seccion ancho por columna y por acceso
 export const Horizontal = (): JSX.Element => <AccessListHorizontal />;
 
 export const Vertical = (): JSX.Element => (
@@ -86,3 +85,4 @@ export const Vertical = (): JSX.Element => (
     <AccessListVertical />
   </div>
 );
+*/

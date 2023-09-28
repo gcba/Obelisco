@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { Size, sizeToClass } from '../utils';
 
 export interface Option {
+  isDisabled?: boolean;
   value: string;
   label: string;
 }
@@ -15,7 +16,9 @@ export interface DropdownOptionProps {
   iconType?: 'material' | 'boxicon';
   size?: Size;
   idDropdown?: string;
+  isDisabled?: boolean;
 }
+
 export interface DropdownProps {
   title?: string;
   isBordered?: boolean;
@@ -29,6 +32,7 @@ export interface DropdownProps {
   idDropdown?: string;
   isSubDropdown?: boolean;
 }
+
 export interface DropdownItemsProps {
   title?: string;
   isDanger?: boolean;
@@ -145,7 +149,8 @@ export const DropdownOption = ({
   icon,
   iconType,
   size,
-  idDropdown
+  idDropdown,
+  isDisabled = false
 }: DropdownOptionProps): JSX.Element => {
   const [checkboxStates, setCheckboxStates] = useState<{ [key: string]: boolean }>({});
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -158,8 +163,13 @@ export const DropdownOption = ({
   };
 
   const handleRadioChange = (radioName: string) => {
-    const selectedOption = options.find((option) => option.value === radioName)?.label || null;
-    setSelectedOption(selectedOption);
+    const selectedOption = options.find((option) => option.value === radioName);
+
+    if (selectedOption && selectedOption.isDisabled) {
+      return;
+    }
+
+    setSelectedOption(selectedOption?.label || null);
 
     const updatedCheckboxStates = {};
     options.forEach((option) => {
@@ -198,7 +208,10 @@ export const DropdownOption = ({
           {options.map((option) => (
             <div className={`custom-control ${isRadio ? 'custom-radio' : 'custom-checkbox'}`} key={option.value}>
               {isRadio ? (
-                <label className={`btn btn-chip ${checkboxStates[option.value] ? 'active' : ''}`}>
+                <label
+                  className={`btn btn-chip ${checkboxStates[option.value] ? 'active' : ''} ${
+                    option.isDisabled ? 'disabled' : ''
+                  }`}>
                   <input
                     className="btn-check"
                     type="radio"
@@ -221,6 +234,7 @@ export const DropdownOption = ({
                     value={option.value}
                     checked={checkboxStates[option.value]}
                     onChange={() => handleCheckboxChange(option.value)}
+                    disabled={isDisabled || option.isDisabled}
                   />
                   <label className="custom-control-label" htmlFor={`skills-${option.value}-input`}>
                     {option.label}

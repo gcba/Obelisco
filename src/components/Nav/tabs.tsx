@@ -18,11 +18,13 @@ export interface TabsProps extends NavProps {
 export interface TabsComponentsProps extends NavItemComponentProps, TabsItem {}
 
 const NavItemComponentSlider: React.FC<TabsComponentsProps> = (props: TabsComponentsProps) => {
-  const { name, id, children, disabled, selected, level, iconTabs, hasIcon } = props;
+  const { name, id, children, disabled, selected, level, iconTabs, hasIcon, type } = props;
 
   const isActive = selected === id;
 
   const linkClassName = classnames('nav-link', {
+    'nav-link-sm': type === 'small',
+    'nav-link-lg': type === 'large',
     active: isActive,
     disabled: disabled
   });
