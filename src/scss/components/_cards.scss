@@ -886,6 +886,7 @@ button.card {
 //Estilos para lista de tarjetas verticales desplazable
 .responsive-scroll {
   &.vertical-cards-container {
+    max-width: fit-content;
     border-radius: 0.5rem;
     gap: 1rem;
     padding: 0.25rem 0.25rem 0.75rem;

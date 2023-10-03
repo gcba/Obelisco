@@ -63,7 +63,8 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
 }
 
 .access-deck.access-column {
-  @extend .card-deck.card-column;
+  @extend .card-deck;
+  @extend .card-column;
 }
 
 @include media-breakpoint-down(xs) {
