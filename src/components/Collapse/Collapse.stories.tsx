@@ -18,29 +18,51 @@ export const CollapseUniqueSelection = (): JSX.Element => {
   return (
     <div className="storybook__container-accordion">
       <div className="accordion" id="accordionExample">
-        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne" isOnlySelect={true}>
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseOne"
+          isOnlySelect={true}
+          dataParent="#accordionExample">
           Título
         </Collapse>
-        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseTwo" isOnlySelect={true}>
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseTwo"
+          isOnlySelect={true}
+          dataParent="#accordionExample">
           Título
         </Collapse>
-        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseThree" isOnlySelect={true}>
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseThree"
+          isOnlySelect={true}
+          dataParent="#accordionExample">
           Título
         </Collapse>
       </div>
 
       <br />
-      <h2>Blanco</h2>
-      <br />
 
-      <div className="accordion accordion-white" id="accordionExampleWhite">
-        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOneWhite" isOnlySelect={true}>
+      <div className="accordion accordion-white" id="accordionExampleTwo">
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseFour"
+          isOnlySelect={true}
+          dataParent="#accordionExampleTwo">
           Título
         </Collapse>
-        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseTwoWhite" isOnlySelect={true}>
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseFive"
+          isOnlySelect={true}
+          dataParent="#accordionExampleTwo">
           Título
         </Collapse>
-        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseThreeWhite" isOnlySelect={true}>
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseSix"
+          isOnlySelect={true}
+          dataParent="#accordionExampleTwo">
           Título
         </Collapse>
       </div>
@@ -65,8 +87,6 @@ export const CollapseMultipleSelection = (): JSX.Element => {
         </Collapse>
       </div>
 
-      <br />
-      <h2>Blanco</h2>
       <br />
 
       <div className="accordion accordion-white">
@@ -109,8 +129,6 @@ export const CollapseInformation = (): JSX.Element => {
       </div>
 
       <br />
-      <h3>Blanco</h3>
-      <br />
 
       <div className="accordion accordion-white">
         <Collapse identifier="collapseOneWhite" content={<CollapseContent />}>
@@ -133,8 +151,6 @@ export const CollapseIcon = (): JSX.Element => {
         </Collapse>
       </div>
 
-      <br />
-      <h2>Blanco</h2>
       <br />
 
       <div className="accordion accordion-white">
@@ -160,8 +176,6 @@ export const CollapsableLabelIcon = (): JSX.Element => {
         </Collapse>
       </div>
 
-      <br />
-      <h3>Blanco</h3>
       <br />
 
       <div className="accordion accordion-white">
@@ -248,8 +262,6 @@ export const CollapseList = (): JSX.Element => {
         </Collapse>
       </div>
 
-      <br />
-      <h3>Blanco</h3>
       <br />
 
       <div className="accordion accordion-white">
