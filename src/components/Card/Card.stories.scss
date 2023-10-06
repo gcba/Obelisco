@@ -13,3 +13,7 @@
   width: 500px;
   max-width: 100%;
 }
+
+#root:has(.responsive-scroll.vertical-cards-container) {
+  padding: 30px 15px;
+}

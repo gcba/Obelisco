@@ -53,16 +53,16 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
   .nav-item {
     .nav-link {
-      max-height: 40px;
+      min-height: 40px;
       padding: $nav-link-padding-y $nav-link-padding-x;
 
       &-lg {
-        max-height: 48px;
+        min-height: 48px;
         padding: $nav-link-padding-lg-y $nav-link-padding-x;
       }
 
       &-sm {
-        max-height: 30px;
+        min-height: 30px;
         padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
         font-size: 1rem;
 

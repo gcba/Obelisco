@@ -65,7 +65,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 @mixin card-deck-4 {
   .card,
-  .group-access {
+  .group-access,
+  .list-group-item {
     flex: 1 0 19%;
     margin-top: 0;
 
@@ -77,7 +78,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 @mixin card-deck-3 {
   .card,
-  .group-access {
+  .group-access,
+  .list-group-item {
     flex: 1 0 25%;
     margin-top: 0;
 
@@ -89,7 +91,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 @mixin card-deck-2 {
   .card,
-  .group-access {
+  .group-access,
+  .list-group-item {
     flex: 1 0 35%;
     margin-top: 0;
 
@@ -101,7 +104,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 @mixin card-deck-1 {
   .card,
-  .group-access {
+  .group-access,
+  .list-group-item {
     // Esto es necesario que siempre se vea de a 1 columna en todos los tamaños
     flex: 1 0 55% !important;
     margin-top: 0;
@@ -464,7 +468,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 .card-deck.card-column {
   .card,
-  .group-access {
+  .group-access,
+  .list-group-item {
     max-width: calc(calc(100% / 4) - 30px);
 
     @include media-breakpoint-down(md) {
@@ -483,7 +488,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 .card-deck.max-cards-3.card-column {
   .card,
-  .group-access {
+  .group-access,
+  .list-group-item {
     max-width: calc(calc(100% / 3) - 30px);
 
     @include media-breakpoint-down(sm) {
@@ -498,7 +504,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 .card-deck.max-cards-2.card-column {
   .card,
-  .group-access {
+  .group-access,
+  .list-group-item {
     max-width: calc(calc(100% / 2) - 30px);
 
     @include media-breakpoint-down(xs) {
@@ -509,7 +516,8 @@ $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="htt
 
 .card-deck.max-cards-1.card-column {
   .card,
-  .group-access {
+  .group-access,
+  .list-group-item {
     max-width: calc(calc(100% / 3) - 30px);
 
     &:nth-of-type(-n + 3) {
@@ -608,7 +616,8 @@ button.card {
         grid-template-columns: 1.5rem 1fr auto;
         @include accordion-columns-4;
 
-        i, .material-icons-round {
+        i,
+        .material-icons-round {
           font-size: 1.5rem !important;
           width: 1.5rem;
         }
@@ -869,6 +878,29 @@ button.card {
         .form-radio:checked::before {
           transform: scale(1);
         }
+      }
+    }
+  }
+}
+
+//Estilos para lista de tarjetas verticales desplazable
+.responsive-scroll {
+  &.vertical-cards-container {
+    max-width: fit-content;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    padding: 0.25rem 0.25rem 0.75rem;
+
+    .card {
+      width: 340px;
+      min-width: 340px;
+
+      @include media-breakpoint-down(xs) {
+        min-width: 328px;
+      }
+
+      @media (max-width: 400px) {
+        min-width: 80vw;
       }
     }
   }

@@ -59,6 +59,7 @@ $theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
 @import 'components/spinner';
 @import 'components/panel';
 @import 'components/banner';
+@import 'components/block';
 @import 'components/list-link';
 
 // Custom styles
