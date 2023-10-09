@@ -713,7 +713,6 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
     }
 
     .navbar-toggler {
-      display: inline-block;
       height: 48px;
       width: 48px;
       border: none;
@@ -722,8 +721,8 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
       color: $grisulado-900;
       background: transparent $navbar-toggle-menu no-repeat center center;
 
-      @include media-breakpoint-up(lg) {
-        display: none;
+      @include media-breakpoint-down(md) {
+        display: inline-block;
       }
 
       &:focus,
@@ -751,20 +750,13 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
     .navbar-collapse {
       flex-wrap: wrap;
 
-      @media (min-width: 752px) and (max-width: 976px) {
-        display: none;
-      }
-
       @include media-breakpoint-down(md) {
+        display: none;
         &.show,
         &.collapsing {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          row-gap: 0.5rem;
+          display: block;
           margin-top: 1rem;
           padding: 0.5rem 0;
-          transition-duration: 0.15s;
         }
       }
 
@@ -900,7 +892,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
         @include media-breakpoint-down(md) {
           width: 100%;
           border-top: 1px solid $grisulado-50;
-          margin-top: 0.5rem;
+          margin-top: 1rem;
           padding-top: 1rem;
         }
 
