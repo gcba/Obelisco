@@ -144,7 +144,7 @@ $animation-toggle: transform 0.2s ease-in-out;
       background-color: $white;
       min-height: 40px;
       font-size: 1.125rem;
-      line-height: 1;
+      line-height: 24px;
       padding: $dropdown-btn-padding;
       display: flex;
       align-items: center;
@@ -275,7 +275,7 @@ $animation-toggle: transform 0.2s ease-in-out;
     margin-top: spaceUnits(2);
     border: 0;
     border-radius: spaceUnits(2);
-    box-shadow: $dropdown-box-shadow !important;
+    box-shadow: $dropdown-box-shadow;
     max-width: 340px;
     min-width: 340px;
     width: 100%;
@@ -288,6 +288,7 @@ $animation-toggle: transform 0.2s ease-in-out;
       border-radius: spaceUnits(2);
       padding: $dropdown-item-padding;
       color: $body-color;
+      line-height: 24px;
       white-space: normal;
       text-decoration: none;
       display: flex;
@@ -441,7 +442,7 @@ $animation-toggle: transform 0.2s ease-in-out;
       .sub-dropdown-menu {
         position: static !important;
         transform: none !important;
-        box-shadow: none !important;
+        box-shadow: none;
         margin: 0.25rem 0;
 
         .sub-item {
@@ -453,7 +454,7 @@ $animation-toggle: transform 0.2s ease-in-out;
         }
 
         @include media-breakpoint-up(md) {
-          box-shadow: $dropdown-box-shadow !important;
+          box-shadow: $dropdown-box-shadow;
           margin: 0;
           position: absolute !important;
           top: 0;
