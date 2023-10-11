@@ -758,7 +758,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
   }
 
   /* HEADER V3 */
-  &:has(.header-container) {
+  &.navbar-expand-lg {
     border-bottom: 0.25rem $blue solid;
     height: unset;
     padding: 0.75rem 1rem;
@@ -858,10 +858,10 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
         }
       }
 
-      &:has(.navbar-search, .navbar-sections, .navbar-content-extended) {
+      &:not(:has(.navbar-search,.navbar-sections,.navbar-content-extended)) {
         .navbar-user-mobile {
-          border-top: 1px solid $grisulado-50;
-          padding-top: 1rem;
+          border-top: none;
+          padding-top: 0;
         }
       }
 
@@ -899,6 +899,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
               display: flex;
               flex-wrap: nowrap;
               margin: 0;
+              position: relative;
 
               .input-search {
                 margin: 0;
@@ -988,6 +989,14 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
         width: 100%;
         margin-top: 1rem;
+        border-top: 1px solid $grisulado-50;
+        padding-top: 1rem;
+
+        &.unbordered {
+          border-top: none;
+          padding-top: 0;
+        }
+
         .navbar-user-mobile-title {
           max-width: 328px;
           padding-left: 1rem;
