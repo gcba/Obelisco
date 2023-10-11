@@ -139,6 +139,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 @mixin nav-sections-styles {
   .navbar-sections-title {
     padding-left: 1rem;
+    max-width: 328px;
 
     @include media-breakpoint-up(lg) {
       display: none;
@@ -857,6 +858,13 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
         }
       }
 
+      &:has(.navbar-search, .navbar-sections, .navbar-content-extended) {
+        .navbar-user-mobile {
+          border-top: 1px solid $grisulado-50;
+          padding-top: 1rem;
+        }
+      }
+
       .navbar-content {
         display: flex;
         justify-content: flex-end;
@@ -961,7 +969,6 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
         .navbar-sections {
           width: 100%;
-          max-width: 328px;
           margin-top: 1rem;
           @include nav-sections-styles;
 
@@ -979,16 +986,11 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
           display: none;
         }
 
-        @include media-breakpoint-down(md) {
-          width: 100%;
-          border-top: 1px solid $grisulado-50;
-          margin-top: 1rem;
-          padding-top: 1rem;
-        }
-
+        width: 100%;
+        margin-top: 1rem;
         .navbar-user-mobile-title {
           max-width: 328px;
-          padding-left: 0.75rem;
+          padding-left: 1rem;
         }
 
         .nav-user {
@@ -1004,7 +1006,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
             .nav-link {
               line-height: 24px;
-
+              padding-left: 1rem;
               span {
                 font-size: 1.125rem;
                 @include media-breakpoint-down(md) {
