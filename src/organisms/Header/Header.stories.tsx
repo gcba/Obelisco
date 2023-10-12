@@ -39,7 +39,7 @@ export const SearchNoLoginOneLine = (): JSX.Element => {
   );
 };
 SearchNoLoginOneLine.story = {
-  name: 'No Logueado con 1 línea'
+  name: 'Deslogueado en 1 línea'
 };
 
 export const SearchNoLoginTwoLines = (): JSX.Element => {
@@ -71,7 +71,7 @@ export const SearchNoLoginTwoLines = (): JSX.Element => {
   );
 };
 SearchNoLoginTwoLines.story = {
-  name: 'No Logueado con 2 líneas'
+  name: 'Deslogueado en 2 líneas'
 };
 
 export const SearchLoginOneLine = (): JSX.Element => {
@@ -99,7 +99,7 @@ export const SearchLoginOneLine = (): JSX.Element => {
   );
 };
 SearchLoginOneLine.story = {
-  name: 'Logueado con 1 línea'
+  name: 'Logueado en 1 línea'
 };
 
 export const SearchLoginTwoLines = (): JSX.Element => {
@@ -131,7 +131,7 @@ export const SearchLoginTwoLines = (): JSX.Element => {
   );
 };
 SearchLoginTwoLines.story = {
-  name: 'Logueado con 2 líneas'
+  name: 'Logueado en 2 líneas'
 };
 export const SearchOneLine = (): JSX.Element => {
   return (

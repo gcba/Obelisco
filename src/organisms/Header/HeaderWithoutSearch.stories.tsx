@@ -38,7 +38,7 @@ export const NoLoginOneLine = (): JSX.Element => {
   );
 };
 NoLoginOneLine.story = {
-  name: 'No Logueado con 1 línea'
+  name: 'Deslogueado en 1 línea'
 };
 export const NoLoginTwoLines = (): JSX.Element => {
   return (
@@ -68,7 +68,7 @@ export const NoLoginTwoLines = (): JSX.Element => {
   );
 };
 NoLoginTwoLines.story = {
-  name: 'No Logueado con 2 líneas'
+  name: 'Deslogueado en 2 líneas'
 };
 export const LoginOneLine = (): JSX.Element => {
   return (
@@ -94,7 +94,7 @@ export const LoginOneLine = (): JSX.Element => {
   );
 };
 LoginOneLine.story = {
-  name: 'Logueado con 1 línea'
+  name: 'Logueado en 1 línea'
 };
 export const LoginTwoLines = (): JSX.Element => {
   return (
@@ -122,7 +122,7 @@ export const LoginTwoLines = (): JSX.Element => {
   );
 };
 LoginTwoLines.story = {
-  name: 'Logueado con 2 líneas'
+  name: 'Logueado en 2 líneas'
 };
 
 export const OneLine = (): JSX.Element => {
