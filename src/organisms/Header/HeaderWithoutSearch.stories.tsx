@@ -25,8 +25,8 @@ export const NoLoginOneLine = (): JSX.Element => {
               href="#"
               target="_blank"
               aria-label="Acceder a mi cuenta">
-              <span className="material-icons-round">login</span>
-              <span className="btn-text">Acceder</span>
+              <span className="material-icons-round">person</span>
+              <span className="btn-text">Ingresar</span>
             </a>
           </div>
           <button
@@ -127,8 +127,8 @@ export const NoLoginOneLine = (): JSX.Element => {
                   href="#"
                   target="_blank"
                   aria-label="Acceder a mi cuenta">
-                  <span className="material-icons-round">login</span>
-                  <span className="btn-text">Acceder</span>
+                  <span className="material-icons-round">person</span>
+                  <span className="btn-text">Ingresar</span>
                 </a>
               </div>
             </div>
@@ -155,8 +155,8 @@ export const NoLoginTwoLines = (): JSX.Element => {
               href="#"
               target="_blank"
               aria-label="Acceder a mi cuenta">
-              <span className="material-icons-round">login</span>
-              <span className="btn-text">Acceder</span>
+              <span className="material-icons-round">person</span>
+              <span className="btn-text">Ingresar</span>
             </a>
           </div>
           <button
@@ -175,8 +175,8 @@ export const NoLoginTwoLines = (): JSX.Element => {
                   href="#"
                   target="_blank"
                   aria-label="Acceder a mi cuenta">
-                  <span className="material-icons-round">login</span>
-                  <span className="btn-text">Acceder</span>
+                  <span className="material-icons-round">person</span>
+                  <span className="btn-text">Ingresar</span>
                 </a>
               </div>
             </div>

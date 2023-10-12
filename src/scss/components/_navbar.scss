@@ -833,7 +833,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
       margin-right: 1rem;
 
       @media (max-width: 290px) {
-        margin-right: 0.5rem;
+        margin-right: 0.25rem;
       }
       @include media-breakpoint-up(lg) {
         display: none;
