@@ -155,8 +155,14 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
     .nav-link {
       line-height: 24px;
+      display: flex;
+      align-items: center;
+      column-gap: 0.25rem;
       span {
         font-size: 1.125rem;
+      }
+      .material-icons-round, .bx {
+        font-size: 1.5rem;
       }
       @include nav-link-states;
     }
@@ -1016,13 +1022,17 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
             .nav-link {
               line-height: 24px;
               padding-left: 1rem;
+              display: flex;
+              align-items: center;
+              column-gap: 0.25rem;
+              
               span {
                 font-size: 1.125rem;
                 @include media-breakpoint-down(md) {
                   font-size: 1rem;
                 }
 
-                &.material-icons-round {
+                &.material-icons-round, &.bx {
                   font-size: 1.5rem;
                 }
               }
