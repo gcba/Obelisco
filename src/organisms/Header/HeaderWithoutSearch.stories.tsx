@@ -6,7 +6,7 @@ import './Header.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Constants
-import { buttonToggler, logo, Login, user, userMobile, NavSection, dropdownItem, navItem } from '.';
+import { BUTTON_TOGGLER, Login, LOGO, USER, USER_MOBILE, DROPDOWN_ITEM, NAV_ITEM, NavSection } from '.';
 
 // Configuración general del componente
 export default {
@@ -19,15 +19,15 @@ export const NoLoginOneLine = (): JSX.Element => {
     <div className="storybook__container-header">
       <header className="navbar navbar-light navbar-expand-lg">
         <div className="container header-container">
-          {logo}
+          {LOGO}
           <Login isMobile={true}></Login>
-          {buttonToggler}
+          {BUTTON_TOGGLER}
           <div className="collapse navbar-collapse" id="navbarContent">
             <div className="navbar-content">
               <NavSection>
-                {dropdownItem}
-                {navItem}
-                {dropdownItem}
+                {DROPDOWN_ITEM}
+                {NAV_ITEM}
+                {DROPDOWN_ITEM}
               </NavSection>
               <Login></Login>
             </div>
@@ -45,21 +45,21 @@ export const NoLoginTwoLines = (): JSX.Element => {
     <div className="storybook__container-header">
       <header className="navbar navbar-light navbar-expand-lg">
         <div className="container header-container">
-          {logo}
+          {LOGO}
           <Login isMobile={true}></Login>
-          {buttonToggler}
+          {BUTTON_TOGGLER}
           <div className="collapse navbar-collapse" id="navbarContent">
             <div className="navbar-content">
               <Login></Login>
             </div>
             <NavSection isExtended={true}>
-              {dropdownItem}
-              {navItem}
-              {navItem}
-              {dropdownItem}
-              {navItem}
-              {navItem}
-              {navItem}
+              {DROPDOWN_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+              {DROPDOWN_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
             </NavSection>
           </div>
         </div>
@@ -75,18 +75,18 @@ export const LoginOneLine = (): JSX.Element => {
     <div className="storybook__container-header">
       <header className="navbar navbar-light navbar-expand-lg">
         <div className="container header-container">
-          {logo}
-          {buttonToggler}
+          {LOGO}
+          {BUTTON_TOGGLER}
           <div className="collapse navbar-collapse" id="navbarContent">
             <div className="navbar-content">
               <NavSection>
-                {dropdownItem}
-                {navItem}
-                {dropdownItem}
+                {DROPDOWN_ITEM}
+                {NAV_ITEM}
+                {DROPDOWN_ITEM}
               </NavSection>
-              {user}
+              {USER}
             </div>
-            {userMobile}
+            {USER_MOBILE}
           </div>
         </div>
       </header>
@@ -101,20 +101,20 @@ export const LoginTwoLines = (): JSX.Element => {
     <div className="storybook__container-header">
       <header className="navbar navbar-light navbar-expand-lg">
         <div className="container header-container">
-          {logo}
-          {buttonToggler}
+          {LOGO}
+          {BUTTON_TOGGLER}
           <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">{user}</div>
+            <div className="navbar-content">{USER}</div>
             <NavSection isExtended={true}>
-              {dropdownItem}
-              {navItem}
-              {navItem}
-              {dropdownItem}
-              {navItem}
-              {navItem}
-              {navItem}
+              {DROPDOWN_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+              {DROPDOWN_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
             </NavSection>
-            {userMobile}
+            {USER_MOBILE}
           </div>
         </div>
       </header>
@@ -130,17 +130,17 @@ export const OneLine = (): JSX.Element => {
     <div className="storybook__container-header">
       <header className="navbar navbar-light navbar-expand-lg">
         <div className="container header-container">
-          {logo}
-          {buttonToggler}
+          {LOGO}
+          {BUTTON_TOGGLER}
           <div className="collapse navbar-collapse" id="navbarContent">
             <div className="navbar-content">
               <NavSection>
-                {navItem}
-                {dropdownItem}
-                {navItem}
-                {dropdownItem}
-                {navItem}
-                {navItem}
+                {NAV_ITEM}
+                {DROPDOWN_ITEM}
+                {NAV_ITEM}
+                {DROPDOWN_ITEM}
+                {NAV_ITEM}
+                {NAV_ITEM}
               </NavSection>
             </div>
           </div>

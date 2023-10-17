@@ -8,7 +8,7 @@ interface LoginProps {
   isMobile?: boolean;
 }
 
-export const dropdownItem = (
+export const DROPDOWN_ITEM = (
   <li className="dropdown">
     <button
       type="button"
@@ -46,7 +46,7 @@ export const dropdownItem = (
   </li>
 );
 
-export const navItem = (
+export const NAV_ITEM = (
   <li className="nav-item">
     <a className="nav-link nav-link-lg" href="#">
       <span>Navegación</span>
@@ -65,13 +65,13 @@ export const NavSection: React.FC<SectionsProps> = ({ children, isExtended }) =>
   );
 };
 
-export const logo = (
+export const LOGO = (
   <a href="https://buenosaires.gob.ar" className="navbar-brand">
     <img className="header-logo" src="header/logotipo_ba.svg" alt="Inicio" />
   </a>
 );
 
-export const buttonToggler = (
+export const BUTTON_TOGGLER = (
   <button
     className="navbar-toggler"
     type="button"
@@ -82,7 +82,7 @@ export const buttonToggler = (
     aria-label="Toggle navigation"></button>
 );
 
-export const search = (
+export const SEARCH = (
   <div className="navbar-search">
     <form className="form-search">
       <div className="form-group">
@@ -114,7 +114,7 @@ export const Login: React.FC<LoginProps> = ({ isMobile }) => {
   );
 };
 
-export const user = (
+export const USER = (
   <div className="navbar-user">
     <div className="dropdown">
       <button
@@ -149,7 +149,7 @@ export const user = (
   </div>
 );
 
-export const userMobile = (
+export const USER_MOBILE = (
   <div className="navbar-user-mobile">
     <nav>
       <h3 className="navbar-user-mobile-title">Perfil</h3>
