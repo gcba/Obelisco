@@ -139,7 +139,6 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 @mixin nav-sections-styles {
   .navbar-sections-title {
     padding-left: 1rem;
-    max-width: 328px;
 
     @include media-breakpoint-up(lg) {
       display: none;
@@ -173,7 +172,6 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
     }
 
     @include media-breakpoint-down(md) {
-      max-width: 328px;
       flex-direction: column;
       row-gap: 0.5rem;
 
@@ -765,12 +763,37 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
   /* HEADER V3 */
   &.navbar-expand-lg {
-    border-bottom: 0.25rem $blue solid;
+    border-bottom: 0.25rem solid $blue;
     height: unset;
     padding: 0.75rem 1rem;
 
     @include media-breakpoint-up(lg) {
       padding: 0.875rem 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      &:has(.navbar-collapse.show, .navbar-collapse.collapsing) {
+        border-bottom: none;
+        padding: 0;
+        
+        .header-container {
+          padding: 0.75rem 1rem;
+          z-index: 1050;
+          background-color: $white;
+          border-bottom: 0.25rem solid $white;
+        }
+
+        .header-backdrop {
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1040;
+          width: 100%;
+          height: 100%;
+          background-color: $black;
+          opacity: 0.25;
+        }
+      }
     }
   }
 
@@ -779,6 +802,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
     @include media-breakpoint-down(md) {
       padding: 0;
+      max-width: 100%;
       align-items: center;
     }
 
@@ -790,6 +814,11 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
       max-width: $navbar-container-width;
       padding-left: $navbar-container-padding-x;
       padding-right: $navbar-container-padding-x;
+    }
+
+    @media(min-width: 1366px) {
+      max-width: 100%;
+      margin: 0;
     }
 
     .navbar-brand {
@@ -854,7 +883,14 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
         &.show,
         &.collapsing {
           display: block;
-          padding: 0.5rem 0 0.25rem;
+          padding: 0 1rem 0.25rem;
+          position: absolute;
+          top: 76px;
+          left: 0px;
+          z-index: 1050;
+          background-color: $white;
+          width: 100%;
+          border-bottom: 0.25rem solid $blue;
         }
       }
 
@@ -893,8 +929,8 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
           @include media-breakpoint-down(md) {
             max-width: 100%;
             padding: 0 2px;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
+            margin-top: 0.25rem;
+            margin-bottom: 1rem;
           }
 
           .form-search {
@@ -976,7 +1012,8 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
         .navbar-sections {
           width: 100%;
-          margin-top: 1rem;
+          margin-top: 0.25rem;
+          margin-bottom: 1rem;
           @include nav-sections-styles;
 
           @include media-breakpoint-up(lg) {
@@ -984,6 +1021,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
             min-width: 451px;
             max-width: 990px;
             margin-top: 0;
+            margin-bottom: 0;
           }
         }
       }
@@ -994,7 +1032,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
         }
 
         width: 100%;
-        margin-top: 1rem;
+        margin-bottom: 1rem;
         border-top: 1px solid $grisulado-50;
         padding-top: 1rem;
 
@@ -1004,12 +1042,10 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
         }
 
         .navbar-user-mobile-title {
-          max-width: 328px;
           padding-left: 1rem;
         }
 
         .nav-user {
-          max-width: 328px;
           margin-top: 0;
           row-gap: 0.5rem;
 
@@ -1068,7 +1104,8 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
       .navbar-content-extended {
         margin-right: 0;
-        margin-top: 1rem;
+        margin-top: 0.25rem;
+        margin-bottom: 1rem;
         width: 100%;
         @include nav-sections-styles;
 
@@ -1076,6 +1113,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
           width: 100%;
           max-width: 1113px;
           margin-top: 2rem;
+          margin-bottom: 0;
           position: relative;
           left: -100px;
           margin-right: auto;

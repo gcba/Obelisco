@@ -33,6 +33,7 @@ export const NoLoginOneLine = (): JSX.Element => {
             </div>
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
@@ -63,6 +64,7 @@ export const NoLoginTwoLines = (): JSX.Element => {
             </NavSection>
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
@@ -89,6 +91,7 @@ export const LoginOneLine = (): JSX.Element => {
             {USER_MOBILE}
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
@@ -117,6 +120,7 @@ export const LoginTwoLines = (): JSX.Element => {
             {USER_MOBILE}
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
@@ -145,6 +149,7 @@ export const OneLine = (): JSX.Element => {
             </div>
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );

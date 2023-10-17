@@ -34,6 +34,7 @@ export const SearchNoLoginOneLine = (): JSX.Element => {
             </div>
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
@@ -66,6 +67,7 @@ export const SearchNoLoginTwoLines = (): JSX.Element => {
             </NavSection>
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
@@ -94,6 +96,7 @@ export const SearchLoginOneLine = (): JSX.Element => {
             {USER_MOBILE}
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
@@ -126,6 +129,7 @@ export const SearchLoginTwoLines = (): JSX.Element => {
             {USER_MOBILE}
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
@@ -152,6 +156,7 @@ export const SearchOneLine = (): JSX.Element => {
             </div>
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
