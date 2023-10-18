@@ -5,117 +5,155 @@ import './Header.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
+// Constants
+import { BUTTON_TOGGLER, Login, LOGO, USER, USER_MOBILE, DROPDOWN_ITEM, NAV_ITEM, NavSection } from '.';
+
 // Configuración general del componente
 export default {
   title: 'Organismos|Header (encabezado)/Sin buscador',
   decorators: [withA11y]
 };
 
-export const HeaderNoLoginSearch = (): JSX.Element => {
+export const NoLoginOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-md">
-        <div className="container">
-          <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
-          </a>
-          <button
-            className="navbar-toggler collapsed"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="nav nav-pills">
-              <li className="nav-item">
-                <a href="#" className="nav-link active">
-                  <span>Sección 1</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <span>Sección 2</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="btn btn-link">
-                  <span>Accedé a tu cuenta</span>
-                </a>
-              </li>
-            </ul>
+      <header className="navbar navbar-light navbar-expand-lg">
+        <div className="container header-container">
+          {LOGO}
+          <Login isMobile={true}></Login>
+          {BUTTON_TOGGLER}
+          <div className="collapse navbar-collapse" id="navbarContent">
+            <div className="navbar-content">
+              <NavSection>
+                {DROPDOWN_ITEM}
+                {NAV_ITEM}
+                {DROPDOWN_ITEM}
+              </NavSection>
+              <Login></Login>
+            </div>
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
 };
-
-HeaderNoLoginSearch.story = {
-  name: 'No logueado'
+NoLoginOneLine.story = {
+  name: 'Deslogueado en 1 línea'
 };
-
-export const HeaderLoginSearch = (): JSX.Element => {
+export const NoLoginTwoLines = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-md">
-        <div className="container">
-          <a href="#" className="navbar-brand">
-            <img className="header-logo" src="header/logotipo_ba.svg" alt="Logo de la Ciudad de Buenos Aires" />
-          </a>
-          <button
-            className="navbar-toggler collapsed"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="nav nav-pills">
-              <li className="nav-item">
-                <a href="#" className="nav-link active">
-                  <span>Sección 1</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <span>Sección 2</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <span>Sección 3</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
-                  <span>Sección 4</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a href="#" aria-label="Notificaciones" className="nav-link notifications">
-                  <span className="material-icons-round">notifications</span>
-                  <span>Notificaciones</span>
-                </a>
-              </li>
-              <li className="nav-item d-responsive-logout">
-                <a href="#" aria-label="Cerrar sesión" className="list-group-item list-group-item-logout logout-sm">
-                  &nbsp;
-                </a>
-                <a href="#" aria-label="Cerrar sesión" className=" list-group-item-logout logout-sm logout">
-                  <span>Cerrar sesión</span>
-                </a>
-              </li>
-            </ul>
+      <header className="navbar navbar-light navbar-expand-lg">
+        <div className="container header-container">
+          {LOGO}
+          <Login isMobile={true}></Login>
+          {BUTTON_TOGGLER}
+          <div className="collapse navbar-collapse" id="navbarContent">
+            <div className="navbar-content">
+              <Login></Login>
+            </div>
+            <NavSection isExtended={true}>
+              {DROPDOWN_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+              {DROPDOWN_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+            </NavSection>
           </div>
         </div>
+        <div className="header-backdrop"></div>
       </header>
     </div>
   );
 };
+NoLoginTwoLines.story = {
+  name: 'Deslogueado en 2 líneas'
+};
+export const LoginOneLine = (): JSX.Element => {
+  return (
+    <div className="storybook__container-header">
+      <header className="navbar navbar-light navbar-expand-lg">
+        <div className="container header-container">
+          {LOGO}
+          {BUTTON_TOGGLER}
+          <div className="collapse navbar-collapse" id="navbarContent">
+            <div className="navbar-content">
+              <NavSection>
+                {DROPDOWN_ITEM}
+                {NAV_ITEM}
+                {DROPDOWN_ITEM}
+              </NavSection>
+              {USER}
+            </div>
+            {USER_MOBILE}
+          </div>
+        </div>
+        <div className="header-backdrop"></div>
+      </header>
+    </div>
+  );
+};
+LoginOneLine.story = {
+  name: 'Logueado en 1 línea'
+};
+export const LoginTwoLines = (): JSX.Element => {
+  return (
+    <div className="storybook__container-header">
+      <header className="navbar navbar-light navbar-expand-lg">
+        <div className="container header-container">
+          {LOGO}
+          {BUTTON_TOGGLER}
+          <div className="collapse navbar-collapse" id="navbarContent">
+            <div className="navbar-content">{USER}</div>
+            <NavSection isExtended={true}>
+              {DROPDOWN_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+              {DROPDOWN_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+              {NAV_ITEM}
+            </NavSection>
+            {USER_MOBILE}
+          </div>
+        </div>
+        <div className="header-backdrop"></div>
+      </header>
+    </div>
+  );
+};
+LoginTwoLines.story = {
+  name: 'Logueado en 2 líneas'
+};
 
-HeaderLoginSearch.story = {
-  name: 'Logueado'
+export const OneLine = (): JSX.Element => {
+  return (
+    <div className="storybook__container-header">
+      <header className="navbar navbar-light navbar-expand-lg">
+        <div className="container header-container">
+          {LOGO}
+          {BUTTON_TOGGLER}
+          <div className="collapse navbar-collapse" id="navbarContent">
+            <div className="navbar-content">
+              <NavSection>
+                {NAV_ITEM}
+                {DROPDOWN_ITEM}
+                {NAV_ITEM}
+                {DROPDOWN_ITEM}
+                {NAV_ITEM}
+                {NAV_ITEM}
+              </NavSection>
+            </div>
+          </div>
+        </div>
+        <div className="header-backdrop"></div>
+      </header>
+    </div>
+  );
+};
+OneLine.story = {
+  name: 'Sin logueo'
 };
