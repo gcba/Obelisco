@@ -156,13 +156,13 @@ export const Instalacion = (): JSX.Element => (
       <p>Un ejemplo de cómo importalas es:</p>
       <pre className="code-box">
         <code>
-          &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js&quot;
+          integrity=&quot;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&quot;
+          crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
           <br />
-          &lt;script
-          src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js&quot;&gt;&lt;/script&gt;
-          <br />
-          &lt;script
-          src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js&quot;
+          integrity=&quot;sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct&quot;
+          crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
         </code>
       </pre>
       <br />
