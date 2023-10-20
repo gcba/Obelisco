@@ -57,7 +57,7 @@ export const NAV_ITEM = (
 export const NavSection: React.FC<SectionsProps> = ({ children, isExtended }) => {
   return (
     <div className={isExtended ? `navbar-content-extended` : `navbar-sections`}>
-      <nav aria-label={isExtended ? `sections-extended` : `sections`}>
+      <nav>
         <h3 className="navbar-sections-title">Secciones</h3>
         <ul className="nav nav-pills nav-sections">{children}</ul>
       </nav>
@@ -67,7 +67,7 @@ export const NavSection: React.FC<SectionsProps> = ({ children, isExtended }) =>
 
 export const LOGO = (
   <a href="https://buenosaires.gob.ar" className="navbar-brand">
-    <img className="header-logo" src="header/logotipo_ba.svg" alt="Inicio" />
+    <img className="header-logo" src="header/logotipo_ba.svg" alt="Gobierno de la Ciudad de Buenos Aires - Inicio" />
   </a>
 );
 
@@ -79,7 +79,7 @@ export const BUTTON_TOGGLER = (
     data-target="#navbarContent"
     aria-controls="navbarContent"
     aria-expanded="false"
-    aria-label="Toggle navigation"></button>
+    aria-label="Menú"></button>
 );
 
 export const SEARCH = (
@@ -106,7 +106,7 @@ export const SEARCH = (
 export const Login: React.FC<LoginProps> = ({ isMobile }) => {
   return (
     <div className={isMobile ? `navbar-login-mobile` : `navbar-login`}>
-      <a className="btn btn-lg btn-icon btn-outline-link" href="#" target="_blank" aria-label="Acceder a mi cuenta">
+      <a className="btn btn-lg btn-icon btn-outline-link" href="#" target="_blank">
         <span className="material-icons-round">person</span>
         <span className="btn-text">Ingresar</span>
       </a>
