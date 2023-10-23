@@ -5,8 +5,8 @@ import './Header.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Constants
-import { BUTTON_TOGGLER, Login, LOGO, USER, USER_MOBILE, DROPDOWN_ITEM, NAV_ITEM, NavSection } from '.';
+// Component and Constants
+import { Header, SECTIONS_FIRST_LINE, SECTIONS_SECOND_LINE, SECTIONS_NO_SEARCH } from '.';
 
 // Configuración general del componente
 export default {
@@ -17,24 +17,8 @@ export default {
 export const NoLoginOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          <Login isMobile={true}></Login>
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">
-              <NavSection>
-                {DROPDOWN_ITEM}
-                {NAV_ITEM}
-                {DROPDOWN_ITEM}
-              </NavSection>
-              <Login></Login>
-            </div>
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header hasLogin sections={SECTIONS_FIRST_LINE}></Header>
+      <main id="main"></main>
     </div>
   );
 };
@@ -44,28 +28,8 @@ NoLoginOneLine.story = {
 export const NoLoginTwoLines = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          <Login isMobile={true}></Login>
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">
-              <Login></Login>
-            </div>
-            <NavSection isExtended={true}>
-              {DROPDOWN_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-              {DROPDOWN_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-            </NavSection>
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header hasLogin sections={SECTIONS_SECOND_LINE} isSectionExtended></Header>
+      <main id="main"></main>
     </div>
   );
 };
@@ -75,24 +39,8 @@ NoLoginTwoLines.story = {
 export const LoginOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">
-              <NavSection>
-                {DROPDOWN_ITEM}
-                {NAV_ITEM}
-                {DROPDOWN_ITEM}
-              </NavSection>
-              {USER}
-            </div>
-            {USER_MOBILE}
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header hasProfile sections={SECTIONS_FIRST_LINE}></Header>
+      <main id="main"></main>
     </div>
   );
 };
@@ -102,26 +50,8 @@ LoginOneLine.story = {
 export const LoginTwoLines = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">{USER}</div>
-            <NavSection isExtended={true}>
-              {DROPDOWN_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-              {DROPDOWN_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-            </NavSection>
-            {USER_MOBILE}
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header hasProfile sections={SECTIONS_SECOND_LINE} isSectionExtended></Header>
+      <main id="main"></main>
     </div>
   );
 };
@@ -132,25 +62,8 @@ LoginTwoLines.story = {
 export const OneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">
-              <NavSection>
-                {NAV_ITEM}
-                {DROPDOWN_ITEM}
-                {NAV_ITEM}
-                {DROPDOWN_ITEM}
-                {NAV_ITEM}
-                {NAV_ITEM}
-              </NavSection>
-            </div>
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header sections={SECTIONS_NO_SEARCH}></Header>
+      <main id="main"></main>
     </div>
   );
 };

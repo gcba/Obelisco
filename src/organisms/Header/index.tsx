@@ -8,6 +8,14 @@ interface LoginProps {
   isMobile?: boolean;
 }
 
+interface HeaderProps {
+  hasLogin?: boolean;
+  hasProfile?: boolean;
+  hasSearch?: boolean;
+  isSectionExtended?: boolean;
+  sections?: React.ReactNode;
+}
+
 export const DROPDOWN_ITEM = (
   <li className="dropdown">
     <button
@@ -187,3 +195,77 @@ export const USER_MOBILE = (
     </nav>
   </div>
 );
+
+export const SECTIONS_FIRST_LINE = (
+  <NavSection>
+    {DROPDOWN_ITEM}
+    {NAV_ITEM}
+    {DROPDOWN_ITEM}
+  </NavSection>
+);
+
+export const SECTIONS_SECOND_LINE = (
+  <NavSection isExtended={true}>
+    {DROPDOWN_ITEM}
+    {NAV_ITEM}
+    {NAV_ITEM}
+    {DROPDOWN_ITEM}
+    {NAV_ITEM}
+    {NAV_ITEM}
+    {NAV_ITEM}
+  </NavSection>
+);
+export const SECTIONS_SEARCH = (
+  <NavSection>
+    {DROPDOWN_ITEM}
+    {NAV_ITEM}
+    {DROPDOWN_ITEM}
+    {NAV_ITEM}
+  </NavSection>
+);
+export const SECTIONS_NO_SEARCH = (
+  <NavSection>
+    {NAV_ITEM}
+    {DROPDOWN_ITEM}
+    {NAV_ITEM}
+    {DROPDOWN_ITEM}
+    {NAV_ITEM}
+    {NAV_ITEM}
+  </NavSection>
+);
+
+export const Header: React.FC<HeaderProps> = ({ hasLogin, hasProfile, hasSearch, isSectionExtended, sections }) => {
+  const shouldShowButtonToggler = hasSearch || hasProfile || sections;
+  const shouldShowNavbarContent =
+    hasSearch || hasLogin || hasProfile || isSectionExtended === undefined || !isSectionExtended;
+
+  return (
+    <header className="navbar navbar-light navbar-expand-lg" role="banner">
+      <a href="#main" className="skip-to-main-content-link">
+        Ir al contenido principal
+      </a>
+      <div className="container header-container">
+        {LOGO}
+        {hasLogin && <Login isMobile={true}></Login>}
+        {(hasSearch || hasLogin || hasProfile || sections) && (
+          <>
+            {shouldShowButtonToggler && BUTTON_TOGGLER}
+            <div className="collapse navbar-collapse" id="navbarContent">
+              {shouldShowNavbarContent && (
+                <div className="navbar-content">
+                  {sections && (!isSectionExtended || isSectionExtended === undefined) && sections}
+                  {hasSearch && SEARCH}
+                  {hasLogin && <Login></Login>}
+                  {hasProfile && USER}
+                </div>
+              )}
+              {isSectionExtended && sections}
+              {hasProfile && USER_MOBILE}
+            </div>
+          </>
+        )}
+      </div>
+      <div className="header-backdrop"></div>
+    </header>
+  );
+};

@@ -5,8 +5,8 @@ import './Header.stories.scss';
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
 
-// Constants
-import { BUTTON_TOGGLER, Login, LOGO, SEARCH, USER, USER_MOBILE, DROPDOWN_ITEM, NAV_ITEM, NavSection } from '.';
+// Component and Constants
+import { Header, SECTIONS_FIRST_LINE, SECTIONS_SECOND_LINE, SECTIONS_SEARCH } from '.';
 
 // Configuración general del componente
 export default {
@@ -17,25 +17,8 @@ export default {
 export const SearchNoLoginOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          <Login isMobile={true}></Login>
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">
-              <NavSection>
-                {DROPDOWN_ITEM}
-                {NAV_ITEM}
-                {DROPDOWN_ITEM}
-              </NavSection>
-              {SEARCH}
-              <Login></Login>
-            </div>
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header hasLogin hasSearch sections={SECTIONS_FIRST_LINE}></Header>
+      <main id="main"></main>
     </div>
   );
 };
@@ -46,29 +29,8 @@ SearchNoLoginOneLine.story = {
 export const SearchNoLoginTwoLines = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          <Login isMobile={true}></Login>
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">
-              {SEARCH}
-              <Login></Login>
-            </div>
-            <NavSection isExtended={true}>
-              {DROPDOWN_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-              {DROPDOWN_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-            </NavSection>
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header hasLogin hasSearch sections={SECTIONS_SECOND_LINE} isSectionExtended={true}></Header>
+      <main id="main"></main>
     </div>
   );
 };
@@ -79,25 +41,8 @@ SearchNoLoginTwoLines.story = {
 export const SearchLoginOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">
-              <NavSection>
-                {DROPDOWN_ITEM}
-                {NAV_ITEM}
-                {DROPDOWN_ITEM}
-              </NavSection>
-              {SEARCH}
-              {USER}
-            </div>
-            {USER_MOBILE}
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header hasProfile hasSearch sections={SECTIONS_FIRST_LINE}></Header>
+      <main id="main"></main>
     </div>
   );
 };
@@ -108,29 +53,8 @@ SearchLoginOneLine.story = {
 export const SearchLoginTwoLines = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">
-              {SEARCH}
-              {USER}
-            </div>
-            <NavSection isExtended={true}>
-              {DROPDOWN_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-              {DROPDOWN_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-              {NAV_ITEM}
-            </NavSection>
-            {USER_MOBILE}
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header hasProfile hasSearch sections={SECTIONS_SECOND_LINE} isSectionExtended></Header>
+      <main id="main"></main>
     </div>
   );
 };
@@ -140,24 +64,8 @@ SearchLoginTwoLines.story = {
 export const SearchOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
-      <header className="navbar navbar-light navbar-expand-lg">
-        <div className="container header-container">
-          {LOGO}
-          {BUTTON_TOGGLER}
-          <div className="collapse navbar-collapse" id="navbarContent">
-            <div className="navbar-content">
-              <NavSection>
-                {DROPDOWN_ITEM}
-                {NAV_ITEM}
-                {DROPDOWN_ITEM}
-                {NAV_ITEM}
-              </NavSection>
-              {SEARCH}
-            </div>
-          </div>
-        </div>
-        <div className="header-backdrop"></div>
-      </header>
+      <Header hasSearch sections={SECTIONS_SEARCH}></Header>
+      <main id="main"></main>
     </div>
   );
 };
