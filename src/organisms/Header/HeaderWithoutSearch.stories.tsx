@@ -18,7 +18,6 @@ export const NoLoginOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header hasLogin sections={SECTIONS_FIRST_LINE}></Header>
-      <main id="main"></main>
     </div>
   );
 };
@@ -29,7 +28,6 @@ export const NoLoginTwoLines = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header hasLogin sections={SECTIONS_SECOND_LINE} isSectionExtended></Header>
-      <main id="main"></main>
     </div>
   );
 };
@@ -40,7 +38,6 @@ export const LoginOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header hasProfile sections={SECTIONS_FIRST_LINE}></Header>
-      <main id="main"></main>
     </div>
   );
 };
@@ -51,7 +48,6 @@ export const LoginTwoLines = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header hasProfile sections={SECTIONS_SECOND_LINE} isSectionExtended></Header>
-      <main id="main"></main>
     </div>
   );
 };
@@ -63,7 +59,6 @@ export const OneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header sections={SECTIONS_NO_SEARCH}></Header>
-      <main id="main"></main>
     </div>
   );
 };

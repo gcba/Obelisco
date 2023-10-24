@@ -18,7 +18,6 @@ export const SearchNoLoginOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header hasLogin hasSearch sections={SECTIONS_FIRST_LINE}></Header>
-      <main id="main"></main>
     </div>
   );
 };
@@ -30,7 +29,6 @@ export const SearchNoLoginTwoLines = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header hasLogin hasSearch sections={SECTIONS_SECOND_LINE} isSectionExtended={true}></Header>
-      <main id="main"></main>
     </div>
   );
 };
@@ -42,7 +40,6 @@ export const SearchLoginOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header hasProfile hasSearch sections={SECTIONS_FIRST_LINE}></Header>
-      <main id="main"></main>
     </div>
   );
 };
@@ -54,7 +51,6 @@ export const SearchLoginTwoLines = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header hasProfile hasSearch sections={SECTIONS_SECOND_LINE} isSectionExtended></Header>
-      <main id="main"></main>
     </div>
   );
 };
@@ -65,7 +61,6 @@ export const SearchOneLine = (): JSX.Element => {
   return (
     <div className="storybook__container-header">
       <Header hasSearch sections={SECTIONS_SEARCH}></Header>
-      <main id="main"></main>
     </div>
   );
 };
