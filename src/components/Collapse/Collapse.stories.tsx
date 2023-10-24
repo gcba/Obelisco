@@ -14,39 +14,95 @@ export default {
 const COLLAPSE_DESCRIPTION =
   'Esta es la descripción que se encuentra dentro de un colapsable. Recomendamos no utilizar demasiado texto, para generar una lectura óptima.';
 
-export const CollapseUniqueSelection = (): JSX.Element => (
-  <div className="storybook__container-accordion">
-    <div className="accordion" id="accordionExample">
-      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne" isOnlySelect={true}>
-        Título
-      </Collapse>
-      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseTwo" isOnlySelect={true}>
-        Título
-      </Collapse>
-      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseThree" isOnlySelect={true}>
-        Título
-      </Collapse>
+export const CollapseUniqueSelection = (): JSX.Element => {
+  return (
+    <div className="storybook__container-accordion">
+      <div className="accordion" id="accordionExample">
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseOne"
+          isOnlySelect={true}
+          dataParent="#accordionExample">
+          Título
+        </Collapse>
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseTwo"
+          isOnlySelect={true}
+          dataParent="#accordionExample">
+          Título
+        </Collapse>
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseThree"
+          isOnlySelect={true}
+          dataParent="#accordionExample">
+          Título
+        </Collapse>
+      </div>
+
+      <br />
+
+      <div className="accordion accordion-white" id="accordionExampleTwo">
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseFour"
+          isOnlySelect={true}
+          dataParent="#accordionExampleTwo">
+          Título
+        </Collapse>
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseFive"
+          isOnlySelect={true}
+          dataParent="#accordionExampleTwo">
+          Título
+        </Collapse>
+        <Collapse
+          description={COLLAPSE_DESCRIPTION}
+          identifier="collapseSix"
+          isOnlySelect={true}
+          dataParent="#accordionExampleTwo">
+          Título
+        </Collapse>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 CollapseUniqueSelection.story = { name: 'Selección única' };
 
-export const CollapseMultipleSelection = (): JSX.Element => (
-  <div className="storybook__container-accordion">
-    <div className="accordion">
-      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne">
-        Título
-      </Collapse>
-      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseTwo">
-        Título
-      </Collapse>
-      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseThree">
-        Título
-      </Collapse>
+export const CollapseMultipleSelection = (): JSX.Element => {
+  return (
+    <div className="storybook__container-accordion">
+      <div className="accordion">
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne">
+          Título
+        </Collapse>
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseTwo">
+          Título
+        </Collapse>
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseThree">
+          Título
+        </Collapse>
+      </div>
+
+      <br />
+
+      <div className="accordion accordion-white">
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOneWhite">
+          Título
+        </Collapse>
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseTwoWhite">
+          Título
+        </Collapse>
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseThreeWhite">
+          Título
+        </Collapse>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 CollapseMultipleSelection.story = { name: 'Selección múltiple' };
 
@@ -62,43 +118,77 @@ const CollapseContent = (): JSX.Element => (
   </div>
 );
 
-export const CollapseInformation = (): JSX.Element => (
-  <div className="storybook__container-accordion">
-    <div className="accordion">
-      <Collapse identifier="collapseOne" content={<CollapseContent />}>
-        <span className="collapse-label">Total a pagar</span>
-        <h4 className="collapse-title">$450,00</h4>
-      </Collapse>
+export const CollapseInformation = (): JSX.Element => {
+  return (
+    <div className="storybook__container-accordion">
+      <div className="accordion">
+        <Collapse identifier="collapseOne" content={<CollapseContent />}>
+          <span className="collapse-label">Total a pagar</span>
+          <h4 className="collapse-title">$450,00</h4>
+        </Collapse>
+      </div>
+
+      <br />
+
+      <div className="accordion accordion-white">
+        <Collapse identifier="collapseOneWhite" content={<CollapseContent />}>
+          <span className="collapse-label">Total a pagar</span>
+          <h4 className="collapse-title">$450,00</h4>
+        </Collapse>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 CollapseInformation.story = { name: 'Con información' };
 
-export const CollapseIcon = (): JSX.Element => (
-  <div className="storybook__container-accordion">
-    <div className="accordion">
-      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne">
-        <i className="bx bxs-user-circle"></i> Título
-      </Collapse>
+export const CollapseIcon = (): JSX.Element => {
+  return (
+    <div className="storybook__container-accordion">
+      <div className="accordion">
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne">
+          <i className="bx bxs-user-circle"></i> Título
+        </Collapse>
+      </div>
+
+      <br />
+
+      <div className="accordion accordion-white">
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOneWhite">
+          <i className="bx bxs-user-circle"></i> Título
+        </Collapse>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 CollapseIcon.story = { name: 'Con ícono' };
 
-export const CollapsableLabelIcon = (): JSX.Element => (
-  <div className="storybook__container-accordion">
-    <div className="accordion">
-      <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne">
-        <i className="bx bxs-user-circle"></i>
-        <span className="collapse-label">Volanta</span>
-        <h4 className="collapse-title">Título</h4>
-        <span className="collapse-subtitle">Descripción</span>
-      </Collapse>
+export const CollapsableLabelIcon = (): JSX.Element => {
+  return (
+    <div className="storybook__container-accordion">
+      <div className="accordion">
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOne">
+          <i className="bx bxs-user-circle"></i>
+          <span className="collapse-label">Volanta</span>
+          <h4 className="collapse-title">Título</h4>
+          <span className="collapse-subtitle">Descripción</span>
+        </Collapse>
+      </div>
+
+      <br />
+
+      <div className="accordion accordion-white">
+        <Collapse description={COLLAPSE_DESCRIPTION} identifier="collapseOneWhite">
+          <i className="bx bxs-user-circle"></i>
+          <span className="collapse-label">Volanta</span>
+          <h4 className="collapse-title">Título</h4>
+          <span className="collapse-subtitle">Descripción</span>
+        </Collapse>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 CollapsableLabelIcon.story = { name: 'Con volanta y descripción' };
 
@@ -132,15 +222,56 @@ const CollapseForm = (): JSX.Element => (
   </form>
 );
 
-export const CollapseList = (): JSX.Element => (
-  <div className="storybook__container-accordion">
-    <div className="accordion">
-      <Collapse identifier="collapseOne" content={<CollapseForm />}>
-        <h4 className="collapse-title">Tarjeta de crédito / débito </h4>
-        <span className="collapse-subtitle">VISA, MasterCard, AMEX, CABAL, Maestro</span>
-      </Collapse>
-    </div>
-  </div>
+const CollapseFormWhite = (): JSX.Element => (
+  <form className="card-body">
+    <label className="card-details" htmlFor="visa_white">
+      <i className="bx bxl-visa"></i>
+      <div className="card-details-content">
+        <h5>Visa Débito ****1234</h5>
+        <small>Heraldo Paez</small>
+      </div>
+      <input type="radio" className="form-radio" name="credit_card" id="visa_white" />
+    </label>
+    <hr />
+    <label className="card-details" htmlFor="master_white">
+      <i className="bx bxl-mastercard"></i>
+      <div className="card-details-content">
+        <h5>MasterCard Crédito ****5678</h5>
+        <small>Heraldo Paez</small>
+      </div>
+      <input type="radio" className="form-radio" name="credit_card" id="master_white" />
+    </label>
+    <hr />
+    <label className="card-details" htmlFor="new_card_white">
+      <span className="material-icons-round">info</span>
+      <div className="card-details-content">
+        <h5>Nueva tarjeta de crédito</h5>
+      </div>
+      <input type="radio" className="form-radio" name="credit_card" id="new_card_white" />
+    </label>
+  </form>
 );
+
+export const CollapseList = (): JSX.Element => {
+  return (
+    <div className="storybook__container-accordion">
+      <div className="accordion">
+        <Collapse identifier="collapseOne" content={<CollapseForm />}>
+          <h4 className="collapse-title">Tarjeta de crédito / débito </h4>
+          <span className="collapse-subtitle">VISA, MasterCard, AMEX, CABAL, Maestro</span>
+        </Collapse>
+      </div>
+
+      <br />
+
+      <div className="accordion accordion-white">
+        <Collapse identifier="collapseOneWhite" content={<CollapseFormWhite />}>
+          <h4 className="collapse-title">Tarjeta de crédito / débito </h4>
+          <span className="collapse-subtitle">VISA, MasterCard, AMEX, CABAL, Maestro</span>
+        </Collapse>
+      </div>
+    </div>
+  );
+};
 
 CollapseList.story = { name: 'Con lista seleccionable' };

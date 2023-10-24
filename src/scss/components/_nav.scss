@@ -55,6 +55,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     .nav-link {
       min-height: 40px;
       padding: $nav-link-padding-y $nav-link-padding-x;
+      line-height: 24px;
 
       &-lg {
         min-height: 48px;
@@ -65,6 +66,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         min-height: 30px;
         padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
         font-size: 1rem;
+        line-height: 22px;
 
         .nav-icon {
           i,

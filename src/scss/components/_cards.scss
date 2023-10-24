@@ -18,7 +18,9 @@ $card-bg-info: #005387;
 
 $card-border-width: 0;
 $card-shadow-color: $grisulado-10;
+$card-shadow-collapsable-color: $grisulado-50;
 $card-box-shadow: 0 0 0 2px $card-shadow-color;
+$card-box-shadow-collapsable: 0 0 0 2px $card-shadow-collapsable-color;
 $card-box-hover-shadow: 0 0 0 2px $blue;
 
 $card-picture-size: 4rem;
@@ -62,6 +64,8 @@ $accordion-icon-expanded-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns=
 $accordion-icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(56, 72, 92);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
 $accordion-icon-user-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
 $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 123, 199);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
+
+$accordion-bg-white: $white;
 
 @mixin card-deck-4 {
   .card,
@@ -575,8 +579,7 @@ button.card {
 .accordion {
   > .card {
     margin-bottom: $accordion-margin;
-    border-radius: 0 !important;
-    box-shadow: none;
+    box-shadow: $card-box-shadow-collapsable;
     overflow: visible;
 
     &:not(:last-of-type) {
@@ -802,7 +805,7 @@ button.card {
 
     .card-body {
       padding: 1rem 1.5rem;
-      border: $collapse-border-width solid $card-header-bg;
+      border: none;
       @include border-bottom-radius($card-border-radius);
 
       hr {
@@ -877,6 +880,18 @@ button.card {
 
         .form-radio:checked::before {
           transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &.accordion-white {
+    > .card {
+      border-radius: $card-border-radius;
+
+      > .card-header {
+        &.collapsed {
+          background: $accordion-bg-white;
         }
       }
     }
