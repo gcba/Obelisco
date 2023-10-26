@@ -211,14 +211,6 @@ const CollapseForm = (): JSX.Element => (
       </div>
       <input type="radio" className="form-radio" name="credit_card" id="master" />
     </label>
-    <hr />
-    <label className="card-details" htmlFor="new_card">
-      <span className="material-icons-round">info</span>
-      <div className="card-details-content">
-        <h5>Nueva tarjeta de crédito</h5>
-      </div>
-      <input type="radio" className="form-radio" name="credit_card" id="new_card" />
-    </label>
   </form>
 );
 
@@ -240,14 +232,6 @@ const CollapseFormWhite = (): JSX.Element => (
         <small>Heraldo Paez</small>
       </div>
       <input type="radio" className="form-radio" name="credit_card" id="master_white" />
-    </label>
-    <hr />
-    <label className="card-details" htmlFor="new_card_white">
-      <span className="material-icons-round">info</span>
-      <div className="card-details-content">
-        <h5>Nueva tarjeta de crédito</h5>
-      </div>
-      <input type="radio" className="form-radio" name="credit_card" id="new_card_white" />
     </label>
   </form>
 );
