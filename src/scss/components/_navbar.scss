@@ -1033,6 +1033,25 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
           .dropdown {
             @include dropdown-states;
+            .btn-dropdown {
+              &:focus {
+                color: $grisulado-900;
+                .btn-dropdown-text {
+                  text-decoration: none;
+                }
+              }
+
+              &[aria-expanded='true'] {
+                color: $white;
+              }
+      
+              &:hover:not(:focus) {
+                box-shadow: 0 0 0 2px $blue;
+                .btn-dropdown-text {
+                  text-decoration: none;
+                }
+              }
+            }
           }
         }
 
