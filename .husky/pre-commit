@@ -1,2 +1,6 @@
 #!/bin/sh
-npm run build:cdn
+npm run build:cdn --silent
+if [ $? -ne 0 ]; then
+  echo "Error: La construcción ha fallado. No se permite realizar el commit."
+  exit 1
+fi
