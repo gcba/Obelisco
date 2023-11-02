@@ -13,7 +13,7 @@
     "src"
   ],
   "scripts": {
-    "start": "start-storybook -s ./static -p 6006 && npm run build:cdn",
+    "start": "start-storybook -s ./static -p 6006",
     "lint": "npm run lint:typescript && npm run lint:sass",
     "lint:typescript": "eslint --ext .ts,.tsx . --fix",
     "lint:sass": "stylelint '**/*.{css,scss,sass}' --fix",

@@ -28,6 +28,9 @@ jobs:
       - name: Build sass
         run: npm run build:sass
 
+      - name: CDN
+        run: npm run build:cdn
+
       - name: Build typescript
         run: npm run build:typescript
 
