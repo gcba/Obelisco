@@ -72,8 +72,10 @@
     "typescript": "^3.9.3"
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "npm run build:cdn"
+    "husky": {
+      "hooks": {
+        "pre-push": "npm run build:cdn && git push"
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 #!/bin/sh
-npm run build:cdn --silent
+npm run build:cdn && git push
 if [ $? -ne 0 ]; then
   echo "Error: La construcción ha fallado. No se permite realizar el commit."
   exit 1
