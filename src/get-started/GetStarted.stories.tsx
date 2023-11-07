@@ -91,13 +91,13 @@ export const Instalacion = (): JSX.Element => (
       <pre className="code-box">
         <code> &lt;link rel=&quot;stylesheet&quot; href=&quot;ruta/al/proyecto/dist/obelisco.css&quot;&gt; </code>
       </pre>
-      <br />
+      {/* <br />
       <p>Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:</p>
       <pre className="code-box">
         <code>
           &lt;link href=&quot;https://gcba.github.io/obelisco/cdn/obelisco.css&quot; rel=&quot;stylesheet&quot; /&gt;
         </code>
-      </pre>
+      </pre> */}
       <br />
       <br />
       {/* TIPOGRAFIAS */}

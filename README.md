@@ -44,11 +44,11 @@ Para importar el css, podemos hacerlo de la siguiente forma:
 ```
 <link rel="stylesheet" href="ruta/al/proyecto/dist/obelisco.css">
 ```
-
+<!-- 
 Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
 ```
 <link href="https://gcba.github.io/obelisco/cdn/obelisco.css" rel="stylesheet" />
-```
+``` -->
 
 ### Tipografías
 
