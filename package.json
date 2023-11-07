@@ -19,9 +19,12 @@
     "lint:sass": "stylelint '**/*.{css,scss,sass}' --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:sass": "node-sass src/scss/obelisco.scss dist/obelisco.css --source-map true --output-style compressed --importer node_modules/node-sass-package-importer/dist/cli.js",
+    "build:cdn": "node-sass src/scss/obelisco.scss cdn/obelisco.css --source-map true --output-style compressed --importer node_modules/node-sass-package-importer/dist/cli.js",
     "build:typescript": "tsc --outDir dist",
     "build:storybook": "build-storybook -s ./static -c .storybook -o .storybook-out",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "prepare": "husky install",
+    "nodemon:cdn": "nodemon -e scss -x \"npm run build:cdn\""
   },
   "dependencies": {},
   "devDependencies": {
@@ -49,8 +52,10 @@
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.20.0",
     "fork-ts-checker-webpack-plugin": "^4.1.4",
+    "husky": "^8.0.3",
     "node-sass": "^4.14.1",
     "node-sass-package-importer": "^5.3.2",
+    "nodemon": "^3.0.1",
     "prettier-stylelint": "^0.4.2",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
@@ -67,5 +72,12 @@
     "stylelint-scss": "^3.17.2",
     "ts-loader": "^7.0.4",
     "typescript": "^3.9.3"
+  },
+  "husky": {
+    "husky": {
+      "hooks": {
+        "pre-push": "npm run build:cdn && git push"
+      }
+    }
   }
 }
