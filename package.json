@@ -23,7 +23,8 @@
     "build:typescript": "tsc --outDir dist",
     "build:storybook": "build-storybook -s ./static -c .storybook -o .storybook-out",
     "release": "semantic-release",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "nodemon:cdn": "nodemon -e scss -x \"npm run build:cdn\""
   },
   "dependencies": {},
   "devDependencies": {
@@ -54,6 +55,7 @@
     "husky": "^8.0.3",
     "node-sass": "^4.14.1",
     "node-sass-package-importer": "^5.3.2",
+    "nodemon": "^3.0.1",
     "prettier-stylelint": "^0.4.2",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
