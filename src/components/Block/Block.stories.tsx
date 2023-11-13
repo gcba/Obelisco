@@ -10,7 +10,7 @@ import { Block } from '.';
 
 // Configuración general del componente
 export default {
-  title: 'Organismos|Bloque',
+  title: 'Componentes|Bloque de trámite',
   decorators: [withA11y]
 };
 
