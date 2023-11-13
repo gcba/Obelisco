@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Addons
-import { withA11y } from '@storybook/addon-a11y';
+/* import { withA11y } from '@storybook/addon-a11y'; */
 
 // Components
 import { LargePanel } from '.';
