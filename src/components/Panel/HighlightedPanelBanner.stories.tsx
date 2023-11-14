@@ -28,8 +28,7 @@ export const WithImage = (): JSX.Element => {
       </HighlightedPanel>
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} picture={PICTURE_HIGHLIGHTED}>
-        <Button type="primary" size="large" isIconSpinner>
-          <span className="material-icons-round">info</span>
+        <Button type="primary" size="large">
           Botón
         </Button>
       </HighlightedPanel>
@@ -37,9 +36,6 @@ export const WithImage = (): JSX.Element => {
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} picture={PICTURE_HIGHLIGHTED}>
         <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" rel="noreferrer" download>
           <span className="material-icons-round">file_download</span>
-          Descargar
-        </a>
-        <a className="btn btn-secondary btn-lg download-link" href="panel/hlarreta.jpg" download="">
           Descargar
         </a>
       </HighlightedPanel>
