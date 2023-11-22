@@ -52,12 +52,13 @@ export const PICTURE_HIGHLIGHTED = {
   alt: 'descripción de imagen'
 };
 export const VIDEO = {
-  src: 'panel/larreta.mp4',
-  alt: 'descripción alternativa'
+  src: 'panel/videoBuenosAires.mp4',
+  title: 'Buenos Aires se escribe en plural',
+  caption: 'panel/videoBuenosAires.vtt'
 };
 export const IFRAME = {
-  src: 'https://www.youtube.com/embed/_XZ9p7rbjWw',
-  title: '¡Vuelve Buenos Aires Jazz!'
+  src: 'https://www.youtube.com/embed/sXE613Oaxvc?si=iWSX1erqQxXOLojw',
+  title: 'Buenos Aires se escribe en plural'
 };
 /* Small Panel */
 export const SMALL_BUTTONS_ARR = [

@@ -7,7 +7,6 @@ import { withA11y } from '@storybook/addon-a11y';
 // Components
 import { TITLE_HIGHLIGHTED, DESCRIPTION_HIGHLIGHTED, PICTURE_HIGHLIGHTED, VIDEO, IFRAME } from './Panel.constants';
 import { HighlightedPanel } from '.';
-import { Button } from '../Button';
 
 // Configuración general del componente
 export default {
@@ -23,9 +22,9 @@ export const WithImage = (): JSX.Element => {
         description={DESCRIPTION_HIGHLIGHTED}
         picture={PICTURE_HIGHLIGHTED}
         type="grouping">
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <br />
@@ -34,7 +33,7 @@ export const WithImage = (): JSX.Element => {
         description={DESCRIPTION_HIGHLIGHTED}
         picture={PICTURE_HIGHLIGHTED}
         type="grouping">
-        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" rel="noreferrer" download>
+        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" download>
           <span className="material-icons-round">file_download</span>
           Descargar
         </a>
@@ -46,7 +45,7 @@ export const WithImage = (): JSX.Element => {
         description={DESCRIPTION_HIGHLIGHTED}
         picture={PICTURE_HIGHLIGHTED}
         type="grouping">
-        <a className="external" href="#" target="_blank" rel="noreferrer">
+        <a className="external" href="#" target="_blank">
           Enlace externo
         </a>
       </HighlightedPanel>
@@ -73,16 +72,16 @@ export const WithVideo = (): JSX.Element => {
   return (
     <div className="storybook__container-highlighted-grouping">
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} video={VIDEO} type="grouping">
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} iframe={IFRAME} type="grouping">
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
     </div>
   );
@@ -93,14 +92,14 @@ export const WithoutMultimedia = (): JSX.Element => {
   return (
     <div className="storybook__container-highlighted-grouping">
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} type="grouping">
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} type="grouping">
-        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" rel="noreferrer" download>
+        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" download>
           <span className="material-icons-round">file_download</span>
           Descargar
         </a>
@@ -108,7 +107,7 @@ export const WithoutMultimedia = (): JSX.Element => {
       <br />
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} type="grouping">
-        <a className="external" href="#" target="_blank" rel="noreferrer">
+        <a className="external" href="#" target="_blank">
           Enlace externo
         </a>
       </HighlightedPanel>

@@ -7,7 +7,6 @@ import { withA11y } from '@storybook/addon-a11y';
 // Components
 import { TITLE_HIGHLIGHTED, DESCRIPTION_HIGHLIGHTED, PICTURE_HIGHLIGHTED, VIDEO, IFRAME } from './Panel.constants';
 import { HighlightedPanel } from '.';
-import { Button } from '../Button';
 
 // Configuración general del componente
 export default {
@@ -19,29 +18,29 @@ export const WithImage = (): JSX.Element => {
   return (
     <>
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} picture={PICTURE_HIGHLIGHTED}>
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
-        <Button type="secondary" size="large">
+        </a>
+        <a className="btn btn-secondary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} picture={PICTURE_HIGHLIGHTED}>
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} picture={PICTURE_HIGHLIGHTED}>
-        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" rel="noreferrer" download>
+        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" download>
           <span className="material-icons-round">file_download</span>
           Descargar
         </a>
       </HighlightedPanel>
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} picture={PICTURE_HIGHLIGHTED}>
-        <a className="external" href="#" target="_blank" rel="noreferrer">
+        <a className="external" href="#" target="_blank">
           Enlace externo
         </a>
       </HighlightedPanel>
@@ -64,21 +63,21 @@ export const WithVideo = (): JSX.Element => {
   return (
     <>
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} video={VIDEO}>
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
-        <Button type="secondary" size="large">
+        </a>
+        <a className="btn btn-secondary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} iframe={IFRAME}>
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
-        <Button type="secondary" size="large">
+        </a>
+        <a className="btn btn-secondary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
     </>
   );
@@ -89,29 +88,29 @@ export const WithoutMultimedia = (): JSX.Element => {
   return (
     <>
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED}>
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
-        <Button type="secondary" size="large">
+        </a>
+        <a className="btn btn-secondary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED}>
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED}>
-        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" rel="noreferrer" download>
+        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" download>
           <span className="material-icons-round">file_download</span>
           Descargar
         </a>
       </HighlightedPanel>
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED}>
-        <a className="external" href="#" target="_blank" rel="noreferrer">
+        <a className="external" href="#" target="_blank">
           Enlace externo
         </a>
       </HighlightedPanel>
@@ -138,12 +137,12 @@ export const WithBackground = (): JSX.Element => {
         description={DESCRIPTION_HIGHLIGHTED}
         picture={PICTURE_HIGHLIGHTED}
         bgColor="light">
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
-        <Button type="secondary" size="large">
+        </a>
+        <a className="btn btn-secondary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <HighlightedPanel
@@ -151,9 +150,9 @@ export const WithBackground = (): JSX.Element => {
         description={DESCRIPTION_HIGHLIGHTED}
         picture={PICTURE_HIGHLIGHTED}
         bgColor="light">
-        <Button type="primary" size="large">
+        <a className="btn btn-primary btn-lg" href="#">
           Botón
-        </Button>
+        </a>
       </HighlightedPanel>
       <br />
       <HighlightedPanel
@@ -161,7 +160,7 @@ export const WithBackground = (): JSX.Element => {
         description={DESCRIPTION_HIGHLIGHTED}
         picture={PICTURE_HIGHLIGHTED}
         bgColor="light">
-        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" rel="noreferrer" download>
+        <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" download>
           <span className="material-icons-round">file_download</span>
           Descargar
         </a>
@@ -172,7 +171,7 @@ export const WithBackground = (): JSX.Element => {
         description={DESCRIPTION_HIGHLIGHTED}
         picture={PICTURE_HIGHLIGHTED}
         bgColor="light">
-        <a className="external" href="#" target="_blank" rel="noreferrer">
+        <a className="external" href="#" target="_blank">
           Enlace externo
         </a>
       </HighlightedPanel>

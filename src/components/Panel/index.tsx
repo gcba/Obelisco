@@ -32,9 +32,10 @@ export type PanelImage = {
   className?: string;
   size?: number;
 };
-export type PanelIframe = {
+export type PanelVideo = {
   src: string;
   title?: string;
+  caption?: string;
 };
 
 export type PanelPicture = PanelImage;
@@ -69,28 +70,38 @@ const getImage = (picture?: PanelImage): JSX.Element | null => {
   return null;
 };
 
-const getVideo = (video?: PanelImage): JSX.Element | null => {
+const getVideo = (video?: PanelVideo): JSX.Element | null => {
   if (video && video.src !== undefined) {
     return (
-      <video className="card-img" controls>
-        <source src={video.src} type="video/mp4"></source>
-        <p>Su navegador no soporta vídeos HTML5.</p>
-      </video>
+      <>
+        <p className="sr-only">{video.title}</p>
+        <video className="card-img" controls>
+          <source src={video.src} type="video/mp4"></source>
+          <track src={video.caption} default kind="captions" srcLang="es" />
+          <p>
+            Su navegador no soporta vídeos HTML5. Puedes ver el video haciendo clic en{' '}
+            <a href={video.src}>este enlace</a>.
+          </p>
+        </video>
+      </>
     );
   }
   return null;
 };
 
-const getVideoIframe = (iframe?: PanelIframe): JSX.Element | null => {
+const getVideoIframe = (iframe?: PanelVideo): JSX.Element | null => {
   if (iframe && iframe.src !== undefined) {
     return (
-      <iframe
-        className="card-img"
-        src={iframe.src}
-        title={iframe.title}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen></iframe>
+      <>
+        <p className="sr-only">{iframe.title}</p>
+        <iframe
+          className="card-img"
+          src={iframe.src}
+          title={iframe.title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen></iframe>
+      </>
     );
   }
   return null;
@@ -255,9 +266,9 @@ interface HighlightedPanelProps {
   description?: string | JSX.Element;
   bgColor?: panelBgColor;
   type?: HighlightedPanelType;
-  picture?: PanelPicture;
-  video?: PanelPicture;
-  iframe?: PanelIframe;
+  picture?: PanelImage;
+  video?: PanelVideo;
+  iframe?: PanelVideo;
 }
 
 export const HighlightedPanel: React.FC<HighlightedPanelProps> = (
@@ -271,33 +282,26 @@ export const HighlightedPanel: React.FC<HighlightedPanelProps> = (
     `panel-${type === 'banner' ? 'horizontal' : type === 'grouping' ? 'vertical' : 'lateral'}`
   );
 
+  const HighlightedPanelContent = (
+    <div className={panelClasses.trim()}>
+      {picture && getImage(picture as PanelImage)}
+      {video && getVideo(video as PanelVideo)}
+      {iframe && getVideoIframe(iframe as PanelVideo)}
+      <div className="card-body">
+        <h2 className="card-title">{title}</h2>
+        {description && <p className="card-text">{description}</p>}
+        {children && <div className="panel-footer">{children}</div>}
+      </div>
+    </div>
+  );
+
   if (type === 'banner') {
     return (
       <div className={`panel-horizontal-content ${bgColor !== undefined ? `bg-${bgColor}` : ''}`.trim()}>
-        <div className={panelClasses.trim()}>
-          {picture && getImage(picture as PanelImage)}
-          {video && getVideo(video as PanelImage)}
-          {iframe && getVideoIframe(iframe as PanelIframe)}
-          <div className="card-body">
-            <h2 className="card-title">{title}</h2>
-            {description && <p className="card-text">{description}</p>}
-            {children && <div className="panel-footer">{children}</div>}
-          </div>
-        </div>
+        {HighlightedPanelContent}
       </div>
     );
   } else {
-    return (
-      <div className={panelClasses.trim()}>
-        {picture && getImage(picture as PanelImage)}
-        {video && getVideo(video as PanelImage)}
-        {iframe && getVideoIframe(iframe as PanelIframe)}
-        <div className="card-body">
-          <h2 className="card-title">{title}</h2>
-          {description && <p className="card-text">{description}</p>}
-          {children && <div className="panel-footer">{children}</div>}
-        </div>
-      </div>
-    );
+    return HighlightedPanelContent;
   }
 };
