@@ -15,15 +15,16 @@ interface ButtonBlockProps {
   blockProgressBar?: ProgressBarProps;
   button?: BlockButtonProps;
   isLight?: boolean;
+  positionSticky?: string;
 }
 
 export const Block: React.FC<ButtonBlockProps> = (props: React.PropsWithChildren<ButtonBlockProps>) => {
-  const { title, text, blockProgressBar, button, isLight } = props;
+  const { title, text, blockProgressBar, button, isLight, positionSticky } = props;
 
-  const BlockClasses = classNames('card', 'card-block', { 'bg-light': isLight });
+  const BlockClasses = classNames('card', 'card-block', { 'bg-light': isLight }, { 'position-sticky': positionSticky });
 
   return (
-    <div className={BlockClasses.trim()}>
+    <div className={BlockClasses.trim()} style={positionSticky !== undefined ? { top: positionSticky } : undefined}>
       <div className="card-body">
         {title && <h4 className="block-title">{title}</h4>}
         {text && <p className="block-text">{text}</p>}

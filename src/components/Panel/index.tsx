@@ -92,16 +92,13 @@ const getVideo = (video?: PanelVideo): JSX.Element | null => {
 const getVideoIframe = (iframe?: PanelVideo): JSX.Element | null => {
   if (iframe && iframe.src !== undefined) {
     return (
-      <>
-        <p className="sr-only">{iframe.title}</p>
-        <iframe
-          className="card-img"
-          src={iframe.src}
-          title={iframe.title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen></iframe>
-      </>
+      <iframe
+        className="card-img"
+        src={iframe.src}
+        title={iframe.title}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen></iframe>
     );
   }
   return null;

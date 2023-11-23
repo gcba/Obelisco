@@ -39,8 +39,7 @@ const PROGRESS_BAR_BLOCK = {
 export const ButtonBlockTitle = (): JSX.Element => {
   return (
     <div className="storybook__container-block">
-      <Block title="Iniciá el trámite y completá todos los pasos" button={BUTTON_BLOCK_LINK}></Block>
-      <Block title="Iniciá el trámite y completá todos los pasos" button={BUTTON_BLOCK_LINK} isLight={true}></Block>
+      <Block title="Iniciá el trámite y completá todos los pasos" button={BUTTON_BLOCK_LINK} positionSticky="48px" />
     </div>
   );
 };
@@ -53,12 +52,9 @@ export const ButtonBlockText = (): JSX.Element => {
       <Block
         title="Iniciá el trámite y completá todos los pasos"
         text="Si tenés un trámite iniciado podés continuarlo desde acá."
-        button={BUTTON_BLOCK}></Block>
-      <Block
-        title="Iniciá el trámite y completá todos los pasos"
-        text="Si tenés un trámite iniciado podés continuarlo desde acá."
         button={BUTTON_BLOCK}
-        isLight={true}></Block>
+        positionSticky="48px"
+      />
     </div>
   );
 };
@@ -71,14 +67,27 @@ export const ButtonBlockProgressBar = (): JSX.Element => {
       <Block
         title="Este es tu progreso en el trámite"
         button={BUTTON_PROGRESS_BAR_BLOCK}
-        blockProgressBar={PROGRESS_BAR_BLOCK}></Block>
-      <Block
-        title="Este es tu progreso en el trámite"
-        button={BUTTON_PROGRESS_BAR_BLOCK}
         blockProgressBar={PROGRESS_BAR_BLOCK}
-        isLight={true}></Block>
+        positionSticky="48px"
+      />
     </div>
   );
 };
 
 ButtonBlockProgressBar.story = { name: 'Con barra de progreso' };
+
+export const ButtonBlockSticky = (): JSX.Element => {
+  return (
+    <div className="storybook__container-block">
+      <Block
+        title="Iniciá el trámite y completá todos los pasos"
+        text="Si tenés un trámite iniciado podés continuarlo desde acá."
+        button={BUTTON_BLOCK}
+        isLight={true}
+        positionSticky="48px"
+      />
+    </div>
+  );
+};
+
+ButtonBlockSticky.story = { name: 'Con fondo' };
