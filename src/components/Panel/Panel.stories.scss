@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 3rem;
   max-width: 100%;
-  
+
   &-horizontal {
     @extend .storybook__container-panel;
     width: 1084px;
@@ -23,5 +23,10 @@
     &-horizontal {
       @extend .storybook__container-panel-vertical;
     }
+  }
+}
+.storybook__container-highlighted {
+  &-lateral {
+    max-width: 340px;
   }
 }

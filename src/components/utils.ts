@@ -117,3 +117,5 @@ export const buttonOutlineSpinnerTypes: Array<ButtonTypeWithSpinner> = [
 ];
 
 export type panelBgColor = 'light' | 'white';
+
+export type HighlightedPanelType = 'banner' | 'grouping' | 'lateral';

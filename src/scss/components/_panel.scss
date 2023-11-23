@@ -45,6 +45,19 @@ $panel-deck-card-mr: 2rem;
   }
 }
 
+@mixin panel-bg-color($media-query) {
+  &.bg-white,
+  &.bg-light {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+
+    @include media-breakpoint-down(#{$media-query}) {
+      border-radius: 0;
+      padding: 1.5rem 1rem;
+    }
+  }
+}
+
 @mixin panel-big-mobile {
   @include media-breakpoint-down(xs) {
     .card-body {
@@ -62,146 +75,98 @@ $panel-deck-card-mr: 2rem;
   }
 }
 
+// Estilos para Destacado, panel horizontal, panel vertical
+@mixin panel-content($flex-direction, $media-query) {
+  flex-direction: #{$flex-direction};
+  width: 100%;
+  gap: 2rem;
+  background-color: transparent;
+  border-radius: 0;
+
+  .card-img,
+  video {
+    width: 100%;
+    max-width: 526px;
+    height: 296px;
+    border-radius: $card-border-radius;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 16/9;
+  }
+
+  .card-body {
+    width: 100%;
+    max-width: 712px;
+    .card-title {
+      @extend .h2;
+      margin: 0;
+    }
+
+    .card-text {
+      margin: 0.5rem 0 0 0;
+    }
+
+    .panel-footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .card-link {
+        margin-left: 0;
+      }
+
+      .list-group-item {
+        width: 100%;
+        max-width: 340px;
+        display: flex;
+        margin-bottom: 2px;
+      }
+
+      .btn-block {
+        width: 100%;
+      }
+
+      a.btn-icon, a.download-link {
+        display: flex;
+      }
+    }   
+  }
+
+  @include media-breakpoint-down(#{$media-query}) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    margin: 0;
+
+    .card-body {
+      .panel-footer {
+        flex-direction: row;
+        .card-link,
+        .download-link {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
 /* === Custom styles === */
 
 .card {
-  //Panel Grande Horizontal
+  //Panel Grande Horizontal. Estilos compartidos con Destacado Banner
   &.panel-horizontal {
-    flex-direction: row;
-    width: 100%;
     align-items: center;
-
-    > video {
-      &.card-img {
-        height: auto;
-      }
-    }
-
-    .card-img {
-      width: 526px;
-      height: 296px;
-      border-radius: $card-border-radius;
-      object-fit: cover;
-      object-position: center;
-
-      + .card-body {
-        margin-left: $panel-spacer-lg;
-      }
-    }
-
-    .card-body {
-      .card-title {
-        @extend .h2;
-        margin: 0;
-      }
-
-      .card-text {
-        margin: $panel-large-card-text-margin;
-      }
-
-      .panel-footer {
-        display: flex;
-        gap: 1rem;
-        margin-top: 1.5rem;
-
-        .card-link {
-          margin-left: 0;
-        }
-
-        a.btn-icon {
-          display: inline-flex;
-        }
-      }
-    }
-
-    @include media-breakpoint-down(md) {
-      flex-direction: column;
-      align-items: flex-start;
-
-      .card-img {
-        width: 100%;
-        height: auto;
-
-        + .card-body {
-          margin-left: 0;
-
-          .card-title {
-            margin: $panel-large-horizontal-title-margin-sm;
-          }
-        }
-      }
-
-      .card-body {
-        .card-title {
-          margin: 0;
-        }
-      }
-    }
-
-    @extend %panel-bg-color;
-
-    @include panel-big-mobile;
+    @include panel-content(row, md);
+    border-radius: 0.5rem;
+    @include panel-bg-color(md);
   }
 
-  //Panel Grande Vertical
+  //Estilos para Destacado Conjunto (antes Panel Grande Vertical)
   &.panel-vertical {
-    flex-direction: column;
-    width: 100%;
-
-    > video {
-      &.card-img {
-        height: auto;
-      }
-    }
-
-    .card-img {
-      border-radius: $card-border-radius;
-      object-fit: cover;
-      object-position: center;
-      aspect-ratio: 16 / 9;
-
-      @include media-breakpoint-down(sm) {
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .card-img {
-      + .card-body {
-        .card-title {
-          margin: $panel-large-vertical-title-margin;
-        }
-      }
-    }
-
-    .card-body {
-      .card-title {
-        @extend .h2;
-        margin: 0;
-      }
-
-      .card-text {
-        margin: $panel-large-card-text-margin;
-      }
-
-      .panel-footer {
-        display: flex;
-        gap: 1rem;
-        margin-top: 1.5rem;
-
-        .card-link {
-          margin-left: 0;
-        }
-      }
-
-      a.btn-icon {
-        display: inline-flex;
-      }
-    }
-
-    @extend %panel-bg-color;
-
-    @include panel-big-mobile;
+    @include panel-content(column, sm);
+    @include panel-bg-color(sm);
   }
 
   //panel chico vertical con botones o enlace
@@ -335,6 +300,37 @@ $panel-deck-card-mr: 2rem;
     .card-body .card-text-panel {
       margin: $panel-small-card-text-margin;
     }
+  }
+
+  //Destacado Lateral
+  &.panel-lateral {
+    @include panel-content(column, sm);
+    padding: 2rem 1.5rem;
+    background-color: $grisulado-10;
+    border-radius: 0.5rem;
+    @include media-breakpoint-down(sm) {
+      padding: 2rem 1.5rem;
+    }
+  }
+}
+
+//Estilos para Destacado Banner (antes Panel Grande Horizontal)
+.panel-horizontal-content {
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: $white;
+
+  .card.panel-horizontal {
+    @extend .container;
+    border-radius: 0;
+    @include media-breakpoint-down(md) {
+      padding: 1.5rem 1rem;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
   }
 }
 
