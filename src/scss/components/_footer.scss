@@ -48,6 +48,7 @@ $footer-info-gap-mobile: 1rem;
   a {
     @extend .text-white;
     text-decoration: underline;
+    text-decoration-thickness: 1px;
 
     &:focus,
     &.focus {
