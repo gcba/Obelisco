@@ -151,13 +151,10 @@ $footer-info-gap-mobile: 1rem;
   word-break: break-word;
 
   > .container {
-    &:has(.footer-info-text),
-    &:has(.footer-info-actions) {
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
       gap: $footer-info-gap;
-    }
 
     .footer-info-text {
       margin: 0;
@@ -173,21 +170,18 @@ $footer-info-gap-mobile: 1rem;
   }
 
   @include media-breakpoint-down(sm) {
-    &:has(.footer-info-text),
-    &:has(.footer-info-actions) {
-      .container {
-        flex-wrap: wrap;
-        gap: $footer-info-gap-mobile;
+    .container {
+      flex-wrap: wrap;
+      gap: $footer-info-gap-mobile;
 
-        .footer-info-text {
-          font-weight: 700;
-        }
-        .footer-info-actions {
-          flex-basis: 100%;
-          flex-shrink: 1;
-          gap: 0.5rem;
-          align-items: flex-start;
-        }
+      .footer-info-text {
+        font-weight: 700;
+      }
+      .footer-info-actions {
+        flex-basis: 100%;
+        flex-shrink: 1;
+        gap: 0.5rem;
+        align-items: flex-start;
       }
     }
   }
