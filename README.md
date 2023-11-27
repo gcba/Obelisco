@@ -1,11 +1,12 @@
 # Obelisco
+
 [![Versión de Obelisco en npm](https://img.shields.io/npm/v/@gcba/obelisco?label=Obelisco%20en%20npm&logo=npm)](https://www.npmjs.com/package/@gcba/obelisco)
 ![Deploy storybook](https://github.com/gcba/Obelisco/workflows/Deploy%20storybook/badge.svg?branch=master)
 
 Obelisco es el nuevo sistema de diseño basado en componentes para los productos digitales de la ciudad de Buenos Aires.
 Fue creado para reemplazar [BAstrap](https://github.com/gcba/bastrap).
 
-### [Ver la documentación de componentes](https://gcba.github.io/estandares/componentes/web//).
+### [Ver la documentación de componentes](https://gcba.github.io/estandares/componentes/web//)
 
 ## Cómo usarlo
 
@@ -15,6 +16,7 @@ Es recomendable usar este sistema para definir la versión a usar y poder actual
 ### Instalación
 
 Para instalarlo en un proyecto que ya usa npm, hay que ejecutar:
+
 ```
 npm install @gcba/obelisco
 ```
@@ -22,6 +24,7 @@ npm install @gcba/obelisco
 ### Actualización
 
 Si Obelisco ya está instalado en el proyecto y necesitás actualizarlo a la última versión, en el directorio del proyecto hay que ejecutar:
+
 ```
 npm update @gcba/obelisco
 ```
@@ -41,13 +44,21 @@ Las hojas de estilos se pueden importar tanto en **sass** como en **css** ya com
 El archivo css está ubicado en `/dist/obelisco.css` y el archivo principal de sass en `/src/scss/obelisco.scss`.
 
 Para importar el css, podemos hacerlo de la siguiente forma:
+
 ```
 <link rel="stylesheet" href="ruta/al/proyecto/dist/obelisco.css">
+```
+
+Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
+
+```
+<link href="https://gcba.github.io/Obelisco/obelisco.css" rel="stylesheet" />
 ```
 
 ### Tipografías
 
 Obelisco requiere las tipografías **Nunito** y **Open sans** disponibles en google fonts, para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
+
 ```
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"></link>
@@ -58,12 +69,14 @@ Obelisco requiere las tipografías **Nunito** y **Open sans** disponibles en goo
 Obelisco utiliza las librerías de Boxicons y Material Icons que se pueden instalar de las siguientes maneras:
 
 Utilizando el paquete npm:
+
 ```
 npm install boxicons
 npm install material-icons@latest
 ```
 
 Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
+
 ```
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -74,6 +87,7 @@ Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:
 Como Obelisco está construido sobre bootstrap 4, [debemos tener esas dependencias](https://getbootstrap.com/docs/4.6/getting-started/introduction/#js).
 
 Un ejemplo de cómo importalas es:
+
 ```
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
@@ -85,7 +99,6 @@ Un ejemplo de cómo importalas es:
 ## Desarrollo
 
 [En la wiki del repositorio](https://github.com/gcba/Obelisco/wiki) está toda la información necesaria para entender cómo se organizan las diferentes partes del proyecto, cómo funciona y los procesos de trabajo que definimos.
-
 
 ## Mantenimiento y colaboración
 

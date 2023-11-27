@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Addons
-import { withA11y } from '@storybook/addon-a11y';
+/* import { withA11y } from '@storybook/addon-a11y'; */
 
 // Components
 import { LargePanel } from '.';
@@ -20,10 +20,10 @@ import {
 } from './Panel.constants';
 
 // Configuración general del componente
-export default {
+/* export default {
   title: 'Componentes|Panel/Grande/Vertical',
   decorators: [withA11y]
-};
+}; */
 
 /* Con Imagen | Video y 2 botones */
 export const VerticalPanelButtons = (): JSX.Element => {

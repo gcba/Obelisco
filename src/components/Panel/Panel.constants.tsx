@@ -2,6 +2,11 @@
 export const TITLE = 'Nombre del titular';
 export const DESCRIPTION =
   'Descripción de hasta 3 líneas para mantener los estándares de lectura en los componentes de Obelisco.';
+export const TITLE_HIGHLIGHTED = 'Título del destacado';
+export const DESCRIPTION_HIGHLIGHTED =
+  'Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces. Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces';
+export const DESCRIPTION_HIGHLIGHTED_LATERAL =
+  'Este es el cuerpo de un destacado. Debe ser breve y conciso, de pocas líneas. No puede contener negritas ni enlaces.';
 export const BUTTON_ARR = [
   {
     name: 'Botón',
@@ -42,9 +47,18 @@ export const PICTURE = {
   src: 'panel/hlarreta.jpg',
   alt: 'descripción alternativa'
 };
+export const PICTURE_HIGHLIGHTED = {
+  src: 'panel/destacado.jpeg',
+  alt: 'descripción de imagen'
+};
 export const VIDEO = {
-  src: 'panel/larreta.mp4',
-  alt: 'descripción alternativa'
+  src: 'panel/videoBuenosAires.mp4',
+  title: 'Buenos Aires se escribe en plural',
+  caption: 'panel/videoBuenosAires.vtt'
+};
+export const IFRAME = {
+  src: 'https://www.youtube.com/embed/sXE613Oaxvc?si=iWSX1erqQxXOLojw',
+  title: 'Buenos Aires se escribe en plural'
 };
 /* Small Panel */
 export const SMALL_BUTTONS_ARR = [
