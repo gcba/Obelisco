@@ -14,6 +14,7 @@ $spinner-border-width-lg: 0.375rem;
 .spinner {
   &-border {
     border-right-color: $spinner-border-right-color;
+    min-width: 2rem;
 
     &:is(.text-light) {
       border-color: $white;
@@ -27,8 +28,13 @@ $spinner-border-width-lg: 0.375rem;
 
     &-lg {
       width: $spinner-border-size-lg;
+      min-width: $spinner-border-size-lg;
       height: $spinner-border-size-lg;
       border-width: $spinner-border-width-lg;
+    }
+
+    &-sm {
+      min-width: 1rem;
     }
   }
 

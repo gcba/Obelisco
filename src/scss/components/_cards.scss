@@ -50,7 +50,7 @@ $collapse-border-width: 2px;
 $collapse-info-subtitle-size: 1rem;
 
 $accordion-margin: 0.75rem;
-$accordion-card-header-padding: 0.75rem 1.5rem;
+$accordion-card-header-padding: 0.75rem 3.75rem 0.75rem 1.5rem;
 
 $accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
 $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
@@ -66,6 +66,10 @@ $accordion-icon-user-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="ht
 $accordion-icon-user-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 123, 199);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
 
 $accordion-bg-white: $white;
+
+@mixin accordion-icon($accordion-icon) {
+  background: transparent #{$accordion-icon} no-repeat center center;
+}
 
 @mixin card-deck-4 {
   .card,
@@ -116,45 +120,6 @@ $accordion-bg-white: $white;
 
     &:nth-of-type(n + 2) {
       margin-top: $card-deck-margin-top;
-    }
-  }
-}
-
-@mixin accordion-columns-4 {
-  i,
-  .material-icons-round {
-    grid-area: 1 / 1 / 4 / 2;
-  }
-
-  .collapse-label {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-
-  // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-  .collpase-title,
-  .collapse-title {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-
-  // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-  .collpase-subtitle,
-  .collapse-subtitle {
-    grid-area: 3 / 2 / 4 / 3;
-  }
-
-  &:after {
-    grid-area: 1 / 3 / 4 / 4;
-  }
-}
-
-@mixin accordion-only-child($class) {
-  &:has(#{$class}:only-child) {
-    #{$class} {
-      grid-area: auto;
-    }
-
-    &:after {
-      grid-area: auto;
     }
   }
 }
@@ -576,6 +541,7 @@ button.card {
   }
 }
 
+// COLAPSABLE
 .accordion {
   > .card {
     margin-bottom: $accordion-margin;
@@ -603,62 +569,73 @@ button.card {
       color: $white;
       min-height: 48px;
       display: grid;
-      grid-template-columns: 1fr auto;
-      grid-template-rows: auto;
-      grid-column-gap: 0.75rem;
+      grid-template-areas:
+        'icon label'
+        'icon title'
+        'icon subtitle';
+      grid-template-columns: auto 1fr;
+      grid-column-gap: 0;
       grid-row-gap: 0;
       align-items: center;
       word-break: break-word;
       @extend .h4;
 
       &:after {
-        grid-area: 1 / 2 / 3 / 3;
+        content: '';
+        height: 1.5rem;
+        width: 1.5rem;
+        min-width: 1.5rem;
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
       }
 
-      &:has(i, .material-icons-round) {
-        grid-template-columns: 1.5rem 1fr auto;
-        @include accordion-columns-4;
-
-        i,
-        .material-icons-round {
-          font-size: 1.5rem !important;
-          width: 1.5rem;
-        }
+      i,
+      .material-icons-round {
+        font-size: 1.5rem;
+        width: 1.5rem;
+        min-width: 1.5rem;
+        height: 1.5rem;
+        grid-area: icon;
+        margin-right: 0.75rem;
       }
 
       // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-      &:has(.collapse-label + .collapse-title, .collpase-title + .collapse-subtitle, .collpase-subtitle) {
-        grid-row-gap: 0.25rem;
+      .collapse-label,
+      .collpase-title {
+        grid-area: label;
+        margin-bottom: 0.25rem;
+        line-height: 20px;
+        font-size: 0.8125rem;
+        font-weight: $lead-font-weight;
+        word-break: break-word;
+      }
 
-        .collapse-label {
-          grid-area: 1 / 1 / 2;
-        }
+      // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
+      .collapse-title,
+      .collpase-subtitle {
+        grid-area: title;
+        @extend .h4;
+        line-height: 24px;
+        font-weight: $card-font-weight;
+        margin-bottom: 0;
+        word-break: break-word;
+      }
 
-        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-        .collpase-title,
-        .collapse-title {
-          grid-area: 2 / 1 / 3;
-        }
-
-        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-        .collpase-subtitle,
-        .collapse-subtitle {
-          grid-area: 3 / 1 / 3;
-        }
-
-        &:after {
-          grid-area: 1 / 2 / 4;
-        }
-
-        &:has(i, .material-icons-round) {
-          @include accordion-columns-4;
-        }
+      .collapse-subtitle {
+        grid-area: subtitle;
+        margin-top: 0.25rem;
+        line-height: 24px;
+        font-weight: $card-subtitle-font-weight;
+        font-size: $collapse-info-subtitle-size;
+        font-family: $font-family-sans-serif;
+        word-break: break-word;
       }
 
       &:after {
-        content: $accordion-icon-expanded-blue;
-        height: spaceUnits(5);
         margin-left: auto;
+        @include accordion-icon($accordion-icon-expanded-blue);
       }
 
       &:focus,
@@ -669,9 +646,8 @@ button.card {
       }
 
       &:after {
-        content: $accordion-icon-expanded-white;
-        height: spaceUnits(6);
         float: right;
+        @include accordion-icon($accordion-icon-expanded-white);
       }
 
       &.collapsed {
@@ -693,114 +669,25 @@ button.card {
           }
 
           &:after {
-            content: $accordion-icon-collapsed-blue;
-            height: spaceUnits(6);
             display: inline-block;
             vertical-align: middle;
+            @include accordion-icon($accordion-icon-collapsed-blue);
           }
         }
 
         &:after {
-          content: $accordion-icon-collapsed;
           display: inline-block;
           vertical-align: middle;
+          @include accordion-icon($accordion-icon-collapsed);
         }
       }
 
+      // FIXME: REMOVER .card-info MAS ADELANTE
       &.card-info {
-        grid-column-gap: 0.75rem;
-        grid-row-gap: 0.25rem;
-
         > br {
           display: none;
         }
-
-        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-        &:has(.collapse-label + .collapse-title, .collpase-title) {
-          &:has(i, .material-icons-round) {
-            grid-template-columns: 1.5rem 1fr auto;
-
-            @include accordion-columns-4;
-          }
-
-          .collapse-label {
-            grid-area: 1 / 1 / 2;
-          }
-
-          // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-          .collpase-title,
-          .collapse-title {
-            grid-area: 2 / 1 / 3;
-          }
-
-          // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-          .collpase-subtitle,
-          .collapse-subtitle {
-            grid-area: 3 / 1 / 3;
-          }
-
-          &:after {
-            grid-area: 1 / 2 / 3;
-          }
-
-          // FIXME: REMOVER COLLPASE MAL ARMADO (VIEJO)
-          &:has(span + br + span) {
-            > br {
-              display: none;
-            }
-
-            // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-            .collpase-title,
-            .collapse-title {
-              grid-area: 1 / 1 / 2;
-            }
-
-            // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-            .collpase-subtitle,
-            .collapse-subtitle {
-              grid-area: 2 / 1 / 3;
-            }
-          }
-        }
-
-        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-        @include accordion-only-child('.collpase-title');
-        @include accordion-only-child('.collapse-title');
-        // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-        @include accordion-only-child('.collpase-subtitle');
-        @include accordion-only-child('.collapse-subtitle');
-
-        &.collapsed {
-          border-radius: $card-border-radius;
-        }
       }
-    }
-
-    // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-    .collpase-subtitle,
-    .collapse-subtitle {
-      font-weight: $card-subtitle-font-weight;
-      font-size: $collapse-info-subtitle-size;
-      font-family: $font-family-sans-serif;
-      grid-area: 2 / 1 / 3 / 2;
-      word-break: break-word;
-    }
-
-    // FIXME: REMOVER COLLPASE MAL TIPEADO MAS ADELANTE
-    .collpase-title,
-    .collapse-title {
-      @extend .h4;
-      font-weight: $card-font-weight;
-      grid-area: 1 / 1 / 2 / 2;
-      margin-bottom: 0;
-      word-break: break-word;
-    }
-
-    .collapse-label {
-      font-size: 0.813rem;
-      grid-area: 2 / 1 / 3 / 2;
-      font-weight: $lead-font-weight;
-      word-break: break-word;
     }
 
     .card-body {
@@ -808,13 +695,15 @@ button.card {
       border: none;
       @include border-bottom-radius($card-border-radius);
 
+      span {
+        @extend .h5;
+        display: block;
+        margin-bottom: 0;
+      }
+
       hr {
         margin-top: 1rem;
         margin-bottom: 1rem;
-      }
-
-      > h5 {
-        font-weight: $headings-font-weight;
       }
 
       > label.card-details {
@@ -845,41 +734,55 @@ button.card {
         i,
         .material-icons-round {
           margin: auto 0;
-          font-size: 1.25rem;
+          font-size: 1.5rem;
         }
 
         .form-radio {
           cursor: pointer;
           margin-left: auto;
           width: 1.25rem;
+          min-width: 1.25rem;
           height: 1.25rem;
           appearance: none;
           background-color: $white;
           font: inherit;
           color: currentColor;
-          border: 0.15rem solid currentColor;
+          border: 2px solid currentColor;
           border-radius: 50%;
           transform: translateY(-0.075rem);
           display: grid;
           place-content: center;
-        }
 
-        .form-radio:checked {
-          border: 0.15rem solid $info;
-        }
+          &:checked {
+            border-color: $info;
 
-        .form-radio::before {
-          content: '';
-          width: 0.65rem;
-          height: 0.65rem;
-          border-radius: 50%;
-          transform: scale(0);
-          transition: 120ms transform ease-in-out;
-          box-shadow: inset 1rem 1rem $info;
-        }
+            &:before {
+              transform: scale(1);
+            }
+          }
 
-        .form-radio:checked::before {
-          transform: scale(1);
+          &:before {
+            content: '';
+            width: 0.65rem;
+            height: 0.65rem;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1rem 1rem $info;
+          }
+
+          &:focus,
+          &:focus-visible {
+            background-color: $info;
+            box-shadow: 0 0 0 7px #005386, inset 0 0 0 3.4px $white;
+            outline: 3px solid $white;
+            outline-offset: 0px;
+            border-color: $info;
+          }
+
+          &:hover {
+            border-color: $info;
+          }
         }
       }
     }

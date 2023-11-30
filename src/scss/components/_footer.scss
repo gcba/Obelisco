@@ -32,7 +32,6 @@ $footer-info-gap-mobile: 1rem;
 .main-footer {
   @extend .bg-dark, .text-white;
   padding: $footer-padding-y 0;
-  border-top: $footer-border-width solid $footer-border-color;
 
   @include media-breakpoint-down(sm) {
     padding: $footer-padding-y-sm 0;
@@ -49,6 +48,7 @@ $footer-info-gap-mobile: 1rem;
   a {
     @extend .text-white;
     text-decoration: underline;
+    text-decoration-thickness: 1px;
 
     &:focus,
     &.focus {
@@ -149,6 +149,7 @@ $footer-info-gap-mobile: 1rem;
   background-color: $grisulado-10;
   padding: $footer-info-padding;
   word-break: break-word;
+  border-top: $footer-border-width solid $footer-border-color;
 
   > .container {
     &:has(.footer-info-text),

@@ -36,7 +36,7 @@ const PROGRESS_BAR_BLOCK = {
   width: 25
 };
 
-export const ButtonBlockTitle = (): JSX.Element => {
+export const BlockTitle = (): JSX.Element => {
   return (
     <div className="storybook__container-block">
       <Block title="Iniciá el trámite y completá todos los pasos" button={BUTTON_BLOCK_LINK} positionSticky="48px" />
@@ -44,9 +44,9 @@ export const ButtonBlockTitle = (): JSX.Element => {
   );
 };
 
-ButtonBlockTitle.story = { name: 'Con título' };
+BlockTitle.story = { name: 'Con título' };
 
-export const ButtonBlockText = (): JSX.Element => {
+export const BlockText = (): JSX.Element => {
   return (
     <div className="storybook__container-block">
       <Block
@@ -59,9 +59,9 @@ export const ButtonBlockText = (): JSX.Element => {
   );
 };
 
-ButtonBlockText.story = { name: 'Con bajada' };
+BlockText.story = { name: 'Con bajada' };
 
-export const ButtonBlockProgressBar = (): JSX.Element => {
+export const BlockProgressBar = (): JSX.Element => {
   return (
     <div className="storybook__container-block">
       <Block
@@ -74,9 +74,9 @@ export const ButtonBlockProgressBar = (): JSX.Element => {
   );
 };
 
-ButtonBlockProgressBar.story = { name: 'Con barra de progreso' };
+BlockProgressBar.story = { name: 'Con barra de progreso' };
 
-export const ButtonBlockSticky = (): JSX.Element => {
+export const BlockBackground = (): JSX.Element => {
   return (
     <div className="storybook__container-block">
       <Block
@@ -90,4 +90,4 @@ export const ButtonBlockSticky = (): JSX.Element => {
   );
 };
 
-ButtonBlockSticky.story = { name: 'Con fondo' };
+BlockBackground.story = { name: 'Con fondo' };
