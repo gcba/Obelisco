@@ -242,7 +242,7 @@ export const Header: React.FC<HeaderProps> = ({ hasLogin, hasProfile, hasSearch,
   return (
     <header className="navbar navbar-light navbar-expand-lg" role="banner">
       <a href="#main" className="skip-to-main-content-link">
-        Ir al contenido principal
+        Saltar al contenido principal
       </a>
       <div className="container header-container">
         {LOGO}
