@@ -86,6 +86,10 @@ $form-validation-states: (
   &-sm {
     height: $input-height-sm;
   }
+  
+  .form-group {
+    position: relative;
+  }
 }
 
 .form-group {
