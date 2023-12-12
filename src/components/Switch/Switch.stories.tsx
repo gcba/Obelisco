@@ -29,16 +29,23 @@ export const Switch = (): JSX.Element => {
       <SwitchContainer label="Prendido / Deshabilitado" id="switch-disable-2" isDisabled isChecked />
       <br />
       <br />
-      <SwitchContainer id="switch-sm-1" isSmall />
-      <SwitchContainer id="switch-sm-2" isSmall isChecked />
+      <SwitchContainer id="switch-sm-1" label="Apagado" isLabelHidden isSmall />
+      <SwitchContainer id="switch-sm-2" label="Prendido" isLabelHidden isSmall isChecked />
       <br />
       <br />
-      <SwitchContainer id="switch-dark-sm-1" isSmall isDark />
-      <SwitchContainer id="switch-dark-sm-2" isSmall isDark isChecked />
+      <SwitchContainer id="switch-dark-sm-1" label="Apagado" isLabelHidden isSmall isDark />
+      <SwitchContainer id="switch-dark-sm-2" label="Prendido" isLabelHidden isSmall isDark isChecked />
       <br />
       <br />
-      <SwitchContainer id="switch-sm-disable-1" isSmall isDisabled />
-      <SwitchContainer id="switch-sm-disable-2" isSmall isDisabled isChecked />
+      <SwitchContainer id="switch-sm-disable-1" label="Apagado / Deshabilitado" isLabelHidden isSmall isDisabled />
+      <SwitchContainer
+        id="switch-sm-disable-2"
+        label="Apagado / Deshabilitado"
+        isLabelHidden
+        isSmall
+        isDisabled
+        isChecked
+      />
     </>
   );
 };

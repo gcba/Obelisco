@@ -8,10 +8,11 @@ export interface SwitchProps {
   isDark?: boolean;
   isDisabled?: boolean;
   isChecked?: boolean;
+  isLabelHidden?: boolean;
 }
 
 export const SwitchContainer: React.FC<SwitchProps> = (props: SwitchProps) => {
-  const { label, id, isSmall, isDark, isDisabled, isChecked } = props;
+  const { label, id, isSmall, isDark, isDisabled, isChecked, isLabelHidden = false } = props;
 
   const switchClasses = classNames('switch', {
     'switch-sm': isSmall,
@@ -19,7 +20,8 @@ export const SwitchContainer: React.FC<SwitchProps> = (props: SwitchProps) => {
   });
 
   const labelClasses = classNames('switch-label', {
-    disabled: isDisabled
+    disabled: isDisabled,
+    'sr-only': isLabelHidden
   });
 
   return (
