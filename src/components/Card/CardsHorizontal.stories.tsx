@@ -103,7 +103,7 @@ export const Tematic = (): JSX.Element => {
   return (
     <div className="storybook__container-card-horizontal">
       <div className="card card-simple card-horizontal card-lg">
-        <img src="cards/home.svg" className="card-img-left" alt=" " />
+        <img src="cards/home.svg" className="card-img-left" alt="descripción de imagen" />
         <div className="card-body">
           <h3 className="card-title">
             <a href="#">Título de la tarjeta con más de una línea</a>

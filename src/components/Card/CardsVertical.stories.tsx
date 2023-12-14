@@ -92,7 +92,7 @@ export const Event = (): JSX.Element => {
   return (
     <div className="storybook__container-cards">
       <div className="card">
-        <img src="cards/evento.jpg" className="card-img-top" alt="descripción alternativa" />
+        <img src="cards/evento.jpg" className="card-img-top" alt="descripción de imagen" />
         <div className="card-body">
           <p className="card-headline">SOBRELINEA</p>
           <h3 className="card-title">
