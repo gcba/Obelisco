@@ -47,12 +47,22 @@ export const WithImage = (): JSX.Element => {
   return (
     <div className="storybook__container-card-horizontal">
       <div className="card card-horizontal">
-        <img src="cards/paseobajo-wide.png" className="card-img-left" alt="descripción de imagen" />
+        <img src="cards/img-left.jpg" className="card-img-left" alt="descripción de imagen" />
         <div className="card-body">
           <h3 className="card-title">
             <a href="#" className="card-title-link">
               {title}
             </a>{' '}
+          </h3>
+          <p className="card-text">{description}</p>
+        </div>
+      </div>
+      <br />
+      <div className="card card-horizontal unbordered">
+        <img src="cards/img-left.jpg" className="card-img-left" alt="descripción de imagen" />
+        <div className="card-body">
+          <h3 className="card-title">
+            <a href="#">{title}</a>
           </h3>
           <p className="card-text">{description}</p>
         </div>
