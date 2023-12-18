@@ -16,14 +16,17 @@ export const Buscador = (): JSX.Element => {
     <div className="storybook__container-form">
       <form className="form-search">
         <div className="form-group">
+          <label className="sr-only" htmlFor="search-input">
+            Buscador
+          </label>
           <input
             type="search"
             className="form-control input-search"
-            id="name-input"
+            id="search-input"
             name="name"
             placeholder="Buscar..."
           />
-          <button className="reset" type="reset"></button>
+          <button className="reset" type="reset" aria-label="Borrar"></button>
         </div>
       </form>
     </div>
