@@ -11,7 +11,7 @@
     gap: 16px;
     margin-bottom: 1rem;
 
-    &:has(.storybook__container-tooltip-column) {
+    &:nth-of-type(3n+2){
       flex-direction: column;
     }
 
@@ -29,10 +29,9 @@
     padding: 10rem 0;
 
     .storybook__container-tooltip-row {
-      &:has(.storybook__container-tooltip-column) {
+      &:nth-of-type(3n+2){
         flex-direction: row;
       }
-
       .left {
         flex-direction: column;
         align-items: flex-start;
