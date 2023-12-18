@@ -32,7 +32,7 @@ const social = [
 
 const PhonesSection = (): JSX.Element => (
   <section>
-    <h4>Teléfonos útiles</h4>
+    <h3>Teléfonos útiles</h3>
     <ul className="list-inline">
       {phones.map(([number, name]) => (
         <li className="list-inline-item phone-items" key={number}>
@@ -48,7 +48,7 @@ const PhonesSection = (): JSX.Element => (
 
 const SocialSection = (): JSX.Element => (
   <section>
-    <h4>Redes de la ciudad</h4>
+    <h3>Redes de la ciudad</h3>
     <ul className="list-inline">
       {social.map(([network, href, icon]) => (
         <li className="list-inline-item redes-items" key={network}>
@@ -105,6 +105,7 @@ const LicenseSection = (): JSX.Element => (
 
 export const Completo = (): JSX.Element => (
   <div className="storybook__container-footer">
+    <h2 className="sr-only">Navegación de pie de página</h2>
     <footer className="main-footer">
       <div className="container">
         <PhonesSection />
@@ -121,6 +122,7 @@ export const Completo = (): JSX.Element => (
 
 export const SoloLegales = (): JSX.Element => (
   <div className="storybook__container-footer">
+    <h2 className="sr-only">Navegación de pie de página</h2>
     <footer className="main-footer">
       <div className="container">
         <LegalSection />
@@ -136,9 +138,10 @@ SoloLegales.story = {
 
 export const FooterIndicator = (): JSX.Element => (
   <div className="storybook__container-footer">
+    <h2 className="sr-only">Navegación de pie de página</h2>
     <div className="footer-info">
       <div className="container">
-        <h4 className="footer-info-text">¿Te fue útil esta página?</h4>
+        <h3 className="footer-info-text">¿Te fue útil esta página?</h3>
         <div className="footer-info-actions">
           <button className="btn btn-primary">Sí, me fue útil</button>
           <button className="btn btn-secondary">No me sirvió</button>

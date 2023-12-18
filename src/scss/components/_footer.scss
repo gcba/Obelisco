@@ -37,7 +37,8 @@ $footer-info-gap-mobile: 1rem;
     padding: $footer-padding-y-sm 0;
   }
 
-  h4 {
+  h4, h3 {
+    @extend .h4;
     margin-bottom: spaceUnits(2);
 
     @include media-breakpoint-down(sm) {
@@ -158,6 +159,7 @@ $footer-info-gap-mobile: 1rem;
       gap: $footer-info-gap;
 
     .footer-info-text {
+      @extend .h4;
       margin: 0;
     }
 
