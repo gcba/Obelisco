@@ -1,6 +1,5 @@
 .card-map {
   .card-body {
-
     .card-title {
       @extend .h4;
       margin-bottom: 0;
@@ -11,7 +10,8 @@
     }
 
     .card-iframe {
-      iframe {
+      iframe,
+      div {
         width: 100%;
         max-height: 146px;
         aspect-ratio: 16 / 9;
