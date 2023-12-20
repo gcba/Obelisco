@@ -195,9 +195,7 @@ $accordion-bg-white: $white;
     -webkit-line-clamp: 3;
     line-clamp: 3;
     -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: wrap;
+    white-space: normal;
   }
 
   //.card-subtitle deprecado. Eliminar mas adelante
