@@ -4,6 +4,7 @@ import './Card.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+import { CardComponent } from '.';
 
 // Configuración general del componente
 export default {
@@ -19,27 +20,9 @@ const description = 'Descripción de la tarjeta';
 export const WithIcon = (): JSX.Element => {
   return (
     <div className="storybook__container-cards">
-      <div className="card">
-        <div className="card-body">
-          <i className="bx bxs-info-circle card-icon"></i>
-          <h3 className="card-title">
-            <a href="#" className="card-title-link">
-              {title}
-            </a>
-          </h3>
-          <p className="card-text">{description}</p>
-        </div>
-      </div>
+      <CardComponent title={title} description={description} href="#" icon="bx bxs-info-circle"></CardComponent>
       <br />
-      <div className="card card-simple">
-        <div className="card-body">
-          <i className="bx bx-news card-icon"></i>
-          <h3 className="card-title">
-            <a href="#">{title}</a>
-          </h3>
-          <p className="card-text">{description}</p>
-        </div>
-      </div>
+      <CardComponent title={title} description={description} href="#" icon="info" hasNoBorder></CardComponent>
     </div>
   );
 };
@@ -48,17 +31,11 @@ WithIcon.story = { name: 'Con ícono' };
 export const WithImage = (): JSX.Element => {
   return (
     <div className="storybook__container-cards">
-      <div className="card">
-        <img src="cards/img-top.jpg" className="card-img-top" alt="descripción de imagen" />
-        <div className="card-body">
-          <h3 className="card-title">
-            <a href="#" className="card-title-link">
-              {title}
-            </a>
-          </h3>
-          <p className="card-text">{description}</p>
-        </div>
-      </div>
+      <CardComponent
+        title={title}
+        description={description}
+        href="#"
+        image={{ src: 'cards/img-top.jpg', alt: 'descripción de imagen' }}></CardComponent>
     </div>
   );
 };
@@ -67,43 +44,24 @@ WithImage.story = { name: 'Con imagen' };
 export const News = (): JSX.Element => {
   return (
     <div className="storybook__container-cards">
-      <div className="card">
-        <img src="cards/img-top.jpg" className="card-img-top" alt="descripción de imagen" />
-        <div className="card-body">
-          <div className="card-badges">
-            <span className="badge badge-secondary">Etiqueta 1</span>
-            <span className="badge badge-secondary">Etiqueta 2</span>
-          </div>
-          <h3 className="card-title">
-            <a href="#" className="card-title-link">
-              {title}
-            </a>
-          </h3>
-          <p className="card-text">{description}</p>
-          <div className="card-info">
-            <small>Fecha de publicación</small>
-          </div>
-        </div>
-      </div>
+      <CardComponent
+        title={title}
+        description={description}
+        href="#"
+        image={{ src: 'cards/img-top.jpg', alt: 'descripción de imagen' }}
+        tags={[{ text: 'etiqueta 1' }, { text: 'etiqueta 2' }]}>
+        <small>Fecha de publicación</small>
+      </CardComponent>
       <br />
-      <div className="card">
-        <img src="cards/img-top.jpg" className="card-img-top" alt="descripción de imagen" />
-        <div className="card-body">
-          <div className="card-badges">
-            <span className="badge badge-secondary">Etiqueta 1</span>
-            <span className="badge badge-secondary">Etiqueta 2</span>
-          </div>
-          <h3 className="card-title">
-            <a href="#" className="card-title-link text-truncate">
-              {titleExtended}
-            </a>
-          </h3>
-          <p className="card-text">{description}</p>
-          <div className="card-info">
-            <small>Fecha de publicación</small>
-          </div>
-        </div>
-      </div>
+      <CardComponent
+        title={titleExtended}
+        description={description}
+        href="#"
+        image={{ src: 'cards/img-top.jpg', alt: 'descripción de imagen' }}
+        tags={[{ text: 'etiqueta 1' }, { text: 'etiqueta 2' }]}
+        isTextTruncate>
+        <small>Fecha de publicación</small>
+      </CardComponent>
     </div>
   );
 };
@@ -112,26 +70,21 @@ News.story = { name: 'Noticia' };
 export const Event = (): JSX.Element => {
   return (
     <div className="storybook__container-cards">
-      <div className="card">
-        <img src="cards/evento.jpg" className="card-img-top" alt="descripción de imagen" />
-        <div className="card-body">
-          <p className="card-headline">SOBRELINEA</p>
-          <h3 className="card-title">
-            <a href="#" className="card-title-link">
-              {title}
-            </a>
-          </h3>
-          <p className="card-text">{description}</p>
-          <div className="card-info-event">
-            <small>
-              <span className="material-icons-round">calendar_today</span> Lun 01/1
-            </small>
-            <small>
-              <span className="material-icons-round">watch_later</span> 17 | 18 | 19 hs
-            </small>
-          </div>
+      <CardComponent
+        title={title}
+        description={description}
+        href="#"
+        image={{ src: 'cards/img-top.jpg', alt: 'descripción de imagen' }}
+        headline="sobrelinea">
+        <div className="pt-2">
+          <small>
+            <span className="material-icons-round">calendar_today</span> Lun 01/1
+          </small>
+          <small>
+            <span className="material-icons-round">watch_later</span> 17 | 18 | 19 hs
+          </small>
         </div>
-      </div>
+      </CardComponent>
     </div>
   );
 };

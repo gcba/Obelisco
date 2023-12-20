@@ -244,7 +244,7 @@ $accordion-bg-white: $white;
   }
   //Fin: Estilos para card-footer de tarjeta noticias previa a actualizacion
 
-  .card-info, .card-info-event {
+  .card-info {
     margin-top: 0.5rem;
 
     small {
@@ -260,10 +260,6 @@ $accordion-bg-white: $white;
         margin-top: 0.5rem;
       }
     }
-  }
-
-  .card-info-event {
-    margin-top: 1rem;
   }
 
   .card-icon {

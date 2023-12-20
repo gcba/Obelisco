@@ -4,6 +4,7 @@ import './Card.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+import { CardComponent } from '.';
 
 // Configuración general del componente
 export default {
@@ -17,27 +18,20 @@ const description = 'Descripción de la tarjeta';
 export const WithIcon = (): JSX.Element => {
   return (
     <div className="storybook__container-card-horizontal">
-      <div className="card card-horizontal">
-        <i className="bx bxs-info-circle card-icon-left"></i>
-        <div className="card-body">
-          <h3 className="card-title">
-            <a href="#" className="card-title-link">
-              {title}
-            </a>{' '}
-          </h3>
-          <p className="card-text">{description}</p>
-        </div>
-      </div>
+      <CardComponent
+        title={title}
+        description={description}
+        href="#"
+        icon="bx bxs-info-circle"
+        isHorizontal></CardComponent>
       <br />
-      <div className="card card-horizontal unbordered">
-        <span className="material-icons-round card-icon-left">info</span>
-        <div className="card-body">
-          <h3 className="card-title">
-            <a href="#">{title}</a>
-          </h3>
-          <p className="card-text">{description}</p>
-        </div>
-      </div>
+      <CardComponent
+        title={title}
+        description={description}
+        href="#"
+        icon="info"
+        isHorizontal
+        hasNoBorder></CardComponent>
     </div>
   );
 };
@@ -46,27 +40,20 @@ WithIcon.story = { name: 'Con ícono' };
 export const WithImage = (): JSX.Element => {
   return (
     <div className="storybook__container-card-horizontal">
-      <div className="card card-horizontal">
-        <img src="cards/img-left.jpg" className="card-img-left" alt="descripción de imagen" />
-        <div className="card-body">
-          <h3 className="card-title">
-            <a href="#" className="card-title-link">
-              {title}
-            </a>{' '}
-          </h3>
-          <p className="card-text">{description}</p>
-        </div>
-      </div>
+      <CardComponent
+        title={title}
+        description={description}
+        href="#"
+        image={{ src: 'cards/img-left.jpg', alt: 'descripción de imagen' }}
+        isHorizontal></CardComponent>
       <br />
-      <div className="card card-horizontal unbordered">
-        <img src="cards/img-left.jpg" className="card-img-left" alt="descripción de imagen" />
-        <div className="card-body">
-          <h3 className="card-title">
-            <a href="#">{title}</a>
-          </h3>
-          <p className="card-text">{description}</p>
-        </div>
-      </div>
+      <CardComponent
+        title={title}
+        description={description}
+        href="#"
+        image={{ src: 'cards/img-left.jpg', alt: 'descripción de imagen' }}
+        isHorizontal
+        hasNoBorder></CardComponent>
     </div>
   );
 };
@@ -75,25 +62,9 @@ WithImage.story = { name: 'Con imagen' };
 export const OnlyText = (): JSX.Element => {
   return (
     <div className="storybook__container-card-horizontal">
-      <div className="card card-horizontal">
-        <div className="card-body">
-          <h3 className="card-title">
-            <a href="#" className="card-title-link">
-              {title}
-            </a>{' '}
-          </h3>
-          <p className="card-text">{description}</p>
-        </div>
-      </div>
+      <CardComponent title={title} description={description} href="#" isHorizontal></CardComponent>
       <br />
-      <div className="card card-horizontal unbordered">
-        <div className="card-body">
-          <h3 className="card-title">
-            <a href="#">{title}</a>
-          </h3>
-          <p className="card-text">{description}</p>
-        </div>
-      </div>
+      <CardComponent title={title} description={description} href="#" isHorizontal hasNoBorder></CardComponent>
     </div>
   );
 };
@@ -102,15 +73,13 @@ OnlyText.story = { name: 'Solo texto' };
 export const Tematic = (): JSX.Element => {
   return (
     <div className="storybook__container-card-horizontal">
-      <div className="card card-simple card-horizontal card-lg">
-        <img src="cards/home.svg" className="card-img-left" alt="descripción de imagen" />
-        <div className="card-body">
-          <h3 className="card-title">
-            <a href="#">Título de la tarjeta con más de una línea</a>
-          </h3>
-          <p className="card-text">Descripción de la tarjeta. </p>
-        </div>
-      </div>
+      <CardComponent
+        title={title}
+        description={description}
+        href="#"
+        image={{ src: 'cards/home.svg', alt: 'descripción de imagen' }}
+        isThemeCard
+        hasNoBorder></CardComponent>
     </div>
   );
 };
