@@ -31,7 +31,7 @@ export const Map = (): JSX.Element => {
         title="Ubicación"
         description="Av. Monroe 3555"
         iframe={iframeElement}
-        link="https://www.google.com/maps/place/Av.+Monroe+3555,+C1430BKC+CABA/@-34.5633955,-58.4750084,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb6878f2d4d9d:0x8553561751a33b4!8m2!3d-34.5633999!4d-58.4724335!16s%2Fg%2F11k4hjk78h?entry=ttu"
+        link="https://mapa.buenosaires.gob.ar/comollego/?lat=-34.565106&lng=-58.470986&zl=15&modo=transporte#"
       />
     </div>
   );
