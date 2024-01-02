@@ -116,6 +116,7 @@ const Tags = ({ tags }: { tags: BaseCardProps['tags'] }): JSX.Element | null => 
   }
 };
 
+/* Actualizacion de componente Cards - Diciembre 2023 */
 export type CardTags = {
   text: string;
   type?: string;

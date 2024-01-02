@@ -14,7 +14,7 @@ export default {
 const title = 'Título de la tarjeta con más de una línea';
 const description = 'Descripción de la tarjeta';
 
-export const TresColumnas = (): JSX.Element => {
+export const ThreeColumn = (): JSX.Element => {
   return (
     <div className="container">
       <div className="card-deck max-cards-3 card-column">
@@ -77,8 +77,9 @@ export const TresColumnas = (): JSX.Element => {
     </div>
   );
 };
+ThreeColumn.story = { name: 'Tres columnas' };
 
-export const DosColumnas = (): JSX.Element => {
+export const TwoColumn = (): JSX.Element => {
   return (
     <div className="container">
       <div className="card-deck max-cards-2 card-column">
@@ -119,8 +120,9 @@ export const DosColumnas = (): JSX.Element => {
     </div>
   );
 };
+TwoColumn.story = { name: 'Dos columnas' };
 
-export const Noticias = (): JSX.Element => {
+export const Scrollable = (): JSX.Element => {
   return (
     <div className="responsive-scroll vertical-cards-container" tabIndex={0}>
       <div className="card">
@@ -180,3 +182,4 @@ export const Noticias = (): JSX.Element => {
     </div>
   );
 };
+Scrollable.story = { name: 'Desplazable' };
