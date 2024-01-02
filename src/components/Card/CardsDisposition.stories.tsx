@@ -7,7 +7,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 // Configuración general del componente
 export default {
-  title: 'Componentes|Tarjetas/Disposicion',
+  title: 'Componentes|Tarjetas/Disposición',
   decorators: [withA11y]
 };
 

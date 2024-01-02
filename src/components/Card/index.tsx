@@ -129,7 +129,7 @@ interface CardComponentProps {
   isHorizontal?: boolean;
   isThemeCard?: boolean;
   hasNoBorder?: boolean;
-  isTextTruncate?: boolean;
+  isTitleTruncate?: boolean;
   icon?: string;
   image?: CardImage;
   tags?: CardTags[];
@@ -155,7 +155,7 @@ export const CardComponent: React.FC<CardComponentProps> = (props: React.PropsWi
     icon,
     image,
     tags,
-    isTextTruncate,
+    isTitleTruncate,
     children
   } = props;
 
@@ -187,8 +187,8 @@ export const CardComponent: React.FC<CardComponentProps> = (props: React.PropsWi
           <a
             href={href}
             className={
-              !hasNoBorder || isTextTruncate
-                ? `${hasNoBorder ? '' : 'card-title-link'} ${isTextTruncate ? 'text-truncate' : ''}`.trim()
+              !hasNoBorder || isTitleTruncate
+                ? `${hasNoBorder ? '' : 'card-title-link'} ${isTitleTruncate ? 'ellipsis-3' : ''}`.trim()
                 : undefined
             }>
             {title}

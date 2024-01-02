@@ -53,7 +53,7 @@ const headers = [
   'componentes-switch',
   'componentes-tarjetas-horizontal',
   'componentes-tarjetas-vertical',
-  'componentes-tarjetas-disposicion',
+  'componentes-tarjetas-disposición',
   'componentes-tarjetas-tipos',
   'componentes-tarjetas-lista-ancho-completo',
   'componentes-tarjetas-lista-ancho-por-tarjeta',

@@ -59,7 +59,7 @@ export const News = (): JSX.Element => {
         href="#"
         image={{ src: 'cards/img-top.jpg', alt: 'descripción de imagen' }}
         tags={[{ text: 'etiqueta 1' }, { text: 'etiqueta 2' }]}
-        isTextTruncate>
+        isTitleTruncate>
         <small>Fecha de publicación</small>
       </CardComponent>
     </div>

@@ -190,14 +190,6 @@ $accordion-bg-white: $white;
     @extend .h4;
   }
 
-  .text-truncate {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    white-space: normal;
-  }
-
   //.card-subtitle deprecado. Eliminar mas adelante
   .card-subtitle {
     font-size: $card-subtitle-font-size;
