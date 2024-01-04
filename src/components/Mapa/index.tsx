@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-export interface MapaProps {
+export interface MapProps {
   title: string;
   description?: string;
   iframe: React.ReactNode;
   link?: string;
 }
 
-export const MapaCard: React.FC<MapaProps> = (props: React.PropsWithChildren<MapaProps>) => {
+export const MapCard: React.FC<MapProps> = (props: React.PropsWithChildren<MapProps>) => {
   const { title, description, iframe, link } = props;
 
   return (

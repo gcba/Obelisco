@@ -4,7 +4,7 @@ import './Map.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
-import { MapaCard } from './index';
+import { MapCard } from './index';
 
 // Configuración general del componente
 export default {
@@ -27,7 +27,7 @@ export const Map = (): JSX.Element => {
   );
   return (
     <div className="storybook__container-card-map">
-      <MapaCard
+      <MapCard
         title="Ubicación"
         description="Av. Uspallata 3160"
         iframe={iframeElement}
