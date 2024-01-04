@@ -16,8 +16,6 @@ export const MapaCard: React.FC<MapaProps> = (props: React.PropsWithChildren<Map
         <h3 className="card-title">{title}</h3>
         <p className="card-text">{description}</p>
         <div className="card-iframe">{iframe}</div>
-      </div>
-      <div className="card-footer">
         <a href={link} className="btn btn-primary btn-lg btn-block" target="_blank" rel="noreferrer" tabIndex={0}>
           Cómo llego
         </a>

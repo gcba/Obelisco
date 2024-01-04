@@ -10,6 +10,8 @@
     }
 
     .card-iframe {
+      max-height: 146px;
+      margin: 1rem 0;
       iframe,
       div {
         width: 100%;
@@ -20,9 +22,5 @@
         border-radius: 8px;
       }
     }
-  }
-
-  .card-footer {
-    margin-top: -0.5rem;
   }
 }
