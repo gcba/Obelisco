@@ -95,6 +95,7 @@ $panel-deck-card-mr: 2rem;
   }
 
   .card-body {
+    padding: 0;
     width: 100%;
     max-width: 712px;
     .card-title {
@@ -185,6 +186,7 @@ $panel-deck-card-mr: 2rem;
     }
 
     .card-body {
+      padding: 0;
       .card-title {
         @extend .h3;
         margin: 0;

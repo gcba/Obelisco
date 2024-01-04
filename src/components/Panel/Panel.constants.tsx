@@ -48,7 +48,7 @@ export const PICTURE = {
   alt: 'descripción alternativa'
 };
 export const PICTURE_HIGHLIGHTED = {
-  src: 'panel/destacado.jpeg',
+  src: 'panel/destacado-bs-as.jpg',
   alt: 'descripción de imagen'
 };
 export const VIDEO = {
