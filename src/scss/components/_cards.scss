@@ -363,7 +363,7 @@ $accordion-bg-white: $white;
     .card-body {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       padding: $card-spacer;
     }
 
