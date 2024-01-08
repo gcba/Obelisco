@@ -23,4 +23,10 @@ $card-block-box-shadow: 0 0 0 2px $grisulado-50;
   .progress {
     margin-top: 1rem;
   }
+
+  @include media-breakpoint-down(sm) {
+    .card-body {
+      padding: 1rem;
+    }
+  }
 }
