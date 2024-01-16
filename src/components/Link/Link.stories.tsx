@@ -84,7 +84,7 @@ export const Descarga = (): JSX.Element => {
     <>
       <p>
         Nuestro sistema de{' '}
-        <a className="download" href="#" target="_blank" rel="noreferrer">
+        <a className="download" href="#" target="_blank" rel="noreferrer" download>
           enlace de descarga
         </a>{' '}
         brinda un conjunto de herramientas y componentes colaborativos y accesibles que define procesos para que los
@@ -93,7 +93,7 @@ export const Descarga = (): JSX.Element => {
       <p>
         De esta forma, ayudamos a crear servicios consistentes para mejorar la experiencia digital de vecinos y vecinas.
       </p>
-      <a className="btn btn-secondary btn-sm download-link" href="#" target="_blank" rel="noreferrer">
+      <a className="btn btn-secondary btn-sm download-link" href="#" target="_blank" rel="noreferrer" download>
         Descargar
       </a>
 
@@ -103,7 +103,7 @@ export const Descarga = (): JSX.Element => {
       <div className="storybook__container__link">
         <p>
           Nuestro sistema de{' '}
-          <a className="download link-white" href="#" target="_blank" rel="noreferrer">
+          <a className="download link-white" href="#" target="_blank" rel="noreferrer" download>
             enlace de descarga
           </a>{' '}
           brinda un conjunto de herramientas y componentes colaborativos y accesibles que define procesos para que los
