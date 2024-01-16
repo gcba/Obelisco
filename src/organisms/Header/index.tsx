@@ -79,16 +79,18 @@ export const LOGO = (
   </a>
 );
 
-export const BUTTON_TOGGLER = (
-  <button
-    className="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarContent"
-    aria-controls="navbarContent"
-    aria-expanded="false"
-    aria-label="Menú"></button>
-);
+export const ButtonToggler = (notifications: boolean): JSX.Element => {
+  return (
+    <button
+      className={`navbar-toggler ${notifications ? 'notification' : ''}`}
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarContent"
+      aria-controls="navbarContent"
+      aria-expanded="false"
+      aria-label="Menú"></button>
+  );
+};
 
 export const SEARCH = (
   <div className="navbar-search">
@@ -127,7 +129,7 @@ export const USER = (
     <div className="dropdown">
       <button
         type="button"
-        className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border dropdown-toggle"
+        className="btn btn-dropdown btn-dropdown-lg btn-dropdown-border dropdown-toggle notification"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
@@ -249,7 +251,7 @@ export const Header: React.FC<HeaderProps> = ({ hasLogin, hasProfile, hasSearch,
         {hasLogin && <Login isMobile={true}></Login>}
         {(hasSearch || hasLogin || hasProfile || sections) && (
           <>
-            {shouldShowButtonToggler && BUTTON_TOGGLER}
+            {shouldShowButtonToggler && ButtonToggler(hasProfile ? true : false)}
             <div className="collapse navbar-collapse" id="navbarContent">
               {shouldShowNavbarContent && (
                 <div className="navbar-content">
