@@ -50,3 +50,15 @@ $small-font-size: 81.25%;
 // Links
 
 $link-decoration: underline;
+
+/* Clases 'ellipsis-' de 1 linea a 4 lineas (ellipsis-1, ellipsis-2, ..) */
+@for $i from 1 through 4 {
+  .ellipsis-#{$i} {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: #{$i};
+    line-clamp: #{$i};
+  }
+}

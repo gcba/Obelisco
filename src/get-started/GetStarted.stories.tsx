@@ -27,15 +27,14 @@ export const Instalacion = (): JSX.Element => (
         />
       </p>
       <p>
-        Obelisco es el nuevo sistema de diseño basado en componentes para los productos digitales de la ciudad de Buenos
-        Aires. Fue creado para reemplazar <a href="https://github.com/gcba/bastrap">BAstrap</a>.
+        Sistema de diseño basado en componentes para productos digitales de la Ciudad de Buenos Aires. Diseñado para
+        sustituir a <a href="https://github.com/gcba/bastrap">BAstrap</a>, brindando una mejor experiencia de usuario.
       </p>
       {/* VER DOCUMENTACION */}
       <h2>
-        <a href="https://gcba.github.io/estandares/componentes/web/">Ver la documentación de componentes</a>.
+        <a href="https://gcba.github.io/estandares/componentes/acceso/">Ver la documentación de componentes</a>.
       </h2>
       <br />
-
       {/* COMO USARLO */}
       <h2>Cómo usarlo</h2>
       <hr />
@@ -45,7 +44,6 @@ export const Instalacion = (): JSX.Element => (
         sistema para definir la versión a usar y poder actualizarla fácilmente.
       </p>
       <br />
-
       {/* INSTALACION */}
       <h3>Instalación</h3>
       <p>Para instalarlo en un proyecto que ya usa npm, hay que ejecutar:</p>
@@ -56,7 +54,6 @@ export const Instalacion = (): JSX.Element => (
       </pre>
       <br />
       <br />
-
       {/* ACTUALIZACION */}
       <h3>Actualización</h3>
       <p>
@@ -70,7 +67,6 @@ export const Instalacion = (): JSX.Element => (
       </pre>
       <br />
       <br />
-
       {/* SIN USAR NPM */}
       <h3>Sin usar npm</h3>
       <p>
@@ -79,13 +75,11 @@ export const Instalacion = (): JSX.Element => (
         En caso de tener que actualizar a la última versión, hay que volver a descargar los archivos y reemplazarlos.
       </p>
       <br />
-
       {/* COMO IMPORTARLO */}
       <h2>Cómo importarlo</h2>
       <hr />
       <p>Obelisco cuenta de dos partes principales que se pueden importar de varias formas.</p>
       <br />
-
       {/* ESTILOS */}
       <h3>Estilos (css o sass)</h3>
       <p>
@@ -98,8 +92,14 @@ export const Instalacion = (): JSX.Element => (
         <code> &lt;link rel=&quot;stylesheet&quot; href=&quot;ruta/al/proyecto/dist/obelisco.css&quot;&gt; </code>
       </pre>
       <br />
+      <p>Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:</p>
+      <pre className="code-box">
+        <code>
+          &lt;link href=&quot;https://gcba.github.io/Obelisco/obelisco.css&quot; rel=&quot;stylesheet&quot; /&gt;
+        </code>
+      </pre>
       <br />
-
+      <br />
       {/* TIPOGRAFIAS */}
       <h3>Tipografías</h3>
       <p>
@@ -118,7 +118,6 @@ export const Instalacion = (): JSX.Element => (
       </pre>
       <br />
       <br />
-
       {/* ICONOGRAFIA */}
       <h3>Iconografía</h3>
       <p>
@@ -137,7 +136,7 @@ export const Instalacion = (): JSX.Element => (
       <p>Para utilizarlas con su CDN podemos hacerlo de la siguiente forma:</p>
       <pre className="code-box">
         <code>
-          &lt;link href=&quot;https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+          &lt;link href=&quot;https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css&quot; rel=&quot;stylesheet&quot;&gt;
           <br />
           &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons+Round&quot;
           rel=&quot;stylesheet&quot;&gt;
@@ -145,7 +144,6 @@ export const Instalacion = (): JSX.Element => (
       </pre>
       <br />
       <br />
-
       {/* JAVASCRIPT */}
       <h3>Javascript</h3>
       <p>
@@ -156,13 +154,13 @@ export const Instalacion = (): JSX.Element => (
       <p>Un ejemplo de cómo importalas es:</p>
       <pre className="code-box">
         <code>
-          &lt;script src=&quot;https://code.jquery.com/jquery-3.2.1.slim.min.js&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js&quot;
+          integrity=&quot;sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj&quot;
+          crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
           <br />
-          &lt;script
-          src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js&quot;&gt;&lt;/script&gt;
-          <br />
-          &lt;script
-          src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js&quot;
+          integrity=&quot;sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct&quot;
+          crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
         </code>
       </pre>
       <br />
@@ -179,7 +177,6 @@ export const Instalacion = (): JSX.Element => (
         </p>
       </blockquote>
       <br />
-
       {/* DESARROLLO */}
       <h2>Desarrollo</h2>
       <hr />
@@ -189,7 +186,6 @@ export const Instalacion = (): JSX.Element => (
         trabajo que definimos.
       </p>
       <br />
-
       {/* MANTENIMIENTO Y COLABORACION */}
       <h2>Mantenimiento y colaboración</h2>
       <hr />

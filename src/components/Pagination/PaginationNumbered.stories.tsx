@@ -15,20 +15,20 @@ export default {
 };
 
 export const Initial = (): JSX.Element => (
-  <div className="pagination-wrapper">
+  <div className="storybook__container-pagination">
     <Pagination pages={10} ariaLabel="Ejemplo de paginado numerado inicial" />
   </div>
 );
 Initial.story = { name: 'Inicial' };
 
 export const Central = (): JSX.Element => (
-  <div className="pagination-wrapper">
+  <div className="storybook__container-pagination">
     <Pagination pages={10} default={4} ariaLabel="Ejemplo de paginado numerado central" />
   </div>
 );
 
 export const Final = (): JSX.Element => (
-  <div className="pagination-wrapper">
+  <div className="storybook__container-pagination">
     <Pagination pages={10} default={9} ariaLabel="Ejemplo de paginado numerado final" />
   </div>
 );

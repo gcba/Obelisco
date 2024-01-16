@@ -1,8 +1,12 @@
 // Base
 import React from 'react';
+import './Header.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+
+// Component and Constants
+import { Header, SECTIONS_FIRST_LINE, SECTIONS_SECOND_LINE, SECTIONS_NO_SEARCH } from '.';
 
 // Configuración general del componente
 export default {
@@ -10,108 +14,54 @@ export default {
   decorators: [withA11y]
 };
 
-export const HeaderNoLoginSearch = (): JSX.Element => {
+export const NoLoginOneLine = (): JSX.Element => {
   return (
-    <header className="navbar navbar-light">
-      <div className="container">
-        <a href="#" className="navbar-brand">
-          <img className="header-logo" src="header/LogoBA.svg" alt="Ciudad de Buenos Aires" />
-        </a>
-        <button
-          className="navbar-toggler collapsed"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false">
-          Menú <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="nav nav-pills">
-            <li className="nav-item">
-              <a href="#" className="nav-link active">
-                <span>Inicio</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                <span>Chateá con BOTI</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="btn btn-link">
-                <span>Accedé a tu cuenta</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+    <div className="storybook__container-header">
+      <Header hasLogin sections={SECTIONS_FIRST_LINE}></Header>
+    </div>
   );
 };
-
-HeaderNoLoginSearch.story = {
-  name: 'No logueado'
+NoLoginOneLine.story = {
+  name: 'Deslogueado en 1 línea'
 };
-
-export const HeaderLoginSearch = (): JSX.Element => {
+export const NoLoginTwoLines = (): JSX.Element => {
   return (
-    <header className="navbar navbar-light navbar-md">
-      <div className="container">
-        <a href="#" className="navbar-brand">
-          <img className="header-logo" src="header/LogoBA.svg" alt="Ciudad de Buenos Aires" />
-        </a>
-        <button
-          className="navbar-toggler collapsed ml-auto"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false">
-          Menú <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="list-group-content d-responsive ml-2">
-          <a href="#" aria-label="Cerrar sesión" className="list-group-item list-group-item-logout logout-sm">
-            &nbsp;
-          </a>
-        </div>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="nav nav-pills">
-            <li className="nav-item">
-              <a href="#" className="nav-link active">
-                <span>Inicio</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                <span>Chateá con BOTI</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                <span>Mi actividad</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                <span>Mi cuenta</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" aria-label="Notificaciones" className="nav-link">
-                <i className="bx bxs-bell"></i>
-              </a>
-            </li>
-            <li className="nav-item d-responsive">
-              <a href="#" aria-label="Cerrar sesión" className="list-group-item list-group-item-logout logout-sm">
-                &nbsp;
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+    <div className="storybook__container-header">
+      <Header hasLogin sections={SECTIONS_SECOND_LINE} isSectionExtended></Header>
+    </div>
   );
 };
+NoLoginTwoLines.story = {
+  name: 'Deslogueado en 2 líneas'
+};
+export const LoginOneLine = (): JSX.Element => {
+  return (
+    <div className="storybook__container-header">
+      <Header hasProfile sections={SECTIONS_FIRST_LINE}></Header>
+    </div>
+  );
+};
+LoginOneLine.story = {
+  name: 'Logueado en 1 línea'
+};
+export const LoginTwoLines = (): JSX.Element => {
+  return (
+    <div className="storybook__container-header">
+      <Header hasProfile sections={SECTIONS_SECOND_LINE} isSectionExtended></Header>
+    </div>
+  );
+};
+LoginTwoLines.story = {
+  name: 'Logueado en 2 líneas'
+};
 
-HeaderLoginSearch.story = {
-  name: 'Logueado'
+export const OneLine = (): JSX.Element => {
+  return (
+    <div className="storybook__container-header">
+      <Header sections={SECTIONS_NO_SEARCH}></Header>
+    </div>
+  );
+};
+OneLine.story = {
+  name: 'Sin logueo'
 };

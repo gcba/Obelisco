@@ -111,3 +111,14 @@ $table-striped-order: even;
     }
   }
 }
+
+.table-responsive, .table-responsive-sm, .table-responsive-md, .table-responsive-lg, .table-responsive-xl {
+  > .table-bordered {
+    border: $border-width solid $border-color;
+  }
+
+  &:focus, &:focus-visible {
+    box-shadow: 0 0 0 0.25rem theme-color-level('info', 3);
+    outline: none;
+  }
+}

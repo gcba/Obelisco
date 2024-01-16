@@ -53,18 +53,20 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
   .nav-item {
     .nav-link {
-      max-height: 40px;
+      min-height: 40px;
       padding: $nav-link-padding-y $nav-link-padding-x;
+      line-height: 24px;
 
       &-lg {
-        max-height: 48px;
+        min-height: 48px;
         padding: $nav-link-padding-lg-y $nav-link-padding-x;
       }
 
       &-sm {
-        max-height: 30px;
+        min-height: 30px;
         padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
         font-size: 1rem;
+        line-height: 22px;
 
         .nav-icon {
           i,
@@ -400,12 +402,15 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   display: flex;
   align-items: center;
   position: relative;
-  padding: 0 2.5rem 0 2rem;
+  padding: 0;
+
+  &:has(.icons-container) {
+    padding: 0 2.5rem;
+  }
 
   .nav {
     width: fit-content;
     overflow-x: hidden;
-    margin-left: 0.625rem;
 
     &.fixedWidth {
       .nav-item > .nav-link {
@@ -429,6 +434,8 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    padding: 0;
+    border: none;
 
     > span {
       font-size: 16px;

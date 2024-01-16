@@ -11,8 +11,6 @@ import {
   AccessBorderComponent,
   AccessIconComponent,
   AccessTypes,
-  AccessListVertical,
-  AccessListHorizontal,
   AccessSizesComponent,
   AccessSizes
 } from '.';
@@ -24,7 +22,7 @@ export default {
 };
 
 export const AccessBorder = (): JSX.Element => (
-  <div className="list-group-container">
+  <div className="storybook__container-list-group">
     <div className="list-group">
       {AccessTypes.map((item, index) => (
         <AccessBorderComponent key={index} type={item.type} />
@@ -34,11 +32,11 @@ export const AccessBorder = (): JSX.Element => (
 );
 
 AccessBorder.story = {
-  name: 'Con borde'
+  name: 'Estados'
 };
 
 export const AccessDescription = (): JSX.Element => (
-  <div className="list-group-container">
+  <div className="storybook__container-list-group">
     <div className="list-group">
       {AccessTypes.map((item, index) => (
         <AccessDescriptionComponent key={index} type={item.type} />
@@ -52,7 +50,7 @@ AccessDescription.story = {
 };
 
 export const AccessIcon = (): JSX.Element => (
-  <div className="list-group-container">
+  <div className="storybook__container-list-group">
     <div className="list-group">
       {AccessTypes.map((item, index) => (
         <AccessIconComponent key={index} type={item.type} />
@@ -66,7 +64,7 @@ AccessIcon.story = {
 };
 
 export const AccessSizesStory = (): JSX.Element => (
-  <div className="list-group-container-sizes">
+  <div className="storybook__container-list-group-sizes">
     <div className="list-group">
       {AccessSizes.map((item, index) => (
         <AccessSizesComponent key={index} type={item.type} name={item.name} />
@@ -79,10 +77,12 @@ AccessSizesStory.story = {
   name: 'Tamaños'
 };
 
+/* Se Comenta temporalmente por que se agrega la seccion ancho por columna y por acceso
 export const Horizontal = (): JSX.Element => <AccessListHorizontal />;
 
 export const Vertical = (): JSX.Element => (
-  <div className="list-group-container">
+  <div className="storybook__container-list-group">
     <AccessListVertical />
   </div>
 );
+*/

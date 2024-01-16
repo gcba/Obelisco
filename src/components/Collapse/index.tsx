@@ -1,24 +1,27 @@
-import classNames from 'classnames';
 import React from 'react';
 
 interface CollapseProps {
   identifier: string;
   description?: string;
   content?: React.ReactNode;
+  isOnlySelect?: boolean;
+  dataParent?: string;
 }
 
-export const Collapse: React.FC<CollapseProps> = ({ children, description, identifier, content }): JSX.Element => {
-  const collapseClass = classNames({
-    'card-header collapsed card-link': true,
-    'card-info': !!content
-  });
-
+export const Collapse: React.FC<CollapseProps> = ({
+  children,
+  description,
+  identifier,
+  content,
+  isOnlySelect,
+  dataParent
+}): JSX.Element => {
   return (
     <div className="card">
-      <button className={collapseClass} data-toggle="collapse" data-target={'#' + identifier}>
+      <button className="card-header collapsed" data-toggle="collapse" data-target={'#' + identifier}>
         {children}
       </button>
-      <div id={identifier} className="collapse" data-parent="#accordion">
+      <div id={identifier} className="collapse" {...(isOnlySelect && dataParent ? { 'data-parent': dataParent } : {})}>
         {content ?? <div className="card-body">{description}</div>}
       </div>
     </div>

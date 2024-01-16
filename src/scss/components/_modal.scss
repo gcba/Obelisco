@@ -16,6 +16,7 @@ $modal-footer-margin-between: spaceUnits(3);
 
 $modal-content-border-radius: spaceUnits(2);
 $modal-sm: 340px;
+$modal-mobile: 328px;
 $modal-dialog-margin-y-sm-up: 3rem;
 
 /* === Custom variables and mixins === */
@@ -42,21 +43,36 @@ $modal-dialog-margin-y-sm-up: 3rem;
   }
 
   .modal-content {
-    // box-shadow: 0 0 0 2px $grisulado-50;
     border: none;
 
     .modal-header {
       border-bottom: 0;
-      box-shadow: 0 1.563rem 0 $modal-header-divisor rgba($grisulado-50, 1);
-      padding-bottom: 0.4rem;
+      padding-bottom: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 1.563rem 0 $modal-header-divisor $grisulado-50;
+
+      &.unbordered {
+        box-shadow: none;
+        background: none;
+      }
+
+      small {
+        margin-bottom: 0.5rem;
+      }
 
       .modal-title {
-        font-weight: bold;
+        line-height: 1.5rem;
+        letter-spacing: -0.19px;
       }
     }
 
     .modal-body {
       padding: spaceUnits(2) spaceUnits(6) 0;
+
+      p {
+        line-height: 1.5rem;
+      }
 
       > *:last-child {
         margin: 0;
@@ -65,16 +81,29 @@ $modal-dialog-margin-y-sm-up: 3rem;
 
     .modal-footer {
       border-top: 0;
-      padding: $modal-inner-padding-y - $modal-footer-margin-between / 2 $modal-inner-padding-x
-        $modal-inner-padding-bottom;
-      gap: spaceUnits(1);
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
+      gap: 0.5rem;
 
-      & > *:first-child {
-        margin-left: 0;
+      button.btn {
+        margin: 0px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: $modal-mobile;
+      margin: auto;
+
+      .modal-header {
+        padding: 1rem 1rem 0.5rem 1rem;
       }
 
-      & > *:last-child {
-        margin-right: 0;
+      .modal-body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .modal-footer {
+        padding: 1rem;
       }
     }
   }

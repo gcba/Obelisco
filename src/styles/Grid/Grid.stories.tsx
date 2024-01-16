@@ -61,7 +61,7 @@ Tamanos.story = { name: 'Tamaños' };*/
 
 export const Columnas = (): JSX.Element => {
   return (
-    <div className="grid-wraper">
+    <div className="storybook__container-grid">
       <div className="container text-center">
         <div className="row">
           <div className="col-1">
@@ -108,7 +108,7 @@ export const Columnas = (): JSX.Element => {
 
 export const Divisiones = (): JSX.Element => {
   return (
-    <div className="grid-wraper">
+    <div className="storybook__container-grid">
       <div className="container text-center">
         <div className="row mb-2">
           <div className="col-2">
@@ -171,7 +171,7 @@ export const Divisiones = (): JSX.Element => {
 
 export const AlineacionHorizontal = (): JSX.Element => {
   return (
-    <div className="grid-wraper">
+    <div className="storybook__container-grid">
       <div className="container">
         <div className="row justify-content-start mb-2">
           <div className="col-4">
@@ -222,7 +222,7 @@ AlineacionHorizontal.story = { name: 'Alineación horizontal' };
 
 export const OrdenarClases = (): JSX.Element => {
   return (
-    <div className="grid-wraper">
+    <div className="storybook__container-grid">
       <div className="container">
         <div className="row mb-2">
           <div className="col-4">
@@ -255,7 +255,7 @@ OrdenarClases.story = { name: 'Ordenar clases' };
 
 export const Desplazamientos = (): JSX.Element => {
   return (
-    <div className="grid-wraper">
+    <div className="storybook__container-grid">
       <div className="container">
         <div className="row mb-2">
           <div className="col-md-4">

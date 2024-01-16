@@ -17,7 +17,7 @@ export default {
 };
 
 export const SpinnerTypes = (): JSX.Element => (
-  <div className="spinner-wrapper">
+  <div className="storybook__container-spinner">
     {spinnerTypes.map((type) => (
       <Spinner key={type} type={type}></Spinner>
     ))}
@@ -30,7 +30,7 @@ SpinnerTypes.story = {
 
 export const SpinnerSizes = (): JSX.Element => {
   return (
-    <div className="spinner-wrapper">
+    <div className="storybook__container-spinner">
       {sizes.map((item) => (
         <Spinner key={item} type="info" size={item}></Spinner>
       ))}
@@ -43,7 +43,7 @@ SpinnerSizes.story = {
 };
 
 export const SpinnerBlock = (): JSX.Element => (
-  <div className="spinner-wrapper">
+  <div className="storybook__container-spinner">
     <Spinner type="info" block={true}></Spinner>
   </div>
 );

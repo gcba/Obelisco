@@ -1,0 +1,248 @@
+/* === Custom variables and mixins === */
+
+$list-steps-padding: 0 0 1.5rem 2.25rem;
+$list-steps-font-color: $grisulado-900;
+$list-steps-circle-size: 1.5rem;
+$list-steps-line-width: 0.1875rem;
+$list-steps-title-margin-bottom-mobile: 0.25rem;
+
+$list-steps-padding-lg: 0.125rem 0 1.5rem 3.5rem;
+$list-steps-padding-lg-mobile: 0 0 1.5rem 3rem;
+$list-steps-circle-size-lg: 2.5rem;
+$list-steps-circle-size-lg-mobile: 2rem;
+$list-steps-line-width-lg: 0.25rem;
+
+$list-steps-numbers: 9;
+
+/* === Custom styles === */
+
+.list-steps {
+  @extend .list-unstyled, .flex-column;
+  margin-bottom: 0;
+  word-break: break-word;
+
+  &-item {
+    color: $list-steps-font-color;
+    position: relative;
+    padding: $list-steps-padding;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    h4 {
+      @include media-breakpoint-down(xs) {
+        margin-bottom: $list-steps-title-margin-bottom-mobile;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      color: $white;
+      background-color: $list-steps-font-color;
+      position: absolute;
+      box-shadow: 0 0 0 $list-steps-line-width $list-steps-font-color inset;
+      width: $list-steps-circle-size;
+      height: $list-steps-circle-size;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: $font-family-headings;
+    }
+
+    &:not(:last-child):after {
+      content: '';
+      position: absolute;
+      background-color: $list-steps-font-color;
+      width: $list-steps-line-width;
+      height: calc(100% - 24px);
+      left: 0.675rem;
+      top: $list-steps-circle-size;
+    }
+
+    &.list-steps-item-light {
+      &:before {
+        background-color: $white;
+        color: $list-steps-font-color;
+      }
+    }
+  }
+
+  &.list-steps-lg {
+    .list-steps-item {
+      padding: $list-steps-padding-lg;
+      @include media-breakpoint-down(xs) {
+        padding: $list-steps-padding-lg-mobile;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      h4 {
+        @extend .h2;
+      }
+
+      &:before {
+        width: $list-steps-circle-size-lg;
+        height: $list-steps-circle-size-lg;
+        box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color inset;
+        @extend .h4;
+        @include media-breakpoint-down(xs) {
+          width: $list-steps-circle-size-lg-mobile;
+          height: $list-steps-circle-size-lg-mobile;
+          font-weight: 700;
+        }
+      }
+
+      &:not(:last-child):after {
+        width: $list-steps-line-width-lg;
+        left: 1.12rem;
+        top: $list-steps-circle-size-lg;
+        height: calc(100% - 40px);
+        @include media-breakpoint-down(xs) {
+          left: 0.9rem;
+          top: $list-steps-circle-size-lg-mobile;
+          height: calc(100% - 32px);
+        }
+      }
+    }
+  }
+
+  &.list-steps-sm {
+    .list-steps-item {
+      h4 {
+        @extend .h5;
+        line-height: 24px;
+        @include media-breakpoint-down(xs) {
+          margin-bottom: $list-steps-title-margin-bottom-mobile;
+        }
+      }
+    }
+  }
+
+  &.list-steps-light {
+    .list-steps-item {
+      &:before {
+        background-color: $white;
+        color: $list-steps-font-color;
+      }
+    }
+  }
+
+  &.list-steps-numbers {
+    .list-steps-item {
+      @for $i from 1 through $list-steps-numbers {
+        &:nth-child(#{$i}) {
+          &:before {
+            content: '#{$i}';
+            box-shadow: 0 0 0 1px $list-steps-font-color;
+            padding-top: 1px;
+          }
+        }
+      }
+
+      &:nth-child(3),
+      &:nth-child(5),
+      &:nth-child(7) {
+        &:before {
+          padding-top: 2px;
+          padding-left: 0.5px;
+        }
+      }
+
+      &:nth-child(4),
+      &:nth-child(6) {
+        &:before {
+          padding-right: 1px;
+        }
+      }
+
+      &:nth-child(9) {
+        &:before {
+          padding-top: 2px;
+          padding-left: 1px;
+        }
+      }
+
+      &.list-steps-item-light {
+        &:before {
+          background-color: $white;
+          color: $list-steps-font-color;
+          box-shadow: 0 0 0 $list-steps-line-width $list-steps-font-color;
+        }
+      }
+    }
+
+    &.list-steps-lg {
+      .list-steps-item {
+        &:before {
+          box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color inset;
+        }
+
+        @include media-breakpoint-down(xs) {
+          &:nth-child(5) {
+            &:before {
+              padding-left: 1px;
+            }
+          }
+        }
+
+        &:is(.list-steps-item-light) {
+          &:before {
+            box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color;
+          }
+        }
+      }
+    }
+
+    &.list-steps-light {
+      .list-steps-item {
+        &:before {
+          box-shadow: 0 0 0 $list-steps-line-width $list-steps-font-color;
+        }
+
+        &:nth-child(5) {
+          &:before {
+            padding-right: 0;
+            padding-left: 0.5px;
+          }
+        }
+
+        &:nth-child(6),
+        &:nth-child(8) {
+          &:before {
+            padding-top: 2px;
+          }
+        }
+      }
+
+      &.list-steps-lg {
+        .list-steps-item {
+          &:before {
+            box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color;
+          }
+
+          &:nth-child(3),
+          &:nth-child(5),
+          &:nth-child(6),
+          &:nth-child(8),
+          &:nth-child(9) {
+            &:before {
+              padding-top: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

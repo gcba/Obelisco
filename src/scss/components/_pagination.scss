@@ -67,6 +67,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
       .page-link {
         box-shadow: none;
         background-color: transparent;
+        padding: 0;
       }
     }
 
@@ -83,6 +84,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
       text-decoration: none;
       font-weight: normal;
       font-size: 1.125rem;
+      word-break: normal;
 
       .page-previous-icon,
       .page-next-icon {
@@ -152,6 +154,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
           $pagination-icon-left-active,
           $pagination-icon-right-active
         );
+        z-index: 0;
 
         &:hover,
         &.hover {
@@ -196,8 +199,8 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
     .page-item {
       .page-link {
         min-width: 2rem;
-        width: 2rem;
         height: 2rem;
+        padding: 0.1875rem;
 
         .page-previous-text,
         .page-next-text {
@@ -207,6 +210,13 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
         &:has(.page-previous-icon, .page-next-icon) {
           padding-left: $pagination-icon-padding-x-sm;
           padding-right: $pagination-icon-padding-x-sm;
+        }
+      }
+      
+      &.no-events {
+        .page-link {
+          padding: 0;
+          min-width: unset;
         }
       }
     }

@@ -1,8 +1,32 @@
-.panel-wrapper {
-  width: 526px;
+.storybook__container-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   max-width: 100%;
-}
 
-.card-img {
-  object-position: top;
+  &-horizontal {
+    @extend .storybook__container-panel;
+    width: 1084px;
+  }
+  &-vertical {
+    @extend .storybook__container-panel;
+    width: 526px;
+  }
+  &-small {
+    @extend .storybook__container-panel;
+    width: 340px;
+
+    &:has(.panel-sm) {
+      gap: 4rem;
+    }
+
+    &-horizontal {
+      @extend .storybook__container-panel-vertical;
+    }
+  }
+}
+.storybook__container-highlighted {
+  &-lateral {
+    max-width: 340px;
+  }
 }

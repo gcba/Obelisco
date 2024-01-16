@@ -14,23 +14,23 @@ export default {
 
 export const simple = (): JSX.Element => (
   <>
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="info" width={25}></ProgressBar>
     </div>
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="info" width={50}></ProgressBar>
     </div>
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="info" width={100}></ProgressBar>
     </div>
     <br />
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="success" width={25}></ProgressBar>
     </div>
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="success" width={50}></ProgressBar>
     </div>
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="success" width={100}></ProgressBar>
     </div>
   </>
@@ -38,17 +38,17 @@ export const simple = (): JSX.Element => (
 
 export const withDescription = (): JSX.Element => (
   <>
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="info" width={50} description="Descripción"></ProgressBar>
     </div>
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="info" width={100} description="Descripción"></ProgressBar>
     </div>
     <br />
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="success" width={50} description="Descripción"></ProgressBar>
     </div>
-    <div className="progression-container">
+    <div className="storybook__container-progression">
       <ProgressBar type="success" width={100} description="Descripción"></ProgressBar>
     </div>
   </>

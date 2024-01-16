@@ -23,13 +23,13 @@ const simpleItems = [
 ];
 
 export const Simple = (): JSX.Element => (
-  <div className="nav-container">
+  <div className="storybook__container-nav">
     <Nav items={simpleItems} selected="2" />
   </div>
 );
 
 export const SimpleConIcono = (): JSX.Element => (
-  <div className="nav-container">
+  <div className="storybook__container-nav">
     <Nav items={simpleItems} selected="2" hasIcon={true} />
   </div>
 );
@@ -78,7 +78,7 @@ const tripleLevel = [
 ];
 
 export const Con2Niveles = (): JSX.Element => (
-  <div className="nav-container">
+  <div className="storybook__container-nav">
     <Nav items={doubleLevel} navSize="large" selected="1.2" />
   </div>
 );
@@ -88,7 +88,7 @@ Con2Niveles.story = {
 };
 
 export const Con2NivelesConIcono = (): JSX.Element => (
-  <div className="nav-container">
+  <div className="storybook__container-nav">
     <Nav items={doubleLevel} navSize="large" selected="1.2" hasIcon={true} />
   </div>
 );
@@ -98,7 +98,7 @@ Con2NivelesConIcono.story = {
 };
 
 export const Con3Niveles = (): JSX.Element => (
-  <div className="nav-container">
+  <div className="storybook__container-nav">
     <Nav items={tripleLevel} navSize="large" selected="1.2.2" />
   </div>
 );
@@ -108,7 +108,7 @@ Con3Niveles.story = {
 };
 
 export const Con3NivelesConIcono = (): JSX.Element => (
-  <div className="nav-container">
+  <div className="storybook__container-nav">
     <Nav items={tripleLevel} navSize="large" selected="1.2.2" hasIcon={true} />
   </div>
 );
