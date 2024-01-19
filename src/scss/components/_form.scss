@@ -423,7 +423,7 @@ $form-validation-states: (
     border-bottom: 1px solid $grisulado-10;
     background-color: $white;
     @extend .h5;
-    color: $grisulado-300;
+    color: $grisulado-500;
 
     table {
       width: 100%;
@@ -440,8 +440,16 @@ $form-validation-states: (
         border-bottom: 10px solid $white;
         pointer-events: inherit;
 
+        .calendar-link {
+          border-radius: 50%;
+        }
+
         span {
           @extend %calendarNumber;
+
+          &:after {
+            line-height: 1.5;
+          }
 
           &.active {
             color: $white;

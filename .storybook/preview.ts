@@ -60,6 +60,7 @@ const headers = [
   'estilos-tipografía',
   'formulario-archivo',
   'formulario-buscador',
+  'formulario-calendario',
   'formulario-checkbox',
   'formulario-con-fondo',
   'formulario-lista-de-selección',
