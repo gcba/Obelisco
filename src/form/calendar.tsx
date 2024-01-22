@@ -3,23 +3,46 @@ import React from 'react';
 interface ActiveDays {
   day?: number;
   title?: string;
+  url?: string;
+  dataDirection?: string;
 }
 interface TableMonthProps {
   start?: number;
   numberOfDays?: number;
   activeDays?: ActiveDays[];
   month?: string;
-  year?: string;
+  monthNumber?: number;
+  year?: number;
+  hasTitle?: boolean;
 }
 
 export const CalendarMonth: React.FC<TableMonthProps> = ({
   start = 0,
-  numberOfDays = 30,
+  numberOfDays,
   month,
-  year,
-  activeDays
+  year = 2024,
+  activeDays,
+  monthNumber,
+  hasTitle
 }): JSX.Element => {
-  const daysArray = Array.from({ length: numberOfDays }, (_, index) => index + 1);
+  const monthAmountOfDays = (monthNumber?: number, year?: number): number => {
+    if (typeof monthNumber !== 'number' || monthNumber < 1 || monthNumber > 12) {
+      return 0;
+    }
+
+    if (monthNumber === 4 || monthNumber === 6 || monthNumber === 9 || monthNumber === 11) {
+      return 30;
+    } else if (monthNumber === 2) {
+      return (year ? year : 2024) % 4 === 0 ? 29 : 28;
+    } else {
+      return 31;
+    }
+  };
+
+  const daysArray = Array.from(
+    { length: numberOfDays ? numberOfDays : monthAmountOfDays(monthNumber, year) },
+    (_, index) => index + 1
+  );
 
   const emptyDaysArray = start < 7 && Array.from({ length: start }, (_, index) => <td key={index}></td>);
   const daysInAWeek = 7;
@@ -32,8 +55,14 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
       if (activeItem) {
         return (
           <td key={day}>
-            <span data-direction="top-right" data-tooltip={activeItem.title}>
-              <a href="#" className="calendar-link">
+            <span
+              {...(hasTitle
+                ? { title: activeItem.title }
+                : {
+                    'data-direction': activeItem.dataDirection || 'top-right',
+                    'data-tooltip': activeItem.title
+                  })}>
+              <a href={activeItem.url ? activeItem.url : '#'} className="calendar-link">
                 <span className="active">{day}</span>
               </a>
             </span>
@@ -48,23 +77,44 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
       }
     });
 
+  const monthTitle = [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre'
+  ];
+
+  const monthsTitles = (monthNumber?: number) => {
+    if (monthNumber && monthNumber >= 1 && monthNumber <= 12) {
+      return monthTitle[monthNumber - 1];
+    } else {
+      return 'Mes inválido';
+    }
+  };
+
+  const DAYS_HEADER_TABLE = ['D', 'L', 'M', 'M', 'J', 'V', 'S'];
+
   return (
     <div className="calendar">
       <div className="date-header">
-        <h4>{month}</h4>
+        <h4>{month ? month : monthsTitles(monthNumber)}</h4>
         <span>{year}</span>
       </div>
       <div className="date-body">
         <table>
           <tbody>
             <tr className="date-week">
-              <th>D</th>
-              <th>L</th>
-              <th>M</th>
-              <th>M</th>
-              <th>J</th>
-              <th>V</th>
-              <th>S</th>
+              {DAYS_HEADER_TABLE.map((dayHeader, index) => (
+                <th key={index}>{dayHeader}</th>
+              ))}
             </tr>
             {Array.from({ length: numberWeeks }, (_, i) => (
               <tr key={i} className="date-numbers">
