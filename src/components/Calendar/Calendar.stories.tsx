@@ -1,14 +1,13 @@
 // Base
 import React from 'react';
-import './Form.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
-import { CalendarMonth } from './calendar';
+import { CalendarMonth } from './index';
 
 // Configuración general del componente
 export default {
-  title: 'Formulario|Calendario',
+  title: 'Componentes|Calendario',
   decorators: [withA11y]
 };
 
