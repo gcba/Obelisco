@@ -5,15 +5,16 @@ $calendar-td-span-size: 2.25rem;
 
 /* === Custom styles === */
 .calendar {
-  max-width: 340px;
+  max-width: 328px;
   width: 100%;
   background-color: $white;
 
   .calendar-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: $calendar-spacing;
+    padding: 0;
+    height: 40px;
     .calendar-title,
     .calendar-year {
       @extend .h4;
@@ -22,6 +23,7 @@ $calendar-td-span-size: 2.25rem;
   }
 
   .calendar-body {
+    padding: 1rem 0;
     border-top: $calendar-body-border;
     border-bottom: $calendar-body-border;
     @extend .h5;
@@ -30,34 +32,54 @@ $calendar-td-span-size: 2.25rem;
 
     table {
       width: 100%;
-      margin-top: $calendar-spacing;
       text-align: center;
 
-      .calendar-week {
-        th {
-          font-weight: 700;
-          color: $grisulado-900;
-          padding-bottom: 1rem;
+      th,
+      td {
+        padding: 0;
+        span {
+          height: 40px;
+          width: 40px;
+          display: inline-block;
+          line-height: 40px;
+          margin-bottom: 0;
+          border-radius: 50%;
+          margin: 0.25rem 0;
         }
       }
 
-      .calendar-numbers {
+      .calendar-week-header {
+        th {
+          font-weight: 700;
+          color: $grisulado-900;
+          height: 48px;
+          background-color: #f5f9fc;
+        }
+      }
+
+      .calendar-week {
+        line-height: 8px;
+        &:nth-of-type(even) {
+          background-color: #f5f9fc;
+        }
+        &:nth-of-type(odd) {
+          td {
+            padding: 0.25rem 0;
+          }
+        }
+
+        &:nth-of-type(1) {
+          td {
+            padding: 0.75rem 0 0.25rem;
+          }
+        }
         td {
           pointer-events: inherit;
-          padding: 5px 0;
-
           .calendar-link {
             border-radius: 50%;
           }
 
           span {
-            height: $calendar-td-span-size;
-            width: $calendar-td-span-size;
-            display: inline-block;
-            line-height: $calendar-td-span-size;
-            margin-bottom: 0;
-            border-radius: 50%;
-
             &:after {
               line-height: 1.5;
             }
@@ -65,7 +87,27 @@ $calendar-td-span-size: 2.25rem;
             &.active {
               color: $white;
               background-color: $blue;
+              min-width: 100%;
+              height: 100%;
+              margin: 0;
+
               cursor: pointer;
+              &.bg-gray {
+                background-color: $gray-100;
+              }
+
+              &.bg-sky,
+              &.bg-lavender,
+              &.bg-coral,
+              &.bg-avocado,
+              &.bg-citrus,
+              &.bg-lime,
+              &.bg-pistachio,
+              &.bg-berries,
+              &.bg-musket,
+              &.bg-gray {
+                color: $grisulado-900;
+              }
             }
           }
         }
@@ -74,9 +116,8 @@ $calendar-td-span-size: 2.25rem;
   }
 
   .calendar-footer {
-    padding: $calendar-spacing;
     .calendar-footer-list {
-      padding: 0;
+      padding: $calendar-spacing;
       margin-bottom: 0;
 
       li {
@@ -84,6 +125,78 @@ $calendar-td-span-size: 2.25rem;
         list-style-type: none;
         &:not(:last-child) {
           margin-bottom: 0.25rem;
+        }
+      }
+    }
+    .accordion {
+      margin-top: 0.75rem;
+      .calendar-footer-list {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.calendar-yearly {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  .calendar {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    justify-content: center;
+  }
+  @media only screen and (min-width: 976px) and (max-width: 1119.98px) {
+    justify-content: space-evenly;
+  }
+}
+
+.calendar-references {
+  border: 1px solid #f3f6f9;
+  border-radius: 8px;
+  padding: 16px;
+  width: min-content;
+  .calendar-references-text {
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .calendar-references-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    @include media-breakpoint-down(md) {
+      gap: 48px;
+      flex-wrap: nowrap;
+    }
+
+    div {
+      display: flex;
+      gap: 48px;
+      @include media-breakpoint-down(md) {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+    .color-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: 105px;
+      .color {
+        min-width: 1rem;
+        max-height: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 1px;
+        color: transparent;
+        &.bg-gray {
+          background-color: $gray-100;
         }
       }
     }

@@ -5,6 +5,7 @@ interface ActiveDays {
   title?: string;
   url?: string;
   dataDirection?: string;
+  type?: string;
 }
 interface TableMonthProps {
   start?: number;
@@ -15,6 +16,7 @@ interface TableMonthProps {
   year?: number;
   hasTitle?: boolean;
   isUnlinked?: boolean;
+  isCollapsed?: boolean;
 }
 
 export const CalendarMonth: React.FC<TableMonthProps> = ({
@@ -25,7 +27,8 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
   activeDays,
   monthNumber,
   hasTitle,
-  isUnlinked = false
+  isUnlinked = false,
+  isCollapsed
 }): JSX.Element => {
   const monthAmountOfDays = (monthNumber?: number, year?: number): number => {
     if (typeof monthNumber !== 'number' || monthNumber < 1 || monthNumber > 12) {
@@ -39,6 +42,24 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
     } else {
       return 31;
     }
+  };
+
+  const colorReligion = (text: string) => {
+    const mapTexts = {
+      africanista: 'bg-coral',
+      bahai: 'bg-musket',
+      budista: 'bg-citrus',
+      cristiana: 'bg-lime',
+      hinduista: 'bg-sky',
+      islamica: 'bg-lavender',
+      judia: 'bg-berries',
+      sikh: 'bg-pistachio',
+      multiple: 'bg-gray'
+    };
+
+    const result = mapTexts[text.toLowerCase()] || '';
+
+    return result;
   };
 
   const daysArray = Array.from(
@@ -65,10 +86,12 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
                     'data-tooltip': activeItem.title
                   })}>
               {isUnlinked ? (
-                <span className="active">{day}</span>
+                <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>{day}</span>
               ) : (
                 <a href={activeItem.url ? activeItem.url : '#'} className="calendar-link">
-                  <span className="active">{day}</span>
+                  <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
+                    {day}
+                  </span>
                 </a>
               )}
             </span>
@@ -82,6 +105,72 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
         );
       }
     });
+
+  const totalDaysCalentar = daysArray.length + start;
+  const totalWeeksCalendar = Math.ceil(totalDaysCalentar / 7);
+
+  const renderDaysForRow = (startIdx: number, endIdx: number, activeItems?: ActiveDays[]) => {
+    const daysForRow: Array<number | null> = daysArray.slice(startIdx, endIdx);
+
+    while (daysForRow.length < 7) {
+      daysForRow.push(null);
+    }
+
+    return daysForRow.map((day, index) => {
+      if (day !== null) {
+        const activeItem = activeItems?.find((obj) => obj.day === day);
+        return (
+          <td key={index}>
+            {activeItem ? (
+              <span
+                {...(hasTitle
+                  ? { title: activeItem.title }
+                  : {
+                      'data-direction': activeItem.dataDirection || 'top-right',
+                      'data-tooltip': activeItem.title
+                    })}>
+                {isUnlinked ? (
+                  <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
+                    {day}
+                  </span>
+                ) : (
+                  <a href={activeItem.url ? activeItem.url : '#'} className="calendar-link">
+                    <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
+                      {day}
+                    </span>
+                  </a>
+                )}
+              </span>
+            ) : (
+              <span>{day}</span>
+            )}
+          </td>
+        );
+      } else {
+        return (
+          <td key={index}>
+            <span></span>
+          </td>
+        );
+      }
+    });
+  };
+
+  const renderEmptyCells = () => {
+    const emptyCells = [];
+    let i = 0;
+
+    while (i < 7) {
+      emptyCells.push(
+        <td key={i}>
+          <span></span>
+        </td>
+      );
+      i++;
+    }
+
+    return emptyCells;
+  };
 
   const monthTitle = [
     'Enero',
@@ -106,7 +195,7 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
     }
   };
 
-  const DAYS_HEADER_TABLE = ['D', 'L', 'M', 'M', 'J', 'V', 'S'];
+  const DAYS_HEADER_TABLE = ['D', 'L', 'M', 'X', 'J', 'V', 'S'];
 
   return (
     <div className="calendar">
@@ -116,36 +205,66 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
       </div>
       <div className="calendar-body">
         <table>
-          <tbody>
-            <tr className="calendar-week">
+          <thead>
+            <tr className="calendar-week-header">
               {DAYS_HEADER_TABLE.map((dayHeader, index) => (
-                <th key={index}>{dayHeader}</th>
+                <th key={index}>
+                  <span>{dayHeader}</span>
+                </th>
               ))}
             </tr>
+          </thead>
+          <tbody>
             {Array.from({ length: numberWeeks }, (_, i) => (
-              <tr key={i} className="calendar-numbers">
+              <tr key={i} className="calendar-week">
                 {i === 0 ? (
                   <>
                     {emptyDaysArray}
                     {renderDays(i, daysInAWeek - start, activeDays)}
                   </>
                 ) : (
-                  renderDays(daysInAWeek * i - start, daysInAWeek - start + daysInAWeek * i, activeDays)
+                  <>{renderDaysForRow(daysInAWeek * i - start, daysInAWeek - start + daysInAWeek * i, activeDays)}</>
                 )}
               </tr>
             ))}
+            {totalWeeksCalendar !== 6 && <tr className="calendar-week">{renderEmptyCells()}</tr>}
           </tbody>
         </table>
       </div>
       {activeDays && (
         <div className="calendar-footer">
-          <ul className="calendar-footer-list">
-            {activeDays?.map((activeDay) => (
-              <li key={activeDay.day}>
-                <strong>{activeDay.day}.</strong> {activeDay.title}
-              </li>
-            ))}
-          </ul>
+          {isCollapsed ? (
+            <div className="accordion accordion-white">
+              <div className="card">
+                <button
+                  className="card-header collapsed"
+                  data-toggle="collapse"
+                  data-target={`#collapse${monthsTitles(monthNumber)}`}>
+                  <i className="bx bx-calendar"></i>
+                  <span className="collapse-title">Referencias</span>
+                </button>
+                <div id={`collapse${monthsTitles(monthNumber)}`} className="collapse">
+                  <div className="card-body">
+                    <ul className="calendar-footer-list">
+                      {activeDays?.map((activeDay) => (
+                        <li key={activeDay.day}>
+                          <strong>{activeDay.day}.</strong> {activeDay.title}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <ul className="calendar-footer-list">
+              {activeDays?.map((activeDay) => (
+                <li key={activeDay.day}>
+                  <strong>{activeDay.day}.</strong> {activeDay.title}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
     </div>
