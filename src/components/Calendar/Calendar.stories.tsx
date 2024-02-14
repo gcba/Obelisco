@@ -87,6 +87,23 @@ const ACTIVE_DAYS = {
     { day: 11, title: 'Día Internacional de las Montañas' }
   ]
 };
+const ACTIVE_DAYS_JANUARY = [
+  { day: 1, title: 'Nombre del evento.' },
+  { day: 10, title: 'Nombre del evento.' },
+  { day: 11, title: 'Nombre del evento.' }
+];
+const ACTIVE_DAYS_JANUARY_COLLAPSED = [
+  { day: 1, title: 'Nombre del evento.' },
+  { day: 10, title: 'Nombre del evento.' },
+  { day: 11, title: 'Nombre del evento.' },
+  { day: 15, title: 'Nombre del evento.' },
+  { day: 23, title: 'Nombre del evento.' },
+  { day: 27, title: 'Nombre del evento.' }
+];
+const ACTIVE_DAYS_JANUARY_DISABLED = [
+  { day: 1, isDisabled: true },
+  { day: 8, isDisabled: true }
+];
 /* const RELIGIOUS_ACTIVE_DAYS = {
   JANUARY: [
     { day: 1, title: 'Santa María Madre de Dios', type: 'cristiana' },
@@ -416,44 +433,124 @@ export const CalendarAnualNoActiveDates = (): JSX.Element => {
 };
 CalendarAnualNoActiveDates.story = { name: 'Anual - Drupal' }; */
 
-export const CalendarTooltip = (): JSX.Element => {
+/* export const CalendarTooltip = (): JSX.Element => {
   return <CalendarMonth monthNumber={12} start={0} activeDays={ACTIVE_DAYS.DECEMBER}></CalendarMonth>;
 };
-CalendarTooltip.story = { name: 'Con tooltip' };
+CalendarTooltip.story = { name: 'Con tooltip' }; */
 
-export const CalendarTitle = (): JSX.Element => {
-  return <CalendarMonth monthNumber={12} start={0} activeDays={ACTIVE_DAYS.DECEMBER} hasTitle></CalendarMonth>;
+export const CalendarLink = (): JSX.Element => {
+  return <CalendarMonth monthNumber={1} start={1} activeDays={ACTIVE_DAYS_JANUARY} hasTitle></CalendarMonth>;
 };
-CalendarTitle.story = { name: 'Con title' };
+CalendarLink.story = { name: 'Con enlace' };
+
+export const CalendarNoLink = (): JSX.Element => {
+  return <CalendarMonth monthNumber={1} start={1} activeDays={ACTIVE_DAYS_JANUARY} hasTitle isUnlinked></CalendarMonth>;
+};
+CalendarNoLink.story = { name: 'Sin enlace' };
+
+export const CalendarNoTitle = (): JSX.Element => {
+  return <CalendarMonth monthNumber={1} start={1} activeDays={ACTIVE_DAYS_JANUARY}></CalendarMonth>;
+};
+CalendarNoTitle.story = { name: 'Sin title' };
+
+export const CalendarNoReferences = (): JSX.Element => {
+  return <CalendarMonth monthNumber={1} start={1} hasTitle></CalendarMonth>;
+};
+CalendarNoReferences.story = { name: 'Sin referencias' };
 
 export const CalendarCollapsable = (): JSX.Element => {
   return (
-    <CalendarMonth monthNumber={12} start={0} activeDays={ACTIVE_DAYS.DECEMBER} hasTitle isCollapsed></CalendarMonth>
+    <CalendarMonth
+      monthNumber={1}
+      start={1}
+      activeDays={ACTIVE_DAYS_JANUARY_COLLAPSED}
+      hasTitle
+      isCollapsed></CalendarMonth>
   );
 };
 CalendarCollapsable.story = { name: 'Con colapsable' };
 
-export const CalendarNoLink = (): JSX.Element => {
-  return <CalendarMonth monthNumber={1} start={1} activeDays={ACTIVE_DAYS.JANUARY} isUnlinked></CalendarMonth>;
+export const CalendarDisabled = (): JSX.Element => {
+  return <CalendarMonth monthNumber={1} start={1} activeDays={ACTIVE_DAYS_JANUARY_DISABLED}></CalendarMonth>;
 };
-CalendarNoLink.story = { name: 'Sin enlace' };
+CalendarDisabled.story = { name: 'Con fecha deshabilitada' };
 
 export const CalendarYearly = (): JSX.Element => {
   return (
     <div className="container">
       <div className="calendar-yearly">
-        <CalendarMonth monthNumber={1} start={1} hasTitle activeDays={ACTIVE_DAYS.JANUARY}></CalendarMonth>
-        <CalendarMonth monthNumber={2} start={4} hasTitle activeDays={ACTIVE_DAYS.FEBRUARY}></CalendarMonth>
-        <CalendarMonth monthNumber={3} start={5} hasTitle activeDays={ACTIVE_DAYS.MARCH}></CalendarMonth>
-        <CalendarMonth monthNumber={4} start={1} hasTitle activeDays={ACTIVE_DAYS.APRIL}></CalendarMonth>
-        <CalendarMonth monthNumber={5} start={3} hasTitle activeDays={ACTIVE_DAYS.MAY}></CalendarMonth>
-        <CalendarMonth monthNumber={6} start={6} hasTitle activeDays={ACTIVE_DAYS.JUNE}></CalendarMonth>
-        <CalendarMonth monthNumber={7} start={1} hasTitle activeDays={ACTIVE_DAYS.JULY}></CalendarMonth>
-        <CalendarMonth monthNumber={8} start={4} hasTitle activeDays={ACTIVE_DAYS.AUGUST}></CalendarMonth>
-        <CalendarMonth monthNumber={9} start={0} hasTitle activeDays={ACTIVE_DAYS.SEPTEMBER}></CalendarMonth>
-        <CalendarMonth monthNumber={10} start={2} hasTitle activeDays={ACTIVE_DAYS.OCTOBER}></CalendarMonth>
-        <CalendarMonth monthNumber={11} start={5} hasTitle activeDays={ACTIVE_DAYS.NOVEMBER}></CalendarMonth>
-        <CalendarMonth monthNumber={12} start={0} hasTitle activeDays={ACTIVE_DAYS.DECEMBER}></CalendarMonth>
+        <CalendarMonth
+          monthNumber={1}
+          start={1}
+          hasTitle
+          activeDays={ACTIVE_DAYS.JANUARY}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={2}
+          start={4}
+          hasTitle
+          activeDays={ACTIVE_DAYS.FEBRUARY}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={3}
+          start={5}
+          hasTitle
+          activeDays={ACTIVE_DAYS.MARCH}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={4}
+          start={1}
+          hasTitle
+          activeDays={ACTIVE_DAYS.APRIL}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={5}
+          start={3}
+          hasTitle
+          activeDays={ACTIVE_DAYS.MAY}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={6}
+          start={6}
+          hasTitle
+          activeDays={ACTIVE_DAYS.JUNE}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={7}
+          start={1}
+          hasTitle
+          activeDays={ACTIVE_DAYS.JULY}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={8}
+          start={4}
+          hasTitle
+          activeDays={ACTIVE_DAYS.AUGUST}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={9}
+          start={0}
+          hasTitle
+          activeDays={ACTIVE_DAYS.SEPTEMBER}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={10}
+          start={2}
+          hasTitle
+          activeDays={ACTIVE_DAYS.OCTOBER}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={11}
+          start={5}
+          hasTitle
+          activeDays={ACTIVE_DAYS.NOVEMBER}
+          isInYearlyCalendar></CalendarMonth>
+        <CalendarMonth
+          monthNumber={12}
+          start={0}
+          hasTitle
+          activeDays={ACTIVE_DAYS.DECEMBER}
+          isInYearlyCalendar></CalendarMonth>
       </div>
     </div>
   );

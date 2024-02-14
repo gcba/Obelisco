@@ -6,8 +6,9 @@ interface ActiveDays {
   url?: string;
   dataDirection?: string;
   type?: string;
+  isDisabled?: boolean;
 }
-interface TableMonthProps {
+interface CalendarMonthProps {
   start?: number;
   numberOfDays?: number;
   activeDays?: ActiveDays[];
@@ -17,9 +18,10 @@ interface TableMonthProps {
   hasTitle?: boolean;
   isUnlinked?: boolean;
   isCollapsed?: boolean;
+  isInYearlyCalendar?: boolean;
 }
 
-export const CalendarMonth: React.FC<TableMonthProps> = ({
+export const CalendarMonth: React.FC<CalendarMonthProps> = ({
   start = 0,
   numberOfDays,
   month,
@@ -28,7 +30,8 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
   monthNumber,
   hasTitle,
   isUnlinked = false,
-  isCollapsed
+  isCollapsed,
+  isInYearlyCalendar = false
 }): JSX.Element => {
   const monthAmountOfDays = (monthNumber?: number, year?: number): number => {
     if (typeof monthNumber !== 'number' || monthNumber < 1 || monthNumber > 12) {
@@ -78,23 +81,29 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
       if (activeItem) {
         return (
           <td key={day}>
-            <span
-              {...(hasTitle
-                ? { title: activeItem.title }
-                : {
-                    'data-direction': activeItem.dataDirection || 'top-right',
-                    'data-tooltip': activeItem.title
-                  })}>
-              {isUnlinked ? (
-                <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>{day}</span>
-              ) : (
-                <a href={activeItem.url ? activeItem.url : '#'} className="calendar-link">
+            {activeItem.isDisabled ? (
+              <span className="disabled">{day}</span>
+            ) : (
+              <span
+                {...(hasTitle
+                  ? { title: activeItem.title }
+                  : {
+                      'data-direction': activeItem.dataDirection || 'top-right',
+                      'data-tooltip': activeItem.title
+                    })}>
+                {isUnlinked ? (
                   <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
                     {day}
                   </span>
-                </a>
-              )}
-            </span>
+                ) : (
+                  <a href={activeItem.url ? activeItem.url : '#'} className="calendar-link">
+                    <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
+                      {day}
+                    </span>
+                  </a>
+                )}
+              </span>
+            )}
           </td>
         );
       } else {
@@ -122,25 +131,29 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
         return (
           <td key={index}>
             {activeItem ? (
-              <span
-                {...(hasTitle
-                  ? { title: activeItem.title }
-                  : {
-                      'data-direction': activeItem.dataDirection || 'top-right',
-                      'data-tooltip': activeItem.title
-                    })}>
-                {isUnlinked ? (
-                  <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
-                    {day}
-                  </span>
-                ) : (
-                  <a href={activeItem.url ? activeItem.url : '#'} className="calendar-link">
+              activeItem.isDisabled ? (
+                <span className="disabled">{day}</span>
+              ) : (
+                <span
+                  {...(hasTitle
+                    ? { title: activeItem.title }
+                    : {
+                        'data-direction': activeItem.dataDirection || 'top-right',
+                        'data-tooltip': activeItem.title
+                      })}>
+                  {isUnlinked ? (
                     <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
                       {day}
                     </span>
-                  </a>
-                )}
-              </span>
+                  ) : (
+                    <a href={activeItem.url ? activeItem.url : '#'} className="calendar-link">
+                      <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
+                        {day}
+                      </span>
+                    </a>
+                  )}
+                </span>
+              )
             ) : (
               <span>{day}</span>
             )}
@@ -197,6 +210,15 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
 
   const DAYS_HEADER_TABLE = ['D', 'L', 'M', 'X', 'J', 'V', 'S'];
 
+  const activeDaysNotDisabled = activeDays?.filter((activeDay) => !activeDay.isDisabled).length;
+
+  const sortedActiveDays = activeDays?.sort((a, b) => {
+    if (a.day !== undefined && b.day !== undefined) {
+      return a.day - b.day;
+    }
+    return 0;
+  });
+
   return (
     <div className="calendar">
       <div className="calendar-header">
@@ -227,11 +249,12 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
                 )}
               </tr>
             ))}
-            {totalWeeksCalendar !== 6 && <tr className="calendar-week">{renderEmptyCells()}</tr>}
+            {isInYearlyCalendar && totalWeeksCalendar !== 6 && <tr className="calendar-week">{renderEmptyCells()}</tr>}
           </tbody>
         </table>
       </div>
-      {activeDays && (
+
+      {activeDays && (activeDaysNotDisabled || 0 > 0) ? (
         <div className="calendar-footer">
           {isCollapsed ? (
             <div className="accordion accordion-white">
@@ -246,11 +269,14 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
                 <div id={`collapse${monthsTitles(monthNumber)}`} className="collapse">
                   <div className="card-body">
                     <ul className="calendar-footer-list">
-                      {activeDays?.map((activeDay) => (
-                        <li key={activeDay.day}>
-                          <strong>{activeDay.day}.</strong> {activeDay.title}
-                        </li>
-                      ))}
+                      {sortedActiveDays?.map(
+                        (activeDay) =>
+                          !activeDay.isDisabled && (
+                            <li key={activeDay.day}>
+                              <strong>{activeDay.day}.</strong> {activeDay.title}
+                            </li>
+                          )
+                      )}
                     </ul>
                   </div>
                 </div>
@@ -258,15 +284,18 @@ export const CalendarMonth: React.FC<TableMonthProps> = ({
             </div>
           ) : (
             <ul className="calendar-footer-list">
-              {activeDays?.map((activeDay) => (
-                <li key={activeDay.day}>
-                  <strong>{activeDay.day}.</strong> {activeDay.title}
-                </li>
-              ))}
+              {sortedActiveDays?.map(
+                (activeDay) =>
+                  !activeDay.isDisabled && (
+                    <li key={activeDay.day}>
+                      <strong>{activeDay.day}.</strong> {activeDay.title}
+                    </li>
+                  )
+              )}
             </ul>
           )}
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

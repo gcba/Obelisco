@@ -1,13 +1,19 @@
 /* === Custom variables and mixins === */
-$calendar-body-border: 1px solid $grisulado-10;
-$calendar-spacing: 0.75rem;
+$calendar-body-border: 1px solid $grisulado-50;
+$calendar-spacing: 0.5rem 0.25rem;
+$calendar-footer-spacing: 1rem 0.5rem 0;
 $calendar-td-span-size: 2.25rem;
 
 /* === Custom styles === */
 .calendar {
-  max-width: 328px;
   width: 100%;
+  max-width: 328px;
   background-color: $white;
+  padding: $calendar-spacing;
+
+  @include media-breakpoint-up(md) {
+    max-width: 340px;
+  }
 
   .calendar-header {
     display: flex;
@@ -17,17 +23,16 @@ $calendar-td-span-size: 2.25rem;
     height: 40px;
     .calendar-title,
     .calendar-year {
-      @extend .h4;
+      @extend .h3;
       margin-bottom: 0;
     }
   }
 
   .calendar-body {
-    padding: 1rem 0;
+    padding: 1rem 0 0;
     border-top: $calendar-body-border;
-    border-bottom: $calendar-body-border;
     @extend .h5;
-    color: $grisulado-500;
+    color: $grisulado-700;
     margin-bottom: 0;
 
     table {
@@ -51,28 +56,22 @@ $calendar-td-span-size: 2.25rem;
       .calendar-week-header {
         th {
           font-weight: 700;
-          color: $grisulado-900;
           height: 48px;
-          background-color: #f5f9fc;
+          padding-bottom: 0.5rem;
         }
       }
 
       .calendar-week {
         line-height: 8px;
-        &:nth-of-type(even) {
-          background-color: #f5f9fc;
-        }
         &:nth-of-type(odd) {
+          background-color: $ghost;
+        }
+        &:nth-of-type(even) {
           td {
             padding: 0.25rem 0;
           }
         }
 
-        &:nth-of-type(1) {
-          td {
-            padding: 0.75rem 0 0.25rem;
-          }
-        }
         td {
           pointer-events: inherit;
           .calendar-link {
@@ -82,6 +81,10 @@ $calendar-td-span-size: 2.25rem;
           span {
             &:after {
               line-height: 1.5;
+            }
+
+            &.disabled {
+              color: $grisulado-300;
             }
 
             &.active {
@@ -117,7 +120,9 @@ $calendar-td-span-size: 2.25rem;
 
   .calendar-footer {
     .calendar-footer-list {
-      padding: $calendar-spacing;
+      margin-top: 1rem;
+      border-top: $calendar-body-border;
+      padding: $calendar-footer-spacing;
       margin-bottom: 0;
 
       li {
@@ -129,9 +134,14 @@ $calendar-td-span-size: 2.25rem;
       }
     }
     .accordion {
-      margin-top: 0.75rem;
-      .calendar-footer-list {
-        padding: 0;
+      margin-top: 1rem;
+      .card {
+        margin-bottom: 0;
+        .calendar-footer-list {
+          margin: 0;
+          border-top: none;
+          padding: 0;
+        }
       }
     }
   }
