@@ -39,7 +39,9 @@ $custom-control-indicator-active-border-color: $blue;
 $custom-control-indicator-checked-disabled-bg: transparent;
 $custom-control-indicator-disabled-bg: transparent;
 
-$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$white}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>");
+/* $custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$white}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>"); */
+
+$custom-checkbox-indicator-icon-checked: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none"><path d="M5.1725 10.1625L1.7025 6.6925C1.3125 6.3025 0.6825 6.3025 0.2925 6.6925C-0.0975 7.0825 -0.0975 7.7125 0.2925 8.1025L4.4725 12.2825C4.8625 12.6725 5.4925 12.6725 5.8825 12.2825L16.4625 1.7025C16.8525 1.3125 16.8525 0.6825 16.4625 0.2925C16.0725 -0.0975 15.4425 -0.0975 15.0525 0.2925L5.1725 10.1625Z" fill="white"/></svg>');
 
 $input-validation-focus-width: $input-border-width;
 
@@ -70,6 +72,14 @@ $form-validation-states: (
 );
 
 /* === Custom variables and mixins === */
+
+$custom-control-focus-color: #005387;
+%custom-checkbox-size-position {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 7px;
+  left: 7px;
+}
 
 /* === Bootstrap Import === */
 
@@ -273,6 +283,48 @@ $form-validation-states: (
     .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
       background: $custom-control-indicator-checked-color;
     }
+
+    .custom-control-label {
+      padding: 7px 4px 7px 42px;
+    
+      &::before {
+        @extend %custom-checkbox-size-position;
+      }
+      &::after {
+        @extend %custom-checkbox-size-position;
+        background-size: auto;
+      }
+    }
+
+    .custom-control-input {    
+      @extend %custom-checkbox-size-position;
+      &:not(:disabled):focus ~ .custom-control-label {
+        box-shadow: inset 0 0 0 4px $custom-control-focus-color;
+        &:before {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      &:not(:disabled):hover ~ .custom-control-label {
+        text-decoration-thickness: 1px;
+      }
+
+      &:disabled  ~ .custom-control-label {
+        &:before {
+          background-color: $input-disabled-color;
+        }
+      }
+
+      &:checked:hover  ~ .custom-control-label {
+        color: $custom-control-focus-color;
+        text-decoration: none;
+        &:before {
+          background-color: $custom-control-focus-color;
+          border-color: $custom-control-focus-color;
+        }
+      }
+    }
   }
 }
 
@@ -378,5 +430,9 @@ $form-validation-states: (
     color: #fff;
     background-color: $blue;
     box-shadow: none;
+  }
+
+  &:focus + .btn-chip {
+    box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
   }
 }
