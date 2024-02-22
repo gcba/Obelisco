@@ -74,7 +74,7 @@ const headers = [
   'organismos-header-encabezado-mobile',
   'organismos-listas',
   'organismos-tablas',
-  'organismos-tablas-con-acciones',
+  'organismos-tablas-tipo-de-celda',
   'versión-releases'
 ];
 
