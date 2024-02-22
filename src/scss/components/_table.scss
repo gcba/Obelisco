@@ -86,6 +86,23 @@ $table-striped-order: even;
       td {
         border-color: $grisulado-50;
         // vertical-align: middle;
+
+        .actions-table {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.7rem;
+
+          .button-actions-table {
+            background: none;
+            border: none;
+            padding: 0;
+
+            .material-icons-round, .bx {
+              color: $grisulado-900;
+              vertical-align: middle;
+            }
+          }
+        }
       }
 
       &:first-of-type td {
