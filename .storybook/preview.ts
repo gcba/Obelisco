@@ -15,6 +15,7 @@ const headers = [
   'componentes-alerta',
   'componentes-audio',
   'componentes-banner',
+  'componentes-barra-de-desplazamiento',
   'componentes-barra-de-progreso',
   'componentes-bloque-de-trámite',
   'componentes-botones--button-types',
