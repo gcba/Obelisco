@@ -20,6 +20,8 @@ const headers = [
   'componentes-botones--button-types',
   'componentes-botones-estados',
   'componentes-botones',
+  'componentes-calendario--calendar-no-references',
+  'componentes-calendario-con-eventos',
   'componentes-calendario',
   'componentes-colapsable',
   'componentes-desplegables-de-navegación',

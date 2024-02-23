@@ -1,10 +1,9 @@
 import React from 'react';
 
 interface ActiveDays {
-  day?: number;
+  day?: number | number[];
   title?: string;
   url?: string;
-  dataDirection?: string;
   type?: string;
   isDisabled?: boolean;
 }
@@ -15,10 +14,8 @@ interface CalendarMonthProps {
   month?: string;
   monthNumber?: number;
   year?: number;
-  hasTitle?: boolean;
-  isUnlinked?: boolean;
+  isLinked?: boolean;
   isCollapsed?: boolean;
-  isInYearlyCalendar?: boolean;
 }
 
 export const CalendarMonth: React.FC<CalendarMonthProps> = ({
@@ -28,10 +25,8 @@ export const CalendarMonth: React.FC<CalendarMonthProps> = ({
   year = 2024,
   activeDays,
   monthNumber,
-  hasTitle,
-  isUnlinked = false,
-  isCollapsed,
-  isInYearlyCalendar = false
+  isLinked = false,
+  isCollapsed
 }): JSX.Element => {
   const monthAmountOfDays = (monthNumber?: number, year?: number): number => {
     if (typeof monthNumber !== 'number' || monthNumber < 1 || monthNumber > 12) {
@@ -46,18 +41,48 @@ export const CalendarMonth: React.FC<CalendarMonthProps> = ({
       return 31;
     }
   };
+  const daysArray = Array.from(
+    { length: numberOfDays ? numberOfDays : monthAmountOfDays(monthNumber, year) },
+    (_, index) => index + 1
+  );
+  const emptyDaysArray = start < 7 && Array.from({ length: start }, (_, index) => <td key={index}></td>);
+  const daysInAWeek = 7;
+  const totalDays = start + daysArray.length;
+  const numberWeeks = Math.ceil(totalDays / 7);
+  const totalDaysCalentar = daysArray.length + start;
+  const totalWeeksCalendar = Math.ceil(totalDaysCalentar / 7);
+  const MONTH_TITLE = [
+    'Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre'
+  ];
+  const DAYS_HEADER_TABLE = ['D', 'L', 'M', 'M', 'J', 'V', 'S'];
+  const activeDaysNotDisabled = activeDays?.filter((activeDay) => !activeDay.isDisabled).length;
 
-  const colorReligion = (text: string) => {
+  const colorActive = (text: string) => {
     const mapTexts = {
-      africanista: 'bg-coral',
-      bahai: 'bg-musket',
-      budista: 'bg-citrus',
-      cristiana: 'bg-lime',
-      hinduista: 'bg-sky',
-      islamica: 'bg-lavender',
-      judia: 'bg-berries',
-      sikh: 'bg-pistachio',
-      multiple: 'bg-gray'
+      sky: 'bg-sky',
+      lavender: 'bg-lavender',
+      coral: 'bg-coral',
+      avocado: 'bg-avocado',
+      citrus: 'bg-citrus',
+      lime: 'bg-lime',
+      pistachio: 'bg-pistachio',
+      berries: 'bg-berries',
+      musket: 'bg-musket',
+      blackberry: 'bg-blackberry',
+      aqua: 'bg-aqua',
+      strawberry: 'bg-strawberry',
+      gray: 'bg-gray'
     };
 
     const result = mapTexts[text.toLowerCase()] || '';
@@ -65,58 +90,56 @@ export const CalendarMonth: React.FC<CalendarMonthProps> = ({
     return result;
   };
 
-  const daysArray = Array.from(
-    { length: numberOfDays ? numberOfDays : monthAmountOfDays(monthNumber, year) },
-    (_, index) => index + 1
+  const renderActiveDay = (day: number, activeItem: ActiveDays): JSX.Element => (
+    <span
+      className={
+        activeItem.type
+          ? activeItem.type === 'secondary'
+            ? 'active-secondary'
+            : `active ${colorActive(activeItem.type)}`
+          : 'active'
+      }>
+      {day}
+    </span>
   );
 
-  const emptyDaysArray = start < 7 && Array.from({ length: start }, (_, index) => <td key={index}></td>);
-  const daysInAWeek = 7;
-  const totalDays = start + daysArray.length;
-  const numberWeeks = Math.ceil(totalDays / 7);
+  const renderDayTd = (day: number, activeItem?: ActiveDays, isLinked?: boolean): JSX.Element => {
+    if (activeItem) {
+      return (
+        <td key={day}>
+          {activeItem.isDisabled ? (
+            <span className="disabled">{day}</span>
+          ) : isLinked ? (
+            <a
+              href={activeItem.url ? activeItem.url : '#'}
+              className="calendar-link"
+              title={activeItem.title && activeItem.title}>
+              {renderActiveDay(day, activeItem)}
+            </a>
+          ) : (
+            <span title={activeItem.title && activeItem.title}>{renderActiveDay(day, activeItem)}</span>
+          )}
+        </td>
+      );
+    } else {
+      return (
+        <td key={day}>
+          <span>{day}</span>
+        </td>
+      );
+    }
+  };
 
   const renderDays = (startIdx: number, endIdx: number, activeItems?: ActiveDays[]) =>
     daysArray.slice(startIdx, endIdx).map((day) => {
-      const activeItem = activeItems?.find((obj) => obj.day === day);
-      if (activeItem) {
-        return (
-          <td key={day}>
-            {activeItem.isDisabled ? (
-              <span className="disabled">{day}</span>
-            ) : (
-              <span
-                {...(hasTitle
-                  ? { title: activeItem.title }
-                  : {
-                      'data-direction': activeItem.dataDirection || 'top-right',
-                      'data-tooltip': activeItem.title
-                    })}>
-                {isUnlinked ? (
-                  <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
-                    {day}
-                  </span>
-                ) : (
-                  <a href={activeItem.url ? activeItem.url : '#'} className="calendar-link">
-                    <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
-                      {day}
-                    </span>
-                  </a>
-                )}
-              </span>
-            )}
-          </td>
-        );
-      } else {
-        return (
-          <td key={day}>
-            <span>{day}</span>
-          </td>
-        );
-      }
+      const activeItem = activeItems?.find((obj) => {
+        if (Array.isArray(obj.day)) {
+          return obj.day.includes(day);
+        }
+        return obj.day === day;
+      });
+      return renderDayTd(day, activeItem, isLinked);
     });
-
-  const totalDaysCalentar = daysArray.length + start;
-  const totalWeeksCalendar = Math.ceil(totalDaysCalentar / 7);
 
   const renderDaysForRow = (startIdx: number, endIdx: number, activeItems?: ActiveDays[]) => {
     const daysForRow: Array<number | null> = daysArray.slice(startIdx, endIdx);
@@ -127,38 +150,13 @@ export const CalendarMonth: React.FC<CalendarMonthProps> = ({
 
     return daysForRow.map((day, index) => {
       if (day !== null) {
-        const activeItem = activeItems?.find((obj) => obj.day === day);
-        return (
-          <td key={index}>
-            {activeItem ? (
-              activeItem.isDisabled ? (
-                <span className="disabled">{day}</span>
-              ) : (
-                <span
-                  {...(hasTitle
-                    ? { title: activeItem.title }
-                    : {
-                        'data-direction': activeItem.dataDirection || 'top-right',
-                        'data-tooltip': activeItem.title
-                      })}>
-                  {isUnlinked ? (
-                    <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
-                      {day}
-                    </span>
-                  ) : (
-                    <a href={activeItem.url ? activeItem.url : '#'} className="calendar-link">
-                      <span className={`active ${activeItem.type ? colorReligion(activeItem.type) : ''}`.trim()}>
-                        {day}
-                      </span>
-                    </a>
-                  )}
-                </span>
-              )
-            ) : (
-              <span>{day}</span>
-            )}
-          </td>
-        );
+        const activeItem = activeItems?.find((obj) => {
+          if (Array.isArray(obj.day)) {
+            return obj.day.includes(day);
+          }
+          return obj.day === day;
+        });
+        return renderDayTd(day, activeItem, isLinked);
       } else {
         return (
           <td key={index}>
@@ -185,44 +183,81 @@ export const CalendarMonth: React.FC<CalendarMonthProps> = ({
     return emptyCells;
   };
 
-  const monthTitle = [
-    'Enero',
-    'Febrero',
-    'Marzo',
-    'Abril',
-    'Mayo',
-    'Junio',
-    'Julio',
-    'Agosto',
-    'Septiembre',
-    'Octubre',
-    'Noviembre',
-    'Diciembre'
-  ];
+  const renderFooter = () => {
+    if (activeDays && (activeDaysNotDisabled || 0 > 0)) {
+      return (
+        <div className="calendar-footer">
+          {isCollapsed ? (
+            <div className="accordion">
+              <div className="card">
+                <button
+                  className="card-header collapsed"
+                  data-toggle="collapse"
+                  data-target={`#collapse${monthsTitles(monthNumber)}`}>
+                  <i className="bx bx-calendar"></i>
+                  <span className="collapse-title">Referencias</span>
+                </button>
+                <div id={`collapse${monthsTitles(monthNumber)}`} className="collapse">
+                  <div className="card-body">
+                    <ul className="calendar-footer-list">
+                      {activeDays?.map(
+                        (activeDay, index) =>
+                          !activeDay.isDisabled && (
+                            <li key={index}>
+                              <strong>
+                                {Array.isArray(activeDay.day) && activeDay.day.length === 2
+                                  ? `${activeDay.day[0]}, ${activeDay.day[1]}.`
+                                  : Array.isArray(activeDay.day) && activeDay.day.length > 2
+                                  ? `${activeDay.day[0]} al ${activeDay.day[activeDay.day.length - 1]}.`
+                                  : `${activeDay.day}.`}
+                              </strong>{' '}
+                              {activeDay.title}
+                            </li>
+                          )
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <ul className="calendar-footer-list">
+              {activeDays?.map(
+                (activeDay, index) =>
+                  !activeDay.isDisabled && (
+                    <li key={index}>
+                      <strong>
+                        {Array.isArray(activeDay.day) && activeDay.day.length === 2
+                          ? `${activeDay.day[0]}, ${activeDay.day[1]}.`
+                          : Array.isArray(activeDay.day) && activeDay.day.length > 2
+                          ? `${activeDay.day[0]} al ${activeDay.day[activeDay.day.length - 1]}.`
+                          : `${activeDay.day}.`}
+                      </strong>{' '}
+                      {activeDay.title}
+                    </li>
+                  )
+              )}
+            </ul>
+          )}
+        </div>
+      );
+    } else {
+      return null;
+    }
+  };
 
   const monthsTitles = (monthNumber?: number) => {
     if (monthNumber && monthNumber >= 1 && monthNumber <= 12) {
-      return monthTitle[monthNumber - 1];
+      return MONTH_TITLE[monthNumber - 1];
     } else {
       return 'Mes inválido';
     }
   };
 
-  const DAYS_HEADER_TABLE = ['D', 'L', 'M', 'X', 'J', 'V', 'S'];
-
-  const activeDaysNotDisabled = activeDays?.filter((activeDay) => !activeDay.isDisabled).length;
-
-  const sortedActiveDays = activeDays?.sort((a, b) => {
-    if (a.day !== undefined && b.day !== undefined) {
-      return a.day - b.day;
-    }
-    return 0;
-  });
-
   return (
     <div className="calendar">
       <div className="calendar-header">
-        <h3 className="calendar-title">{month ? month : monthsTitles(monthNumber)}</h3>
+        <h2 className="calendar-title">{month ? month : monthsTitles(monthNumber)}</h2>
         <span className="calendar-year">{year}</span>
       </div>
       <div className="calendar-body">
@@ -249,53 +284,11 @@ export const CalendarMonth: React.FC<CalendarMonthProps> = ({
                 )}
               </tr>
             ))}
-            {isInYearlyCalendar && totalWeeksCalendar !== 6 && <tr className="calendar-week">{renderEmptyCells()}</tr>}
+            {totalWeeksCalendar !== 6 && <tr className="calendar-week">{renderEmptyCells()}</tr>}
           </tbody>
         </table>
       </div>
-
-      {activeDays && (activeDaysNotDisabled || 0 > 0) ? (
-        <div className="calendar-footer">
-          {isCollapsed ? (
-            <div className="accordion accordion-white">
-              <div className="card">
-                <button
-                  className="card-header collapsed"
-                  data-toggle="collapse"
-                  data-target={`#collapse${monthsTitles(monthNumber)}`}>
-                  <i className="bx bx-calendar"></i>
-                  <span className="collapse-title">Referencias</span>
-                </button>
-                <div id={`collapse${monthsTitles(monthNumber)}`} className="collapse">
-                  <div className="card-body">
-                    <ul className="calendar-footer-list">
-                      {sortedActiveDays?.map(
-                        (activeDay) =>
-                          !activeDay.isDisabled && (
-                            <li key={activeDay.day}>
-                              <strong>{activeDay.day}.</strong> {activeDay.title}
-                            </li>
-                          )
-                      )}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <ul className="calendar-footer-list">
-              {sortedActiveDays?.map(
-                (activeDay) =>
-                  !activeDay.isDisabled && (
-                    <li key={activeDay.day}>
-                      <strong>{activeDay.day}.</strong> {activeDay.title}
-                    </li>
-                  )
-              )}
-            </ul>
-          )}
-        </div>
-      ) : null}
+      {renderFooter()}
     </div>
   );
 };
