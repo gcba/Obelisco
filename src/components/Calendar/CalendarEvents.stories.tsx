@@ -43,12 +43,7 @@ CalendarCollapsable.story = { name: 'Con colapsable' };
 
 export const CalendarReferences = (): JSX.Element => {
   return (
-    <CalendarMonth
-      monthNumber={1}
-      start={1}
-      activeDays={ACTIVE_DAYS_JANUARY_REFERENCES}
-      isCollapsed
-      isLinked></CalendarMonth>
+    <CalendarMonth monthNumber={1} start={1} activeDays={ACTIVE_DAYS_JANUARY_REFERENCES} isCollapsed></CalendarMonth>
   );
 };
 CalendarReferences.story = { name: 'Con referencias cromáticas' };
