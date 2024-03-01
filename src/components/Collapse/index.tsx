@@ -22,7 +22,11 @@ export const Collapse: React.FC<CollapseProps> = ({
         {children}
       </button>
       <div id={identifier} className="collapse" {...(isOnlySelect && dataParent ? { 'data-parent': dataParent } : {})}>
-        {content ?? <div className="card-body">{description}</div>}
+        {content ?? (
+          <div className="card-body">
+            <p>{description}</p>
+          </div>
+        )}
       </div>
     </div>
   );

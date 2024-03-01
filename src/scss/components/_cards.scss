@@ -749,9 +749,13 @@ button.card {
       border: none;
       @include border-bottom-radius($card-border-radius);
 
-      span {
+      span:not(.material-icons-round) {
         @extend .h5;
         display: block;
+        margin-bottom: 0;
+      }
+
+      p:last-of-type {
         margin-bottom: 0;
       }
 
