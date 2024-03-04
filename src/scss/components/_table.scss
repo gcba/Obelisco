@@ -96,6 +96,11 @@ $table-striped-order: even;
             background: none;
             border: none;
             padding: 0.125rem;
+            border-radius: 0.25rem;
+
+            &:hover {
+              background-color: $grisulado-50;
+            }
 
             &:focus,
             &.focus {
@@ -168,6 +173,7 @@ $table-striped-order: even;
 }
 
 .table-responsive, .table-responsive-sm, .table-responsive-md, .table-responsive-lg, .table-responsive-xl {
+  //Este codigo puede borrarse una vez este asegurdado que en drupal no hay tablas con esta clase, o sea el momento adecuado para la creacion de tablas en drupal hacer el requerimiento de eliminar la clase.
   // border-left: 1px solid $border-color;
   border: 1px solid $border-color;
   border-radius: $border-radius-container;
