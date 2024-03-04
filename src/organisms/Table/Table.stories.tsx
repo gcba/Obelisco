@@ -731,7 +731,7 @@ export const CheckboxAndText = (): JSX.Element => {
                     checked
                   />
                   <label
-                    className="custom-control-label"
+                    className="custom-control-label no-text"
                     htmlFor="skills-copywrite-input"
                     aria-label="Descripción para usuarios de lectores de pantalla"></label>
                 </div>
@@ -752,7 +752,7 @@ export const CheckboxAndText = (): JSX.Element => {
                     value="design"
                   />
                   <label
-                    className="custom-control-label"
+                    className="custom-control-label no-text"
                     htmlFor="skills-design-input"
                     aria-label="Descripción para usuarios de lectores de pantalla"></label>
                 </div>
@@ -773,7 +773,7 @@ export const CheckboxAndText = (): JSX.Element => {
                     value="development"
                   />
                   <label
-                    className="custom-control-label"
+                    className="custom-control-label no-text"
                     htmlFor="skills-development-input"
                     aria-label="Descripción para usuarios de lectores de pantalla"></label>
                 </div>
@@ -794,7 +794,7 @@ export const CheckboxAndText = (): JSX.Element => {
                     value="development"
                   />
                   <label
-                    className="custom-control-label"
+                    className="custom-control-label no-text"
                     htmlFor="skills-validation-input"
                     aria-label="Descripción para usuarios de lectores de pantalla"></label>
                 </div>
