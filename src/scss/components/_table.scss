@@ -95,7 +95,13 @@ $table-striped-order: even;
           .button-actions-table {
             background: none;
             border: none;
-            padding: 0;
+            padding: 0.125rem;
+
+            &:focus,
+            &.focus {
+              box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+              text-decoration: $link-decoration;
+            }
 
             .material-icons-round, .bx {
               color: $grisulado-900;
