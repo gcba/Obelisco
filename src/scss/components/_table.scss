@@ -25,10 +25,11 @@ $table-striped-order: even;
 /* === Custom styles === */
 
 .table {
-  border: 1px solid $border-color;
-  border-radius: $border-radius-container;
+  // border: 1px solid $border-color;
+  // border-radius: $border-radius-container;
   border-collapse: initial;
   border-spacing: initial;
+  margin: 0;
 
   td,
   th {
@@ -41,6 +42,34 @@ $table-striped-order: even;
 
     th {
       border: none;
+
+      &.tb-text {
+        min-width: 252px;
+        // width: 100%;
+        // max-width: 500px;
+        // background: pink;
+      }
+      &.tb-link {
+        min-width: 204px;
+        // background: green;
+      }
+      &.tb-button {
+        min-width: 152px;
+        // background: brown;
+      }
+      &.tb-check {
+        min-width: 136px;
+        opacity: 0;
+        // background: purple;
+      }
+      &.tb-tag {
+        min-width: 140px;
+        // background: gray;
+      }
+      &.tb-number {
+        min-width: 136px;
+        // background: orange;
+      }
 
       &:first-of-type {
         border-top-left-radius: calc(#{$border-radius-container} - 1px);
@@ -57,6 +86,31 @@ $table-striped-order: even;
       td {
         border-color: $grisulado-50;
         // vertical-align: middle;
+
+        .actions-table {
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 0.5rem;
+
+          .button-actions-table {
+            background: none;
+            border: none;
+            padding: 0.125rem;
+
+            &:focus,
+            &.focus {
+              box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+              text-decoration: $link-decoration;
+            }
+
+            .material-icons-round, .bx {
+              color: $grisulado-900;
+              vertical-align: middle;
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
       }
 
       &:first-of-type td {
@@ -76,6 +130,7 @@ $table-striped-order: even;
   }
 
   &.table-bordered {
+    border-radius: $border-radius-container;
     thead th {
       border: none;
     }
@@ -113,8 +168,13 @@ $table-striped-order: even;
 }
 
 .table-responsive, .table-responsive-sm, .table-responsive-md, .table-responsive-lg, .table-responsive-xl {
+  // border-left: 1px solid $border-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-container;
+
   > .table-bordered {
-    border: $border-width solid $border-color;
+    // border: $border-width solid $border-color;
+    border: none;
   }
 
   &:focus, &:focus-visible {
