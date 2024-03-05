@@ -25,8 +25,8 @@ $table-striped-order: even;
 /* === Custom styles === */
 
 .table {
-  // border: 1px solid $border-color;
-  // border-radius: $border-radius-container;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-container;
   border-collapse: initial;
   border-spacing: initial;
   margin: 0;
@@ -45,30 +45,23 @@ $table-striped-order: even;
 
       &.tb-text {
         min-width: 252px;
-        // width: 100%;
-        // max-width: 500px;
-        // background: pink;
       }
+
       &.tb-link {
         min-width: 204px;
-        // background: green;
       }
       &.tb-button {
         min-width: 152px;
-        // background: brown;
       }
       &.tb-check {
         min-width: 136px;
         opacity: 0;
-        // background: purple;
       }
       &.tb-tag {
         min-width: 140px;
-        // background: gray;
       }
       &.tb-number {
         min-width: 136px;
-        // background: orange;
       }
 
       &:first-of-type {
@@ -108,7 +101,8 @@ $table-striped-order: even;
               text-decoration: $link-decoration;
             }
 
-            .material-icons-round, .bx {
+            .material-icons-round,
+            .bx {
               color: $grisulado-900;
               vertical-align: middle;
               width: 24px;
@@ -172,8 +166,12 @@ $table-striped-order: even;
   }
 }
 
-.table-responsive, .table-responsive-sm, .table-responsive-md, .table-responsive-lg, .table-responsive-xl {
-  //Este codigo puede borrarse una vez este asegurdado que en drupal no hay tablas con esta clase, o sea el momento adecuado para la creacion de tablas en drupal hacer el requerimiento de eliminar la clase.
+.table-responsive,
+.table-responsive-sm,
+.table-responsive-md,
+.table-responsive-lg,
+.table-responsive-xl {
+  //Se le saca el extend de responsive-scroll de manera que esta queda deprecada.
   // border-left: 1px solid $border-color;
   border: 1px solid $border-color;
   border-radius: $border-radius-container;
@@ -183,7 +181,8 @@ $table-striped-order: even;
     border: none;
   }
 
-  &:focus, &:focus-visible {
+  &:focus,
+  &:focus-visible {
     box-shadow: 0 0 0 0.25rem theme-color-level('info', 3);
     outline: none;
   }

@@ -1,5 +1,19 @@
 .responsive-scroll {
   padding: 0.5rem;
+  border: none;
+  display: flex;
+  overflow: auto;
+  border-radius: $border-radius-container;
+
+  &:has(> .table) {
+    padding: 0;
+    border: 1px solid $border-color;
+
+    .table {
+      border: none;
+    }
+  }
+
   &::-webkit-scrollbar {
     width: 16px;
     height: 16px;
@@ -16,6 +30,9 @@
     background-color: $grisulado-300;
   }
 
-  @extend .table-responsive;
-  display: flex;
+  &:focus-visible {
+    box-shadow: 0 0 0 0.25rem theme-color-level('info', 3);
+    outline: none;
+  }
 }
+//Esta clase es independiente de .table-responsive, de manera que si en drupal no se usa, se puede eliminar la clase .table-responsive
