@@ -15,6 +15,7 @@ const headers = [
   'componentes-alerta',
   'componentes-audio',
   'componentes-banner',
+  'componentes-barra-de-desplazamiento',
   'componentes-barra-de-progreso',
   'componentes-bloque-de-trámite',
   'componentes-botones--button-types',
@@ -77,7 +78,7 @@ const headers = [
   'organismos-header-encabezado-mobile',
   'organismos-listas',
   'organismos-tablas',
-  'organismos-tablas-con-acciones',
+  'organismos-tablas-tipo-de-celda',
   'versión-releases'
 ];
 
