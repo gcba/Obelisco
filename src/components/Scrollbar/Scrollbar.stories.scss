@@ -3,40 +3,14 @@
   width: 100%;
 }
 
-.example-text {
+.horizontal-example {
   min-width: 1200px;
+}
+
+.vertical-example {
   height: 300px;
 
   @media screen and (max-width: 768px) {
     height: 500px;
-  }
-}
-
-.example-box {
-  display: grid;
-  grid-template-columns: 300px 900px;
-  gap: 10px;
-  margin: 10px;
-  height: 100%;
-  max-height: 300px;
-  position: relative;
-
-  @media screen and (max-width: 768px) {
-    height: 500px;
-  }
-
-  .example-box-nav {
-    padding: 20px;
-    height: 100%;
-
-    nav {
-      top: 30px;
-      position: sticky;
-    }
-  }
-
-  .example-box-text {
-    padding: 3rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }

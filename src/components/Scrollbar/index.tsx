@@ -7,7 +7,7 @@ export interface ScrollbarProps {
 export const Scrollbar: React.FC<ScrollbarProps> = (props: React.PropsWithChildren<ScrollbarProps>) => {
   const { children } = props;
 
-  const className = `responsive-scroll`;
+  const className = `responsive-scroll border-0`;
 
   return (
     <div className={className} tabIndex={0}>

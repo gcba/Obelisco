@@ -15,52 +15,28 @@ export default {
   decorators: [withA11y]
 };
 
-export const SimpleScrollbarComponent = (): JSX.Element => {
+export const HorizontalScrollbarComponent = (): JSX.Element => {
   return (
     <div className="storybook__container-scrollbar">
       <Scrollbar>
-        <div className="example-text">
-          <h1>Title example</h1>
+        <div className="horizontal-example">
+          <h1>Esto es un título de ejemplo</h1>
           <p className="lead">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum suscipit officia soluta nostrum totam.
-            Recusandae, doloribus iste? Perspiciatis maiores, odio error doloribus eum saepe laboriosam eveniet
-            cupiditate, aut earum tempore.
+            Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
+            fin específico, solo sirve de muestra. El ancho del texto es para probar el desplazamiento horizontal,
+            mientras que la lista de cuerpos de contenido consecutivos es para probar el desplazamiento vertical.
           </p>
 
           <br />
           <hr />
           <br />
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aperiam esse pariatur non deserunt, velit ut
-            nesciunt quam neque nulla? Pariatur consectetur minima sit. Praesentium libero quibusdam fugit amet itaque.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptates facilis quidem consequatur,
-            iusto obcaecati aspernatur officiis incidunt fuga vero consequuntur quasi quas doloremque facere enim
-            deleniti! Ut, amet ipsa?
-          </p>
-
-          <br />
-          <hr />
-          <br />
-
-          <h2>Title example</h2>
+          <h2>Esto es un título de ejemplo</h2>
 
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, asperiores amet. Optio est voluptatem
-            aliquam eveniet accusamus ipsam deserunt accusantium nobis? Quia porro nulla commodi accusamus ad fugit
-            quidem totam.
-          </p>
-
-          <br />
-          <hr />
-          <br />
-
-          <h2>Title example</h2>
-
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, asperiores amet. Optio est voluptatem
-            aliquam eveniet accusamus ipsam deserunt accusantium nobis? Quia porro nulla commodi accusamus ad fugit
-            quidem totam.
+            Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
+            fin específico, solo sirve de muestra. El ancho del texto es para probar el desplazamiento horizontal,
+            mientras que la lista de cuerpos de contenido consecutivos es para probar el desplazamiento vertical.
           </p>
         </div>
       </Scrollbar>
@@ -68,92 +44,61 @@ export const SimpleScrollbarComponent = (): JSX.Element => {
   );
 };
 
-SimpleScrollbarComponent.story = {
-  name: 'Simple'
+HorizontalScrollbarComponent.story = {
+  name: 'Horizontal'
 };
 
-export const ScrollbarComponent = (): JSX.Element => {
+export const VerticalScrollbarComponent = (): JSX.Element => {
   return (
     <div className="storybook__container-scrollbar">
       <Scrollbar>
-        <div className="example-box">
-          <div className="example-box-nav">
-            <nav>
-              <ul className="nav flex-column nav-pills">
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    <span>Link</span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link active" href="#">
-                    <span>Activo</span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    <span>Link</span>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link " href="#">
-                    <span>Link</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <div className="vertical-example">
+          <h1>Esto es un título de ejemplo</h1>
+          <p className="lead">
+            Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
+            fin específico, solo sirve de muestra. El ancho del texto es para probar el desplazamiento horizontal,
+            mientras que la lista de cuerpos de contenido consecutivos es para probar el desplazamiento vertical.
+          </p>
 
-          <div className="example-box-text">
-            <h1>Title example</h1>
-            <p className="lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum suscipit officia soluta nostrum totam.
-              Recusandae, doloribus iste? Perspiciatis maiores, odio error doloribus eum saepe laboriosam eveniet
-              cupiditate, aut earum tempore.
-            </p>
+          <br />
+          <hr />
+          <br />
 
-            <br />
-            <hr />
-            <br />
+          <p>
+            Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
+            fin específico, solo sirve de muestra. El ancho del texto es para probar el desplazamiento horizontal,
+            mientras que la lista de cuerpos de contenido consecutivos es para probar el desplazamiento vertical.
+          </p>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aperiam esse pariatur non deserunt, velit
-              ut nesciunt quam neque nulla? Pariatur consectetur minima sit. Praesentium libero quibusdam fugit amet
-              itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptates facilis quidem
-              consequatur, iusto obcaecati aspernatur officiis incidunt fuga vero consequuntur quasi quas doloremque
-              facere enim deleniti! Ut, amet ipsa?
-            </p>
+          <br />
+          <hr />
+          <br />
 
-            <br />
-            <hr />
-            <br />
+          <h2>Esto es un título de ejemplo</h2>
 
-            <h2>Title example</h2>
+          <p>
+            Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
+            fin específico, solo sirve de muestra. El ancho del texto es para probar el desplazamiento horizontal,
+            mientras que la lista de cuerpos de contenido consecutivos es para probar el desplazamiento vertical.
+          </p>
 
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, asperiores amet. Optio est voluptatem
-              aliquam eveniet accusamus ipsam deserunt accusantium nobis? Quia porro nulla commodi accusamus ad fugit
-              quidem totam.
-            </p>
+          <br />
+          <hr />
+          <br />
 
-            <br />
-            <hr />
-            <br />
+          <h2>Esto es un título de ejemplo</h2>
 
-            <h2>Title example</h2>
-
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, asperiores amet. Optio est voluptatem
-              aliquam eveniet accusamus ipsam deserunt accusantium nobis? Quia porro nulla commodi accusamus ad fugit
-              quidem totam.
-            </p>
-          </div>
+          <p>
+            Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
+            fin específico, solo sirve de muestra. El ancho del texto es para probar el desplazamiento horizontal,
+            mientras que la lista de cuerpos de contenido consecutivos es para probar el desplazamiento vertical.
+          </p>
         </div>
       </Scrollbar>
     </div>
   );
 };
 
-ScrollbarComponent.story = {
-  name: 'Ejemplo de uso'
+VerticalScrollbarComponent.story = {
+  name: 'Vertical'
 };
