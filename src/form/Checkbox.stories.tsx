@@ -70,6 +70,24 @@ CasillaMultiple.story = {
   name: 'Casilla múltiple'
 };
 
+export const CasillaMultipleSinTexto = (): JSX.Element => {
+  return (
+    <>
+      <div className="custom-control custom-checkbox">
+        <input className="custom-control-input" type="checkbox" id="no-text-input" name="skills" value="no-text" />
+        <label
+          className="custom-control-label no-text"
+          htmlFor="no-text-input"
+          aria-label="Casilla múltiple sin texto"></label>
+      </div>
+    </>
+  );
+};
+
+CasillaMultipleSinTexto.story = {
+  name: 'Sin texto'
+};
+
 export const TerminosYCondiciones = (): JSX.Element => {
   return (
     <div className="custom-control custom-checkbox">

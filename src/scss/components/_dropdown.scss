@@ -19,6 +19,8 @@ $animation-toggle: transform 0.2s ease-in-out;
 
 /* === Custom styles === */
 
+$custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none"><path d="M5.1725 10.1625L1.7025 6.6925C1.3125 6.3025 0.6825 6.3025 0.2925 6.6925C-0.0975 7.0825 -0.0975 7.7125 0.2925 8.1025L4.4725 12.2825C4.8625 12.6725 5.4925 12.6725 5.8825 12.2825L16.4625 1.7025C16.8525 1.3125 16.8525 0.6825 16.4625 0.2925C16.0725 -0.0975 15.4425 -0.0975 15.0525 0.2925L5.1725 10.1625Z" fill="%23007bc7"/></svg>');
+
 //Mixin styles dropdown form
 @mixin dropdown-menu-style-sm() {
   .custom-control-label,
@@ -36,8 +38,8 @@ $animation-toggle: transform 0.2s ease-in-out;
   }
 
   .custom-checkbox {
-    .custom-control-input:checked ~ .custom-control-label::after {
-      top: -5px;
+    .custom-control-input, .custom-control-label::after, .custom-control-label::before  {
+      top: 3px;
     }
   }
 
@@ -64,9 +66,8 @@ $animation-toggle: transform 0.2s ease-in-out;
   }
 
   .custom-checkbox {
-    .custom-control-input:checked ~ .custom-control-label::after {
-      top: 0.3rem;
-      left: 0.15rem;
+    .custom-control-input, .custom-control-label::after, .custom-control-label::before  {
+      top: 12px;
     }
   }
 
@@ -492,6 +493,15 @@ $animation-toggle: transform 0.2s ease-in-out;
           margin-bottom: 0;
         }
 
+        .custom-control-input {
+          left: 12px;
+          top: 8px;
+
+          &:focus ~ .custom-control-label {
+            box-shadow: $dropdown-box-shadow-focus;
+          }
+        }
+
         .custom-control-label {
           width: 100%;
           min-height: 2.5rem;
@@ -504,12 +514,14 @@ $animation-toggle: transform 0.2s ease-in-out;
 
           &::before {
             background-color: $white;
-            top: 0.625rem;
+            top: 8px;
+            left: 12px;
           }
 
           &::after {
             background-image: none; /* Inicialmente no mostrar el icono */
-            top: 0.9rem;
+            top: 8px;
+            left: 12px;
           }
         }
       }
@@ -530,11 +542,21 @@ $animation-toggle: transform 0.2s ease-in-out;
 
       .custom-checkbox {
         .custom-control-input:checked ~ .custom-control-label::after {
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' style='fill: rgba(0, 123, 199, 1);transform: ;msFilter:;'%3E%3Cpath d='m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z'%3E%3C/path%3E%3C/svg%3E");
-          width: 40px;
-          height: 40px;
-          top: -1px;
-          left: 0.1rem;
+          background-image: $custom-checkbox-dropdown;
+          background-size: auto;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        .custom-control-input:checked:hover ~ .custom-control-label {
+          color: $white;
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+
+          &:before {
+            background-color: $white;
+            border-color: $blue;
+          }
         }
 
         &:has(.custom-control-input:focus) {

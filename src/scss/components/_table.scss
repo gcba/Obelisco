@@ -29,6 +29,7 @@ $table-striped-order: even;
   border-radius: $border-radius-container;
   border-collapse: initial;
   border-spacing: initial;
+  margin: 0;
 
   td,
   th {
@@ -41,6 +42,27 @@ $table-striped-order: even;
 
     th {
       border: none;
+
+      &.tb-text {
+        min-width: 252px;
+      }
+
+      &.tb-link {
+        min-width: 204px;
+      }
+      &.tb-button {
+        min-width: 152px;
+      }
+      &.tb-check {
+        min-width: 136px;
+        opacity: 0;
+      }
+      &.tb-tag {
+        min-width: 140px;
+      }
+      &.tb-number {
+        min-width: 136px;
+      }
 
       &:first-of-type {
         border-top-left-radius: calc(#{$border-radius-container} - 1px);
@@ -57,6 +79,37 @@ $table-striped-order: even;
       td {
         border-color: $grisulado-50;
         // vertical-align: middle;
+
+        .actions-table {
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 0.5rem;
+
+          .button-actions-table {
+            background: none;
+            border: none;
+            padding: 0.125rem;
+            border-radius: 0.25rem;
+
+            &:hover {
+              background-color: $grisulado-50;
+            }
+
+            &:focus,
+            &.focus {
+              box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+              text-decoration: $link-decoration;
+            }
+
+            .material-icons-round,
+            .bx {
+              color: $grisulado-900;
+              vertical-align: middle;
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
       }
 
       &:first-of-type td {
@@ -76,6 +129,7 @@ $table-striped-order: even;
   }
 
   &.table-bordered {
+    border-radius: $border-radius-container;
     thead th {
       border: none;
     }
@@ -112,12 +166,23 @@ $table-striped-order: even;
   }
 }
 
-.table-responsive, .table-responsive-sm, .table-responsive-md, .table-responsive-lg, .table-responsive-xl {
+.table-responsive,
+.table-responsive-sm,
+.table-responsive-md,
+.table-responsive-lg,
+.table-responsive-xl {
+  //Se le saca el extend de responsive-scroll de manera que esta queda deprecada.
+  // border-left: 1px solid $border-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-container;
+
   > .table-bordered {
-    border: $border-width solid $border-color;
+    // border: $border-width solid $border-color;
+    border: none;
   }
 
-  &:focus, &:focus-visible {
+  &:focus,
+  &:focus-visible {
     box-shadow: 0 0 0 0.25rem theme-color-level('info', 3);
     outline: none;
   }
