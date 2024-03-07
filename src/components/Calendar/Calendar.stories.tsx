@@ -19,10 +19,10 @@ export const CalendarNoReferences = (): JSX.Element => {
 };
 CalendarNoReferences.story = { name: 'Sin eventos' };
 
-export const CalendarYearly = (): JSX.Element => {
+export const CalendarDeck = (): JSX.Element => {
   return (
-    <div className="container">
-      <div className="calendar-annual">
+    <div className="storybook__container-calendar container">
+      <div className="calendar-deck">
         <CalendarMonth monthNumber={1} start={1} activeDays={ACTIVE_DAYS_ANNUAL_EXAMPLE.JANUARY}></CalendarMonth>
         <CalendarMonth monthNumber={2} start={4} activeDays={ACTIVE_DAYS_ANNUAL_EXAMPLE.FEBRUARY}></CalendarMonth>
         <CalendarMonth monthNumber={3} start={5} activeDays={ACTIVE_DAYS_ANNUAL_EXAMPLE.MARCH}></CalendarMonth>
@@ -39,4 +39,4 @@ export const CalendarYearly = (): JSX.Element => {
     </div>
   );
 };
-CalendarYearly.story = { name: 'Disposición' };
+CalendarDeck.story = { name: 'Disposición' };
