@@ -4,6 +4,22 @@ import './Typography.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+import {
+  Heading,
+  Text,
+  Small,
+  Subtitle,
+  Epigraph,
+  Em,
+  Mark,
+  Sup,
+  Sub,
+  Kbd,
+  Blockquote,
+  UnorderedList,
+  ListItem,
+  OrderedList
+} from '.';
 
 // Configuración general del componente
 export default {
@@ -31,47 +47,90 @@ export const Headings = (): JSX.Element => {
       <h4>H4 - Nunito {isMobile ? 'Semibold' : 'Bold'} 19px</h4>
       <h5>H5 - Nunito Semibold 17px</h5>
       <h6>H6 - Open Sans Bold 16px</h6>
+
+      <hr />
+
+      <Heading as="h1">H1 - Nunito Bold 37px</Heading>
+      <Heading as="h2">H2 - Nunito Semibold 28px</Heading>
+      <Heading as="h3">H3 - Nunito Semibold 21px</Heading>
+      <Heading as="h4">H4 - Nunito {isMobile ? 'Semibold' : 'Bold'} 19px</Heading>
+      <Heading as="h5">H5 - Nunito Semibold 17px</Heading>
+      <Heading as="h6">H6 - Open Sans Bold 16px</Heading>
     </>
   );
 };
 
 Headings.story = { name: 'Títulos' };
 
-export const Subtitle = (): JSX.Element => {
-  return <p className="lead">Open Sans Regular 19px</p>;
-};
-
-Subtitle.story = { name: 'Subtítulo' };
-
-export const Text = (): JSX.Element => {
+export const SubTitle = (): JSX.Element => {
   return (
     <>
-      <p>Open Sans Regular 16px</p>
-      <small>Open Sans Regular 13px</small>
+      <p className="lead">Open Sans Regular 19px</p>
+
+      <hr />
+
+      <Subtitle>Open Sans Regular 19px</Subtitle>
     </>
   );
 };
 
-Text.story = { name: 'Párrafo' };
+SubTitle.story = { name: 'Subtítulo' };
 
-export const Epigraph = (): JSX.Element => {
-  return <p className="text-xs">Open Sans Regular 11.7px</p>;
+export const Texts = (): JSX.Element => {
+  return (
+    <>
+      <p>Open Sans Regular 16px</p>
+      <small>Open Sans Regular 13px</small>
+
+      <hr></hr>
+
+      <Text>Open Sans Regular 16px</Text>
+      <Small>Open Sans Regular 13px</Small>
+    </>
+  );
 };
 
-Epigraph.story = {
+Texts.story = { name: 'Párrafo' };
+
+export const Epigraphs = (): JSX.Element => {
+  return (
+    <>
+      <p className="text-xs">Open Sans Regular 11.7px</p>
+
+      <hr />
+
+      <Epigraph>Open Sans Regular 11.7px</Epigraph>
+    </>
+  );
+};
+
+Epigraphs.story = {
   name: 'Epígrafe'
 };
 
 export const Transformations = (): JSX.Element => {
   return (
-    <p>
-      Nuestro sistema de <strong>estándares</strong> brinda un <em>conjunto de herramientas</em> y componentes
-      colaborativos
-      <br />y <small>accesibles</small> que define procesos para que los equipos internos y externos puedan trabajar
-      <br />
-      alineadamente. De esta forma, ayudamos a crear <mark>servicios</mark> consistent<sup>es</sup> para mejorar
-      <br /> la experiencia digit<sub>al</sub> de vecinos y vecina<kbd>s</kbd>.
-    </p>
+    <>
+      <p>
+        Nuestro sistema de <strong>estándares</strong> brinda un <em>conjunto de herramientas</em> y componentes
+        colaborativos
+        <br />y <small>accesibles</small> que define procesos para que los equipos internos y externos puedan trabajar
+        <br />
+        alineadamente. De esta forma, ayudamos a crear <mark>servicios</mark> consistent<sup>es</sup> para mejorar
+        <br /> la experiencia digit<sub>al</sub> de vecinos y vecina<kbd>s</kbd>.
+      </p>
+
+      <hr />
+
+      <p>
+        Nuestro sistema de <strong>estándares</strong> brinda un <Em>conjunto de herramientas</Em> y componentes
+        colaborativos
+        <br />y <Small>accesibles</Small> que define procesos para que los equipos internos y externos puedan trabajar
+        <br />
+        alineadamente. De esta forma, ayudamos a crear <Mark>servicios</Mark> consistent<Sup>es</Sup> para mejorar
+        <br /> la experiencia digit<Sub>al</Sub> de vecinos y vecina<Kbd>s</Kbd>.
+      </p>
+    </>
   );
 };
 Transformations.story = {
@@ -93,6 +152,21 @@ export const Quote = (): JSX.Element => {
         </p>
         <small>Nombre del autor de la cita</small>
       </blockquote>
+
+      <hr />
+
+      <Blockquote>
+        <p>
+          Este es un apartado del texto que se quiere destacar por su importancia dentro del contenido de la página.
+        </p>
+      </Blockquote>
+      <br />
+      <Blockquote>
+        <p>
+          Este es un apartado del texto que se quiere destacar por su importancia dentro del contenido de la página.
+        </p>
+        <Small>Nombre del autor de la cita</Small>
+      </Blockquote>
     </div>
   );
 };
@@ -102,11 +176,21 @@ Quote.story = {
 
 export const List = (): JSX.Element => {
   return (
-    <ul>
-      <li>Esto es el texto de una lista</li>
-      <li>Esto es el texto de una lista</li>
-      <li>Esto es el texto de una lista</li>
-    </ul>
+    <>
+      <ul>
+        <li>Esto es el texto de una lista</li>
+        <li>Esto es el texto de una lista</li>
+        <li>Esto es el texto de una lista</li>
+      </ul>
+
+      <hr />
+
+      <UnorderedList>
+        <ListItem>Esto es el texto de una lista</ListItem>
+        <ListItem>Esto es el texto de una lista</ListItem>
+        <ListItem>Esto es el texto de una lista</ListItem>
+      </UnorderedList>
+    </>
   );
 };
 List.story = {
@@ -115,11 +199,21 @@ List.story = {
 
 export const OrderList = (): JSX.Element => {
   return (
-    <ol>
-      <li>Esto es el texto de una lista ordenada</li>
-      <li>Esto es el texto de una lista ordenada</li>
-      <li>Esto es el texto de una lista ordenada</li>
-    </ol>
+    <>
+      <ol>
+        <li>Esto es el texto de una lista ordenada</li>
+        <li>Esto es el texto de una lista ordenada</li>
+        <li>Esto es el texto de una lista ordenada</li>
+      </ol>
+
+      <hr />
+
+      <OrderedList>
+        <ListItem>Esto es el texto de una lista ordenada</ListItem>
+        <ListItem>Esto es el texto de una lista ordenada</ListItem>
+        <ListItem>Esto es el texto de una lista ordenada</ListItem>
+      </OrderedList>
+    </>
   );
 };
 
