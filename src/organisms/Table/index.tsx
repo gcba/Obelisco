@@ -1,16 +1,16 @@
 import * as React from 'react';
- 
+
 export type TableCellContet = string | number | JSX.Element;
- 
+
 interface TableCellOptions {
   content: TableCellContet;
   props?: {
     [key: string]: unknown;
   };
 }
- 
+
 type TableCell = TableCellOptions | TableCellContet;
- 
+
 type TableRow =
   | TableCell[]
   | {
@@ -19,7 +19,7 @@ type TableRow =
         [key: string]: unknown;
       };
     };
- 
+
 export interface TableProps {
   head: TableCell[];
   body: TableRow[];
@@ -31,17 +31,17 @@ export interface TableProps {
   className?: string;
   onSelectionChange?: (index: number) => void;
 }
- 
+
 export const Table: React.FC<TableProps> = (props: React.PropsWithChildren<TableProps>) => {
   const { head, body, caption, striped, bordered, hoverable, selectable } = props;
- 
+
   let className = `table`;
   if (striped) className += ` table-striped`;
   if (bordered) className += ` table-bordered`;
   if (hoverable) className += ` table-hover`;
   if (selectable) className += ` table-selectable`;
   if (props.className) className += ` ${props.className}`;
- 
+
   return (
     <table className={className}>
       {caption && <caption>{caption}</caption>}
@@ -70,24 +70,24 @@ export const Table: React.FC<TableProps> = (props: React.PropsWithChildren<Table
     </table>
   );
 };
- 
+
 interface TableCellRendererProps {
   type: 'head' | 'body';
   cell: TableCell;
 }
- 
+
 const TableCellRenderer: React.FC<TableCellRendererProps> = (props: TableCellRendererProps) => {
   const { type, cell } = props;
   let content: TableCellContet;
   let childProps: { [key: string]: unknown } = {};
- 
+
   if (typeof cell === 'object' && !React.isValidElement(cell)) {
     content = (cell as TableCellOptions).content || '-';
     childProps = (cell as TableCellOptions).props || {};
   } else {
     content = cell as TableCellContet;
   }
- 
+
   if (type === 'head') {
     return (
       <th scope="col" {...childProps}>
@@ -99,6 +99,5 @@ const TableCellRenderer: React.FC<TableCellRendererProps> = (props: TableCellRen
   }
   return <></>;
 };
- 
+
 const Selectable: React.FC = () => <input type="checkbox" aria-label="checkbox" />;
- 

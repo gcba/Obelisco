@@ -1,0 +1,16 @@
+.storybook__container-scrollbar {
+  max-width: 900px;
+  width: 100%;
+}
+
+.horizontal-example {
+  min-width: 1200px;
+}
+
+.vertical-example {
+  height: 300px;
+
+  @media screen and (max-width: 768px) {
+    height: 500px;
+  }
+}

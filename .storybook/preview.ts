@@ -15,11 +15,15 @@ const headers = [
   'componentes-alerta',
   'componentes-audio',
   'componentes-banner',
+  'componentes-barra-de-desplazamiento',
   'componentes-barra-de-progreso',
   'componentes-bloque-de-trámite',
   'componentes-botones--button-types',
   'componentes-botones-estados',
   'componentes-botones',
+  'componentes-calendario--calendar-no-references',
+  'componentes-calendario-con-eventos',
+  'componentes-calendario',
   'componentes-colapsable',
   'componentes-desplegables-de-navegación',
   'componentes-desplegables-de-selección',
@@ -74,7 +78,7 @@ const headers = [
   'organismos-header-encabezado-mobile',
   'organismos-listas',
   'organismos-tablas',
-  'organismos-tablas-con-acciones',
+  'organismos-tablas-tipo-de-celda',
   'versión-releases'
 ];
 
