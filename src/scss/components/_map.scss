@@ -1,0 +1,26 @@
+.card-map {
+  .card-body {
+    .card-title {
+      @extend .h4;
+      margin-bottom: 0;
+    }
+
+    .card-text {
+      margin-top: 0.25rem;
+    }
+
+    .card-iframe {
+      max-height: 146px;
+      margin: 1rem 0;
+      iframe,
+      div {
+        width: 100%;
+        max-height: 146px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        outline: none;
+        border-radius: 8px;
+      }
+    }
+  }
+}

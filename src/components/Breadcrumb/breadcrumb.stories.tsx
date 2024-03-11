@@ -14,7 +14,7 @@ export const Breadcrumb = (): JSX.Element => (
   <nav aria-label="Navegación secundaria">
     <ol className="breadcrumb">
       <li className="breadcrumb-item">
-        <a href="#">Buenos Aires</a>
+        <a href="#">Inicio</a>
       </li>
       <li className="breadcrumb-item">
         <a href="#">Página intermedia con mucho mucho texto</a>

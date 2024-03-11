@@ -115,3 +115,89 @@ const Tags = ({ tags }: { tags: BaseCardProps['tags'] }): JSX.Element | null => 
     return null;
   }
 };
+
+/* Actualizacion de componente Cards - Diciembre 2023 */
+export type CardTags = {
+  text: string;
+  type?: string;
+};
+
+interface CardComponentProps {
+  title: string;
+  href?: string;
+  description?: string | JSX.Element;
+  headline?: string;
+  isHorizontal?: boolean;
+  isThemeCard?: boolean;
+  hasNoBorder?: boolean;
+  isTitleTruncate?: boolean;
+  icon?: string;
+  image?: CardImage;
+  tags?: CardTags[];
+}
+
+const getIconCard = (icon?: string, isHorizontal?: boolean): JSX.Element => {
+  if (icon && !icon?.includes('bx')) {
+    return <span className={`material-icons-round ${isHorizontal ? 'card-icon-left' : 'card-icon'}`}>{icon}</span>;
+  } else {
+    return <i className={`${icon} ${isHorizontal ? 'card-icon-left' : 'card-icon'}`}></i>;
+  }
+};
+
+export const CardComponent: React.FC<CardComponentProps> = (props: React.PropsWithChildren<CardComponentProps>) => {
+  const {
+    title,
+    description,
+    headline,
+    href,
+    isHorizontal = false,
+    isThemeCard,
+    hasNoBorder,
+    icon,
+    image,
+    tags,
+    isTitleTruncate,
+    children
+  } = props;
+
+  let cardClassName = `card`;
+  if (isHorizontal) cardClassName += ` card-horizontal`;
+  if (hasNoBorder && !isHorizontal && !isThemeCard) cardClassName += ` card-simple`;
+  if (hasNoBorder && isHorizontal) cardClassName += ` unbordered`;
+  if (isThemeCard) cardClassName += ` card-horizontal card-simple card-lg`;
+
+  return (
+    <div className={cardClassName}>
+      {icon && isHorizontal && getIconCard(icon, isHorizontal)}
+      {image && (
+        <img src={image.src} className={`card-img-${isHorizontal || isThemeCard ? 'left' : 'top'}`} alt={image.alt} />
+      )}
+      <div className="card-body">
+        {tags && (
+          <div className="card-badges">
+            {tags.map((tag, index) => (
+              <span key={index} className={`badge badge-${tag.type ? tag.type : 'secondary'}`}>
+                {tag.text}
+              </span>
+            ))}
+          </div>
+        )}
+        {icon && !isHorizontal && getIconCard(icon, isHorizontal)}
+        {headline && <p className="card-headline">{headline}</p>}
+        <h3 className="card-title">
+          <a
+            href={href}
+            className={
+              !hasNoBorder || isTitleTruncate
+                ? `${hasNoBorder ? '' : 'card-title-link'} ${isTitleTruncate ? 'ellipsis-3' : ''}`.trim()
+                : undefined
+            }>
+            {title}
+          </a>
+        </h3>
+        {description && <p className="card-text">{description}</p>}
+        {children && <div className="card-info">{children}</div>}
+      </div>
+    </div>
+  );
+};

@@ -31,7 +31,7 @@ $card-icon-size: 2rem;
 $card-icon-background-size: $card-picture-size;
 $card-icon-bg: $grisulado-10;
 
-$card-footer-icon-size: 1.25rem;
+$card-footer-icon-size: 1rem;
 
 $card-event-img-border-radius: $border-radius-lg * 1.5;
 $card-event-name-bg-gradient: linear-gradient(0deg, rgba($grisulado-900, 0.75) 25%, rgba($grisulado-900, 0) 100%);
@@ -39,6 +39,8 @@ $card-event-name-text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 $card-event-thumb-bracket: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"> <circle fill="%236F6F6F" cx="6" cy="18" r="6"/> <path fill="%23E6EBF0" d="M6,0L6,0C3.8,0,2,1.8,2,4v14c0,2.2,1.8,4,4,4h0c2.2,0,4-1.8,4-4V4C10,1.8,8.2,0,6,0z"/> <path fill="%23FFFFFF" d="M6,0L6,0C3.8,0,2,1.8,2,4v6c0,2.2,1.8,4,4,4h0c2.2,0,4-1.8,4-4V4C10,1.8,8.2,0,6,0z"/> </svg>');
 
 $card-focus-box-shadow: $focus-box-shadow;
+
+$card-title-link-focus-color: #005387;
 
 $card-deck-margin: $grid-gutter-width / 2;
 $card-deck-margin-top: $grid-gutter-width;
@@ -124,6 +126,45 @@ $accordion-bg-white: $white;
   }
 }
 
+%divCardStyles {    
+  .card-body {
+    .card-title {
+      .card-title-link {
+        text-decoration: none;
+        color: $grisulado-900;
+        &:after {
+          content: '';
+          border-radius: 0.5rem;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+
+        &:hover {
+          color: $blue;
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+          &:after {
+            box-shadow: 0 0 0 2px $blue;
+            
+          }
+        }
+        &:focus {
+          box-shadow: none;
+          color: $card-title-link-focus-color;
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+          &:after {
+            box-shadow: $card-focus-box-shadow;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* === Bootstrap Import === */
 
 @import 'node_modules/bootstrap/scss/card';
@@ -135,31 +176,21 @@ $accordion-bg-white: $white;
   width: 100%;
 
   .card-body {
-    padding: $card-spacer;
-  }
-
-  @include media-breakpoint-up(md) {
-    .card-body {
-      padding: $card-spacer-lg;
-    }
+    padding: $card-spacer-lg;
   }
 
   .card-headline {
     font-size: $small-font-size;
     text-transform: uppercase;
-    margin-bottom: spaceUnits(1);
+    margin-bottom: spaceUnits(4);
   }
 
   .card-title {
     margin-bottom: 0;
     @extend .h4;
-    font-weight: $headings-font-weight;
-
-    @include media-breakpoint-up(sm) {
-      font-weight: 700;
-    }
   }
 
+  //.card-subtitle deprecado. Eliminar mas adelante
   .card-subtitle {
     font-size: $card-subtitle-font-size;
     font-weight: $card-subtitle-font-weight;
@@ -167,14 +198,29 @@ $accordion-bg-white: $white;
   }
 
   .card-text {
-    margin-top: $card-spacer / 2;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
   }
 
+  .card-badges {
+    margin-bottom: 1rem;
+  }
+
+  .badge {
+    margin-right: 0.75rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  //Inicio: Estilos para card-footer de tarjeta noticias previa a actualizacion
   .card-footer {
     padding: 0 0 $card-spacer-lg;
     margin: -$card-spacer-sm $card-spacer 0;
+    color: $grisulado-900;
 
-    .bx {
+    .bx, .material-icons-round {
       font-size: $card-footer-icon-size;
       vertical-align: sub;
       margin-right: spaceUnits(1);
@@ -186,9 +232,28 @@ $accordion-bg-white: $white;
       margin: -$card-spacer $card-spacer-lg 0;
     }
   }
+  //Fin: Estilos para card-footer de tarjeta noticias previa a actualizacion
+
+  .card-info {
+    margin-top: 0.5rem;
+
+    small {
+      display: block;
+
+      .bx, .material-icons-round {
+        font-size: $card-footer-icon-size;
+        vertical-align: sub;
+        margin-right: spaceUnits(1);
+      }
+
+      &:not(:first-child) {
+        margin-top: 0.5rem;
+      }
+    }
+  }
 
   .card-icon {
-    margin-bottom: $card-spacer;
+    margin-bottom: $card-spacer-lg;
     font-size: $card-icon-size;
     background-color: $card-icon-bg;
     width: $card-icon-background-size;
@@ -263,21 +328,12 @@ $accordion-bg-white: $white;
 
   &.card-simple {
     box-shadow: none;
-    background: none;
-
-    .card-body {
-      padding: 0;
-
-      a {
-        display: inline-block;
-        width: fit-content;
-      }
-    }
+    background: transparent;
   }
 
   &.unbordered {
     box-shadow: none;
-    background: none;
+    background: transparent;
   }
 
   &.card-horizontal {
@@ -286,44 +342,35 @@ $accordion-bg-white: $white;
     .card-img-left {
       width: $card-picture-size;
       height: $card-picture-size;
-      margin: $card-spacer-sm;
+      aspect-ratio: 1 / 1;
+      margin: $card-spacer;
       margin-right: 0;
       border-radius: $card-border-radius;
       object-fit: cover;
+      object-position: center;
       flex-shrink: 0;
 
       + .card-body {
-        padding: $card-spacer-sm;
+        padding-right: 2rem;
       }
+    }
+
+    .card-icon-left {
+      @extend .card-icon;
+      @extend .card-img-left;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: $card-spacer;
     }
 
     &.card-lg {
       .card-img-left {
         width: $card-picture-size-lg;
         height: $card-picture-size-lg;
-
-        + .card-body {
-          padding: $card-spacer;
-        }
-      }
-    }
-
-    @include media-breakpoint-up(md) {
-      .card-img-left {
-        margin: $card-spacer;
-        margin-right: 0;
-
-        + .card-body {
-          padding: $card-spacer;
-        }
-      }
-
-      &.card-lg {
-        .card-img-left {
-          + .card-body {
-            padding: $card-spacer-lg $card-spacer;
-          }
-        }
       }
     }
 
@@ -333,11 +380,11 @@ $accordion-bg-white: $white;
       .card-img-left {
         width: $card-picture-size-lg-mobile;
         height: $card-picture-size-lg-mobile;
-        margin: 0 0 $card-spacer;
+        margin: 0;
         border-radius: 0;
 
         + .card-body {
-          padding: 0;
+          padding-left: 0;
         }
       }
     }
@@ -353,38 +400,45 @@ $accordion-bg-white: $white;
 
           + .card-body {
             padding: $card-spacer;
+            padding-left: 0.5rem;
           }
         }
       }
     }
 
-    .card-icon-left {
-      @extend .card-icon;
-      @extend .card-img-left;
+    //Estilos para tarjeta horizontal temática
+    &.card-simple.card-lg {
+      flex-direction: column;
 
-      + .card-body {
-        padding-left: $card-spacer-sm;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      .card-img-left {
+        width: 6rem;
+        height: 6rem;
+        aspect-ratio: 1/1;
+        margin: 0;
+
+        + .card-body {
+          padding-left: 0;
+        }
+      }
+
+      .card-body {
+        padding: $card-spacer;
+        padding-left: 0;
+      }
+
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        gap: 1.5rem;
+        
+        .card-img-left {
+          width: 8rem;
+          height: 8rem;
+        }
       }
     }
   }
 
-  &.card-horizontal.unbordered {
-    .card-body {
-      padding: $card-spacer-unbordered;
-
-      a {
-        display: inline-block;
-        width: fit-content;
-      }
-    }
-
-    .card-icon-left {
-      margin: 0;
-    }
-  }
+  @extend %divCardStyles;
 }
 
 .card-deck {
@@ -695,9 +749,13 @@ button.card {
       border: none;
       @include border-bottom-radius($card-border-radius);
 
-      span {
+      span:not(.material-icons-round) {
         @extend .h5;
         display: block;
+        margin-bottom: 0;
+      }
+
+      p:last-of-type {
         margin-bottom: 0;
       }
 

@@ -1,0 +1,199 @@
+/* === Custom variables and mixins === */
+$calendar-body-border: 1px solid $grisulado-50;
+$calendar-spacing: 0.5rem 0.25rem;
+$calendar-footer-spacing: 1rem 0.5rem 0;
+$calendar-td-span-size: 2.25rem;
+$calendar-link-color-hover-focus: #005387;
+
+$chromatic-colors: (
+  bg-sky: $sky,
+  bg-lavender: $lavender,
+  bg-coral: $coral,
+  bg-avocado: $avocado,
+  bg-citrus: $citrus,
+  bg-lime: $lime,
+  bg-pistachio: $pistachio,
+  bg-berries: $berries,
+  bg-musket: $musket,
+  bg-aqua: $aqua,
+  bg-strawberry: $strawberry,
+  bg-blackberry: $blackberry,
+  bg-gray: $gray-100,
+);
+
+/* === Custom styles === */
+.calendar {
+  width: 100%;
+  max-width: 328px;
+  background-color: $white;
+  padding: $calendar-spacing;
+
+  @include media-breakpoint-up(md) {
+    max-width: 340px;
+  }
+
+  .calendar-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+    height: 24px;
+    .calendar-title,
+    .calendar-year {
+      @extend .h3;
+      margin-bottom: 0;
+    }
+  }
+
+  .calendar-body {
+    padding: 1rem 0 0;
+    @extend .h5;
+    color: $grisulado-700;
+    margin-bottom: 0;
+
+    table {
+      width: 100%;
+      text-align: center;
+
+      th,
+      td {
+        padding: 0;
+        span {
+          height: 40px;
+          width: 40px;
+          display: inline-block;
+          line-height: 40px;
+          border-radius: 50%;
+          margin: 0.25rem 0;
+        }
+      }
+
+      .calendar-week-header {
+        th {
+          font-weight: 700;
+          height: 48px;
+          background-color: $ghost;
+        }
+      }
+
+      .calendar-week {
+        line-height: 8px;
+        &:nth-of-type(even) {
+          background-color: $ghost;
+        }
+        &:nth-of-type(odd) {
+          td {
+            padding: 0.25rem 0;
+          }
+        }
+
+        td {
+          pointer-events: inherit;
+          .calendar-link {
+            border-radius: 50%;
+            margin: 0.25rem 0;
+
+            &:hover {
+              .active {
+                background-color: $calendar-link-color-hover-focus;
+              }
+              .active-secondary {
+                background-color: $grisulado-600;
+              }
+
+              @each $clase, $color in $chromatic-colors {
+                .#{$clase} {
+                  background-color: darken($color, 10%) !important;
+                  color: darken($grisulado-900, 10%);
+                }
+              }
+            }
+
+            &:focus {
+              box-shadow: none;
+              backface-visibility: inherit;
+              .active, .active-secondary {
+                box-shadow: 0 0 0 0.125rem $calendar-link-color-hover-focus;
+              }
+            }
+          }
+
+          span {
+            &:after {
+              line-height: 1.5;
+            }
+
+            &.disabled {
+              color: $grisulado-300;
+            }
+
+            &.active, &.active-secondary {
+              color: $white;
+              background-color: $blue;
+              min-width: 100%;
+              height: 100%;
+              margin: 0;
+
+              cursor: pointer;
+              &.bg-gray {
+                background-color: $gray-100;
+              }
+              
+              @each $clase, $color in $chromatic-colors {
+                &.#{$clase} {
+                  color: $grisulado-900;
+                }
+              }
+            }
+
+            &.active-secondary {
+              background-color: $grisulado-900;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .calendar-footer {
+    .calendar-footer-list {
+      margin-top: 1rem;
+      border-top: $calendar-body-border;
+      padding: $calendar-footer-spacing;
+      margin-bottom: 0;
+
+      li {
+        font-size: 0.8125rem;
+        list-style-type: none;
+        &:not(:last-child) {
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+    .accordion {
+      margin-top: 1rem;
+      .card {
+        margin-bottom: 0;
+        .calendar-footer-list {
+          margin: 0;
+          border-top: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+//Disposición anual de calendario
+.calendar-deck {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  justify-content: center;
+
+  @include media-breakpoint-up(xl) {
+    justify-content: space-between;
+    column-gap: 19px;
+  }
+}
