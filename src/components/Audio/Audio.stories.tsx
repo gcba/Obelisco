@@ -31,7 +31,7 @@ export const ConContenedor = (): JSX.Element => {
       <div className="storybook__container-cards">
         <div className="card">
           <div className="card-body">
-            <h4 className="card-title">Título de contenedor</h4>
+            <h3 className="card-title">Título de contenedor</h3>
             <p className="card-text">
               Recomendamos en este espacio no utilizar más de 3 líneas, para generar una lectura óptima.
             </p>
@@ -49,7 +49,7 @@ export const ConContenedor = (): JSX.Element => {
       <div className="storybook__container-cards">
         <div className="card">
           <div className="card-body">
-            <h4 className="card-title">Título de contenedor</h4>
+            <h3 className="card-title">Título de contenedor</h3>
             <audio className="audio-sm mt-3" controls>
               <source
                 src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-61905/zapsplat_multimedia_alert_chime_short_musical_notification_cute_child_like_001_64918.mp3?_=1"
