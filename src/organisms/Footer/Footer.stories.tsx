@@ -64,6 +64,7 @@ const SocialSection = (): JSX.Element => (
 
 const LegalSection = (): JSX.Element => (
   <section className="footer-legal-section">
+    <h3 className="sr-only">Información gubernamental</h3>
     <div className="row align-items-center">
       <div className="col-12 col-md-5 col-xl-4 footer-content-img">
         <img className="d-lg-none" src="footer/ciudad-ba-sm.svg" alt="Ciudad de Buenos Aires" height="48" />
