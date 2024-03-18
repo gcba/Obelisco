@@ -138,6 +138,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
 @mixin nav-sections-styles {
   .navbar-sections-title {
+    @extend .h3;
     padding-left: 1rem;
 
     @include media-breakpoint-up(lg) {
@@ -1096,6 +1097,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
         }
 
         .navbar-user-mobile-title {
+          @extend .h3;
           padding-left: 1rem;
         }
 
