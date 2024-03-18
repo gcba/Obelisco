@@ -75,7 +75,7 @@
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.17.2",
     "ts-loader": "^7.0.4",
-    "typescript": "^3.9.3"
+    "typescript": "^5"
   },
   "husky": {
     "husky": {
