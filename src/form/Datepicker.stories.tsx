@@ -11,7 +11,7 @@ import { subDays } from 'date-fns';
 
 // Configuración general del componente
 export default {
-  title: 'Componentes|Date Picker',
+  title: 'Formulario|Selector de fechas',
   decorators: [withA11y]
 };
 
