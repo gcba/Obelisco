@@ -26,7 +26,10 @@
     "prepare": "husky install",
     "nodemon:cdn": "nodemon -e scss -x \"npm run build:cdn\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "date-fns": "^3.3.1",
+    "react-datepicker": "^6.2.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@storybook/addon-a11y": "^5.3.18",
@@ -38,6 +41,7 @@
     "@storybook/preset-typescript": "^3.0.0",
     "@storybook/react": "^5.3.18",
     "@storybook/theming": "^5.3.19",
+    "@types/react-datepicker": "^6.0.3",
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",
     "@whitespace/storybook-addon-html": "^1.2.1",
