@@ -223,7 +223,7 @@ export const RangeDate: React.FC<DatePickerProps> = ({
     'December'
   ];
 
-  const onChange = (dates: [any, any]) => {
+  const onChange = (dates: [Date | null, Date | null]) => {
     const [start, end] = dates;
     setStartDate(start);
     setEndDate(end);
