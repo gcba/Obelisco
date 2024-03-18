@@ -70,6 +70,7 @@ const headers = [
   'formulario-radio',
   'formulario-texto',
   'formulario-validación',
+  'formulario-selector-de-fechas',
   'plantillas-plantilla',
   'organismos-accesos',
   'organismos-footer-pie-de-página',
