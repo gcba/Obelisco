@@ -40,7 +40,8 @@ const NavItemComponentSlider: React.FC<TabsComponentsProps> = (props: TabsCompon
         type="button"
         role="tab"
         aria-controls={`panel-content-${id}`}
-        aria-selected={isActive}>
+        aria-selected={isActive}
+        id={`tab-${id}`}>
         {hasIcon && iconTabs ? (
           <div className="nav-icon" dangerouslySetInnerHTML={{ __html: `${name} ${iconTabs}` }}></div>
         ) : (
@@ -200,7 +201,7 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
             })}
             id={`panel-content-${item.id}`}
             role="tabpanel"
-            aria-label={`${item.id}-tab`}>
+            aria-labelledby={`tab-${item.id}`}>
             {item.content}
           </div>
         ))}

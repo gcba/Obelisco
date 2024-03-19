@@ -15,7 +15,7 @@ export const PasosDeUnFormulario = (): JSX.Element => {
   return (
     <div className="storybook__container-stepper">
       <div className="stepper">
-        <p className="step-title">Nombre del paso</p>
+        <h2 className="step-title">Nombre del paso</h2>
         <p className="step-next">Paso siguiente: Nombre del paso 3</p>
         <div className="steps">
           <div className="step active"></div>

@@ -21,6 +21,7 @@ export interface DropdownOptionProps {
 
 export interface DropdownProps {
   title?: string;
+  ariaLabel?: string;
   isBordered?: boolean;
   onlyIcon?: boolean;
   btnIconRight?: string;
@@ -84,6 +85,7 @@ export const DropdownItem: React.FC<DropdownItemsProps> = (props: React.PropsWit
 export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren<DropdownProps>) => {
   const {
     title = 'Desplegable',
+    ariaLabel,
     isBordered,
     children,
     onlyIcon,
@@ -116,13 +118,13 @@ export const Dropdown: React.FC<DropdownProps> = (props: React.PropsWithChildren
       <button
         type="button"
         className={buttonDropdownClass}
+        aria-label={ariaLabel}
         {...(isNested
           ? {
               'data-toggle': 'collapse',
               'data-target': `#${idDropdown}`,
               'aria-controls': `${idDropdown}`,
-              'aria-expanded': 'false',
-              'aria-label': 'Toggle'
+              'aria-expanded': 'false'
             }
           : {
               'data-toggle': 'dropdown',
@@ -198,8 +200,7 @@ export const DropdownOption = ({
           data-toggle="collapse"
           data-target={`#${idDropdown}`}
           aria-controls={idDropdown}
-          aria-expanded="false"
-          aria-label="Toggle">
+          aria-expanded="false">
           {icon && iconType === 'material' ? icon : icon && <i className={`bx ${icon}`}></i>}
           <span className="btn-dropdown-text">{displayTitle}</span>
           <span className="material-icons-round btn-dropdown-icon">expand_more</span>

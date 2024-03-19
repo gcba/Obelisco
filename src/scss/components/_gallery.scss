@@ -236,9 +236,13 @@ $carousel-margin-bottom: spaceUnits(4);
     margin-left: auto;
 
     &:after {
-      content: $carousel-close-icon;
       vertical-align: middle;
-      line-height: 1em;
+      content: '';
+      display: inline-block;
+      height: 1.75rem;
+      width: 1.75rem;
+      min-width: 1.75rem;
+      background: transparent $carousel-close-icon no-repeat center center;
     }
   }
 }

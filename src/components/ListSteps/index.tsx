@@ -50,7 +50,7 @@ export const ListSteps: React.FC<ListStepsProps> = (props: React.PropsWithChildr
     <ul className={ListStepsClasses.trim()}>
       {content.map(({ title, description, isLightItem }, index) => (
         <li className={`list-steps-item ${isLightItem ? `list-steps-item-light` : ''.trim()}`} key={index}>
-          <h4>{title}</h4>
+          <h3>{title}</h3>
           {description && <p>{description}</p>}
         </li>
       ))}

@@ -86,10 +86,15 @@ $status-icons: map-merge(
       margin-bottom: $status-list-item-margin-bottom;
 
       &::before {
-        content: $icon-check;
         position: absolute;
         left: $status-list-icon-left;
         vertical-align: middle;
+        content: '';
+        display: inline-block;
+        height: 1.5rem;
+        width: 1.5rem;
+        min-width: 1.5rem;
+        background: transparent $icon-check no-repeat center center;
       }
     }
   }

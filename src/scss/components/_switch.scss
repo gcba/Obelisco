@@ -14,11 +14,28 @@ $switch-focus-shadow: 0 0 0 2px #005387;
 /* === Bootstrap Import === */
 
 /* === Custom styles === */
+
+.switch-label {
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 8px;
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
 .switch {
   position: relative;
-  display: inline-block;
-  width: $switch-width;
-  height: $switch-height;
+  width: fit-content;
+  max-width: 100%;
+  height: fit-content;
+  min-height: 24px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: flex-start;
 
   &.switch-dark {
     input:checked + .slider {
@@ -27,15 +44,21 @@ $switch-focus-shadow: 0 0 0 2px #005387;
   }
 
   &.switch-sm {
-    width: $switch-sm-width;
-    height: $switch-sm-height;
-
     .slider {
+      width: $switch-sm-width;
+      height: $switch-sm-height;
+      margin-top: 0.25rem;
       &:before {
         height: $switch-sm-indicator-height;
         width: $switch-sm-indicator-width;
         left: 2px;
         bottom: 3px;
+      }
+    }
+
+    .switch-label {
+      &::first-letter {
+        padding-left: 32px;
       }
     }
 
@@ -48,6 +71,8 @@ $switch-focus-shadow: 0 0 0 2px #005387;
     opacity: 0;
     width: 0;
     height: 0;
+    position: absolute;
+    top: 0;
 
     &:checked + .slider {
       background-color: $blue;
@@ -62,26 +87,34 @@ $switch-focus-shadow: 0 0 0 2px #005387;
       transform: translateX(26px);
     }
 
+    ~ .switch-label.on,  &:checked ~ .switch-label.off {
+      display: none;
+    }
+
+    &:checked ~ .switch-label.on, ~ .switch-label.off {
+      display: inline-block;
+    }
+
     &:disabled + .slider {
       background-color: $grisulado-100;
       cursor: not-allowed;
-    }
-
-    &:disabled + .slider:before {
-      background-color: $grisulado-300;
+      &:before {
+        background-color: $grisulado-300;
+      }
     }
   }
 
   .slider {
-    position: absolute;
+    position: relative;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-color: $grisulado-300;
     transition: 0.4s;
     border-radius: 50px;
+    width: $switch-width;
+    height: $switch-height;
+    display: inline-block;
+    grid-column: 1 / 2;
+    grid-row: 1;
 
     &:before {
       position: absolute;
@@ -95,14 +128,21 @@ $switch-focus-shadow: 0 0 0 2px #005387;
       border-radius: 50%;
     }
   }
-}
 
-.switch-label {
-  display: inline-block;
-  cursor: pointer;
-  padding-left: 8px;
-  font-size: 13px;
-  vertical-align: auto;
+  .switch-label {
+     line-height: 24px;
+     display: inline-block;
+     word-wrap: break-word;
+     grid-column: 1 / 2;
+     grid-row: 1;
+     &::first-letter {
+       padding-left: 48px;
+     }
+     
+     &.disabled {
+      color: $grisulado-300;
+     }
+   }
 }
 
 .disabled {

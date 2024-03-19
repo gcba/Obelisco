@@ -16,7 +16,11 @@ export const TooltipContainer: React.FC<TooltipProps> = (props: React.PropsWithC
   });
 
   return (
-    <span data-direction={direction} data-tooltip={text} className={iconBoxClasses ? iconBoxClasses : undefined}>
+    <span
+      data-direction={direction}
+      data-tooltip={text}
+      className={iconBoxClasses ? iconBoxClasses : undefined}
+      tabIndex={0}>
       {children}
     </span>
   );

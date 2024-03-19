@@ -98,6 +98,10 @@ $calc-right-x: calc(0% - 30px);
   display: inline-block;
   height: max-content;
 
+  &:focus, &:focus-visible {
+    outline: none;
+  }
+
   //TEXT
   &:before,
   &:after {
@@ -132,7 +136,9 @@ $calc-right-x: calc(0% - 30px);
 
   //SHOW TOOLTIP
   &:hover:before,
-  &:hover:after {
+  &:hover:after,
+  &:focus:before,
+  &:focus:after {
     display: block;
     opacity: 1;
   }

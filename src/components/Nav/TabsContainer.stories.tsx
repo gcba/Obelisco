@@ -42,21 +42,21 @@ const simpleItems: TabsItem[] = [
 
 const sizeLgItems: TabsItem[] = [
   {
-    name: 'Pestaña grande',
+    name: 'Pestaña grande 1',
     id: '5',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'large',
     content: 'Contenido Pestaña 1'
   },
   {
-    name: 'Pestaña grande',
+    name: 'Pestaña grande 2',
     id: '6',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'large',
     content: 'Contenido Pestaña 2'
   },
   {
-    name: 'Pestaña grande',
+    name: 'Pestaña grande 3',
     id: '7',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'large',
@@ -66,21 +66,21 @@ const sizeLgItems: TabsItem[] = [
 
 const sizeItems: TabsItem[] = [
   {
-    name: 'Pestaña mediana',
+    name: 'Pestaña mediana 1',
     id: '8',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'default',
     content: 'contenito 1'
   },
   {
-    name: 'Pestaña mediana',
+    name: 'Pestaña mediana 2',
     id: '9',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'default',
     content: 'Contenido Pestaña 2'
   },
   {
-    name: 'Pestaña mediana',
+    name: 'Pestaña mediana 3',
     id: '10',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'default',
@@ -90,21 +90,21 @@ const sizeItems: TabsItem[] = [
 
 const sizeSmItems: TabsItem[] = [
   {
-    name: 'Pestaña chica',
+    name: 'Pestaña chica 1',
     id: '11',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'small',
     content: 'Contenido Pestaña 1'
   },
   {
-    name: 'Pestaña chica',
+    name: 'Pestaña chica 2',
     id: '12',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'small',
     content: 'Contenido Pestaña 2'
   },
   {
-    name: 'Pestaña chica',
+    name: 'Pestaña chica 3',
     id: '13',
     iconTabs: '<span class="material-icons-round">home</span>',
     type: 'small',
@@ -185,7 +185,7 @@ export const ContainerTabs = (): JSX.Element => {
       classUl="nav nav-pills tabs nav-box"
       isWithButton={false}
       idPrefix="simple"
-      label="Simple tab list"
+      label="Navegación por pestañas"
     />
   );
 };
@@ -204,7 +204,7 @@ export const ContainerTabWidth = (): JSX.Element => {
         classUl="nav nav-pills tabs nav-box fixedWidth"
         isWithButton={false}
         idPrefix="width"
-        label="width tab list"
+        label="Navegación por pestañas"
       />
     </>
   );
@@ -224,7 +224,7 @@ export const ContainerSizeTabs = (): JSX.Element => {
         classUl="nav nav-pills tabs nav-box"
         isWithButton={false}
         idPrefix="sizeLg"
-        label="lg tab list"
+        label="Navegación por pestañas - Tamaño grande"
       />
 
       <br />
@@ -236,7 +236,7 @@ export const ContainerSizeTabs = (): JSX.Element => {
         classUl="nav nav-pills tabs nav-box"
         isWithButton={false}
         idPrefix="sizeMd"
-        label="md tab list"
+        label="Navegación por pestañas - Tamaño mediano"
       />
 
       <br />
@@ -248,7 +248,7 @@ export const ContainerSizeTabs = (): JSX.Element => {
         classUl="nav nav-pills tabs nav-box"
         isWithButton={false}
         idPrefix="sizeSm"
-        label="sm tab list"
+        label="Navegación por pestañas - Tamaño chico"
       />
     </>
   );
@@ -268,7 +268,7 @@ export const ContainerTabsBg = (): JSX.Element => {
         classUl="nav nav-pills tabs nav-box-bg"
         isWithButton={false}
         idPrefix="container"
-        label="container tab list"
+        label="Navegación por pestañas"
       />
     </div>
   );
@@ -287,7 +287,7 @@ export const ContainerTabsIcon = (): JSX.Element => {
       classUl="nav nav-pills tabs nav-box"
       isWithButton={false}
       idPrefix="icon"
-      label="icon tab list"
+      label="Navegación por pestañas"
     />
   );
 };
@@ -305,7 +305,7 @@ export const ContainerSliderTabs = (): JSX.Element => {
         hasIcon={true}
         classUl="nav nav-pills tabs nav-box"
         idPrefix="containerSlider"
-        label="container slider tab list "
+        label="Navegación por pestañas"
       />
     </div>
   );
@@ -324,7 +324,7 @@ export const ContainerSliderTabBg = (): JSX.Element => {
         hasIcon={true}
         classUl="nav nav-pills tabs nav-box-bg"
         idPrefix="containerSliderBg"
-        label="container background slider tab list "
+        label="Navegación por pestañas"
       />
     </div>
   );

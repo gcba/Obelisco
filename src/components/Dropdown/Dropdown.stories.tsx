@@ -26,7 +26,7 @@ export const DropdownIcons = (): JSX.Element => (
       <DropdownItem itemIconRight="info" isAlignRight />
       <DropdownItem itemIconRight="logout" isDanger isAlignRight />
     </Dropdown>
-    <Dropdown btnIconLeft="menu" onlyIcon isBordered>
+    <Dropdown btnIconLeft="menu" onlyIcon isBordered ariaLabel="Desplegable">
       <DropdownItem itemIconLeft="info" />
       <DropdownItem itemIconRight="info" isAlignRight />
       <DropdownItem itemIconRight="logout" isDanger isAlignRight />
