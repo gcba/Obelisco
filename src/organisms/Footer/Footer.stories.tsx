@@ -67,9 +67,14 @@ const LegalSection = (): JSX.Element => (
     <h3 className="sr-only">Información gubernamental</h3>
     <div className="row align-items-center">
       <div className="col-12 col-md-5 col-xl-4 footer-content-img">
-        <img className="d-lg-none" src="footer/ciudad-ba-sm.svg" alt="Ciudad de Buenos Aires" height="48" />
-        <img className="d-none d-lg-inline" src="footer/ciudad-ba.svg" alt="Ciudad de Buenos Aires" height="40" />
-        <img className="img-vamos-ba" src="footer/vamos-ba.svg" alt="Vamos Buenos Aires" />
+        <img className="d-lg-none" src="footer/ciudad-ba-sm.svg" alt="Logo de Ciudad de Buenos Aires" height="48" />
+        <img
+          className="d-none d-lg-inline"
+          src="footer/ciudad-ba.svg"
+          alt="Logo de Ciudad de Buenos Aires"
+          height="40"
+        />
+        <img className="img-vamos-ba" src="footer/vamos-ba.svg" alt="Logo de Vamos Buenos Aires" />
       </div>
       <div className="col-12">
         <ul className="list-inline">
