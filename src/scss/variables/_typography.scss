@@ -1,54 +1,103 @@
 /* === Variable and mixins overides === */
+/*
+  En esta hoja al realizar la refactorizacion de tipografia, se dejaron comentarios con la finalidad
+  de que se entienda que estilo corresponde a cual tipografia, se asignaron nombres referentes y tambien
+  se añadio el comentario que indica el inicio de la seccion y el final de la seccion. 
+*/
+
+/* Nuevas medidas de tipografia segun Equipo de diseño 13/03/2024 */
+$size-h1-mobile: 2.375rem;
+$size-h2-mobile: 2.125rem;
+$size-h3-mobile: 1.875rem;
+
+$size-h1: 2.5rem;
+$size-h2: 2.25rem;
+$size-h3: 2rem;
+$size-h4: 1.75rem;
+$size-h5: 1.5rem;
+$size-h6: 1.25rem;
+/* Fin de muevas medidas de tipografia */
+
+/* Inicio de grosores de las fuentes */
+$weight-regular: 400;
+$weight-semi: 600;
+$weight-bold: 700;
+/* Fin de grosores de las fuentes */
+
+/* Inicio de Line-Height de las fuentes de Titulos */
+$height-h1: 3rem;
+$height-h2: 2.75rem;
+$height-h3: 2.75rem;
+$height-h4: 2.25rem;
+$height-h5: 2rem;
+$height-h6: 1.75rem;
+/* Fin de Line-Height de las fuentes de Titulos */
+
+/* Se sobre-escriben los sizes de las variables de bootstraps */
+$h1-font-size: $size-h1;
+$h2-font-size: $size-h2;
+$h3-font-size: $size-h3;
+$h4-font-size: $size-h4;
+$h5-font-size: $size-h5;
+$h6-font-size: $size-h6;
+/* fin de la seccion que sobre-escriben los sizes de las variables de bootstraps */
+
+/* Se sobre-escriben las variables de peso de bootstraps */
+$h1-font-weight: $weight-bold;
+$h2-font-weight: $weight-semi;
+$h3-font-weight: $weight-semi;
+$h4-font-weight: $weight-semi;
+$h5-font-weight: $weight-bold;
+$h6-font-weight: $weight-semi;
+/* fin de la seccion que sobre-escriben los grosores de las variables de bootstraps */
+
+/* Tamaño base de la fuente body  */
+$font-size-base: 1rem; /* Assumes the browser default, typically `16px` */
+p {
+  line-height: 1.5rem;
+}
+/* Fin de la seccion de Tamaño base de la fuente body  */
+
+/* Tamaños y pesos de tipografia "Cuerpo" */
+$text-lead-size: 1.25rem;
+$lead-font-weight: 400;
+$text-lead-line-height: 1.75rem;
+$text-lg: 1.125rem;
+$text-md: 1rem;
+$text-sm: 0.875rem;
+$text-xs: 0.75rem;
+
+$height-text-lg: 1.75rem;
+$height-text-md: 1.5rem;
+$height-text-sm: 1.25rem;
+$height-text-xs: 1rem;
+/* Fin de tamaños y pesos de tipografia "Cuerpo" */
+
+/* Inicio de tamaños de "headline" size y line-height. Mas detalle en _typography.scss hoja de estilo que se exporta del componente */
+$headline-lg: 1.25rem;
+$headline-md: 1.125rem;
+$headline-sm: 1rem;
+
+$height-headline: 1.5rem;
+/* Fin de tamaños de "headline" size y line-height */
 
 $font-family-polyfill: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
   'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 $font-family-sans-serif: 'Open Sans', $font-family-polyfill;
 $font-family-headings: 'Nunito', $font-family-sans-serif;
+$headings-font-family: $font-family-headings; /* estilos para todos los titulos h1 al h6 */
 
-/*
- * Font weight names
- * 300: Light
- * 400: Regular
- * 600: Semi-bold
- * 700: Bold
- */
-
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$body-font-weight: 500;
-
-$headings-font-family: $font-family-headings;
-$headings-font-weight: 600;
-$large-headings-font-weight: 700;
-
-$h1-font-size: $font-size-base * 2.3125;
-$h2-font-size: $font-size-base * 1.75;
-$h3-font-size: $font-size-base * 1.3125;
-$h4-font-size: $font-size-base * 1.1875;
-$h5-font-size: $font-size-base * 1.0625;
-$h6-font-size: $font-size-base;
-
-$h4-font-weight: $large-headings-font-weight;
-$h4-font-weight-mobile: $headings-font-weight;
-
-$h5-font-weight: $headings-font-weight;
-
-$h6-font-family: $font-family-sans-serif;
-$h6-font-weight: $large-headings-font-weight;
-
+/* 
+  Las variables $display1-size a la $display4-size no se utilizan dentro de storybook,
+  pero si en produccion, quizas hay que darle visibilidad 14/03/2024 
+*/
 $display1-size: 6rem;
 $display2-size: 5.5rem;
 $display3-size: 4.5rem;
 $display4-size: 3.5rem;
 
-$lead-font-size: $font-size-base * 1.1875 !default;
-$lead-font-weight: 400;
-
-// Small size from 16px to 13px
-$small-font-size: 81.25%;
-
-// Links
-
+/* Links */
 $link-decoration: underline;
 
 /* Clases 'ellipsis-' de 1 linea a 4 lineas (ellipsis-1, ellipsis-2, ..) */
