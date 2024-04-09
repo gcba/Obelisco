@@ -62,6 +62,8 @@ const headers = [
   'componentes-tooltip--tooltip',
   'estilos-grilla',
   'estilos-tipografía',
+  'estilos-tipografía-cuerpo',
+  'estilos-tipografía-titulares',
   'formulario-archivo',
   'formulario-buscador',
   'formulario-checkbox',
