@@ -55,7 +55,7 @@ $stepper-description-color: $grisulado-900;
   @include media-breakpoint-up(md) {
     .step-title {
       font-size: $h2-font-size;
-      font-weight: $weight-bold; //la variable anterior es remplazada por esta nueva
+      font-weight: $font-weight-bold;
     }
     
     .step-next {

@@ -42,7 +42,7 @@ $chromatic-colors: (
     .calendar-year {
       font-size: $headline-lg;
       line-height: $height-headline;
-      font-weight: $weight-bold;
+      font-weight: $font-weight-bold;
       font-family: $font-family-headings;
       margin-bottom: 0;
     }
@@ -51,7 +51,7 @@ $chromatic-colors: (
   .calendar-body {
     padding: 1rem 0 0;
     font-family: $font-family-headings;
-    font-weight: $weight-semi;
+    font-weight: $font-weight-semibold;
     color: $grisulado-700;
     margin-bottom: 0;
 
@@ -74,7 +74,7 @@ $chromatic-colors: (
 
       .calendar-week-header {
         th {
-          font-weight: $weight-bold;
+          font-weight: $font-weight-bold;
           height: 48px;
           background-color: $ghost;
         }

@@ -18,11 +18,11 @@ $size-h5: 1.5rem;
 $size-h6: 1.25rem;
 /* Fin de muevas medidas de tipografia */
 
-/* Inicio de grosores de las fuentes */
-$weight-regular: 400;
-$weight-semi: 600;
-$weight-bold: 700;
-/* Fin de grosores de las fuentes */
+/* Inicio - variables de font-weight de Bootstrap */
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold:700;
+/* Fin - variables de font-weight de Bootstrap */
 
 /* Inicio de Line-Height de las fuentes de Titulos */
 $height-h1: 3rem;
@@ -43,12 +43,12 @@ $h6-font-size: $size-h6;
 /* fin de la seccion que sobre-escriben los sizes de las variables de bootstraps */
 
 /* Se sobre-escriben las variables de peso de bootstraps */
-$h1-font-weight: $weight-bold;
-$h2-font-weight: $weight-semi;
-$h3-font-weight: $weight-semi;
-$h4-font-weight: $weight-semi;
-$h5-font-weight: $weight-bold;
-$h6-font-weight: $weight-semi;
+$h1-font-weight: $font-weight-bold;
+$h2-font-weight: $font-weight-semibold;
+$h3-font-weight: $font-weight-semibold;
+$h4-font-weight: $font-weight-semibold;
+$h5-font-weight: $font-weight-bold;
+$h6-font-weight: $font-weight-semibold;
 /* fin de la seccion que sobre-escriben los grosores de las variables de bootstraps */
 
 /* Tamaño base de la fuente body  */

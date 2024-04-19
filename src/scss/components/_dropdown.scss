@@ -140,7 +140,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
     }
 
     &.btn-dropdown {
-      font-weight: $weight-regular; //se remplaza ya que la variable de 500 no está en tipografia
+      font-weight: $font-weight-normal;
       border: none;
       background-color: $white;
       min-height: 40px;
