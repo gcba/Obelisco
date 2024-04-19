@@ -80,26 +80,22 @@ h6,
   font-size: $text-xs;
   line-height: $height-text-xs;
 }
-
-.headline-lg, .headline-md, .headline-sm {
-  font-family: $font-family-headings;
-}
 /* Fin de textos Textos */
 
 /*  Inicio de Titulares para componentes, son los estilos que se aplicaran a los componentes */
 .headline-lg, .headline-md, .headline-sm {
+  font-family: $font-family-headings;
   line-height: $height-headline;
 }
 .headline-lg {
   font-size: $headline-lg;
 }
-
 .headline-md {
   font-size: $headline-md;
 }
-
 .headline-sm {
   font-size: $headline-sm;
+  line-height: $height-headline-sm;
 }
 /* Fin de Titulares para componentes */
 
