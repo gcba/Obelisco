@@ -144,8 +144,8 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
       border: none;
       background-color: $white;
       min-height: 40px;
-      font-size: 1.125rem;
-      line-height: 24px;
+      font-size: $headline-md;
+      line-height: $height-headline;
       padding: $dropdown-btn-padding;
       display: flex;
       align-items: center;
@@ -583,6 +583,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
           // Estilos de btn-chip para radio
           margin: 0;
           min-height: 2.5rem;
+          line-height: $height-text-md;
 
           &:not(.disabled):has(.btn-check:focus) {
             box-shadow: $dropdown-box-shadow-focus;
