@@ -6,7 +6,7 @@ import './Switch.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { SwitchContainer, SwitchContainer2 } from '.';
+import { SwitchContainer } from '.';
 
 // Configuración general del componente
 export default {
