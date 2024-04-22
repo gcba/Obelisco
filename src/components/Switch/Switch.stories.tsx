@@ -25,7 +25,6 @@ export const Switch = (): JSX.Element => {
         <SwitchContainer label="Apagado" id="switch-dark-1" isDark />
         <SwitchContainer label="Prendido" id="switch-dark-2" isDark isChecked />
       </div>
-      <p>HTML DEL SWITCH PREVIO</p>
       <div className="mb-3">
         <SwitchContainer2 label="Apagado" id="switch-1" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -54,7 +53,6 @@ export const SwitchWithoutLabel = (): JSX.Element => {
         <SwitchContainer id="switch-label-hidden-1" isLabelHidden isDark />
         <SwitchContainer id="switch-label-hidden-2" isLabelHidden isDark isChecked />
       </div>
-      <p>HTML DEL SWITCH PREVIO</p>
       <div className="mb-3">
         <SwitchContainer2 label="Apagado" id="switch-label-hidden-1" isLabelHidden />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -83,7 +81,6 @@ export const SwitchSizes = (): JSX.Element => {
         <SwitchContainer label="Apagado" id="switch-small-1" isSmall isLabelHidden />
         <SwitchContainer label="Prendido" id="switch-small-2" isSmall isLabelHidden isChecked />
       </div>
-      <p>HTML DEL SWITCH PREVIO</p>
       <div className="mb-3">
         <SwitchContainer2 label="Apagado" id="switch-1" />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -111,7 +108,6 @@ export const SwitchDisabled = (): JSX.Element => {
         <SwitchContainer label="Apagado / Deshabilitado" id="switch-disabled-1" isDisabled isLabelHidden />
         <SwitchContainer label="Prendido / Deshabilitado" id="switch-disabled-2" isDisabled isLabelHidden isChecked />
       </div>
-      <p>HTML DEL SWITCH PREVIO</p>
       <div className="mb-3">
         <SwitchContainer2 label="Apagado / Deshabilitado" id="switch-1" isDisabled />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
