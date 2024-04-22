@@ -102,17 +102,23 @@ a {
     color: $white;
 
     &::before {
-      content: $link-download-link-sm;
+      content: '';
+      background: transparent $link-download-link-sm no-repeat center center;
       display: inline-block;
       vertical-align: middle;
       height: 1rem;
+      width: 1rem;
+      min-width: 1rem;
       margin-right: $link-margin-icon;
     }
 
-    &:is(.btn-lg):before {
-      content: $link-download-link;
-      vertical-align: middle;
-      height: 1.25rem;
+    &.btn-lg {
+      &:before {
+        background: transparent $link-download-link no-repeat center center;
+        height: 1.25rem;
+        width: 1.25rem;
+        min-width: 1.25rem;
+      }
     }
   }
 

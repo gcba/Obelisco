@@ -37,7 +37,8 @@ $footer-info-gap-mobile: 1rem;
     padding: $footer-padding-y-sm 0;
   }
 
-  h4 {
+  h4, h3 {
+    @extend .h4;
     margin-bottom: spaceUnits(2);
 
     @include media-breakpoint-down(sm) {
@@ -152,15 +153,13 @@ $footer-info-gap-mobile: 1rem;
   border-top: $footer-border-width solid $footer-border-color;
 
   > .container {
-    &:has(.footer-info-text),
-    &:has(.footer-info-actions) {
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
       gap: $footer-info-gap;
-    }
 
     .footer-info-text {
+      @extend .h4;
       margin: 0;
     }
 
@@ -174,21 +173,18 @@ $footer-info-gap-mobile: 1rem;
   }
 
   @include media-breakpoint-down(sm) {
-    &:has(.footer-info-text),
-    &:has(.footer-info-actions) {
-      .container {
-        flex-wrap: wrap;
-        gap: $footer-info-gap-mobile;
+    .container {
+      flex-wrap: wrap;
+      gap: $footer-info-gap-mobile;
 
-        .footer-info-text {
-          font-weight: 700;
-        }
-        .footer-info-actions {
-          flex-basis: 100%;
-          flex-shrink: 1;
-          gap: 0.5rem;
-          align-items: flex-start;
-        }
+      .footer-info-text {
+        font-weight: 700;
+      }
+      .footer-info-actions {
+        flex-basis: 100%;
+        flex-shrink: 1;
+        gap: 0.5rem;
+        align-items: flex-start;
       }
     }
   }

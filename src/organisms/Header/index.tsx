@@ -66,7 +66,7 @@ export const NavSection: React.FC<SectionsProps> = ({ children, isExtended }) =>
   return (
     <div className={isExtended ? `navbar-content-extended` : `navbar-sections`}>
       <nav>
-        <h3 className="navbar-sections-title">Secciones</h3>
+        <p className="navbar-sections-title">Secciones</p>
         <ul className="nav nav-pills nav-sections">{children}</ul>
       </nav>
     </div>
@@ -162,7 +162,7 @@ export const USER = (
 export const USER_MOBILE = (
   <div className="navbar-user-mobile">
     <nav>
-      <h3 className="navbar-user-mobile-title">Perfil</h3>
+      <p className="navbar-user-mobile-title">Perfil</p>
       <ul className="nav flex-column nav-pills nav-user">
         <li className="nav-item">
           <a className="nav-link nav-link-lg" href="#">

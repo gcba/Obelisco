@@ -25,7 +25,10 @@ export const Tooltip = (): JSX.Element => {
             key={index}
             direction={direction}
             text={`Esta es la descripción de un tooltip "${position}".`}>
-            <Button type="link" isIconSpinner={<span className="material-icons-round">{icon}</span>}></Button>
+            <Button
+              type="primary"
+              isIconSpinner={<span className="material-icons-round">{icon}</span>}
+              ariaLabel="Botón"></Button>
           </TooltipContainer>
         ))}
       </div>
@@ -36,7 +39,10 @@ export const Tooltip = (): JSX.Element => {
               key={index}
               direction={direction}
               text={`Esta es la descripción de un tooltip "${position}".`}>
-              <Button type="link" isIconSpinner={<span className="material-icons-round">{icon}</span>}></Button>
+              <Button
+                type="primary"
+                isIconSpinner={<span className="material-icons-round">{icon}</span>}
+                ariaLabel="Botón"></Button>
             </TooltipContainer>
           ))}
         </div>
@@ -46,7 +52,10 @@ export const Tooltip = (): JSX.Element => {
               key={index}
               direction={direction}
               text={`Esta es la descripción de un tooltip "${position}".`}>
-              <Button type="link" isIconSpinner={<span className="material-icons-round">{icon}</span>}></Button>
+              <Button
+                type="primary"
+                isIconSpinner={<span className="material-icons-round">{icon}</span>}
+                ariaLabel="Botón"></Button>
             </TooltipContainer>
           ))}
         </div>
@@ -57,7 +66,10 @@ export const Tooltip = (): JSX.Element => {
             key={index}
             direction={direction}
             text={`Esta es la descripción de un tooltip "${position}".`}>
-            <Button type="link" isIconSpinner={<span className="material-icons-round">{icon}</span>}></Button>
+            <Button
+              type="primary"
+              isIconSpinner={<span className="material-icons-round">{icon}</span>}
+              ariaLabel="Botón"></Button>
           </TooltipContainer>
         ))}
       </div>

@@ -27,10 +27,12 @@ $list-icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     padding-left: $list-informative-li-padding-left;
 
     &:before {
-      content: $list-icon-bullet;
+      content: '';
       display: inline-block;
       height: $list-informative-li-icon-size;
       width: $list-informative-li-icon-size;
+      min-width: $list-informative-li-icon-size;
+      background: transparent $list-icon-bullet no-repeat center center;
       position: absolute;
       left: 0;
     }
@@ -45,6 +47,6 @@ $list-icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   @extend .list-informative-bullet;
 
   li:before {
-    content: $list-icon-check;
+    background: transparent $list-icon-check no-repeat center center;
   }
 }
