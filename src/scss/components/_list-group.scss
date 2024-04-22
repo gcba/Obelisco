@@ -103,6 +103,11 @@ a.list-group-item {
     vertical-align: middle;
   }
 
+  .access-title {
+    font-weight: $font-weight-normal;
+    @extend .text-md;
+  }
+
   &:not(.access-content) {
     > .access-title {
       width: 100%;
@@ -113,7 +118,8 @@ a.list-group-item {
     width: 100%;
 
     .access-text {
-      font-size: 13px;
+      @extend .text-sm;
+      font-weight: $font-weight-normal ;
       margin: 0;
     }
   }
@@ -147,7 +153,7 @@ a.list-group-item {
     }
 
     .access-title {
-      text-decoration: underline;
+      @extend .underline-2;
     }
 
     &:after {
@@ -194,7 +200,7 @@ a.list-group-item {
     color: $list-group-color-hover;
 
     .access-title {
-      text-decoration: underline;
+      @extend .underline-2;
     }
 
     &:not(:focus) {
@@ -212,6 +218,7 @@ a.list-group-item {
 
   &:after {
     content: $list-group-icon-arrow;
+    margin-left: 0.25rem;
     @include float-height-icon;
   }
 
