@@ -30,7 +30,8 @@ $list-steps-numbers: 9;
       padding-bottom: 0;
     }
 
-    h4 {
+    h4, h3 {
+      @extend .h4;
       @include media-breakpoint-down(xs) {
         margin-bottom: $list-steps-title-margin-bottom-mobile;
       }
@@ -88,7 +89,7 @@ $list-steps-numbers: 9;
         padding-bottom: 0;
       }
 
-      h4 {
+      h4, h3 {
         @extend .h2;
       }
 
@@ -120,7 +121,7 @@ $list-steps-numbers: 9;
 
   &.list-steps-sm {
     .list-steps-item {
-      h4 {
+      h4, h3 {
         @extend .h5;
         line-height: 24px;
         @include media-breakpoint-down(xs) {

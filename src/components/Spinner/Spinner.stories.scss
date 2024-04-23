@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   gap: 3rem;
 
-  &:has(.spinner-block) {
+  &-block {
     width: 2.5rem;
     margin: auto;
   }

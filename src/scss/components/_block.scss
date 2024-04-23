@@ -9,6 +9,7 @@ $card-block-box-shadow: 0 0 0 2px $grisulado-50;
 
   .block-title {
     margin-bottom: 0;
+    @extend .h4;
   }
 
   .block-text {

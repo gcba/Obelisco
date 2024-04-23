@@ -26,7 +26,7 @@ export const Block: React.FC<ButtonBlockProps> = (props: React.PropsWithChildren
   return (
     <div className={BlockClasses.trim()} style={positionSticky !== undefined ? { top: positionSticky } : undefined}>
       <div className="card-body">
-        {title && <h4 className="block-title">{title}</h4>}
+        {title && <h2 className="block-title">{title}</h2>}
         {text && <p className="block-text">{text}</p>}
         {blockProgressBar && <ProgressBar type={blockProgressBar.type} width={blockProgressBar.width}></ProgressBar>}
         {button &&
