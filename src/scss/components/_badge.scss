@@ -44,7 +44,8 @@ $badge-padding-y: 0;
 .badge {
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 1.6;
+  line-height: 20px;
+  font-size: 14px;
   min-height: 18px;
   max-width: 100%;
   overflow: hidden;
