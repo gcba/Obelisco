@@ -5,13 +5,16 @@
 .list-link {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   @include media-breakpoint-down(xs) {
     gap: 1.25rem;
   }
 
   .list-link-title {
     margin-bottom: 1rem;
+    line-height: $height-h3;
+    font-size: $text-lead-size;
+    font-weight: $font-weight-semibold;
     @include media-breakpoint-down(xs) {
       margin-bottom: 0.75rem;
     }
