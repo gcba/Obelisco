@@ -14,7 +14,7 @@
     margin-bottom: 1rem;
     line-height: $height-h3;
     font-size: $text-lead-size;
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-semibold; 
     @include media-breakpoint-down(xs) {
       margin-bottom: 0.75rem;
     }
