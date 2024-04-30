@@ -1,6 +1,6 @@
 /* === Custom variables and mixins === */
 
-$list-steps-padding: 0 0 1.5rem 2.25rem;
+$list-steps-padding: 0 0 1.5rem 2.5rem;
 $list-steps-font-color: $grisulado-900;
 $list-steps-circle-size: 1.5rem;
 $list-steps-line-width: 0.1875rem;
@@ -30,7 +30,9 @@ $list-steps-numbers: 9;
       padding-bottom: 0;
     }
 
-    h4 {
+    h4, h3 {
+      @extend .h6;
+      font-weight: $font-weight-bold;
       @include media-breakpoint-down(xs) {
         margin-bottom: $list-steps-title-margin-bottom-mobile;
       }
@@ -54,9 +56,10 @@ $list-steps-numbers: 9;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: $headline-sm;
+      font-weight: $font-weight-bold;
       font-family: $font-family-headings;
+      line-height: $height-headline;
     }
 
     &:not(:last-child):after {
@@ -88,19 +91,19 @@ $list-steps-numbers: 9;
         padding-bottom: 0;
       }
 
-      h4 {
-        @extend .h2;
+      h4, h3 {
+        @extend .h4; //28px|36px|600|nunito
       }
 
       &:before {
         width: $list-steps-circle-size-lg;
         height: $list-steps-circle-size-lg;
         box-shadow: 0 0 0 $list-steps-line-width-lg $list-steps-font-color inset;
-        @extend .h4;
+        font-size: $headline-lg;
+        line-height: $height-headline;
         @include media-breakpoint-down(xs) {
           width: $list-steps-circle-size-lg-mobile;
           height: $list-steps-circle-size-lg-mobile;
-          font-weight: 700;
         }
       }
 
@@ -120,9 +123,10 @@ $list-steps-numbers: 9;
 
   &.list-steps-sm {
     .list-steps-item {
-      h4 {
-        @extend .h5;
-        line-height: 24px;
+      h4, h3 {
+        font-size: $headline-md;
+        line-height: $height-headline;
+        font-weight: $font-weight-semibold;
         @include media-breakpoint-down(xs) {
           margin-bottom: $list-steps-title-margin-bottom-mobile;
         }

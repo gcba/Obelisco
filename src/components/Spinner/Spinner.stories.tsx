@@ -43,7 +43,7 @@ SpinnerSizes.story = {
 };
 
 export const SpinnerBlock = (): JSX.Element => (
-  <div className="storybook__container-spinner">
+  <div className="storybook__container-spinner-block">
     <Spinner type="info" block={true}></Spinner>
   </div>
 );

@@ -32,6 +32,7 @@ $breadcrumb-padding-x: 0;
 
   &:before {
     width: $breadcrumb-divider-width;
+    min-width: $breadcrumb-divider-width;
     height: $breadcrumb-divider-height;
     margin-right: $breadcrumb-divider-margin-right;
     padding-right: $breadcrumb-divider-padding-right;
@@ -39,6 +40,11 @@ $breadcrumb-padding-x: 0;
   
   &+.breadcrumb-item {
     padding-left: 0;
+
+    &:before {
+      content: '';      
+      background: transparent $breadcrumb-divider no-repeat center center;
+    }
   }
 }
 
