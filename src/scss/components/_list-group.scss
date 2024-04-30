@@ -40,9 +40,12 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
   justify-content: space-between;
 }
 
-@mixin float-height-icon {
-  float: right;
+@mixin access-icon ($list-group-icon) {
+  content: '';
   height: 1.5rem;
+  width: 1.5rem;
+  min-width: 1.5rem;
+  background: transparent #{$list-group-icon} no-repeat center center;
 }
 
 /* === Bootstrap Import === */
@@ -157,7 +160,7 @@ a.list-group-item {
     }
 
     &:after {
-      content: $list-group-icon-arrow-hover;
+      @include access-icon($list-group-icon-arrow-hover);
     }
   }
 
@@ -174,13 +177,13 @@ a.list-group-item {
         box-shadow: $box-shadow-access-focus;
 
         &:after {
-          content: $list-group-icon-logout;
+          @include access-icon($list-group-icon-logout);
         }
       }
 
       &:after {
-        content: $list-group-icon-arrow;
-        @include float-height-icon;
+        float: right;
+        @include access-icon($list-group-icon-arrow);
       }
 
       .access-title {
@@ -212,7 +215,7 @@ a.list-group-item {
     }
 
     &:after {
-      content: $list-group-icon-arrow-hover;
+      @include access-icon($list-group-icon-arrow-hover);
     }
   }
 
@@ -239,7 +242,7 @@ a.list-group-item {
     }
 
     &:after {
-      content: $list-group-icon-logout;
+      @include access-icon($list-group-icon-logout);
     }
 
     &:hover {

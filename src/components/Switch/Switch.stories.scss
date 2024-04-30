@@ -1,9 +1,14 @@
-.switch {
+/* .switch {
   & + & {
     margin-left: 20px;
   }
 }
 
-.switch-label {
+.switch-label, .switch-sm {
   margin-right: 20px;
+} */
+.storybook__container-switch {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
