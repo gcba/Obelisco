@@ -17,6 +17,16 @@ export default {
 export const Switch = (): JSX.Element => {
   return (
     <>
+      {/* HTML previo a modificiacion de accesibilidad */}
+      {/* <div className="mb-3">
+        <label className="switch">
+          <input type="checkbox" id="example" />
+          <span className="slider"></span>
+        </label>
+        <label htmlFor="example" className="switch-label">
+          Prendido
+        </label>
+      </div> */}
       <div className="storybook__container-switch">
         <SwitchContainer label="Apagado" id="switch-1" />
         <SwitchContainer label="Prendido" id="switch-2" isChecked />
