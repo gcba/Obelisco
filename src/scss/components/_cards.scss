@@ -187,7 +187,10 @@ $accordion-bg-white: $white;
 
   .card-title {
     margin-bottom: 0;
-    @extend .h4;
+    font-size: $headline-lg;
+    line-height: $height-headline;
+    font-family: $font-family-headings;
+    font-weight: $font-weight-bold;
   }
 
   //.card-subtitle deprecado. Eliminar mas adelante
