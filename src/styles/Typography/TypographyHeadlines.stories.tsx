@@ -16,6 +16,9 @@ export const TagL = (): JSX.Element => {
   return (
     <>
       <Typography as="p" className="headline-lg">
+        Titular L: Familia tipográfica: Nunito | Tamaño: 20px | Interlineado: 24px.
+      </Typography>
+      <Typography as="p" className="headline-lg">
         Esto es un texto de titulares
       </Typography>
       <Typography as="p" className="headline-lg" weight="font-weight-semibold">
@@ -40,6 +43,9 @@ export const TagM = (): JSX.Element => {
   return (
     <>
       <Typography as="p" className="headline-md">
+        Titular M: Familia tipográfica: Nunito | Tamaño: 18px | Interlineado: 24px.
+      </Typography>
+      <Typography as="p" className="headline-md">
         Esto es un texto de titulares
       </Typography>
       <Typography as="p" className="headline-md" weight="font-weight-semibold">
@@ -63,6 +69,9 @@ TagM.story = { name: 'Titulares M' };
 export const TagS = (): JSX.Element => {
   return (
     <>
+      <Typography as="p" className="headline-sm">
+        Titular M: Familia tipográfica: Nunito | Tamaño: 16px | Interlineado: 20px.
+      </Typography>
       <Typography as="p" className="headline-sm">
         Esto es un texto de titulares
       </Typography>

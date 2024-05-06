@@ -52,6 +52,7 @@ export default {
 export const HeadingsW = (): JSX.Element => {
   return (
     <>
+      <Typography as="h1">h1: Familia tipográfica: Nunito | Tamaño: 40px | Interlineado: 48px.</Typography>
       <Typography as="h1">Este es un texto de encabezado</Typography>
       <Typography as="h1" weight="font-weight-semibold">
         Este es un texto de encabezado
@@ -62,6 +63,7 @@ export const HeadingsW = (): JSX.Element => {
 
       <hr />
 
+      <Typography as="h2">h2: Familia tipográfica: Nunito | Tamaño: 36px | Interlineado: 44px.</Typography>
       <Typography as="h2" weight="font-weight-bold">
         Este es un texto de encabezado
       </Typography>
@@ -72,6 +74,7 @@ export const HeadingsW = (): JSX.Element => {
 
       <hr />
 
+      <Typography as="h3">h3: Familia tipográfica: Nunito | Tamaño: 32px | Interlineado: 44px.</Typography>
       <Typography as="h3" weight="font-weight-bold">
         Este es un texto de encabezado
       </Typography>
@@ -82,6 +85,7 @@ export const HeadingsW = (): JSX.Element => {
 
       <hr />
 
+      <Typography as="h4">h4: Familia tipográfica: Nunito | Tamaño: 28px | Interlineado: 36px.</Typography>
       <Typography as="h4" weight="font-weight-bold">
         Este es un texto de encabezado
       </Typography>
@@ -92,6 +96,7 @@ export const HeadingsW = (): JSX.Element => {
 
       <hr />
 
+      <Typography as="h5">h5: Familia tipográfica: Nunito | Tamaño: 24px | Interlineado: 32px.</Typography>
       <Typography as="h5">Este es un texto de encabezado</Typography>
       <Typography as="h5" weight="font-weight-semibold">
         Este es un texto de encabezado
@@ -102,6 +107,7 @@ export const HeadingsW = (): JSX.Element => {
 
       <hr />
 
+      <Typography as="h6">h6: Familia tipográfica: Nunito | Tamaño: 20px | Interlineado: 28px.</Typography>
       <Typography as="h6" weight="font-weight-bold">
         Este es un texto de encabezado
       </Typography>
@@ -204,27 +210,6 @@ HeadingsW.story = { name: 'Títulos' };
 //   name: 'Epígrafe'
 // };
 
-export const Transformations = (): JSX.Element => {
-  return (
-    <>
-      <Typography as="p">
-        Nuestro sistema de <Typography as="strong">estándares</Typography> brinda un{' '}
-        <Typography as="em">conjunto de herramientas</Typography> y componentes colaborativos
-        <br />y <Typography as="small">accesibles</Typography> que define procesos para que los equipos internos y
-        externos puedan trabajar
-        <br />
-        alineadamente. De esta forma, ayudamos a crear <Typography as="mark">servicios</Typography> consistent
-        <Typography as="sup">es</Typography> para mejorar
-        <br /> la experiencia digit<Typography as="sub">al</Typography> de vecinos y vecina
-        <Typography as="kbd">s</Typography>.
-      </Typography>
-    </>
-  );
-};
-Transformations.story = {
-  name: 'Transformaciones'
-};
-
 export const Quote = (): JSX.Element => {
   return (
     <div className="storybook__container-bloquote">
@@ -276,4 +261,25 @@ export const OrderList = (): JSX.Element => {
 
 OrderList.story = {
   name: 'Lista ordenada'
+};
+
+export const Transformations = (): JSX.Element => {
+  return (
+    <>
+      <Typography as="p">
+        Nuestro sistema de <Typography as="strong">estándares</Typography> brinda un{' '}
+        <Typography as="em">conjunto de herramientas</Typography> y componentes colaborativos
+        <br />y <Typography as="small">accesibles</Typography> que define procesos para que los equipos internos y
+        externos puedan trabajar
+        <br />
+        alineadamente. De esta forma, ayudamos a crear <Typography as="mark">servicios</Typography> consistent
+        <Typography as="sup">es</Typography> para mejorar
+        <br /> la experiencia digit<Typography as="sub">al</Typography> de vecinos y vecina
+        <Typography as="kbd">s</Typography>.
+      </Typography>
+    </>
+  );
+};
+Transformations.story = {
+  name: 'Transformaciones'
 };

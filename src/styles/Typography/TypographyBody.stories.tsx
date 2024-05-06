@@ -16,6 +16,10 @@ export const CuerpoXl = (): JSX.Element => {
   return (
     <div className="col-12 col-md-6">
       <Typography as="p" className="lead">
+        Cuerpo XL: Familia tipográfica: Open Sans | Tamaño: 20px | Interlineado: 28px.
+      </Typography>
+
+      <Typography as="p" className="lead">
         Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
       </Typography>
 
@@ -44,6 +48,10 @@ export const CuerpoL = (): JSX.Element => {
   return (
     <div className="col-12 col-md-6">
       <Typography as="p" className="text-lg">
+        Cuerpo L: Familia tipográfica: Open Sans | Tamaño: 18px | Interlineado: 28px.
+      </Typography>
+
+      <Typography as="p" className="text-lg">
         Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
       </Typography>
 
@@ -71,6 +79,10 @@ CuerpoL.story = { name: 'Cuerpo L' };
 export const CuerpoM = (): JSX.Element => {
   return (
     <div className="col-12 col-md-6">
+      <Typography as="p" className="text-md">
+        Cuerpo M: Familia tipográfica: Open Sans | Tamaño: 16px | Interlineado: 24px.
+      </Typography>
+
       <Typography as="p" className="text-md">
         Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
       </Typography>
@@ -102,6 +114,10 @@ export const CuerpoS = (): JSX.Element => {
   return (
     <div className="col-12 col-md-6">
       <Typography as="p" className="text-sm">
+        Cuerpo S: Familia tipográfica: Open Sans | Tamaño: 14px | Interlineado: 20px.
+      </Typography>
+
+      <Typography as="p" className="text-sm">
         Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
       </Typography>
 
@@ -130,6 +146,10 @@ CuerpoS.story = {
 export const CuerpoXs = (): JSX.Element => {
   return (
     <div className="col-12 col-md-6">
+      <Typography as="p" className="text-xs">
+        Cuerpo XS: Familia tipográfica: Open Sans | Tamaño: 12px | Interlineado: 16px.
+      </Typography>
+
       <Typography as="p" className="text-xs">
         Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
       </Typography>
