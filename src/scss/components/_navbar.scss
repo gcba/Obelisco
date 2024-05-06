@@ -119,6 +119,15 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
   }
 }
 
+%section-mobile-titles {
+  font-size: $headline-lg;
+  line-height: $height-headline;
+  font-weight: $font-weight-semibold;
+  font-family: $font-family-headings;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
 @mixin nav-link-states {
   &:focus:not(:active) {
     color: $navbar-items-color-focus;
@@ -138,8 +147,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
 @mixin nav-sections-styles {
   .navbar-sections-title {
-    @extend .h3;
-    padding-left: 1rem;
+    @extend %section-mobile-titles;
 
     @include media-breakpoint-up(lg) {
       display: none;
@@ -1097,8 +1105,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
         }
 
         .navbar-user-mobile-title {
-          @extend .h3;
-          padding-left: 1rem;
+          @extend %section-mobile-titles;
         }
 
         .nav-user {
