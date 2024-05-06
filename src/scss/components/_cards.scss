@@ -180,7 +180,8 @@ $accordion-bg-white: $white;
   }
 
   .card-headline {
-    font-size: $small-font-size;
+    font-size: $text-sm;
+    line-height: $height-text-sm;
     text-transform: uppercase;
     margin-bottom: spaceUnits(4);
   }
@@ -206,7 +207,7 @@ $accordion-bg-white: $white;
   }
 
   .card-badges {
-    margin-bottom: 1rem;
+    margin-bottom: 9.6px; //Debido a que badge tiene display: inline-block; y overflow: hidden; se genera un espaciado en el div contenedor siendo su altura 30.4px en vez de 24px, por lo que se modifica el margin-bottom para respetar espaciado entre etiqueta y titulo.
   }
 
   .badge {
@@ -271,6 +272,7 @@ $accordion-bg-white: $white;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
+    height: 190px;
   }
 
   .card-event-top {
