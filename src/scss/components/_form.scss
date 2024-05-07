@@ -106,7 +106,10 @@ $custom-control-focus-color: #005387;
   }
 
   label {
-    @extend .h5;
+    font-size: $headline-md;
+    line-height: $height-headline;
+    font-weight: $font-weight-semibold;
+    font-family: $font-family-headings;
     margin-bottom: $label-margin-bottom;
   }
 
@@ -194,6 +197,8 @@ $custom-control-focus-color: #005387;
   box-shadow: $input-box-shadow;
   margin: $input-border-width;
   width: calc(100% - #{$input-border-width * 2});
+  font-size: $text-md;
+  line-height: $height-text-md;
 
   &:focus {
     background-color: $input-bg;
@@ -261,18 +266,23 @@ $custom-control-focus-color: #005387;
 .valid-feedback,
 .invalid-feedback {
   margin-top: spaceUnits(2);
+  font-size: $text-sm;
+  line-height: $height-text-sm;
+}
+
+.valid-feedback::before, .invalid-feedback::before  {
+  vertical-align: text-top;
+  margin-right: spaceUnits(1);
+  height: 16px;
+  display: inline-block;
 }
 
 .valid-feedback::before {
   content: map-get($form-icons, 'valid');
-  vertical-align: middle;
-  margin-right: spaceUnits(1);
 }
 
 .invalid-feedback::before {
   content: map-get($form-icons, 'invalid');
-  vertical-align: middle;
-  margin-right: spaceUnits(1);
 }
 
 // Custom controls
