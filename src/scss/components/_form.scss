@@ -418,7 +418,7 @@ $custom-control-focus-color: #005387;
 
 // Checkbox button
 .btn-chip {
-  font-weight: normal;
+  font-weight: $font-weight-semibold;
   background-color: $grisulado-10;
 
   @include btn-disabled;
