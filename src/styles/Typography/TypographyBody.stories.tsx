@@ -46,7 +46,7 @@ export const CuerpoXl = (): JSX.Element => {
               <td>
                 <p>&lt;p class=&quot;font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
               </td>
-              <td> Open Sans | 40px | 48px | semibold</td>
+              <td> Open Sans | 20px | 28px | semibold</td>
               <td>
                 <Typography as="p" weight="font-weight-semibold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
@@ -57,7 +57,7 @@ export const CuerpoXl = (): JSX.Element => {
               <td>
                 <p>&lt;p class=&quot;font-weight-bold&quot;&gt;&lt;/p&gt;</p>
               </td>
-              <td> Open Sans | 40px | 48px | bold </td>
+              <td> Open Sans | 20px | 28px | bold </td>
               <td>
                 <Typography as="p" weight="font-weight-bold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
@@ -68,7 +68,7 @@ export const CuerpoXl = (): JSX.Element => {
               <td>
                 <p>&lt;p class=&quot;font-italic&quot;&gt;&lt;/p&gt;</p>
               </td>
-              <td> Open Sans | 40px | 48px | italic </td>
+              <td> Open Sans | 20px | 28px | italic </td>
               <td>
                 <Typography as="p" className="font-italic">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
@@ -79,7 +79,7 @@ export const CuerpoXl = (): JSX.Element => {
               <td>
                 <p>&lt;p class=&quot;underline-1&quot;&gt;&lt;/p&gt;</p>
               </td>
-              <td> Open Sans | 40px | 48px | underline </td>
+              <td> Open Sans | 20px | 28px | underline </td>
               <td>
                 <Typography as="p" className="underline-1">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
@@ -93,8 +93,8 @@ export const CuerpoXl = (): JSX.Element => {
 
       <hr />
       {/* Cuerpo L */}
-      <p className="headline-lg font-weight-bold">Cuerpo L</p>
 
+      <p className="headline-lg font-weight-bold">Cuerpo L</p>
       <div className="responsive-scroll" tabIndex={0}>
         <table className="table">
           <thead>
@@ -112,17 +112,8 @@ export const CuerpoXl = (): JSX.Element => {
           </thead>
           <tbody>
             <tr>
-              <td>font-weight-bold</td>
-              <td>Open Sans | 18px | 28px </td>
-              <td>
-                <Typography as="p" weight="font-weight-bold">
-                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
-                </Typography>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td> Open Sans | 36px | 40px </td>
+              <td>{/* "<p></p>" */}</td>
+              <td> Open Sans | 18px | 28px </td>
               <td>
                 <Typography as="p">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
@@ -130,10 +121,45 @@ export const CuerpoXl = (): JSX.Element => {
               </td>
             </tr>
             <tr>
-              <td>font-weight-normal</td>
-              <td> Open Sans | 36px | 40px | normal </td>
               <td>
-                <Typography as="p" weight="font-weight-normal">
+                <p>&lt;p class=&quot;font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 18px | 28px | semibold</td>
+              <td>
+                <Typography as="p" weight="font-weight-semibold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 18px | 28px | bold </td>
+              <td>
+                <Typography as="p" weight="font-weight-bold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;font-italic&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 18px | 28px | italic </td>
+              <td>
+                <Typography as="p" className="font-italic">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;underline-1&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 18px | 28px | underline </td>
+              <td>
+                <Typography as="p" className="underline-1">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
