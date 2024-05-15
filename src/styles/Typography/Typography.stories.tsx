@@ -52,8 +52,8 @@ export default {
 export const HeadingsW = (): JSX.Element => {
   return (
     <>
-     <p className="headline-lg font-weight-bold">Encabezado h1</p>
-      <div className="responsive-scroll" tabIndex={0}>       
+      <p className="headline-lg font-weight-bold">Encabezado h1</p>
+      <div className="responsive-scroll" tabIndex={0}>
         <table className="table">
           <thead>
             <tr>
@@ -72,17 +72,27 @@ export const HeadingsW = (): JSX.Element => {
             <tr>
               <td></td>
               <td>Nunito | 40px | 48px </td>
-              <td><Typography as="h1">Encabezado h1</Typography></td>
+              <td>
+                <Typography as="h1">Encabezado h1</Typography>
+              </td>
             </tr>
             <tr>
               <td>font-weight-semibold</td>
               <td>Nunito | 40px | 48px | semibold</td>
-              <td><Typography as="h1" weight="font-weight-semibold">Encabezado h1 semibold</Typography></td>
+              <td>
+                <Typography as="h1" weight="font-weight-semibold">
+                  Encabezado h1 semibold
+                </Typography>
+              </td>
             </tr>
             <tr>
               <td>font-weight-normal</td>
               <td>Nunito | 40px | 48px | normal </td>
-              <td><Typography as="h1" weight="font-weight-normal">Encabezado h1 normal</Typography></td>
+              <td>
+                <Typography as="h1" weight="font-weight-normal">
+                  Encabezado h1 normal
+                </Typography>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -91,7 +101,7 @@ export const HeadingsW = (): JSX.Element => {
       <hr />
       <p className="headline-lg font-weight-bold">Encabezado h2</p>
 
-      <div className="responsive-scroll" tabIndex={0}>       
+      <div className="responsive-scroll" tabIndex={0}>
         <table className="table">
           <thead>
             <tr>
@@ -110,17 +120,27 @@ export const HeadingsW = (): JSX.Element => {
             <tr>
               <td>font-weight-bold</td>
               <td>Nunito | 36px | 40px | bold </td>
-              <td><Typography as="h2" weight="font-weight-bold">Encabezado h2 bold</Typography></td>
+              <td>
+                <Typography as="h2" weight="font-weight-bold">
+                  Encabezado h2 bold
+                </Typography>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td>Nunito | 36px | 40px </td>
-              <td><Typography as="h2">Encabezado h2</Typography></td>
+              <td>
+                <Typography as="h2">Encabezado h2</Typography>
+              </td>
             </tr>
             <tr>
               <td>font-weight-normal</td>
               <td>Nunito | 36px | 40px | normal </td>
-              <td><Typography as="h2" weight="font-weight-normal">Encabezado h2 normal</Typography></td>
+              <td>
+                <Typography as="h2" weight="font-weight-normal">
+                  Encabezado h2 normal
+                </Typography>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -129,7 +149,7 @@ export const HeadingsW = (): JSX.Element => {
       <hr />
       <p className="headline-lg font-weight-bold">Encabezado h3</p>
 
-      <div className="responsive-scroll" tabIndex={0}>       
+      <div className="responsive-scroll" tabIndex={0}>
         <table className="table">
           <thead>
             <tr>
@@ -148,17 +168,27 @@ export const HeadingsW = (): JSX.Element => {
             <tr>
               <td>font-weight-bold</td>
               <td>Nunito | 32px | 44px | bold </td>
-              <td><Typography as="h3" weight="font-weight-bold">Encabezado h3 bold</Typography></td>
+              <td>
+                <Typography as="h3" weight="font-weight-bold">
+                  Encabezado h3 bold
+                </Typography>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td>Nunito | 32px | 44px </td>
-              <td><Typography as="h3">Encabezado h3</Typography></td>
+              <td>
+                <Typography as="h3">Encabezado h3</Typography>
+              </td>
             </tr>
             <tr>
               <td>font-weight-normal</td>
               <td>Nunito | 32px | 44px | normal </td>
-              <td><Typography as="h3" weight="font-weight-normal">Encabezado h3 normal</Typography></td>
+              <td>
+                <Typography as="h3" weight="font-weight-normal">
+                  Encabezado h3 normal
+                </Typography>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -167,7 +197,7 @@ export const HeadingsW = (): JSX.Element => {
       <hr />
       <p className="headline-lg font-weight-bold">Encabezado h4</p>
 
-      <div className="responsive-scroll" tabIndex={0}>       
+      <div className="responsive-scroll" tabIndex={0}>
         <table className="table">
           <thead>
             <tr>
@@ -186,17 +216,27 @@ export const HeadingsW = (): JSX.Element => {
             <tr>
               <td>font-weight-bold</td>
               <td>Nunito | 28px | 36px | bold </td>
-              <td><Typography as="h4" weight="font-weight-bold">Encabezado h4 bold</Typography></td>
+              <td>
+                <Typography as="h4" weight="font-weight-bold">
+                  Encabezado h4 bold
+                </Typography>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td>Nunito | 28px | 36px </td>
-              <td><Typography as="h4">Encabezado h4</Typography></td>
+              <td>
+                <Typography as="h4">Encabezado h4</Typography>
+              </td>
             </tr>
             <tr>
               <td>font-weight-normal</td>
               <td>Nunito | 28px | 36px | normal </td>
-              <td><Typography as="h4" weight="font-weight-normal">Encabezado h4 normal</Typography></td>
+              <td>
+                <Typography as="h4" weight="font-weight-normal">
+                  Encabezado h4 normal
+                </Typography>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -205,7 +245,7 @@ export const HeadingsW = (): JSX.Element => {
       <hr />
       <p className="headline-lg font-weight-bold">Encabezado h5</p>
 
-      <div className="responsive-scroll" tabIndex={0}>       
+      <div className="responsive-scroll" tabIndex={0}>
         <table className="table">
           <thead>
             <tr>
@@ -224,17 +264,27 @@ export const HeadingsW = (): JSX.Element => {
             <tr>
               <td></td>
               <td>Nunito | 24px | 32px </td>
-              <td><Typography as="h5">Encabezado h5</Typography></td>
+              <td>
+                <Typography as="h5">Encabezado h5</Typography>
+              </td>
             </tr>
             <tr>
               <td>font-weight-semibold</td>
               <td>Nunito | 24px | 32px | semibold</td>
-              <td><Typography as="h5" weight='font-weight-semibold'>Encabezado h5 semibold</Typography></td>
+              <td>
+                <Typography as="h5" weight="font-weight-semibold">
+                  Encabezado h5 semibold
+                </Typography>
+              </td>
             </tr>
             <tr>
               <td>font-weight-normal</td>
               <td>Nunito | 24px | 32px | normal </td>
-              <td><Typography as="h5" weight="font-weight-normal">Encabezado h5 normal</Typography></td>
+              <td>
+                <Typography as="h5" weight="font-weight-normal">
+                  Encabezado h5 normal
+                </Typography>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -243,7 +293,7 @@ export const HeadingsW = (): JSX.Element => {
       <hr />
       <p className="headline-lg font-weight-bold">Encabezado h6</p>
 
-      <div className="responsive-scroll" tabIndex={0}>       
+      <div className="responsive-scroll" tabIndex={0}>
         <table className="table">
           <thead>
             <tr>
@@ -262,17 +312,27 @@ export const HeadingsW = (): JSX.Element => {
             <tr>
               <td>font-weight-bold</td>
               <td>Nunito | 20px | 28px | bold</td>
-              <td><Typography as="h6" weight="font-weight-bold">Encabezado h6 bold</Typography></td>
+              <td>
+                <Typography as="h6" weight="font-weight-bold">
+                  Encabezado h6 bold
+                </Typography>
+              </td>
             </tr>
             <tr>
               <td></td>
               <td>Nunito | 20px | 28px </td>
-              <td><Typography as="h6">Encabezado h6</Typography></td>
+              <td>
+                <Typography as="h6">Encabezado h6</Typography>
+              </td>
             </tr>
             <tr>
               <td>font-weight-normal</td>
               <td>Nunito | 20px | 28px | normal </td>
-              <td><Typography as="h6" weight="font-weight-normal">Encabezado h6 normal</Typography></td>
+              <td>
+                <Typography as="h6" weight="font-weight-normal">
+                  Encabezado h6 normal
+                </Typography>
+              </td>
             </tr>
           </tbody>
         </table>
