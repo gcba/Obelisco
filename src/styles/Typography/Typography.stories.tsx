@@ -495,6 +495,408 @@ HeadingsW.story = { name: 'Títulos' };
 //   name: 'Epígrafe'
 // };
 
+export const Text = (): JSX.Element => {
+  return (
+    <>
+      {/* Cuerpo XL */}
+      <p className="headline-lg font-weight-bold">Cuerpo XL</p>
+      <div className="responsive-scroll" tabIndex={0}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col" className="tb-text">
+                HTML
+              </th>
+              <th scope="col" className="tb-text">
+                Estilos
+              </th>
+              <th scope="col" className="tb-text">
+                Ejemplos
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xl&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 20px | 28px </td>
+              <td>
+                <Typography as="p" className="text-xl ">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xl font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 20px | 28px | semibold</td>
+              <td>
+                <Typography as="p" className="text-xl font-weight-semibold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xl font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 20px | 28px | bold </td>
+              <td>
+                <Typography as="p" className="text-xl font-weight-bold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xl font-italic&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 20px | 28px | italic </td>
+              <td>
+                <Typography as="p" className="text-xl font-italic">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xl underline-1&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 20px | 28px | underline </td>
+              <td>
+                <Typography as="p" className="text-xl underline-1">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {/* Cuerpo XL */}
+
+      <hr />
+      {/* Cuerpo L */}
+      <p className="headline-lg font-weight-bold">Cuerpo L</p>
+      <div className="responsive-scroll" tabIndex={0}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col" className="tb-text">
+                HTML
+              </th>
+              <th scope="col" className="tb-text">
+                Estilos
+              </th>
+              <th scope="col" className="tb-text">
+                Ejemplos
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-lg&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 18px | 28px </td>
+              <td>
+                <Typography as="p" className="text-lg ">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-lg font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 18px | 28px | semibold</td>
+              <td>
+                <Typography as="p" className="text-lg font-weight-semibold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-lg font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 18px | 28px | bold </td>
+              <td>
+                <Typography as="p" className="text-lg font-weight-bold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-lg font-italic&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 18px | 28px | italic </td>
+              <td>
+                <Typography as="p" className="text-lg font-italic">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-lg underline-1&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 18px | 28px | underline </td>
+              <td>
+                <Typography as="p" className="text-lg underline-1">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {/* Cuerpo L */}
+
+      <hr />
+      {/* Cuerpo M */}
+      <p className="headline-lg font-weight-bold">Cuerpo M</p>
+      <div className="responsive-scroll" tabIndex={0}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col" className="tb-text">
+                HTML
+              </th>
+              <th scope="col" className="tb-text">
+                Estilos
+              </th>
+              <th scope="col" className="tb-text">
+                Ejemplos
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-md&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 16px | 24px </td>
+              <td>
+                <Typography as="p" className="text-md ">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-md font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 16px | 24px | semibold</td>
+              <td>
+                <Typography as="p" className="text-md font-weight-semibold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-md font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 16px | 24px | bold </td>
+              <td>
+                <Typography as="p" className="text-md font-weight-bold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-md font-italic&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 16px | 24px | italic </td>
+              <td>
+                <Typography as="p" className="text-md font-italic">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-md underline-1&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 16px | 24px | underline </td>
+              <td>
+                <Typography as="p" className="text-md underline-1">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {/* Cuerpo M */}
+
+      <hr />
+      {/* Cuerpo S */}
+      <p className="headline-lg font-weight-bold">Cuerpo S</p>
+      <div className="responsive-scroll" tabIndex={0}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col" className="tb-text">
+                HTML
+              </th>
+              <th scope="col" className="tb-text">
+                Estilos
+              </th>
+              <th scope="col" className="tb-text">
+                Ejemplos
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-sm&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 14px | 20px </td>
+              <td>
+                <Typography as="p" className="text-sm ">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-sm font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 14px | 20px | semibold</td>
+              <td>
+                <Typography as="p" className="text-sm font-weight-semibold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-sm font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 14px | 20px | bold </td>
+              <td>
+                <Typography as="p" className="text-sm font-weight-bold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-sm font-italic&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 14px | 20px | italic </td>
+              <td>
+                <Typography as="p" className="text-sm font-italic">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-sm underline-1&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 14px | 20px | underline </td>
+              <td>
+                <Typography as="p" className="text-sm underline-1">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {/* Cuerpo S */}
+
+      <hr />
+      {/* Cuerpo XS */}
+      <p className="headline-lg font-weight-bold">Cuerpo XS</p>
+      <div className="responsive-scroll" tabIndex={0}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col" className="tb-text">
+                HTML
+              </th>
+              <th scope="col" className="tb-text">
+                Estilos
+              </th>
+              <th scope="col" className="tb-text">
+                Ejemplos
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xs&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 12px | 16px </td>
+              <td>
+                <Typography as="p" className="text-xs ">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xs font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 12px | 16px | semibold</td>
+              <td>
+                <Typography as="p" className="text-xs font-weight-semibold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xs font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 12px | 16px | bold </td>
+              <td>
+                <Typography as="p" className="text-xs font-weight-bold">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xs font-italic&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 12px | 16px | italic </td>
+              <td>
+                <Typography as="p" className="text-xs font-italic">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>&lt;p class=&quot;text-xs underline-1&quot;&gt;&lt;/p&gt;</p>
+              </td>
+              <td> Open Sans | 12px | 16px | underline </td>
+              <td>
+                <Typography as="p" className="text-xs underline-1">
+                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                </Typography>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {/* Cuerpo XS */}
+    </>
+  );
+};
+
+Text.story = { name: 'Cuerpos' };
+
 export const Quote = (): JSX.Element => {
   return (
     <div className="storybook__container-bloquote">
