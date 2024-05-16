@@ -49,7 +49,7 @@ export default {
 
 // Headings.story = { name: 'Títulos' };
 
-export const HeadingsW = (): JSX.Element => {
+export const Headings = (): JSX.Element => {
   return (
     <>
       <p className="headline-lg font-weight-bold">Encabezado h1</p>
@@ -404,7 +404,7 @@ export const HeadingsW = (): JSX.Element => {
   );
 };
 
-HeadingsW.story = { name: 'Títulos' };
+Headings.story = { name: 'Títulos' };
 
 // export const SubTitle = (): JSX.Element => {
 //   return (

@@ -61,7 +61,7 @@ const headers = [
   'componentes-tarjetas-disposición',
   'componentes-tooltip--tooltip',
   'estilos-grilla',
-  'estilos-tipografía--headings-w',
+  'estilos-tipografía--headings',
   'estilos-tipografía-cuerpo',
   'estilos-tipografía-titulares',
   'estilos-tipografía',
