@@ -34,7 +34,9 @@ export const CuerpoXl = (): JSX.Element => {
           </thead>
           <tbody>
             <tr>
-              <td>{/* "<p></p>" */}</td>
+              <td>
+                <p>&lt;p class=&quot;text-xl&quot;&gt;&lt;/p&gt;</p>
+              </td>
               <td> Open Sans | 20px | 28px </td>
               <td>
                 <Typography as="p" className="text-xl ">
@@ -44,7 +46,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-xl font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 20px | 28px | semibold</td>
               <td>
@@ -55,7 +57,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-xl font-weight-bold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 20px | 28px | bold </td>
               <td>
@@ -66,7 +68,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-italic&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-xl font-italic&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 20px | 28px | italic </td>
               <td>
@@ -77,7 +79,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;underline-1&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-xl underline-1&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 20px | 28px | underline </td>
               <td>
@@ -111,7 +113,9 @@ export const CuerpoXl = (): JSX.Element => {
           </thead>
           <tbody>
             <tr>
-              <td>{/* "<p></p>" */}</td>
+              <td>
+                <p>&lt;p class=&quot;text-lg&quot;&gt;&lt;/p&gt;</p>
+              </td>
               <td> Open Sans | 18px | 28px </td>
               <td>
                 <Typography as="p" className="text-lg ">
@@ -121,7 +125,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-lg font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 18px | 28px | semibold</td>
               <td>
@@ -132,7 +136,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-lg font-weight-bold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 18px | 28px | bold </td>
               <td>
@@ -143,7 +147,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-italic&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-lg font-italic&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 18px | 28px | italic </td>
               <td>
@@ -154,7 +158,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;underline-1&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-lg underline-1&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 18px | 28px | underline </td>
               <td>
@@ -188,7 +192,9 @@ export const CuerpoXl = (): JSX.Element => {
           </thead>
           <tbody>
             <tr>
-              <td>{/* "<p></p>" */}</td>
+              <td>
+                <p>&lt;p class=&quot;text-md&quot;&gt;&lt;/p&gt;</p>
+              </td>
               <td> Open Sans | 16px | 24px </td>
               <td>
                 <Typography as="p" className="text-md ">
@@ -198,7 +204,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-md font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 16px | 24px | semibold</td>
               <td>
@@ -209,7 +215,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-md font-weight-bold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 16px | 24px | bold </td>
               <td>
@@ -220,7 +226,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-italic&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-md font-italic&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 16px | 24px | italic </td>
               <td>
@@ -231,7 +237,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;underline-1&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-md underline-1&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 16px | 24px | underline </td>
               <td>
@@ -265,7 +271,9 @@ export const CuerpoXl = (): JSX.Element => {
           </thead>
           <tbody>
             <tr>
-              <td>{/* "<p></p>" */}</td>
+              <td>
+                <p>&lt;p class=&quot;text-sm&quot;&gt;&lt;/p&gt;</p>
+              </td>
               <td> Open Sans | 14px | 20px </td>
               <td>
                 <Typography as="p" className="text-sm ">
@@ -275,7 +283,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-sm font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 14px | 20px | semibold</td>
               <td>
@@ -286,7 +294,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-sm font-weight-bold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 14px | 20px | bold </td>
               <td>
@@ -297,7 +305,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-italic&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-sm font-italic&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 14px | 20px | italic </td>
               <td>
@@ -308,7 +316,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;underline-1&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-sm underline-1&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 14px | 20px | underline </td>
               <td>
@@ -342,17 +350,19 @@ export const CuerpoXl = (): JSX.Element => {
           </thead>
           <tbody>
             <tr>
-              <td>{/* "<p></p>" */}</td>
+              <td>
+                <p>&lt;p class=&quot;text-xs&quot;&gt;&lt;/p&gt;</p>
+              </td>
               <td> Open Sans | 12px | 16px </td>
               <td>
-                <Typography as="p" className="text-xs">
+                <Typography as="p" className="text-xs ">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-xs font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 12px | 16px | semibold</td>
               <td>
@@ -363,7 +373,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-xs font-weight-bold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 12px | 16px | bold </td>
               <td>
@@ -374,7 +384,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;font-italic&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-xs font-italic&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 12px | 16px | italic </td>
               <td>
@@ -385,7 +395,7 @@ export const CuerpoXl = (): JSX.Element => {
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;underline-1&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-xs underline-1&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Open Sans | 12px | 16px | underline </td>
               <td>
