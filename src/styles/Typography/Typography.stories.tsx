@@ -61,7 +61,7 @@ export const Headings = (): JSX.Element => {
                 Clase
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Fuente | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -109,7 +109,7 @@ export const Headings = (): JSX.Element => {
                 Clase
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Familia Tipografica | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -157,7 +157,7 @@ export const Headings = (): JSX.Element => {
                 Clase
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Familia Tipografica | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -205,7 +205,7 @@ export const Headings = (): JSX.Element => {
                 Clase
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Familia Tipografica | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -253,7 +253,7 @@ export const Headings = (): JSX.Element => {
                 Clase
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Familia Tipografica | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -301,7 +301,7 @@ export const Headings = (): JSX.Element => {
                 Clase
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Familia Tipografica | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -508,7 +508,7 @@ export const Tag = (): JSX.Element => {
                 HTML
               </th>
               <th scope="col" className="tb-text">
-                Familia Tipografica | Tamaño | Interlineado
+                Fuente | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -751,7 +751,7 @@ export const Text = (): JSX.Element => {
                 HTML
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Fuente | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -830,7 +830,7 @@ export const Text = (): JSX.Element => {
                 HTML
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Familia Tipografica | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -909,7 +909,7 @@ export const Text = (): JSX.Element => {
                 HTML
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Familia Tipografica | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -988,7 +988,7 @@ export const Text = (): JSX.Element => {
                 HTML
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Familia Tipografica | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
@@ -1067,7 +1067,7 @@ export const Text = (): JSX.Element => {
                 HTML
               </th>
               <th scope="col" className="tb-text">
-                Estilos
+                Familia Tipografica | Tamaño | Interlineado
               </th>
               <th scope="col" className="tb-text">
                 Ejemplos
