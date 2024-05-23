@@ -3,13 +3,12 @@ import React from 'react';
 import './Typography.stories.scss';
 
 // Addons
-import { withA11y } from '@storybook/addon-a11y';
 import { Typography, Blockquote, UnorderedList, ListItem, OrderedList } from '.';
 
 // Configuración general del componente
 export default {
   title: 'Estilos|Tipografía',
-  decorators: [withA11y]
+  parameters: { options: { showPanel: false } }
 };
 
 // export const Headings = (): JSX.Element => {
