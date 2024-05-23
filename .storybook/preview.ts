@@ -64,6 +64,7 @@ const headers = [
   'estilos-tipografía--headings',
   'estilos-tipografía-cuerpo',
   'estilos-tipografía-titulares',
+  // 'estilos-tipografía-clases',
   'estilos-tipografía',
   'formulario-archivo',
   'formulario-buscador',
