@@ -66,7 +66,7 @@ export const Headings = (): JSX.Element => {
       {/* h1 */}
 
       {/* h2 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h2</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -118,7 +118,7 @@ export const Headings = (): JSX.Element => {
       {/* h2 */}
 
       {/* h3 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h3</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -170,7 +170,7 @@ export const Headings = (): JSX.Element => {
       {/* h3 */}
 
       {/* h4 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h4</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -222,7 +222,7 @@ export const Headings = (): JSX.Element => {
       {/* h4 */}
 
       {/* h5 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h5</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -274,7 +274,7 @@ export const Headings = (): JSX.Element => {
       {/* h5 */}
 
       {/* h6 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h6</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -344,7 +344,7 @@ export const Headings = (): JSX.Element => {
         Este es un texto de encabezado
       </Typography>
 
-      <hr />
+      <hr className="mt-5" />
 
       <Typography className="mb-0"  as="h3">h3: Familia tipográfica: Nunito | Tamaño: 32px | Interlineado: 44px.</Typography>
       <Typography className="mb-0"  as="h3" weight="font-weight-bold">
@@ -355,7 +355,7 @@ export const Headings = (): JSX.Element => {
         Este es un texto de encabezado
       </Typography>
 
-      <hr />
+      <hr className="mt-5" />
 
       <Typography className="mb-0"  as="h4">h4: Familia tipográfica: Nunito | Tamaño: 28px | Interlineado: 36px.</Typography>
       <Typography className="mb-0"  as="h4" weight="font-weight-bold">
@@ -366,7 +366,7 @@ export const Headings = (): JSX.Element => {
         Este es un texto de encabezado
       </Typography>
 
-      <hr />
+      <hr className="mt-5" />
 
       <Typography className="mb-0"  as="h5">h5: Familia tipográfica: Nunito | Tamaño: 24px | Interlineado: 32px.</Typography>
       <Typography className="mb-0"  as="h5">Este es un texto de encabezado</Typography>
@@ -377,7 +377,7 @@ export const Headings = (): JSX.Element => {
         Este es un texto de encabezado
       </Typography>
 
-      <hr />
+      <hr className="mt-5" />
 
       <Typography className="mb-0"  as="h6">h6: Familia tipográfica: Nunito | Tamaño: 20px | Interlineado: 28px.</Typography>
       <Typography className="mb-0"  as="h6" weight="font-weight-bold">
@@ -559,7 +559,7 @@ export const Tag = (): JSX.Element => {
       </div>
       {/* Titulares M */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Titulares S */}
       <p className="headline-lgg font-weight-bold">Titulares S</p>
       <div className="responsive-scroll" tabIndex={0}>
@@ -731,7 +731,7 @@ export const Text = (): JSX.Element => {
       </div>
       {/* Cuerpo XL */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Cuerpo L */}
       <p className="headline-lg font-weight-bold">Cuerpo L</p>
       <div className="responsive-scroll" tabIndex={0}>
@@ -810,7 +810,7 @@ export const Text = (): JSX.Element => {
       </div>
       {/* Cuerpo L */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Cuerpo M */}
       <p className="headline-lg font-weight-bold">Cuerpo M</p>
       <div className="responsive-scroll" tabIndex={0}>
@@ -889,7 +889,7 @@ export const Text = (): JSX.Element => {
       </div>
       {/* Cuerpo M */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Cuerpo S */}
       <p className="headline-lg font-weight-bold">Cuerpo S</p>
       <div className="responsive-scroll" tabIndex={0}>
@@ -968,7 +968,7 @@ export const Text = (): JSX.Element => {
       </div>
       {/* Cuerpo S */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Cuerpo XS */}
       <p className="headline-lg font-weight-bold">Cuerpo XS</p>
       <div className="responsive-scroll" tabIndex={0}>
