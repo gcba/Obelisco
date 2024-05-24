@@ -10,7 +10,7 @@ export default {
   decorators: [withA11y]
 };
 
-export const Clases = (): JSX.Element => {
+export const SizesAndSpacing = (): JSX.Element => {
   return (
     <div className="storybook__container-grid">
       <div className="container"></div>
@@ -18,4 +18,34 @@ export const Clases = (): JSX.Element => {
   );
 };
 
-Clases.story = { name: 'Clases' };
+SizesAndSpacing.story = { name: 'Tamaños y Espaciados' };
+
+export const Columns = (): JSX.Element => {
+  return (
+    <div className="storybook__container-grid">
+      <div className="container"></div>
+    </div>
+  );
+};
+
+Columns.story = { name: 'Columnas' };
+
+export const AlignAndOrder = (): JSX.Element => {
+  return (
+    <div className="storybook__container-grid">
+      <div className="container"></div>
+    </div>
+  );
+};
+
+AlignAndOrder.story = { name: 'Align y Order' };
+
+export const Border = (): JSX.Element => {
+  return (
+    <div className="storybook__container-grid">
+      <div className="container"></div>
+    </div>
+  );
+};
+
+Border.story = { name: 'Bordes' };
