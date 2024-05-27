@@ -37,7 +37,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h1 class="font-weight-bold"></h1>'}</td>
               <td>Nunito | 40px | 48px | bold </td>
               <td>
-                <Typography className="mb-0" as="h1">
+                <Typography className="storybook__margin-typography " as="h1">
                   Encabezado h1
                 </Typography>
               </td>
@@ -46,7 +46,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h1 class="font-weight-semibold"></h1>'}</td>
               <td>Nunito | 40px | 48px | semibold</td>
               <td>
-                <Typography className="mb-0" as="h1" weight="font-weight-semibold">
+                <Typography className="storybook__margin-typography " as="h1" weight="font-weight-semibold">
                   Encabezado h1 semibold
                 </Typography>
               </td>
@@ -55,7 +55,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h1 class="font-weight-normal"></h1>'}</td>
               <td>Nunito | 40px | 48px | normal </td>
               <td>
-                <Typography className="mb-0" as="h1" weight="font-weight-normal">
+                <Typography className="storybook__margin-typography " as="h1" weight="font-weight-normal">
                   Encabezado h1 normal
                 </Typography>
               </td>
@@ -89,7 +89,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h2 class="font-weight-bold"></h2>'}</td>
               <td>Nunito | 36px | 40px | bold </td>
               <td>
-                <Typography className="mb-0" as="h2" weight="font-weight-bold">
+                <Typography className="storybook__margin-typography " as="h2" weight="font-weight-bold">
                   Encabezado h2 bold
                 </Typography>
               </td>
@@ -98,7 +98,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h2 class="font-weight-semibold"></h2>'}</td>
               <td>Nunito | 36px | 40px </td>
               <td>
-                <Typography className="mb-0" as="h2">
+                <Typography className="storybook__margin-typography " as="h2">
                   Encabezado h2
                 </Typography>
               </td>
@@ -107,7 +107,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h2 class="font-weight-normal"></h2>'}</td>
               <td>Nunito | 36px | 40px | normal </td>
               <td>
-                <Typography className="mb-0" as="h2" weight="font-weight-normal">
+                <Typography className="storybook__margin-typography " as="h2" weight="font-weight-normal">
                   Encabezado h2 normal
                 </Typography>
               </td>
@@ -141,7 +141,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h3 class="font-weight-bold"></h3>'}</td>
               <td>Nunito | 32px | 44px | bold </td>
               <td>
-                <Typography className="mb-0" as="h3" weight="font-weight-bold">
+                <Typography className="storybook__margin-typography " as="h3" weight="font-weight-bold">
                   Encabezado h3 bold
                 </Typography>
               </td>
@@ -150,7 +150,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h3 class="font-weight-semibold"></h3>'}</td>
               <td>Nunito | 32px | 44px </td>
               <td>
-                <Typography className="mb-0" as="h3">
+                <Typography className="storybook__margin-typography " as="h3">
                   Encabezado h3
                 </Typography>
               </td>
@@ -159,7 +159,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h3 class="font-weight-normal"></h3>'}</td>
               <td>Nunito | 32px | 44px | normal </td>
               <td>
-                <Typography className="mb-0" as="h3" weight="font-weight-normal">
+                <Typography className="storybook__margin-typography " as="h3" weight="font-weight-normal">
                   Encabezado h3 normal
                 </Typography>
               </td>
@@ -193,7 +193,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h4 class="font-weight-bold"></h4>'}</td>
               <td>Nunito | 28px | 36px | bold </td>
               <td>
-                <Typography className="mb-0" as="h4" weight="font-weight-bold">
+                <Typography className="storybook__margin-typography " as="h4" weight="font-weight-bold">
                   Encabezado h4 bold
                 </Typography>
               </td>
@@ -202,7 +202,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h4 class="font-weight-semibold"></h4>'}</td>
               <td>Nunito | 28px | 36px </td>
               <td>
-                <Typography className="mb-0" as="h4">
+                <Typography className="storybook__margin-typography " as="h4">
                   Encabezado h4
                 </Typography>
               </td>
@@ -211,7 +211,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h4 class="font-weight-normal"></h4>'}</td>
               <td>Nunito | 28px | 36px | normal </td>
               <td>
-                <Typography className="mb-0" as="h4" weight="font-weight-normal">
+                <Typography className="storybook__margin-typography " as="h4" weight="font-weight-normal">
                   Encabezado h4 normal
                 </Typography>
               </td>
@@ -245,7 +245,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h5 class="font-weight-bold"></h5>'}</td>
               <td>Nunito | 24px | 32px </td>
               <td>
-                <Typography className="mb-0" as="h5">
+                <Typography className="storybook__margin-typography " as="h5">
                   Encabezado h5
                 </Typography>
               </td>
@@ -254,7 +254,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h5 class="font-weight-semibold"></h5>'}</td>
               <td>Nunito | 24px | 32px | semibold</td>
               <td>
-                <Typography className="mb-0" as="h5" weight="font-weight-semibold">
+                <Typography className="storybook__margin-typography " as="h5" weight="font-weight-semibold">
                   Encabezado h5 semibold
                 </Typography>
               </td>
@@ -263,7 +263,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h5 class="font-weight-normal"></h5>'}</td>
               <td>Nunito | 24px | 32px | normal </td>
               <td>
-                <Typography className="mb-0" as="h5" weight="font-weight-normal">
+                <Typography className="storybook__margin-typography " as="h5" weight="font-weight-normal">
                   Encabezado h5 normal
                 </Typography>
               </td>
@@ -297,7 +297,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h6 class="font-weight-bold"></h6>'}</td>
               <td>Nunito | 20px | 28px | bold</td>
               <td>
-                <Typography className="mb-0" as="h6" weight="font-weight-bold">
+                <Typography className="storybook__margin-typography " as="h6" weight="font-weight-bold">
                   Encabezado h6 bold
                 </Typography>
               </td>
@@ -306,7 +306,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h6 class="font-weight-semibold"></h6>'}</td>
               <td>Nunito | 20px | 28px </td>
               <td>
-                <Typography className="mb-0" as="h6">
+                <Typography className="storybook__margin-typography " as="h6">
                   Encabezado h6
                 </Typography>
               </td>
@@ -315,7 +315,7 @@ export const Headings = (): JSX.Element => {
               <td>{'<h6 class="font-weight-normal"></h6>'}</td>
               <td>Nunito | 20px | 28px | normal </td>
               <td>
-                <Typography className="mb-0" as="h6" weight="font-weight-normal">
+                <Typography className="storybook__margin-typography " as="h6" weight="font-weight-normal">
                   Encabezado h6 normal
                 </Typography>
               </td>
@@ -326,65 +326,65 @@ export const Headings = (): JSX.Element => {
       {/* h6 */}
 
       {/* 
-      <Typography className="mb-0"  as="h1">h1: Familia tipográfica: Nunito | Tamaño: 40px | Interlineado: 48px.</Typography>
-      <Typography className="mb-0"  as="h1">Este es un texto de encabezado</Typography>
-      <Typography className="mb-0"  as="h1" weight="font-weight-semibold">
+      <Typography className="storybook__margin-typography "  as="h1">h1: Familia tipográfica: Nunito | Tamaño: 40px | Interlineado: 48px.</Typography>
+      <Typography className="storybook__margin-typography "  as="h1">Este es un texto de encabezado</Typography>
+      <Typography className="storybook__margin-typography "  as="h1" weight="font-weight-semibold">
         Este es un texto de encabezado
       </Typography>
-      <Typography className="mb-0"  as="h1" weight="font-weight-normal">
+      <Typography className="storybook__margin-typography "  as="h1" weight="font-weight-normal">
         Este es un texto de encabezado
       </Typography>
       
-      <Typography className="mb-0"  as="h2">h2: Familia tipográfica: Nunito | Tamaño: 36px | Interlineado: 44px.</Typography>
-      <Typography className="mb-0"  as="h2" weight="font-weight-bold">
+      <Typography className="storybook__margin-typography "  as="h2">h2: Familia tipográfica: Nunito | Tamaño: 36px | Interlineado: 44px.</Typography>
+      <Typography className="storybook__margin-typography "  as="h2" weight="font-weight-bold">
         Este es un texto de encabezado
       </Typography>
-      <Typography className="mb-0"  as="h2">Este es un texto de encabezado</Typography>
-      <Typography className="mb-0"  as="h2" weight="font-weight-normal">
-        Este es un texto de encabezado
-      </Typography>
-
-      <hr className="mt-5" />
-
-      <Typography className="mb-0"  as="h3">h3: Familia tipográfica: Nunito | Tamaño: 32px | Interlineado: 44px.</Typography>
-      <Typography className="mb-0"  as="h3" weight="font-weight-bold">
-        Este es un texto de encabezado
-      </Typography>
-      <Typography className="mb-0"  as="h3">Este es un texto de encabezado</Typography>
-      <Typography className="mb-0"  as="h3" weight="font-weight-normal">
+      <Typography className="storybook__margin-typography "  as="h2">Este es un texto de encabezado</Typography>
+      <Typography className="storybook__margin-typography "  as="h2" weight="font-weight-normal">
         Este es un texto de encabezado
       </Typography>
 
       <hr className="mt-5" />
 
-      <Typography className="mb-0"  as="h4">h4: Familia tipográfica: Nunito | Tamaño: 28px | Interlineado: 36px.</Typography>
-      <Typography className="mb-0"  as="h4" weight="font-weight-bold">
+      <Typography className="storybook__margin-typography "  as="h3">h3: Familia tipográfica: Nunito | Tamaño: 32px | Interlineado: 44px.</Typography>
+      <Typography className="storybook__margin-typography "  as="h3" weight="font-weight-bold">
         Este es un texto de encabezado
       </Typography>
-      <Typography className="mb-0"  as="h4">Este es un texto de encabezado</Typography>
-      <Typography className="mb-0"  as="h4" weight="font-weight-normal">
-        Este es un texto de encabezado
-      </Typography>
-
-      <hr className="mt-5" />
-
-      <Typography className="mb-0"  as="h5">h5: Familia tipográfica: Nunito | Tamaño: 24px | Interlineado: 32px.</Typography>
-      <Typography className="mb-0"  as="h5">Este es un texto de encabezado</Typography>
-      <Typography className="mb-0"  as="h5" weight="font-weight-semibold">
-        Este es un texto de encabezado
-      </Typography>
-      <Typography className="mb-0"  as="h5" weight="font-weight-normal">
+      <Typography className="storybook__margin-typography "  as="h3">Este es un texto de encabezado</Typography>
+      <Typography className="storybook__margin-typography "  as="h3" weight="font-weight-normal">
         Este es un texto de encabezado
       </Typography>
 
       <hr className="mt-5" />
 
-      <Typography className="mb-0"  as="h6">h6: Familia tipográfica: Nunito | Tamaño: 20px | Interlineado: 28px.</Typography>
-      <Typography className="mb-0"  as="h6" weight="font-weight-bold">
+      <Typography className="storybook__margin-typography "  as="h4">h4: Familia tipográfica: Nunito | Tamaño: 28px | Interlineado: 36px.</Typography>
+      <Typography className="storybook__margin-typography "  as="h4" weight="font-weight-bold">
         Este es un texto de encabezado
       </Typography>
-      <Typography className="mb-0"  as="h6">Este es un texto de encabezado</Typography>
-      <Typography className="mb-0"  as="h6" weight="font-weight-normal">
+      <Typography className="storybook__margin-typography "  as="h4">Este es un texto de encabezado</Typography>
+      <Typography className="storybook__margin-typography "  as="h4" weight="font-weight-normal">
+        Este es un texto de encabezado
+      </Typography>
+
+      <hr className="mt-5" />
+
+      <Typography className="storybook__margin-typography "  as="h5">h5: Familia tipográfica: Nunito | Tamaño: 24px | Interlineado: 32px.</Typography>
+      <Typography className="storybook__margin-typography "  as="h5">Este es un texto de encabezado</Typography>
+      <Typography className="storybook__margin-typography "  as="h5" weight="font-weight-semibold">
+        Este es un texto de encabezado
+      </Typography>
+      <Typography className="storybook__margin-typography "  as="h5" weight="font-weight-normal">
+        Este es un texto de encabezado
+      </Typography>
+
+      <hr className="mt-5" />
+
+      <Typography className="storybook__margin-typography "  as="h6">h6: Familia tipográfica: Nunito | Tamaño: 20px | Interlineado: 28px.</Typography>
+      <Typography className="storybook__margin-typography "  as="h6" weight="font-weight-bold">
+        Este es un texto de encabezado
+      </Typography>
+      <Typography className="storybook__margin-typography "  as="h6">Este es un texto de encabezado</Typography>
+      <Typography className="storybook__margin-typography "  as="h6" weight="font-weight-normal">
         Este es un texto de encabezado
       </Typography> */}
     </>
@@ -427,7 +427,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 20px | 24px </td>
               <td>
-                <Typography as="p" className="mb-0 headline-lg ">
+                <Typography as="p" className="storybook__margin-typography  headline-lg ">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -438,7 +438,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 18px | 28px | semibold</td>
               <td>
-                <Typography as="p" className="mb-0 headline-lg font-weight-semibold">
+                <Typography as="p" className="storybook__margin-typography  headline-lg font-weight-semibold">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -449,7 +449,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 18px | 28px | bold </td>
               <td>
-                <Typography as="p" className="mb-0 headline-lg font-weight-bold">
+                <Typography as="p" className="storybook__margin-typography  headline-lg font-weight-bold">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -460,7 +460,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Open Sans | 18px | 28px | italic </td>
               <td>
-                <Typography as="p" className="mb-0 headline-lg font-italic">
+                <Typography as="p" className="storybook__margin-typography  headline-lg font-italic">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -471,7 +471,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Open Sans | 18px | 28px | underline </td>
               <td>
-                <Typography as="p" className="mb-0 headline-lg underline-1">
+                <Typography as="p" className="storybook__margin-typography  headline-lg underline-1">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -505,7 +505,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 18px | 24px </td>
               <td>
-                <Typography as="p" className="mb-0 headline-md ">
+                <Typography as="p" className="storybook__margin-typography  headline-md ">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -516,7 +516,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 18px | 24px | semibold</td>
               <td>
-                <Typography as="p" className="mb-0 headline-md font-weight-semibold">
+                <Typography as="p" className="storybook__margin-typography  headline-md font-weight-semibold">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -527,7 +527,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 18px | 24px | bold </td>
               <td>
-                <Typography as="p" className="mb-0 headline-md font-weight-bold">
+                <Typography as="p" className="storybook__margin-typography  headline-md font-weight-bold">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -538,7 +538,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 18px | 24px | italic </td>
               <td>
-                <Typography as="p" className="mb-0 headline-md font-italic">
+                <Typography as="p" className="storybook__margin-typography  headline-md font-italic">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -549,7 +549,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 18px | 24px | underline </td>
               <td>
-                <Typography as="p" className="mb-0 headline-md underline-1">
+                <Typography as="p" className="storybook__margin-typography  headline-md underline-1">
                   Esto es un texto de titulares
                 </Typography>
               </td>
@@ -584,7 +584,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px </td>
               <td>
-                <Typography as="p" className="mb-0 text-sm ">
+                <Typography as="p" className="storybook__margin-typography  text-sm ">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -595,7 +595,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px | semibold</td>
               <td>
-                <Typography as="p" className="mb-0 text-sm font-weight-semibold">
+                <Typography as="p" className="storybook__margin-typography  text-sm font-weight-semibold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -606,7 +606,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px | bold </td>
               <td>
-                <Typography as="p" className="mb-0 text-sm font-weight-bold">
+                <Typography as="p" className="storybook__margin-typography  text-sm font-weight-bold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -617,7 +617,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px | italic </td>
               <td>
-                <Typography as="p" className="mb-0 text-sm font-italic">
+                <Typography as="p" className="storybook__margin-typography  text-sm font-italic">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -628,7 +628,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px | underline </td>
               <td>
-                <Typography as="p" className="mb-0 text-sm underline-1">
+                <Typography as="p" className="storybook__margin-typography  text-sm underline-1">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -677,7 +677,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 20px | 28px </td>
               <td>
-                <Typography as="p" className="mb-0 text-xl ">
+                <Typography as="p" className="storybook__margin-typography  text-xl ">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -688,7 +688,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 20px | 28px | semibold</td>
               <td>
-                <Typography as="p" className="mb-0 text-xl font-weight-semibold">
+                <Typography as="p" className="storybook__margin-typography  text-xl font-weight-semibold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -699,7 +699,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 20px | 28px | bold </td>
               <td>
-                <Typography as="p" className="mb-0 text-xl font-weight-bold">
+                <Typography as="p" className="storybook__margin-typography  text-xl font-weight-bold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -710,7 +710,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 20px | 28px | italic </td>
               <td>
-                <Typography as="p" className="mb-0 text-xl font-italic">
+                <Typography as="p" className="storybook__margin-typography  text-xl font-italic">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -721,7 +721,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 20px | 28px | underline </td>
               <td>
-                <Typography as="p" className="mb-0 text-xl underline-1">
+                <Typography as="p" className="storybook__margin-typography  text-xl underline-1">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -756,7 +756,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 18px | 28px </td>
               <td>
-                <Typography as="p" className="mb-0 text-lg ">
+                <Typography as="p" className="storybook__margin-typography  text-lg ">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -767,7 +767,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 18px | 28px | semibold</td>
               <td>
-                <Typography as="p" className="mb-0 text-lg font-weight-semibold">
+                <Typography as="p" className="storybook__margin-typography  text-lg font-weight-semibold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -778,7 +778,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 18px | 28px | bold </td>
               <td>
-                <Typography as="p" className="mb-0 text-lg font-weight-bold">
+                <Typography as="p" className="storybook__margin-typography  text-lg font-weight-bold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -789,7 +789,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 18px | 28px | italic </td>
               <td>
-                <Typography as="p" className="mb-0 text-lg font-italic">
+                <Typography as="p" className="storybook__margin-typography  text-lg font-italic">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -800,7 +800,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 18px | 28px | underline </td>
               <td>
-                <Typography as="p" className="mb-0 text-lg underline-1">
+                <Typography as="p" className="storybook__margin-typography  text-lg underline-1">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -835,7 +835,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 16px | 24px </td>
               <td>
-                <Typography as="p" className="mb-0 text-md ">
+                <Typography as="p" className="storybook__margin-typography  text-md ">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -846,7 +846,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 16px | 24px | semibold</td>
               <td>
-                <Typography as="p" className="mb-0 text-md font-weight-semibold">
+                <Typography as="p" className="storybook__margin-typography  text-md font-weight-semibold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -857,7 +857,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 16px | 24px | bold </td>
               <td>
-                <Typography as="p" className="mb-0 text-md font-weight-bold">
+                <Typography as="p" className="storybook__margin-typography  text-md font-weight-bold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -868,7 +868,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 16px | 24px | italic </td>
               <td>
-                <Typography as="p" className="mb-0 text-md font-italic">
+                <Typography as="p" className="storybook__margin-typography  text-md font-italic">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -879,7 +879,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 16px | 24px | underline </td>
               <td>
-                <Typography as="p" className="mb-0 text-md underline-1">
+                <Typography as="p" className="storybook__margin-typography  text-md underline-1">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -914,7 +914,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 14px | 20px </td>
               <td>
-                <Typography as="p" className="mb-0 text-sm ">
+                <Typography as="p" className="storybook__margin-typography  text-sm ">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -925,7 +925,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 14px | 20px | semibold</td>
               <td>
-                <Typography as="p" className="mb-0 text-sm font-weight-semibold">
+                <Typography as="p" className="storybook__margin-typography  text-sm font-weight-semibold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -936,7 +936,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 14px | 20px | bold </td>
               <td>
-                <Typography as="p" className="mb-0 text-sm font-weight-bold">
+                <Typography as="p" className="storybook__margin-typography  text-sm font-weight-bold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -947,7 +947,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 14px | 20px | italic </td>
               <td>
-                <Typography as="p" className="mb-0 text-sm font-italic">
+                <Typography as="p" className="storybook__margin-typography  text-sm font-italic">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -958,7 +958,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 14px | 20px | underline </td>
               <td>
-                <Typography as="p" className="mb-0 text-sm underline-1">
+                <Typography as="p" className="storybook__margin-typography  text-sm underline-1">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -993,7 +993,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 12px | 16px </td>
               <td>
-                <Typography as="p" className="mb-0 text-xs ">
+                <Typography as="p" className="storybook__margin-typography  text-xs ">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -1004,7 +1004,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 12px | 16px | semibold</td>
               <td>
-                <Typography as="p" className="mb-0 text-xs font-weight-semibold">
+                <Typography as="p" className="storybook__margin-typography  text-xs font-weight-semibold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -1015,7 +1015,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 12px | 16px | bold </td>
               <td>
-                <Typography as="p" className="mb-0 text-xs font-weight-bold">
+                <Typography as="p" className="storybook__margin-typography  text-xs font-weight-bold">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -1026,7 +1026,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 12px | 16px | italic </td>
               <td>
-                <Typography as="p" className="mb-0 text-xs font-italic">
+                <Typography as="p" className="storybook__margin-typography  text-xs font-italic">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
@@ -1037,7 +1037,7 @@ export const Text = (): JSX.Element => {
               </td>
               <td> Open Sans | 12px | 16px | underline </td>
               <td>
-                <Typography as="p" className="mb-0 text-xs underline-1">
+                <Typography as="p" className="storybook__margin-typography  text-xs underline-1">
                   Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
                 </Typography>
               </td>
