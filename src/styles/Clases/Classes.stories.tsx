@@ -504,14 +504,50 @@ export const Columns = (): JSX.Element => {
 
 Columns.story = { name: 'Columnas' };
 
-export const AlignAndOrder = (): JSX.Element => {
+export const Order = (): JSX.Element => {
   return <></>;
 };
 
-AlignAndOrder.story = { name: 'Align y Order' };
+Order.story = { name: 'Orden' };
 
 export const Border = (): JSX.Element => {
   return <></>;
 };
 
 Border.story = { name: 'Bordes' };
+
+export const Container = (): JSX.Element => {
+  return <></>;
+};
+
+Container.story = { name: 'Contenedor' };
+
+export const Align = (): JSX.Element => {
+  return <></>;
+};
+
+Align.story = { name: 'Alinear' };
+
+export const Gap = (): JSX.Element => {
+  return <></>;
+};
+
+Gap.story = { name: 'Gap' };
+
+export const Visiblity = (): JSX.Element => {
+  return <></>;
+};
+
+Visiblity.story = { name: 'Visibilidad' };
+
+export const Accesiblity = (): JSX.Element => {
+  return <></>;
+};
+
+Accesiblity.story = { name: 'Accesibilidad' };
+
+export const Text = (): JSX.Element => {
+  return <></>;
+};
+
+Text.story = { name: 'Texto' };
