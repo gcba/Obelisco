@@ -1,12 +1,15 @@
+.storybook_container-columns div{
+  overflow-x: hidden;
+}
 
 table {
   tbody {
     tr {
       td {
-      border: 1px solid gray;
+        border: 1px solid gray;
         p {
           background-color: #ffdb2e;
-          border-radius: 2px;
+          // border-radius: 2px;
         }
       }
     }
