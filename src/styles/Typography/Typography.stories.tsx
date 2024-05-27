@@ -3,50 +3,14 @@ import React from 'react';
 import './Typography.stories.scss';
 
 // Addons
+import { withA11y } from '@storybook/addon-a11y';
 import { Typography, Blockquote, UnorderedList, ListItem, OrderedList } from '.';
 
 // Configuración general del componente
 export default {
   title: 'Estilos|Tipografía',
-  parameters: { options: { showPanel: false } }
+  decorators: [withA11y]
 };
-
-// export const Headings = (): JSX.Element => {
-//   const [isMobile, setIsMobile] = useState(false);
-
-//   useEffect(() => {
-//     function handleResize() {
-//       setIsMobile(window.innerWidth < 592);
-//     }
-//     window.addEventListener('resize', handleResize);
-//     handleResize();
-//     return () => window.removeEventListener('resize', handleResize);
-//   }, []);
-
-//   return (
-//     <>
-//       <h1>H1 - Nunito Bold 37px</h1>
-//       <h2>H2 - Nunito Semibold 28px</h2>
-//       <h3>H3 - Nunito Semibold 21px</h3>
-//       <h4>H4 - Nunito {isMobile ? 'Semibold' : 'Bold'} 19px</h4>
-//       <h5>H5 - Nunito Semibold 17px</h5>
-//       <h6>H6 - Open Sans Bold 16px</h6>
-
-//       <hr />
-
-//       <Typography className="mb-0"  as="h1" weight="font-weight-bold">
-//         H1 - Nunito Bold 40px
-//       </Typography>
-//       <Typography className="mb-0"  as="h2">H2 - Nunito Semibold 36px</Typography>
-//       <Typography className="mb-0"  as="h3">H3 - Nunito Semibold 32px</Typography>
-//       <Typography className="mb-0"  as="h4">H4 - Nunito 28px</Typography>
-//       <Typography className="mb-0"  as="h5">H5 - Nunito Semibold 24px</Typography>
-//       <Typography className="mb-0"  as="h6">H6 - Open Sans Bold ?</Typography>
-//     </>
-//   );
-// };
-
-// Headings.story = { name: 'Títulos' };
 
 export const Headings = (): JSX.Element => {
   return (
@@ -102,7 +66,7 @@ export const Headings = (): JSX.Element => {
       {/* h1 */}
 
       {/* h2 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h2</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -154,7 +118,7 @@ export const Headings = (): JSX.Element => {
       {/* h2 */}
 
       {/* h3 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h3</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -206,7 +170,7 @@ export const Headings = (): JSX.Element => {
       {/* h3 */}
 
       {/* h4 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h4</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -258,7 +222,7 @@ export const Headings = (): JSX.Element => {
       {/* h4 */}
 
       {/* h5 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h5</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -310,7 +274,7 @@ export const Headings = (): JSX.Element => {
       {/* h5 */}
 
       {/* h6 */}
-      <hr />
+      <hr className="mt-5" />
       <p className="headline-lg font-weight-bold">Encabezado h6</p>
 
       <div className="responsive-scroll" tabIndex={0}>
@@ -380,7 +344,7 @@ export const Headings = (): JSX.Element => {
         Este es un texto de encabezado
       </Typography>
 
-      <hr />
+      <hr className="mt-5" />
 
       <Typography className="mb-0"  as="h3">h3: Familia tipográfica: Nunito | Tamaño: 32px | Interlineado: 44px.</Typography>
       <Typography className="mb-0"  as="h3" weight="font-weight-bold">
@@ -391,7 +355,7 @@ export const Headings = (): JSX.Element => {
         Este es un texto de encabezado
       </Typography>
 
-      <hr />
+      <hr className="mt-5" />
 
       <Typography className="mb-0"  as="h4">h4: Familia tipográfica: Nunito | Tamaño: 28px | Interlineado: 36px.</Typography>
       <Typography className="mb-0"  as="h4" weight="font-weight-bold">
@@ -402,7 +366,7 @@ export const Headings = (): JSX.Element => {
         Este es un texto de encabezado
       </Typography>
 
-      <hr />
+      <hr className="mt-5" />
 
       <Typography className="mb-0"  as="h5">h5: Familia tipográfica: Nunito | Tamaño: 24px | Interlineado: 32px.</Typography>
       <Typography className="mb-0"  as="h5">Este es un texto de encabezado</Typography>
@@ -413,7 +377,7 @@ export const Headings = (): JSX.Element => {
         Este es un texto de encabezado
       </Typography>
 
-      <hr />
+      <hr className="mt-5" />
 
       <Typography className="mb-0"  as="h6">h6: Familia tipográfica: Nunito | Tamaño: 20px | Interlineado: 28px.</Typography>
       <Typography className="mb-0"  as="h6" weight="font-weight-bold">
@@ -427,96 +391,14 @@ export const Headings = (): JSX.Element => {
   );
 };
 
-Headings.story = { name: 'Títulos' };
-
-// export const SubTitle = (): JSX.Element => {
-//   return (
-//     <>
-//       <p className="lead">Open Sans Regular 19px</p>
-
-//       <hr />
-
-//       <Typography className="mb-0"  as="p" className="lead" weight="font-weight-bold">
-//         Open Sans Regular 19px
-//       </Typography>
-//       <Typography className="mb-0"  as="p" className="lead" weight="font-weight-semibold">
-//         Open Sans Regular 19px
-//       </Typography>
-//       <Typography className="mb-0"  as="p" className="lead" weight="font-weight-normal">
-//         Open Sans Regular 19px
-//       </Typography>
-//     </>
-//   );
-// };
-
-// SubTitle.story = { name: 'Subtítulo' };
-
-// export const Texts = (): JSX.Element => {
-//   return (
-//     <>
-//       <p>Open Sans Regular 16px</p>
-//       <small>Open Sans Regular 13px</small>
-
-//       <hr></hr>
-
-//       <Typography className="mb-0"  as="p" weight="font-weight-bold">
-//         Open Sans Regular 16px
-//       </Typography>
-//       <Typography className="mb-0"  as="p" weight="font-weight-semibold">
-//         Open Sans Regular 16px
-//       </Typography>
-//       <Typography className="mb-0"  as="p" weight="font-weight-normal">
-//         Open Sans Regular 16px
-//       </Typography>
-
-//       <hr></hr>
-
-//       <Typography className="mb-0"  as="small" weight="font-weight-bold">
-//         Open Sans Regular 13px
-//       </Typography>
-
-//       <br />
-
-//       <Typography className="mb-0"  as="small" weight="font-weight-semibold">
-//         Open Sans Regular 13px
-//       </Typography>
-
-//       <br />
-
-//       <Typography className="mb-0"  as="small" weight="font-weight-normal">
-//         Open Sans Regular 13px
-//       </Typography>
-//     </>
-//   );
-// };
-
-// Texts.story = { name: 'Párrafo' };
-
-// export const Epigraphs = (): JSX.Element => {
-//   return (
-//     <>
-//       <p className="text-xs">Open Sans Regular 11.7px</p>
-
-//       <hr />
-
-//       <Typography className="mb-0"  as="p" className="text-xs" weight="font-weight-bold">
-//         Open Sans Regular 11.7px
-//       </Typography>
-
-//       <Typography className="mb-0"  as="p" className="text-xs" weight="font-weight-semibold">
-//         Open Sans Regular 11.7px
-//       </Typography>
-
-//       <Typography className="mb-0"  as="p" className="text-xs" weight="font-weight-normal">
-//         Open Sans Regular 11.7px
-//       </Typography>
-//     </>
-//   );
-// };
-
-// Epigraphs.story = {
-//   name: 'Epígrafe'
-// };
+Headings.story = {
+  name: 'Títulos',
+  parameters: {
+    options: {
+      showAddonPanel: false
+    }
+  }
+};
 
 export const Tag = (): JSX.Element => {
   return (
@@ -677,7 +559,7 @@ export const Tag = (): JSX.Element => {
       </div>
       {/* Titulares M */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Titulares S */}
       <p className="headline-lgg font-weight-bold">Titulares S</p>
       <div className="responsive-scroll" tabIndex={0}>
@@ -759,7 +641,14 @@ export const Tag = (): JSX.Element => {
   );
 };
 
-Tag.story = { name: 'Titulares' };
+Tag.story = {
+  name: 'Titulares',
+  parameters: {
+    options: {
+      showAddonPanel: false
+    }
+  }
+};
 
 export const Text = (): JSX.Element => {
   return (
@@ -842,7 +731,7 @@ export const Text = (): JSX.Element => {
       </div>
       {/* Cuerpo XL */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Cuerpo L */}
       <p className="headline-lg font-weight-bold">Cuerpo L</p>
       <div className="responsive-scroll" tabIndex={0}>
@@ -921,7 +810,7 @@ export const Text = (): JSX.Element => {
       </div>
       {/* Cuerpo L */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Cuerpo M */}
       <p className="headline-lg font-weight-bold">Cuerpo M</p>
       <div className="responsive-scroll" tabIndex={0}>
@@ -1000,7 +889,7 @@ export const Text = (): JSX.Element => {
       </div>
       {/* Cuerpo M */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Cuerpo S */}
       <p className="headline-lg font-weight-bold">Cuerpo S</p>
       <div className="responsive-scroll" tabIndex={0}>
@@ -1079,7 +968,7 @@ export const Text = (): JSX.Element => {
       </div>
       {/* Cuerpo S */}
 
-      <hr />
+      <hr className="mt-5" />
       {/* Cuerpo XS */}
       <p className="headline-lg font-weight-bold">Cuerpo XS</p>
       <div className="responsive-scroll" tabIndex={0}>
@@ -1161,7 +1050,14 @@ export const Text = (): JSX.Element => {
   );
 };
 
-Text.story = { name: 'Cuerpos' };
+Text.story = {
+  name: 'Cuerpos',
+  parameters: {
+    options: {
+      showAddonPanel: false
+    }
+  }
+};
 
 export const Quote = (): JSX.Element => {
   return (
