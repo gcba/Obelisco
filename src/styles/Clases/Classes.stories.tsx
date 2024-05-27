@@ -322,7 +322,182 @@ export const SizesAndSpacing = (): JSX.Element => {
 SizesAndSpacing.story = { name: 'Tamaños y Espaciados' };
 
 export const Columns = (): JSX.Element => {
-  return <></>;
+  return (
+    <>
+      {/* Columnas - Margin*/}
+      <p className="headline-lg font-weight-bold">Columnas</p>
+      <div className="responsive-scroll" tabIndex={0}>
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col" className="tb-text">
+                Extra small | {'<576px'}
+              </th>
+              <th scope="col" className="tb-text">
+                Small | {'≥576px'}
+              </th>
+              <th scope="col" className="tb-text">
+                Medium | {'≥768px'}
+              </th>
+              <th scope="col" className="tb-text">
+                Large | {'≥992px'}
+              </th>
+              <th scope="col" className="tb-text">
+                Extra large | {'≥1200px'}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* 1 */}
+            <tr>
+              <td>
+                <p className="storybook__margin-typography col-1">{'.col-1'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-sm-1">{'.col-sm-1'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-md-1">{'.col-md-1'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-lg-1">{'.col-lg-1'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-xl-1">{'.col-xl-1'}</p>
+              </td>
+            </tr>
+            {/* 2 */}
+            <tr>
+              <td>
+                <p className="storybook__margin-typography col-2">{'.col-2'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-sm-2">{'.col-sm-2'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-md-2">{'.col-md-2'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-lg-2">{'.col-lg-2'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-xl-2">{'.col-xl-2'}</p>
+              </td>
+            </tr>
+            {/* 3 */}
+            <tr>
+              <td>
+                <p className="storybook__margin-typography col-3">{'.col-3'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-sm-3">{'.col-sm-3'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-md-3">{'.col-md-3'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-lg-3">{'.col-lg-3'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-xl-3">{'.col-xl-3'}</p>
+              </td>
+            </tr>
+            {/* 4 */}
+            <tr>
+              <td>
+                <p className="storybook__margin-typography col-4">{'.col-4'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-sm-4">{'.col-sm-4'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-md-4">{'.col-md-4'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-lg-4">{'.col-lg-4'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-xl-4">{'.col-xl-4'}</p>
+              </td>
+            </tr>
+            {/* 5 */}
+            <tr>
+              <td>
+                <p className="storybook__margin-typography col-5">{'.col-5'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-sm-5">{'.col-sm-5'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-md-5">{'.col-md-5'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-lg-5">{'.col-lg-5'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-xl-5">{'.col-xl-5'}</p>
+              </td>
+            </tr>
+            {/* 6 */}
+            <tr>
+              <td>
+                <p className="storybook__margin-typography col-6">{'.col-6'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-sm-6">{'.col-sm-6'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-md-6">{'.col-md-6'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-lg-6">{'.col-lg-6'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-xl-6">{'.col-xl-6'}</p>
+              </td>
+            </tr>
+            {/* 7 */}
+            <tr>
+              <td>
+                <p className="storybook__margin-typography col-7">{'.col-7'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-sm-7">{'.col-sm-7'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-md-7">{'.col-md-7'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-lg-7">{'.col-lg-7'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-xl-7">{'.col-xl-7'}</p>
+              </td>
+            </tr>
+            {/* 8 */}
+            <tr>
+              <td>
+                <p className="storybook__margin-typography col-8">{'.col-8'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-sm-8">{'.col-sm-8'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-md-8">{'.col-md-8'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-lg-8">{'.col-lg-8'}</p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography col-xl-8">{'.col-xl-8'}</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      {/* Columnas - Margin*/}
+    </>
+  );
 };
 
 Columns.story = { name: 'Columnas' };
