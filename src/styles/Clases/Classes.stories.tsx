@@ -493,6 +493,78 @@ export const Columns = (): JSX.Element => {
                   <p className="storybook__margin-typography ">{'.col-xl-8'}</p>
                 </td>
               </tr>
+              {/* 9 */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-9'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-sm-9'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-md-9'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-lg-9'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-xl-9'}</p>
+                </td>
+              </tr>
+              {/* 10 */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-10'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-sm-10'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-md-10'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-lg-10'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-xl-10'}</p>
+                </td>
+              </tr>
+              {/* 11 */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-11'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-sm-11'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-md-11'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-lg-11'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-xl-11'}</p>
+                </td>
+              </tr>
+              {/* 12 */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-12'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-sm-12'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-md-12'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-lg-12'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.col-xl-12'}</p>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
