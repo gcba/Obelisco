@@ -6,7 +6,7 @@
 Obelisco es el nuevo sistema de diseño basado en componentes para los productos digitales de la ciudad de Buenos Aires.
 Fue creado para reemplazar [BAstrap](https://github.com/gcba/bastrap).
 
-### [Ver la documentación de componentes](https://gcba.github.io/estandares/componentes/web//)
+### [Ver la documentación de componentes](https://gcba.github.io/estandares/componentes/acceso/)
 
 ## Cómo usarlo
 
