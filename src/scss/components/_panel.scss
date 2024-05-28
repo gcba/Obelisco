@@ -192,7 +192,8 @@ $panel-deck-card-mr: 2rem;
     .card-body {
       padding: 0;
       .card-title {
-        @extend .h3;
+        @extend .headline-lg;
+        font-weight: $font-weight-semibold;
         margin: 0;
       }
 
@@ -258,6 +259,8 @@ $panel-deck-card-mr: 2rem;
 
       .list-link-item-title {
         margin-bottom: spaceUnits(4);
+        @extend .headline-md;
+        font-weight: $font-weight-bold;
 
         &:has(+ .btn.card-link) {
           margin-bottom: -(spaceUnits(2));
