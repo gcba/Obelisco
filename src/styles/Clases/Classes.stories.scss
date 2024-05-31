@@ -1,4 +1,6 @@
-.storybook_container-columns td {
+.storybook_container-columns td,
+.storybook_container td,
+.storybook_container-containers td {
   border: 1px solid gray;
 }
 
@@ -8,7 +10,6 @@
 }
 
 .storybook_container-border span {
-  // background-color: #f2f2f2;
   width: 50px;
   height: 50px;
 }
@@ -16,3 +17,9 @@
 .storybook_container-sizes div p {
   background-color: #ffdb2e;
 }
+
+.storybook_container-containers .table thead th.tb-text {
+  min-width: fit-content;
+  max-width: 200px;
+}
+
