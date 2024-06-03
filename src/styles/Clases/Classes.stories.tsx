@@ -1270,13 +1270,79 @@ export const Visiblity = (): JSX.Element => {
 Visiblity.story = { name: 'Visibilidad' };
 
 export const Accesiblity = (): JSX.Element => {
-  return <></>;
+  return (
+    <>
+      <div className="storybook_container-display">
+        {/* Display */}
+        <p className="headline-lg font-weight-bold">Accesibilidad</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col" colSpan={5} className="tb-text ">
+                  Accesibilidad
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* container */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.sr-only'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Display */}
+      </div>
+    </>
+  );
 };
 
 Accesiblity.story = { name: 'Accesibilidad' };
 
 export const Text = (): JSX.Element => {
-  return <></>;
+  return (
+    <>
+      <div className="storybook_container-display">
+        {/* Display */}
+        <p className="headline-lg font-weight-bold">Texto</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col" colSpan={5} className="tb-text ">
+                  Texto
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* container */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.text-left'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.text-center'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.text-right'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.d-block'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.d-table'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Display */}
+      </div>
+    </>
+  );
 };
 
 Text.story = { name: 'Texto' };
