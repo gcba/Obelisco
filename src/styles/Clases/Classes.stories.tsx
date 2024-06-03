@@ -1264,7 +1264,37 @@ export const Gap = (): JSX.Element => {
 Gap.story = { name: 'Gap' };
 
 export const Visiblity = (): JSX.Element => {
-  return <></>;
+  return (
+    <>
+      <div className="storybook_container-text">
+        {/* Visibilidad */}
+        <p className="headline-lg font-weight-bold">Visibilidad</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col" colSpan={5} className="tb-text ">
+                  Visibilidad
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* container */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.visible'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.invisible'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Visibilidad */}
+      </div>
+    </>
+  );
 };
 
 Visiblity.story = { name: 'Visibilidad' };
@@ -1305,8 +1335,8 @@ Accesiblity.story = { name: 'Accesibilidad' };
 export const Text = (): JSX.Element => {
   return (
     <>
-      <div className="storybook_container-display">
-        {/* Display */}
+      <div className="storybook_container-text">
+        {/* Texto */}
         <p className="headline-lg font-weight-bold">Texto</p>
         <div className="responsive-scroll" tabIndex={0}>
           <table className="table">
@@ -1339,7 +1369,7 @@ export const Text = (): JSX.Element => {
             </tbody>
           </table>
         </div>
-        {/* Display */}
+        {/* Texto */}
       </div>
     </>
   );
