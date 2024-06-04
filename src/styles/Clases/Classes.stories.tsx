@@ -160,6 +160,34 @@ export const SizesAndSpacing = (): JSX.Element => {
                   <p className="storybook__margin-typography ml-8">{'.ml-8'}</p>
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography mt-8">{'.mt-8'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography mr-8">{'.mr-8'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography mb-8">{'.mb-8'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ml-8">{'.ml-8'}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography mt-8">{'.mt-8'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography mr-8">{'.mr-8'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography mb-8">{'.mb-8'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ml-8">{'.ml-8'}</p>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1170,6 +1198,36 @@ export const Alignments = (): JSX.Element => {
           </table>
         </div>
         {/* Alineamiento Horizontal */}
+
+        {/* Alineamiento de Texto */}
+        <p className="headline-lg font-weight-bold mt-4">Alineamiento de Texto</p>
+        <p>El alineamiento de texto funciona en cualquier elemento tenga o no Flex Box/Grid</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col" colSpan={5} className="tb-text ">
+                  Texto
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* container */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.text-left'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.text-center'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.text-right'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Alineamiento de Texto */}
       </div>
     </>
   );
@@ -1332,47 +1390,41 @@ export const Accesiblity = (): JSX.Element => {
 
 Accesiblity.story = { name: 'Accesibilidad' };
 
-export const Text = (): JSX.Element => {
-  return (
-    <>
-      <div className="storybook_container-text">
-        {/* Texto */}
-        <p className="headline-lg font-weight-bold">Texto</p>
-        <div className="responsive-scroll" tabIndex={0}>
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col" colSpan={5} className="tb-text ">
-                  Texto
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* container */}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.text-left'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.text-center'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.text-right'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.d-block'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.d-table'}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        {/* Texto */}
-      </div>
-    </>
-  );
-};
+// export const Text = (): JSX.Element => {
+//   return (
+//     <>
+//       <div className="storybook_container-text">
+//         {/* Texto */}
+//         <p className="headline-lg font-weight-bold">Texto</p>
+//         <div className="responsive-scroll" tabIndex={0}>
+//           <table className="table">
+//             <thead>
+//               <tr>
+//                 <th scope="col" colSpan={5} className="tb-text ">
+//                   Texto
+//                 </th>
+//               </tr>
+//             </thead>
+//             <tbody>
+//               {/* container */}
+//               <tr>
+//                 <td>
+//                   <p className="storybook__margin-typography ">{'.text-left'}</p>
+//                 </td>
+//                 <td>
+//                   <p className="storybook__margin-typography ">{'.text-center'}</p>
+//                 </td>
+//                 <td>
+//                   <p className="storybook__margin-typography ">{'.text-right'}</p>
+//                 </td>
+//               </tr>
+//             </tbody>
+//           </table>
+//         </div>
+//         {/* Texto */}
+//       </div>
+//     </>
+//   );
+// };
 
-Text.story = { name: 'Texto' };
+// Text.story = { name: 'Texto' };
