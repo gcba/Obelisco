@@ -351,6 +351,177 @@ export const SizesAndSpacing = (): JSX.Element => {
 
 SizesAndSpacing.story = { name: 'Tamaños y Espaciados' };
 
+export const Containers = (): JSX.Element => {
+  return (
+    <>
+      <div className="storybook_container-containers">
+        {/* Containers */}
+        <p className="headline-lg font-weight-bold">Containers</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col" className="tb-text "></th>
+                <th scope="col" className="tb-text">
+                  Extra small | {'<576px'}
+                </th>
+                <th scope="col" className="tb-text">
+                  Small | {'≥576px'}
+                </th>
+                <th scope="col" className="tb-text">
+                  Medium | {'≥768px'}
+                </th>
+                <th scope="col" className="tb-text">
+                  Large | {'≥992px'}
+                </th>
+                <th scope="col" className="tb-text">
+                  Extra large | {'≥1200px'}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* container */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.container'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'540px'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'720px'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'960px'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'1140px'}</p>
+                </td>
+              </tr>
+
+              {/* .container-sm*/}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.container-sm'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'540px'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'720px'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'960px'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'1140px'}</p>
+                </td>
+              </tr>
+
+              {/* .container-md*/}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.container-md'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'720px'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'960px'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'1140px'}</p>
+                </td>
+              </tr>
+
+              {/* .container-lg*/}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.container-lg'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'960px'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'1140px'}</p>
+                </td>
+              </tr>
+
+              {/* .container-xl*/}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.container-xl'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'1140px'}</p>
+                </td>
+              </tr>
+
+              {/* .container-fluid*/}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.container-fluid'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'100%'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Containers */}
+      </div>
+    </>
+  );
+};
+
+Containers.story = { name: 'Contenedores' };
+
 export const Columns = (): JSX.Element => {
   return (
     <>
@@ -606,169 +777,304 @@ export const Columns = (): JSX.Element => {
 
 Columns.story = { name: 'Columnas' };
 
-export const Order = (): JSX.Element => {
+export const DisplayAndPosition = (): JSX.Element => {
   return (
     <>
-      {/* Order */}
-      <p className="headline-lg font-weight-bold ">Order | 1 - 12</p>
-      <p>
-        Las clases <strong>.first</strong> y <strong>.last</strong> ponen a un elemento <strong>al principio</strong> y
-        al <strong>final</strong>.
-      </p>
-      <div className="responsive-scroll" tabIndex={0}>
-        <table className="table">
-          <thead>
-            <tr>
-              <th colSpan={6} className="tb-text">
-                Order
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* first */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">
-                  <strong>{'.first'}</strong> | Pone a un elemento al principio de todo
-                </p>
-              </td>
-            </tr> */}
-            {/* last */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">
-                  <strong>{'.last'}</strong> | Pone a un elemento al final de todo
-                </p>
-              </td>
-            </tr> */}
-            {/* 1 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">
-                  <strong>{'.first'}</strong> | Pone a un elemento al principio de todo
-                </p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">
-                  <strong>{'.last'}</strong> | Pone a un elemento al final de todo
-                </p>
-              </td>
-            </tr> */}
-            <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-1'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-2'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-3'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-4'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-5'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-6'}</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-7'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-8'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-9'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-10'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-11'}</p>
-              </td>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-12'}</p>
-              </td>
-            </tr>
-            {/* 2 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-2'}</p>
-              </td>
-            </tr> */}
-            {/* 3 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-3'}</p>
-              </td>
-            </tr> */}
-            {/* 4 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-4'}</p>
-              </td>
-            </tr> */}
-            {/* 5 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-5'}</p>
-              </td>
-            </tr> */}
-            {/* 6 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-6'}</p>
-              </td>
-            </tr> */}
-            {/* 7 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-7'}</p>
-              </td>
-            </tr> */}
-            {/* 8 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-8'}</p>
-              </td>
-            </tr> */}
-            {/* 9 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-9'}</p>
-              </td>
-            </tr> */}
-            {/* 10 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-10'}</p>
-              </td>
-            </tr> */}
-            {/* 11 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-11'}</p>
-              </td>
-            </tr> */}
-            {/* 12 */}
-            {/* <tr>
-              <td>
-                <p className="storybook__margin-typography ">{'.order-12'}</p>
-              </td>
-            </tr> */}
-          </tbody>
-        </table>
+      <div className="storybook_container-display">
+        {/* Display */}
+        <p className="headline-lg font-weight-bold">Display</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col" colSpan={5} className="tb-text ">
+                  Display
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* container */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.d-none'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.d-inline'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.d-inline-block'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.d-block'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.d-table'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Display */}
+
+        {/* Position */}
+        <p className="headline-lg font-weight-bold mt-3">Position</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col" colSpan={5} className="tb-text ">
+                  Position
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* container */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.position-static'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.position-relative'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.position-absolute'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.position-fixed'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.position-sticky'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Position */}
       </div>
-      {/* Order */}
     </>
   );
 };
 
-Order.story = { name: 'Orden' };
+DisplayAndPosition.story = { name: 'Display y Position' };
+
+export const Alignments = (): JSX.Element => {
+  return (
+    <>
+      <div className="storybook_container-alignment">
+        {/* Alineamiento Vertical */}
+        <p className="headline-lg font-weight-bold">Alineamientos</p>
+        <p>Los alineamientos funcionan dentro de un contenedor que tenga Flex Box/Grid.</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th colSpan={3} className="tb-text">
+                  Alineamiento Vertical
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* align-items-{start} align-items-{end} align-items-{center} */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.align-items-start'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.align-items-end'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.align-items-center'}</p>
+                </td>
+              </tr>
+
+              {/* align-self-{start} align-self-{end} align-self-{center} */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.align-self-start'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.align-self-end'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.align-self-center'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Alineamiento Vertical */}
+
+        {/* Alineamiento Horizontal */}
+        <div className="responsive-scroll mt-3" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th colSpan={5} className="tb-text">
+                  Alineamiento Horizontal
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* justify-content-{start} justify-content-{end} justify-content-{center} */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.justify-content-start'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.justify-content-end'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.justify-content-center'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.justify-content-around'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.justify-content-between'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Alineamiento Horizontal */}
+
+        <hr />
+
+        {/* Alineamiento de Texto */}
+        <p className="headline-lg font-weight-bold mt-3">Alineamiento de Texto</p>
+        <p>El alineamiento de texto funciona en cualquier elemento tenga o no Flex Box/Grid</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col" colSpan={5} className="tb-text ">
+                  Texto
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* container */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.text-left'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.text-center'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.text-right'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Alineamiento de Texto */}
+      </div>
+    </>
+  );
+};
+
+Alignments.story = { name: 'Alineamientos' };
+
+export const OrderAndVisibility = (): JSX.Element => {
+  return (
+    <>
+      <div className="storybook_container-order">
+        <p className="headline-lg font-weight-bold">Orden y Visibilidad</p>
+        {/* Order */}
+        <p className="headline-lg font-weight-semibold ">Order | 1 - 12</p>
+        <p>
+          Las clases <strong>.first</strong> y <strong>.last</strong> ponen a un elemento <strong>al principio</strong> y
+          al <strong>final</strong>.
+        </p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th colSpan={6} className="tb-text">
+                  Order
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* orden */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-1'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-2'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-3'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-4'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-5'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-6'}</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-7'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-8'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-9'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-10'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-11'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.order-12'}</p>
+                </td>
+              </tr>
+              {/* orden */}
+            </tbody>
+          </table>
+        </div>
+        {/* Order */}
+
+        {/* Visibilidad */}
+        <p className="headline-lg font-weight-semibold mt-4">Visibilidad</p>
+        <div className="responsive-scroll" tabIndex={0}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th colSpan={2} className="tb-text ">
+                  Visibilidad
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* container */}
+              <tr>
+                <td>
+                  <p className="storybook__margin-typography ">{'.visible'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.invisible'}</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {/* Visibilidad */}
+      </div>
+    </>
+  );
+};
+
+OrderAndVisibility.story = { name: 'Orden y Visibilidad' };
 
 export const Border = (): JSX.Element => {
   return (
@@ -993,481 +1299,37 @@ export const Border = (): JSX.Element => {
 
 Border.story = { name: 'Bordes' };
 
-// no muestra las 7 columnas
-export const Containers = (): JSX.Element => {
-  return (
-    <>
-      <div className="storybook_container-containers">
-        {/* Containers */}
-        <p className="headline-lg font-weight-bold">Containers</p>
-        <div className="responsive-scroll" tabIndex={0}>
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col" className="tb-text "></th>
-                <th scope="col" className="tb-text">
-                  Extra small | {'<576px'}
-                </th>
-                <th scope="col" className="tb-text">
-                  Small | {'≥576px'}
-                </th>
-                <th scope="col" className="tb-text">
-                  Medium | {'≥768px'}
-                </th>
-                <th scope="col" className="tb-text">
-                  Large | {'≥992px'}
-                </th>
-                <th scope="col" className="tb-text">
-                  Extra large | {'≥1200px'}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* container */}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.container'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'540px'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'720px'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'960px'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'1140px'}</p>
-                </td>
-              </tr>
-
-              {/* .container-sm*/}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.container-sm'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'540px'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'720px'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'960px'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'1140px'}</p>
-                </td>
-              </tr>
-
-              {/* .container-md*/}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.container-md'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'720px'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'960px'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'1140px'}</p>
-                </td>
-              </tr>
-
-              {/* .container-lg*/}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.container-lg'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'960px'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'1140px'}</p>
-                </td>
-              </tr>
-
-              {/* .container-xl*/}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.container-xl'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'1140px'}</p>
-                </td>
-              </tr>
-
-              {/* .container-fluid*/}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.container-fluid'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'100%'}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        {/* Containers */}
-      </div>
-    </>
-  );
-};
-
-Containers.story = { name: 'Contenedores' };
-
-export const Alignments = (): JSX.Element => {
-  return (
-    <>
-      <div className="storybook_container-alignment">
-        {/* Alineamiento Vertical */}
-        <p className="headline-lg font-weight-bold">Alineamientos</p>
-        <p>Los alineamientos funcionan dentro de un contenedor que tenga Flex Box/Grid.</p>
-        <div className="responsive-scroll" tabIndex={0}>
-          <table className="table">
-            <thead>
-              <tr>
-                <th colSpan={3} className="tb-text">
-                  Alineamiento Vertical
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* align-items-{start} align-items-{end} align-items-{center} */}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.align-items-start'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.align-items-end'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.align-items-center'}</p>
-                </td>
-              </tr>
-
-              {/* align-self-{start} align-self-{end} align-self-{center} */}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.align-self-start'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.align-self-end'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.align-self-center'}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        {/* Alineamiento Vertical */}
-
-        {/* Alineamiento Horizontal */}
-        <div className="responsive-scroll mt-3" tabIndex={0}>
-          <table className="table">
-            <thead>
-              <tr>
-                <th colSpan={5} className="tb-text">
-                  Alineamiento Horizontal
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* justify-content-{start} justify-content-{end} justify-content-{center} */}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.justify-content-start'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.justify-content-end'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.justify-content-center'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.justify-content-around'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.justify-content-between'}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        {/* Alineamiento Horizontal */}
-
-        <hr />
-
-        {/* Alineamiento de Texto */}
-        <p className="headline-lg font-weight-bold mt-3">Alineamiento de Texto</p>
-        <p>El alineamiento de texto funciona en cualquier elemento tenga o no Flex Box/Grid</p>
-        <div className="responsive-scroll" tabIndex={0}>
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col" colSpan={5} className="tb-text ">
-                  Texto
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* container */}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.text-left'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.text-center'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.text-right'}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        {/* Alineamiento de Texto */}
-      </div>
-    </>
-  );
-};
-
-Alignments.story = { name: 'Alineamientos' };
-
-export const DisplayAndPosition = (): JSX.Element => {
-  return (
-    <>
-      <div className="storybook_container-display">
-        {/* Display */}
-        <p className="headline-lg font-weight-bold">Display</p>
-        <div className="responsive-scroll" tabIndex={0}>
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col" colSpan={5} className="tb-text ">
-                  Display
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* container */}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.d-none'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.d-inline'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.d-inline-block'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.d-block'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.d-table'}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        {/* Display */}
-
-        {/* Position */}
-        <p className="headline-lg font-weight-bold mt-3">Position</p>
-        <div className="responsive-scroll" tabIndex={0}>
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col" colSpan={5} className="tb-text ">
-                  Position
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* container */}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.position-static'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.position-relative'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.position-absolute'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.position-fixed'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.position-sticky'}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        {/* Position */}
-      </div>
-    </>
-  );
-};
-
-DisplayAndPosition.story = { name: 'Display y Position' };
-
-export const Visiblity = (): JSX.Element => {
-  return (
-    <>
-      <div className="storybook_container-text">
-        {/* Visibilidad */}
-        <p className="headline-lg font-weight-bold">Visibilidad</p>
-        <div className="responsive-scroll" tabIndex={0}>
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col" colSpan={5} className="tb-text ">
-                  Visibilidad
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* container */}
-              <tr>
-                <td>
-                  <p className="storybook__margin-typography ">{'.visible'}</p>
-                </td>
-                <td>
-                  <p className="storybook__margin-typography ">{'.invisible'}</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        {/* Visibilidad */}
-      </div>
-    </>
-  );
-};
-
-Visiblity.story = { name: 'Visibilidad' };
-
 export const Accesiblity = (): JSX.Element => {
   return (
     <>
-      <div className="storybook_container-display">
-        {/* Display */}
+      <div className="storybook_container-accesibility">
+        {/* Accesibilidad */}
         <p className="headline-lg font-weight-bold">Accesibilidad</p>
         <div className="responsive-scroll" tabIndex={0}>
           <table className="table">
             <thead>
               <tr>
-                <th scope="col" colSpan={5} className="tb-text ">
+                <th colSpan={2} className="tb-text ">
                   Accesibilidad
                 </th>
               </tr>
             </thead>
             <tbody>
-              {/* container */}
               <tr>
                 <td>
                   <p className="storybook__margin-typography ">{'.sr-only'}</p>
+                </td>
+                <td>
+                  <p className="storybook__margin-typography ">{'.sr-only-focusable'}</p>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        {/* Display */}
+        {/* Accesibilidad */}
       </div>
     </>
   );
 };
 
 Accesiblity.story = { name: 'Accesibilidad' };
-
-// export const Text = (): JSX.Element => {
-//   return (
-//     <>
-//       <div className="storybook_container-text">
-//         {/* Texto */}
-//         <p className="headline-lg font-weight-bold">Texto</p>
-//         <div className="responsive-scroll" tabIndex={0}>
-//           <table className="table">
-//             <thead>
-//               <tr>
-//                 <th scope="col" colSpan={5} className="tb-text ">
-//                   Texto
-//                 </th>
-//               </tr>
-//             </thead>
-//             <tbody>
-//               {/* container */}
-//               <tr>
-//                 <td>
-//                   <p className="storybook__margin-typography ">{'.text-left'}</p>
-//                 </td>
-//                 <td>
-//                   <p className="storybook__margin-typography ">{'.text-center'}</p>
-//                 </td>
-//                 <td>
-//                   <p className="storybook__margin-typography ">{'.text-right'}</p>
-//                 </td>
-//               </tr>
-//             </tbody>
-//           </table>
-//         </div>
-//         {/* Texto */}
-//       </div>
-//     </>
-//   );
-// };
-
-// Text.story = { name: 'Texto' };
