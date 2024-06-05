@@ -619,100 +619,147 @@ export const Order = (): JSX.Element => {
         <table className="table">
           <thead>
             <tr>
-              <th scope="col" className="tb-text">
+              <th colSpan={6} className="tb-text">
                 Order
               </th>
             </tr>
           </thead>
           <tbody>
             {/* first */}
-            <tr>
+            {/* <tr>
               <td>
                 <p className="storybook__margin-typography ">
                   <strong>{'.first'}</strong> | Pone a un elemento al principio de todo
                 </p>
               </td>
-            </tr>
+            </tr> */}
             {/* last */}
-            <tr>
+            {/* <tr>
               <td>
                 <p className="storybook__margin-typography ">
                   <strong>{'.last'}</strong> | Pone a un elemento al final de todo
                 </p>
               </td>
-            </tr>
+            </tr> */}
             {/* 1 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">
+                  <strong>{'.first'}</strong> | Pone a un elemento al principio de todo
+                </p>
+              </td>
+              <td>
+                <p className="storybook__margin-typography ">
+                  <strong>{'.last'}</strong> | Pone a un elemento al final de todo
+                </p>
+              </td>
+            </tr> */}
             <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-1'}</p>
               </td>
-            </tr>
-            {/* 2 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-2'}</p>
               </td>
-            </tr>
-            {/* 3 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-3'}</p>
               </td>
-            </tr>
-            {/* 4 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-4'}</p>
               </td>
-            </tr>
-            {/* 5 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-5'}</p>
               </td>
-            </tr>
-            {/* 6 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-6'}</p>
               </td>
             </tr>
-            {/* 7 */}
             <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-7'}</p>
               </td>
-            </tr>
-            {/* 8 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-8'}</p>
               </td>
-            </tr>
-            {/* 9 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-9'}</p>
               </td>
-            </tr>
-            {/* 10 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-10'}</p>
               </td>
-            </tr>
-            {/* 11 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-11'}</p>
               </td>
-            </tr>
-            {/* 12 */}
-            <tr>
               <td>
                 <p className="storybook__margin-typography ">{'.order-12'}</p>
               </td>
             </tr>
+            {/* 2 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-2'}</p>
+              </td>
+            </tr> */}
+            {/* 3 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-3'}</p>
+              </td>
+            </tr> */}
+            {/* 4 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-4'}</p>
+              </td>
+            </tr> */}
+            {/* 5 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-5'}</p>
+              </td>
+            </tr> */}
+            {/* 6 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-6'}</p>
+              </td>
+            </tr> */}
+            {/* 7 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-7'}</p>
+              </td>
+            </tr> */}
+            {/* 8 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-8'}</p>
+              </td>
+            </tr> */}
+            {/* 9 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-9'}</p>
+              </td>
+            </tr> */}
+            {/* 10 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-10'}</p>
+              </td>
+            </tr> */}
+            {/* 11 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-11'}</p>
+              </td>
+            </tr> */}
+            {/* 12 */}
+            {/* <tr>
+              <td>
+                <p className="storybook__margin-typography ">{'.order-12'}</p>
+              </td>
+            </tr> */}
           </tbody>
         </table>
       </div>
@@ -1199,8 +1246,10 @@ export const Alignments = (): JSX.Element => {
         </div>
         {/* Alineamiento Horizontal */}
 
+        <hr />
+
         {/* Alineamiento de Texto */}
-        <p className="headline-lg font-weight-bold mt-4">Alineamiento de Texto</p>
+        <p className="headline-lg font-weight-bold mt-3">Alineamiento de Texto</p>
         <p>El alineamiento de texto funciona en cualquier elemento tenga o no Flex Box/Grid</p>
         <div className="responsive-scroll" tabIndex={0}>
           <table className="table">
@@ -1314,12 +1363,6 @@ export const DisplayAndPosition = (): JSX.Element => {
 };
 
 DisplayAndPosition.story = { name: 'Display y Position' };
-
-export const Gap = (): JSX.Element => {
-  return <></>;
-};
-
-Gap.story = { name: 'Gap' };
 
 export const Visiblity = (): JSX.Element => {
   return (
