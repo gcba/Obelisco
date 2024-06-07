@@ -584,52 +584,52 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px </td>
               <td>
-                <Typography as="p" className="storybook__margin-typography  text-sm ">
-                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                <Typography as="p" className="storybook__margin-typography  headline-sm ">
+                  Esto es un texto de titulares
                 </Typography>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;text-sm font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;headline-sm font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 16px | 20px | semibold</td>
               <td>
-                <Typography as="p" className="storybook__margin-typography  text-sm font-weight-semibold">
-                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                <Typography as="p" className="storybook__margin-typography  headline-sm font-weight-semibold">
+                  Esto es un texto de titulares
                 </Typography>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;text-sm font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;headline-sm font-weight-bold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 16px | 20px | bold </td>
               <td>
-                <Typography as="p" className="storybook__margin-typography  text-sm font-weight-bold">
-                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                <Typography as="p" className="storybook__margin-typography  headline-sm font-weight-bold">
+                  Esto es un texto de titulares
                 </Typography>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;text-sm font-italic&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;headline-sm font-italic&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 16px | 20px | italic </td>
               <td>
-                <Typography as="p" className="storybook__margin-typography  text-sm font-italic">
-                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                <Typography as="p" className="storybook__margin-typography  headline-sm font-italic">
+                  Esto es un texto de titulares
                 </Typography>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;text-sm underline-1&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;headline-sm underline-1&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 16px | 20px | underline </td>
               <td>
-                <Typography as="p" className="storybook__margin-typography  text-sm underline-1">
-                  Este es un párrafo de Obelisco, el sistema de diseño del Gobierno de la Ciudad de Buenos Aires.
+                <Typography as="p" className="storybook__margin-typography  headline-sm underline-1">
+                  Esto es un texto de titulares
                 </Typography>
               </td>
             </tr>
