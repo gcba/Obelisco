@@ -38,7 +38,7 @@ export const Headings = (): JSX.Element => {
               <td>Nunito | 40px | 48px | bold </td>
               <td>
                 <Typography className="storybook__margin-typography " as="h1">
-                  Encabezado h1
+                  Encabezado h1 bold
                 </Typography>
               </td>
             </tr>
@@ -96,10 +96,10 @@ export const Headings = (): JSX.Element => {
             </tr>
             <tr>
               <td>{'<h2 class="font-weight-semibold"></h2>'}</td>
-              <td>Nunito | 36px | 40px </td>
+              <td>Nunito | 36px | 40px | semibold</td>
               <td>
                 <Typography className="storybook__margin-typography " as="h2">
-                  Encabezado h2
+                  Encabezado h2 semibold
                 </Typography>
               </td>
             </tr>
@@ -148,10 +148,10 @@ export const Headings = (): JSX.Element => {
             </tr>
             <tr>
               <td>{'<h3 class="font-weight-semibold"></h3>'}</td>
-              <td>Nunito | 32px | 44px </td>
+              <td>Nunito | 32px | 44px | semibold</td>
               <td>
                 <Typography className="storybook__margin-typography " as="h3">
-                  Encabezado h3
+                  Encabezado h3 semibold
                 </Typography>
               </td>
             </tr>
@@ -200,10 +200,10 @@ export const Headings = (): JSX.Element => {
             </tr>
             <tr>
               <td>{'<h4 class="font-weight-semibold"></h4>'}</td>
-              <td>Nunito | 28px | 36px </td>
+              <td>Nunito | 28px | 36px | semibold</td>
               <td>
-                <Typography className="storybook__margin-typography " as="h4">
-                  Encabezado h4
+                <Typography className="storybook__margin-typography font-weight-semibold" as="h4">
+                  Encabezado h4 semibold
                 </Typography>
               </td>
             </tr>
@@ -243,10 +243,10 @@ export const Headings = (): JSX.Element => {
           <tbody>
             <tr>
               <td>{'<h5 class="font-weight-bold"></h5>'}</td>
-              <td>Nunito | 24px | 32px </td>
+              <td>Nunito | 24px | 32px | bold</td>
               <td>
                 <Typography className="storybook__margin-typography " as="h5">
-                  Encabezado h5
+                  Encabezado h5 bold
                 </Typography>
               </td>
             </tr>
@@ -304,10 +304,10 @@ export const Headings = (): JSX.Element => {
             </tr>
             <tr>
               <td>{'<h6 class="font-weight-semibold"></h6>'}</td>
-              <td>Nunito | 20px | 28px </td>
+              <td>Nunito | 20px | 28px | semibold</td>
               <td>
-                <Typography className="storybook__margin-typography " as="h6">
-                  Encabezado h6
+                <Typography className="storybook__margin-typography " as="h6" weight="font-weight-semibold">
+                  Encabezado h6 semibold
                 </Typography>
               </td>
             </tr>
