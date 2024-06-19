@@ -984,8 +984,8 @@ export const OrderAndVisibility = (): JSX.Element => {
         {/* Order */}
         <p className="headline-lg font-weight-semibold ">Order | 1 - 12</p>
         <p>
-          Las clases <strong>.first</strong> y <strong>.last</strong> ponen a un elemento <strong>al principio</strong> y
-          al <strong>final</strong>.
+          Las clases <strong>.first</strong> y <strong>.last</strong> ponen a un elemento <strong>al principio</strong>{' '}
+          y al <strong>final</strong>.
         </p>
         <div className="responsive-scroll" tabIndex={0}>
           <table className="table">
@@ -1304,7 +1304,7 @@ export const Accesiblity = (): JSX.Element => {
     <>
       <div className="storybook_container-accesibility">
         {/* Accesibilidad */}
-        <p className="headline-lg font-weight-bold">Accesibilidad</p>
+        <p className="headline-lg font-weight-semibold mt-4">Accesibilidad</p>
         <div className="responsive-scroll" tabIndex={0}>
           <table className="table">
             <thead>
@@ -1315,6 +1315,7 @@ export const Accesiblity = (): JSX.Element => {
               </tr>
             </thead>
             <tbody>
+              {/* container */}
               <tr>
                 <td>
                   <p className="storybook__margin-typography ">{'.sr-only'}</p>

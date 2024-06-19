@@ -424,47 +424,49 @@ export const Tag = (): JSX.Element => {
           <tbody>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-lg&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-lg&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 20px | 24px </td>
               <td>
-                <p className="margin-typography  headline-lg ">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-lg ">Esto es un texto de titulares</p>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-lg font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-lg font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 18px | 28px | semibold</td>
               <td>
-                <p className="margin-typography  headline-lg font-weight-semibold">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-lg font-weight-semibold">
+                  Esto es un texto de titulares
+                </p>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-lg font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-lg font-weight-bold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 18px | 28px | bold </td>
               <td>
-                <p className="margin-typography  headline-lg font-weight-bold">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-lg font-weight-bold">Esto es un texto de titulares</p>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-lg font-italic&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-lg font-italic&quot;&gt;&lt;/p&gt;</p>
               </td>
-              <td> Open Sans | 18px | 28px | italic </td>
+              <td> Nunito | 18px | 28px | italic </td>
               <td>
-                <p className="margin-typography  headline-lg font-italic">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-lg font-italic">Esto es un texto de titulares</p>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-lg underline-1&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-lg underline-1&quot;&gt;&lt;/p&gt;</p>
               </td>
-              <td> Open Sans | 18px | 28px | underline </td>
+              <td> Nunito | 18px | 28px | underline </td>
               <td>
-                <p className="margin-typography  headline-lg underline-1">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-lg underline-1">Esto es un texto de titulares</p>
               </td>
             </tr>
           </tbody>
@@ -472,8 +474,9 @@ export const Tag = (): JSX.Element => {
       </div>
       {/* Titulares L */}
 
+      <hr className="mt-5" />
       {/* Titulares M */}
-      <p className="headline-lgg font-weight-bold">Titulares M</p>
+      <p className="headline-lg font-weight-bold">Titulares M</p>
       <div className="responsive-scroll" tabIndex={0}>
         <table className="table">
           <thead>
@@ -492,47 +495,49 @@ export const Tag = (): JSX.Element => {
           <tbody>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-md&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-md&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 18px | 24px </td>
               <td>
-                <p className="margin-typography  headline-md ">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-md ">Esto es un texto de titulares</p>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-md font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-md font-weight-semibold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 18px | 24px | semibold</td>
               <td>
-                <p className="margin-typography  headline-md font-weight-semibold">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-md font-weight-semibold">
+                  Esto es un texto de titulares
+                </p>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-md font-weight-bold&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-md font-weight-bold&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 18px | 24px | bold </td>
               <td>
-                <p className="margin-typography  headline-md font-weight-bold">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-md font-weight-bold">Esto es un texto de titulares</p>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-md font-italic&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-md font-italic&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 18px | 24px | italic </td>
               <td>
-                <p className="margin-typography  headline-md font-italic">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-md font-italic">Esto es un texto de titulares</p>
               </td>
             </tr>
             <tr>
               <td>
-                <p>&lt;p class=&quot;headline-md underline-1&quot;&gt;&lt;/p&gt;</p>
+                <p>&lt;p class=&quot;text-md underline-1&quot;&gt;&lt;/p&gt;</p>
               </td>
               <td> Nunito | 18px | 24px | underline </td>
               <td>
-                <p className="margin-typography  headline-md underline-1">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-md underline-1">Esto es un texto de titulares</p>
               </td>
             </tr>
           </tbody>
@@ -542,7 +547,7 @@ export const Tag = (): JSX.Element => {
 
       <hr className="mt-5" />
       {/* Titulares S */}
-      <p className="headline-lgg font-weight-bold">Titulares S</p>
+      <p className="headline-lg font-weight-bold">Titulares S</p>
       <div className="responsive-scroll" tabIndex={0}>
         <table className="table">
           <thead>
@@ -565,7 +570,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px </td>
               <td>
-                <p className="margin-typography  text-sm ">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-sm ">Esto es un texto de titulares</p>
               </td>
             </tr>
             <tr>
@@ -574,7 +579,9 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px | semibold</td>
               <td>
-                <p className="margin-typography  text-sm font-weight-semibold">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-sm font-weight-semibold">
+                  Esto es un texto de titulares
+                </p>
               </td>
             </tr>
             <tr>
@@ -583,7 +590,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px | bold </td>
               <td>
-                <p className="margin-typography  text-sm font-weight-bold">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-sm font-weight-bold">Esto es un texto de titulares</p>
               </td>
             </tr>
             <tr>
@@ -592,7 +599,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px | italic </td>
               <td>
-                <p className="margin-typography  text-sm font-italic">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-sm font-italic">Esto es un texto de titulares</p>
               </td>
             </tr>
             <tr>
@@ -601,7 +608,7 @@ export const Tag = (): JSX.Element => {
               </td>
               <td> Nunito | 16px | 20px | underline </td>
               <td>
-                <p className="margin-typography  text-sm underline-1">Esto es un texto de titulares</p>
+                <p className="storybook__margin-typography  text-sm underline-1">Esto es un texto de titulares</p>
               </td>
             </tr>
           </tbody>
