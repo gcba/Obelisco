@@ -1,0 +1,31 @@
+.storybook_container-columns td,
+.storybook_container td,
+.storybook_container-containers td,
+.storybook_container-alignment td,
+.storybook_container-display td,
+.storybook_container-text td,
+.storybook_container-accesibility td,
+.storybook_container-order td
+{
+  border: 1px solid gray;
+}
+
+.storybook_container-columns div,
+.storybook_container-border div {
+  overflow-x: hidden;
+}
+
+.storybook_container-border span {
+  width: 50px;
+  height: 50px;
+}
+
+.storybook_container-sizes div p {
+  background-color: #ffdb2e;
+}
+
+.storybook_container-containers .table thead th.tb-text {
+  min-width: fit-content;
+  max-width: 200px;
+}
+
