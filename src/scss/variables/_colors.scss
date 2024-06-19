@@ -33,16 +33,28 @@ $grisulado-900: #38485c;
 
 /* === Color palette === */
 
-$blue: #007bc7;
-$purple: #9b59b6;
-$red: #c93b3b;
-$orange: #ffa82e;
+// $blue: #007bc7;
+// $purple: #9b59b6;
+// $red: #c93b3b;
+// $orange: #ffa82e;
+// $yellow: #ffdb2e;
+// $green: #26874a;
+// $teal: #18b596;
+// $cyan: #009afd;
+
+// $indigo:  #9b59b6; // Bootstrap's default
+// $pink:    #f54789; // Bootstrap's default
+
+
+/* Nuevo paleta de color*/
+$blue: #336acc;
+$purple: #e299ff;
+$red: #a32929;
+$orange: #ffaa33;
 $yellow: #ffdb2e;
 $green: #26874a;
 $teal: #18b596;
-$cyan: #009afd;
-// $indigo:  #9b59b6; // Bootstrap's default
-// $pink:    #f54789; // Bootstrap's default
+$cyan: #8de2d6;
 
 /* === Color pastel === */
 
@@ -61,11 +73,22 @@ $aqua: #99ffe2;
 
 /* === Color types === */
 
-$primary: $yellow;
-$secondary: $grisulado-600;
+// $primary: $yellow;
+// $secondary: $grisulado-600;
+// $success: $green;
+// $info: $blue;
+// $warning: $yellow;
+// $danger: $red;
+// $light: $grisulado-10;
+// $dark: $gray-800;
+
+/* Nuevo paleta de color */
+$primary: $blue;
+$secondary: #101E37;
+//terciario
 $success: $green;
 $info: $blue;
-$warning: $yellow;
+$warning: $orange;
 $danger: $red;
 $light: $grisulado-10;
 $dark: $gray-800;
@@ -93,7 +116,8 @@ $text-muted: $grisulado-500;
 /* === Custom forms & stuff === */
 
 $ghost: #f5f9fc;
-$ghost-hover: #e5f1f9;
+// $ghost-hover: #e5f1f9;
+$primary-hover: #2e569e;
 $component-active-bg: $blue;
 $link-color: $blue;
 
