@@ -1,19 +1,20 @@
 export type Type = 'primary' | 'success' | 'danger';
 export const types: Type[] = ['primary', 'success', 'danger'];
 
-export type ButtonType = Type | 'secondary' | 'link';
+export type ButtonType = Type | 'secondary' | 'link' | 'tertiary';
 // export const buttonTypes: ButtonType[] = [...types, 'secondary', 'link'];
 
-export type ButtonTypeWithName = { type: Type | 'secondary' | 'link'; name: string };
+export type ButtonTypeWithName = { type: Type | 'secondary' | 'link' | 'tertiary'; name: string };
 export const buttonTypes: Array<ButtonTypeWithName> = [
   { type: 'primary', name: 'Primario' },
   { type: 'secondary', name: 'Secundario' },
   { type: 'success', name: 'Éxito' },
   { type: 'danger', name: 'Error' },
-  { type: 'link', name: 'Link' }
+  { type: 'link', name: 'Link' },
+  { type: 'tertiary', name: 'Terciario' }
 ];
 
-export type AlertType = { type: Type | 'info'; text: string };
+export type AlertType = { type: Type | 'info' | 'warning'; text: string };
 
 export type Size = 'default' | 'small' | 'large';
 export const sizes: Size[] = ['small', 'default', 'large'];

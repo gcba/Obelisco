@@ -40,6 +40,48 @@ export const ButtonTypes = (): JSX.Element => {
           Enlace
         </a>
       </div>
+      <div className="storybook__container-btn bg-dark pt-3">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type}>
+            {item.name}
+          </Button>
+        ))}
+        <a className="btn btn-primary" href="#" target="_blank">
+          Enlace
+        </a>
+      </div>
+      <br />
+      <div className="storybook__container-btn bg-dark pt-3">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type} isOutline>
+            {item.name}
+          </Button>
+        ))}
+        <a className="btn btn-outline-primary" href="#" target="_blank">
+          Enlace
+        </a>
+      </div>
+      <br />
+      <p>Nuevas variantes</p>
+      <div className="storybook__container-btn">
+        <Button type="primary">Primario</Button>
+        <Button type="secondary">Secundario</Button>
+        <Button type="tertiary">Terciario - ex link outline</Button>
+        <Button type="danger">Peligro</Button>
+        <Button type="danger" isOutline>
+          Peligro outline
+        </Button>
+      </div>
+      <br />
+      <div className="storybook__container-btn bg-dark pt-3">
+        <Button type="primary">Primario</Button>
+        <Button type="secondary">Secundario</Button>
+        <Button type="tertiary">Terciario - ex link outline</Button>
+        <Button type="danger">Peligro</Button>
+        <Button type="danger" isOutline>
+          Peligro outline
+        </Button>
+      </div>
     </>
   );
 };

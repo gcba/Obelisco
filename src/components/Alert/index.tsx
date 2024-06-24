@@ -6,7 +6,8 @@ export const alertTypes: AlertType[] = [
   { type: 'info', text: 'Esta es la descripción de una alerta de información.' },
   { type: 'primary', text: 'Esta es la descripción de una alerta de advertencia.' },
   { type: 'success', text: 'Esta es la descripción de una alerta de éxito.' },
-  { type: 'danger', text: 'Esta es la descripción de una alerta de error.' }
+  { type: 'danger', text: 'Esta es la descripción de una alerta de error.' },
+  { type: 'warning', text: 'Esta es la descripción de una alerta de WARNING.' }
 ];
 
 export const alertHighlight: AlertType[] = [
@@ -25,6 +26,10 @@ export const alertHighlight: AlertType[] = [
   {
     type: 'danger',
     text: '<strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que continua al texto destacado.'
+  },
+  {
+    type: 'warning',
+    text: '<strong>Este es un destacado de una alerta de WARNING.</strong> Esta es la descripción de una alerta de WARNING que continua al texto destacado.'
   }
 ];
 
@@ -44,6 +49,10 @@ export const alertLink: AlertType[] = [
   {
     type: 'danger',
     text: '<strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que continua al texto destacado, incluso con <a href="#">enlace</a>.'
+  },
+  {
+    type: 'warning',
+    text: '<strong>Este es un destacado de una alerta de WARNING.</strong> Esta es la descripción de una alerta de WARNING que continua al texto destacado, incluso con <a href="#">enlace</a>.'
   }
 ];
 

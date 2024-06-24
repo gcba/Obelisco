@@ -13,6 +13,7 @@ $btn-box-shadow: none;
 $btn-focus-width: 4px;
 $btn-hover-width: 2px;
 $input-btn-focus-color: darken($component-active-bg, 60%);
+$input-btn-focus-color: $cyan-800;
 $input-btn-focus-width: 0.25rem;
 
 $btn-padding-y-sm: 5px; // Se revisará cuando el equipo de Diseño tome el componente
@@ -34,6 +35,7 @@ $btn-border-radius-sm: spaceUnits(2);
 $btn-border-radius-lg: spaceUnits(2);
 
 $box-shadow-button: theme-color-level('info', 3);
+$box-shadow-button: $cyan-800;
 $link-decoration: none;
 
 $btn-link-disabled-color: $grisulado-300;
@@ -117,6 +119,7 @@ $theme-colors: map-merge(
 
     @if $color == 'link' {
       color: $link-color;
+      color: white;
       font-weight: $btn-font-weight;
 
       @include hover() {
@@ -163,11 +166,11 @@ $theme-colors: map-merge(
     }
 
     @if $color == 'primary' {
-      color: $grisulado-900;
+      color: $primary;
 
       &:visited,
       &:hover {
-        color: $grisulado-900;
+        color: $primary;
       }
     }
 
@@ -184,6 +187,10 @@ $theme-colors: map-merge(
         outline-color: transparent;
       }
     }
+  }
+
+  .btn-tertiary {
+    @extend .btn-outline-link;
   }
 }
 
@@ -237,4 +244,22 @@ a.btn {
   &-lg {
     min-height: 48px;
   }
+}
+
+// Button background dark
+.bg-dark, .banner-dark {
+  .btn.btn-secondary, .btn.btn-outline-secondary {
+    background-color: white;
+    color: $body-color;
+    outline: .125rem solid white;
+  }
+  .btn.btn-tertiary {
+    color: $blue-100;
+    outline: .125rem solid $blue-100;
+  }
+  .btn.btn-outline-danger {
+    color: $red-200;
+    outline: .125rem solid $red-200;
+  }
+
 }
