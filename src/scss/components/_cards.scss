@@ -597,7 +597,7 @@ button.card {
 
 // COLAPSABLE
 .accordion {
-  > .card {
+  .card {
     margin-bottom: $accordion-margin;
     box-shadow: $card-box-shadow-collapsable;
     overflow: visible;
@@ -610,7 +610,7 @@ button.card {
       @include border-top-radius($card-border-radius);
     }
 
-    > .card-header {
+    .card-header {
       font-family: $font-family-headings;
       background-color: $blue;
       border-width: 0;
@@ -848,10 +848,10 @@ button.card {
   }
 
   &.accordion-white {
-    > .card {
+    .card {
       border-radius: $card-border-radius;
 
-      > .card-header {
+      .card-header {
         &.collapsed {
           background: $accordion-bg-white;
         }
