@@ -182,10 +182,14 @@ export const NavTabsSlider: React.FC<TabsProps> = (props: React.PropsWithChildre
         {isWithButton && (
           <div className="icons-container">
             <button className="right-left icon" onClick={handleIconClick} id="left">
-              <span className="material-icons-round">arrow_back_ios</span>
+              <span className="material-icons-round" aria-hidden="true">
+                arrow_back_ios
+              </span>
             </button>
             <button className="right-left icon" onClick={handleIconClick} id="right">
-              <span className="material-icons-round">arrow_forward_ios</span>
+              <span className="material-icons-round" aria-hidden="true">
+                arrow_forward_ios
+              </span>
             </button>
           </div>
         )}

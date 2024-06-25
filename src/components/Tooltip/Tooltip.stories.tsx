@@ -27,7 +27,11 @@ export const Tooltip = (): JSX.Element => {
             text={`Esta es la descripción de un tooltip "${position}".`}>
             <Button
               type="primary"
-              isIconSpinner={<span className="material-icons-round">{icon}</span>}
+              isIconSpinner={
+                <span className="material-icons-round" aria-hidden="true">
+                  {icon}
+                </span>
+              }
               ariaLabel="Botón"></Button>
           </TooltipContainer>
         ))}
@@ -41,7 +45,11 @@ export const Tooltip = (): JSX.Element => {
               text={`Esta es la descripción de un tooltip "${position}".`}>
               <Button
                 type="primary"
-                isIconSpinner={<span className="material-icons-round">{icon}</span>}
+                isIconSpinner={
+                  <span className="material-icons-round" aria-hidden="true">
+                    {icon}
+                  </span>
+                }
                 ariaLabel="Botón"></Button>
             </TooltipContainer>
           ))}
@@ -54,7 +62,11 @@ export const Tooltip = (): JSX.Element => {
               text={`Esta es la descripción de un tooltip "${position}".`}>
               <Button
                 type="primary"
-                isIconSpinner={<span className="material-icons-round">{icon}</span>}
+                isIconSpinner={
+                  <span className="material-icons-round" aria-hidden="true">
+                    {icon}
+                  </span>
+                }
                 ariaLabel="Botón"></Button>
             </TooltipContainer>
           ))}
@@ -68,7 +80,11 @@ export const Tooltip = (): JSX.Element => {
             text={`Esta es la descripción de un tooltip "${position}".`}>
             <Button
               type="primary"
-              isIconSpinner={<span className="material-icons-round">{icon}</span>}
+              isIconSpinner={
+                <span className="material-icons-round" aria-hidden="true">
+                  {icon}
+                </span>
+              }
               ariaLabel="Botón"></Button>
           </TooltipContainer>
         ))}
@@ -84,7 +100,9 @@ export const Tooltip = (): JSX.Element => {
             direction={direction}
             text={`Esta es la descripción de un tooltip "${position}".`}
             iconBox={true}>
-            <span className="material-icons-round">help</span>
+            <span className="material-icons-round" aria-hidden="true">
+              help
+            </span>
           </TooltipContainer>
         ))}
       </div>
@@ -96,7 +114,9 @@ export const Tooltip = (): JSX.Element => {
               direction={direction}
               text={`Esta es la descripción de un tooltip "${position}".`}
               iconBox={true}>
-              <span className="material-icons-round">help</span>
+              <span className="material-icons-round" aria-hidden="true">
+                help
+              </span>
             </TooltipContainer>
           ))}
         </div>
@@ -107,7 +127,9 @@ export const Tooltip = (): JSX.Element => {
               direction={direction}
               text={`Esta es la descripción de un tooltip "${position}".`}
               iconBox={true}>
-              <span className="material-icons-round">help</span>
+              <span className="material-icons-round" aria-hidden="true">
+                help
+              </span>
             </TooltipContainer>
           ))}
         </div>
@@ -119,7 +141,9 @@ export const Tooltip = (): JSX.Element => {
             direction={direction}
             text={`Esta es la descripción de un tooltip "${position}".`}
             iconBox={true}>
-            <span className="material-icons-round">help</span>
+            <span className="material-icons-round" aria-hidden="true">
+              help
+            </span>
           </TooltipContainer>
         ))}
       </div>

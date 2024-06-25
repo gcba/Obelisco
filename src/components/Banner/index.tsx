@@ -23,7 +23,11 @@ export const Banner: React.FC<BannerProps> = (props: React.PropsWithChildren<Ban
   return (
     <div className={BannerClasses.trim()}>
       <div className="banner-content">
-        {iconBanner && !iconBanner?.includes('bx') && <span className="material-icons-round">{iconBanner}</span>}
+        {iconBanner && !iconBanner?.includes('bx') && (
+          <span className="material-icons-round" aria-hidden="true">
+            {iconBanner}
+          </span>
+        )}
         {iconBanner && iconBanner?.includes('bx') && <i className={iconBanner}></i>}
         <p className="banner-text">{textBanner}</p>
         {buttons && (
