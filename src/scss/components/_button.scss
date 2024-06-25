@@ -85,6 +85,7 @@ $theme-colors: map-merge(
     &.focus {
       box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
       text-decoration: $link-decoration;
+      outline: 0.125rem solid transparent;
 
       &:not(:hover) {
         background-color: theme-color-level($color, 0);

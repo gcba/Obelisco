@@ -138,7 +138,11 @@ interface CardComponentProps {
 
 const getIconCard = (icon?: string, isHorizontal?: boolean): JSX.Element => {
   if (icon && !icon?.includes('bx')) {
-    return <span className={`material-icons-round ${isHorizontal ? 'card-icon-left' : 'card-icon'}`}>{icon}</span>;
+    return (
+      <span className={`material-icons-round ${isHorizontal ? 'card-icon-left' : 'card-icon'}`} aria-hidden="true">
+        {icon}
+      </span>
+    );
   } else {
     return <i className={`${icon} ${isHorizontal ? 'card-icon-left' : 'card-icon'}`}></i>;
   }

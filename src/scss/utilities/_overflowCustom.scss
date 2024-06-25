@@ -19,6 +19,7 @@
     height: 16px;
     background-color: $grisulado-10;
     border-radius: 100px;
+    outline: 0.125rem solid transparent;
   }
 
   &::-webkit-scrollbar-thumb {

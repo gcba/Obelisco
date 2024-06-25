@@ -20,8 +20,13 @@ $progress-bg: $grisulado-100;
 @import 'node_modules/bootstrap/scss/progress';
 
 /* === Custom styles === */
+.progress {
+  outline: 0.125rem solid transparent;
+}
+
 .progress-bar {
   border-radius: 20px;
+  outline: 0.25rem solid transparent;
 }
 
 .progression {
