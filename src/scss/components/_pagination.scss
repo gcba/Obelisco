@@ -2,13 +2,13 @@
 
 $pagination-bg: $white;
 
-$pagination-color: $grisulado-900;
+$pagination-color: $body-color;
 $pagination-active-color: $white;
-$pagination-hover-color: $blue;
+$pagination-hover-color: $hover;
 
 $pagination-box-shadow: 0 0 0 0.125rem $grisulado-50;
-$pagination-focus-box-shadow: 0 0 0 0.25rem theme-color-level('info', 3);
-$pagination-hover-box-shadow: 0 0 0 0.125rem $blue;
+$pagination-focus-box-shadow: 0 0 0 0.25rem $focus;
+$pagination-hover-box-shadow: 0 0 0 0.125rem $hover;
 
 $pagination-padding-y: spaceUnits(1);
 $pagination-padding-x: spaceUnits(3);
@@ -149,7 +149,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
         @include pagination-states(
           none,
           $pagination-box-shadow,
-          $pagination-active-bg,
+          $active,
           $pagination-active-color,
           $pagination-icon-left-active,
           $pagination-icon-right-active
@@ -161,7 +161,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
           @include pagination-states(
             none,
             $pagination-box-shadow,
-            $pagination-active-bg,
+            $active,
             $pagination-active-color,
             $pagination-icon-left-active,
             $pagination-icon-right-active

@@ -20,15 +20,15 @@ $nav-mobile-bg: $grisulado-10;
 $nav-link-disabled-color: $grisulado-300 !important;
 $nav-link-hover-bg: $grisulado-50;
 
-$nav-pills-link-active-bg: $blue;
-$nav-link-hover-color: $blue;
-$nav-link-border-active: $blue;
+$nav-pills-link-active-bg: $active;
+$nav-link-hover-color: $active;
+$nav-link-border-active: $active;
 
 $nav-link-fixed-width: 15.625rem;
 
 $nav-focus-width: 0.25rem;
-$input-btn-focus-box-shadow: 0 0 0 $nav-focus-width theme-color-level('info', 3);
-$input-btn-hover-box-shadow: 0 0 0 $nav-focus-width/2 $blue;
+$input-btn-focus-box-shadow: 0 0 0 $nav-focus-width $focus;
+$input-btn-hover-box-shadow: 0 0 0 $nav-focus-width/2 $active;
 
 $icon-expand: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAAXnVPIAAAAPElEQVQ4EWNkwAEsPGL+I0ud2LGEEZkPYzPBGOTSowYwMDCihzapgTkMAhFr6gKFA3rYjKZE3KmD4nQAADIcCfkjs4flAAAAAElFTkSuQmCC');
 $icon-collapse: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAEKADAAQAAAABAAAABAAAAACC/WKKAAAAGElEQVQYGWO08Ij5z0ABYKJAL1jrwBsAAOG3AePub4ocAAAAAElFTkSuQmCC');
@@ -150,7 +150,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 }
 
 .nav-link {
-  color: $grisulado-900;
+  color: $body-color;
   @extend .headline-md;
   // font-size: $nav-link-lg-font-size;
   // font-weight: $font-weight-normal;
@@ -160,7 +160,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   @include border-radius($border-radius * 2);
 
   &:visited {
-    color: $grisulado-900;
+    color: $body-color;
   }
 
   &.border-link {
@@ -191,7 +191,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   &.focus {
     outline: 0;
     box-shadow: $input-btn-focus-box-shadow;
-    color: $grisulado-900;
+    color: $body-color;
     text-decoration: none;
 
     .nav-icon {
@@ -206,12 +206,12 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   }
 
   &.active-child {
-    color: $blue;
+    color: $active;
     font-weight: $nav-link-active-font-weight;
 
     &:hover,
     &:focus {
-      color: $blue;
+      color: $hover;
       font-weight: $nav-link-active-font-weight;
       box-shadow: none;
 
@@ -264,7 +264,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       }
 
       &.active-child {
-        color: $blue;
+        color: $active;
         font-weight: $nav-link-active-font-weight;
         text-decoration: none;
         font-weight: $nav-link-active-font-weight;
@@ -297,11 +297,12 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       .nav-link {
         background: transparent;
         transition: font-weight 0.4s ease-in-out;
+        border-color: transparent;
 
         &.active,
         &:active {
           font-weight: $font-weight-bold;
-          color: $grisulado-900;
+          color: $body-color;
           box-shadow: inset 0px -4px 0px 0px $nav-link-border-active;
           border-radius: 0;
 
@@ -356,7 +357,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
           &.active,
           &:active {
             background-color: $grisulado-10;
-            color: $grisulado-900;
+            color: $body-color;
             box-shadow: none;
 
             &:focus {
