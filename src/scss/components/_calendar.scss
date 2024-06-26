@@ -104,10 +104,10 @@ $chromatic-colors: (
 
             &:hover {
               .active {
-                background-color: $calendar-link-color-hover-focus;
+                background-color: $primary-hover;
               }
               .active-secondary {
-                background-color: $grisulado-600;
+                background-color: $secondary-hover;
               }
 
               @each $clase, $color in $chromatic-colors {
@@ -122,7 +122,15 @@ $chromatic-colors: (
               box-shadow: none;
               backface-visibility: inherit;
               .active, .active-secondary {
-                box-shadow: 0 0 0 0.125rem $calendar-link-color-hover-focus;
+                box-shadow: 0 0 0 0.125rem $focus;
+              }
+            }
+
+            &:active {
+              box-shadow: none;
+              backface-visibility: inherit;
+              .active, .active-secondary {
+                box-shadow: 0 0 0 0.125rem $active-border;
               }
             }
           }
@@ -156,7 +164,7 @@ $chromatic-colors: (
             }
 
             &.active-secondary {
-              background-color: $grisulado-900;
+              background-color: $blue-900;
             }
           }
         }

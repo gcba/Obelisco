@@ -21,7 +21,7 @@ $card-shadow-color: $grisulado-10;
 $card-shadow-collapsable-color: $grisulado-50;
 $card-box-shadow: 0 0 0 2px $card-shadow-color;
 $card-box-shadow-collapsable: 0 0 0 2px $card-shadow-collapsable-color;
-$card-box-hover-shadow: 0 0 0 2px $blue;
+$card-box-hover-shadow: 0 0 0 2px $hover;
 
 $card-picture-size: 4rem;
 $card-picture-size-lg: 6rem;
@@ -617,7 +617,7 @@ button.card {
 
     > .card-header {
       font-family: $font-family-headings;
-      background-color: $blue;
+      background-color: $active;
       border-width: 0;
       text-align: left;
       padding: $accordion-card-header-padding;
@@ -716,14 +716,14 @@ button.card {
       &.collapsed {
         border-radius: $border-radius-lg;
         background-color: $card-header-bg;
-        color: $grisulado-900;
+        color: $body-color;
         position: relative;
         backface-visibility: hidden;
 
         &:hover,
         &.hover {
           background-color: $grisulado-10;
-          color: $blue;
+          color: $hover;
           box-shadow: $card-box-hover-shadow;
           backface-visibility: visible;
 

@@ -185,6 +185,17 @@ $danger: $red;
 $light: $grisulado-10;
 $dark: $blue-900;
 
+$hover: $blue-700;
+$focus: $cyan-800;
+
+$active: $blue-700;
+$press: $blue-800; //#1C345F
+
+$primary-hover: $blue-600; //#2E569E
+$secondary-hover: $blue-950; //#080F1C
+
+$active-border: $blue-800; //#1C345F
+
 /* === Color theme === */
 
 $border-color: $grisulado-100;
@@ -210,7 +221,7 @@ $text-muted: $grisulado-500;
 
 $ghost: #f5f9fc;
 // $ghost-hover: #e5f1f9;
-$primary-hover: #2e569e;
+/* $primary-hover: #2e569e; */
 $component-active-bg: $blue;
 $link-color: $blue;
 

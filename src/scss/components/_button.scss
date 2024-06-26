@@ -13,7 +13,7 @@ $btn-box-shadow: none;
 $btn-focus-width: 4px;
 $btn-hover-width: 2px;
 $input-btn-focus-color: darken($component-active-bg, 60%);
-$input-btn-focus-color: $cyan-800;
+$input-btn-focus-color: $focus;
 $input-btn-focus-width: 0.25rem;
 
 $btn-padding-y-sm: 5px; // Se revisará cuando el equipo de Diseño tome el componente
@@ -35,7 +35,7 @@ $btn-border-radius-sm: spaceUnits(2);
 $btn-border-radius-lg: spaceUnits(2);
 
 $box-shadow-button: theme-color-level('info', 3);
-$box-shadow-button: $cyan-800;
+$box-shadow-button: $focus;
 $link-decoration: none;
 
 $btn-link-disabled-color: $grisulado-300;
