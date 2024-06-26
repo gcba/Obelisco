@@ -131,7 +131,7 @@ $accordion-bg-white: $white;
     .card-title {
       .card-title-link {
         text-decoration: none;
-        color: $grisulado-900;
+        color: $body-color;
         &:after {
           content: '';
           border-radius: 0.5rem;
@@ -143,11 +143,11 @@ $accordion-bg-white: $white;
         }
 
         &:hover {
-          color: $blue;
+          color: $hover;
           text-decoration: underline;
           text-decoration-thickness: 1px;
           &:after {
-            box-shadow: 0 0 0 2px $blue;
+            box-shadow: 0 0 0 2px $hover;
             
           }
         }
@@ -222,7 +222,7 @@ $accordion-bg-white: $white;
   .card-footer {
     padding: 0 0 $card-spacer-lg;
     margin: -$card-spacer-sm $card-spacer 0;
-    color: $grisulado-900;
+    color: $body-color;
 
     .bx, .material-icons-round {
       font-size: $card-footer-icon-size;
@@ -583,7 +583,7 @@ button.card {
     .card-body,
     .card-footer,
     .card-icon-left {
-      color: $blue;
+      color: $hover;
 
       .card-title {
         text-decoration: underline;
