@@ -16,6 +16,65 @@ export default {
   decorators: [withA11y]
 };
 
+export const SpinnerTest = (): JSX.Element => (
+  <>
+    <div className="storybook__container-spinner">
+      <div className="spinner-border text-primary" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-secondary" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-success" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-danger" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-info" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-light" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-dark" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+    </div>
+    <br />
+    <p>nuevas variantes</p>
+    <div className="storybook__container-spinner">
+      <div className="spinner-border text-info" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-danger" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-light" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-dark" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+    </div>
+    <br />
+    <div className="storybook__container-spinner bg-dark py-2">
+      <div className="spinner-border text-info" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-danger" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-light" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+      <div className="spinner-border text-dark" role="status">
+        <span className="sr-only">Cargando...</span>
+      </div>
+    </div>
+  </>
+);
+
 export const SpinnerTypes = (): JSX.Element => (
   <div className="storybook__container-spinner">
     {spinnerTypes.map((type) => (

@@ -9,7 +9,7 @@ $switch-indicator-height: 18px;
 $switch-sm-indicator-width: 10px;
 $switch-sm-indicator-height: 10px;
 
-$switch-focus-shadow: 0 0 0 2px #005387;
+$switch-focus-shadow: 0 0 0 2px $focus;
 
 /* === Bootstrap Import === */
 
@@ -40,7 +40,7 @@ $switch-focus-shadow: 0 0 0 2px #005387;
 
   &.switch-dark {
     input:checked + .slider {
-      background-color: $grisulado-900;
+      background-color: $dark;
     }
   }
 
@@ -70,7 +70,7 @@ $switch-focus-shadow: 0 0 0 2px #005387;
     top: 0;
 
     &:checked + .slider {
-      background-color: $blue;
+      background-color: $active;
     }
 
     &:focus + .slider {
@@ -93,10 +93,10 @@ $switch-focus-shadow: 0 0 0 2px #005387;
     }
 
     &:disabled + .slider {
-      background-color: $grisulado-100;
+      background-color: $grisulado-300;
       cursor: not-allowed;
       &:before {
-        background-color: $grisulado-300;
+        background-color: $grisulado-500;
       }
     }
   }
