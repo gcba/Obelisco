@@ -46,7 +46,7 @@ $link-access: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.or
 
 a {
   outline: none;
-  color: $blue;
+  color: $body-color;
   cursor: pointer;
   word-break: break-word;
   display: inline-block;
@@ -55,18 +55,18 @@ a {
   backface-visibility: hidden;
 
   &:visited {
-    color: $link-visited-color;
+    color: $visited;
   }
 
   @include hover() {
-    color: $link-hover-color;
+    color: $hover;
     text-decoration-thickness: 1px;
   }
 
   &:focus {
-    color: $link-focus-color;
+    color: $body-color;
     border-radius: $border-radius-lg;
-    box-shadow: 0 0 0 $link-focus-width $box-shadow-button;
+    box-shadow: 0 0 0 $link-focus-width $focus;
   }
 
   &.list-group-item,
@@ -82,7 +82,7 @@ a {
     width: auto;
 
     &:focus {
-      box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+      box-shadow: 0 0 0 $input-btn-focus-width $focus;
     }
   }
 
@@ -131,9 +131,14 @@ a {
   &.link-white {
     color: white;
 
+    &:visited {
+      color: $visited-bg-dark;
+    }
+
     &:focus {
       border-radius: $border-radius-lg;
       box-shadow: 0 0 0 $link-focus-width white;
+      color: white;
     }
   }
 }

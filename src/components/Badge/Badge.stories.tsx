@@ -13,6 +13,30 @@ export default {
   component: Badge,
   decorators: [withA11y]
 };
+export const TestBadge = (): JSX.Element => (
+  <>
+    <div>
+      <span className="badge badge-primary">badge-primary</span>
+      <span className="badge badge-secondary">badge-secondary</span>
+      <span className="badge badge-danger">badge-danger</span>
+      <span className="badge badge-success">badge-success</span>
+      <span className="badge badge-info">badge-info</span>
+    </div>
+    <br />
+    <div>
+      <p>Nuevos badges</p>
+      <span className="badge badge-primary">badge-primary</span>
+      <span className="badge badge-secondary">badge-secondary</span>
+      <br />
+      <br />
+      <span className="badge">badge</span>
+      <span className="badge badge-danger">badge-danger</span>
+      <span className="badge badge-success">badge-success</span>
+      <span className="badge badge-info">badge-info</span>
+      <span className="badge badge-warning">badge-warning</span>
+    </div>
+  </>
+);
 
 export const Simple = (): JSX.Element => <Badge text="Etiqueta 1" className="badge-secondary" />;
 

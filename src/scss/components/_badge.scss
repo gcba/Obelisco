@@ -1,6 +1,6 @@
 /* === Variable and mixins overides === */
 
-$badge-color: $grisulado-900;
+$badge-color: $body-color;
 $badge-color-hover: $blue;
 $badge-font-size: $text-sm;
 $badge-font-weight: $font-weight-normal;
@@ -52,10 +52,31 @@ $badge-padding-x: 0.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-right: $badge-separation;
+  color: $body-color;
+  background-color: $light;
+  box-shadow: 0 0 0 1px $body-color;
 }
-
 @each $color, $value in $theme-colors {
   .badge-#{$color} {
     @include badge-variant-custom($color, $value);
   }
 }
+.badge {
+  &.badge-warning {
+    background-color: $orange-50;
+    box-shadow: 0 0 0 1px $warning;
+  }
+  &.badge-danger {
+    background-color: $red-50;
+    box-shadow: 0 0 0 1px $danger;
+  }
+  &.badge-success {
+    background-color: $green-50;
+    box-shadow: 0 0 0 1px $success;
+  }
+  &.badge-info {
+    background-color: $blue-50;
+    box-shadow: 0 0 0 1px $info;
+  }
+}
+
