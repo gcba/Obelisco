@@ -14,6 +14,7 @@ export default {
 
 export const simple = (): JSX.Element => (
   <>
+    <p>componente info con version desactualizada</p>
     <div className="storybook__container-progression">
       <ProgressBar type="info" width={25}></ProgressBar>
     </div>
@@ -22,6 +23,17 @@ export const simple = (): JSX.Element => (
     </div>
     <div className="storybook__container-progression">
       <ProgressBar type="info" width={100}></ProgressBar>
+    </div>
+    <br />
+    <p>componente actual con nueva version</p>
+    <div className="storybook__container-progression">
+      <ProgressBar type="primary" width={25}></ProgressBar>
+    </div>
+    <div className="storybook__container-progression">
+      <ProgressBar type="primary" width={50}></ProgressBar>
+    </div>
+    <div className="storybook__container-progression">
+      <ProgressBar type="primary" width={100}></ProgressBar>
     </div>
     <br />
     <div className="storybook__container-progression">
@@ -38,11 +50,20 @@ export const simple = (): JSX.Element => (
 
 export const withDescription = (): JSX.Element => (
   <>
+    <p>componente info con version desactualizada</p>
     <div className="storybook__container-progression">
       <ProgressBar type="info" width={50} description="Descripción"></ProgressBar>
     </div>
     <div className="storybook__container-progression">
       <ProgressBar type="info" width={100} description="Descripción"></ProgressBar>
+    </div>
+    <br />
+    <p>componente info con nueva version</p>
+    <div className="storybook__container-progression">
+      <ProgressBar type="primary" width={50} description="Descripción"></ProgressBar>
+    </div>
+    <div className="storybook__container-progression">
+      <ProgressBar type="primary" width={100} description="Descripción"></ProgressBar>
     </div>
     <br />
     <div className="storybook__container-progression">
