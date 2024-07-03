@@ -99,6 +99,7 @@ $theme-colors: map-merge(
       background-color: theme-color-level($color, 1);
       box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
       border-color: theme-color-level($color, 1);
+      outline: 0.125rem solid transparent;
 
       &:focus,
       &.focus {
