@@ -51,7 +51,6 @@ $list-steps-numbers: 9;
       height: $list-steps-circle-size;
       border-radius: 50%;
       outline: 0.125rem solid transparent;
-      outline-offset: -2px;
       top: 0;
       left: 0;
       display: flex;
@@ -71,6 +70,7 @@ $list-steps-numbers: 9;
       left: 0.675rem;
       top: $list-steps-circle-size;
       outline: 0.125rem solid transparent;
+      outline-offset: -2px;
     }
 
     &.list-steps-item-light {
