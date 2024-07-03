@@ -153,11 +153,13 @@ $accordion-bg-white: $white;
         }
         &:focus {
           box-shadow: none;
+          outline: none;
           color: $card-title-link-focus-color;
           text-decoration: underline;
           text-decoration-thickness: 1px;
           &:after {
             box-shadow: $card-focus-box-shadow;
+            outline: 0.25rem solid transparent;
           }
         }
       }
@@ -173,6 +175,7 @@ $accordion-bg-white: $white;
 
 .card {
   box-shadow: $card-box-shadow;
+  outline: 0.125rem solid transparent;
   width: 100%;
 
   .card-body {
@@ -328,11 +331,13 @@ $accordion-bg-white: $white;
 
   &.card-simple {
     box-shadow: none;
+    outline: none;
     background: transparent;
   }
 
   &.unbordered {
     box-shadow: none;
+    outline: none;
     background: transparent;
   }
 
@@ -611,6 +616,7 @@ button.card {
     }
 
     .card-header {
+      outline: 0.125rem solid transparent;
       font-family: $font-family-headings;
       background-color: $blue;
       border-width: 0;
@@ -694,8 +700,8 @@ button.card {
 
       &:focus,
       &.focus {
-        outline: none;
         box-shadow: $card-focus-box-shadow;
+        outline: 0.25rem solid transparent;
         border-radius: $border-radius;
       }
 
