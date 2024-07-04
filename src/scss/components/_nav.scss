@@ -136,7 +136,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     .nav-link {
       text-decoration: none;
       background-color: $white;
-      outline: 0.2rem solid transparent;
+      outline: 0.125rem solid transparent;
 
       &:hover {
         span {
@@ -145,8 +145,18 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       }
 
       &:focus {
+        outline: 0.25rem solid transparent;
+        outline-offset: 0px;
         span {
           text-decoration: none;
+        }
+      }
+
+      &.active-child {
+        outline: 0.25rem solid transparent;
+        outline-offset: -2px;
+        &:focus, &.focus {
+          outline-offset: 0px;
         }
       }
 
@@ -254,6 +264,8 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     &:active {
       color: $white;
       background-color: $nav-pills-link-active-bg;
+      outline: 0.25rem solid transparent;
+      outline-offset: -2px;
 
       &:hover,
       &:focus {
