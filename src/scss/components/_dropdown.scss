@@ -151,6 +151,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
       display: flex;
       align-items: center;
       gap: $dropdown-btn-gap;
+      outline: 0.125rem solid transparent;
 
       &.dropdown-toggle:after {
         content: none;
@@ -194,7 +195,6 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
       &.btn-dropdown-border {
         box-shadow: $dropdown-box-shadow;
         border-radius: spaceUnits(2);
-        outline: 0.125rem solid transparent;
       }
 
       &:hover {
