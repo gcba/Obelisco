@@ -287,6 +287,7 @@ a.list-group-item {
     display: grid;
     width: 100%;
     box-shadow: $box-shadow-access;
+    outline: 0.125rem solid transparent;
     border-radius: $list-group-border;
     padding-bottom: 0;
 
