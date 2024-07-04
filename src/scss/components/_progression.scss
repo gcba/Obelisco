@@ -27,6 +27,7 @@ $progress-bg: $grisulado-100;
 .progress-bar {
   border-radius: 20px;
   outline: 0.25rem solid transparent;
+  outline-offset: -2px;
 }
 
 .progression {
