@@ -32,6 +32,7 @@ $footer-info-gap-mobile: 1rem;
 .main-footer {
   @extend .bg-dark, .text-white;
   padding: $footer-padding-y 0;
+  outline: 0.25rem solid transparent;
 
   @include media-breakpoint-down(sm) {
     padding: $footer-padding-y-sm 0;
