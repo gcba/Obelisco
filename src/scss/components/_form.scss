@@ -133,6 +133,8 @@ $custom-control-focus-color: #005387;
   .reset {
     display: block;
     cursor: pointer;
+    outline: 0.125rem solid transparent;
+    outline-offset: -2px;
 
     &::after {
       content: '';
