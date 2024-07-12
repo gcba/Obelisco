@@ -12,7 +12,7 @@ $right-arrow-icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy
 
 /* Font weight */
 .font-weight-semibold {
-  font-weight: $font-weight-semibold;/* Esta clase no pertenece a bootstraps, fue creada para el font-weight: 600; */
+  font-weight: $font-weight-semibold !important;/* Esta clase no pertenece a bootstraps, fue creada para el font-weight: 600; */
 }
 /* Fin del Font weight */
 
@@ -89,13 +89,16 @@ h6,
 }
 .headline-lg {
   font-size: $headline-lg;
+  font-weight: $font-weight-bold;
 }
 .headline-md {
   font-size: $headline-md;
+  font-weight: $font-weight-semibold;
 }
 .headline-sm {
   font-size: $headline-sm;
   line-height: $height-headline-sm;
+  font-weight: $font-weight-semibold;
 }
 /* Fin de Titulares para componentes */
 
