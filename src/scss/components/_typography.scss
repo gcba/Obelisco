@@ -133,7 +133,7 @@ blockquote {
   border-left: spaceUnits(1) solid $grisulado-700;
   font-style: italic;
   p {
-    @extend .lead;
+    @extend .text-lg;
   }
 }
 /* Fin de estilos customizados */

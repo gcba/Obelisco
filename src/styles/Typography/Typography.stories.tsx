@@ -29,6 +29,22 @@ Headings.story = {
   name: 'Títulos'
 };
 
+export const Subtitle = (): JSX.Element => {
+  return (
+    <>
+      <Typography as="p" className="text-xl">
+        Subtítulo con clase text-xl
+      </Typography>
+      <Typography as="p" className="lead">
+        Subtítulo con clase lead
+      </Typography>
+    </>
+  );
+};
+
+Subtitle.story = {
+  name: 'Subtítulo'
+};
 export const Tag = (): JSX.Element => {
   return (
     <>
@@ -71,6 +87,22 @@ export const Text = (): JSX.Element => {
 
 Text.story = {
   name: 'Cuerpos'
+};
+
+export const OtherStyles = (): JSX.Element => {
+  return (
+    <>
+      <p className="font-weight-regular">Texto con font-weight regular</p>
+      <p className="font-weight-semibold">Texto con font-weight semibold</p>
+      <p className="font-weight-bold">Texto con font-weight bold</p>
+      <p className="font-italic">Texto en itálica</p>
+      <p className="underline-1">Texto subrayado con grosor de 1px</p>
+      <p className="underline-2">Texto subrayado con grosor de 2px</p>
+    </>
+  );
+};
+OtherStyles.story = {
+  name: 'Otros estilos'
 };
 
 export const Quote = (): JSX.Element => {
