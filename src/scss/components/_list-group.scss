@@ -100,7 +100,7 @@ a.list-group-item {
 
   i,
   .material-icons-round {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     align-self: center;
     margin-right: 0.75rem;
     vertical-align: middle;
@@ -109,6 +109,7 @@ a.list-group-item {
   .access-title {
     font-weight: $font-weight-normal;
     @extend .text-md;
+    display: inline-block;
   }
 
   &:not(.access-content) {
@@ -123,7 +124,7 @@ a.list-group-item {
     .access-text {
       @extend .text-sm;
       font-weight: $font-weight-normal ;
-      margin: 0;
+      margin: 0.125rem 0 0;
     }
   }
 
