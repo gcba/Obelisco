@@ -34,7 +34,7 @@ interface TypographysProps extends BaseTextProps {
     | 'sup'
     | 'sub'
     | 'kbd'
-    | 'spam';
+    | 'span';
 }
 
 export const Typography: React.FC<TypographysProps> = ({ as, className, children, weight }) => {
