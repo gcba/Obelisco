@@ -15,10 +15,10 @@ $btn-hover-width: 2px;
 $input-btn-focus-color: darken($component-active-bg, 60%);
 $input-btn-focus-width: 0.25rem;
 
-$btn-padding-y-sm: 5px; // Se revisará cuando el equipo de Diseño tome el componente
+$btn-padding-y-sm: 0.25rem;
 $btn-padding-x-sm: 0.5rem;
-$btn-font-size-sm: $headline-sm; //16px
-$btn-line-height-sm: $height-headline-sm; //20px
+$btn-font-size-sm: $headline-md; //18px
+$btn-line-height-sm: $height-headline; //24px
 
 $btn-padding-y-lg: spaceUnits(3);
 $btn-padding-x-lg: spaceUnits(5);
@@ -231,7 +231,7 @@ a.btn {
 //
 .btn {
   &-sm {
-    min-height: 30px;
+    min-height: 32px;
   }
 
   &-lg {
