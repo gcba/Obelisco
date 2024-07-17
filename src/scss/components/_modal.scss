@@ -63,6 +63,7 @@ $modal-dialog-margin-y-sm-up: 3rem;
 
       .modal-title {
         @extend .headline-lg;
+        font-weight: $font-weight-semibold;
       }
     }
 
