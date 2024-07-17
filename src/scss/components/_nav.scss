@@ -130,7 +130,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
       &:hover {
         span {
-          text-decoration: underline;
+          @extend .underline-1;
         }
       }
 
@@ -152,8 +152,8 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 .nav-link {
   color: $grisulado-900;
   @extend .headline-md;
+  font-weight: $font-weight-normal;
   // font-size: $nav-link-lg-font-size;
-  // font-weight: $font-weight-normal;
   // line-height: $nav-link-line-heght;
   // font-family: $font-family-headings;
 
@@ -174,7 +174,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   @include hover() {
     box-shadow: $input-btn-hover-box-shadow;
     color: $nav-link-hover-color;
-    @extend .underline-2;
+    @extend .underline-1;
 
     &:visited {
       color: $nav-link-hover-color;
@@ -290,9 +290,9 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     .nav-item {
       white-space: nowrap;
 
-      // button { Creo que se puede eliminar este estilo
-      //   border: none;
-      // }
+      button {
+        border: none;
+      }
 
       .nav-link {
         background: transparent;
