@@ -32,7 +32,6 @@ $list-steps-numbers: 9;
 
     h4, h3 {
       @extend .h6;
-      font-weight: $font-weight-bold;
       @include media-breakpoint-down(xs) {
         margin-bottom: $list-steps-title-margin-bottom-mobile;
       }
