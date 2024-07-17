@@ -117,10 +117,6 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
           background-color: $blue;
           color: $white;
 
-          &.btn-dropdown-border {
-            box-shadow: $dropdown-box-shadow-active;
-          }
-
           &:hover {
             color: $white;
           }
@@ -251,7 +247,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
     }
 
     > .btn.btn-dropdown.btn-dropdown-border:not(.collapsed):not(.sub-btn-dropdown) {
-      box-shadow: $dropdown-box-shadow-active;
+      box-shadow: none;
     }
 
     > .collapse.show,
@@ -584,6 +580,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
           margin: 0;
           min-height: 2.5rem;
           line-height: $height-text-md;
+          font-weight: $font-weight-normal;
 
           &:not(.disabled):has(.btn-check:focus) {
             box-shadow: $dropdown-box-shadow-focus;
