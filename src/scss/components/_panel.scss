@@ -256,7 +256,9 @@ $panel-deck-card-mr: 2rem;
 
     .list-link {
       margin-top: spaceUnits(6);
-
+      .list-link-title {
+        @extend .headline-md;
+      }
       .list-link-item-title {
         margin-bottom: spaceUnits(4);
         @extend .headline-md;
