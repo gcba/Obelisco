@@ -105,3 +105,6 @@ Un ejemplo de cómo importalas es:
 El mantenimiento y desarrollo de Obelisco lo hace el equipo de la Dirección General de Experiencia Digital, pero lo utilizan tanto equipos de gobierno como proveedores externos.
 
 Para agilizar y hacer más transparente el proceso, cualquier persona puede [contribuir de varias formas](CONTRIBUTING.md).
+
+Mail de contacto: equipoobelisco@buenosaires.gob.ar
+
