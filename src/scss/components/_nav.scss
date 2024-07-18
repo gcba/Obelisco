@@ -439,16 +439,6 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   @extend .tabs;
 }
 
-/* Esta clase se usa en la navegacion vertical de mas de un nivel, posiblemente al tener ahora el mismo tamaño puede ser eliminada */
-// .nav.nav-lg {
-//   > .nav-link,
-//   > .nav-item > .nav-link {
-//     // font-size: $nav-link-lg-font-size;
-//     // background: red !important;
-//     // font-weight: $nav-link-lg-font-weight;
-//   }
-// }
-
 .nav .nav {
   .nav-link {
     padding-left: $nav-link-vertical-padding-x * 2.4444;
@@ -476,7 +466,6 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  // font-size: $nav-link-lg-font-size;
   font-weight: $nav-link-lg-font-weight;
 
   &:after {
