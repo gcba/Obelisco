@@ -401,7 +401,11 @@ $custom-control-focus-color: #005387;
     box-shadow: 0 0 0 7px #005386, inset 0 0 0 3.4px $white;
     outline: 3px solid $white;
     background-color: $custom-control-indicator-checked-color;
-    outline-offset: -8px;
+    outline-offset: 0;
+    //Estilos por accesibilidad en Modo Alto Contraste
+    @media (forced-colors: active) {
+      outline-offset: -8px;
+    }
   }
 }
 
