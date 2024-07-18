@@ -23,11 +23,13 @@ $stepper-description-color: $grisulado-900;
   }
 
   .step-next {
+    @extend .text-sm;
     color: $stepper-description-color;
     margin-bottom: 0;
   }
 
   .step-text {
+    @extend .text-sm;
     display: inline-block;
   }
 
