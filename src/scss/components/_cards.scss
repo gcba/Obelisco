@@ -834,6 +834,11 @@ button.card {
             transform: scale(0);
             transition: 120ms transform ease-in-out;
             box-shadow: inset 1rem 1rem $info;
+            //Estilos por accesibilidad en Modo Alto Contraste
+            @media (forced-colors: active) {
+              outline: 4px solid transparent;
+              outline-offset: -5px;
+            }
           }
 
           &:focus,
@@ -843,6 +848,10 @@ button.card {
             outline: 3px solid $white;
             outline-offset: 0px;
             border-color: $info;
+            //Estilos por accesibilidad en Modo Alto Contraste
+            @media (forced-colors: active) {
+              outline: none;
+            }
           }
 
           &:hover {
