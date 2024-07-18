@@ -128,15 +128,21 @@ h6,
   }
 }
 
-/* consultar si les parece bien esto o se saa el font style y la p extend lead 
-ya que esta ahora son dos clases que se pueden añadir al html o siempre sera asi ? */
-blockquote { 
-  padding-left: spaceUnits(4);
-  margin: spaceUnits(8);
+//Citas
+blockquote {
+  padding: 1.5rem 2rem;
+  margin:  0;
   border-left: spaceUnits(1) solid $grisulado-700;
   font-style: italic;
   p {
     @extend .text-lg;
+    margin-bottom: 0;
+  }
+  small, span.text-sm, span.small {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-style: normal;
+    font-weight: $font-weight-semibold;
   }
 }
 /* Fin de estilos customizados */
