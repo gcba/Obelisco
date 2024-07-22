@@ -181,7 +181,6 @@ $theme-colors: map-merge(
       &.focus,
       &:visited {
         color: $link-color;
-        outline-color: transparent;
       }
     }
   }
