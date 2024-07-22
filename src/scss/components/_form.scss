@@ -271,8 +271,9 @@ $custom-control-focus-color: #005387;
 }
 
 .valid-feedback::before, .invalid-feedback::before  {
-  vertical-align: text-top;
+  vertical-align: top;
   margin-right: spaceUnits(1);
+  margin-top: 1.5px;
   height: 16px;
   display: inline-block;
 }
@@ -419,6 +420,7 @@ $custom-control-focus-color: #005387;
 // Checkbox button
 .btn-chip {
   font-weight: $font-weight-semibold;
+  font-size: $headline-sm;
   background-color: $grisulado-10;
 
   @include btn-disabled;
