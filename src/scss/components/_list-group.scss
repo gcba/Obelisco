@@ -23,9 +23,9 @@ $box-shadow-access-focus: 0 0 0 4px theme-color-level('info', 3);
 
 $no-text-decoration: none;
 
-$margin-clearfix: 0 1.5rem;
-$margin-clearfix-mobile: 0 1rem;
-$border-clearfix: 2px solid $grisulado-50;
+$margin-clearfix: -2px 0 0.5rem;
+$color-clearfix: $grisulado-50;
+$height-clearfix: 0.125rem;
 
 $list-group-padding-x: spaceUnits(4);
 
@@ -101,9 +101,8 @@ a.list-group-item {
   i,
   .material-icons-round {
     font-size: 1.5rem;
-    align-self: center;
     margin-right: 0.75rem;
-    vertical-align: middle;
+    vertical-align: top;
   }
 
   .access-title {
@@ -296,11 +295,10 @@ a.list-group-item {
 
     .clearfix {
       margin: $margin-clearfix;
-      border-top: $border-clearfix;
-
-      @include media-breakpoint-down(xs) {
-        margin: $margin-clearfix-mobile;
-      }
+      border: none;
+      height: $height-clearfix;
+      min-height: $height-clearfix;
+      background-color: $color-clearfix;
     }
 
     .card-access-body {
@@ -312,8 +310,13 @@ a.list-group-item {
       &:not(.p-list) {
         &:has(~ .container-access) {
           ~ .card-item {
-            &:not(:hover) {
-              @extend .shadow-none;
+            box-shadow: none;
+            &:hover {
+              box-shadow: $box-shadow-access-hover;
+            }
+
+            &:focus {
+              box-shadow: $box-shadow-access-focus;
             }
           }
         }
@@ -370,11 +373,7 @@ a.list-group-item {
 
     .container-access {
       .access-option {
-        padding: 0.625rem 0;
-
-        @include media-breakpoint-down(xs) {
-          padding: 0.5rem 0;
-        }
+        padding: 0;
 
         .list-group-item:last-child {
           margin-bottom: 0;
@@ -382,7 +381,7 @@ a.list-group-item {
 
         .item-sm {
           box-shadow: none;
-          margin-bottom: 5px;
+          margin-bottom: 0.5rem;
 
           &:active,
           &.active {
@@ -404,7 +403,17 @@ a.list-group-item {
           padding: $padding-title-option;
           @extend .headline-md;
           font-weight: $font-weight-semibold;
-          margin-bottom: 0;
+          margin-bottom: 0.5rem;
+        }
+      }
+      & + .clearfix {
+        margin-top: 0;
+        margin-bottom: 6px;
+        & + .card-item {
+          border-radius: 0.5rem;
+          &:focus {
+            box-shadow: $box-shadow-access-focus;
+          }
         }
       }
     }
