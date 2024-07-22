@@ -17,6 +17,7 @@ $badge-padding-y: 0;
   color: $badge-color !important;
   background-color: theme-color-level($color, $badge-bg-level);
   box-shadow: 0 0 0 1px theme-color-level($color);
+  outline: 0.125rem solid transparent;
 
   @at-root a#{&} {
     &:hover,
@@ -31,6 +32,7 @@ $badge-padding-y: 0;
       outline: 0;
       background-color: theme-color-level($color, $badge-bg-level);
       box-shadow: $focus-box-shadow;
+      outline: 0.25rem solid transparent;
     }
   }
 }

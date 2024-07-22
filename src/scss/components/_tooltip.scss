@@ -118,6 +118,8 @@ $calc-right-x: calc(0% - 30px);
   &:before {
     content: '';
     z-index: 100;
+    border-bottom: 0.125rem solid transparent;
+    border-right: 0.125rem solid transparent;
   }
 
   //BOX
@@ -132,6 +134,7 @@ $calc-right-x: calc(0% - 30px);
     z-index: 99;
     width: max-content;
     max-width: $tooltip-max-width;
+    outline: 0.125rem solid transparent;
   }
 
   //SHOW TOOLTIP

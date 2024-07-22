@@ -39,6 +39,7 @@ $table-striped-order: even;
   thead {
     background: $table-head-bg;
     color: $table-head-color;
+    outline: 0.125rem solid transparent;
 
     th {
       border: none;

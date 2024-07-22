@@ -6,6 +6,7 @@ $card-block-box-shadow: 0 0 0 2px $grisulado-50;
 /* === Custom styles === */
 .card.card-block {
   box-shadow: $card-block-box-shadow;
+  outline: 0.125rem solid transparent;
 
   .block-title {
     margin-bottom: 0;

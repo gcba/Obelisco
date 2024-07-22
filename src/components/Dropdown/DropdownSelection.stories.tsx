@@ -31,7 +31,11 @@ export const DropdownSelectionCheckbox = (): JSX.Element => {
       <DropdownOption
         options={checkboxOptions}
         idDropdown="checkboxExample"
-        icon={<span className="material-icons-round">person</span>}
+        icon={
+          <span className="material-icons-round" aria-hidden="true">
+            person
+          </span>
+        }
         iconType="material">
         <i className="bx bxs-check"></i>
       </DropdownOption>
@@ -47,9 +51,15 @@ export const DropdownSelectionRadio = (): JSX.Element => {
         options={radioOptions}
         isRadio={true}
         idDropdown="radioExample"
-        icon={<span className="material-icons-round">person</span>}
+        icon={
+          <span className="material-icons-round" aria-hidden="true">
+            person
+          </span>
+        }
         iconType="material">
-        <span className="material-icons-round">done</span>
+        <span className="material-icons-round" aria-hidden="true">
+          done
+        </span>
       </DropdownOption>
     </div>
   );
@@ -60,13 +70,19 @@ export const DropdownSelectionSizes = (): JSX.Element => {
   return (
     <div className="storybook__container-dropdown">
       <DropdownOption options={radioOptions} isRadio={true} size="small" idDropdown="radioSmall">
-        <span className="material-icons-round">done</span>
+        <span className="material-icons-round" aria-hidden="true">
+          done
+        </span>
       </DropdownOption>
       <DropdownOption options={radioOptions} isRadio={true} idDropdown="radio">
-        <span className="material-icons-round">done</span>
+        <span className="material-icons-round" aria-hidden="true">
+          done
+        </span>
       </DropdownOption>
       <DropdownOption options={radioOptions} isRadio={true} size="large" idDropdown="radioLarge">
-        <span className="material-icons-round">done</span>
+        <span className="material-icons-round" aria-hidden="true">
+          done
+        </span>
       </DropdownOption>
     </div>
   );
