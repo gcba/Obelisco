@@ -83,8 +83,8 @@ $custom-control-focus-color: #005387;
 
 /* === Bootstrap Import === */
 
-@import 'node_modules/bootstrap/scss/forms';
-@import 'node_modules/bootstrap/scss/custom-forms';
+@import '../../../node_modules/bootstrap/scss/forms';
+@import '../../../node_modules/bootstrap/scss/custom-forms';
 
 /* === Custom styles === */
 
