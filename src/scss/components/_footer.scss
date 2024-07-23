@@ -38,7 +38,9 @@ $footer-info-gap-mobile: 1rem;
   }
 
   h4, h3 {
-    @extend .h4;
+    font-size: $headline-md;
+    line-height: $height-headline;
+    font-weight: $font-weight-bold;
     margin-bottom: spaceUnits(2);
 
     @include media-breakpoint-down(sm) {
@@ -159,7 +161,9 @@ $footer-info-gap-mobile: 1rem;
       gap: $footer-info-gap;
 
     .footer-info-text {
-      @extend .h4;
+      font-size: $headline-lg;
+      line-height: $height-headline;
+      font-weight: $font-weight-bold;
       margin: 0;
     }
 

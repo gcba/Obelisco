@@ -2,7 +2,6 @@
 $list-informative-subtitule-margin-bottom: 2rem;
 $list-informative-li-padding-left: 2rem;
 $list-informative-li-icon-size: 24px;
-$list-informative-li-line-height: 24px;
 $list-informative-li-margin-bottom: 1rem;
 
 /* === Custom variables and mixins === */
@@ -13,6 +12,7 @@ $list-icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 /* === Custom styles === */
 
 .list-informative-subtitle {
+  @extend .h6;
   margin-bottom: $list-informative-subtitule-margin-bottom;
 }
 
@@ -22,7 +22,7 @@ $list-icon-check: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   padding: 0;
 
   li {
-    line-height: $list-informative-li-line-height;
+    line-height: $height-text-md;
     position: relative;
     padding-left: $list-informative-li-padding-left;
 

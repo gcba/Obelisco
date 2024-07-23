@@ -218,6 +218,11 @@ $carousel-margin-bottom: spaceUnits(4);
   color: $body-color;
   top: 100%;
   padding-top: 0;
+
+  h5 {
+    @extend .h4;
+    font-weight: $font-weight-bold;
+  }
 }
 
 // Modal
