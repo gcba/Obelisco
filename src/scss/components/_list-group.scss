@@ -51,7 +51,7 @@ $list-group-icon-logout: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http:
 /* === Bootstrap Import === */
 
 // Eliminamos el color secundario para las alertas.
-@import 'node_modules/bootstrap/scss/list-group';
+@import '../../../node_modules/bootstrap/scss/list-group';
 
 /* === Custom styles === */
 

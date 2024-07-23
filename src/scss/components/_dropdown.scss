@@ -15,7 +15,7 @@ $dropdown-item-padding-left-checkbox: spaceUnits(12);
 $animation-toggle: transform 0.2s ease-in-out;
 
 /* === Bootstrap Import === */
-@import 'node_modules/bootstrap/scss/dropdown';
+@import '../../../node_modules/bootstrap/scss/dropdown';
 
 /* === Custom styles === */
 
