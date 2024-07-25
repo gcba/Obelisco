@@ -4,45 +4,159 @@
 
 /* === Gray scale === */
 
-$white: #fff;
-$gray-50: #f2f2f2;
-$gray-100: #e5e5e5;
-$gray-200: #cccccc;
-$gray-300: #b2b2b2;
+$white: #FFFFFF;
+$gray-50: #F2F2F2;
+$gray-100: #E5E5E5;
+$gray-200: #CCCCCC;
+$gray-300: #B2B2B2;
 $gray-400: #999999;
-$gray-500: #7f7f7f;
+$gray-500: #7F7F7F;
 $gray-600: #666666;
-$gray-700: #4c4c4c;
+$gray-700: #4C4C4C;
 $gray-800: #333333;
 $gray-900: #191919;
-$black: #000;
+$gray-950: #000000;
+$black: #000000;
 
 /* === Grisulado === */
-
-$grisulado-10: #f3f6f9;
-$grisulado-50: #e6ebf0;
-$grisulado-100: #d1d8e0;
-$grisulado-200: #b8c1cc;
-$grisulado-300: #9eaab8;
-$grisulado-400: #8a98a8;
-$grisulado-500: #69788a;
-$grisulado-600: #5c6a7a;
-$grisulado-700: #505e70;
+$grisulado-10: #F3F6F9;
+$grisulado-50: #E6EBF0;
+$grisulado-100: #D1D8E0;
+$grisulado-200: #B8C1CC;
+$grisulado-300: #9EAAB8;
+$grisulado-400: #8A97A8;
+$grisulado-500: #69788A;
+$grisulado-600: #5C6A7A;
+$grisulado-700: #505E70;
 $grisulado-800: #425266;
-$grisulado-900: #38485c;
+$grisulado-900: #38485C;
+
+/* === Blue === */
+$blue-50: #ECF0F9;
+$blue-100: #D9E2F2;
+$blue-200: #ADC3EB;
+$blue-300: #85A5E0;
+$blue-400: #5C88D6;
+$blue-500: #336ACC;
+$blue-600: #2E569E;
+$blue-700: #274986;
+$blue-800: #1C345F;
+$blue-900: #101E37;
+$blue-950: #080F1C;
+
+/* === Yellow === */
+$yellow-50: #FFFAE5;
+$yellow-100: #FFF5CC;
+$yellow-200: #FFEB99;
+$yellow-300: #FFE066;
+$yellow-400: #FFD633;
+$yellow-500: #FFCC00;
+$yellow-500: #FFCC00;
+$yellow-600: #CCA300;
+$yellow-700: #997A00;
+$yellow-800: #665200;
+$yellow-900: #332900;
+$yellow-950: #1A1500;
+
+/* === Orange === */
+$orange-50: #FFF4E5;
+$orange-100: #FFEACC;
+$orange-200: #FFD599;
+$orange-300: #FFBF66;
+$orange-400: #FFAA33;
+$orange-500: #FF9500;
+$orange-600: #CC7700;
+$orange-700: #995900;
+$orange-800: #663C00;
+$orange-900: #331E00;
+$orange-950: #1A0F00;
+
+/* === Green === */
+$green-50: #F2FBF5;
+$green-100: #E0F8E9;
+$green-200: #C3EFD3;
+$green-300: #94E1B0;
+$green-400: #5ECA85;
+$green-500: #38AF64;
+$green-600: #26874A;
+$green-700: #237240;
+$green-800: #205B36;
+$green-900: #1C4B2D;
+$green-950: #0A2915;
+
+/* === Red === */
+$red-50: #FAEBEB;
+$red-100: #F5D6D6;
+$red-200: #EBADAD;
+$red-300: #E08585;
+$red-400: #D65C5C;
+$red-500: #CC3333;
+$red-600: #A32929;
+$red-700: #7A1F1F;
+$red-800: #521414;
+$red-900: #290A0A;
+$red-950: #140505;
+
+/* === Purple === */
+$purple-50: #F7E5FF;
+$purple-100: #F0CCFF;
+$purple-200: #E299FF;
+$purple-300: #D366FF;
+$purple-400: #C433FF;
+$purple-500: #B600FF;
+$purple-600: #9100CC;
+$purple-700: #6D0099;
+$purple-800: #490066;
+$purple-900: #240033;
+$purple-950: #12001A;
+
+/* === Cyan === */
+$cyan-50: #F3FCFB;
+$cyan-100: #E2F8F5;
+$cyan-200: #CAF2EC;
+$cyan-300: #ADEBE2;
+$cyan-400: #8DE2D6;
+$cyan-500: #64D8C8;
+$cyan-600: #3CCEB8;
+$cyan-700: #2BAB98;
+$cyan-800: #218274;
+$cyan-900: #10413A;
+$cyan-950: #08211D;
+
+/* === Sky === */
+$sky-50: #E5F9FF;
+$sky-100: #CCF3FF;
+$sky-200: #99E8FF; //color cromatico sky
+$sky-300: #66DCFF;
+$sky-400: #33D1FF;
+$sky-500: #00C5FF;
+$sky-600: #0086AD;
+$sky-700: #005E7A;
+$sky-800: #004357;
+$sky-900: #002733;
+$sky-950: #001419;
 
 /* === Color palette === */
 
-$blue: #007bc7;
+/* $blue: #007bc7;
 $purple: #9b59b6;
 $red: #c93b3b;
 $orange: #ffa82e;
 $yellow: #ffdb2e;
 $green: #26874a;
 $teal: #18b596;
-$cyan: #009afd;
+$cyan: #009afd; */
 // $indigo:  #9b59b6; // Bootstrap's default
 // $pink:    #f54789; // Bootstrap's default
+
+$blue: $blue-500;
+$purple: $purple-200; //mismo color que antes
+$red: $red-500; 
+$orange: $orange-500;
+$yellow: $yellow-500;
+$green: $green-600; //mismo color que antes
+$teal: #18b596;
+$cyan: $cyan-400;//mismo color que antes
 
 /* === Color pastel === */
 
@@ -61,14 +175,38 @@ $aqua: #99ffe2;
 
 /* === Color types === */
 
-$primary: $yellow;
+/* $primary: $yellow;
 $secondary: $grisulado-600;
 $success: $green;
 $info: $blue;
 $warning: $yellow;
 $danger: $red;
 $light: $grisulado-10;
-$dark: $gray-800;
+$dark: $gray-800; */
+
+$primary: $blue; //blue-500
+$secondary: $blue-900;
+$success: $green; //$green-600
+$danger: $red; //$red-500;
+$warning: $orange; //orange-500
+$info: $sky-600;
+$light: $grisulado-10;
+$dark: $blue-950;
+
+$link: $sky-700;
+
+$hover: $blue-700;
+$focus: $cyan-800;
+
+$active: $blue-700;
+$press: $blue-800; //#1C345F
+$visited: $purple-700; // #6D0099
+$visited-bg-dark: $purple-200; // #E299FF
+
+$primary-hover: $blue-600; //#2E569E
+$secondary-hover: $blue-950; //#080F1C
+
+$active-border: $blue-800; //#1C345F
 
 /* === Color theme === */
 
@@ -87,7 +225,8 @@ $yiq-text-light: $white !default;
 /* === Body === */
 
 $body-bg: $white;
-$body-color: $grisulado-900;
+/* $body-color: $grisulado-900; */
+$body-color: $blue-900;
 $text-muted: $grisulado-500;
 
 /* === Custom forms & stuff === */
