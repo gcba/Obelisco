@@ -27,21 +27,31 @@ $alert-icons: (
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(38, 135, 74, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>'),
   'danger':
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(201, 59, 59, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>'),
-  'primary':
+  'warning':
     url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 168, 46, 1);transform: ;msFilter:;"><path d="M12.884 2.532c-.346-.654-1.422-.654-1.768 0l-9 17A.999.999 0 0 0 3 21h18a.998.998 0 0 0 .883-1.467L12.884 2.532zM13 18h-2v-2h2v2zm-2-4V9h2l.001 5H11z"></path></svg>'),
+  'primary':
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(51, 106, 204, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>'),
   'info':
-    url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 123, 199, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>')
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 133, 173, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>')
+);
+
+$theme-color-alert-bg: (
+  info: $sky-50,
+  warning: $orange-50,
+  danger: $red-50,
+  success: $green-50,
+  primary: $blue-50
 );
 
 /* === Custom variables and mixins === */
 
-@mixin alert-variant($background, $border, $color) {
+/* @mixin alert-variant($background, $border, $color) {
   @include gradient-bg($background);
   border: none;
   outline: 2px solid $border;
   outline-offset: -2px;
   border-radius: spaceUnits(2);
-}
+} */
 
 @mixin alert-icon($type) {
   &::before {
@@ -57,9 +67,25 @@ $theme-colors: map-remove($theme-colors, 'secondary');
 $theme-colors: map-merge(
   $theme-colors,
   (
-    'primary': $orange
+    'warning': $orange
   )
 );
+
+$theme-color-alert-bg: (
+  info: $sky-50,
+  warning: $orange-50,
+  danger: $red-50,
+  success: $green-50,
+  primary: $blue-50
+);
+
+@mixin alert-types($type) {
+  background-color: map-get($theme-color-alert-bg, $type);
+  border: none;
+  outline: 2px solid map-get($theme-colors, $type);
+  outline-offset: -2px;
+  border-radius: spaceUnits(2);
+}
 @import 'node_modules/bootstrap/scss/alert';
 
 /* === Custom styles === */
@@ -82,6 +108,7 @@ $theme-colors: map-merge(
   @each $color, $value in $theme-colors {
     &.alert-#{$color} {
       @include alert-icon($color);
+      @include alert-types($color);
     }
   }
 

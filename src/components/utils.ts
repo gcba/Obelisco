@@ -13,7 +13,7 @@ export const buttonTypes: Array<ButtonTypeWithName> = [
   { type: 'link', name: 'Link' }
 ];
 
-export type AlertType = { type: Type | 'info'; text: string };
+export type AlertType = { type: Type | 'info' | 'warning'; text: string };
 
 export type Size = 'default' | 'small' | 'large';
 export const sizes: Size[] = ['small', 'default', 'large'];

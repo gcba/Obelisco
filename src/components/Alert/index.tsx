@@ -4,9 +4,10 @@ import classNames from 'classnames';
 
 export const alertTypes: AlertType[] = [
   { type: 'info', text: 'Esta es la descripción de una alerta de información.' },
-  { type: 'primary', text: 'Esta es la descripción de una alerta de advertencia.' },
   { type: 'success', text: 'Esta es la descripción de una alerta de éxito.' },
-  { type: 'danger', text: 'Esta es la descripción de una alerta de error.' }
+  { type: 'danger', text: 'Esta es la descripción de una alerta de error.' },
+  { type: 'warning', text: 'Esta es la descripción de una alerta de advertencia.' },
+  { type: 'primary', text: 'Esta es la descripción de una alerta primaria.' }
 ];
 
 export const alertHighlight: AlertType[] = [
@@ -15,16 +16,20 @@ export const alertHighlight: AlertType[] = [
     text: '<strong>Este es un destacado de una alerta de información.</strong> Esta es la descripción de una alerta de información que continua al texto destacado.'
   },
   {
-    type: 'primary',
-    text: '<strong>Este es un destacado de una alerta de advertencia.</strong> Esta es la descripción de una alerta de advertencia que continua al texto destacado.'
-  },
-  {
     type: 'success',
     text: '<strong>Este es un destacado de una alerta de éxito.</strong> Esta es la descripción de una alerta de éxito que continua al texto destacado.'
   },
   {
+    type: 'warning',
+    text: '<strong>Este es un destacado de una alerta de advertencia.</strong> Esta es la descripción de una alerta de advertencia que continua al texto destacado.'
+  },
+  {
     type: 'danger',
     text: '<strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que continua al texto destacado.'
+  },
+  {
+    type: 'primary',
+    text: '<strong>Este es un destacado de una alerta primaria.</strong> Esta es la descripción de una alerta primaria que continua al texto destacado.'
   }
 ];
 
@@ -34,16 +39,20 @@ export const alertLink: AlertType[] = [
     text: '<strong>Este es un destacado de una alerta de información.</strong> Esta es la descripción de una alerta de información que continua al texto destacado, incluso con <a href="#">enlace</a>.'
   },
   {
-    type: 'primary',
-    text: '<strong>Este es un destacado de una alerta de advertencia.</strong> Esta es la descripción de una alerta de advertencia que continua al texto destacado, incluso con <a href="#">enlace</a>.'
-  },
-  {
     type: 'success',
     text: '<strong>Este es un destacado de una alerta de éxito.</strong> Esta es la descripción de una alerta de éxito que continua al texto destacado, incluso con <a href="#">enlace</a>.'
   },
   {
+    type: 'warning',
+    text: '<strong>Este es un destacado de una alerta de advertencia.</strong> Esta es la descripción de una alerta de advertencia que continua al texto destacado, incluso con <a href="#">enlace</a>.'
+  },
+  {
     type: 'danger',
     text: '<strong>Este es un destacado de una alerta de error.</strong> Esta es la descripción de una alerta de error que continua al texto destacado, incluso con <a href="#">enlace</a>.'
+  },
+  {
+    type: 'primary',
+    text: '<strong>Este es un destacado de una alerta primaria.</strong> Esta es la descripción de una alerta primaria que continua al texto destacado, incluso con <a href="#">enlace</a>.'
   }
 ];
 

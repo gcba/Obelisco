@@ -1,7 +1,7 @@
 /* === Custom variables and mixins === */
 
 $list-group-color: $grisulado-900;
-$list-group-color-hover: $blue;
+$list-group-color-hover: $hover;
 $list-group-border: 8px;
 $list-group-padding: 1.5rem;
 $list-group-padding-mobile: 1rem;
@@ -15,11 +15,11 @@ $font-size-icon-card: 2rem;
 $card-size: 64px;
 
 $box-shadow-access: 0 0 0 2px $grisulado-50;
-$box-shadow-access-hover: 0 0 0 2px $blue;
+$box-shadow-access-hover: 0 0 0 2px $hover;
 $box-shadow-access-hover-danger: 0 0 0 2px $red;
 $border-radius-card-item: 0 0 8px 8px;
 
-$box-shadow-access-focus: 0 0 0 4px theme-color-level('info', 3);
+$box-shadow-access-focus: 0 0 0 4px $focus;
 
 $no-text-decoration: none;
 
