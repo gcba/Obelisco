@@ -8,7 +8,6 @@ $alert-padding-left-mobile: 3.25rem;
 
 $alert-border-width: 2px;
 
-$alert-bg-level: -9.5;
 $alert-border-level: 0;
 
 $alert-icon-size: 1.5rem;
@@ -35,23 +34,7 @@ $alert-icons: (
     url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 133, 173, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>')
 );
 
-$theme-color-alert-bg: (
-  info: $sky-50,
-  warning: $orange-50,
-  danger: $red-50,
-  success: $green-50,
-  primary: $blue-50
-);
-
 /* === Custom variables and mixins === */
-
-/* @mixin alert-variant($background, $border, $color) {
-  @include gradient-bg($background);
-  border: none;
-  outline: 2px solid $border;
-  outline-offset: -2px;
-  border-radius: spaceUnits(2);
-} */
 
 @mixin alert-icon($type) {
   &::before {
@@ -64,23 +47,9 @@ $theme-color-alert-bg: (
 // Eliminamos el color secundario para las alertas.
 $tmp: $theme-colors;
 $theme-colors: map-remove($theme-colors, 'secondary');
-$theme-colors: map-merge(
-  $theme-colors,
-  (
-    'warning': $orange
-  )
-);
-
-$theme-color-alert-bg: (
-  info: $sky-50,
-  warning: $orange-50,
-  danger: $red-50,
-  success: $green-50,
-  primary: $blue-50
-);
 
 @mixin alert-types($type) {
-  background-color: map-get($theme-color-alert-bg, $type);
+  background-color: map-get($theme-color-light-bg, $type);
   border: none;
   outline: 2px solid map-get($theme-colors, $type);
   outline-offset: -2px;
@@ -109,6 +78,7 @@ $theme-color-alert-bg: (
     &.alert-#{$color} {
       @include alert-icon($color);
       @include alert-types($color);
+      color: $body-color;
     }
   }
 
@@ -118,7 +88,7 @@ $theme-color-alert-bg: (
   }
 
   ol {
-    color: $grisulado-900;
+    color: $body-color;
     padding-left: 0;
     list-style: none;
 
@@ -159,7 +129,7 @@ $theme-color-alert-bg: (
     }
 
     .close {
-      color: $grisulado-900;
+      color: $body-color;
       opacity: 1;
       padding: 0;
       margin: $alert-padding-y $alert-padding-x 0 0;

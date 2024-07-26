@@ -195,11 +195,20 @@ $dark: $sky-900;
 
 $link: $sky-700;
 
+/* ------ Hover ------ */
 $hover: $blue-700;
-$focus: $cyan-800;
+$hover-box-shadow: 0 0 0 2px $hover;
 
+/* ------ Focus ------ */
+$focus: $cyan-800;
+$focus-box-shadow: 0 0 0 4px $focus;
+$focus-box-shadow-subtle: 0 0 0 2px $focus;
+
+/* ------ Active ------ */
 $active: $blue-700;
 $press: $blue-800; //#1C345F
+
+/* ------ Visited ------ */
 $visited: $purple-700; // #6D0099
 $visited-bg-dark: $purple-200; // #E299FF
 
@@ -255,6 +264,15 @@ $theme-colors-obelisco: (
   'avocado': $avocado,
   'pistachio': $pistachio,
   'aqua': $aqua
+);
+
+$theme-color-light-bg: (
+  info: $sky-50,
+  warning: $orange-50,
+  danger: $red-50,
+  success: $green-50,
+  primary: $blue-50,
+  secondary: $gray-50 //Falta definir este color en Figma
 );
 
 @function custom-colors($color: pink, $level: 0) {
