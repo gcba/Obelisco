@@ -157,6 +157,9 @@ $theme-color-btn-bg-hover: (
 
     &:visited {
       color: map-get($theme-colors, $color);
+      @if $color == 'link' {
+        color: $link-color;
+      }
     }
 
     &:hover,
