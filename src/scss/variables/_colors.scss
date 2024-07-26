@@ -207,15 +207,17 @@ $focus-box-shadow-subtle: 0 0 0 2px $focus;
 /* ------ Active ------ */
 $active: $blue-700;
 $press: $blue-800; //#1C345F
+$active-border: $blue-800; //#1C345F
 
 /* ------ Visited ------ */
 $visited: $purple-700; // #6D0099
 $visited-bg-dark: $purple-200; // #E299FF
 
-$primary-hover: $blue-600; //#2E569E
-$secondary-hover: $blue-950; //#080F1C
+/* ------ Disabled ------ */
+$disabled-text: $grisulado-500; // #6D0099
+$disabled-bg: $grisulado-300; // #E299FF
 
-$active-border: $blue-800; //#1C345F
+
 
 /* === Color theme === */
 
@@ -240,10 +242,14 @@ $text-muted: $grisulado-500;
 
 /* === Custom forms & stuff === */
 
-$ghost: #f5f9fc;
-$ghost-hover: #e5f1f9;
+
+/* ------ Boton link ------ */
+$ghost: $white;
+$ghost-hover: $sky-50;
+$ghost-active: $sky-100;
+$link-color: $sky-700;
+
 $component-active-bg: $blue;
-$link-color: $blue;
 
 $custom-select-indicator-color: $gray-800;
 $custom-select-bg-size: 10px 7.5px;

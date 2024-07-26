@@ -40,6 +40,97 @@ export const ButtonTypes = (): JSX.Element => {
           Enlace
         </a>
       </div>
+      <hr />
+      <p className="headline-lg">hover</p>
+      <div className="storybook__container-btn">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type} className="hover">
+            {item.name}
+          </Button>
+        ))}
+      </div>
+      <p className="headline-lg">hover outline</p>
+      <div className="storybook__container-btn">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type} isOutline className="hover">
+            {item.name}
+          </Button>
+        ))}
+      </div>
+      <hr />
+      <p className="headline-lg">focus</p>
+      <div className="storybook__container-btn">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type} className="focus">
+            {item.name}
+          </Button>
+        ))}
+      </div>
+      <p className="headline-lg">focus outline</p>
+      <div className="storybook__container-btn">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type} isOutline className="focus">
+            {item.name}
+          </Button>
+        ))}
+      </div>
+      <hr />
+      <p className="headline-lg">active</p>
+      <div className="storybook__container-btn">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type} className="active">
+            {item.name}
+          </Button>
+        ))}
+      </div>
+      <p className="headline-lg">active outline</p>
+      <div className="storybook__container-btn">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type} isOutline className="active">
+            {item.name}
+          </Button>
+        ))}
+      </div>
+      <hr />
+      <p className="headline-lg">disabled</p>
+      <div className="storybook__container-btn">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type} className="disabled">
+            {item.name}
+          </Button>
+        ))}
+      </div>
+      <p className="headline-lg">disabled outline</p>
+      <div className="storybook__container-btn">
+        {buttonTypes.map((item) => (
+          <Button key={item.type} type={item.type} isOutline className="disabled">
+            {item.name}
+          </Button>
+        ))}
+      </div>
+      <div className="">
+        <p className="text-white">Botones en fondo oscuro</p>
+        <div className="storybook__container-btn bg-dark pt-4">
+          {buttonTypes.map((item) => (
+            <Button key={item.type} type={item.type}>
+              {item.name}
+            </Button>
+          ))}
+          <a className="btn btn-primary" href="#" target="_blank">
+            Enlace
+          </a>
+        </div>
+        <div className="storybook__container-btn bg-dark">
+          {buttonTypes.map((item) => (
+            <Button key={item.type} type={item.type} isOutline>
+              {item.name}
+            </Button>
+          ))}
+          <a className="btn btn-outline-primary" href="#" target="_blank">
+            Enlace
+          </a>
+        </div>
+      </div>
     </>
   );
 };
