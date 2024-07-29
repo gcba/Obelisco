@@ -21,7 +21,7 @@ $card-shadow-color: $grisulado-10;
 $card-shadow-collapsable-color: $grisulado-50;
 $card-box-shadow: 0 0 0 2px $card-shadow-color;
 $card-box-shadow-collapsable: 0 0 0 2px $card-shadow-collapsable-color;
-$card-box-hover-shadow: 0 0 0 2px $blue;
+$card-box-hover-shadow: 0 0 0 2px $hover;
 
 $card-picture-size: 4rem;
 $card-picture-size-lg: 6rem;
@@ -54,14 +54,14 @@ $collapse-info-subtitle-size: 1rem;
 $accordion-margin: 0.75rem;
 $accordion-card-header-padding: 1rem 4rem 1rem 1.5rem;
 
-$accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
-$accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
+$accordion-icon-collapsed: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><g clip-path="url(%23clip0_1505_2440)"><path d="M18.5454 13H13.5454V18C13.5454 18.55 13.0954 19 12.5454 19C11.9954 19 11.5454 18.55 11.5454 18V13H6.54541C5.99541 13 5.54541 12.55 5.54541 12C5.54541 11.45 5.99541 11 6.54541 11H11.5454V6C11.5454 5.45 11.9954 5 12.5454 5C13.0954 5 13.5454 5.45 13.5454 6V11H18.5454C19.0954 11 19.5454 11.45 19.5454 12C19.5454 12.55 19.0954 13 18.5454 13Z" fill="%23101E37"/></g><defs><clipPath id="clip0_1505_2440"><rect width="24" height="24" fill="white" transform="translate(0.54541)"/></clipPath></defs></svg>');
+$accordion-icon-expanded: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><g clip-path="url(%23clip0_1505_307)"><path d="M18.5454 13H6.54541C5.99541 13 5.54541 12.55 5.54541 12C5.54541 11.45 5.99541 11 6.54541 11H18.5454C19.0954 11 19.5454 11.45 19.5454 12C19.5454 12.55 19.0954 13 18.5454 13Z" fill="white"/></g><defs><clipPath id="clip0_1505_307"><rect width="24" height="24" fill="white" transform="translate(0.54541)"/></clipPath></defs></svg>');
 
 $accordion-icon-collapsed-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>');
 $accordion-icon-expanded-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 11h14v2H5z"></path></svg>');
 
-$accordion-icon-collapsed-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 123, 199);transform: ;msFilter:;"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>');
-$accordion-icon-expanded-blue: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 123, 199);transform: ;msFilter:;"><path d="M5 11h14v2H5z"></path></svg>');
+$accordion-icon-collapsed-blue: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><g clip-path="url(%23clip0_1505_2918)"><path d="M18.5454 13H13.5454V18C13.5454 18.55 13.0954 19 12.5454 19C11.9954 19 11.5454 18.55 11.5454 18V13H6.54541C5.99541 13 5.54541 12.55 5.54541 12C5.54541 11.45 5.99541 11 6.54541 11H11.5454V6C11.5454 5.45 11.9954 5 12.5454 5C13.0954 5 13.5454 5.45 13.5454 6V11H18.5454C19.0954 11 19.5454 11.45 19.5454 12C19.5454 12.55 19.0954 13 18.5454 13Z" fill="%23274986"/></g><defs><clipPath id="clip0_1505_2918"><rect width="24" height="24" fill="white" transform="translate(0.54541)"/></clipPath></defs></svg>');
+$accordion-icon-expanded-blue: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><g clip-path="url(%23clip0_1505_307)"><path d="M18.5454 13H6.54541C5.99541 13 5.54541 12.55 5.54541 12C5.54541 11.45 5.99541 11 6.54541 11H18.5454C19.0954 11 19.5454 11.45 19.5454 12C19.5454 12.55 19.0954 13 18.5454 13Z" fill="white"/></g><defs><clipPath id="clip0_1505_307"><rect width="24" height="24" fill="white" transform="translate(0.54541)"/></clipPath></defs></svg>');
 
 $accordion-icon-user: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(56, 72, 92);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
 $accordion-icon-user-white: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>');
@@ -131,7 +131,7 @@ $accordion-bg-white: $white;
     .card-title {
       .card-title-link {
         text-decoration: none;
-        color: $grisulado-900;
+        color: $body-color;
         &:after {
           content: '';
           border-radius: 0.5rem;
@@ -143,17 +143,16 @@ $accordion-bg-white: $white;
         }
 
         &:hover {
-          color: $blue;
+          color: $hover;
           text-decoration: underline;
           text-decoration-thickness: 1px;
           &:after {
-            box-shadow: 0 0 0 2px $blue;
+            box-shadow: 0 0 0 2px $hover;
             
           }
         }
         &:focus {
           box-shadow: none;
-          color: $card-title-link-focus-color;
           text-decoration: underline;
           text-decoration-thickness: 1px;
           &:after {
@@ -222,7 +221,7 @@ $accordion-bg-white: $white;
   .card-footer {
     padding: 0 0 $card-spacer-lg;
     margin: -$card-spacer-sm $card-spacer 0;
-    color: $grisulado-900;
+    color: $body-color;
 
     .bx, .material-icons-round {
       font-size: $card-footer-icon-size;
@@ -617,7 +616,7 @@ button.card {
 
     > .card-header {
       font-family: $font-family-headings;
-      background-color: $blue;
+      background-color: $active;
       border-width: 0;
       text-align: left;
       padding: $accordion-card-header-padding;
@@ -704,7 +703,7 @@ button.card {
       &:focus,
       &.focus {
         outline: none;
-        box-shadow: $card-focus-box-shadow;
+        box-shadow: $focus-box-shadow;
         border-radius: $border-radius;
       }
 
@@ -716,14 +715,14 @@ button.card {
       &.collapsed {
         border-radius: $border-radius-lg;
         background-color: $card-header-bg;
-        color: $grisulado-900;
+        color: $body-color;
         position: relative;
         backface-visibility: hidden;
 
         &:hover,
         &.hover {
           background-color: $grisulado-10;
-          color: $blue;
+          color: $hover;
           box-shadow: $card-box-hover-shadow;
           backface-visibility: visible;
 
@@ -844,7 +843,7 @@ button.card {
           &:focus,
           &:focus-visible {
             background-color: $info;
-            box-shadow: 0 0 0 7px #005386, inset 0 0 0 3.4px $white;
+            box-shadow: 0 0 0 7px $focus, inset 0 0 0 3.4px $white;
             outline: 3px solid $white;
             outline-offset: 0px;
             border-color: $info;

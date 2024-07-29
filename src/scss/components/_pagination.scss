@@ -2,19 +2,21 @@
 
 $pagination-bg: $white;
 
-$pagination-color: $grisulado-900;
+$pagination-color: $body-color;
 $pagination-active-color: $white;
-$pagination-hover-color: $blue;
+$pagination-hover-color: $hover;
 
 $pagination-box-shadow: 0 0 0 0.125rem $grisulado-50;
-$pagination-focus-box-shadow: 0 0 0 0.25rem theme-color-level('info', 3);
-$pagination-hover-box-shadow: 0 0 0 0.125rem $blue;
+$pagination-focus-box-shadow: 0 0 0 0.25rem $focus;
+$pagination-hover-box-shadow: 0 0 0 0.125rem $hover;
 
 $pagination-padding-y: spaceUnits(2);
 $pagination-padding-x: spaceUnits(3);
 $pagination-border-width: 0;
 
 $pagination-disabled-bg: transparent;
+
+$pagination-active-bg: $active;
 
 /* === Custom variables and mixins === */
 

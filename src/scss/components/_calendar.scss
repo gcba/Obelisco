@@ -2,7 +2,7 @@
 $calendar-spacing: 0.5rem 0.25rem;
 $calendar-footer-spacing: 1rem 0.5rem 0;
 $calendar-td-span-size: 2.25rem;
-$calendar-link-color-hover-focus: #005387;
+$calendar-link-color-hover-focus: $hover;
 
 $chromatic-colors: (
   bg-sky: $sky,
@@ -120,8 +120,19 @@ $chromatic-colors: (
               box-shadow: none;
               backface-visibility: inherit;
               .active, .active-secondary {
-                box-shadow: 0 0 0 0.125rem $calendar-link-color-hover-focus;
+                box-shadow: 0 0 0 0.125rem $focus;
               }
+            }
+
+            &:active {
+              box-shadow: none;
+              backface-visibility: inherit;
+              .active, .active-secondary {
+                box-shadow: 0 0 0 0.125rem $active-border;
+              }              
+              .active {
+                background-color: $hover;
+              }              
             }
           }
 
