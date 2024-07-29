@@ -215,6 +215,10 @@ a.btn {
         border-right-color: $grisulado-300;
       }
     }
+    .spinner-border:not(.text-dark) {
+      border-color: $white;
+      border-right-color: $grisulado-300;
+    }
   }
 }
 

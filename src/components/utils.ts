@@ -101,19 +101,19 @@ export interface ButtonTypeWithSpinner {
 }
 
 export const buttonSpinnerTypes: Array<ButtonTypeWithSpinner> = [
-  { type: 'primary', spinner: 'dark' },
+  { type: 'primary', spinner: 'light' },
   { type: 'secondary', spinner: 'light' },
   { type: 'success', spinner: 'light' },
   { type: 'danger', spinner: 'light' },
-  { type: 'link', spinner: 'info' }
+  { type: 'link', spinner: 'dark' }
 ];
 
 export const buttonOutlineSpinnerTypes: Array<ButtonTypeWithSpinner> = [
-  { type: 'primary', spinner: 'dark' },
+  { type: 'primary', spinner: 'primary' },
   { type: 'secondary', spinner: 'secondary' },
   { type: 'success', spinner: 'success' },
   { type: 'danger', spinner: 'danger' },
-  { type: 'link', spinner: 'info' }
+  { type: 'link', spinner: 'dark' }
 ];
 
 export type panelBgColor = 'light' | 'white';
