@@ -131,6 +131,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       &:hover {
         span {
           @extend .underline-1;
+          text-decoration-color: transparent;
         }
       }
 
@@ -175,6 +176,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     box-shadow: $input-btn-hover-box-shadow;
     color: $nav-link-hover-color;
     @extend .underline-1;
+    text-decoration-color: transparent;
 
     &:visited {
       color: $nav-link-hover-color;

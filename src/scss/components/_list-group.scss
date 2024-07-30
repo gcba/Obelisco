@@ -159,6 +159,7 @@ a.list-group-item {
 
     .access-title {
       @extend .underline-2;
+      text-decoration-color: transparent;
     }
 
     .access-text {
@@ -210,6 +211,7 @@ a.list-group-item {
 
     .access-title {
       @extend .underline-2;
+      text-decoration-color: transparent;
     }
 
     &:not(:focus) {

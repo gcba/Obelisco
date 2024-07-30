@@ -319,6 +319,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
 
         .item-text {
           text-decoration: underline;
+          text-decoration-color: transparent;
         }
       }
 
@@ -356,6 +357,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
 
           .item-text {
             text-decoration: underline;
+            text-decoration-color: transparent;
           }
         }
 
@@ -366,6 +368,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
 
             .item-text {
               text-decoration: underline;
+              text-decoration-color: transparent;
             }
 
             &:active {
@@ -548,11 +551,15 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
           color: $white;
           text-decoration: underline;
           text-decoration-thickness: 1px;
+          text-decoration-color: transparent;
 
           &:before {
             background-color: $white;
             border-color: $active;
           }
+        }
+        .custom-control-input:not(:disabled) ~ .custom-control-label:hover {
+          text-decoration-color: transparent;
         }
 
         .custom-control-input:checked:focus ~ .custom-control-label {
@@ -629,6 +636,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         &:hover {
           .btn-chip-text {
             text-decoration: underline;
+            text-decoration-color: transparent;
           }
         }
       }
