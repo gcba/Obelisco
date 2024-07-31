@@ -25,7 +25,9 @@ export const DROPDOWN_ITEM = (
       aria-haspopup="true"
       aria-expanded="false">
       <span className="btn-dropdown-text">Navegación</span>
-      <span className="material-icons-round btn-dropdown-icon">expand_more</span>
+      <span className="material-icons-round btn-dropdown-icon" aria-hidden="true">
+        expand_more
+      </span>
     </button>
     <div className="dropdown-menu">
       <a className="dropdown-item" href="#">
@@ -48,7 +50,9 @@ export const DROPDOWN_ITEM = (
       </a>
       <a className="dropdown-item item-link" href="#">
         <span className="item-text">Navegación</span>
-        <span className="material-icons-round">arrow_forward</span>
+        <span className="material-icons-round" aria-hidden="true">
+          arrow_forward
+        </span>
       </a>
     </div>
   </li>
@@ -117,7 +121,9 @@ export const Login: React.FC<LoginProps> = ({ isMobile }) => {
   return (
     <div className={isMobile ? `navbar-login-mobile` : `navbar-login`}>
       <a className="btn btn-lg btn-icon btn-outline-link" href="#" target="_blank">
-        <span className="material-icons-round">person</span>
+        <span className="material-icons-round" aria-hidden="true">
+          person
+        </span>
         <span className="btn-text">Ingresar</span>
       </a>
     </div>
@@ -133,7 +139,9 @@ export const USER = (
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
-        <span className="material-icons-round">person</span>
+        <span className="material-icons-round" aria-hidden="true">
+          person
+        </span>
         <span className="btn-dropdown-text">Perfil</span>
       </button>
       <div className="dropdown-menu dropdown-menu-right">
@@ -152,7 +160,9 @@ export const USER = (
         </a>
         <a className="dropdown-item item-danger" href="#">
           <span className="item-text">Cerrar sesión</span>
-          <span className="material-icons-round">logout</span>
+          <span className="material-icons-round" aria-hidden="true">
+            logout
+          </span>
         </a>
       </div>
     </div>
@@ -188,7 +198,9 @@ export const USER_MOBILE = (
         <li className="nav-item">
           <a className="nav-link nav-link-danger nav-link-lg" href="#">
             <div className="nav-icon">
-              <span className="material-icons-round">logout</span>
+              <span className="material-icons-round" aria-hidden="true">
+                logout
+              </span>
               <span>Cerrar sesión</span>
             </div>
           </a>

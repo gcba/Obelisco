@@ -33,7 +33,9 @@ export const WithImage = (): JSX.Element => {
           picture={PICTURE_HIGHLIGHTED}
           type="grouping">
           <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" download>
-            <span className="material-icons-round">file_download</span>
+            <span className="material-icons-round" aria-hidden="true">
+              file_download
+            </span>
             Descargar
           </a>
         </HighlightedPanel>
@@ -103,7 +105,9 @@ export const WithoutMultimedia = (): JSX.Element => {
         </HighlightedPanel>
         <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED} type="grouping">
           <a className="btn btn-secondary btn-lg btn-icon" href="#" target="_blank" download>
-            <span className="material-icons-round">file_download</span>
+            <span className="material-icons-round" aria-hidden="true">
+              file_download
+            </span>
             Descargar
           </a>
         </HighlightedPanel>

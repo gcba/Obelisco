@@ -50,6 +50,8 @@ $stepper-description-color: $body-color;
 
       &.active {
         background-color: $stepper-active-color;
+        outline: 6px solid transparent;
+        outline-offset: -5px;
       }
     }
   }

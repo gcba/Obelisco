@@ -43,6 +43,7 @@ $modal-dialog-margin-y-sm-up: 3rem;
   .modal-content {
     border: none;
     padding: 1.5rem;
+    outline: 0.125rem solid transparent;
 
     .modal-header {
       border-bottom: 0;

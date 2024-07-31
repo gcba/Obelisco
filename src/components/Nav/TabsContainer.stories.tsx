@@ -16,26 +16,26 @@ const simpleItems: TabsItem[] = [
   {
     name: 'Pestaña 1',
     id: '1',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  1'
   },
   {
     name: 'Pestaña 2',
     id: '2',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  2'
   },
   {
     name: 'Pestaña 3',
     id: '3',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  3'
   },
   {
     name: 'Pestaña 4',
     id: '4',
     disabled: true,
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  4'
   }
 ];
@@ -44,21 +44,21 @@ const sizeLgItems: TabsItem[] = [
   {
     name: 'Pestaña grande 1',
     id: '5',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     type: 'large',
     content: 'Contenido Pestaña 1'
   },
   {
     name: 'Pestaña grande 2',
     id: '6',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     type: 'large',
     content: 'Contenido Pestaña 2'
   },
   {
     name: 'Pestaña grande 3',
     id: '7',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     type: 'large',
     content: 'Contenido Pestaña 3'
   }
@@ -68,21 +68,21 @@ const sizeItems: TabsItem[] = [
   {
     name: 'Pestaña mediana 1',
     id: '8',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     type: 'default',
     content: 'contenito 1'
   },
   {
     name: 'Pestaña mediana 2',
     id: '9',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     type: 'default',
     content: 'Contenido Pestaña 2'
   },
   {
     name: 'Pestaña mediana 3',
     id: '10',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     type: 'default',
     content: 'Contenido Pestaña 3'
   }
@@ -92,21 +92,21 @@ const sizeSmItems: TabsItem[] = [
   {
     name: 'Pestaña chica 1',
     id: '11',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     type: 'small',
     content: 'Contenido Pestaña 1'
   },
   {
     name: 'Pestaña chica 2',
     id: '12',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     type: 'small',
     content: 'Contenido Pestaña 2'
   },
   {
     name: 'Pestaña chica 3',
     id: '13',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     type: 'small',
     content: 'Contenido Pestaña 3'
   }
@@ -116,62 +116,62 @@ const sliderItems: TabsItem[] = [
   {
     name: 'Pestaña 1',
     id: '14',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  1'
   },
   {
     name: 'Pestaña 2',
     id: '15',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  2'
   },
   {
     name: 'Pestaña 3',
     id: '16',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  3'
   },
   {
     name: 'Pestaña 4',
     id: '17',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  4'
   },
   {
     name: 'Pestaña 5',
     id: '18',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  5'
   },
   {
     name: 'Pestaña 6',
     id: '19',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  6'
   },
   {
     name: 'Pestaña 7',
     id: '20',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  7'
   },
   {
     name: 'Pestaña 8',
     id: '21',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  8'
   },
   {
     name: 'Pestaña 9',
     id: '22',
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  9'
   },
   {
     name: 'Pestaña 10',
     id: '23',
     disabled: true,
-    iconTabs: '<span class="material-icons-round">home</span>',
+    iconTabs: '<span class="material-icons-round" aria-hidden="true">home</span>',
     content: 'Contenido Pestaña  10'
   }
 ];

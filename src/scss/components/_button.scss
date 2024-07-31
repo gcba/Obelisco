@@ -94,7 +94,8 @@ $theme-color-btn-bg-hover: (
     }
 
     &:focus,
-    &.focus {
+    &.focus,
+    &:focus:not(:focus-visible) {
       outline: .25rem solid transparent;
       box-shadow: 0 0 0 $input-btn-focus-width $focus;
       text-decoration: $link-decoration;
@@ -107,7 +108,7 @@ $theme-color-btn-bg-hover: (
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
-      outline-color: transparent;
+      outline: 0.125rem solid transparent;
       background-color: map-get($theme-color-btn-bg-hover, $color);
       box-shadow: 0 0 0 $btn-hover-width map-get($theme-color-btn-bg-hover, $color);
 

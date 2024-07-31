@@ -153,10 +153,12 @@ $accordion-bg-white: $white;
         }
         &:focus {
           box-shadow: none;
+          outline: none;
           text-decoration: underline;
           text-decoration-thickness: 1px;
           &:after {
             box-shadow: $card-focus-box-shadow;
+            outline: 0.25rem solid transparent;
           }
         }
       }
@@ -172,6 +174,7 @@ $accordion-bg-white: $white;
 
 .card {
   box-shadow: $card-box-shadow;
+  outline: 0.125rem solid transparent;
   width: 100%;
 
   .card-body {
@@ -332,11 +335,13 @@ $accordion-bg-white: $white;
 
   &.card-simple {
     box-shadow: none;
+    outline: none;
     background: transparent;
   }
 
   &.unbordered {
     box-shadow: none;
+    outline: none;
     background: transparent;
   }
 
@@ -601,7 +606,7 @@ button.card {
 
 // COLAPSABLE
 .accordion {
-  > .card {
+  .card {
     margin-bottom: $accordion-margin;
     box-shadow: $card-box-shadow-collapsable;
     overflow: visible;
@@ -614,7 +619,8 @@ button.card {
       @include border-top-radius($card-border-radius);
     }
 
-    > .card-header {
+    .card-header {
+      outline: 0.125rem solid transparent;
       font-family: $font-family-headings;
       background-color: $active;
       border-width: 0;
@@ -705,6 +711,7 @@ button.card {
         outline: none;
         box-shadow: $focus-box-shadow;
         border-radius: $border-radius;
+        outline: 0.25rem solid transparent;
       }
 
       &:after {
@@ -801,7 +808,8 @@ button.card {
         }
 
         i,
-        .material-icons-round {
+        .material-icons-round, 
+        .collapse-img-icon {
           margin: auto 0;
           font-size: 1.5rem;
         }
@@ -838,6 +846,11 @@ button.card {
             transform: scale(0);
             transition: 120ms transform ease-in-out;
             box-shadow: inset 1rem 1rem $info;
+            //Estilos por accesibilidad en Modo Alto Contraste
+            @media (forced-colors: active) {
+              outline: 4px solid transparent;
+              outline-offset: -5px;
+            }
           }
 
           &:focus,
@@ -847,6 +860,10 @@ button.card {
             outline: 3px solid $white;
             outline-offset: 0px;
             border-color: $info;
+            //Estilos por accesibilidad en Modo Alto Contraste
+            @media (forced-colors: active) {
+              outline: none;
+            }
           }
 
           &:hover {
@@ -858,10 +875,10 @@ button.card {
   }
 
   &.accordion-white {
-    > .card {
+    .card {
       border-radius: $card-border-radius;
 
-      > .card-header {
+      .card-header {
         &.collapsed {
           background: $accordion-bg-white;
         }

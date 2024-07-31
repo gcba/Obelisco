@@ -66,6 +66,7 @@ a {
     color: $body-color;
     border-radius: $border-radius-lg;
     box-shadow: 0 0 0 $link-focus-width $box-shadow-button;
+    outline: 0.125rem solid transparent;
   }
   
   &:active {
@@ -88,6 +89,7 @@ a {
 
     &:focus {
       box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
+      outline: 0.25rem solid transparent;
     }
   }
 

@@ -15,6 +15,7 @@ $badge-padding-x: 0.25rem;
   color: $body-color;
   background-color: map-get($theme-color-light-bg, $color);
   box-shadow: 0 0 0 1px map-get($theme-colors, $color);
+  outline: 0.125rem solid transparent;
 
   @at-root a#{&} {
     &:hover,
@@ -30,6 +31,7 @@ $badge-padding-x: 0.25rem;
       outline: 0;
       background-color: $light;
       box-shadow: $focus-box-shadow;
+      outline: 0.25rem solid transparent;
     }
   }
 }

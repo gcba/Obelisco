@@ -47,7 +47,9 @@ export interface DropdownItemsProps {
 export const DropdownIcon: React.FC<{ itemIcon: string; itemIconClass?: string }> = ({ itemIcon, itemIconClass }) => (
   <>
     {itemIcon && !itemIcon?.includes('bx') && (
-      <span className={`material-icons-round ${itemIconClass ? itemIconClass : ''}`.trim()}>{itemIcon}</span>
+      <span className={`material-icons-round ${itemIconClass ? itemIconClass : ''}`.trim()} aria-hidden="true">
+        {itemIcon}
+      </span>
     )}
     {itemIcon && itemIcon?.includes('bx') && (
       <i className={`${itemIcon} ${itemIconClass ? itemIconClass : ''}`.trim()}></i>
@@ -203,7 +205,9 @@ export const DropdownOption = ({
           aria-expanded="false">
           {icon && iconType === 'material' ? icon : icon && <i className={`bx ${icon}`}></i>}
           <span className="btn-dropdown-text">{displayTitle}</span>
-          <span className="material-icons-round btn-dropdown-icon">expand_more</span>
+          <span className="material-icons-round btn-dropdown-icon" aria-hidden="true">
+            expand_more
+          </span>
         </button>
         <div className="dropdown-menu dropdown-body collapse" id={idDropdown}>
           {options.map((option) => (
