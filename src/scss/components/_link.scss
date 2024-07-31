@@ -45,7 +45,7 @@ $link-access: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.or
 
 a {
   outline: none;
-  color: $blue;
+  color: $body-color;
   cursor: pointer;
   word-break: break-word;
   display: inline-block;
@@ -66,6 +66,12 @@ a {
     color: $body-color;
     border-radius: $border-radius-lg;
     box-shadow: 0 0 0 $link-focus-width $box-shadow-button;
+  }
+  
+  &:active {
+    color: $hover;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 0 0 $link-focus-width $active-border;
   }
 
   &.list-group-item,
