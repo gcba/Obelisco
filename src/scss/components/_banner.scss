@@ -16,11 +16,11 @@ $banner-padding-mobile: 0.25rem;
   width: $banner-width;
 
   a:not(.btn) {
-    color: $grisulado-900;
+    color: $body-color;
   }
 
   &.banner-dark {
-    background-color: $grisulado-900;
+    background-color: $dark;
     color: $white;
 
     a:not(.btn) {

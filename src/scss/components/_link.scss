@@ -4,10 +4,9 @@ $link-position: center;
 $link-padding: 0.5rem;
 $link-margin-x: 0.5rem;
 $link-margin-icon: 0.125rem;
-$link-color-state: #005387;
-$link-hover-color: $link-color-state;
-$link-visited-color: $link-color-state;
-$link-focus-color: $link-color-state;
+$link-hover-color: $hover;
+$link-visited-color: $visited;
+$link-focus-color: $focus;
 
 $link-focus-width: 0.125rem;
 
@@ -46,7 +45,7 @@ $link-access: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.or
 
 a {
   outline: none;
-  color: $blue;
+  color: $body-color;
   cursor: pointer;
   word-break: break-word;
   display: inline-block;
@@ -64,9 +63,15 @@ a {
   }
 
   &:focus {
-    color: $link-focus-color;
+    color: $body-color;
     border-radius: $border-radius-lg;
     box-shadow: 0 0 0 $link-focus-width $box-shadow-button;
+  }
+  
+  &:active {
+    color: $hover;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 0 0 $link-focus-width $active-border;
   }
 
   &.list-group-item,

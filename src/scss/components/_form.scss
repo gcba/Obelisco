@@ -25,17 +25,17 @@ $input-focus-box-shadow: $focus-box-shadow;
 
 $input-height-sm: 44px;
 
-$custom-control-indicator-checked-color: $blue;
-$custom-control-indicator-active-color: $blue;
+$custom-control-indicator-checked-color: $active;
+$custom-control-indicator-active-color: $active;
 $custom-control-indicator-size: spaceUnits(5);
 $custom-control-indicator-bg: transparent;
-$custom-control-indicator-border-color: $grisulado-900;
+$custom-control-indicator-border-color: $body-color;
 $custom-control-indicator-border-width: 2px;
-$custom-control-indicator-checked-bg: $blue;
-$custom-control-indicator-checked-border-color: $blue;
-$custom-control-indicator-focus-border-color: $grisulado-900;
-$custom-control-indicator-active-bg: $blue;
-$custom-control-indicator-active-border-color: $blue;
+$custom-control-indicator-checked-bg: $active;
+$custom-control-indicator-checked-border-color: $active;
+$custom-control-indicator-focus-border-color: $body-color;
+$custom-control-indicator-active-bg: $active;
+$custom-control-indicator-active-border-color: $active;
 $custom-control-indicator-checked-disabled-bg: transparent;
 $custom-control-indicator-disabled-bg: transparent;
 
@@ -73,7 +73,7 @@ $form-validation-states: (
 
 /* === Custom variables and mixins === */
 
-$custom-control-focus-color: #005387;
+$custom-control-focus-color: $focus;
 %custom-checkbox-size-position {
   width: 1.5rem;
   height: 1.5rem;
@@ -346,11 +346,11 @@ $custom-control-focus-color: #005387;
       }
 
       &:checked:hover  ~ .custom-control-label {
-        color: $custom-control-focus-color;
+        color: $hover;
         text-decoration: none;
         &:before {
-          background-color: $custom-control-focus-color;
-          border-color: $custom-control-focus-color;
+          background-color: $hover;
+          border-color: $hover;
         }
       }
     }
@@ -373,7 +373,7 @@ $custom-control-focus-color: #005387;
 
   &:not(:disabled):focus ~ .custom-control-label {
     &:before {
-      box-shadow: 0 0 0 7px #005386;
+      box-shadow: 0 0 0 7px $focus;
       outline: 3px solid $white;
     }
   }
@@ -402,7 +402,7 @@ $custom-control-focus-color: #005387;
   }
 
   .custom-control-input:checked:not(:disabled):focus ~ .custom-control-label:before {
-    box-shadow: 0 0 0 7px #005386, inset 0 0 0 3.4px $white;
+    box-shadow: 0 0 0 7px $focus, inset 0 0 0 3.4px $white;
     outline: 3px solid $white;
     background-color: $custom-control-indicator-checked-color;
   }
@@ -427,8 +427,8 @@ $custom-control-focus-color: #005387;
 
   @include hover() {
     background-color: $grisulado-10;
-    color: $link-color;
-    box-shadow: 0 0 0 $btn-hover-width $blue;
+    color: $hover;
+    box-shadow: 0 0 0 $btn-hover-width $hover;
   }
 
   &:focus,
@@ -439,7 +439,7 @@ $custom-control-focus-color: #005387;
 
   &.active {
     color: #fff;
-    background-color: $blue;
+    background-color: $active;
     box-shadow: none;
 
     &:hover {
@@ -458,7 +458,7 @@ $custom-control-focus-color: #005387;
   &:active,
   &:checked + .btn-chip {
     color: #fff;
-    background-color: $blue;
+    background-color: $active;
     box-shadow: none;
   }
 

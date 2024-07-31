@@ -17,7 +17,7 @@
 @import 'variables/miscellaneous';
 @import 'node_modules/bootstrap/scss/mixins';
 @import 'node_modules/bootstrap/scss/utilities';
-$theme-colors: map-remove($theme-colors, 'light', 'dark', 'warning');
+$theme-colors: map-remove($theme-colors, 'light', 'dark');
 @import 'node_modules/bootstrap/scss/root';
 @import 'node_modules/bootstrap/scss/reboot';
 @import 'node_modules/bootstrap/scss/print';

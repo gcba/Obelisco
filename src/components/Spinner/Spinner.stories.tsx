@@ -6,7 +6,7 @@ import './Spinner.stories.scss';
 import { withA11y } from '@storybook/addon-a11y';
 
 // Components
-import { spinnerTypes, sizes } from '../utils';
+import { sizes } from '../utils';
 import { Spinner } from '.';
 
 // Configuración general del componente
@@ -17,11 +17,19 @@ export default {
 };
 
 export const SpinnerTypes = (): JSX.Element => (
-  <div className="storybook__container-spinner">
-    {spinnerTypes.map((type) => (
-      <Spinner key={type} type={type}></Spinner>
-    ))}
-  </div>
+  <>
+    <div className="storybook__container-spinner">
+      <Spinner type="primary"></Spinner>
+      <Spinner type="secondary"></Spinner>
+      <Spinner type="success"></Spinner>
+      <Spinner type="danger"></Spinner>
+      <Spinner type="info"></Spinner>
+      <div className="bg-dark p-2">
+        <Spinner type="light"></Spinner>
+      </div>
+      <Spinner type="dark"></Spinner>
+    </div>
+  </>
 );
 
 SpinnerTypes.story = {
@@ -32,7 +40,7 @@ export const SpinnerSizes = (): JSX.Element => {
   return (
     <div className="storybook__container-spinner">
       {sizes.map((item) => (
-        <Spinner key={item} type="info" size={item}></Spinner>
+        <Spinner key={item} type="primary" size={item}></Spinner>
       ))}
     </div>
   );
@@ -44,7 +52,7 @@ SpinnerSizes.story = {
 
 export const SpinnerBlock = (): JSX.Element => (
   <div className="storybook__container-spinner-block">
-    <Spinner type="info" block={true}></Spinner>
+    <Spinner type="primary" block={true}></Spinner>
   </div>
 );
 

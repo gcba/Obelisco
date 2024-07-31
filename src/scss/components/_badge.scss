@@ -1,35 +1,34 @@
 /* === Variable and mixins overides === */
 
-$badge-color: $grisulado-900;
-$badge-color-hover: $blue;
+$badge-color: $body-color;
 $badge-font-size: $text-sm;
 $badge-font-weight: $font-weight-normal;
 $badge-border-radius: spaceUnits(2);
 $badge-separation: spaceUnits(2);
 
-$badge-bg-level: -9;
-$badge-bg-level-hover: -9.6;
 $badge-padding-y: 0.125rem;
 $badge-padding-x: 0.25rem;
 
 /* === Custom variables and mixins === */
 
 @mixin badge-variant-custom($color, $value) {
-  color: $badge-color !important;
-  background-color: theme-color-level($color, $badge-bg-level);
-  box-shadow: 0 0 0 1px theme-color-level($color);
+  color: $body-color;
+  background-color: map-get($theme-color-light-bg, $color);
+  box-shadow: 0 0 0 1px map-get($theme-colors, $color);
 
   @at-root a#{&} {
     &:hover,
     &.hover {
-      color: $badge-color-hover !important;
-      background-color: theme-color-level($color, $badge-bg-level-hover);
-      box-shadow: 0 0 0 2px $blue;
+      color: $hover;
+      box-shadow: 0 0 0 2px $hover;
+      background-color: map-get($theme-color-light-bg, $color);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
     }
     &:focus,
     &.focus {
       outline: 0;
-      background-color: theme-color-level($color, $badge-bg-level);
+      background-color: $light;
       box-shadow: $focus-box-shadow;
     }
   }

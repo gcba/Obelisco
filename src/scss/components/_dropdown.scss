@@ -1,8 +1,8 @@
 /* === Variable and mixins overides === */
 
 $dropdown-box-shadow: 0 0 0 2px $grisulado-50;
-$dropdown-box-shadow-active: 0 0 0 2px $blue;
-$dropdown-box-shadow-focus: 0 0 0 0.25rem #005387;
+$dropdown-box-shadow-active: 0 0 0 2px $hover;
+$dropdown-box-shadow-focus: 0 0 0 0.25rem $focus;
 $dropdown-btn-gap: 0.25rem;
 $dropdown-btn-padding: 0.5rem 0.75rem;
 $dropdown-item-btn-gap: 0.75rem;
@@ -92,7 +92,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
     > .btn {
       &.btn-dropdown {
         color: $white;
-        background: $blue;
+        background: $active;
         border-radius: spaceUnits(2);
         text-decoration: none;
         box-shadow: none;
@@ -114,7 +114,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         &:focus,
         &:hover {
           box-shadow: none;
-          background-color: $blue;
+          background-color: $hover;
           color: $white;
 
           &:hover {
@@ -195,7 +195,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         border-radius: spaceUnits(2);
         box-shadow: $dropdown-box-shadow-active;
         text-decoration: none;
-        color: $blue;
+        color: $hover;
       }
 
       &:focus {
@@ -205,7 +205,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         border-radius: spaceUnits(2);
 
         &:hover {
-          color: $grisulado-900;
+          color: $body-color;
         }
 
         &[aria-expanded='true'] {
@@ -217,7 +217,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         &.active,
         &:active {
           color: $white;
-          background: $blue;
+          background: $active;
           border-radius: spaceUnits(2);
           text-decoration: none;
           box-shadow: none;
@@ -235,14 +235,14 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
       }
 
       .dropdown-toggle {
-        color: $grisulado-900;
+        color: $body-color;
       }
     }
   }
 
   &:has(> .collapse.show, > .collapsing) {
     > .btn.btn-dropdown:not(.collapsed):not(.sub-btn-dropdown) {
-      background-color: $blue;
+      background-color: $active;
       color: $white;
     }
 
@@ -315,10 +315,11 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         background-color: $white;
         border-radius: spaceUnits(2);
         box-shadow: $dropdown-box-shadow-active;
-        color: $blue;
+        color: $hover;
 
         .item-text {
           text-decoration: underline;
+          text-decoration-color: transparent;
         }
       }
 
@@ -327,10 +328,10 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         border-radius: spaceUnits(2);
         outline: 2px;
         background: $white;
-        color: $grisulado-900;
+        color: $body-color;
 
         &:hover {
-          color: $blue;
+          color: $hover;
 
           &:active {
             color: $white;
@@ -341,7 +342,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
       &.active,
       &:active {
         color: $white;
-        background: $blue;
+        background: $active;
         border-radius: spaceUnits(2);
         text-decoration: none;
         box-shadow: none;
@@ -356,6 +357,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
 
           .item-text {
             text-decoration: underline;
+            text-decoration-color: transparent;
           }
         }
 
@@ -366,6 +368,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
 
             .item-text {
               text-decoration: underline;
+              text-decoration-color: transparent;
             }
 
             &:active {
@@ -413,7 +416,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
 
         &[aria-expanded='true'] {
           background-color: $grisulado-10;
-          color: $grisulado-900;
+          color: $body-color;
         }
 
         .item-text {
@@ -523,7 +526,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
       }
 
       .custom-control-input:checked ~ .custom-control-label {
-        background-color: $blue;
+        background-color: $active;
         color: white;
       }
 
@@ -548,11 +551,19 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
           color: $white;
           text-decoration: underline;
           text-decoration-thickness: 1px;
+          text-decoration-color: transparent;
 
           &:before {
             background-color: $white;
-            border-color: $blue;
+            border-color: $active;
           }
+        }
+        .custom-control-input:not(:disabled) ~ .custom-control-label:hover {
+          text-decoration-color: transparent;
+        }
+
+        .custom-control-input:checked:focus ~ .custom-control-label {
+          box-shadow: 0 0 0 0.25rem $active-border;
         }
 
         &:has(.custom-control-input:focus) {
@@ -583,7 +594,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
           font-weight: $font-weight-normal;
 
           &:not(.disabled):has(.btn-check:focus) {
-            box-shadow: $dropdown-box-shadow-focus;
+            box-shadow:  0 0 0 0.25rem $active-border;
 
             &:before {
               box-shadow: none;
@@ -614,7 +625,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         }
 
         &.active {
-          background: $blue;
+          background: $active;
 
           .bx,
           .material-icons-round {
@@ -625,6 +636,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         &:hover {
           .btn-chip-text {
             text-decoration: underline;
+            text-decoration-color: transparent;
           }
         }
       }

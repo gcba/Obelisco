@@ -1,6 +1,6 @@
 /* === Variable and mixins overides === */
 $spinner-border-width: 0.25rem;
-$spinner-border-right-color: $grisulado-50;
+$spinner-border-right-color: $grisulado-10;
 
 $spinner-border-width-sm: 0.125rem;
 
@@ -17,13 +17,8 @@ $spinner-border-width-lg: 0.375rem;
     min-width: 2rem;
 
     &:is(.text-light) {
-      border-color: $white;
-      border-right-color: $grisulado-300;
-    }
-
-    &:is(.text-dark) {
-      border-color: $grisulado-900;
-      border-right-color: $spinner-border-right-color;
+      border-color: $grisulado-10;
+      border-right-color: transparent;
     }
 
     &-lg {

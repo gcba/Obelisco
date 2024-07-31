@@ -31,7 +31,7 @@
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 0.25rem theme-color-level('info', 3);
+    box-shadow: 0 0 0 0.25rem $focus;
     outline: none;
   }
 }
