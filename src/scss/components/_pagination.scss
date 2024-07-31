@@ -70,6 +70,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
         box-shadow: none;
         background-color: transparent;
         padding: 0;
+        outline: none;
       }
     }
 
@@ -79,6 +80,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
       align-items: center;
       border-radius: $border-radius * 2;
       box-shadow: $pagination-box-shadow;
+      outline: 0.125rem solid transparent;
       height: $pagination-size;
       min-width: 35px;
       gap: 0.25rem;
@@ -128,6 +130,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
           $pagination-icon-left,
           $pagination-icon-right
         );
+        outline: 0.25rem solid transparent;
       }
 
       &:hover,
@@ -157,6 +160,8 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
           $pagination-icon-right-active
         );
         z-index: 0;
+        outline: 0.25rem solid transparent;
+        outline-offset: -2px;
 
         &:hover,
         &.hover {
@@ -168,6 +173,11 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
             $pagination-icon-left-active,
             $pagination-icon-right-active
           );
+        }
+
+        &:focus,
+        &.focus {
+          outline-offset: 0;
         }
       }
     }

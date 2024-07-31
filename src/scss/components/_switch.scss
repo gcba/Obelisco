@@ -59,6 +59,7 @@ $switch-focus-shadow: 0 0 0 2px $focus;
 
     input:checked + .slider:before {
       transform: translateX(18px);
+      outline: 6px solid transparent;
     }
   }
 
@@ -71,15 +72,18 @@ $switch-focus-shadow: 0 0 0 2px $focus;
 
     &:checked + .slider {
       background-color: $blue;
+      outline: 0.125rem solid transparent;
     }
 
     &:focus + .slider {
       box-shadow: $switch-focus-shadow;
-      outline: none;
+      outline: 0.125rem solid transparent;
     }
 
     &:checked + .slider:before {
       transform: translateX(26px);
+      outline: 10px solid transparent;
+      outline-offset: -16px;
     }
 
     ~ .switch-label.on,
@@ -112,6 +116,7 @@ $switch-focus-shadow: 0 0 0 2px $focus;
     display: inline-block;
     grid-column: 1 / 2;
     grid-row: 1;
+    outline: 0.125rem solid transparent;
 
     &:before {
       position: absolute;
@@ -123,6 +128,7 @@ $switch-focus-shadow: 0 0 0 2px $focus;
       background-color: $white;
       transition: 0.4s;
       border-radius: 50%;
+      outline: 0.125rem solid transparent;
     }
   }
 

@@ -106,7 +106,11 @@ const getVideoIframe = (iframe?: PanelVideo): JSX.Element | null => {
 
 const ButtonIcon: React.FC<{ icon: string }> = ({ icon }) => (
   <>
-    {!icon.includes('bx') && <span className="material-icons-round">{icon}</span>}
+    {!icon.includes('bx') && (
+      <span className="material-icons-round" aria-hidden="true">
+        {icon}
+      </span>
+    )}
     {icon.includes('bx') && <i className={icon}></i>}
   </>
 );

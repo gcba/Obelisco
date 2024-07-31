@@ -19,6 +19,7 @@
     height: 16px;
     background-color: $grisulado-10;
     border-radius: 100px;
+    outline: 0.125rem solid transparent;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -33,6 +34,15 @@
   &:focus-visible {
     box-shadow: 0 0 0 0.25rem $focus;
     outline: none;
+  }
+}
+//Por accesibilidad en Modo Alto Contraste, se agrega color de fondo blanco a la barra de desplazamiento
+@media (forced-colors: active) {
+  .responsive-scroll {
+    &::-webkit-scrollbar-thumb {
+      forced-color-adjust: none;
+      background-color: white;
+    }
   }
 }
 //Esta clase es independiente de .table-responsive, de manera que si en drupal no se usa, se puede eliminar la clase .table-responsive

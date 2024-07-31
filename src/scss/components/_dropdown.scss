@@ -96,6 +96,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         border-radius: spaceUnits(2);
         text-decoration: none;
         box-shadow: none;
+        outline: 0.25rem solid transparent;
 
         &.btn-dropdown-border {
           box-shadow: $dropdown-box-shadow-active;
@@ -146,6 +147,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
       display: flex;
       align-items: center;
       gap: $dropdown-btn-gap;
+      outline: 0.125rem solid transparent;
 
       &.dropdown-toggle:after {
         content: none;
@@ -203,6 +205,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
         background: $white;
         text-decoration: none;
         border-radius: spaceUnits(2);
+        outline: 0.25rem solid transparent;
 
         &:hover {
           color: $body-color;
@@ -273,6 +276,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
     border: 0;
     border-radius: spaceUnits(2);
     box-shadow: $dropdown-box-shadow;
+    outline: 0.125rem solid transparent;
     max-width: 340px;
     min-width: 340px;
     width: 100%;
@@ -326,7 +330,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
       &:focus {
         box-shadow: $dropdown-box-shadow-focus;
         border-radius: spaceUnits(2);
-        outline: 2px;
+        outline: 0.25rem solid transparent;
         background: $white;
         color: $body-color;
 
@@ -498,6 +502,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
 
           &:focus ~ .custom-control-label {
             box-shadow: $dropdown-box-shadow-focus;
+            outline: 0.25rem solid transparent;
           }
         }
 
@@ -595,6 +600,7 @@ $custom-checkbox-dropdown: url('data:image/svg+xml,<svg xmlns="http://www.w3.org
 
           &:not(.disabled):has(.btn-check:focus) {
             box-shadow:  0 0 0 0.25rem $active-border;
+            outline: 0.25rem solid transparent;
 
             &:before {
               box-shadow: none;

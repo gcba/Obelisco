@@ -20,8 +20,19 @@ $progress-bg: $grisulado-100;
 @import 'node_modules/bootstrap/scss/progress';
 
 /* === Custom styles === */
+.progress {
+  outline: 0.125rem solid transparent;
+}
+
 .progress-bar {
   border-radius: 20px;
+  outline: 0.25rem solid transparent;
+  outline-offset: -2px;
+  //Por accesibilidad en Modo Alto Contraste, se agrega color de fondo blanco a la barra de progreso
+  @media (forced-colors: active) {
+    forced-color-adjust: none;
+    background-color: white !important; // se agrega !important para sobrescribir los estilos de bg-info y bg-success que tienen !important
+  }
 }
 
 .progression {

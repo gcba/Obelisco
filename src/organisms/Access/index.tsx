@@ -27,7 +27,9 @@ export const AccessOrganisms: React.FC<AccessOrganismsType> = (props: PropsWithC
               <p className="mb-0">Descripción del acceso</p>
             </div>
             {simpleComponent ? (
-              <span className="card-access-icon material-icons-round">info</span>
+              <span className="card-access-icon material-icons-round" aria-hidden="true">
+                info
+              </span>
             ) : (
               <span className="card-access-icon descriptive">N°</span>
             )}

@@ -77,7 +77,9 @@ export const Alert = ({ arrayAlerts, isDismissible }: AlertProps): JSX.Element =
           <p dangerouslySetInnerHTML={{ __html: text }}></p>
           {isDismissible && (
             <button type="button" className="close" data-dismiss="alert" aria-label="Cerrar">
-              <span className="material-icons-round">close</span>
+              <span className="material-icons-round" aria-hidden="true">
+                close
+              </span>
             </button>
           )}
         </div>

@@ -408,16 +408,24 @@ export const TextAndButtonIcon = (): JSX.Element => {
               <td>
                 <div className="actions-table">
                   <button className="btn button-actions-table" aria-label="Editar">
-                    <span className="material-icons-round">edit</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      edit
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Visualizar">
-                    <span className="material-icons-round">visibility</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      visibility
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Descargar">
-                    <span className="material-icons-round">file_download</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      file_download
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Eliminar">
-                    <span className="material-icons-round">delete</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      delete
+                    </span>
                   </button>
                 </div>
               </td>
@@ -429,16 +437,24 @@ export const TextAndButtonIcon = (): JSX.Element => {
               <td>
                 <div className="actions-table">
                   <button className="btn button-actions-table" aria-label="Editar">
-                    <span className="material-icons-round">edit</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      edit
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Visualizar">
-                    <span className="material-icons-round">visibility</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      visibility
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Descargar">
-                    <span className="material-icons-round">file_download</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      file_download
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Eliminar">
-                    <span className="material-icons-round">delete</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      delete
+                    </span>
                   </button>
                 </div>
               </td>
@@ -450,16 +466,24 @@ export const TextAndButtonIcon = (): JSX.Element => {
               <td>
                 <div className="actions-table">
                   <button className="btn button-actions-table" aria-label="Editar">
-                    <span className="material-icons-round">edit</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      edit
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Visualizar">
-                    <span className="material-icons-round">visibility</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      visibility
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Descargar">
-                    <span className="material-icons-round">file_download</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      file_download
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Eliminar">
-                    <span className="material-icons-round">delete</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      delete
+                    </span>
                   </button>
                 </div>
               </td>
@@ -471,16 +495,24 @@ export const TextAndButtonIcon = (): JSX.Element => {
               <td>
                 <div className="actions-table">
                   <button className="btn button-actions-table" aria-label="Editar">
-                    <span className="material-icons-round">edit</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      edit
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Visualizar">
-                    <span className="material-icons-round">visibility</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      visibility
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Descargar">
-                    <span className="material-icons-round">file_download</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      file_download
+                    </span>
                   </button>
                   <button className="btn button-actions-table" aria-label="Eliminar">
-                    <span className="material-icons-round">delete</span>
+                    <span className="material-icons-round" aria-hidden="true">
+                      delete
+                    </span>
                   </button>
                 </div>
               </td>
