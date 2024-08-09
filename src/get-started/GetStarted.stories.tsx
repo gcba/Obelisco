@@ -11,6 +11,19 @@ export default {
 export const Instalacion = (): JSX.Element => (
   <div className="get-started-container">
     <div className="get-started">
+      <div className="alert alert-info" role="alert">
+        <p>
+          <strong>
+            Actualmente estamos trabajando en la migración de nuestra librería de componentes de Bootstrap 4 a Bootstrap
+            5.
+          </strong>
+        </p>
+        <p>
+          Te pedimos que estés atento a futuras actualizaciones mientras trabajamos para ofrecerte una versión
+          optimizada y actualizada de nuestra librería.
+        </p>
+      </div>
+      <br />
       {/* OBELISCO */}
       <h1 id="obelisco">Obelisco</h1>
       <hr />
