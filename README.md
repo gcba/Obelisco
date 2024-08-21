@@ -1,8 +1,6 @@
 
 > [!NOTE]
-> Actualmente estamos trabajando en la migración de nuestra librería de componentes de Bootstrap 4 a Bootstrap 5. <br/>
-> Te pedimos que estés atento a futuras actualizaciones mientras trabajamos para ofrecerte una versión optimizada y actualizada de nuestra librería.
-
+> Estamos trabajando en la migración de nuestra librería de componentes de Bootstrap 4 a Bootstrap 5. Si sos parte de los colaboradores del GCBA y necesitás más información sobre los proximos cambios, [contáctanos vía mail.](mailto:equipoobelisco@buenosaires.gob.ar) Si querés reportar algún problema o resolver una duda, podés abrir un [issue en GitHub.](https://github.com/gcba/Obelisco/issues)
 
 # Obelisco
 
