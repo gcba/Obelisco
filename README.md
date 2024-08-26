@@ -1,3 +1,7 @@
+
+> [!NOTE]
+> Estamos trabajando en la migración de nuestra librería de componentes de Bootstrap 4 a Bootstrap 5. Si sos parte de los colaboradores del GCBA y necesitás más información sobre los proximos cambios, [contáctanos vía mail.](mailto:equipoobelisco@buenosaires.gob.ar) Si querés reportar algún problema o resolver una duda, podés abrir un [issue en GitHub.](https://github.com/gcba/Obelisco/issues)
+
 # Obelisco
 
 [![Versión de Obelisco en npm](https://img.shields.io/npm/v/@gcba/obelisco?label=Obelisco%20en%20npm&logo=npm)](https://www.npmjs.com/package/@gcba/obelisco)
@@ -93,7 +97,7 @@ Un ejemplo de cómo importalas es:
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 ```
 
-> **Importante**<br>
+> **Importante**<br/>
 > Revisá las [versiones y herramientas aceptadas](https://asijira-confluence.buenosaires.gob.ar/display/ASI/Versiones++y+Herramientas+aceptadas+por+la+ASI) por la **Agencia de Seguridad Informática (ASI)** del Gobierno de la Ciudad antes de elegir una versión de estas dependencias.
 
 ## Desarrollo
