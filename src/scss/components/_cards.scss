@@ -52,7 +52,7 @@ $collapse-border-width: 2px;
 $collapse-info-subtitle-size: 1rem;
 
 $accordion-margin: 0.75rem;
-$accordion-card-header-padding: 0.75rem 3.75rem 0.75rem 1.5rem;
+$accordion-card-header-padding: 1rem 4rem 1rem 1.5rem;
 
 $accordion-icon-collapsed: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNMTkgMTFMMTMgMTEgMTMgNSAxMSA1IDExIDExIDUgMTEgNSAxMyAxMSAxMyAxMSAxOSAxMyAxOSAxMyAxMyAxOSAxM3oiLz48L3N2Zz4=');
 $accordion-icon-expanded: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMkQ0MDUwIiBkPSJNNSAxMUgxOVYxM0g1eiIvPjwvc3ZnPg==');
@@ -180,14 +180,18 @@ $accordion-bg-white: $white;
   }
 
   .card-headline {
-    font-size: $small-font-size;
+    font-size: $text-sm;
+    line-height: $height-text-sm;
     text-transform: uppercase;
     margin-bottom: spaceUnits(4);
   }
 
   .card-title {
     margin-bottom: 0;
-    @extend .h4;
+    font-size: $headline-lg;
+    line-height: $height-headline;
+    font-family: $font-family-headings;
+    font-weight: $font-weight-bold;
   }
 
   //.card-subtitle deprecado. Eliminar mas adelante
@@ -203,7 +207,7 @@ $accordion-bg-white: $white;
   }
 
   .card-badges {
-    margin-bottom: 1rem;
+    margin-bottom: 9.6px; //Debido a que badge tiene display: inline-block; y overflow: hidden; se genera un espaciado en el div contenedor siendo su altura 30.4px en vez de 24px, por lo que se modifica el margin-bottom para respetar espaciado entre etiqueta y titulo.
   }
 
   .badge {
@@ -268,6 +272,7 @@ $accordion-bg-white: $white;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     object-position: center;
+    height: 190px;
   }
 
   .card-event-top {
@@ -632,13 +637,15 @@ button.card {
       grid-row-gap: 0;
       align-items: center;
       word-break: break-word;
-      @extend .h4;
+      font-size: $headline-lg;
+      line-height: $height-headline;
+      font-weight: $font-weight-bold;
 
       &:after {
         content: '';
-        height: 1.5rem;
-        width: 1.5rem;
-        min-width: 1.5rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        min-width: 1.75rem;
         position: absolute;
         right: 24px;
         top: 50%;
@@ -647,10 +654,11 @@ button.card {
 
       i,
       .material-icons-round {
-        font-size: 1.5rem;
-        width: 1.5rem;
-        min-width: 1.5rem;
-        height: 1.5rem;
+        display: inline-block;
+        font-size: 1.75rem;
+        width: 1.75rem;
+        min-width: 1.75rem;
+        height: 1.75rem;
         grid-area: icon;
         margin-right: 0.75rem;
       }
@@ -660,9 +668,10 @@ button.card {
       .collpase-title {
         grid-area: label;
         margin-bottom: 0.25rem;
-        line-height: 20px;
-        font-size: 0.8125rem;
-        font-weight: $lead-font-weight;
+        font-size: $text-sm; //14px
+        line-height: $height-text-sm; //20px
+        font-weight: $font-weight-normal;
+        font-family: $font-family-sans-serif;
         word-break: break-word;
       }
 
@@ -670,9 +679,9 @@ button.card {
       .collapse-title,
       .collpase-subtitle {
         grid-area: title;
-        @extend .h4;
-        line-height: 24px;
-        font-weight: $card-font-weight;
+        font-size: $headline-lg;
+        line-height: $height-headline;
+        font-weight: $font-weight-bold;
         margin-bottom: 0;
         word-break: break-word;
       }
@@ -680,9 +689,9 @@ button.card {
       .collapse-subtitle {
         grid-area: subtitle;
         margin-top: 0.25rem;
-        line-height: 24px;
-        font-weight: $card-subtitle-font-weight;
-        font-size: $collapse-info-subtitle-size;
+        font-size: $text-md; //16px
+        line-height: $height-text-md; //24px
+        font-weight: $font-weight-normal;
         font-family: $font-family-sans-serif;
         word-break: break-word;
       }
@@ -750,7 +759,10 @@ button.card {
       @include border-bottom-radius($card-border-radius);
 
       span:not(.material-icons-round) {
-        @extend .h5;
+        font-size: $headline-md;
+        font-weight: $font-weight-semibold;
+        font-family: $font-family-headings;
+        line-height: $height-headline;
         display: block;
         margin-bottom: 0;
       }
@@ -785,7 +797,10 @@ button.card {
 
           > h5 {
             margin-bottom: 0;
-            font-weight: $headings-font-weight;
+            font-size: $headline-md;
+            font-weight: $font-weight-semibold;
+            font-family: $font-family-headings;
+            line-height: $height-headline;
           }
         }
 
