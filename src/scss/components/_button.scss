@@ -2,12 +2,12 @@
 
 $btn-padding-y: spaceUnits(2);
 $btn-padding-x: spaceUnits(4);
-$btn-font-size: 1.125rem;
-$btn-line-height: 1.11;
+$btn-font-size: $headline-md; //18px
+$btn-line-height: $height-headline; //24px
 $btn-focus-width: 0.125rem;
 $btn-font-weight: $font-weight-bold;
 
-$btn-border-width: 0.125rem;
+$btn-border-width: 0;
 
 $btn-box-shadow: none;
 $btn-focus-width: 4px;
@@ -17,13 +17,13 @@ $input-btn-focus-width: 0.25rem;
 
 $btn-padding-y-sm: 0.25rem;
 $btn-padding-x-sm: 0.5rem;
-$btn-font-size-sm: 1rem;
-$btn-line-height-sm: $btn-line-height;
+$btn-font-size-sm: $headline-md; //18px
+$btn-line-height-sm: $height-headline; //24px
 
 $btn-padding-y-lg: spaceUnits(3);
 $btn-padding-x-lg: spaceUnits(5);
-$btn-font-size-lg: 1.125rem;
-$btn-line-height-lg: $btn-line-height;
+$btn-font-size-lg: $headline-md; //18px
+$btn-line-height-lg: $height-headline; //24px
 
 $btn-disabled-opacity: 1;
 
@@ -60,7 +60,7 @@ $theme-colors: map-merge(
     background-color: $btn-disabled-bg;
     color: $btn-disabled-color;
     pointer-events: none;
-    border-color: $btn-disabled-bg;
+    outline-color: $btn-disabled-bg;
   }
 }
 
@@ -70,10 +70,13 @@ $theme-colors: map-merge(
     min-height: 40px;
     color: color-yiq($value);
     text-decoration: $link-decoration;
+    outline: .125rem solid map-get($theme-colors, $color);
+    outline-offset: -.125rem;
+    transition: all ease-in-out 50ms;
 
     @include hover() {
+      outline-color: transparent;
       background-color: theme-color-level($color, 1);
-      border-color: theme-color-level($color, 1);
       box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
     }
 
@@ -83,21 +86,21 @@ $theme-colors: map-merge(
 
     &:focus,
     &.focus {
+      outline: .25rem solid transparent;
       box-shadow: 0 0 0 $input-btn-focus-width $box-shadow-button;
       text-decoration: $link-decoration;
 
       &:not(:hover) {
         background-color: theme-color-level($color, 0);
-        border-color: theme-color-level($color, 0);
       }
     }
 
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
+      outline-color: transparent;
       background-color: theme-color-level($color, 1);
       box-shadow: 0 0 0 $btn-hover-width theme-color-level($color, 1);
-      border-color: theme-color-level($color, 1);
 
       &:focus,
       &.focus {
@@ -106,7 +109,6 @@ $theme-colors: map-merge(
 
         &:not(:hover) {
           background-color: theme-color-level($color, 0);
-          border-color: theme-color-level($color, 0);
         }
       }
     }
@@ -119,7 +121,6 @@ $theme-colors: map-merge(
 
       @include hover() {
         background-color: $ghost-hover;
-        border-color: $ghost-hover;
         color: $link-color;
         text-decoration: $link-decoration;
         box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
@@ -140,7 +141,6 @@ $theme-colors: map-merge(
       .show > &.dropdown-toggle {
         background-color: $ghost-hover;
         box-shadow: 0 0 0 $btn-hover-width $ghost-hover;
-        border-color: $ghost-hover;
         color: $link-color;
       }
     }
@@ -173,7 +173,7 @@ $theme-colors: map-merge(
 
     @if $color == 'link' {
       background-color: transparent;
-      border-color: $link-color;
+      outline-color: $link-color;
       color: $link-color;
 
       &:hover,
@@ -230,8 +230,7 @@ a.btn {
 //
 .btn {
   &-sm {
-    min-height: 30px;
-    line-height: 1.125;
+    min-height: 32px;
   }
 
   &-lg {

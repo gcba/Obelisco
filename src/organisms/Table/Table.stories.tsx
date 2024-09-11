@@ -638,3 +638,187 @@ export const CheckboxAndText = (): JSX.Element => {
 CheckboxAndText.story = {
   name: 'Con checkbox'
 };
+
+export const WithSubtitle = (): JSX.Element => {
+  return (
+    <div className="storybook__container-table-responsive">
+      <div className="responsive-scroll" tabIndex={0}>
+        <table className="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col" className="tb-number">
+                <span className="th-title">Número</span>
+                <span className="th-subtitle">
+                  Subtítulo de hasta 2 líneas donde se puede sumar contenido de soporte
+                </span>
+              </th>
+              <th scope="col" className="tb-text">
+                <span className="th-title">Texto</span>
+                <span className="th-subtitle">
+                  Subtítulo de hasta 2 líneas donde se puede sumar contenido de soporte
+                </span>
+              </th>
+              <th scope="col" className="tb-link">
+                <span className="th-title">Enlace</span>
+                <span className="th-subtitle">
+                  Subtítulo de hasta 2 líneas donde se puede sumar contenido de soporte
+                </span>
+              </th>
+              <th scope="col" className="tb-button">
+                <span className="th-title">Botón</span>
+                <span className="th-subtitle">
+                  Subtítulo de hasta 2 líneas donde se puede sumar contenido de soporte
+                </span>
+              </th>
+              <th scope="col" className="tb-check">
+                <span className="th-title">Checkbox</span>
+                <span className="th-subtitle">
+                  Subtítulo de hasta 2 líneas donde se puede sumar contenido de soporte
+                </span>
+              </th>
+              <th scope="col" className="tb-tag">
+                <span className="th-title">Etiqueta</span>
+                <span className="th-subtitle">
+                  Subtítulo de hasta 2 líneas donde se puede sumar contenido de soporte
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="text-right">1</td>
+              <td>Juan</td>
+              <td>
+                <a href="#" target="_blank" rel="noreferrer">
+                  Enlace predeterminado
+                </a>
+              </td>
+              <td>
+                <button type="button" className="btn btn-primary btn-icon">
+                  <i className="bx bxs-info-circle"></i>
+                  botón
+                </button>
+              </td>
+              <td>
+                <div className="custom-control custom-checkbox">
+                  <input
+                    className="custom-control-input"
+                    type="checkbox"
+                    id="skills-copywrite-input"
+                    name="skills"
+                    value="copywrite"
+                  />
+                  <label className="custom-control-label" htmlFor="skills-copywrite-input">
+                    Redacción
+                  </label>
+                </div>
+              </td>
+              <td>
+                <span className="badge badge-secondary">Etiqueta 1</span>
+              </td>
+            </tr>
+            <tr>
+              <td className="text-right">2</td>
+              <td>María</td>
+              <td>
+                <a href="#" target="_blank" rel="noreferrer">
+                  Enlace predeterminado
+                </a>
+              </td>
+              <td>
+                <button type="button" className="btn btn-primary btn-icon">
+                  <i className="bx bxs-info-circle"></i>
+                  botón
+                </button>
+              </td>
+              <td>
+                <div className="custom-control custom-checkbox">
+                  <input
+                    className="custom-control-input"
+                    type="checkbox"
+                    id="skills-design-input"
+                    name="skills"
+                    value="design"
+                  />
+                  <label className="custom-control-label" htmlFor="skills-design-input">
+                    Diseño
+                  </label>
+                </div>
+              </td>
+              <td>
+                <span className="badge badge-secondary">Etiqueta 1</span>
+              </td>
+            </tr>
+            <tr>
+              <td className="text-right">3</td>
+              <td>Esther</td>
+              <td>
+                <a href="#" target="_blank" rel="noreferrer">
+                  Enlace predeterminado
+                </a>
+              </td>
+              <td>
+                <button type="button" className="btn btn-primary btn-icon">
+                  <i className="bx bxs-info-circle"></i>
+                  botón
+                </button>
+              </td>
+              <td>
+                <div className="custom-control custom-checkbox">
+                  <input
+                    className="custom-control-input"
+                    type="checkbox"
+                    id="skills-development-input"
+                    name="skills"
+                    value="development"
+                  />
+                  <label className="custom-control-label" htmlFor="skills-development-input">
+                    Desarrollo
+                  </label>
+                </div>
+              </td>
+              <td>
+                <span className="badge badge-secondary">Etiqueta 1</span>
+              </td>
+            </tr>
+            <tr>
+              <td className="text-right">4</td>
+              <td>José</td>
+              <td>
+                <a href="#" target="_blank" rel="noreferrer">
+                  Enlace predeterminado
+                </a>
+              </td>
+              <td>
+                <button type="button" className="btn btn-primary btn-icon">
+                  <i className="bx bxs-info-circle"></i>
+                  botón
+                </button>
+              </td>
+              <td>
+                <div className="custom-control custom-checkbox">
+                  <input
+                    className="custom-control-input"
+                    type="checkbox"
+                    id="skills-validation-input"
+                    name="skills"
+                    value="development"
+                  />
+                  <label className="custom-control-label" htmlFor="skills-validation-input">
+                    Validacion
+                  </label>
+                </div>
+              </td>
+              <td>
+                <span className="badge badge-secondary">Etiqueta 1</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+WithSubtitle.story = {
+  name: 'Con subtítulo'
+};

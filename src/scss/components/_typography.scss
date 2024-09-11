@@ -10,30 +10,108 @@ $right-arrow-icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy
 
 /* === Custom styles === */
 
+/* Font weight */
+.font-weight-semibold {
+  font-weight: $font-weight-semibold !important;/* Esta clase no pertenece a bootstraps, fue creada para el font-weight: 600; */
+}
+/* Fin del Font weight */
+
+
+/* Headings */
 h1,
 .h1 {
-  font-weight: $large-headings-font-weight;
+  font-weight:$h1-font-weight;
+  line-height: $height-h1;
 }
 
 h2,
 .h2 {
-  font-weight: $headings-font-weight;
+  font-weight: $h2-font-weight;
+  line-height: $height-h2;
+}
+
+h3,
+.h3 {
+  font-weight: $h3-font-weight;
+  line-height: $height-h3;
 }
 
 h4,
 .h4 {
-  font-weight: $h4-font-weight-mobile;
+  font-weight: $h4-font-weight;
+  line-height: $height-h4;
 }
 
 h5,
 .h5 {
   font-weight: $h5-font-weight;
+  line-height: $height-h5;
 }
 
 h6,
 .h6 {
-  font-family: $h6-font-family;
   font-weight: $h6-font-weight;
+  line-height: $height-h6;
+}
+/* Fin de Headings */
+
+/* Textos */
+.lead, .text-xl {
+  line-height: $text-lead-line-height;
+  font-size: $text-lead-size;
+}
+
+.text-lg {
+  font-size: $text-lg;
+  line-height: $height-text-lg;
+}
+
+.text-md {
+  font-size: $text-md;
+  line-height: $height-text-md;
+}
+
+.text-sm, .small, small {
+  font-size: $text-sm;
+  line-height: $height-text-sm;
+}
+
+.text-xs {
+  font-size: $text-xs;
+  line-height: $height-text-xs;
+}
+/* Fin de textos Textos */
+
+/*  Inicio de Titulares para componentes, son los estilos que se aplicaran a los componentes */
+.headline-lg, .headline-md, .headline-sm {
+  font-family: $font-family-headings;
+  line-height: $height-headline;
+}
+.headline-lg {
+  font-size: $headline-lg;
+  font-weight: $font-weight-bold;
+}
+.headline-md {
+  font-size: $headline-md;
+  font-weight: $font-weight-semibold;
+}
+.headline-sm {
+  font-size: $headline-sm;
+  line-height: $height-headline-sm;
+  font-weight: $font-weight-semibold;
+}
+/* Fin de Titulares para componentes */
+
+
+/*  Customizacion general traes estilos como unterline, link y blockquote. */
+
+.underline-1 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.underline-2 {
+  text-decoration: underline;
 }
 
 .link-arrow {
@@ -50,27 +128,44 @@ h6,
   }
 }
 
+//Citas
 blockquote {
-  @extend .lead;
-  padding-left: spaceUnits(4);
-  margin: spaceUnits(8);
+  padding: 1.5rem 2rem;
+  margin:  0;
   border-left: spaceUnits(1) solid $grisulado-700;
   font-style: italic;
+  p {
+    @extend .text-lg;
+    margin-bottom: 0;
+  }
+  small, span.text-sm, span.small {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-style: normal;
+    font-weight: $font-weight-semibold;
+  }
 }
+/* Fin de estilos customizados */
 
-@include media-breakpoint-up(sm) {
+/* Estilos mobile */
+@include media-breakpoint-down(sm) {
   blockquote {
     padding-left: spaceUnits(6);
     margin: spaceUnits(8) spaceUnits(22);
   }
 
-  h4,
-  .h4 {
-    font-weight: $h4-font-weight;
+  h1,
+  .h1 {
+    font-size: $size-h1-mobile;
   }
-}
 
-// Small size: 11.7px
-.text-xs {
-  font-size: 0.73125rem;
+  h2,
+  .h2 {
+    font-size: $size-h2-mobile;
+  }
+
+  h3,
+  .h3 {
+    font-size: $size-h3-mobile;
+  }
 }

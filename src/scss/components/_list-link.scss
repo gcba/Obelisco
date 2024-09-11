@@ -12,6 +12,7 @@
 
   .list-link-title {
     margin-bottom: 1rem;
+    @extend .h6;
     @include media-breakpoint-down(xs) {
       margin-bottom: 0.75rem;
     }
