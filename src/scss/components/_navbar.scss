@@ -875,6 +875,7 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
       border: none;
       border-radius: 0.5rem;
       box-shadow: $navbar-button-box-shadow;
+      outline: 0.125rem solid transparent;
       color: $grisulado-900;
       background: transparent $navbar-toggle-menu no-repeat center center;
 
@@ -884,12 +885,16 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
 
       &:focus,
       &:focus-visible {
-        outline: none;
+        outline: 0.25rem solid transparent;
       }
 
       &[aria-expanded='true'] {
         background: $blue $navbar-toggle-close no-repeat center center;
         box-shadow: none;
+        outline: 0.125rem solid transparent;
+        &:focus, &.focus {
+          outline: 0.25rem solid transparent;
+        }
       }
     }
 
@@ -1016,11 +1021,13 @@ $navbar-toggle-menu: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/
                 border: none;
                 border-radius: 0.5rem;
                 background: transparent map-get($form-icons, 'search') no-repeat center center;
+                outline: 0.125rem solid transparent;
+                outline-offset: -2px;
 
                 &:focus,
                 &:focus-visible {
                   box-shadow: 0 0 0 0.25rem $navbar-items-box-shadow-color-focus;
-                  outline: none;
+                  outline: 0.25rem solid transparent;
                 }
               }
             }

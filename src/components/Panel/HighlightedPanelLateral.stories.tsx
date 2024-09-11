@@ -26,7 +26,9 @@ export const Lateral = (): JSX.Element => {
       <br />
       <HighlightedPanel title={TITLE_HIGHLIGHTED} description={DESCRIPTION_HIGHLIGHTED_LATERAL} type="lateral">
         <a className="btn btn-secondary btn-lg btn-block btn-icon" href="#" target="_blank" download>
-          <span className="material-icons-round">file_download</span>
+          <span className="material-icons-round" aria-hidden="true">
+            file_download
+          </span>
           Descargar
         </a>
       </HighlightedPanel>

@@ -78,10 +78,16 @@ export const Event = (): JSX.Element => {
         headline="sobrelinea">
         <div className="pt-2">
           <small>
-            <span className="material-icons-round">calendar_today</span> Lun 01/1
+            <span className="material-icons-round" aria-hidden="true">
+              calendar_today
+            </span>{' '}
+            Lun 01/1
           </small>
           <small>
-            <span className="material-icons-round">watch_later</span> 17 | 18 | 19 hs
+            <span className="material-icons-round" aria-hidden="true">
+              watch_later
+            </span>{' '}
+            17 | 18 | 19 hs
           </small>
         </div>
       </CardComponent>
