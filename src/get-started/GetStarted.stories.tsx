@@ -13,13 +13,16 @@ export const Instalacion = (): JSX.Element => (
     <div className="get-started">
       <div className="alert alert-info mb-4 mt-4" role="alert">
         <strong>
-          <a href="https://gcba.github.io/Obelisco-V2/getting-started"
+          <a
+            href="https://gcba.github.io/Obelisco-V2/getting-started"
             target="_blank"
             rel="noopener noreferrer"
-            title="Visitar Obelisco v2">Obelisco V2
-          </a> ya está disponible. Si sos parte de los colaboradores de GCBA y necesitás más información,{" "}
-          <a href="mailto:equipoobelisco@buenosaires.gob.ar">contáctanos vía mail
-          </a>. Si querés reportar algún problema o resolver una duda, podés abrir un{" "}
+            title="Visitar Obelisco v2">
+            Obelisco V2
+          </a>{' '}
+          ya está disponible. Si sos parte de los colaboradores de GCBA y necesitás más información,{' '}
+          <a href="mailto:equipoobelisco@buenosaires.gob.ar">contáctanos vía mail</a>. Si querés reportar algún problema
+          o resolver una duda, podés abrir un{' '}
           <a
             href="https://github.com/gcba/Obelisco/issues"
             target="_blank"
@@ -27,7 +30,7 @@ export const Instalacion = (): JSX.Element => (
             title="Visitar issues de github">
             issue en GitHub.
           </a>
-        </strong>{" "}
+        </strong>{' '}
       </div>
       <br />
       {/* OBELISCO */}
