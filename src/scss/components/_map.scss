@@ -1,7 +1,8 @@
 .card-map {
   .card-body {
     .card-title {
-      @extend .h4;
+      @extend .h6;
+      font-weight: $font-weight-bold;
       margin-bottom: 0;
     }
 

@@ -62,17 +62,12 @@ $modal-dialog-margin-y-sm-up: 3rem;
       }
 
       .modal-title {
-        line-height: 1.5rem;
-        letter-spacing: -0.19px;
+        @extend .headline-lg;
       }
     }
 
     .modal-body {
       padding: spaceUnits(2) spaceUnits(6) 0;
-
-      p {
-        line-height: 1.5rem;
-      }
 
       > *:last-child {
         margin: 0;

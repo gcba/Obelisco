@@ -18,23 +18,23 @@ $stepper-description-color: $grisulado-900;
   border-bottom: 1px rgba(0, 0, 0, 0.125);
 
   .step-title {
-    @extend .h3;
+    @extend .h4;
+    margin-bottom: 0.25rem;
   }
 
   .step-next {
-    @extend small;
     color: $stepper-description-color;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .step-text {
-    @extend small;
     display: inline-block;
   }
 
   .steps {
     display: inline-block;
-    margin-right: 1rem;
+    margin-right: .5rem;
+    margin-top: 0.75rem;
 
     .step {
       width: $stepper-circle-size;
@@ -49,17 +49,6 @@ $stepper-description-color: $grisulado-900;
       &.active {
         background-color: $stepper-active-color;
       }
-    }
-  }
-
-  @include media-breakpoint-up(md) {
-    .step-title {
-      font-size: $h2-font-size;
-      font-weight: $large-headings-font-weight;
-    }
-    
-    .step-next {
-      font-size: $font-size-base;
     }
   }
 }

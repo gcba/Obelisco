@@ -40,14 +40,18 @@ $chromatic-colors: (
     height: 24px;
     .calendar-title,
     .calendar-year {
-      @extend .h3;
+      font-size: $headline-lg;
+      line-height: $height-headline;
+      font-weight: $font-weight-bold;
+      font-family: $font-family-headings;
       margin-bottom: 0;
     }
   }
 
   .calendar-body {
     padding: 1rem 0 0;
-    @extend .h5;
+    font-family: $font-family-headings;
+    font-weight: $font-weight-semibold;
     color: $grisulado-700;
     margin-bottom: 0;
 
@@ -70,7 +74,7 @@ $chromatic-colors: (
 
       .calendar-week-header {
         th {
-          font-weight: 700;
+          font-weight: $font-weight-bold;
           height: 48px;
           background-color: $ghost;
         }
@@ -84,6 +88,11 @@ $chromatic-colors: (
         &:nth-of-type(odd) {
           td {
             padding: 0.25rem 0;
+          }
+        }
+        &:nth-of-type(1) {
+          td {
+            padding: 0.5rem 0 0.25rem;
           }
         }
 
@@ -163,10 +172,11 @@ $chromatic-colors: (
       margin-bottom: 0;
 
       li {
-        font-size: 0.8125rem;
+        font-size: $text-sm;
+        line-height: $height-text-sm;
         list-style-type: none;
         &:not(:last-child) {
-          margin-bottom: 0.25rem;
+          margin-bottom: 0.5rem;
         }
       }
     }
