@@ -440,6 +440,48 @@ $accordion-bg-white: $white;
 
   @extend %divCardStyles;
 }
+.card.video {
+  overflow: hidden;
+
+  .card-video {
+    width: calc(100% + 2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    >video {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .card-play > span, i {
+      font-size: 50px;
+      cursor: pointer;
+    }
+
+    .card-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .main-iframe{
+      max-height: 200px;
+      min-height: 200px;
+      width: 100%;
+      //background: $grisulado-900;
+      background:no-repeat center/80% url(https://cdn.pixabay.com/photo/2019/06/04/03/51/floralis-generic-4250550_1280.jpg);
+      background-size: cover;
+
+      > div {
+        min-height: 200px;
+      }
+    }
+  }
+  
+}
 
 .card-deck {
   @include card-deck-2;

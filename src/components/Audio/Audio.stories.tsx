@@ -4,11 +4,35 @@ import './Audio.stories.scss';
 
 // Addons
 import { withA11y } from '@storybook/addon-a11y';
+import { Video, VideoYt } from '.';
 
 // Configuración general del componente
 export default {
   title: 'Componentes|Audio',
   decorators: [withA11y]
+};
+
+export const VideoLocal = (): JSX.Element => {
+  return (
+    <>
+      <Video videoUrl="panel/larreta.mp4" />
+    </>
+  );
+};
+
+VideoLocal.story = {
+  name: 'Video '
+};
+
+export const Yt = (): JSX.Element => {
+  return (
+    <>
+      <VideoYt videoUrl="https://www.youtube.com/embed/fY7O2AaJBA4" />
+    </>
+  );
+};
+Yt.story = {
+  name: 'Video youtube '
 };
 
 export const Audio = (): JSX.Element => {
