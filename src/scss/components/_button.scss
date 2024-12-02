@@ -51,7 +51,7 @@ $theme-colors: map-merge(
 
 /* === Bootstrap Import === */
 
-@import 'node_modules/bootstrap/scss/buttons';
+@import '../../../node_modules/bootstrap/scss/buttons';
 
 /* === Custom styles === */
 @mixin btn-disabled {

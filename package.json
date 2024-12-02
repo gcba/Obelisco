@@ -14,6 +14,8 @@
   ],
   "scripts": {
     "start": "start-storybook -s ./static -p 6006",
+    "build-app": "cd app && npm build",
+    "start-app": "cd app && npm start",
     "lint": "npm run lint:typescript && npm run lint:sass",
     "lint:typescript": "eslint --ext .ts,.tsx . --fix",
     "lint:sass": "stylelint '**/*.{css,scss,sass}' --fix",
@@ -62,7 +64,6 @@
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
     "react-storybook-addon-props-combinations": "^1.1.0",
-    "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "semantic-release": "^17.1.1",
     "style-loader": "^1.2.1",
