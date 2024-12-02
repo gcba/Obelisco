@@ -12,6 +12,7 @@ $banner-padding-mobile: 0.25rem;
 .banner {
   padding: $banner-padding;
   background-color: $grisulado-50;
+  outline: 0.125rem solid transparent;
   word-break: break-word;
   width: $banner-width;
 

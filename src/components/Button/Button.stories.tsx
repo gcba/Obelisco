@@ -87,7 +87,11 @@ export const ButtonWithIcon = (): JSX.Element => {
             type="primary"
             isOutline
             size={size}
-            isIconSpinner={<span className="material-icons-round">info</span>}>
+            isIconSpinner={
+              <span className="material-icons-round" aria-hidden="true">
+                info
+              </span>
+            }>
             Botón
           </Button>
         ))}
@@ -107,7 +111,11 @@ export const ButtonWithIcon = (): JSX.Element => {
             type="primary"
             isOutline
             size={size}
-            isIconSpinner={<span className="material-icons-round">info</span>}
+            isIconSpinner={
+              <span className="material-icons-round" aria-hidden="true">
+                info
+              </span>
+            }
             ariaLabel="Botón"></Button>
         ))}
       </div>
