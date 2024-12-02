@@ -67,6 +67,7 @@ const headers = [
   'formulario-checkbox',
   'formulario-con-fondo',
   'formulario-lista-de-selección',
+  'formulario-selector-de-fechas',
   'formulario-radio',
   'formulario-texto',
   'formulario-validación',
