@@ -1,12 +1,9 @@
 /* === Variable and mixins overides === */
-
-$nav-link-font-weight: 400;
-$nav-link-simple-font-weight: 700;
-$nav-link-simple-active-font-weight: $nav-link-simple-font-weight;
-$nav-link-active-font-weight: $nav-link-font-weight;
+$nav-link-simple-active-font-weight: $font-weight-bold;
+$nav-link-active-font-weight: $font-weight-normal;
 $nav-link-line-heght: 1.378;
 
-$nav-link-lg-font-weight: $nav-link-font-weight;
+$nav-link-lg-font-weight: $font-weight-normal;
 $nav-link-lg-font-size: 1.125rem;
 
 $nav-icon-font-size: 1.25rem;
@@ -55,7 +52,6 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
     .nav-link {
       min-height: 40px;
       padding: $nav-link-padding-y $nav-link-padding-x;
-      line-height: 24px;
 
       &-lg {
         min-height: 48px;
@@ -65,35 +61,26 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       &-sm {
         min-height: 30px;
         padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
-        font-size: 1rem;
-        line-height: 22px;
+        @extend .text-md;
 
         .nav-icon {
-          i,
-          span {
-            font-size: 1rem;
+          .bx,
+          .material-icons-round {
+            font-size: $nav-icon-font-size;
           }
         }
       }
     }
+  }
+  
+  &.tabs {
+    .nav-item > .nav-link {
+      &-lg {
+        padding: $nav-link-padding-lg-y $nav-link-padding-x;
+      }
 
-    &.tabs {
-      .nav-item > .nav-link {
-        &-lg {
-          padding: $nav-link-padding-lg-y $nav-link-padding-x;
-        }
-
-        &-sm {
-          padding: $nav-link-padding-sm-y $nav-link-padding-sm-x;
-          font-size: 1rem;
-
-          .nav-icon {
-            i,
-            span {
-              font-size: 1rem;
-            }
-          }
-        }
+      &-sm {
+        padding: $nav-link-padding-sm-y $nav-link-padding-x;
       }
     }
   }
@@ -106,6 +93,9 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
     &:first-child {
       margin-top: 0;
+      > .nav-item > .nav-link {
+        padding: 0.75rem 1rem;
+      }
     }
 
     .nav-item > .nav-link {
@@ -140,7 +130,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
       &:hover {
         span {
-          text-decoration: underline;
+          @extend .underline-1;
         }
       }
 
@@ -160,11 +150,12 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 }
 
 .nav-link {
-  font-size: $nav-link-lg-font-size;
   color: $grisulado-900;
-  font-weight: $nav-link-font-weight;
-  line-height: $nav-link-line-heght;
-  font-family: $font-family-headings;
+  @extend .headline-md;
+  font-weight: $font-weight-normal;
+  // font-size: $nav-link-lg-font-size;
+  // line-height: $nav-link-line-heght;
+  // font-family: $font-family-headings;
 
   @include border-radius($border-radius * 2);
 
@@ -177,26 +168,21 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   }
 
   i {
-    font-size: 20px;
     vertical-align: middle;
   }
 
   @include hover() {
     box-shadow: $input-btn-hover-box-shadow;
     color: $nav-link-hover-color;
-    text-decoration: underline;
+    @extend .underline-1;
 
     &:visited {
       color: $nav-link-hover-color;
     }
 
     .nav-icon {
-      i {
+      .bx, .material-icons-round {
         text-decoration: none;
-      }
-
-      span {
-        text-decoration: underline;
       }
     }
   }
@@ -234,7 +220,7 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
       }
 
       .nav-icon {
-        i {
+        i, .material-icons-round {
           text-decoration: none;
         }
 
@@ -312,22 +298,15 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
         background: transparent;
         transition: font-weight 0.4s ease-in-out;
 
-        span,
-        i {
-          font-size: 1.25rem;
-          text-decoration: none;
-        }
-
         &.active,
         &:active {
-          font-weight: $nav-link-simple-font-weight;
+          font-weight: $font-weight-bold;
           color: $grisulado-900;
-          background-color: transparent;
-          box-shadow: 0px 4px 0px 0px $nav-link-border-active;
+          box-shadow: inset 0px -4px 0px 0px $nav-link-border-active;
           border-radius: 0;
 
           &:hover {
-            box-shadow: 0px 4px 0px 0px $nav-link-border-active;
+            box-shadow: inset 0px -4px 0px 0px $nav-link-border-active;
           }
 
           &:focus {
@@ -345,6 +324,12 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
 
         &:hover {
           box-shadow: none;
+
+          .nav-icon {
+            .bx, .material-icons-round {
+              text-decoration: none;
+            }
+          }
         }
 
         .nav-icon {
@@ -454,14 +439,6 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   @extend .tabs;
 }
 
-.nav.nav-lg {
-  > .nav-link,
-  > .nav-item > .nav-link {
-    font-size: $nav-link-lg-font-size;
-    font-weight: $nav-link-lg-font-weight;
-  }
-}
-
 .nav .nav {
   .nav-link {
     padding-left: $nav-link-vertical-padding-x * 2.4444;
@@ -489,7 +466,6 @@ $icon-user-hover: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: $nav-link-lg-font-size;
   font-weight: $nav-link-lg-font-weight;
 
   &:after {

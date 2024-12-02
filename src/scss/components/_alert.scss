@@ -2,16 +2,19 @@
 
 $alert-padding-y: spaceUnits(4);
 $alert-padding-x: spaceUnits(6);
-$alert-padding-left: 2.75rem;
+$alert-padding-x-mobile: spaceUnits(4);
+$alert-padding-left: 3.75rem;
+$alert-padding-left-mobile: 3.25rem;
 
 $alert-border-width: 2px;
 
 $alert-bg-level: -9.5;
 $alert-border-level: 0;
 
-$alert-icon-size: spaceUnits(5);
-$alert-icon-position-top: 1.125rem;
-$alert-icon-position-left: 1.625rem;
+$alert-icon-size: 1.5rem;
+$alert-icon-position-top: 1rem;
+$alert-icon-position-left: 1.5rem;
+$alert-icon-position-left-mobile: 1rem;
 $alert-close-btn-width: 5.5rem;
 $alert-text-distance: spaceUnits(2);
 
@@ -34,8 +37,9 @@ $alert-icons: (
 
 @mixin alert-variant($background, $border, $color) {
   @include gradient-bg($background);
-  border-color: $border;
-  border: 2px solid $border;
+  border: none;
+  outline: 2px solid $border;
+  outline-offset: -2px;
   border-radius: spaceUnits(2);
 }
 
@@ -62,7 +66,7 @@ $theme-colors: map-merge(
 
 .alert {
   counter-reset: section;
-  padding-left: $alert-padding-y + $alert-padding-left;
+  padding-left: $alert-padding-left;
   word-break: break-word;
 
   &::before {
@@ -122,25 +126,35 @@ $theme-colors: map-merge(
   }
 
   &.alert-dismissible {
+    padding-right: 3.75rem;
     p {
       margin-bottom: 0;
     }
 
     .close {
-      color: $black;
-      opacity: 0.75;
+      color: $grisulado-900;
+      opacity: 1;
       padding: 0;
-      margin: $alert-padding-y $alert-padding-x;
+      margin: $alert-padding-y $alert-padding-x 0 0;
+      height: 1.5rem;
     }
   }
 }
 
 @include media-breakpoint-down(sm) {
   .alert {
-    padding-left: $alert-padding-left;
+    padding-left: $alert-padding-left-mobile;
+    padding-right: $alert-padding-x-mobile;
 
     &::before {
-      left: $alert-icon-position-left / 2;
+      left: $alert-icon-position-left-mobile;
+    }
+
+    &.alert-dismissible {
+      padding-right: 3.25rem;
+      .close {
+        margin-right: $alert-padding-x-mobile;
+      }
     }
   }
 }

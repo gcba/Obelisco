@@ -10,7 +10,7 @@ $pagination-box-shadow: 0 0 0 0.125rem $grisulado-50;
 $pagination-focus-box-shadow: 0 0 0 0.25rem theme-color-level('info', 3);
 $pagination-hover-box-shadow: 0 0 0 0.125rem $blue;
 
-$pagination-padding-y: spaceUnits(1);
+$pagination-padding-y: spaceUnits(2);
 $pagination-padding-x: spaceUnits(3);
 $pagination-border-width: 0;
 
@@ -79,11 +79,10 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
       box-shadow: $pagination-box-shadow;
       height: $pagination-size;
       min-width: 35px;
-      font-family: $font-family-headings;
       gap: 0.25rem;
       text-decoration: none;
-      font-weight: normal;
-      font-size: 1.125rem;
+      @extend .headline-md;
+      font-weight: $font-weight-normal;
       word-break: normal;
 
       .page-previous-icon,
@@ -139,6 +138,7 @@ $pagination-icon-left-active: url('data:image/svg+xml;utf8,<svg xmlns="http://ww
           $pagination-icon-left-hover,
           $pagination-icon-right-hover
         );
+        text-decoration-thickness: 1px;
       }
     }
 

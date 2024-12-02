@@ -1,5 +1,4 @@
 /* === Custom variables and mixins === */
-$calendar-body-border: 1px solid $grisulado-50;
 $calendar-spacing: 0.5rem 0.25rem;
 $calendar-footer-spacing: 1rem 0.5rem 0;
 $calendar-td-span-size: 2.25rem;
@@ -36,18 +35,20 @@ $chromatic-colors: (
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0;
+    padding: 0 0.25rem;
     height: 24px;
     .calendar-title,
     .calendar-year {
-      @extend .h3;
+      font-size: $headline-lg;
+      line-height: $height-headline;
+      font-weight: $font-weight-semibold;
+      font-family: $font-family-headings;
       margin-bottom: 0;
     }
   }
 
   .calendar-body {
     padding: 1rem 0 0;
-    @extend .h5;
     color: $grisulado-700;
     margin-bottom: 0;
 
@@ -70,7 +71,8 @@ $chromatic-colors: (
 
       .calendar-week-header {
         th {
-          font-weight: 700;
+          font-weight: $font-weight-bold;
+          font-family: $font-family-headings;
           height: 48px;
           background-color: $ghost;
         }
@@ -84,6 +86,11 @@ $chromatic-colors: (
         &:nth-of-type(odd) {
           td {
             padding: 0.25rem 0;
+          }
+        }
+        &:nth-of-type(1) {
+          td {
+            padding: 0.5rem 0 0.25rem;
           }
         }
 
@@ -158,15 +165,16 @@ $chromatic-colors: (
   .calendar-footer {
     .calendar-footer-list {
       margin-top: 1rem;
-      border-top: $calendar-body-border;
+      box-shadow: 0px -1px 0px 0px $grisulado-50;
       padding: $calendar-footer-spacing;
       margin-bottom: 0;
 
       li {
-        font-size: 0.8125rem;
+        font-size: $text-sm;
+        line-height: $height-text-sm;
         list-style-type: none;
         &:not(:last-child) {
-          margin-bottom: 0.25rem;
+          margin-bottom: 0.5rem;
         }
       }
     }
@@ -176,7 +184,7 @@ $chromatic-colors: (
         margin-bottom: 0;
         .calendar-footer-list {
           margin: 0;
-          border-top: none;
+          box-shadow: none;
           padding: 0;
         }
       }

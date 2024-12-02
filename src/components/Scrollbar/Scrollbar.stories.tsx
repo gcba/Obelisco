@@ -20,7 +20,7 @@ export const HorizontalScrollbarComponent = (): JSX.Element => {
     <div className="storybook__container-scrollbar">
       <Scrollbar>
         <div className="horizontal-example">
-          <h1>Esto es un título de ejemplo</h1>
+          <h2 className="font-weight-bold">Esto es un título de ejemplo</h2>
           <p className="lead">
             Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
             fin específico, solo sirve de muestra. El ancho del texto es para probar el desplazamiento horizontal,
@@ -30,8 +30,6 @@ export const HorizontalScrollbarComponent = (): JSX.Element => {
           <br />
           <hr />
           <br />
-
-          <h2>Esto es un título de ejemplo</h2>
 
           <p>
             Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
@@ -53,7 +51,7 @@ export const VerticalScrollbarComponent = (): JSX.Element => {
     <div className="storybook__container-scrollbar">
       <Scrollbar>
         <div className="vertical-example">
-          <h1>Esto es un título de ejemplo</h1>
+          <h2 className="font-weight-bold">Esto es un título de ejemplo</h2>
           <p className="lead">
             Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
             fin específico, solo sirve de muestra. El ancho del texto es para probar el desplazamiento horizontal,
@@ -74,7 +72,7 @@ export const VerticalScrollbarComponent = (): JSX.Element => {
           <hr />
           <br />
 
-          <h2>Esto es un título de ejemplo</h2>
+          <h3>Esto es un título de ejemplo</h3>
 
           <p>
             Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún
@@ -86,7 +84,7 @@ export const VerticalScrollbarComponent = (): JSX.Element => {
           <hr />
           <br />
 
-          <h2>Esto es un título de ejemplo</h2>
+          <h3>Esto es un título de ejemplo</h3>
 
           <p>
             Esto es un párrafo de ejemplo para probar el funcionamiento de la barra de desplazamiento. No tiene ningún

@@ -15,9 +15,6 @@ $footer-link-separation-redes: spaceUnits(4);
 $footer-icon-separation: spaceUnits(1);
 $footer-icon-size: spaceUnits(6);
 
-$footer-icon-height-vamos-ba: 2.375rem;
-$footer-icon-height-vamos-ba-sm: 3rem;
-
 $divider-margin: 2.5rem 0 2.5rem;
 $divider-border: 0.125rem solid $grisulado-700;
 
@@ -38,7 +35,9 @@ $footer-info-gap-mobile: 1rem;
   }
 
   h4, h3 {
-    @extend .h4;
+    font-size: $headline-md;
+    line-height: $height-headline;
+    font-weight: $font-weight-bold;
     margin-bottom: spaceUnits(2);
 
     @include media-breakpoint-down(sm) {
@@ -62,7 +61,7 @@ $footer-info-gap-mobile: 1rem;
 
     .bx {
       font-size: $footer-icon-size;
-      vertical-align: middle;
+      vertical-align: top;
       margin-right: $footer-icon-separation;
     }
   }
@@ -89,18 +88,12 @@ $footer-info-gap-mobile: 1rem;
         display: flex;
         gap: 2rem;
         margin-bottom: $footer-legal-margin-bottom;
-
+        img {
+          max-height: 40px;
+        }
         @include media-breakpoint-down(sm) {
           flex-wrap: wrap;
           margin-bottom: $footer-legal-margin-bottom-sm;
-        }
-
-        .img-vamos-ba {
-          height: $footer-icon-height-vamos-ba;
-
-          @include media-breakpoint-down(md) {
-            height: $footer-icon-height-vamos-ba-sm;
-          }
         }
       }
     }
@@ -129,6 +122,9 @@ $footer-info-gap-mobile: 1rem;
     @include media-breakpoint-down(sm) {
       display: block;
       margin-bottom: spaceUnits(4);
+      &.phone-items, &.redes-items {
+        margin-right: 0;
+      }
     }
   }
 
@@ -159,7 +155,9 @@ $footer-info-gap-mobile: 1rem;
       gap: $footer-info-gap;
 
     .footer-info-text {
-      @extend .h4;
+      font-size: $headline-lg;
+      line-height: $height-headline;
+      font-weight: $font-weight-bold;
       margin: 0;
     }
 

@@ -2,14 +2,15 @@
 
 $badge-color: $grisulado-900;
 $badge-color-hover: $blue;
-$badge-font-size: 0.8125rem;
+$badge-font-size: $text-sm;
 $badge-font-weight: $font-weight-normal;
 $badge-border-radius: spaceUnits(2);
 $badge-separation: spaceUnits(2);
 
 $badge-bg-level: -9;
 $badge-bg-level-hover: -9.6;
-$badge-padding-y: 0;
+$badge-padding-y: 0.125rem;
+$badge-padding-x: 0.25rem;
 
 /* === Custom variables and mixins === */
 
@@ -23,7 +24,6 @@ $badge-padding-y: 0;
     &.hover {
       color: $badge-color-hover !important;
       background-color: theme-color-level($color, $badge-bg-level-hover);
-      text-decoration: underline;
       box-shadow: 0 0 0 2px $blue;
     }
     &:focus,
@@ -44,8 +44,8 @@ $badge-padding-y: 0;
 .badge {
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 1.6;
-  min-height: 18px;
+  line-height: $height-text-sm;
+  min-height: 24px;
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;

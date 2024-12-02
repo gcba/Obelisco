@@ -18,10 +18,11 @@ $switch-focus-shadow: 0 0 0 2px #005387;
 .switch-label {
   display: inline-block;
   cursor: pointer;
-  padding-left: 8px;
-  font-size: 13px;
-  line-height: 24px;
+  padding-left: 0.5rem;
+  font-size: $text-sm;
+  line-height: $height-text-sm;
   margin-bottom: 0;
+  margin-top: 0.125rem;
 }
 
 .switch {
@@ -33,9 +34,9 @@ $switch-focus-shadow: 0 0 0 2px #005387;
   margin-bottom: 0;
   vertical-align: middle;
   display: inline-grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: min-content;
   grid-template-rows: 1fr;
-  align-items: flex-start;
+  align-items: center;
 
   &.switch-dark {
     input:checked + .slider {
@@ -44,21 +45,15 @@ $switch-focus-shadow: 0 0 0 2px #005387;
   }
 
   &.switch-sm {
+    min-height: 16px;
     .slider {
       width: $switch-sm-width;
       height: $switch-sm-height;
-      margin-top: 0.25rem;
       &:before {
         height: $switch-sm-indicator-height;
         width: $switch-sm-indicator-width;
         left: 2px;
         bottom: 3px;
-      }
-    }
-
-    .switch-label {
-      &::first-letter {
-        padding-left: 32px;
       }
     }
 
@@ -87,11 +82,13 @@ $switch-focus-shadow: 0 0 0 2px #005387;
       transform: translateX(26px);
     }
 
-    ~ .switch-label.on,  &:checked ~ .switch-label.off {
+    ~ .switch-label.on,
+    &:checked ~ .switch-label.off {
       display: none;
     }
 
-    &:checked ~ .switch-label.on, ~ .switch-label.off {
+    &:checked ~ .switch-label.on,
+    ~ .switch-label.off {
       display: inline-block;
     }
 
@@ -130,19 +127,17 @@ $switch-focus-shadow: 0 0 0 2px #005387;
   }
 
   .switch-label {
-     line-height: 24px;
-     display: inline-block;
-     word-wrap: break-word;
-     grid-column: 1 / 2;
-     grid-row: 1;
-     &::first-letter {
-       padding-left: 48px;
-     }
-     
-     &.disabled {
+    margin-top: 0;
+    word-wrap: break-word;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    &[aria-label] {
+      grid-column: 1 / 2;
+    }
+    &.disabled {
       color: $grisulado-300;
-     }
-   }
+    }
+  }
 }
 
 .disabled {
